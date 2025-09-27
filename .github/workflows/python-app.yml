@@ -1,45 +1,28 @@
 name: Build RSS Feed
-
 on:
   schedule:
     - cron: '0 * * * *'
   workflow_dispatch:
 permissions:
-  contents: write   # <--- WICHTIG, sonst kein Push möglich
+  contents: write # <--- WICHTIG, sonst kein Push möglich
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          token: ${{ secrets.GH_PAT }} # Use PAT for write access if needed
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Run Aggregator
         run: python fetch_and_cache.py
-
       - name: Commit and push feed
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          git checkout main
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
-      
-          # Pull remote changes first to avoid conflicts
-          git fetch origin main
-          git reset --hard origin/main
-      
-          # Add and commit local changes
-          git add cached_feed.xml feed_log.txt
-          git commit -m "Update aggregated feed [skip ci]" || echo "No changes to commit"
-      
-          # Push back to remote
-          git push origin main --force
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'cached_feed.xml feed_log.txt'
+          message: 'Update aggregated feed [skip ci]'
+          pull: '--rebase --autostash'
