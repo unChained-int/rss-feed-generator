@@ -8,7 +8,27 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Sep 2025 22:18:08 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Sep 2025 23:18:35 +0000</lastBuildDate>
+    <item>
+      <title>Dell security advisory (AV25-590)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-590</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-590</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.18</comments>
+      <pubDate>Mon, 15 Sep 2025 15:34:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] CISA ICS security advisories (AV25–591)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-591</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-591</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.18</comments>
+      <pubDate>Mon, 15 Sep 2025 15:55:57 +0000</pubDate>
+    </item>
     <item>
       <title>Red Hat security advisory (AV25-592)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-592</link>
@@ -16,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-592</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.19</comments>
+      <comments>Score: 7.18</comments>
       <pubDate>Mon, 15 Sep 2025 16:13:19 +0000</pubDate>
     </item>
     <item>
@@ -37,157 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.20</comments>
-      <pubDate>Sat, 27 Sep 2025 20:18:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>Evolved PXA Stealer wraps PureRAT in multi-layer obfuscation</title>
-      <link>https://www.csoonline.com/article/4063095/evolved-pxa-stealer-wraps-purerat-in-multi-layer-obfuscation.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Security researchers have uncovered a Vietnamese threat group evolving from their custom PXA Stealer campaign into a multi-layered delivery chain dropping PureRAT, a feature-rich remote access trojan.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to a Huntress analysis, the group operates ten separate payload stages, including phishing lures, obfuscated loaders, registry persistence, &lt;a href="https://www.csoonline.com/article/4056389/stealthy-asyncrat-flees-the-disk-for-a-fileless-infection.html?utm=hybrid_search#:~:text=Anti%2Dmalware%20Scan%20Interface%20(AMSI)%20and%20tampering%20with%20Event%20Tracking%20for%20Windows%20(ETW)" target="_blank"&gt;AMSI and ETW&lt;/a&gt; patching, and TLS-pinned command and control(C2).&lt;/p&gt;
-
-
-
-&lt;p&gt;“The way they chained loaders, mixed in different encryption schemes, and pivoted into PureRAT feels intentional—it’s about buying time,” said Anna Pham, senior hunt and response analyst at Huntress and a contributor on the report. “This isn’t smash-and-grab malware. It’s a sign the group wants staying power inside environments.”&lt;/p&gt;
-
-
-
-&lt;p&gt;PXA Stealer has been around as a Python-based infostealer, &lt;a href="https://therecord.media/pxa-infostealer-telegram-bots-vietnamese-speaking-hackers" rel="noreferrer noopener" target="_blank"&gt;tied&lt;/a&gt; to the Telegram alias @LoneNone, and previously used for harvesting credentials and browser data.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Commodity malware wrapped in a complex chain&lt;/h2&gt;
-
-
-
-&lt;p&gt;PureRAT itself is not new–it’s a commodity RAT marketed as a remote administration toolkit with features like hidden desktop access (HVNC/HRDP), microphone and webcam spying, registry management, and even cryptowallet monitoring. But what distinguishes the PXA campaign is the elaborate delivery sequence that surrounded it.&lt;/p&gt;
-
-
-
-&lt;p&gt;The infection began with a phishing lure disguised as a copyright infringement notice, ultimately pulling Python loaders hidden inside renamed executables, Huntress researchers said in a disclosure shared with CSO ahead of its publication on Thursday. Each stage unpacked or decrypted the next, layering Base84, AES, RC4, and XOR encoding on top of one another. Later phases shifted to .NET assemblies that process hallowing and reflective loading to stay under the radar. By the time PureRAT was finally deployed, defenders had to untangle nearly a dozen payloads.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This is definitely a step up in maturity,” Pham noted, pointing to the use of AMSI patching and TLS certificate pinning for evasion. “It doesn’t make them unique, but it does put them firmly in the pool of threat actors investing in sustainable access rather than quick hits.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The strategy of chaining loaders and defense bypass has become increasingly common as &lt;a href="https://www.csoonline.com/article/3818521/lazarus-group-tricks-job-seekers-on-linkedin-with-crypto-stealer.html"&gt;mid-tier groups&lt;/a&gt; try to frustrate analysis. PureRAT’s configuration data, including pinned x.509 certificates and ports tied to a Vietnamese C2 server, revealed operators’ attempts to keep their presence hidden.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="telegram-and-the-vietnamese-infrastructure-led-to-attribution"&gt;Telegram and the Vietnamese infrastructure led to attribution&lt;/h2&gt;
-
-
-
-&lt;p&gt;Metadata within exfiltrated ZIP archives pointed to @LoneNone, a Telegram handle previously associated with PXA Stealer. That same alias had appeared in earlier &lt;a href="https://blog.talosintelligence.com/new-pxa-stealer/" rel="noreferrer noopener" target="_blank"&gt;Cisco&lt;/a&gt; and &lt;a href="https://www.sentinelone.com/labs/ghost-in-the-zip-new-pxa-stealer-and-its-telegram-powered-ecosystem/" rel="noreferrer noopener" target="_blank"&gt;SentinelOne&lt;/a&gt; reporting, and &lt;a href="https://www.validin.com"&gt;Validin&lt;/a&gt; also tied PureRAT infrastructure to Vietnamese actors, researchers noted.&lt;/p&gt;
-
-
-
-&lt;p&gt;James Northey, SOC analyst and lead author of the report, emphasized the progression: “The Cisco report back in December shows a less sophisticated chain of events. What we (and SentinelOne) discovered is a clear progression in threat actor’s TTPs in a relatively short time frame (I found this in May). They were relatively unknown six months ago, and now they have some very stealthy malware being combined with a powerful commodity RAT.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The convergence of multiple factors–Telegram infrastructure, Vietnamese C2 servers, and familiar operator tradecraft–gave Huntress confidence in linking the activity to PXA. The SOC team was able to remediate the intrusion before PureRAT modules could be fully deployed, researchers added.&lt;/p&gt;
-
-
-
-&lt;p&gt;Pham noted that this isn’t an isolated case. “More mid-tier groups are blending commodity malware with loaders, layering in obfuscation and defense bypasses that were once more closely associated with sophisticated threat actors. We expect to see more “commodity-plus” campaigns where MaaS like PureRAT are wrapped in complex delivery chains,” she said. &lt;/p&gt;
-
-
-
-&lt;p&gt;Robert Knapp, director of SOC, Huntress, sees PXA’s evolving TTPs as part of the ongoing “cat and mouse” dynamic between defenders and threat actors. Pointing out a silver lining to this growing sophistication, he said, “This reflects what Huntress has seen throughout our existence — threat actors continuing to mature their tactics as a direct result of our defensive capabilities increasing in their effectiveness.” &lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4063095/evolved-pxa-stealer-wraps-purerat-in-multi-layer-obfuscation.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.20</comments>
-      <pubDate>Thu, 25 Sep 2025 13:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Vulnerability in Salesforce AI could be tricked into leaking CRM data</title>
-      <link>https://www.csoonline.com/article/4063044/vulnerability-in-salesforce-ai-could-be-tricked-into-leaking-crm-data.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A newly disclosed critical vulnerability in Salesforce’s Agentforce platform could trick the AI agent into leaking sensitive CRM data through indirect prompt injection.&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers at Noma Security, who identified the bug dubbed “ForcedLeak,” said in a &lt;a href="https://noma.security/blog/forcedleak-agent-risks-exposed-in-salesforce-agentforce" rel="noreferrer noopener" target="_blank"&gt;blog post&lt;/a&gt; shared with CSO ahead of its publication on Thursday that it could be exploited by attackers inserting malicious instructions into a routine customer form.&lt;/p&gt;
-
-
-
-&lt;p&gt;Salesforce patched the issue after disclosure, but Noma researchers believe the implications go well beyond one bug.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;From innocent Form to full-on data heist&lt;/h2&gt;
-
-
-
-&lt;p&gt;The attack path revealed by Noma was deceptively simple. By planting malicious text inside Salesforce’s Web-to-Lead form, commonly used in marketing campaigns, researchers found that an AI agent (Agentforce) tasked with reviewing submissions could be coaxed into running instructions it was never meant to. The description field, with its 42000-character allowance, provided enough space to hide multi-step payloads disguised as harmless business requests.&lt;/p&gt;
-
-
-
-&lt;p&gt;Once an employee interacts with the data and asks Agentforce to process it, the system obediently carries out both the real request and the attacker’s hidden script. Worse, Salesforce’s content security policy included an expired domain still on its whitelist. By re-registering the domain for just $5, researchers created a trusted-looking data exfiltration channel, turning a minor oversight into a major security hole.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Indirect Prompt Injection is basically cross-site scripting, but instead of tricking a database, attackers get inline AI to do it,” said &lt;a href="https://www.linkedin.com/in/cisoandy/" rel="noreferrer noopener" target="_blank"&gt;Andy Bennett&lt;/a&gt;, CISO at Apollo Information Systems. “It’s like a mix of scripted attacks and social engineering. The innovation is impressive and the impacts are potentially staggering.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Salesforce said Thursday that it had patched this CVE-pending flaw on September 8, 2025, by enforcing “Trusted URL allowlists” for Agentforce. While the company did not directly credit Noma for the finding, it included a related description. “Our underlying services powering Agentforce will enforce the Trusted URL allowlist to ensure no malicious links are called or generated through potential prompt injection,” it said then.&lt;/p&gt;
-
-
-
-&lt;p&gt;A Salesforce spokesperson said, “The security landscape for prompt injection remains a complex and evolving area, and we continue to invest in strong security controls and work closely with the research community to help protect our customers as these types of issues surface.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Guardrails, not just patches&lt;/h2&gt;
-
-
-
-&lt;p&gt;While Salesforce responded quickly with a patch, experts agree that AI agents represent a fundamentally broader attack surface. These systems combine memory, decision-making, and tool execution, meaning compromises can spread quickly and, as Bennett puts it, “at machine speed.” &lt;/p&gt;
-
-
-
-&lt;p&gt;“It’s advisable to secure the systems around the AI agents in use, which include APIs, forms, and middleware, so that prompt injection is harder to exploit and less harmful if it succeeds,” said Chrissa Constantine, senior cybersecurity solution architect at Black Duck. She emphasized that true prevention requires not just patching but “maintaining configuration and establishing guardrails around the agent design, software supply chain, web application, and API testing.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Noma’s researchers echoed that call, urging organizations to treat AI agents like production systems, inventorying every agent, validating outbound connections, sanitizing inputs before they reach the model, and flagging any sensitive data access or internet egress.&lt;/p&gt;
-
-
-
-&lt;p&gt;Sanitize external input before the agent sees it, suggested Elad Luz, head of research at Oasis Security. “Treat free-text from contact forms as untrusted input. Use an input mediation layer to extract only expected fields, strip/neutralize instructions, links, and markup, and prevent the model from interpreting user content as commands (prompt-injection resilience).”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4063044/vulnerability-in-salesforce-ai-could-be-tricked-into-leaking-crm-data.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.20</comments>
-      <pubDate>Thu, 25 Sep 2025 13:00:00 +0000</pubDate>
+      <pubDate>Sat, 27 Sep 2025 21:18:35 +0000</pubDate>
     </item>
     <item>
       <title>Mozilla security advisory (AV25-594)</title>
@@ -208,16 +78,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.25</comments>
       <pubDate>Tue, 16 Sep 2025 19:49:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>New routes and concealment methods identified in cocaine crackdowns in Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-routes-and-concealment-methods-identified-in-cocaine-crackdowns-in-spain</link>
-      <description>Europol supported Portuguese and Spanish authorities in two major investigations against cocaine trafficking involving law enforcement on both sides of the Atlantic. These operations exemplified a shifting landscape of global trafficking routes and innovative concealment methods.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-routes-and-concealment-methods-identified-in-cocaine-crackdowns-in-spain</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
-      <pubDate>Sat, 27 Sep 2025 20:18:08 +0000</pubDate>
     </item>
     <item>
       <title>Cloud Security Alliance launches framework to improve SaaS security</title>
@@ -345,8 +205,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4063383/cloud-security-alliance-launches-framework-to-improve-saas-security.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Thu, 25 Sep 2025 17:08:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>New routes and concealment methods identified in cocaine crackdowns in Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-routes-and-concealment-methods-identified-in-cocaine-crackdowns-in-spain</link>
+      <description>Europol supported Portuguese and Spanish authorities in two major investigations against cocaine trafficking involving law enforcement on both sides of the Atlantic. These operations exemplified a shifting landscape of global trafficking routes and innovative concealment methods.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-routes-and-concealment-methods-identified-in-cocaine-crackdowns-in-spain</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.28</comments>
+      <pubDate>Sat, 27 Sep 2025 21:18:35 +0000</pubDate>
     </item>
     <item>
       <title>Atlassian security advisory (AV25-596)</title>
@@ -365,7 +235,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-597</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.30</comments>
       <pubDate>Wed, 17 Sep 2025 15:46:14 +0000</pubDate>
     </item>
     <item>
@@ -375,7 +245,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-598</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.30</comments>
       <pubDate>Wed, 17 Sep 2025 16:00:44 +0000</pubDate>
     </item>
     <item>
@@ -385,7 +255,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-599</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.30</comments>
       <pubDate>Wed, 17 Sep 2025 16:09:29 +0000</pubDate>
     </item>
     <item>
@@ -396,47 +266,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.35</comments>
-      <pubDate>Sat, 27 Sep 2025 20:18:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports operation leading to 12 arrests in Ecuador</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-leading-to-12-arrests-in-ecuador</link>
-      <description>Belgian law enforcement authorities together with their colleagues from the Ecuadorian National Police performed two waves of arrests and seized over 9.3 tonnes of cocaine over the course of the investigation. In total, the multi-phase operation, supported by Europol, led to 26 arrests across several countries.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-leading-to-12-arrests-in-ecuador</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
-      <pubDate>Sat, 27 Sep 2025 20:18:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV25-600)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-600</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-600</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
-      <pubDate>Thu, 18 Sep 2025 13:44:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV25-601)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-601</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-601</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
-      <pubDate>Thu, 18 Sep 2025 13:56:26 +0000</pubDate>
-    </item>
-    <item>
-      <title>Nokia security advisory (AV25-602)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/nokia-security-advisory-av25-602</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nokia-security-advisory-av25-602</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
-      <pubDate>Thu, 18 Sep 2025 17:11:33 +0000</pubDate>
+      <pubDate>Sat, 27 Sep 2025 21:18:35 +0000</pubDate>
     </item>
     <item>
       <title>Patch now: Attacker finds another zero day in Cisco firewall software</title>
@@ -552,8 +382,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4063518/patch-now-attacker-finds-another-zero-day-in-cisco-firewall-software.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Thu, 25 Sep 2025 21:15:43 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol supports operation leading to 12 arrests in Ecuador</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-leading-to-12-arrests-in-ecuador</link>
+      <description>Belgian law enforcement authorities together with their colleagues from the Ecuadorian National Police performed two waves of arrests and seized over 9.3 tonnes of cocaine over the course of the investigation. In total, the multi-phase operation, supported by Europol, led to 26 arrests across several countries.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-leading-to-12-arrests-in-ecuador</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.38</comments>
+      <pubDate>Sat, 27 Sep 2025 21:18:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV25-600)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-600</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-600</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.38</comments>
+      <pubDate>Thu, 18 Sep 2025 13:44:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV25-601)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-601</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-601</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.38</comments>
+      <pubDate>Thu, 18 Sep 2025 13:56:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>Nokia security advisory (AV25-602)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/nokia-security-advisory-av25-602</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nokia-security-advisory-av25-602</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.40</comments>
+      <pubDate>Thu, 18 Sep 2025 17:11:33 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV25-603)</title>
@@ -573,7 +443,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.43</comments>
-      <pubDate>Sat, 27 Sep 2025 20:18:08 +0000</pubDate>
+      <pubDate>Sat, 27 Sep 2025 21:18:35 +0000</pubDate>
     </item>
     <item>
       <title>Fortra security advisory (AV25-604)</title>
@@ -592,7 +462,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-605</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Fri, 19 Sep 2025 17:39:27 +0000</pubDate>
     </item>
     <item>
@@ -603,17 +473,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 27 Sep 2025 20:18:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>51 children identified during international taskforce against child sexual exploitation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/51-children-identified-during-international-taskforce-against-child-sexual-exploitation</link>
-      <description>The experts participating in the task force analysed over 300 datasets depicting victims of child sexual exploitation (CSE). The analysts saw victims of both genders, from toddlers to teenagers, with a variety of ethnic backgrounds and of many different nationalities. Following the operation, national authorities were sent 213 leads for further investigation.Catherine De BolleEuropol Executive DirectorChild sexual abuse material may...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/51-children-identified-during-international-taskforce-against-child-sexual-exploitation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 27 Sep 2025 20:18:08 +0000</pubDate>
+      <pubDate>Sat, 27 Sep 2025 21:18:35 +0000</pubDate>
     </item>
     <item>
       <title>From crypto-enabled money laundering to online recruitment of minors: European Police Chiefs tackle criminal threats</title>
@@ -623,7 +483,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 27 Sep 2025 20:18:08 +0000</pubDate>
+      <pubDate>Sat, 27 Sep 2025 21:18:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>51 children identified during international taskforce against child sexual exploitation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/51-children-identified-during-international-taskforce-against-child-sexual-exploitation</link>
+      <description>The experts participating in the task force analysed over 300 datasets depicting victims of child sexual exploitation (CSE). The analysts saw victims of both genders, from toddlers to teenagers, with a variety of ethnic backgrounds and of many different nationalities. Following the operation, national authorities were sent 213 leads for further investigation.Catherine De BolleEuropol Executive DirectorChild sexual abuse material may...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/51-children-identified-during-international-taskforce-against-child-sexual-exploitation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 27 Sep 2025 21:18:35 +0000</pubDate>
     </item>
     <item>
       <title>Cyber Risk Assessments: Risikobewertung hilft CISOs</title>
@@ -708,7 +578,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3492180/cyber-risk-assessments-risikobewertung-hilft-cisos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Fri, 26 Sep 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -719,7 +589,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.58</comments>
-      <pubDate>Sat, 27 Sep 2025 20:18:08 +0000</pubDate>
+      <pubDate>Sat, 27 Sep 2025 21:18:35 +0000</pubDate>
     </item>
     <item>
       <title>Qantas cutting CEO pay signals new era of cyber accountability</title>
@@ -817,7 +687,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4062724/qantas-cutting-ceo-pay-signals-new-era-of-cyber-accountability.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Fri, 26 Sep 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -827,7 +697,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-606</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Mon, 22 Sep 2025 13:49:13 +0000</pubDate>
     </item>
     <item>
@@ -837,7 +707,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-607</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Mon, 22 Sep 2025 13:55:02 +0000</pubDate>
     </item>
     <item>
@@ -847,7 +717,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-608</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Mon, 22 Sep 2025 13:58:45 +0000</pubDate>
     </item>
     <item>
@@ -857,7 +727,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-609</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Mon, 22 Sep 2025 14:04:43 +0000</pubDate>
     </item>
     <item>
@@ -867,7 +737,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-610</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Mon, 22 Sep 2025 14:11:04 +0000</pubDate>
     </item>
     <item>
@@ -877,7 +747,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-611</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Mon, 22 Sep 2025 14:11:38 +0000</pubDate>
     </item>
     <item>
@@ -888,7 +758,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.13</comments>
-      <pubDate>Sat, 27 Sep 2025 20:18:08 +0000</pubDate>
+      <pubDate>Sat, 27 Sep 2025 21:18:35 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV25-612)</title>
@@ -897,7 +767,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-612</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.34</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Tue, 23 Sep 2025 12:58:40 +0000</pubDate>
     </item>
     <item>
@@ -907,7 +777,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-613</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Tue, 23 Sep 2025 14:29:30 +0000</pubDate>
     </item>
     <item>
@@ -917,7 +787,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-614</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Tue, 23 Sep 2025 19:29:39 +0000</pubDate>
     </item>
     <item>
@@ -927,7 +797,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-615</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.69</comments>
       <pubDate>Wed, 24 Sep 2025 12:20:59 +0000</pubDate>
     </item>
     <item>
@@ -937,7 +807,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.82</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Wed, 24 Sep 2025 18:57:31 +0000</pubDate>
     </item>
     <item>
@@ -947,7 +817,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-617</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.83</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Wed, 24 Sep 2025 19:02:27 +0000</pubDate>
     </item>
     <item>
@@ -957,7 +827,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-618</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Wed, 24 Sep 2025 19:50:18 +0000</pubDate>
     </item>
     <item>
@@ -967,7 +837,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.20</comments>
+      <comments>Score: 9.18</comments>
       <pubDate>Thu, 25 Sep 2025 13:07:19 +0000</pubDate>
     </item>
     <item>
@@ -977,7 +847,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.29</comments>
+      <comments>Score: 9.26</comments>
       <pubDate>Thu, 25 Sep 2025 16:40:53 +0000</pubDate>
     </item>
     <item>
@@ -987,7 +857,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-620</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.95</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Fri, 26 Sep 2025 17:11:29 +0000</pubDate>
     </item>
     <item>
@@ -997,7 +867,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-621</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.93</comments>
       <pubDate>Fri, 26 Sep 2025 17:21:41 +0000</pubDate>
     </item>
     <item>
@@ -1007,7 +877,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-622</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.93</comments>
       <pubDate>Fri, 26 Sep 2025 17:31:39 +0000</pubDate>
     </item>
     <item>
@@ -1017,7 +887,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/foxit-security-advisory-av25-623</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.00</comments>
+      <comments>Score: 9.97</comments>
       <pubDate>Fri, 26 Sep 2025 18:50:22 +0000</pubDate>
     </item>
     <item>
@@ -1026,7 +896,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/-dark-reading-virtual-event-know-your-enemy-how-cybercriminals-and-nation-state-hackers-operate</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 474798.70</comments>
+      <comments>Score: 469842.12</comments>
       <pubDate>Thu, 13 Nov 2025 16:00:00 +0000</pubDate>
     </item>
   </channel>
