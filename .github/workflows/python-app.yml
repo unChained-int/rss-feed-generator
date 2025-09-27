@@ -32,5 +32,6 @@ jobs:
           git add cached_feed.xml feed_log.txt
           git commit -m "Update aggregated feed [skip ci]" || echo "No changes to commit"
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
+          git pull --rebase origin main
           git push origin HEAD:main
           
