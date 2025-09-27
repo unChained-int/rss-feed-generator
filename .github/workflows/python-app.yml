@@ -29,8 +29,17 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git checkout main
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
+      
+          # Pull remote changes first to avoid conflicts
+          git fetch origin main
+          git reset --hard origin/main
+      
+          # Add and commit local changes
           git add cached_feed.xml feed_log.txt
           git commit -m "Update aggregated feed [skip ci]" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
-          git pull --rebase origin main
-          git push origin HEAD:main
+      
+          # Push back to remote
+          git push origin main --force
