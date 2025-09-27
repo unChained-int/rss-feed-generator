@@ -1,0 +1,31 @@
+name: Build RSS Feed
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Jede Stunde, kann angepasst werden
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Aggregator
+        run: python fetch_and_cache.py
+
+      - name: Commit and push feed
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add cached_feed.xml feed_log.txt
+          git commit -m 'Update aggregated feed [skip ci]' || echo "No changes to commit"
+          git push
