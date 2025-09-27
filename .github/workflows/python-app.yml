@@ -5,6 +5,9 @@ on:
     - cron: '0 * * * *'  # Jede Stunde, kann angepasst werden
   workflow_dispatch:
 
+permissions:
+  contents: write  # <-- WICHTIG: Erlaubt GitHub Actions das Pushen ins Repo
+
 jobs:
   build:
     runs-on: ubuntu-latest
