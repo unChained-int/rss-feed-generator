@@ -8,137 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Oct 2025 16:23:25 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Oct 2025 17:16:38 +0000</lastBuildDate>
     <item>
-      <title>Oracle E-Business Suite users targeted in extortion campaign</title>
-      <link>https://www.csoonline.com/article/4067501/cl0p-linked-threat-actors-target-oracle-e-business-suite-in-extortion-campaign.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Oracle E-Business Suite users beware: Hackers may (or may not) have stolen your sensitive data.&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers at Halcyon, Google, and Mandiant have confirmed that they are tracking the activity of a threat actor, “highly likely” to be affiliated with the notorious and successful &lt;a href="https://www.halcyon.ai/threat-group/cl0p" rel="noreferrer noopener" target="_blank"&gt;Cl0p gang&lt;/a&gt;, who is sending emails to various executives claiming they have stolen sensitive data from their Oracle E-Business Suite ERP systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;The activity started “on or before” September 29, 2025, according to &lt;a href="https://www.halcyon.ai/press/former-fbi-cyber-division-deputy-assistant-director-cynthia-kaiser-joins-halcyon-to-lead-ransomware-research-center" rel="noreferrer noopener" target="_blank"&gt;Cynthia Kaiser&lt;/a&gt;, SVP of Halcyon’s ransomware research center, and threat actors have been making seven and eight figure ransom demands as high as $50 million. They have been backing up their claims with proofs of compromise including screenshots and file trees.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This is a developing situation,” Kaiser told CSO Online. “Several extortion attempts have been observed across multiple companies, including direct outreach to IT leaders and C-Suite executives, indicating the campaign is targeting more than a single victim.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Oracle did not provide additional details, but CSO Rob Duhart said in &lt;a href="https://blogs.oracle.com/security/post/apply-july-2025-cpu" rel="noreferrer noopener" target="_blank"&gt;a blog post&lt;/a&gt; on Thursday that Oracle is “aware” of the extortion emails and is performing an “ongoing investigation.” He said that attackers are potentially using previously-identified vulnerabilities addressed in the company’s July critical patch update, and that Oracle “reaffirms its strong recommendation” that customers apply these updates.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="could-it-be-cl0p-its-hard-to-know"&gt;Could it be Cl0p? It’s hard to know&lt;/h2&gt;
-
-
-
-&lt;p&gt;The Oracle E-Business Suite (EBS) is an enterprise resource planning (ERP) system that the tech giant says is used by thousands of organizations around the world.&lt;/p&gt;
-
-
-
-&lt;p&gt;Halcyon reports that the ransomware operators are “actively extorting” victims via the local login pages (AppsLocalLogin.jsp) of internet-exposed EBS portals. After compromising user email, attackers abuse the default password-reset function to gain valid credentials; the local accounts bypass enterprise single sign on (SSO) controls, and often lack multi-factor authentication (MFA), leaving “thousands” of organizations exposed.&lt;/p&gt;
-
-
-
-&lt;p&gt;Targeted organizations have received samples, including screenshots of EBS portals and file tree listings from compromised environments, that seem to validate the extortion claims, Kaiser said. The tactics and extortion approach align with prior Cl0p campaigns, she noted, and data leak aggregators have “reinforced the claims.” She emphasized that the group appears to be abusing configurations, not exploiting vulnerabilities.&lt;/p&gt;
-
-
-
-&lt;p&gt;Malicious emails sent by the group contain contact information for the hackers, and two specific addresses are publicly listed on the Cl0p data leak site. At least one of the listed accounts has been associated with financially-motivated threat group FIN11, known for its ransomware and extortion tactics.&lt;/p&gt;
-
-
-
-&lt;p&gt;“FIN11 has successfully impacted a wide range of organizations, including many prominent companies with strong security postures. While we have no evidence that zero-day exploits were used in this case, and we have not yet attributed the activity, the potential involvement of FIN11 suggests that we should take this activity seriously,” Google Threat Intelligence Group’s head of cybercrime intelligence analysis Genevieve Stark said via email. &lt;/p&gt;
-
-
-
-&lt;p&gt;Initially, researchers were dubious about whether the group was actually who it claimed to be; Mandiant CTO &lt;a href="https://www.linkedin.com/in/charlescarmakal" rel="noreferrer noopener" target="_blank"&gt;Charles Carmakal&lt;/a&gt; noted that attribution in cybercrime is “often complex,” with threat actors mimicking more notorious actors to increase leverage and pressure.&lt;/p&gt;
-
-
-
-&lt;p&gt;Ultimately, “this spear-phishing attack campaign is dangerous, not just because of the potential and threat of data theft, but because it hits at the very mission-critical systems that run the business,” said &lt;a href="https://www.infotech.com/profiles/erik-avakian" rel="noreferrer noopener" target="_blank"&gt;Erik Avakian&lt;/a&gt;, a technical counselor at &lt;a href="https://www.infotech.com" rel="noreferrer noopener" target="_blank"&gt;Info-Tech Research Group&lt;/a&gt;. “High-value data like payroll, vendor invoices, contracts, and sensitive HR information provides a prime target to a threat actor.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="execs-dont-engage-rashly"&gt;Execs: Don’t ‘engage rashly’&lt;/h2&gt;
-
-
-
-&lt;p&gt;There are no common vulnerabilities and exposures (CVEs) for this attack; the issue “stems from configuration and default business logic abuse rather than a specific vulnerability,” according to Halcyon.&lt;/p&gt;
-
-
-
-&lt;p&gt;The firm advises organizations to check if EBS portals are publicly accessible (via https:///OA_HTML/AppsLocalLogin.jsp#) and if so, immediately restrict exposure. It is also critical to enforce MFA for all accounts; remove or “tightly control” internet access to EBS via hardened reverse proxies that bounce traffic; disable or secure password reset abilities and require secondary verification; monitor for anomalous logins and reset attempts; and deploy anti-ransomware tools.&lt;/p&gt;
-
-
-
-&lt;p&gt;As a standard practice, organizations should train users, especially executive staff, on threat actor tactics, so they are naturally wary of emails, texts, or voice calls that “play on fear, urgency, or claim knowledge of systems by name,” Info-Tech’s Avakian advised. Executives in particular should not “engage rashly” when receiving a threatening message.&lt;/p&gt;
-
-
-
-&lt;p&gt;In addition, security teams should investigate, validate, and look for any evidence of successful exfiltration. This can include examining logs and looking for unusual queries or large amounts of data being exported.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This type of attack provides an opportunity for organizations to tighten monitoring and employ zero-trust principles across the protected surface, such as mission-critical applications, particularly around the Oracle EBS,” he advised.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="threat-actors-changing-tactics"&gt;Threat actors changing tactics&lt;/h2&gt;
-
-
-
-&lt;p&gt;Cl0p emerged in February 2019, according to Halcyon, quickly establishing itself as a prolific, financially successful ransomware operation. The group has generated more than $500 million in extorted payments and compromised more than 11,000 organizations worldwide.&lt;/p&gt;
-
-
-
-&lt;p&gt;The group’s modus operandi is to infiltrate corporate networks, steal data, and deploy ransomware to encrypt it. One of its most notable acts was its exploitation of the &lt;a href="https://www.csoonline.com/article/575481/clop-ransomware-gang-exploits-the-moveit-transfer-vulnerability-to-steal-data.html" target="_blank"&gt;MOVEit zero-day vulnerability&lt;/a&gt; in 2023.&lt;/p&gt;
-
-
-
-&lt;p&gt;This latest attack sheds light on a possible shift to extortion without ransomware, said Avakian, while also pointing out that hackers “can and often do” change their tactics at any time.&lt;/p&gt;
-
-
-
-&lt;p&gt;This campaign also reveals a key pattern in which hackers are directly targeting leadership, as well as very specific products or applications, to create maximum pressure. “Even if the attackers don’t have the data they are claiming to have, they’re still exploiting fear and urgency to pressure leadership,” said Avakian.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="oracle-missteps-may-have-led-to-this"&gt;Oracle missteps may have led to this&lt;/h2&gt;
-
-
-
-&lt;p&gt;This case is “fascinating” from a PR angle, according to &lt;a href="https://www.beauceronsecurity.com/blog/tag/David+Shipley" rel="noreferrer noopener" target="_blank"&gt;David Shipley&lt;/a&gt; of &lt;a href="https://www.beauceronsecurity.com/" rel="noreferrer noopener" target="_blank"&gt;Beauceron Security&lt;/a&gt;; many concerns were raised earlier this year when news broke of &lt;a href="https://www.csoonline.com/article/3951683/oracle-warns-customers-of-health-data-breach-amid-public-denial.html" target="_blank"&gt;data breaches&lt;/a&gt; on Oracle Health. The company was accused in a lawsuit of &lt;a href="https://www.csoonline.com/article/3953644/oracle-quietly-admits-data-breach-days-after-lawsuit-accused-it-of-cover-up.html" target="_blank"&gt;covering up the attack&lt;/a&gt;, prompting it to inform customers of potential compromise of usernames, passkeys, and encrypted passwords.&lt;/p&gt;
-
-
-
-&lt;p&gt;This poor communication has created a “massive amount of uncertainty, fear, and doubt” that has led to a “toxic hangover,” said Shipley.&lt;/p&gt;
-
-
-
-&lt;p&gt;“They’ve clouded the waters so badly with their communications that people don’t know what to believe,” he said. That provides a “huge opportunity” for threat actors, because so much distrust may prompt organizations to assume a breach is real and give in to extortion demands.&lt;/p&gt;
-
-
-
-&lt;p&gt;Ultimately, this should serve as a case study illustrating how important it is for companies to have a clear communications plan and share information as quickly and accurately as possible when breached, Shipley noted. “This is more about PR and crisis communications and a little bit about criminal branding and reputation all mixed together,” he said.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4067501/cl0p-linked-threat-actors-target-oracle-e-business-suite-in-extortion-campaign.html</guid>
+      <title>SonicWall security advisory (AV25-603)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.07</comments>
-      <pubDate>Fri, 03 Oct 2025 00:55:52 +0000</pubDate>
+      <comments>Score: 7.06</comments>
+      <pubDate>Thu, 18 Sep 2025 19:53:06 +0000</pubDate>
     </item>
     <item>
       <title>Fortra security advisory (AV25-604)</title>
@@ -237,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-613</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.20</comments>
+      <comments>Score: 7.19</comments>
       <pubDate>Tue, 23 Sep 2025 14:29:30 +0000</pubDate>
     </item>
     <item>
@@ -248,7 +127,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.20</comments>
-      <pubDate>Sun, 05 Oct 2025 14:23:25 +0000</pubDate>
+      <pubDate>Sun, 05 Oct 2025 15:16:38 +0000</pubDate>
     </item>
     <item>
       <title>Citrix security advisory (AV25-614)</title>
@@ -257,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-614</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.21</comments>
+      <comments>Score: 7.20</comments>
       <pubDate>Tue, 23 Sep 2025 19:29:39 +0000</pubDate>
     </item>
     <item>
@@ -268,7 +147,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.23</comments>
-      <pubDate>Sun, 05 Oct 2025 14:23:25 +0000</pubDate>
+      <pubDate>Sun, 05 Oct 2025 15:16:38 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV25-615)</title>
@@ -277,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-615</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
+      <comments>Score: 7.24</comments>
       <pubDate>Wed, 24 Sep 2025 12:20:59 +0000</pubDate>
     </item>
     <item>
@@ -307,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-618</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.27</comments>
+      <comments>Score: 7.26</comments>
       <pubDate>Wed, 24 Sep 2025 19:50:18 +0000</pubDate>
     </item>
     <item>
@@ -318,7 +197,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.28</comments>
-      <pubDate>Sun, 05 Oct 2025 14:23:25 +0000</pubDate>
+      <pubDate>Sun, 05 Oct 2025 15:16:38 +0000</pubDate>
     </item>
     <item>
       <title>AL25-012 - Vulnerabilities impacting Cisco ASA and FTD devices – CVE-2025-20333, CVE-2025-20362 and CVE-2025-20363</title>
@@ -327,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
+      <comments>Score: 7.31</comments>
       <pubDate>Thu, 25 Sep 2025 13:07:19 +0000</pubDate>
     </item>
     <item>
@@ -348,7 +227,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.34</comments>
-      <pubDate>Sun, 05 Oct 2025 14:23:25 +0000</pubDate>
+      <pubDate>Sun, 05 Oct 2025 15:16:38 +0000</pubDate>
     </item>
     <item>
       <title>Europe’s most innovative law enforcement projects honoured at Europol’s 2025 Excellence Awards</title>
@@ -358,7 +237,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.35</comments>
-      <pubDate>Sun, 05 Oct 2025 14:23:25 +0000</pubDate>
+      <pubDate>Sun, 05 Oct 2025 15:16:38 +0000</pubDate>
     </item>
     <item>
       <title>GitLab security advisory (AV25-620)</title>
@@ -367,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-620</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 26 Sep 2025 17:11:29 +0000</pubDate>
     </item>
     <item>
@@ -377,7 +256,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-621</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 26 Sep 2025 17:21:41 +0000</pubDate>
     </item>
     <item>
@@ -387,7 +266,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-622</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 26 Sep 2025 17:31:39 +0000</pubDate>
     </item>
     <item>
@@ -398,7 +277,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.43</comments>
-      <pubDate>Sun, 05 Oct 2025 14:23:25 +0000</pubDate>
+      <pubDate>Sun, 05 Oct 2025 15:16:38 +0000</pubDate>
     </item>
     <item>
       <title>Foxit security advisory (AV25-623)</title>
@@ -411,16 +290,6 @@
       <pubDate>Fri, 26 Sep 2025 18:50:22 +0000</pubDate>
     </item>
     <item>
-      <title>Major blow to billion-euro glass eel trafficking networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-blow-to-billion-euro-glass-eel-trafficking-networks</link>
-      <description>The latest iteration of Operation LAKE, which ran from October 2024 to June 2025, uncovered large-scale trafficking networks and disrupted the flow of live eels destined for illegal farms in Asia.The operation led to:16,131 inspections carried out across Europe26 arrests22 tonnes of glass eels seizedOrganised crime at the heart of traffickingInvestigations revealed that several organised crime groups were driving the...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-blow-to-billion-euro-glass-eel-trafficking-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 05 Oct 2025 14:23:25 +0000</pubDate>
-    </item>
-    <item>
       <title>51 children identified during international taskforce against child sexual exploitation</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/51-children-identified-during-international-taskforce-against-child-sexual-exploitation</link>
       <description>The experts participating in the task force analysed over 300 datasets depicting victims of child sexual exploitation (CSE). The analysts saw victims of both genders, from toddlers to teenagers, with a variety of ethnic backgrounds and of many different nationalities. Following the operation, national authorities were sent 213 leads for further investigation.Catherine De BolleEuropol Executive DirectorChild sexual abuse material may...</description>
@@ -428,7 +297,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 05 Oct 2025 14:23:25 +0000</pubDate>
+      <pubDate>Sun, 05 Oct 2025 15:16:38 +0000</pubDate>
     </item>
     <item>
       <title>From crypto-enabled money laundering to online recruitment of minors: European Police Chiefs tackle criminal threats</title>
@@ -438,7 +307,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 05 Oct 2025 14:23:25 +0000</pubDate>
+      <pubDate>Sun, 05 Oct 2025 15:16:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>Major blow to billion-euro glass eel trafficking networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-blow-to-billion-euro-glass-eel-trafficking-networks</link>
+      <description>The latest iteration of Operation LAKE, which ran from October 2024 to June 2025, uncovered large-scale trafficking networks and disrupted the flow of live eels destined for illegal farms in Asia.The operation led to:16,131 inspections carried out across Europe26 arrests22 tonnes of glass eels seizedOrganised crime at the heart of traffickingInvestigations revealed that several organised crime groups were driving the...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-blow-to-billion-euro-glass-eel-trafficking-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 05 Oct 2025 15:16:38 +0000</pubDate>
     </item>
     <item>
       <title>4 arrests for smuggling over 600 migrants across the Western Balkans</title>
@@ -448,7 +327,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.58</comments>
-      <pubDate>Sun, 05 Oct 2025 14:23:25 +0000</pubDate>
+      <pubDate>Sun, 05 Oct 2025 15:16:38 +0000</pubDate>
     </item>
     <item>
       <title>Extortion gang opens data leak site to squeeze victims of its Salesforce attacks</title>
@@ -598,7 +477,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4067846/extortion-gang-opens-data-leak-site-to-squeeze-victims-of-its-salesforce-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Sat, 04 Oct 2025 00:05:48 +0000</pubDate>
     </item>
     <item>
@@ -608,7 +487,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-624</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 29 Sep 2025 15:10:40 +0000</pubDate>
     </item>
     <item>
@@ -628,7 +507,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-626</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 29 Sep 2025 15:40:32 +0000</pubDate>
     </item>
     <item>
@@ -638,7 +517,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-627</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 29 Sep 2025 15:56:39 +0000</pubDate>
     </item>
     <item>
@@ -658,7 +537,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-629</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Mon, 29 Sep 2025 20:20:19 +0000</pubDate>
     </item>
     <item>
@@ -668,7 +547,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-629</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Mon, 29 Sep 2025 20:22:04 +0000</pubDate>
     </item>
     <item>
@@ -678,7 +557,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sudo-security-advisory-av25-631</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Wed, 01 Oct 2025 17:34:23 +0000</pubDate>
     </item>
     <item>
@@ -688,7 +567,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-632</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Thu, 02 Oct 2025 15:17:20 +0000</pubDate>
     </item>
     <item>
@@ -698,7 +577,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-633</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Thu, 02 Oct 2025 16:21:05 +0000</pubDate>
     </item>
     <item>
@@ -708,7 +587,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-634</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Thu, 02 Oct 2025 16:37:14 +0000</pubDate>
     </item>
     <item>
@@ -718,7 +597,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-635</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.92</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Thu, 02 Oct 2025 18:08:45 +0000</pubDate>
     </item>
     <item>
@@ -728,7 +607,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-ssl-security-advisory-av25-636</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Thu, 02 Oct 2025 18:30:25 +0000</pubDate>
     </item>
     <item>
@@ -738,7 +617,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-637</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Thu, 02 Oct 2025 18:32:16 +0000</pubDate>
     </item>
     <item>
@@ -748,7 +627,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av25-638</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Thu, 02 Oct 2025 18:33:52 +0000</pubDate>
     </item>
     <item>
@@ -758,7 +637,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-639</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.36</comments>
+      <comments>Score: 9.34</comments>
       <pubDate>Fri, 03 Oct 2025 13:49:21 +0000</pubDate>
     </item>
     <item>
@@ -767,7 +646,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/-dark-reading-virtual-event-know-your-enemy-how-cybercriminals-and-nation-state-hackers-operate</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 68339.36</comments>
+      <comments>Score: 67711.00</comments>
       <pubDate>Thu, 13 Nov 2025 16:00:00 +0000</pubDate>
     </item>
   </channel>
