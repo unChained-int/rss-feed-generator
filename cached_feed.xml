@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Oct 2025 18:30:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Oct 2025 19:17:21 +0000</lastBuildDate>
     <item>
       <title>Europol welcomes the European Investment Bank to its secure information exchange network</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-welcomes-european-investment-bank-to-its-secure-information-exchange-network</link>
@@ -17,82 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.28</comments>
-      <pubDate>Fri, 10 Oct 2025 16:30:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>Open-source monitor turns into an off-the-shelf attack beacon</title>
-      <link>https://www.csoonline.com/article/4069515/open-source-monitor-turns-into-an-off-the-shelf-attack-beacon.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;China-affiliated hackers have quietly turned a once-benign open-source network monitoring tool into a remote access beacon.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to new findings from cybersecurity firm Huntress, the attackers used log poisoning and a web shell to install Nezha, a legitimate remote monitoring/management tool (RMM), as a foothold to deploy Ghost RAT for deeper persistence.&lt;/p&gt;
-
-
-
-&lt;p&gt;“To our knowledge, this is the first public reporting of Nezha being used to facilitate web compromises,” Huntress researchers Jai Minton, James Northey, and Alden Schmidt, said in a blog post shared with CSO ahead of its publication on Wednesday. “Analysis of the intrusion revealed the threat actor had likely compromised more than 100 victim machines.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The campaign, first detected in August 2025, primarily targeted victims from Taiwan, Japan, South Korea, and Hong Kong.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Sneaking in through log poisoning&lt;/h2&gt;
-
-
-
-&lt;p&gt;The adversary’s entry began through an exposed “phpMyAdmin” interface that lacked authentication. A DNS change months earlier had inadvertently made it publicly accessible, the researchers &lt;a href="https://staging.huntress.com/blog/nezha-china-nexus-threat-actor-tool" rel="noreferrer noopener" target="_blank"&gt;added&lt;/a&gt;. Once inside, they switched the interface language to Simplified Chinese and immediately began issuing SQL commands via the query interface.&lt;/p&gt;
-
-
-
-&lt;p&gt;They then abused MariaDB’s general query logging, reconfiguring it to write logs into a .php file within the web directory. In effect, they turned the log file itself into a web shell: SQL queries containing PHP code were recorded and then executed when accessed via HTTP POST. The PHP code reflected a basic evaluation web shell, commonly referred to as the &lt;a href="https://www.csoonline.com/article/572879/zero-day-flaw-in-atlassian-confluence-exploited-in-the-wild-since-may.html?utm=hybrid_search#:~:text=the-,China%20Chopper%20webshell,-to"&gt;China Chopper&lt;/a&gt; web shell.&lt;/p&gt;
-
-
-
-&lt;p&gt;This “Log Poisoning” technique allowed the attackers to hide the backdoor among normal traffic. After validating the shell, they switched to a different IP address, likely to compartmentalize their operations, and moved to issue commands via AntSword’s virtual terminal.&lt;/p&gt;
-
-
-
-&lt;p&gt;AntSword is an open-source Chinese web shell management framework (essentially a graphical control panel) for hackers to manage compromised web servers. In this case, it worked as a command station to interact with the planted backdoor China Chopper.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Riding Nezha to Ghost RAT&lt;/h2&gt;
-
-
-
-&lt;p&gt;With the web shell in place, the attackers used AntSword to download two components: “live.exe” (the &lt;a href="https://github.com/nezhahq/nezha" rel="noreferrer noopener" target="_blank"&gt;Nezha&lt;/a&gt; agent) and a “config.yml” that pointed to the attacker-controlled domain. The Nezha agent connected back to a management server whose dashboard was running in Russian, presumably to throw off attribution.&lt;/p&gt;
-
-
-
-&lt;p&gt;Once Nezha was active, the attackers ran an interactive PowerShell session to create Windows Defender exclusions on key system folders. This allowed them to drop and run a Ghost RAT variant from  “C:\Windows\Cursors”. The RAT executable also installed a persistence mechanism and used a domain generation algorithm (&lt;a href="https://www.csoonline.com/article/4055796/why-domain-based-attacks-will-continue-to-wreak-havoc.html?utm=hybrid_search#:~:text=domain%20generation%20algorithms%20(-,DGAs,-)%20to%20automatically%20create"&gt;DGA&lt;/a&gt;) for command &amp;amp; control (C2).&lt;/p&gt;
-
-
-
-&lt;p&gt;Huntress’ analysis showed the Ghost RAT implant had a multi-stage loader, dynamic API resolution, and command blocks consistent with China-nexus APT activities. The team was able to contain the August 2025 incident before attackers could cause significant damage.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Fortunately, Huntress was able to isolate the system and remediate the incident by removing the web shell, Nezha agent, and malware before the attacker could carry out any further objectives,” the researchers added. Huntress published a set of indicators of compromise (IOCs) tied to the intrusion, including the file name and path for the web shell, Nezha agent, and the Ghost RAT Payload. This incident fits a broader 2025 pattern of threat actors abusing legitimate admin and monitoring tools for persistence on networks. &lt;/p&gt;
-
-
-
-&lt;p&gt;Earlier this year, Symantec (Broadcom) &lt;a href="https://www.csoonline.com/article/4006743/fog-ransomware-gang-abuses-employee-monitoring-tool-in-unusual-multi-stage-attack.html"&gt;reported&lt;/a&gt; Fog ransomware operators using employee monitoring software Syteca alongside other open-source pen-testing tools like GC2 and Adaptix. Last month, researchers also &lt;a href="https://www.csoonline.com/article/4057785/cobaltstrikes-ai-native-successor-villager-makes-hacking-too-easy.html"&gt;flagged&lt;/a&gt; a red-teaming tool, “Villager,” from a shadowy Chinese firm that they said was ripe for hackers to abuse.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4069515/open-source-monitor-turns-into-an-off-the-shelf-attack-beacon.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
-      <pubDate>Wed, 08 Oct 2025 13:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Oct 2025 17:17:21 +0000</pubDate>
     </item>
     <item>
       <title>Europol conference warns: cybercrime fight hinges on access to data</title>
@@ -102,7 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.34</comments>
-      <pubDate>Fri, 10 Oct 2025 16:30:30 +0000</pubDate>
+      <pubDate>Fri, 10 Oct 2025 17:17:21 +0000</pubDate>
     </item>
     <item>
       <title>Europe’s most innovative law enforcement projects honoured at Europol’s 2025 Excellence Awards</title>
@@ -112,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.35</comments>
-      <pubDate>Fri, 10 Oct 2025 16:30:30 +0000</pubDate>
+      <pubDate>Fri, 10 Oct 2025 17:17:21 +0000</pubDate>
     </item>
     <item>
       <title>Luxury hybrid car thieves taken down in Belgium, Italy and Spain</title>
@@ -122,7 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.41</comments>
-      <pubDate>Fri, 10 Oct 2025 16:30:30 +0000</pubDate>
+      <pubDate>Fri, 10 Oct 2025 17:17:21 +0000</pubDate>
     </item>
     <item>
       <title>Sudo security advisory (AV25-631)</title>
@@ -131,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sudo-security-advisory-av25-631</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Wed, 01 Oct 2025 17:34:23 +0000</pubDate>
     </item>
     <item>
@@ -142,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 10 Oct 2025 16:30:30 +0000</pubDate>
+      <pubDate>Fri, 10 Oct 2025 17:17:21 +0000</pubDate>
     </item>
     <item>
       <title>From crypto-enabled money laundering to online recruitment of minors: European Police Chiefs tackle criminal threats</title>
@@ -152,7 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 10 Oct 2025 16:30:30 +0000</pubDate>
+      <pubDate>Fri, 10 Oct 2025 17:17:21 +0000</pubDate>
     </item>
     <item>
       <title>Major blow to billion-euro glass eel trafficking networks</title>
@@ -162,47 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 10 Oct 2025 16:30:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] ABB security advisory (AV25-632)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-632</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-632</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 02 Oct 2025 15:17:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco security advisory (AV25-633)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-633</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-633</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
-      <pubDate>Thu, 02 Oct 2025 16:21:05 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV25-634)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-634</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-634</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
-      <pubDate>Thu, 02 Oct 2025 16:37:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV25-635)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-635</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-635</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
-      <pubDate>Thu, 02 Oct 2025 18:08:45 +0000</pubDate>
+      <pubDate>Fri, 10 Oct 2025 17:17:21 +0000</pubDate>
     </item>
     <item>
       <title>GitHub Copilot prompt injection flaw leaked sensitive data from private repos</title>
@@ -302,8 +187,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4069887/github-copilot-prompt-injection-flaw-leaked-sensitive-data-from-private-repos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Wed, 08 Oct 2025 22:54:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] ABB security advisory (AV25-632)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-632</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-632</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 02 Oct 2025 15:17:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cisco security advisory (AV25-633)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-633</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-633</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.53</comments>
+      <pubDate>Thu, 02 Oct 2025 16:21:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV25-634)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-634</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-634</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.53</comments>
+      <pubDate>Thu, 02 Oct 2025 16:37:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV25-635)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-635</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-635</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.53</comments>
+      <pubDate>Thu, 02 Oct 2025 18:08:45 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] SSL security advisory (AV25-636)</title>
@@ -343,17 +268,16 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Fri, 10 Oct 2025 16:30:30 +0000</pubDate>
+      <pubDate>Fri, 10 Oct 2025 17:17:21 +0000</pubDate>
     </item>
     <item>
-      <title>Microsoft Edge security advisory (AV25-639)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-639</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-639</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
+      <title>DDoS Botnet Aisuru Blankets US ISPs in Record DDoS</title>
+      <link>https://krebsonsecurity.com/2025/10/ddos-botnet-aisuru-blankets-us-isps-in-record-ddos/</link>
+      <description>The world's largest and most disruptive botnet is now drawing a majority of its firepower from compromised Internet-of-Things (IoT) devices hosted on U.S. Internet providers like AT&amp;#038;T, Comcast and Verizon, new evidence suggests. Experts say the heavy concentration of infected devices at U.S. providers is complicating efforts to limit collateral damage from the botnet's attacks, which shattered previous records this week with a brief traffic flood that clocked in at nearly 30 trillion bits of data per second.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2025/10/ddos-botnet-aisuru-blankets-us-isps-in-record-ddos/</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Fri, 03 Oct 2025 13:49:21 +0000</pubDate>
+      <comments>Score: 7.65</comments>
+      <pubDate>Fri, 10 Oct 2025 16:10:43 +0000</pubDate>
     </item>
     <item>
       <title>CISOs wollen mehr Datensichtbarkeit</title>
@@ -410,17 +334,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4069497/cisos-wollen-mehr-datensichtbarkeit.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Thu, 09 Oct 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>DDoS Botnet Aisuru Blankets US ISPs in Record DDoS</title>
-      <link>https://krebsonsecurity.com/2025/10/ddos-botnet-aisuru-blankets-us-isps-in-record-ddos/</link>
-      <description>The world's largest and most disruptive botnet is now drawing a majority of its firepower from compromised Internet-of-Things (IoT) devices hosted on U.S. Internet providers like AT&amp;#038;T, Comcast and Verizon, new evidence suggests. Experts say the heavy concentration of infected devices at U.S. providers is complicating efforts to limit collateral damage from the botnet's attacks, which shattered previous records this week with a brief traffic flood that clocked in at nearly 30 trillion bits of data per second.</description>
-      <guid isPermaLink="false">https://krebsonsecurity.com/2025/10/ddos-botnet-aisuru-blankets-us-isps-in-record-ddos/</guid>
+      <title>Microsoft Edge security advisory (AV25-639)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-639</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-639</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Fri, 10 Oct 2025 16:10:43 +0000</pubDate>
+      <comments>Score: 7.66</comments>
+      <pubDate>Fri, 03 Oct 2025 13:49:21 +0000</pubDate>
     </item>
     <item>
       <title>Five central suspects arrested in whole-sale cocaine trafficking case</title>
@@ -430,7 +355,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Fri, 10 Oct 2025 16:30:30 +0000</pubDate>
+      <pubDate>Fri, 10 Oct 2025 17:17:21 +0000</pubDate>
     </item>
     <item>
       <title>The ultimate business resiliency test: Inside Kantsu’s ransomware response</title>
@@ -734,7 +659,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4069236/corporate-executives-exposed-to-cyber-attacks-talk-about-the-pitfalls-of-response-measures.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Thu, 09 Oct 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -855,7 +780,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4069616/your-cyber-risk-problem-isnt-tech-its-architecture.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Thu, 09 Oct 2025 11:01:00 +0000</pubDate>
     </item>
     <item>
@@ -938,7 +863,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4070270/homeland-securitys-reassignment-of-cisa-staff-leaves-us-networks-exposed.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Thu, 09 Oct 2025 12:08:42 +0000</pubDate>
     </item>
     <item>
@@ -1002,7 +927,7 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4070992/data-leak-at-sonicwall-affects-all-cloud-backup-customers.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Fri, 10 Oct 2025 16:43:26 +0000</pubDate>
     </item>
     <item>
@@ -1077,7 +1002,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4070281/clayrat-spyware-turns-phones-into-distribution-hubs-via-sms-and-telegram.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Thu, 09 Oct 2025 13:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1184,7 +1109,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4070290/lockbit-dragonforce-and-qilin-form-a-cartel-to-dictate-ransomware-market-conditions.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Thu, 09 Oct 2025 13:08:41 +0000</pubDate>
     </item>
     <item>
@@ -1194,7 +1119,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av25-640</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Mon, 06 Oct 2025 12:44:02 +0000</pubDate>
     </item>
     <item>
@@ -1204,7 +1129,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-641</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.38</comments>
       <pubDate>Mon, 06 Oct 2025 12:59:47 +0000</pubDate>
     </item>
     <item>
@@ -1214,7 +1139,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-642</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.38</comments>
       <pubDate>Mon, 06 Oct 2025 13:16:20 +0000</pubDate>
     </item>
     <item>
@@ -1224,7 +1149,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-643</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.38</comments>
       <pubDate>Mon, 06 Oct 2025 13:20:55 +0000</pubDate>
     </item>
     <item>
@@ -1234,7 +1159,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-644</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Mon, 06 Oct 2025 13:30:34 +0000</pubDate>
     </item>
     <item>
@@ -1244,7 +1169,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-645</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Mon, 06 Oct 2025 13:36:15 +0000</pubDate>
     </item>
     <item>
@@ -1570,7 +1495,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4069533/disaster-recovery-und-business-continuity-effektiv-planen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Fri, 10 Oct 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1580,7 +1505,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av25-646</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Mon, 06 Oct 2025 18:25:02 +0000</pubDate>
     </item>
     <item>
@@ -1733,7 +1658,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4070548/the-cia-triad-is-dead-stop-using-a-cold-war-relic-to-fight-21st-century-threats.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Fri, 10 Oct 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1858,7 +1783,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4070745/it-produkte-der-woche-it-sa-special.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Fri, 10 Oct 2025 10:44:29 +0000</pubDate>
     </item>
     <item>
@@ -1925,7 +1850,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4070854/open-source-dfir-velociraptor-was-abused-in-expanding-ransomware-efforts.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Fri, 10 Oct 2025 12:01:42 +0000</pubDate>
     </item>
     <item>
@@ -1935,7 +1860,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-013-vulnerability-impacting-oracle-e-business-suite-cve-2025-61882</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.80</comments>
+      <comments>Score: 8.78</comments>
       <pubDate>Tue, 07 Oct 2025 13:39:11 +0000</pubDate>
     </item>
     <item>
@@ -1945,7 +1870,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-october-2025-monthly-rollup-av25-647</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.80</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Tue, 07 Oct 2025 14:02:02 +0000</pubDate>
     </item>
     <item>
@@ -1955,7 +1880,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-648</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.81</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Tue, 07 Oct 2025 14:07:52 +0000</pubDate>
     </item>
     <item>
@@ -1965,7 +1890,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-649</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.28</comments>
+      <comments>Score: 9.26</comments>
       <pubDate>Wed, 08 Oct 2025 12:39:22 +0000</pubDate>
     </item>
     <item>
@@ -1975,7 +1900,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-650</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Wed, 08 Oct 2025 19:33:38 +0000</pubDate>
     </item>
     <item>
@@ -1985,8 +1910,115 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av25-651</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Thu, 09 Oct 2025 12:55:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>FBI seizes BreachForums servers as threatened Salesforce data release deadline approaches</title>
+      <link>https://www.csoonline.com/article/4071014/fbi-seizes-breachforums-servers-as-threatened-salesforce-data-release-deadline-approaches.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Only days ago, a message on the BreachForums extortion site threatened to leak one billion records allegedly stolen from the Salesforce systems of 39 of the largest companies in the world, including Disney, Toyota, Adidas, McDonalds, IKEA, and Home Depot.&lt;/p&gt;
+
+
+
+&lt;p&gt;It was a threat that the criminals behind the site, a super-alliance of the ShinyHunters, Scattered Spider, and LAPSUS$ ransomware groups known as Scattered Lapsus$ Hunters, vowed to carry out via its dark web and Clearnet sites if Salesforce did not pay a ransom by 11.59 p.m. EST on October 10.&lt;/p&gt;
+
+
+
+&lt;p&gt;“If Salesforce does not engage with us to resolve this, we will completely target each and every indiviual [sic] customers of theirs listed below, failure to comply will result in massive consequences,” said a message on the original leak site.&lt;/p&gt;
+
+
+
+&lt;p&gt;“If you are listed below we advise you to take every action to protect yourselves and reach out to us to resolve this. Do not be mistaken that your SaaS provider will protect all of you, they won’t.”&lt;/p&gt;
+
+
+
+&lt;p&gt;However, on October 9, the BreachForums dark net and Clearnet sites displayed a very different message. “This domain has been seized,” announced a domain takedown image, an action coordinated jointly by the US Department of Justice (DoJ), the FBI, France’s BL2C cybercrime unit, and the Paris Prosecutor’s Office.&lt;/p&gt;
+
+
+
+&lt;p&gt;Normally, more detail on a police action of this magnitude would be published by the FBI itself, but the agency’s website is currently not being updated due to the US government shutdown.&lt;/p&gt;
+
+
+
+&lt;p&gt;What seems clear is that the bust is a significant one, disrupting not only the BreachForums sites but the back-end infrastructure, database archives, and escrow payment data dating back to 2023.&lt;/p&gt;
+
+
+
+&lt;p&gt;“BreachForums was seized by the FBI and international partners today. All our domains were taken from us by the US Government. The era of forums is over,” the Scattered Lapsus$ Hunters group said in a &lt;a href="https://socradar.io/breachforums-seized-yes-again/" rel="noreferrer noopener" target="_blank"&gt;PGP-encrypted statement&lt;/a&gt; on Telegram.&lt;/p&gt;
+
+
+
+&lt;p&gt;Now for the bad news: as of October 9, the wider Salesforce ransom campaign is still active. Although the primary BreachForums sites have been taken over, a separate dark web data leak site remains operational, and the group is still threatening to release the Salesforce data records as originally planned, CSO Online has confirmed.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="fall-and-rise"&gt;Fall and rise&lt;/h2&gt;
+
+
+
+&lt;p&gt;This is not the first time BreachForums has been on the wrong end of police action.&lt;/p&gt;
+
+
+
+&lt;p&gt;Domain seizure number one happened in June 2023, three months after the alleged BreachForums founder &lt;a href="https://www.justice.gov/archives/opa/pr/justice-department-announces-arrest-founder-one-world-s-largest-hacker-forums-and-disruption" rel="noreferrer noopener" target="_blank"&gt;Conor Fitzpatrick was arrested in New York&lt;/a&gt;. The site was reinstated by ShinyHunters, only to be &lt;a href="https://www.csoonline.com/article/2110830/breachforums-seized-by-law-enforcement-admin-baphomet-arrested.html" target="_blank"&gt;downed for the second time&lt;/a&gt; in May 2024. &lt;a href="https://www.csoonline.com/article/4013356/us-indicts-one-for-role-in-breachforums-france-arrests-four-others.html" target="_blank"&gt;More arrests followed in 2025&lt;/a&gt;. By August, reports of Salesforce customers being &lt;a href="https://www.csoonline.com/article/4042191/shinyhunters-strike-again-workday-breach-tied-to-salesforce-targeted-social-engineering-wave.html" target="_blank"&gt;targeted by ShinyHunters&lt;/a&gt; started to emerge, culminating in the latest action.&lt;/p&gt;
+
+
+
+&lt;p&gt;Everything hinges on whether the group really has the data as claimed. There is no way to confirm this — ransomware groups have a record of exaggerating their crimes for the sake of publicity — but no way to refute it either.&lt;/p&gt;
+
+
+
+&lt;p&gt;“At this time, there is no indication that the Salesforce platform has been compromised, nor is this activity related to any known vulnerability in our technology,” a Salesforce spokesperson &lt;a href="https://www.reuters.com/sustainability/boards-policy-regulation/almost-1-billion-salesforce-records-stolen-hacker-group-claims-2025-10-03/?utm_source=chatgpt.com" rel="noreferrer noopener" target="_blank"&gt;told Reuters&lt;/a&gt; earlier this month.&lt;/p&gt;
+
+
+
+&lt;p&gt;The significance of the takedown is hard to assess beyond its symbolic value, but should become clearer in the weeks ahead, suggested experts.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Domain seizures often provide server logs, user data, and cryptocurrency trails that can help fuel indictments and asset freezes. Today’s seizure also has the potential to disrupt ransomware supply chains for future operations,” said &lt;a href="https://www.linkedin.com/in/zbyneksopuch/" rel="noreferrer noopener" target="_blank"&gt;Zbyněk Sopuch&lt;/a&gt;, CTO of security vendor Safetica Technologies.&lt;/p&gt;
+
+
+
+&lt;p&gt;Nevertheless, one takedown was unlikely to reduce the wider threat of ransomware attacks. “CSOs should consider today’s seizure a 30-day grace period to ramp up dark web monitoring tools, audit Salesforce configurations, and drill their incident response playbooks,” he said.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="targeting-saas"&gt;Targeting SaaS&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.linkedin.com/in/rikferguson/" rel="noreferrer noopener" target="_blank"&gt;Rik Ferguson&lt;/a&gt;, VP security intelligence at Forescout, agreed that any disruption was likely to be a temporary setback.&lt;/p&gt;
+
+
+
+&lt;p&gt;“It burns infrastructure, yields intelligence, and sows distrust among criminals. But the gang’s dark-web leak site is still up, and they explicitly say the campaign continues,” he told CSO Online by email.&lt;/p&gt;
+
+
+
+&lt;p&gt;“That tells you everything about the current model: forum-free, portable extortion that pivots across Telegram, throwaway domains, and bespoke leak sites. Taking the sign down doesn’t close the business.”&lt;/p&gt;
+
+
+
+&lt;p&gt;According to Ferguson, “SaaS is the new blast radius,” often compromised by abusing the OAuth and app-to-app trust on which these interconnected services depend. This is an attack surface that ransomware attackers will continue to target.&lt;/p&gt;
+
+
+
+&lt;p&gt;How should enterprises secure themselves? “Turn on OAuth app governance, least privilege scopes, token lifetime limits, and automated revocation on anomaly detection, kill any standing trust, rotate keys and tokens, shorten session lifetimes, and require step-up auth for high-risk actions,” advised Ferguson.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4071014/fbi-seizes-breachforums-servers-as-threatened-salesforce-data-release-deadline-approaches.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.98</comments>
+      <pubDate>Fri, 10 Oct 2025 18:49:52 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV25-603) - Update 1</title>
@@ -1995,7 +2027,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.07</comments>
+      <comments>Score: 10.05</comments>
       <pubDate>Thu, 09 Oct 2025 17:12:15 +0000</pubDate>
     </item>
     <item>
@@ -2005,7 +2037,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/esri-security-advisory-av25-652</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.16</comments>
+      <comments>Score: 10.13</comments>
       <pubDate>Thu, 09 Oct 2025 19:50:00 +0000</pubDate>
     </item>
     <item>
@@ -2015,7 +2047,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-653</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.83</comments>
+      <comments>Score: 10.79</comments>
       <pubDate>Fri, 10 Oct 2025 14:13:43 +0000</pubDate>
     </item>
     <item>
@@ -2025,7 +2057,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-654</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.85</comments>
+      <comments>Score: 10.82</comments>
       <pubDate>Fri, 10 Oct 2025 14:54:42 +0000</pubDate>
     </item>
     <item>
@@ -2035,7 +2067,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av25-655</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.86</comments>
+      <comments>Score: 10.83</comments>
       <pubDate>Fri, 10 Oct 2025 15:01:03 +0000</pubDate>
     </item>
   </channel>
