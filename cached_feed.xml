@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Oct 2025 03:12:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Oct 2025 04:26:27 +0000</lastBuildDate>
     <item>
       <title>GitLab security advisory (AV25-620)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-620</link>
@@ -48,73 +48,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.07</comments>
       <pubDate>Fri, 26 Sep 2025 18:50:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>Open-source DFIR Velociraptor was abused in expanding ransomware efforts</title>
-      <link>https://www.csoonline.com/article/4070854/open-source-dfir-velociraptor-was-abused-in-expanding-ransomware-efforts.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Velociraptor, the open-source &lt;a href="https://www.csoonline.com/article/572351/ransomware-endpoint-risks-are-top-concerns-for-dfir-professionals.html" target="_blank"&gt;DFIR&lt;/a&gt; tool meant to hunt intruders, has itself gone rogue – being picked up by threat actors in coordinated ransomware operations. Never tied to extortion attacks before, the tool has been found to be abused by a China-based group, Storm-2603, previously known for exploiting Microsoft SharePoint vulnerabilities.&lt;/p&gt;
-
-
-
-&lt;p&gt;Cisco Talos researchers first spotted the activity in August 2025 while responding to an unnamed multi-vector ransomware incident.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Talos responded to a ransomware attack by actors who appeared to be affiliated with Warlock ransomware, based on their ransom note and use of Warlock’s data leak site (DLS),” said Talos researchers in a blog post. “They deployed Warlock, LockBit, and Babuk ransomware to encrypt VMware ESXi virtual machines (VMs) and Windows servers. This severely impacted the customer’s IT environment.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Talos attributed the activity to the group with moderate confidence, citing “overlapping tools and tactics, techniques and procedures (TTPs)”.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;When a good tool goes rogue&lt;/h2&gt;
-
-
-
-&lt;p&gt;Velociraptor is typically leveraged by defenders who deploy its agents across Windows, Linux, and macOS systems to continuously collect telemetry and respond to security events. But in this campaign, the attackers used an old, vulnerable version (0.73.4.0) that exposed them to a privilege escalation flaw (&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6264" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-6264&lt;/a&gt;), enabling command execution and full endpoint takeover.&lt;/p&gt;
-
-
-
-&lt;p&gt;The hijacked Velociraptor agents were also, in cases &lt;a href="https://news.sophos.com/en-us/2025/08/26/velociraptor-incident-response-tool-abused-for-remote-access/" rel="noreferrer noopener" target="_blank"&gt;observed by Sophos’ CTU&lt;/a&gt;, manipulated to download and execute Visual Studio code, likely to create a tunnel to a command-and-control (C2) server. Talos noted that Velociraptor continued to launch even after an infected host was isolated, highlighting the tool’s role in maintaining persistence within compromised systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Velociraptor played a significant role in this campaign, ensuring the actors maintained stealthy persistent access while deploying LockBit and Babuk ransomware,” Talos researchers added. “The addition of this tool in the ransomware playbook is in line with findings from Talos’ ‘&lt;a href="https://blog.talosintelligence.com/2024yearinreview/" rel="noreferrer noopener" target="_blank"&gt;2024 Year in Review&lt;/a&gt;,’ which highlights that threat actors are utilizing an increasing variety of commercial and open-source products.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Attribution and the ransomware cocktail&lt;/h2&gt;
-
-
-
-&lt;p&gt;Talos links the campaign to Storm-2603, a suspected China-based threat actor, citing matching TTPs like the use of ‘cmd.exe’, disabling Defender protections, creating scheduled tasks, and manipulating Group Policy Objects. The use of multiple ransomware strains in a single operation – Warlock, LockBit, and Babuk – also bolstered confidence in this attribution.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Talos observed ransomware executables on Windows machines that were identified by EDR solutions as LockBit, and encrypted files with the Warlock extension ‘xlockxlock’,” the researchers added. “There was also a Linux binary on ESXi servers flagged as the Babuk encryptor, which achieved only partial encryption and appended files with ‘.babyk’.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Talos researchers added that the presence of Babuk ransomware in this breach is new. Strom-2603 has not publicly been tied to Babuk before this, while their deployment of Warlock and Lockbit in the same attack was previously &lt;a href="https://www.trendmicro.com/ru_ru/research/25/h/warlock-ransomware.html" rel="noreferrer noopener" target="_blank"&gt;reported&lt;/a&gt;. A double-extortion strategy was also evident from attackers exfiltrating sensitive data using a stealthy PowerShell script, which suppressed progress reporting and included delays to evade sandbox detection. &lt;/p&gt;
-
-
-
-&lt;p&gt;Talos urged defenders to verify the integrity and version of all Velociraptor deployments, ensuring they’re updated to version 0.73.5 or later, which patches the privilege-escalation flaw CVE-2025-6264. The disclosure follows another case this week of legitimate, open-source software being turned malicious–the earlier involving China-linked hackers &lt;a href="https://www.csoonline.com/article/4069515/open-source-monitor-turns-into-an-off-the-shelf-attack-beacon.html"&gt;weaponizing the Nezha RMM&lt;/a&gt; tool to deploy GhostRAT.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4070854/open-source-dfir-velociraptor-was-abused-in-expanding-ransomware-efforts.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.07</comments>
-      <pubDate>Fri, 10 Oct 2025 12:01:42 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-624)</title>
@@ -194,7 +127,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.23</comments>
-      <pubDate>Mon, 13 Oct 2025 01:12:17 +0000</pubDate>
+      <pubDate>Mon, 13 Oct 2025 02:26:27 +0000</pubDate>
     </item>
     <item>
       <title>Sudo security advisory (AV25-631)</title>
@@ -214,7 +147,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.28</comments>
-      <pubDate>Mon, 13 Oct 2025 01:12:17 +0000</pubDate>
+      <pubDate>Mon, 13 Oct 2025 02:26:27 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] ABB security advisory (AV25-632)</title>
@@ -253,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-635</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
+      <comments>Score: 7.29</comments>
       <pubDate>Thu, 02 Oct 2025 18:08:45 +0000</pubDate>
     </item>
     <item>
@@ -294,7 +227,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.34</comments>
-      <pubDate>Mon, 13 Oct 2025 01:12:17 +0000</pubDate>
+      <pubDate>Mon, 13 Oct 2025 02:26:27 +0000</pubDate>
     </item>
     <item>
       <title>Europe’s most innovative law enforcement projects honoured at Europol’s 2025 Excellence Awards</title>
@@ -304,7 +237,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.35</comments>
-      <pubDate>Mon, 13 Oct 2025 01:12:17 +0000</pubDate>
+      <pubDate>Mon, 13 Oct 2025 02:26:27 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft Edge security advisory (AV25-639)</title>
@@ -313,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-639</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Fri, 03 Oct 2025 13:49:21 +0000</pubDate>
     </item>
     <item>
@@ -324,7 +257,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.41</comments>
-      <pubDate>Mon, 13 Oct 2025 01:12:17 +0000</pubDate>
+      <pubDate>Mon, 13 Oct 2025 02:26:27 +0000</pubDate>
     </item>
     <item>
       <title>51 children identified during international taskforce against child sexual exploitation</title>
@@ -334,7 +267,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 13 Oct 2025 01:12:17 +0000</pubDate>
+      <pubDate>Mon, 13 Oct 2025 02:26:27 +0000</pubDate>
     </item>
     <item>
       <title>From crypto-enabled money laundering to online recruitment of minors: European Police Chiefs tackle criminal threats</title>
@@ -344,7 +277,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 13 Oct 2025 01:12:17 +0000</pubDate>
+      <pubDate>Mon, 13 Oct 2025 02:26:27 +0000</pubDate>
     </item>
     <item>
       <title>Major blow to billion-euro glass eel trafficking networks</title>
@@ -354,7 +287,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 13 Oct 2025 01:12:17 +0000</pubDate>
+      <pubDate>Mon, 13 Oct 2025 02:26:27 +0000</pubDate>
     </item>
     <item>
       <title>Counterfeit and substandard food worth EUR 95 million seized in global operation</title>
@@ -364,7 +297,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Mon, 13 Oct 2025 01:12:17 +0000</pubDate>
+      <pubDate>Mon, 13 Oct 2025 02:26:27 +0000</pubDate>
     </item>
     <item>
       <title>Five central suspects arrested in whole-sale cocaine trafficking case</title>
@@ -374,7 +307,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Mon, 13 Oct 2025 01:12:17 +0000</pubDate>
+      <pubDate>Mon, 13 Oct 2025 02:26:27 +0000</pubDate>
     </item>
     <item>
       <title>Oracle security advisory (AV25-640)</title>
@@ -383,7 +316,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av25-640</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 06 Oct 2025 12:44:02 +0000</pubDate>
     </item>
     <item>
@@ -393,7 +326,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-641</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 06 Oct 2025 12:59:47 +0000</pubDate>
     </item>
     <item>
@@ -403,7 +336,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-642</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 06 Oct 2025 13:16:20 +0000</pubDate>
     </item>
     <item>
@@ -413,7 +346,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-643</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 06 Oct 2025 13:20:55 +0000</pubDate>
     </item>
     <item>
@@ -423,7 +356,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-644</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 06 Oct 2025 13:30:34 +0000</pubDate>
     </item>
     <item>
@@ -433,7 +366,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-645</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 06 Oct 2025 13:36:15 +0000</pubDate>
     </item>
     <item>
@@ -443,7 +376,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av25-646</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Mon, 06 Oct 2025 18:25:02 +0000</pubDate>
     </item>
     <item>
@@ -453,7 +386,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-013-vulnerability-impacting-oracle-e-business-suite-cve-2025-61882</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Tue, 07 Oct 2025 13:39:11 +0000</pubDate>
     </item>
     <item>
@@ -463,7 +396,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-october-2025-monthly-rollup-av25-647</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Tue, 07 Oct 2025 14:02:02 +0000</pubDate>
     </item>
     <item>
@@ -473,7 +406,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-648</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Tue, 07 Oct 2025 14:07:52 +0000</pubDate>
     </item>
     <item>
@@ -580,7 +513,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4071014/fbi-seizes-breachforums-servers-as-threatened-salesforce-data-release-deadline-approaches.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Fri, 10 Oct 2025 18:49:52 +0000</pubDate>
     </item>
     <item>
@@ -590,7 +523,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-649</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Wed, 08 Oct 2025 12:39:22 +0000</pubDate>
     </item>
     <item>
@@ -600,7 +533,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-650</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Wed, 08 Oct 2025 19:33:38 +0000</pubDate>
     </item>
     <item>
@@ -610,7 +543,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av25-651</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Thu, 09 Oct 2025 12:55:35 +0000</pubDate>
     </item>
     <item>
@@ -620,7 +553,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Thu, 09 Oct 2025 17:12:15 +0000</pubDate>
     </item>
     <item>
@@ -630,8 +563,98 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/esri-security-advisory-av25-652</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.73</comments>
       <pubDate>Thu, 09 Oct 2025 19:50:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>So schützen Zugriffskontrollen vor Ransomware</title>
+      <link>https://www.csoonline.com/article/3980094/so-schutzen-zugriffskontrollen-vor-ransomware.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-full is-resized"&gt; loading="lazy" width="400px"&gt;&lt;figcaption class="wp-element-caption"&gt;Um sich vor Ransomware-Angriffen zu schützen, sollten Unternehmen ihre Logins absichern.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;Fit Ztudio – shutterstock.com&lt;/p&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.csoonline.com/article/3969669/vor-diesen-ransomware-banden-sollten-sie-sich-huten.html"&gt;Ransomware&lt;/a&gt; bleibt eine der größten Gefahren für Unternehmen – trotz wachsender Investitionen in IT-Sicherheit. Die Ursache: Der Erstzugriff gelingt Angreifern erschreckend häufig über kompromittierte Identitäten. Aktuelle Analysen zeigen, dass in rund drei Viertel der Fälle gestohlene oder missbrauchte Zugangsdaten das Einfallstor sind. Nicht der technische Exploit, sondern der Login ist das Problem. Wer dieses Risiko unterschätzt, setzt nicht nur Daten und Systeme aufs Spiel, sondern auch Betriebsfähigkeit, Ruf und Regeltreue.&lt;/p&gt;
+
+
+
+&lt;p&gt;Moderne Angreifer agieren automatisiert, arbeitsteilig und strategisch. Der Einstieg erfolgt häufig über öffentlich zugängliche Angriffsflächen: Remote-Logins, &lt;a href="https://www.csoonline.com/article/3495478/api-security-die-10-besten-api-tools.html"&gt;APIs&lt;/a&gt;, Schnittstellen von Drittsystemen. Sobald ein initialer Zugang gelingt – sei es durch Phishing, Credential Stuffing oder aus öffentlich bekannten Leaks – beginnt die stille Ausbreitung. Über unzureichend abgesicherte Konten oder nicht mehr überwachte Service-Accounts verschaffen sich Angreifer höhere Rechte, bewegen sich seitlich durchs Netzwerk und bereiten die eigentliche Erpressung vor. In dieser Phase bleibt der Angriff oft unentdeckt – bis es zu spät ist.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;strong&gt;Wo Unternehmen angreifbar sind&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;Viele Sicherheitsstrategien setzen nach wie vor auf Schutz der Infrastruktur, nicht der &lt;a href="https://www.csoonline.com/article/3493791/identitatsdiebstahl-im-unternehmen-benutzerkonten-erfolgreich-schutzen.html"&gt;Identität&lt;/a&gt;. Dabei entstehen Lücken: Externe Zugriffe werden nicht ausreichend begrenzt, privilegierte Konten bleiben dauerhaft aktiv, veraltete Login-Verfahren ohne Multi-Faktor-Authentifizierung (&lt;a href="https://www.csoonline.com/article/3495262/multi-faktor-authentifizierung-so-finden-sie-die-passende-mfa-losung.html"&gt;MFA&lt;/a&gt;) sind im Einsatz. Besonders kritisch wird es, wenn Sichtbarkeit fehlt – also nicht klar ist, wer wann auf welche Systeme zugreift, mit welchen Rechten und über welchen Kanal. Das macht es nahezu unmöglich, Angriffe frühzeitig zu erkennen oder im Nachgang zu rekonstruieren.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;strong&gt;Moderne Verteidigungsstrategien setzen an der Identität an&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.csoonline.com/article/3491851/was-ist-zero-trust.html"&gt;Zero Trust&lt;/a&gt; hat sich als Leitmodell für resiliente Sicherheitsarchitekturen etabliert – gerade in Umgebungen, in denen klassische Netzgrenzen längst verschwimmen. Für CISOs bedeutet das: Der Schutz digitaler Identitäten muss systematisch in alle Schichten der Verteidigung integriert werden. Das beginnt mit der Etablierung eines rollenbasierten Zugriffskonzepts (&lt;a href="https://de.wikipedia.org/wiki/Role_Based_Access_Control"&gt;RBAC&lt;/a&gt;), das mit kontextsensitiver Authentifizierung ergänzt wird. Jedes System – ob intern, in der Cloud oder beim externen Dienstleister – muss dabei identitätsbasiert angesteuert werden. Die technologische Umsetzung kann in Etappen erfolgen: zunächst über MFA bei privilegierten Zugängen, dann durch Einführung adaptiver Login-Verfahren und schließlich durch die vollständige Trennung sensibler Ressourcen nach Zero-Trust-Prinzipien. Entscheidend ist, dass jede Maßnahme strategisch in das bestehende Sicherheitsmodell eingebettet wird.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;strong&gt;Sicherheit, die nicht stört – sondern schützt&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;Gerade in dynamischen IT-Umgebungen mit vielen externen Partnern, Kunden oder Dienstleistern stößt klassische Zugangssicherheit schnell an Grenzen. Sicherheitsmechanismen müssen flexibel, aber wirksam sein. Gerade für CISOs steht oft der Spagat im Raum: Sicherheitsmaßnahmen sollen wirksam sein – aber keine Friktion erzeugen, die Prozesse lähmt oder Nutzer umgeht. Adaptive Authentifizierung bietet hier eine Lösung: Sie bewertet jede Zugriffsanfrage anhand kontextueller Parameter wie Gerät, Standort und Nutzungsverhalten. In der Praxis bedeutet das: Zugriff über bekannte, vertrauenswürdige Geräte bleibt einfach – bei Abweichungen wird automatisch eine zusätzliche Authentifizierung verlangt. CISOs können diese Mechanismen nutzen, um gezielt risikobasierte Policies zu etablieren, die sich ins Tagesgeschäft integrieren lassen. Besonders sinnvoll ist dies bei hybriden Belegschaften, mobilen Teams und beim Zugriff durch externe Dienstleister.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;strong&gt;Passwörter: Der Klassiker unter den Schwachstellen&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;Trotz aller Entwicklungen bleibt das &lt;a href="https://www.csoonline.com/article/3960498/passworter-deutscher-politiker-im-darknet-aufgetaucht.html"&gt;Passwort&lt;/a&gt; ein Dauerproblem. Es ist anfällig für &lt;a href="https://www.csoonline.com/article/3494669/ntt-analyse-6-tipps-zum-schutz-vor-phishing-angriffen.html"&gt;Phishing&lt;/a&gt;, schwierig zu verwalten und wird oft mehrfach verwendet. Moderne Verfahren setzen deshalb auf &lt;a href="https://www.csoonline.com/article/3492200/authentifizierungslosungen-10-passwordless-optionen-fur-unternehmen.html"&gt;passwortlose Authentifizierung&lt;/a&gt;: biometrisch, über FIDO2-Schlüssel oder über verifizierte Apps. Das senkt nicht nur das Risiko, sondern reduziert auch IT-Kosten – etwa durch weniger Supportanfragen. Ergänzend unterstützen Systeme mit Anomalieerkennung: Sie analysieren Login-Verhalten in Echtzeit und schlagen Alarm, wenn Muster auf einen Angriff hindeuten.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;strong&gt;Regulatorischer Druck macht Zugriffssicherheit zur Pflicht&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;Mit der steigenden Bedrohungslage wächst auch der Druck von regulatorischer Seite. &lt;a href="https://www.csoonline.com/article/3494286/nis2-dora-data-act-co-die-wichtigsten-security-gesetze-im-uberblick.html"&gt;Die EU-Richtlinie NIS2, der Digital Operational Resilience Act (DORA)&lt;/a&gt; und nationale Anforderungen wie das IT-Sicherheitsgesetz 2.0 fordern nachvollziehbare, auditierbare Zugriffskontrollen – und zwar für alle Nutzergruppen. Unternehmen müssen nicht nur schützen, sondern dokumentieren: Wer hatte wann Zugriff? Mit welchen Rechten? Wurde der Zugriff überprüft? Wer hier frühzeitig auf transparente Identitäts- und Berechtigungsmodelle setzt, ist regulatorisch auf der sicheren Seite.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;strong&gt;Zwischen Anspruch und Realität: Wo Sicherheitsarchitektur oft scheitert&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;Trotz klarer Empfehlungen und verfügbarer Technologien fällt es vielen Organisationen schwer, identitätsbasierte Sicherheit durchgängig umzusetzen. Gründe dafür sind meist historisch gewachsene IT-Landschaften, heterogene Systemarchitekturen und organisatorische Silos zwischen Security, Infrastruktur und Fachbereichen. Auch der kulturelle Faktor ist nicht zu unterschätzen: Sicherheit wird oft als Einschränkung wahrgenommen, nicht als Enabler.&lt;/p&gt;
+
+
+
+&lt;p&gt;Hinzu kommt, dass Verantwortlichkeiten für &lt;a href="https://www.csoonline.com/article/3492630/identitats-und-zugriffsmanagement-das-sind-die-unterschiede-zwischen-iam-iga-und-pam.html"&gt;Identitäts- und Zugriffsmanagement&lt;/a&gt; in vielen Unternehmen unklar verteilt sind. Während technische Aspekte in der IT verortet sind, bleiben strategische Entscheidungen über Rollenmodelle, Berechtigungskonzepte oder Drittzugriffe häufig undefiniert – oder werden im Projektgeschäft ad hoc gelöst. Das erschwert nicht nur die Umsetzung eines Zero-Trust-Modells, sondern verhindert auch eine nachhaltige Resilienzstrategie.&lt;/p&gt;
+
+
+
+&lt;p&gt;Wer Ransomware wirksam abwehren will, muss daher nicht nur in Technologien investieren, sondern auch Zuständigkeiten schärfen, Prozesse standardisieren und Sicherheitsarchitektur als fortlaufenden Transformationsprozess begreifen. Nur so wird Identitätsschutz zur tragenden Säule der Cyberabwehr – nicht als Zusatzmodul, sondern als strategischer Kern.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;strong&gt;Identität als Schlüssel zur nachhaltigen Sicherheitsstrategie&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;Ransomware-Angriffe beginnen nicht mit Verschlüsselung, sondern mit dem ersten Login. Deshalb muss die Verteidigung genau dort ansetzen. Wer digitale Identitäten konsequent schützt, reduziert nicht nur die Angriffsfläche, sondern schafft zugleich die Grundlage für &lt;a href="https://www.csoonline.com/de/compliance/"&gt;Compliance&lt;/a&gt;, Nutzerfreundlichkeit und nachhaltige Resilienz. In einer zunehmend vernetzten und dynamischen IT-Landschaft wird die Absicherung von Identitäten zur Schlüsselaufgabe moderner Sicherheitsstrategien – nicht als technisches Detail, sondern als zentrales Steuerungselement. (jm)&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/3980094/so-schutzen-zugriffskontrollen-vor-ransomware.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.98</comments>
+      <pubDate>Mon, 13 Oct 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV25-653)</title>
@@ -640,7 +663,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-653</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Fri, 10 Oct 2025 14:13:43 +0000</pubDate>
     </item>
     <item>
@@ -650,7 +673,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-654</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Fri, 10 Oct 2025 14:54:42 +0000</pubDate>
     </item>
     <item>
@@ -660,7 +683,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av25-655</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Fri, 10 Oct 2025 15:01:03 +0000</pubDate>
     </item>
   </channel>
