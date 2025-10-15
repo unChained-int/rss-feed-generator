@@ -8,76 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Oct 2025 05:21:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Oct 2025 06:32:53 +0000</lastBuildDate>
     <item>
-      <title>SonicWall VPNs face a breach of their own after the September cloud-backup fallout</title>
-      <link>https://www.csoonline.com/article/4072194/sonicwall-vpns-face-a-breach-of-their-own-after-the-september-cloud-backup-fallout.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Just weeks after SonicWall disclosed an incident that exposed data from its MySonicWall cloud backup platform, new findings from Huntress suggest the situation is far from over — this time pointing to a fresh wave of SonicWall SSLVPN compromises.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Huntress, a new round of breaches targeting SonicWall SSLVPN devices emerged in early October, affecting at least 16 organizations and more than 100 accounts. Unlike the earlier &lt;a href="https://www.csoonline.com/article/4070992/data-leak-at-sonicwall-affects-all-cloud-backup-customers.html" target="_blank"&gt;cloud-side breach&lt;/a&gt;, the latest intrusions involve attackers logging into the VPN appliances using valid credentials.&lt;/p&gt;
-
-
-
-&lt;p&gt;“As of October 10, Huntress has observed widespread compromise of SonicWall SSLVPN devices across multiple customer environments,” Huntress said in a blog post. “Threat actors are authenticating into multiple accounts rapidly across compromised devices. The speed and scale of these attacks imply that the attackers appear to control valid credentials rather than brute-forcing.”&lt;/p&gt;
-
-
-
-&lt;p&gt;While SonicWall had &lt;a href="https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330"&gt;warned&lt;/a&gt; that the September incident allowed an unauthorized party to access firewall configuration backup files, including encrypted credentials and configuration data, it is unclear if the credentials used in Huntress found compromises came from the same incident.&lt;/p&gt;
-
-
-
-&lt;p&gt;SonicWall did not immediately respond to CSO’s request for comments.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Attackers are logging in, not breaking in&lt;/h2&gt;
-
-
-
-&lt;p&gt;The September SonicWall disclosure concerned a breach of its MySonicWall cloud backup service, involving unauthorized access of configuration files &lt;a href="https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330#:~:text=to%20clarify%20scope-,(%3C5%%20of%20firewalls),-%2C%20encrypted%20credentials%2C%20no"&gt;impacting&lt;/a&gt; “fewer than 5% of customers.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Huntress’ new discovery, however, points to a separate, credential-driven campaign. Starting around October 4, Huntress observed mass logins into SonicWall SSLVPN devices from attacker-controlled IPs – one notably traced to 202.155.8[.]73. Many login sessions were brief, but others involved deeper network reconnaissance and attempts to access internal Windows accounts, suggesting lateral movement attempts.&lt;/p&gt;
-
-
-
-&lt;p&gt;“We have no evidence to link this (SonicWall’s) advisory to the recent spike in compromises that we have seen,” Huntress &lt;a href="https://www.huntress.com/blog/sonicwall-sslvpn-compromise" rel="noreferrer noopener" target="_blank"&gt;noted&lt;/a&gt;, adding that “none may exist allowing us to discern that activity from our vantage point.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Even if threat actors were able to decode the compromised files from the September breach, they would see the credentials in encrypted forms, SonicWall advisory had noted. In other words, whoever’s logging into SonicWall devices right now probably didn’t get their keys from those backup files.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-defenders-should-watch-out-for"&gt;What defenders should watch out for&lt;/h2&gt;
-
-
-
-&lt;p&gt;Huntress highlighted that, in a few cases, successful SSLVPN authentication was followed by internal reconnaissance traffic or access attempts to Windows administrative accounts. Additionally, logins originating from a single recurring public IP may suggest a coordinated campaign rather than random credential reuse.&lt;/p&gt;
-
-
-
-&lt;p&gt;On top of the steps outlined in SonicWall’s advisory, Huntress’ blog offered additional defensive actions for organizations using SonicWall devices. It urged administrators to restrict remote management interfaces, reset all credentials and secrets, review SSLVPN logs for signs of unusual authentications, and enable multi-factor authentication (MFA) wherever possible. &lt;/p&gt;
-
-
-
-&lt;p&gt;SonicWall gear has remained a recurring target for threat groups, with recent attacks abusing improperly patched firewalls. The Akira ransomware gang &lt;a href="https://www.csoonline.com/article/4056080/ransomware-gang-going-after-improperly-patched-sonicwall-firewalls.html"&gt;exploited&lt;/a&gt; known access control flaws (CVE-2024-40766) in SonicWall appliances. Earlier in the year, customers were also warned of critical &lt;a href="https://www.csoonline.com/article/3706518/sonicwall-firewall-hit-with-critical-authentication-bypass-vulnerability.html"&gt;authentication bypass&lt;/a&gt; and &lt;a href="https://www.csoonline.com/article/4024395/ransomware-actors-target-patched-sonicwall-sma-devices-with-rootkit.html"&gt;rootkit-style backdoors&lt;/a&gt; targeting SonicWall appliances.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4072194/sonicwall-vpns-face-a-breach-of-their-own-after-the-september-cloud-backup-fallout.html</guid>
+      <title>17 suspected human traffickers arrested in Albania and Colombia</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/17-suspected-human-traffickers-arrested-in-albania-and-colombia</link>
+      <description>17 suspected human traffickers arrested in Albania and Colombia. The criminal network is believed to have sexually exploited over 50 victims in Albania and Croatia, trafficked from South America to Europe.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/17-suspected-human-traffickers-arrested-in-albania-and-colombia</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.23</comments>
-      <pubDate>Tue, 14 Oct 2025 08:51:01 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 04:32:53 +0000</pubDate>
     </item>
     <item>
       <title>Europol welcomes the European Investment Bank to its secure information exchange network</title>
@@ -87,7 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.28</comments>
-      <pubDate>Wed, 15 Oct 2025 03:21:18 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 04:32:53 +0000</pubDate>
     </item>
     <item>
       <title>FBI seizes BreachForums servers as threatened Salesforce data release deadline approaches</title>
@@ -193,7 +133,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4071014/fbi-seizes-breachforums-servers-as-threatened-salesforce-data-release-deadline-approaches.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
+      <comments>Score: 7.30</comments>
       <pubDate>Fri, 10 Oct 2025 18:49:52 +0000</pubDate>
     </item>
     <item>
@@ -204,7 +144,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.34</comments>
-      <pubDate>Wed, 15 Oct 2025 03:21:18 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 04:32:53 +0000</pubDate>
     </item>
     <item>
       <title>Europe’s most innovative law enforcement projects honoured at Europol’s 2025 Excellence Awards</title>
@@ -214,7 +154,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.35</comments>
-      <pubDate>Wed, 15 Oct 2025 03:21:18 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 04:32:53 +0000</pubDate>
     </item>
     <item>
       <title>So schützen Zugriffskontrollen vor Ransomware</title>
@@ -303,18 +243,17 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3980094/so-schutzen-zugriffskontrollen-vor-ransomware.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Mon, 13 Oct 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Luxury hybrid car thieves taken down in Belgium, Italy and Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/luxury-hybrid-car-thieves-taken-down-in-belgium-italy-and-spain</link>
-      <description>A highly specialised organised crime network responsible for the theft of more than 100 luxury hybrid cars has been dismantled in an international operation led by the Italian Carabinieri with support from Europol and Eurojust. The estimated value of all stolen cars is of at least EUR 3 million.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/luxury-hybrid-car-thieves-taken-down-in-belgium-italy-and-spain</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
+      <title>Patch Tuesday, October 2025 ‘End of 10’ Edition</title>
+      <link>https://krebsonsecurity.com/2025/10/patch-tuesday-october-2025-end-of-10-edition/</link>
+      <description>Microsoft today released software updates to plug a whopping 172 security holes in its Windows operating systems, including at least three vulnerabilities that are already being actively exploited. October's Patch Tuesday also marks the final month that Microsoft will ship security updates for Windows 10 systems. If you're running a Windows 10 PC and you're unable or unwilling to migrate to Windows 11, read on for other options.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2025/10/patch-tuesday-october-2025-end-of-10-edition/</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
-      <pubDate>Wed, 15 Oct 2025 03:21:18 +0000</pubDate>
+      <comments>Score: 7.38</comments>
+      <pubDate>Tue, 14 Oct 2025 22:57:38 +0000</pubDate>
     </item>
     <item>
       <title>CIO100 and CSO30 ASEAN 2025 Team Awards Finalists: Celebrating Technology and Cybersecurity Excellence Across the Southeast Asia region</title>
@@ -504,77 +443,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4071340/cio100-and-cso30-asean-2025-team-awards-finalists-celebrating-technology-and-cybersecurity-excellence-across-the-southeast-asia-region-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Mon, 13 Oct 2025 04:46:44 +0000</pubDate>
     </item>
     <item>
-      <title>Patch Tuesday, October 2025 ‘End of 10’ Edition</title>
-      <link>https://krebsonsecurity.com/2025/10/patch-tuesday-october-2025-end-of-10-edition/</link>
-      <description>Microsoft today released software updates to plug a whopping 172 security holes in its Windows operating systems, including at least three vulnerabilities that are already being actively exploited. October's Patch Tuesday also marks the final month that Microsoft will ship security updates for Windows 10 systems. If you're running a Windows 10 PC and you're unable or unwilling to migrate to Windows 11, read on for other options.</description>
-      <guid isPermaLink="false">https://krebsonsecurity.com/2025/10/patch-tuesday-october-2025-end-of-10-edition/</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
-      <pubDate>Tue, 14 Oct 2025 22:57:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>Oracle security advisory (AV25-640)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av25-640</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av25-640</guid>
+      <title>Luxury hybrid car thieves taken down in Belgium, Italy and Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/luxury-hybrid-car-thieves-taken-down-in-belgium-italy-and-spain</link>
+      <description>A highly specialised organised crime network responsible for the theft of more than 100 luxury hybrid cars has been dismantled in an international operation led by the Italian Carabinieri with support from Europol and Eurojust. The estimated value of all stolen cars is of at least EUR 3 million.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/luxury-hybrid-car-thieves-taken-down-in-belgium-italy-and-spain</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Mon, 06 Oct 2025 12:44:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV25-641)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-641</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-641</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Mon, 06 Oct 2025 12:59:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>Dell security advisory (AV25-642)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-642</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-642</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Mon, 06 Oct 2025 13:16:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ubuntu security advisory (AV25-643)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-643</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-643</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Mon, 06 Oct 2025 13:20:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] CISA ICS security advisories (AV25–644)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-644</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-644</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Mon, 06 Oct 2025 13:30:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>Red Hat security advisory (AV25-645)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-645</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-645</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Mon, 06 Oct 2025 13:36:15 +0000</pubDate>
+      <comments>Score: 7.41</comments>
+      <pubDate>Wed, 15 Oct 2025 04:32:53 +0000</pubDate>
     </item>
     <item>
       <title>What to look for in a data protection platform for hybrid clouds</title>
@@ -970,8 +850,68 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4071098/what-to-look-for-in-a-data-protection-platform-for-hybrid-clouds.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Mon, 13 Oct 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Oracle security advisory (AV25-640)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av25-640</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av25-640</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.45</comments>
+      <pubDate>Mon, 06 Oct 2025 12:44:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV25-641)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-641</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-641</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.45</comments>
+      <pubDate>Mon, 06 Oct 2025 12:59:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dell security advisory (AV25-642)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-642</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-642</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.45</comments>
+      <pubDate>Mon, 06 Oct 2025 13:16:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ubuntu security advisory (AV25-643)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-643</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-643</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.45</comments>
+      <pubDate>Mon, 06 Oct 2025 13:20:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] CISA ICS security advisories (AV25–644)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-644</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-644</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.45</comments>
+      <pubDate>Mon, 06 Oct 2025 13:30:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>Red Hat security advisory (AV25-645)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-645</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-645</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.45</comments>
+      <pubDate>Mon, 06 Oct 2025 13:36:15 +0000</pubDate>
     </item>
     <item>
       <title>Redis security advisory (AV25-646)</title>
@@ -991,7 +931,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 15 Oct 2025 03:21:18 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 04:32:53 +0000</pubDate>
     </item>
     <item>
       <title>From crypto-enabled money laundering to online recruitment of minors: European Police Chiefs tackle criminal threats</title>
@@ -1001,7 +941,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 15 Oct 2025 03:21:18 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 04:32:53 +0000</pubDate>
     </item>
     <item>
       <title>Major blow to billion-euro glass eel trafficking networks</title>
@@ -1011,7 +951,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 15 Oct 2025 03:21:18 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 04:32:53 +0000</pubDate>
     </item>
     <item>
       <title>Dull but dangerous: A guide to 15 overlooked cybersecurity blind spots</title>
@@ -1347,38 +1287,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4071219/dull-but-dangerous-a-guide-to-15-overlooked-cybersecurity-blind-spots.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 13 Oct 2025 11:17:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL25-013 – Vulnerability impacting Oracle E-Business Suite - CVE-2025-61882</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al25-013-vulnerability-impacting-oracle-e-business-suite-cve-2025-61882</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-013-vulnerability-impacting-oracle-e-business-suite-cve-2025-61882</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Tue, 07 Oct 2025 13:39:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>Android security advisory – October 2025 monthly rollup (AV25-647)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-october-2025-monthly-rollup-av25-647</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-october-2025-monthly-rollup-av25-647</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Tue, 07 Oct 2025 14:02:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] ABB security advisory (AV25-648)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-648</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-648</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Tue, 07 Oct 2025 14:07:52 +0000</pubDate>
     </item>
     <item>
       <title>AI red flags, ethics boards and the real threat of AGI today</title>
@@ -1516,8 +1426,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4071222/ai-red-flags-ethics-boards-and-the-real-threat-of-agi-today.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Mon, 13 Oct 2025 12:12:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL25-013 – Vulnerability impacting Oracle E-Business Suite - CVE-2025-61882</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al25-013-vulnerability-impacting-oracle-e-business-suite-cve-2025-61882</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-013-vulnerability-impacting-oracle-e-business-suite-cve-2025-61882</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Tue, 07 Oct 2025 13:39:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>Android security advisory – October 2025 monthly rollup (AV25-647)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-october-2025-monthly-rollup-av25-647</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-october-2025-monthly-rollup-av25-647</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.59</comments>
+      <pubDate>Tue, 07 Oct 2025 14:02:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] ABB security advisory (AV25-648)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-648</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-648</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.59</comments>
+      <pubDate>Tue, 07 Oct 2025 14:07:52 +0000</pubDate>
     </item>
     <item>
       <title>Counterfeit and substandard food worth EUR 95 million seized in global operation</title>
@@ -1527,7 +1467,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Wed, 15 Oct 2025 03:21:18 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 04:32:53 +0000</pubDate>
     </item>
     <item>
       <title>Five central suspects arrested in whole-sale cocaine trafficking case</title>
@@ -1537,7 +1477,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Wed, 15 Oct 2025 03:21:18 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 04:32:53 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV25-649)</title>
@@ -1546,7 +1486,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-649</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 08 Oct 2025 12:39:22 +0000</pubDate>
     </item>
     <item>
@@ -1556,7 +1496,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-650</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Wed, 08 Oct 2025 19:33:38 +0000</pubDate>
     </item>
     <item>
@@ -1566,7 +1506,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av25-651</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Thu, 09 Oct 2025 12:55:35 +0000</pubDate>
     </item>
     <item>
@@ -1576,7 +1516,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Thu, 09 Oct 2025 17:12:15 +0000</pubDate>
     </item>
     <item>
@@ -1586,7 +1526,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/esri-security-advisory-av25-652</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Thu, 09 Oct 2025 19:50:00 +0000</pubDate>
     </item>
     <item>
@@ -1739,7 +1679,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4071102/cisos-must-rethink-the-tabletop-as-57-of-incidents-have-never-been-rehearsed.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Tue, 14 Oct 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1813,7 +1753,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4072083/vom-ciso-zum-chief-risk-architect.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 14 Oct 2025 08:19:11 +0000</pubDate>
     </item>
     <item>
@@ -1930,7 +1870,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4072174/oracle-issues-second-emergency-patch-for-e-business-suite-in-two-weeks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Tue, 14 Oct 2025 08:40:33 +0000</pubDate>
     </item>
     <item>
@@ -1940,7 +1880,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-653</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Fri, 10 Oct 2025 14:13:43 +0000</pubDate>
     </item>
     <item>
@@ -1950,7 +1890,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-654</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Fri, 10 Oct 2025 14:54:42 +0000</pubDate>
     </item>
     <item>
@@ -1960,7 +1900,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av25-655</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Fri, 10 Oct 2025 15:01:03 +0000</pubDate>
     </item>
     <item>
@@ -2055,7 +1995,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4072244/scattered-lapsus-hunters-extortion-site-goes-dark-whats-next.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Tue, 14 Oct 2025 19:54:25 +0000</pubDate>
     </item>
     <item>
@@ -2268,7 +2208,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3491754/was-ist-ein-keylogger.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Wed, 15 Oct 2025 03:39:00 +0000</pubDate>
     </item>
     <item>
@@ -2278,7 +2218,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-656</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.37</comments>
+      <comments>Score: 10.33</comments>
       <pubDate>Tue, 14 Oct 2025 13:00:25 +0000</pubDate>
     </item>
     <item>
@@ -2288,7 +2228,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-657</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.38</comments>
+      <comments>Score: 10.34</comments>
       <pubDate>Tue, 14 Oct 2025 13:11:26 +0000</pubDate>
     </item>
     <item>
@@ -2298,7 +2238,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-658</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.38</comments>
+      <comments>Score: 10.34</comments>
       <pubDate>Tue, 14 Oct 2025 13:14:53 +0000</pubDate>
     </item>
     <item>
@@ -2308,7 +2248,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-659</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.41</comments>
+      <comments>Score: 10.37</comments>
       <pubDate>Tue, 14 Oct 2025 14:06:31 +0000</pubDate>
     </item>
     <item>
@@ -2318,7 +2258,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-660</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.43</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Tue, 14 Oct 2025 14:38:59 +0000</pubDate>
     </item>
     <item>
@@ -2328,7 +2268,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-661</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.45</comments>
+      <comments>Score: 10.41</comments>
       <pubDate>Tue, 14 Oct 2025 15:11:02 +0000</pubDate>
     </item>
     <item>
@@ -2338,7 +2278,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-october-2025-monthly-rollup-av25-662</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.46</comments>
+      <comments>Score: 10.42</comments>
       <pubDate>Tue, 14 Oct 2025 15:29:15 +0000</pubDate>
     </item>
     <item>
@@ -2348,7 +2288,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-663</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.54</comments>
+      <comments>Score: 10.49</comments>
       <pubDate>Tue, 14 Oct 2025 17:32:38 +0000</pubDate>
     </item>
     <item>
@@ -2358,7 +2298,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-october-2025-monthly-rollup-av25-664</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.54</comments>
+      <comments>Score: 10.50</comments>
       <pubDate>Tue, 14 Oct 2025 17:40:06 +0000</pubDate>
     </item>
     <item>
@@ -2368,7 +2308,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-665</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.58</comments>
+      <comments>Score: 10.53</comments>
       <pubDate>Tue, 14 Oct 2025 18:39:50 +0000</pubDate>
     </item>
   </channel>
