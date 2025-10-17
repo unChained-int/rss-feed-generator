@@ -8,121 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Oct 2025 16:27:23 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Oct 2025 17:18:56 +0000</lastBuildDate>
     <item>
-      <title>Flax Typhoon exploited ArcGIS to gain long-term access</title>
-      <link>https://www.csoonline.com/article/4072876/flax-typhoon-exploited-arcgis-to-gain-long-term-access.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;An advanced persistent threat (APT) group, Flax Typhoon, was able to gain persistent access to the mapping tool ArcGIS for over a year, putting several enterprises at risk.&lt;/p&gt;
-
-
-
-&lt;p&gt;ArcGIS is a geospatial platform developed by ESRI, often relied upon by organizations to understand and analyze data in a geographic context.&lt;/p&gt;
-
-
-
-&lt;p&gt;China-based Flax Typhoon, also known as Ethereal Panda, modified the geo-mapping application’s Java server object extension (SOE) into a functioning web shell, according to new research from ReliaQuest.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.csoonline.com/article/3631635/us-government-sanctions-chinese-cybersecurity-company-linked-to-apt-group.html?utm=hybrid_search"&gt;Flax Typhoon&lt;/a&gt; had gated access with a hardcoded key for exclusive control and embedded it in system backups. This helped the actor in achieving deep, long-term persistence that could survive a full system recovery. It prioritized persistence, lateral movement, and credential harvesting, typically gaining initial access by exploiting public-facing servers, deploying web shells, and establishing VPN connections, noted the company.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The tactics are getting more sophisticated in compromising and manipulating trusted components or tools such as PowerShell or custom SoEs or public-facing portal connects instead of building and injecting a malware,” said Neil Shah, vice president at Counterpoint Research. “This could thus go undetected as there is some form of already established baseline or higher level of trust regarding security and is whitelisted by enterprises with onus on the application or tool developer.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="turning-arcgis-into-a-web-shell"&gt;Turning ArcGIS into a web shell&lt;/h2&gt;
-
-
-
-&lt;p&gt;The activity began with modifying an ArcGIS server SOE to behave as a web shell, ReliaQuest &lt;a href="https://reliaquest.com/blog/threat-spotlight-inside-flax-typhoons-arcgis-compromise/" rel="noreferrer noopener" target="_blank"&gt;explained&lt;/a&gt;. The attackers found a public-facing ArcGIS server that was connected to a private, internal ArcGIS server for backend computations (a common default configuration). It then executes base64-encoded (disguised) commands to the portal server, consistent with this proxying model.  &lt;/p&gt;
-
-
-
-&lt;p&gt;For initial execution, actors sent a malicious GET web request with a base64-encoded payload in the layer parameter. Decoded, it resolved to “cmd.exe /c mkdir C:\Windows\System32\Bridge,” instructing the server to create a hidden system directory named Bridge. This serves as a private workspace for the attackers. A hardcoded key was appended to the request, which was required to trigger the web shell and execute commands.&lt;/p&gt;
-
-
-
-&lt;p&gt;This was followed by repeatedly abusing this same web shell to run additional encoded PowerShell commands, routed through the same “JavaSimpleRESTSOE” extension and “getLayerCountByType” operation. This consistent method allowed them to advance their objectives while blending in with normal server traffic.&lt;/p&gt;
-
-
-
-&lt;p&gt;Learning the web shell worked, the threat actor used discovery commands like “whoami” to discover the compromised service account with local administrator rights and created new directories to serve as a staging area for the tools they would use later.&lt;/p&gt;
-
-
-
-&lt;p&gt;Activity was ramped up by scanning the internal network over various protocols, including &lt;a href="https://www.csoonline.com/article/3966334/public-exploits-already-available-for-a-severity-10-erlang-ssh-vulnerability-patch-now.html?utm=hybrid_search"&gt;Secure Shell (SSH)&lt;/a&gt;, HTTPS, &lt;a href="https://www.csoonline.com/article/3623709/nail-the-software-setup-and-avoid-attacks-with-the-top-10-cybersecurity-misconfiguration-list.html?utm=hybrid_search"&gt;Server Message Block (SMB)&lt;/a&gt;, and &lt;a href="https://www.csoonline.com/article/4037515/win-ddos-researchers-unveil-botnet-technique-exploiting-windows-domain-controllers.html?utm=hybrid_search"&gt;Remote Procedure Call (RPC)&lt;/a&gt;, and conducting several SMB scans across different internal subnets. Next, to establish long-term access, the renamed SoftEther VPN executable “bridge.exe” was uploaded into the default Windows System32 directory, which reduced the chances of detection. The malicious SOE also provided ongoing access, and given that it was on the ArcGIS server for an extended period, it was stored in the victim’s backups as well.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="who-is-at-risk"&gt;Who is at risk?&lt;/h2&gt;
-
-
-
-&lt;p&gt;In the first documented case confirmed by ArcGIS, where the malicious SOE was used, ReliaQuest identified that the password for the ArcGIS portal administrator account was a &lt;a href="https://www.csoonline.com/article/547462/microsoft-subnet-hackers-use-pathetic-passwords-just-like-everyone-else.html"&gt;leet password&lt;/a&gt; of unknown origin, suggesting that the attacker had access to the administrative account and was able to reset the password.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Any organization that uses ArcGIS in a networked environment, if it is exposed externally or to other enterprise data systems, is at risk,” said Devroop Dhar, co-founder and MD at Primus Partners. “The main risk is that attackers can use a compromised extension to maintain access and take out sensitive data. As ArcGIS is widely used in mapping, logistics, and public-sector planning, the data it has can be sensitive, like network maps, population records, and infrastructure layouts.”&lt;/p&gt;
-
-
-
-&lt;p&gt;As a result, for most enterprises, the concern is not just immediate disruption but also silent observation. If an attacker sits inside a system that tracks infrastructure or logistics, that is a serious intelligence advantage.&lt;/p&gt;
-
-
-
-&lt;p&gt;“To verify if compromised, organizations should start by taking a complete inventory of all ArcGIS Server versions in their environment and enumerating every Server Object Extension (SOE) and Server Object Interceptor (SOI) in use,” said Amit Jaju, senior managing director – India at Ankura Consulting. “Then they should compare these against known source and vendor hash values to detect unauthorized changes. Conduct a detailed hunt for any anomalous SOE JAR files or class structures, hardcoded tokens or encryption keys, suspicious admin activity logs, and web shell indicators identified by security researchers.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Jaju added that CISOs should not overlook backups or AMIs, and verify that they aren’t seeded with malicious SOEs and confirm the integrity of your golden images.&lt;/p&gt;
-
-
-
-&lt;p&gt;For remediation, immediately isolate affected ArcGIS servers, rotate all related service accounts and secrets, and apply strict least-privilege controls to ArcGIS service identities. “Rebuild compromised systems only from known-good media, redeploying extensions that are both signed and independently reviewed. Where possible, enforce code-signing validation for all SOEs to prevent tampering. Finally, strengthen your monitoring posture, add detections specifically for SOE abuse and abnormal ArcGIS administrative endpoint activity, and diversify your threat intelligence sources by subscribing to multiple feeds rather than relying solely on KEV,” added Jaju.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="trusted-software-is-the-new-attack-surface"&gt;Trusted software is the new attack surface&lt;/h2&gt;
-
-
-
-&lt;p&gt;Security analysts say that the Flax Typhoon case highlights a worrying evolution in the weaponization of trusted components rather than the deployment of conventional malware.&lt;/p&gt;
-
-
-
-&lt;p&gt;In 2023, the same group targeted dozens of organizations in Taiwan with the likely intention of performing espionage, reported  &lt;a href="https://www.microsoft.com/en-us/security/blog/2023/08/24/flax-typhoon-using-legitimate-software-to-quietly-access-taiwanese-organizations/"&gt;Microsoft&lt;/a&gt;. In 2020, SolarWinds was targeted by hackers. They deployed malicious code into &lt;a href="https://www.csoonline.com/article/570191/solarwinds-supply-chain-attack-explained-why-organizations-were-not-prepared.html"&gt;SolarWinds&lt;/a&gt; Orion IT monitoring and management software that was used by thousands of enterprises and government agencies worldwide.&lt;/p&gt;
-
-
-
-&lt;p&gt;In March 2023, &lt;a href="https://www.csoonline.com/article/575125/3cx-hack-highlights-risk-of-cascading-software-supply-chain-compromises.html"&gt;3CX&lt;/a&gt; suffered a serious software supply-chain compromise that resulted in both its Windows and macOS applications being poisoned with malicious code.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to experts, threat actors have realized that compromising a trusted vendor module gives them free access. As a result, vendor software should not be treated as safe by default. “Trusted platforms also need continuous verification. Regular code-integrity checks, tighter monitoring of vendor updates, and periodic pen testing of integrated systems are essential,” added Dhar.&lt;/p&gt;
-
-
-
-&lt;p&gt;CISOs should also push vendors to provide transparency and clarity, like SBOMs (Software Bills of Materials), details of their own security testing and disclosure protocols, Dhar said. “It is also important to separate privileges; just because a module comes from a trusted vendor does not mean it needs access to everything in the network.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Using AI efficiently to real-time monitor any anomaly in behavioral analytics, comparing with a longish history rather than a slice in time is critical added Shah.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4072876/flax-typhoon-exploited-arcgis-to-gain-long-term-access.html</guid>
+      <title>[Control systems] ABB security advisory (AV25-648)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-648</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-648</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
-      <pubDate>Wed, 15 Oct 2025 12:36:27 +0000</pubDate>
+      <comments>Score: 7.32</comments>
+      <pubDate>Tue, 07 Oct 2025 14:07:52 +0000</pubDate>
     </item>
     <item>
       <title>Europol conference warns: cybercrime fight hinges on access to data</title>
@@ -132,7 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.34</comments>
-      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
+      <pubDate>Fri, 17 Oct 2025 15:18:56 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV25-649)</title>
@@ -141,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-649</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Wed, 08 Oct 2025 12:39:22 +0000</pubDate>
     </item>
     <item>
@@ -152,17 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.41</comments>
-      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitLab security advisory (AV25-650)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-650</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-650</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
-      <pubDate>Wed, 08 Oct 2025 19:33:38 +0000</pubDate>
+      <pubDate>Fri, 17 Oct 2025 15:18:56 +0000</pubDate>
     </item>
     <item>
       <title>MCPTotal Launches to Power Secure Enterprise MCP Workflows</title>
@@ -226,48 +111,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4072584/mcptotal-launches-to-power-secure-enterprise-mcp-workflows.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Wed, 15 Oct 2025 17:28:58 +0000</pubDate>
     </item>
     <item>
-      <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</link>
-      <description>From 15 to 19 September 2025, Europol supported the fourth edition of the EMPACT Trafficking in Human Beings (THB) Hackathon, an action week against human trafficking enabled online. It was led by Dutch authorities, with the support of Germany and the United Kingdom, and brought together 73 specialists from 26 countries across the world. Eurojust also participated in the action.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europe’s borders go digital</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</link>
-      <description>The Entry/Exit System (EES) is the new IT system that digitally records the entry and exit of non-EU nationals travelling to 29 European countries for short stays. The system has already recorded over 300 000 movements, with the number continuing to grow daily. The EES began implementation on 12 October 2025 and will be fully operational by 10 April 2026.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>Major blow to billion-euro glass eel trafficking networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-blow-to-billion-euro-glass-eel-trafficking-networks</link>
-      <description>The latest iteration of Operation LAKE, which ran from October 2024 to June 2025, uncovered large-scale trafficking networks and disrupted the flow of live eels destined for illegal farms in Asia.The operation led to:16,131 inspections carried out across Europe26 arrests22 tonnes of glass eels seizedOrganised crime at the heart of traffickingInvestigations revealed that several organised crime groups were driving the...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-blow-to-billion-euro-glass-eel-trafficking-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>Juniper Networks security advisory (AV25-651)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av25-651</link>
+      <title>GitLab security advisory (AV25-650)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-650</link>
       <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av25-651</guid>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-650</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 09 Oct 2025 12:55:35 +0000</pubDate>
+      <comments>Score: 7.43</comments>
+      <pubDate>Wed, 08 Oct 2025 19:33:38 +0000</pubDate>
     </item>
     <item>
       <title>Source code and vulnerability info stolen from F5 Networks</title>
@@ -369,7 +224,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4073195/source-code-and-vulnerability-info-stolen-from-f5-networks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
+      <comments>Score: 7.50</comments>
       <pubDate>Wed, 15 Oct 2025 20:16:23 +0000</pubDate>
     </item>
     <item>
@@ -426,8 +281,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4072868/58-of-cisos-are-boosting-ai-security-budgets.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Wed, 15 Oct 2025 20:35:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>Juniper Networks security advisory (AV25-651)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av25-651</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av25-651</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 09 Oct 2025 12:55:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europe’s borders go digital</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</link>
+      <description>The Entry/Exit System (EES) is the new IT system that digitally records the entry and exit of non-EU nationals travelling to 29 European countries for short stays. The system has already recorded over 300 000 movements, with the number continuing to grow daily. The EES began implementation on 12 October 2025 and will be fully operational by 10 April 2026.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 17 Oct 2025 15:18:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>Major blow to billion-euro glass eel trafficking networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-blow-to-billion-euro-glass-eel-trafficking-networks</link>
+      <description>The latest iteration of Operation LAKE, which ran from October 2024 to June 2025, uncovered large-scale trafficking networks and disrupted the flow of live eels destined for illegal farms in Asia.The operation led to:16,131 inspections carried out across Europe26 arrests22 tonnes of glass eels seizedOrganised crime at the heart of traffickingInvestigations revealed that several organised crime groups were driving the...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-blow-to-billion-euro-glass-eel-trafficking-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 17 Oct 2025 15:18:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</link>
+      <description>From 15 to 19 September 2025, Europol supported the fourth edition of the EMPACT Trafficking in Human Beings (THB) Hackathon, an action week against human trafficking enabled online. It was led by Dutch authorities, with the support of Germany and the United Kingdom, and brought together 73 specialists from 26 countries across the world. Eurojust also participated in the action.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 17 Oct 2025 15:18:56 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV25-603) - Update 1</title>
@@ -436,7 +331,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Thu, 09 Oct 2025 17:12:15 +0000</pubDate>
     </item>
     <item>
@@ -457,7 +352,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
+      <pubDate>Fri, 17 Oct 2025 15:18:56 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV25-653)</title>
@@ -466,7 +361,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-653</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Fri, 10 Oct 2025 14:13:43 +0000</pubDate>
     </item>
     <item>
@@ -497,7 +392,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
+      <pubDate>Fri, 17 Oct 2025 15:18:56 +0000</pubDate>
     </item>
     <item>
       <title>Critical ASP.NET core vulnerability earns Microsoft’s highest-ever severity score</title>
@@ -610,7 +505,7 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4074590/critical-asp-net-core-vulnerability-earns-microsofts-highest-ever-severity-score.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Fri, 17 Oct 2025 12:07:59 +0000</pubDate>
     </item>
     <item>
@@ -757,7 +652,7 @@
       <guid isPermaLink="false">https://www.cio.com/article/4072396</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Thu, 16 Oct 2025 10:30:00 +0000</pubDate>
     </item>
     <item>
@@ -866,7 +761,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4073058/theres-no-such-thing-as-quantum-incident-response-and-that-changes-everything.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Thu, 16 Oct 2025 11:14:00 +0000</pubDate>
     </item>
     <item>
@@ -916,7 +811,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4073996/the-expanding-ciso-role-from-security-operator-to-enterprise-risk-strategist.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Thu, 16 Oct 2025 18:41:44 +0000</pubDate>
     </item>
     <item>
@@ -927,7 +822,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
+      <pubDate>Fri, 17 Oct 2025 15:18:56 +0000</pubDate>
     </item>
     <item>
       <title>CISOs face quantum leap in prioritizing quantum resilience</title>
@@ -1101,7 +996,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4074154/cisos-face-quantum-leap-in-prioritizing-quantum-resilience.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Fri, 17 Oct 2025 10:01:00 +0000</pubDate>
     </item>
     <item>
@@ -1111,7 +1006,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-656</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.82</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Tue, 14 Oct 2025 13:00:25 +0000</pubDate>
     </item>
     <item>
@@ -1121,7 +1016,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-657</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.83</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Tue, 14 Oct 2025 13:11:26 +0000</pubDate>
     </item>
     <item>
@@ -1131,7 +1026,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-658</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.83</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Tue, 14 Oct 2025 13:14:53 +0000</pubDate>
     </item>
     <item>
@@ -1141,7 +1036,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-659</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Tue, 14 Oct 2025 14:06:31 +0000</pubDate>
     </item>
     <item>
@@ -1151,7 +1046,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-660</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.84</comments>
       <pubDate>Tue, 14 Oct 2025 14:38:59 +0000</pubDate>
     </item>
     <item>
@@ -1161,7 +1056,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-661</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Tue, 14 Oct 2025 15:11:02 +0000</pubDate>
     </item>
     <item>
@@ -1171,7 +1066,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-october-2025-monthly-rollup-av25-662</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Tue, 14 Oct 2025 15:29:15 +0000</pubDate>
     </item>
     <item>
@@ -1181,7 +1076,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-663</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Tue, 14 Oct 2025 17:32:38 +0000</pubDate>
     </item>
     <item>
@@ -1191,7 +1086,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-october-2025-monthly-rollup-av25-664</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.90</comments>
       <pubDate>Tue, 14 Oct 2025 17:40:06 +0000</pubDate>
     </item>
     <item>
@@ -1201,7 +1096,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-665</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Tue, 14 Oct 2025 18:39:50 +0000</pubDate>
     </item>
     <item>
@@ -1211,7 +1106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.33</comments>
+      <comments>Score: 9.31</comments>
       <pubDate>Wed, 15 Oct 2025 12:27:38 +0000</pubDate>
     </item>
     <item>
@@ -1221,7 +1116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-667</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.34</comments>
+      <comments>Score: 9.32</comments>
       <pubDate>Wed, 15 Oct 2025 12:50:24 +0000</pubDate>
     </item>
     <item>
@@ -1231,7 +1126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-668</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.35</comments>
+      <comments>Score: 9.33</comments>
       <pubDate>Wed, 15 Oct 2025 13:26:08 +0000</pubDate>
     </item>
     <item>
@@ -1241,7 +1136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av25-669</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.41</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Wed, 15 Oct 2025 15:39:55 +0000</pubDate>
     </item>
     <item>
@@ -1251,7 +1146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-670</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.41</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Wed, 15 Oct 2025 16:00:01 +0000</pubDate>
     </item>
     <item>
@@ -1261,7 +1156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-671</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.51</comments>
+      <comments>Score: 9.49</comments>
       <pubDate>Wed, 15 Oct 2025 19:51:08 +0000</pubDate>
     </item>
     <item>
@@ -1271,7 +1166,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.52</comments>
+      <comments>Score: 9.50</comments>
       <pubDate>Wed, 15 Oct 2025 20:10:49 +0000</pubDate>
     </item>
     <item>
@@ -1281,7 +1176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-014-security-incident-impacting-f5</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.50</comments>
       <pubDate>Wed, 15 Oct 2025 20:21:43 +0000</pubDate>
     </item>
     <item>
@@ -1291,7 +1186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.03</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Thu, 16 Oct 2025 13:56:15 +0000</pubDate>
     </item>
     <item>
@@ -1301,7 +1196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.06</comments>
+      <comments>Score: 10.03</comments>
       <pubDate>Thu, 16 Oct 2025 14:37:14 +0000</pubDate>
     </item>
     <item>
@@ -1311,7 +1206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-675</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.22</comments>
+      <comments>Score: 10.20</comments>
       <pubDate>Thu, 16 Oct 2025 19:44:46 +0000</pubDate>
     </item>
     <item>
@@ -1321,7 +1216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-676</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.25</comments>
+      <comments>Score: 10.22</comments>
       <pubDate>Thu, 16 Oct 2025 20:29:51 +0000</pubDate>
     </item>
     <item>
@@ -1331,7 +1226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.25</comments>
+      <comments>Score: 10.22</comments>
       <pubDate>Thu, 16 Oct 2025 20:36:47 +0000</pubDate>
     </item>
     <item>
@@ -1341,7 +1236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.85</comments>
+      <comments>Score: 10.82</comments>
       <pubDate>Fri, 17 Oct 2025 12:47:20 +0000</pubDate>
     </item>
     <item>
@@ -1351,7 +1246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av25-678</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.98</comments>
+      <comments>Score: 10.94</comments>
       <pubDate>Fri, 17 Oct 2025 15:57:39 +0000</pubDate>
     </item>
   </channel>
