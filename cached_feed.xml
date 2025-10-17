@@ -8,471 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Oct 2025 15:22:26 +0000</lastBuildDate>
-    <item>
-      <title>TigerJack’s malicious VSCode extensions mine, steal, and stay hidden</title>
-      <link>https://www.csoonline.com/article/4072829/tigerjacks-malicious-vscode-extensions-mine-steal-and-stay-hidden.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;In a new disclosure, security researchers revealed that a threat actor group called TigerJack has been publishing malicious extensions on Microsoft’s Visual Studio Code (VSCode) Marketplace and the OpenVSX registry to steal source code, plant cryptominers, and maintain remote access.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Koi Security’s findings, two of the campaign’s popular extensions – “C++ Payground” and “HTTP Format” – were removed after accumulating over 17,000 downloads, but the operation continues through re-uploads under fresh accounts.&lt;/p&gt;
-
-
-
-&lt;p&gt;“These extensions remain fully operational in the OpenVSX marketplace (used by &lt;a href="https://www.csoonline.com/article/4054796/cursors-autorun-lets-hackers-execute-arbitrary-code.html"&gt;Cursor&lt;/a&gt;, Windsurf, and other VS Code-compatible IDEs), continuing to steal code and mine cryptocurrency months after their removal from Microsoft’s platform,” Koi researchers said in a blog post.&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers have flagged it to be a coordinated campaign spanning at least 11 extensions across 3 different publisher accounts (ab-498,498 and 498-00).&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Trojanized extensions built for persistence&lt;/h2&gt;
-
-
-
-&lt;p&gt;Koi’s analysis shows that each malicious extension serves a distinct role in TigerJack’s campaign. One version quietly uploads a developer’s source code to external endpoints, another uses local resources for cryptomining, and the most “sophisticated” variant can execute JavaScript remotely without needing fresh updates for expanding or changing functionalities.&lt;/p&gt;
-
-
-
-&lt;p&gt;Aditya Sood, VP of Security Engineering and AI Strategy at Aryaka, thinks the last capability is particularly dangerous, allowing TigerJack to push payloads such as credential stealers, ransomware, or API-harvesting scripts at will, opening the door to long-term supply chain compromise.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because the core payload execution is often handled via dynamic, remote JavaScript, rather than by shipping updated binaries, the extension’s visible version remains unchanged, making detection by static scanners or vetting systems far more difficult, researchers added. In some cases, the malicious packaging is cleverly designed with the extensions masquerading as legitimate or popular tools that attackers even silently installed (on top of the malicious functionality) to avoid suspicion.&lt;/p&gt;
-
-
-
-&lt;p&gt;In essence, the campaign blends two capabilities, cryptomining and persistent backdoor control. In the mining variants, the extension deploys a miner that quietly consumes CPU (and sometimes GPU) cycles on developer machines, abusing the host’s processing power into illicit cryptocurrency generation.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="coordinated-multi-account-operation"&gt;Coordinated multi-account operation&lt;/h2&gt;
-
-
-
-&lt;p&gt;Koi researchers found 11 extensions across multiple accounts, making it a coordinated operation.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This multi-account strategy provides redundancy when one account gets flagged, creates the illusion of independent developers, and demonstrates professional-level social engineering: GitHub repositories for credibility, consistent branding across extensions, detailed feature lists, professional marketplace presentations, and strategic naming that mimics legitimate tools (cppformat, pythonformat, httpformat),” the researchers &lt;a href="https://www.koi.ai/blog/tiger-jack-malicious-vscode-extensions-stealing-code" rel="noreferrer noopener" target="_blank"&gt;said&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The analysis traced the malicious GitHub accounts back to a Facebook profile under the name “Zubaer Ahmed,” pointing to a likely operational slip that exposed the attacker’s real identity. The profile has since been taken down.&lt;/p&gt;
-
-
-
-&lt;p&gt;For developers and organizations relying heavily on &lt;a href="https://www.csoonline.com/article/3956464/warning-to-developers-stay-away-from-these-10-vscode-extensions.html"&gt;VSCod&lt;/a&gt;e or OpenVSX, the extensions could compromise not just a codebase but entire build environments or deployment pipelines, Sood noted. Compromised extensions can silently exfiltrate or tamper with source code that later moves into production, effectively turning VSCode into a vector for software supply-chain attacks. In collaborative environments, a single infected deployment could compromise shared repositories or inject backdoors into dependencies.&lt;/p&gt;
-
-
-
-&lt;p&gt;Koi researchers emphasized that TigerJack’s re-emergence reveals a deeper weakness in the extension ecosystem, with developer tools still relying on reputation and user ratings, rather than code auditing or signed binaries. “OpenVSX and other alternative marketplaces appear to have virtually no security detection mechanisms in place,” they said. “While Microsoft eventually identifies threats after months of damage, these platforms operate with minimal or no malware scanning whatsoever.”&lt;br /&gt;&lt;br /&gt;Individuals using either of the impacted platforms should vet their extensions thoroughly and only download packages from reputable sources, Sood added. “Additionally, users should implement security measures that can raise alarms about potential vulnerabilities so users have the opportunity to close them before they’re exploited.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4072829/tigerjacks-malicious-vscode-extensions-mine-steal-and-stay-hidden.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
-      <pubDate>Wed, 15 Oct 2025 11:52:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing MAESTRO: A framework for securing generative and agentic AI</title>
-      <link>https://www.csoonline.com/article/4072341/introducing-maestro-a-framework-for-securing-generative-and-agentic-ai.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Artificial Intelligence (AI) is advancing at a pace that outstrips traditional security frameworks. Generative AI has already changed how financial institutions analyze data, create insights and engage with customers. The next frontier, agentic AI, is even more transformative. These systems can reason, plan and act autonomously, interacting with APIs, orchestrating workflows and even collaborating with other agents across payment gateways, credit systems and fraud detection platforms.&lt;/p&gt;
-
-
-
-&lt;p&gt;While frameworks like MITRE ATLAS/ATT&amp;amp;CK, the OWASP LLM Top 10, the NIST AI Risk Management Framework and ISO/IEC 23894 provide valuable guidance, they were not designed to address the systemic risks and emergent behaviors unique to multi-agent AI ecosystems in highly regulated sectors like banking.&lt;/p&gt;
-
-
-
-&lt;p&gt;To address this gap, the Cloud Security Alliance (CSA) introduced &lt;a href="https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro" rel="noreferrer noopener" target="_blank"&gt;MAESTRO (Multi-Agent Environment, Security, Threat, Risk and Outcome)&lt;/a&gt; in 2025. This article provides a deep dive into MAESTRO, what it is, how to apply it in your organization and how it strengthens resilience in business services using banking industry scenarios. In future articles, we will explore how MAESTRO complements MITRE, OWASP, NIST and ISO for a comprehensive AI risk program.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="scope-assumptions-and-boundaries"&gt;Scope, assumptions and boundaries&lt;/h2&gt;
-
-
-
-&lt;p&gt;Before applying MAESTRO, it’s essential to clarify what it covers and what it does not.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;System boundary&lt;/strong&gt;: MAESTRO reviews focus on &lt;em&gt;models, AI agents, data flows, CI/CD pipelines, supporting tools and third-party APIs&lt;/em&gt;. Broader IT security hygiene (patching, identity governance, endpoint protection) is assumed to be managed by existing programs.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Assumptions&lt;/strong&gt;: organizations have the security baseline configurations and compliance, such as ISO 27XXX, in place. MAESTRO builds on these baselines and emphasizes &lt;em&gt;AI-specific risks&lt;/em&gt;.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Threat actors&lt;/strong&gt;: The framework considers &lt;em&gt;external adversaries, malicious insiders, careless insiders and compromised suppliers&lt;/em&gt;. Each actor may target different layers of the AI stack in an organizational context.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;This scoping ensures MAESTRO is applied where it is most impactful: securing the AI-driven systems at the heart of modern banking.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="minimum-viable-controls"&gt;Minimum viable controls&lt;/h2&gt;
-
-
-
-&lt;p&gt;Businesses should ask: &lt;em&gt;What do we need to implement first?&lt;/em&gt; MAESTRO can be phased in, but a baseline set of controls per layer provides immediate value.&lt;/p&gt;
-
-
-
-&lt;figure class="wp-block-table"&gt;&lt;div class="overflow-table-wrapper"&gt;&lt;table class="has-fixed-layout"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Layer&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Minimum Specific Controls&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Foundation Models&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Input/output validation for chatbots, deny-by-default for API tool use, API key rotation, model provenance verification to prevent tampered LLMs&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Data Operations&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;End-to-end transaction data lineage, signed datasets for regulatory reporting, schema validation at ingestion, anomaly detection on user behavior, card payments, data changes in the datasets, etc.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Agent Frameworks&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Per-agent RBAC tied to transaction type, scoped tokens for fraud detection and credit agents, allowlist of banking APIs (e.g., SWIFT, ACH), execution sandboxing for risky operations&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Deployment &amp;amp; Infrastructure&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;IaC scanning for different compliances, such as PCI-DSS, container image signing, egress restrictions for agents accessing APIs and least-privileged cloud service roles&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Evaluation &amp;amp; Observability&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Prompt-injection test suites for banking chatbots, drift monitoring in credit scoring models, transaction anomaly alerts and regulatory explainability logging&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Security &amp;amp; Compliance&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Controls mapped to Basel III, GDPR, PCI DSS, immutable audit trails for regulators and DLP policies applied to all model inputs/outputs&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Agent Ecosystem&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Dependency inventory of third-party APIs, blast-radius limits for cross-agent failures, circuit breakers in payment processing flows and multi-agent simulations before deployment&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; &lt;/div&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;It is crucial to ensure there is a crystal clear, defined RACI table and everyone is briefed and aware of their roles and responsibilities.&lt;/p&gt;
-
-
-
-&lt;p&gt;To obtain a better understanding, we need to have a deep dive into the 7 layers of MAESTRO by leveraging threats and use cases in the banking sector:&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-7-layers-of-maestro-in-banking"&gt;The 7 layers of MAESTRO in banking&lt;/h2&gt;
-
-
-
-&lt;p&gt;MAESTRO organizes AI risk into seven interdependent layers. In banking, each layer presents unique challenges and must be addressed systematically.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="1-foundation-models-core-services"&gt;1. Foundation models/core services&lt;/h3&gt;
-
-
-
-&lt;p&gt;Large language models power virtual assistants, fraud detection models and risk analytics in banks. Any manipulation at this level can undermine trust in the entire system.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Purpose&lt;/strong&gt;: Secure the LLMs and APIs underpinning AI services.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Example threat&lt;/strong&gt;: Adversarial prompts alter model outputs.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Use case&lt;/strong&gt;: A customer tricks a virtual banking assistant into disclosing loan approval criteria.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Controls&lt;/strong&gt;: Input/output sanitization, API lifecycle management, watermarking of model responses.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="2-data-operations"&gt;2. Data operations&lt;/h3&gt;
-
-
-
-&lt;p&gt;Transaction, payment and credit data are the lifeblood of banking AI. Compromised data pipelines can poison decision-making and regulatory reporting.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Purpose&lt;/strong&gt;: Safeguard the integrity and provenance of banking data pipelines.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Example threat&lt;/strong&gt;: Poisoned transaction records bias loan decisions.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Use case&lt;/strong&gt;: Attackers inject fake payment histories to secure unauthorized loans.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Controls&lt;/strong&gt; Include Data lineage, signed datasets and anomaly detection for unusual transaction flows.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="3-agent-frameworks-application-logic"&gt;3. Agent frameworks/application logic&lt;/h3&gt;
-
-
-
-&lt;p&gt;Banks deploy AI agents for fraud monitoring, payment approvals and customer service. Without strict controls, these agents can be misused or over-privileged.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Purpose&lt;/strong&gt;: Secure orchestration and business logic in AI agents.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Example threat&lt;/strong&gt;: Prompt injection disables fraud monitoring.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Use case&lt;/strong&gt;: A fraud detection agent is tricked into ignoring suspicious transactions during dispute resolution.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Controls&lt;/strong&gt;: Per-agent RBAC, scoped tokens, allowlisted API usage and sandboxing.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="4-deployment-infrastructure"&gt;4. Deployment &amp;amp; infrastructure&lt;/h3&gt;
-
-
-
-&lt;p&gt;AI in could be deployed across hybrid cloud and containerized environments, creating opportunities for supply chain attacks and misconfigurations.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Purpose&lt;/strong&gt;: Secure runtime environments and CI/CD pipelines.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Example threat&lt;/strong&gt;: Compromised container images in deployment pipelines.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Use case&lt;/strong&gt;: Backdoored fraud detection images are deployed through an unscanned pipeline.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Controls&lt;/strong&gt;: IaC scanning for PCI compliance, container image signing and hardened Kubernetes.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="5-evaluation-observability"&gt;5. Evaluation &amp;amp; observability&lt;/h3&gt;
-
-
-
-&lt;p&gt;Banking AI must remain accurate, explainable and compliant. Continuous monitoring ensures that models don’t drift into unsafe or discriminatory behavior.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Purpose&lt;/strong&gt;: Track AI system health and behavior over time.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Example threat&lt;/strong&gt;: Credit scoring model drifts, approving risky borrowers.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Use case&lt;/strong&gt;: Unmonitored drift leads to regulatory penalties for biased lending.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Controls&lt;/strong&gt;: Drift monitoring, explainability logging, anomaly detection on credit decisions.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="6-security-compliance"&gt;6. Security &amp;amp; compliance&lt;/h3&gt;
-
-
-
-&lt;p&gt;Banking is one of the most regulated industries. AI must align with global standards like Basel III, PCI DSS, GDPR and the EU AI Act.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Purpose&lt;/strong&gt;: Ensure regulatory alignment and enterprise security policy enforcement.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Example threat&lt;/strong&gt;: Unauthorized data leakage in AI responses.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Use case&lt;/strong&gt;: A banking chatbot reveals customer account data to the wrong user.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Controls&lt;/strong&gt;: Immutable audit logs, DLP enforcement, redaction guardrails.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="7-agent-ecosystem"&gt;7. Agent ecosystem&lt;/h3&gt;
-
-
-
-&lt;p&gt;Banks operate in complex ecosystems with multiple AI agents coordinating across payment networks, partners and fintech APIs. Risks at this layer are systemic.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Purpose&lt;/strong&gt;: Manage systemic risks across agent interactions.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Example threat&lt;/strong&gt;: Feedback loops between payment and fraud agents.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Use case:&lt;/strong&gt; A fraud agent incorrectly blocks all ACH transactions, halting operations.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Controls&lt;/strong&gt;: Trust boundaries, multi-agent simulations, circuit breakers for payment systems.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="use-cases-in-practice-banking"&gt;Use cases in practice (Banking)&lt;/h2&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="1-credit-scoring-and-loan-approvals"&gt;1. Credit scoring and loan approvals&lt;/h3&gt;
-
-
-
-&lt;p&gt;A loan approval model is poisoned by manipulated transaction histories, resulting in biased or inaccurate credit decisions.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Layers&lt;/strong&gt;: Data Operations, Evaluation &amp;amp; Observability, Security &amp;amp; Compliance.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Mitigation&lt;/strong&gt;: Signed datasets, drift monitoring and regulatory explainability requirements.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="2-fraud-detection-systems"&gt;2. Fraud detection systems&lt;/h3&gt;
-
-
-
-&lt;p&gt;Fraud models are manipulated by adversarial data, causing missed fraud alerts or false positives.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Layers&lt;/strong&gt;: Foundation Models, Agent Frameworks, Deployment &amp;amp; Infrastructure.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Mitigation&lt;/strong&gt;: Input validation, scoped agent RBAC and container signing in pipelines.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="3-conversational-banking-assistants"&gt;3. Conversational banking assistants&lt;/h3&gt;
-
-
-
-&lt;p&gt;Virtual assistants are tricked into disclosing sensitive account information.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Layers&lt;/strong&gt;: Foundation Models, Security &amp;amp; Compliance.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Mitigation&lt;/strong&gt;: Input/output sanitization, DLP policies, compliance guardrails.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="4-payment-processing-and-transaction-flows"&gt;4. Payment processing and transaction flows&lt;/h3&gt;
-
-
-
-&lt;p&gt;AI agents managing transactions create a feedback loop, freezing legitimate payments.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Layers&lt;/strong&gt;: Agent Ecosystem, Agent Frameworks, Evaluation &amp;amp; Observability.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Mitigation&lt;/strong&gt;: Circuit breakers, trust boundaries and simulation of agent interactions.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="5-regulatory-compliance-reporting"&gt;5. Regulatory compliance reporting&lt;/h3&gt;
-
-
-
-&lt;p&gt;AI systems generating regulatory reports drift over time, producing inaccurate filings.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Layers&lt;/strong&gt;: Evaluation &amp;amp; Observability, Security &amp;amp; Compliance.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Mitigation&lt;/strong&gt;: Continuous monitoring, immutable audit logs, anomaly detection.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;figure class="wp-block-table"&gt;&lt;div class="overflow-table-wrapper"&gt;&lt;table class="has-fixed-layout"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;MAESTRO Layer&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Example Threat&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Banking Use Case&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Key Controls&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Foundation Models / Core Services&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Adversarial prompts alter outputs&lt;/td&gt;&lt;td&gt;Virtual assistant tricked into revealing loan approval rules&lt;/td&gt;&lt;td&gt;Input/output sanitization, API lifecycle mgmt., model watermarking&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Data Operations&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Poisoned transaction data&lt;/td&gt;&lt;td&gt;Fake payment histories bias credit scoring&lt;/td&gt;&lt;td&gt;Data lineage, signed datasets, anomaly detection, schema validation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Agent Frameworks / Application Logic&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Prompt injection disables fraud monitoring&lt;/td&gt;&lt;td&gt;Fraud detection agent ignores suspicious transactions&lt;/td&gt;&lt;td&gt;Per-agent RBAC, scoped tokens, allowlisted APIs and sandboxing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Deployment &amp;amp; Infrastructure&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Compromised container images&lt;/td&gt;&lt;td&gt;Backdoored fraud detection models deployed via CI/CD&lt;/td&gt;&lt;td&gt;IaC scanning (PCI), image signing, hardened Kubernetes, egress restrictions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Evaluation &amp;amp; Observability&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Model drift degrades performance&lt;/td&gt;&lt;td&gt;The credit scoring model starts approving risky borrowers&lt;/td&gt;&lt;td&gt;Drift monitoring, anomaly alerts, explainability logs, test harnesses&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Security &amp;amp; Compliance&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Unauthorized data leakage&lt;/td&gt;&lt;td&gt;Chatbot exposes customer account info&lt;/td&gt;&lt;td&gt;Immutable audit logs, DLP enforcement, automated redaction, compliance guardrails&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Agent Ecosystem&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Feedback loops disrupt workflows&lt;/td&gt;&lt;td&gt;Fraud and payment agents block legitimate ACH transfers&lt;/td&gt;&lt;td&gt;Trust boundaries, dependency mapping, circuit breakers and pre-production simulations&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; &lt;/div&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;The infrastructure threat modeling for the AI could be hosted within the on-prem or cloud environment or a SaaS service should be assessed separately as well&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-foundation-for-systemic-ai-security"&gt;A foundation for systemic AI security&lt;/h2&gt;
-
-
-
-&lt;p&gt;AI in organizations is no longer experimental. With agentic AI, organizations face autonomy, unpredictability and systemic risks that traditional frameworks cannot fully address.&lt;/p&gt;
-
-
-
-&lt;p&gt;MAESTRO provides a structured, layered, outcome-driven framework tailored to these realities. By applying it across data, models, infrastructure and ecosystems, organizations can secure and enhance the efficiency, cost and security and resiliency of their businesses.&lt;/p&gt;
-
-
-
-&lt;p&gt;While frameworks like MITRE, OWASP, NIST and ISO add tactical and governance layers, MAESTRO serves as the foundation for systemic AI security in banking.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;/strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;&lt;strong&gt;Want to join?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4072341/introducing-maestro-a-framework-for-securing-generative-and-agentic-ai.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Wed, 15 Oct 2025 12:12:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 17 Oct 2025 16:27:23 +0000</lastBuildDate>
     <item>
       <title>Flax Typhoon exploited ArcGIS to gain long-term access</title>
       <link>https://www.csoonline.com/article/4072876/flax-typhoon-exploited-arcgis-to-gain-long-term-access.html</link>
@@ -585,18 +121,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4072876/flax-typhoon-exploited-arcgis-to-gain-long-term-access.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Wed, 15 Oct 2025 12:36:27 +0000</pubDate>
     </item>
     <item>
-      <title>Luxury hybrid car thieves taken down in Belgium, Italy and Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/luxury-hybrid-car-thieves-taken-down-in-belgium-italy-and-spain</link>
-      <description>A highly specialised organised crime network responsible for the theft of more than 100 luxury hybrid cars has been dismantled in an international operation led by the Italian Carabinieri with support from Europol and Eurojust. The estimated value of all stolen cars is of at least EUR 3 million.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/luxury-hybrid-car-thieves-taken-down-in-belgium-italy-and-spain</guid>
+      <title>Europol conference warns: cybercrime fight hinges on access to data</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-conference-warns-cybercrime-fight-hinges-access-to-data</link>
+      <description>Criminals are exploiting encryption, anonymisation and emerging technologies faster than regulators and law enforcement can respond – making access to data the decisive challenge in the fight against cybercrime. This was the warning sounded at Europol’s 4th Annual Cybercrime Conference this week.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-conference-warns-cybercrime-fight-hinges-access-to-data</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
-      <pubDate>Fri, 17 Oct 2025 13:22:26 +0000</pubDate>
+      <comments>Score: 7.34</comments>
+      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV25-649)</title>
@@ -607,6 +143,16 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.41</comments>
       <pubDate>Wed, 08 Oct 2025 12:39:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>Luxury hybrid car thieves taken down in Belgium, Italy and Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/luxury-hybrid-car-thieves-taken-down-in-belgium-italy-and-spain</link>
+      <description>A highly specialised organised crime network responsible for the theft of more than 100 luxury hybrid cars has been dismantled in an international operation led by the Italian Carabinieri with support from Europol and Eurojust. The estimated value of all stolen cars is of at least EUR 3 million.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/luxury-hybrid-car-thieves-taken-down-in-belgium-italy-and-spain</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.41</comments>
+      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
     </item>
     <item>
       <title>GitLab security advisory (AV25-650)</title>
@@ -680,18 +226,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4072584/mcptotal-launches-to-power-secure-enterprise-mcp-workflows.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
+      <comments>Score: 7.45</comments>
       <pubDate>Wed, 15 Oct 2025 17:28:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europe’s borders go digital</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</link>
-      <description>The Entry/Exit System (EES) is the new IT system that digitally records the entry and exit of non-EU nationals travelling to 29 European countries for short stays. The system has already recorded over 300 000 movements, with the number continuing to grow daily. The EES began implementation on 12 October 2025 and will be fully operational by 10 April 2026.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Oct 2025 13:22:26 +0000</pubDate>
     </item>
     <item>
       <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
@@ -701,7 +237,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Oct 2025 13:22:26 +0000</pubDate>
+      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europe’s borders go digital</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</link>
+      <description>The Entry/Exit System (EES) is the new IT system that digitally records the entry and exit of non-EU nationals travelling to 29 European countries for short stays. The system has already recorded over 300 000 movements, with the number continuing to grow daily. The EES began implementation on 12 October 2025 and will be fully operational by 10 April 2026.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
     </item>
     <item>
       <title>Major blow to billion-euro glass eel trafficking networks</title>
@@ -711,7 +257,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Oct 2025 13:22:26 +0000</pubDate>
+      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
     </item>
     <item>
       <title>Juniper Networks security advisory (AV25-651)</title>
@@ -720,18 +266,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av25-651</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Thu, 09 Oct 2025 12:55:35 +0000</pubDate>
-    </item>
-    <item>
-      <title>SonicWall security advisory (AV25-603) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
-      <pubDate>Thu, 09 Oct 2025 17:12:15 +0000</pubDate>
     </item>
     <item>
       <title>Source code and vulnerability info stolen from F5 Networks</title>
@@ -833,7 +369,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4073195/source-code-and-vulnerability-info-stolen-from-f5-networks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Wed, 15 Oct 2025 20:16:23 +0000</pubDate>
     </item>
     <item>
@@ -890,8 +426,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4072868/58-of-cisos-are-boosting-ai-security-budgets.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Wed, 15 Oct 2025 20:35:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>SonicWall security advisory (AV25-603) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.55</comments>
+      <pubDate>Thu, 09 Oct 2025 17:12:15 +0000</pubDate>
     </item>
     <item>
       <title>Esri security advisory (AV25-652)</title>
@@ -900,7 +446,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/esri-security-advisory-av25-652</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Thu, 09 Oct 2025 19:50:00 +0000</pubDate>
     </item>
     <item>
@@ -911,7 +457,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Fri, 17 Oct 2025 13:22:26 +0000</pubDate>
+      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV25-653)</title>
@@ -920,7 +466,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-653</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Fri, 10 Oct 2025 14:13:43 +0000</pubDate>
     </item>
     <item>
@@ -930,7 +476,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-654</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Fri, 10 Oct 2025 14:54:42 +0000</pubDate>
     </item>
     <item>
@@ -940,7 +486,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av25-655</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Fri, 10 Oct 2025 15:01:03 +0000</pubDate>
     </item>
     <item>
@@ -951,7 +497,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Fri, 17 Oct 2025 13:22:26 +0000</pubDate>
+      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
     </item>
     <item>
       <title>Critical ASP.NET core vulnerability earns Microsoft’s highest-ever severity score</title>
@@ -1064,7 +610,7 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4074590/critical-asp-net-core-vulnerability-earns-microsofts-highest-ever-severity-score.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Fri, 17 Oct 2025 12:07:59 +0000</pubDate>
     </item>
     <item>
@@ -1211,7 +757,7 @@
       <guid isPermaLink="false">https://www.cio.com/article/4072396</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Thu, 16 Oct 2025 10:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1320,18 +866,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4073058/theres-no-such-thing-as-quantum-incident-response-and-that-changes-everything.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Thu, 16 Oct 2025 11:14:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cybercrime-as-a-service takedown: 7 arrested</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</link>
-      <description>An action day performed in Latvia on 10 October 2025 led to the arrest of five cybercriminals of Latvian nationality and the seizure of infrastructure used to enable crimes against thousands of victims across Europe. During the operation codenamed ‘SIMCARTEL’, law enforcement arrested two further suspects, took down five servers and seized 1 200 SIM box devices alongside 40 000 active SIM cards. Investigators from Austria, Estonia and Latvia, together with their colleagues at Europol und Eurojust, were able to attribute to the criminal network more than 1 700 individual cyber fraud cases in Austria and 1 500 in Latvia, with a total loss of several million euros. The financial loss in Austria alone amounts to around EUR 4.5 million, as well as EUR 420 000 in Latvia.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
-      <pubDate>Fri, 17 Oct 2025 13:22:26 +0000</pubDate>
     </item>
     <item>
       <title>The expanding CISO role: From security operator to enterprise risk strategist</title>
@@ -1380,8 +916,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4073996/the-expanding-ciso-role-from-security-operator-to-enterprise-risk-strategist.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Thu, 16 Oct 2025 18:41:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cybercrime-as-a-service takedown: 7 arrested</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</link>
+      <description>An action day performed in Latvia on 10 October 2025 led to the arrest of five cybercriminals of Latvian nationality and the seizure of infrastructure used to enable crimes against thousands of victims across Europe. During the operation codenamed ‘SIMCARTEL’, law enforcement arrested two further suspects, took down five servers and seized 1 200 SIM box devices alongside 40 000 active SIM cards. Investigators from Austria, Estonia and Latvia, together with their colleagues at Europol und Eurojust, were able to attribute to the criminal network more than 1 700 individual cyber fraud cases in Austria and 1 500 in Latvia, with a total loss of several million euros. The financial loss in Austria alone amounts to around EUR 4.5 million, as well as EUR 420 000 in Latvia.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.20</comments>
+      <pubDate>Fri, 17 Oct 2025 14:27:23 +0000</pubDate>
     </item>
     <item>
       <title>CISOs face quantum leap in prioritizing quantum resilience</title>
@@ -1555,7 +1101,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4074154/cisos-face-quantum-leap-in-prioritizing-quantum-resilience.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.74</comments>
       <pubDate>Fri, 17 Oct 2025 10:01:00 +0000</pubDate>
     </item>
     <item>
@@ -1565,7 +1111,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-656</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Tue, 14 Oct 2025 13:00:25 +0000</pubDate>
     </item>
     <item>
@@ -1575,7 +1121,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-657</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Tue, 14 Oct 2025 13:11:26 +0000</pubDate>
     </item>
     <item>
@@ -1585,7 +1131,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-658</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Tue, 14 Oct 2025 13:14:53 +0000</pubDate>
     </item>
     <item>
@@ -1595,7 +1141,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-659</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.84</comments>
       <pubDate>Tue, 14 Oct 2025 14:06:31 +0000</pubDate>
     </item>
     <item>
@@ -1605,7 +1151,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-660</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Tue, 14 Oct 2025 14:38:59 +0000</pubDate>
     </item>
     <item>
@@ -1615,7 +1161,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-661</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Tue, 14 Oct 2025 15:11:02 +0000</pubDate>
     </item>
     <item>
@@ -1625,7 +1171,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-october-2025-monthly-rollup-av25-662</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Tue, 14 Oct 2025 15:29:15 +0000</pubDate>
     </item>
     <item>
@@ -1635,7 +1181,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-663</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Tue, 14 Oct 2025 17:32:38 +0000</pubDate>
     </item>
     <item>
@@ -1645,7 +1191,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-october-2025-monthly-rollup-av25-664</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Tue, 14 Oct 2025 17:40:06 +0000</pubDate>
     </item>
     <item>
@@ -1655,7 +1201,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-665</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.93</comments>
       <pubDate>Tue, 14 Oct 2025 18:39:50 +0000</pubDate>
     </item>
     <item>
@@ -1665,7 +1211,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.35</comments>
+      <comments>Score: 9.33</comments>
       <pubDate>Wed, 15 Oct 2025 12:27:38 +0000</pubDate>
     </item>
     <item>
@@ -1675,7 +1221,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-667</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.36</comments>
+      <comments>Score: 9.34</comments>
       <pubDate>Wed, 15 Oct 2025 12:50:24 +0000</pubDate>
     </item>
     <item>
@@ -1685,7 +1231,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-668</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.38</comments>
+      <comments>Score: 9.35</comments>
       <pubDate>Wed, 15 Oct 2025 13:26:08 +0000</pubDate>
     </item>
     <item>
@@ -1695,7 +1241,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av25-669</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Wed, 15 Oct 2025 15:39:55 +0000</pubDate>
     </item>
     <item>
@@ -1705,7 +1251,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-670</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.44</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Wed, 15 Oct 2025 16:00:01 +0000</pubDate>
     </item>
     <item>
@@ -1715,7 +1261,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-671</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Wed, 15 Oct 2025 19:51:08 +0000</pubDate>
     </item>
     <item>
@@ -1725,7 +1271,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.52</comments>
       <pubDate>Wed, 15 Oct 2025 20:10:49 +0000</pubDate>
     </item>
     <item>
@@ -1735,7 +1281,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-014-security-incident-impacting-f5</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.56</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Wed, 15 Oct 2025 20:21:43 +0000</pubDate>
     </item>
     <item>
@@ -1745,7 +1291,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.07</comments>
+      <comments>Score: 10.03</comments>
       <pubDate>Thu, 16 Oct 2025 13:56:15 +0000</pubDate>
     </item>
     <item>
@@ -1755,7 +1301,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.09</comments>
+      <comments>Score: 10.06</comments>
       <pubDate>Thu, 16 Oct 2025 14:37:14 +0000</pubDate>
     </item>
     <item>
@@ -1765,7 +1311,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-675</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.26</comments>
+      <comments>Score: 10.22</comments>
       <pubDate>Thu, 16 Oct 2025 19:44:46 +0000</pubDate>
     </item>
     <item>
@@ -1775,7 +1321,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-676</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.29</comments>
+      <comments>Score: 10.25</comments>
       <pubDate>Thu, 16 Oct 2025 20:29:51 +0000</pubDate>
     </item>
     <item>
@@ -1785,7 +1331,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.29</comments>
+      <comments>Score: 10.25</comments>
       <pubDate>Thu, 16 Oct 2025 20:36:47 +0000</pubDate>
     </item>
     <item>
@@ -1795,8 +1341,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.89</comments>
+      <comments>Score: 10.85</comments>
       <pubDate>Fri, 17 Oct 2025 12:47:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>Zimbra security advisory (AV25-678)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av25-678</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av25-678</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.98</comments>
+      <pubDate>Fri, 17 Oct 2025 15:57:39 +0000</pubDate>
     </item>
   </channel>
 </rss>
