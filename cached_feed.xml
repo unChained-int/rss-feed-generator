@@ -8,115 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Oct 2025 20:22:01 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Oct 2025 21:17:51 +0000</lastBuildDate>
     <item>
-      <title>There’s no such thing as quantum incident response – and that changes everything</title>
-      <link>https://www.csoonline.com/article/4073058/theres-no-such-thing-as-quantum-incident-response-and-that-changes-everything.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;One of the key elements to detecting cyberattacks is the concept of observability. We can literally see the packets of data being thrown towards a website when a DoS attack is taking place. The “boom” of the attack is visible and observable. But when a cryptographically relevant quantum computer is utilized to break into encrypted traffic flows, the attacker “snoops” the traffic and stores a copy somewhere else where it can be processed later with impunity, which makes the act both not observed and not observable.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is what I call the “silent boom,” and it will most definitely be a plate tectonic shift in the world of secrets and privacy, disrupting the balance of power for every nation, every industry and every individual.&lt;/p&gt;
-
-
-
-&lt;p&gt;The evidence isn’t theoretical. According to network security firm Qrator Labs, &lt;a href="https://qrator.net/blog/details/q2-2024-ddos-bots-and-bgp-incidents-statistics-and" rel="noreferrer noopener" target="_blank"&gt;there were approximately 13,626 BGP hijack attacks&lt;/a&gt; in the second quarter of 2024 and 13,438 in the third quarter. Not all are malicious, but enough create that “scenic route” through Chinese-owned or Russian-owned IP addresses that makes security professionals nervous about store-now-decrypt-later attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;At Marvel, we had secrets that, if disclosed ahead of the planned time, would cause significant damage to the brand and potentially also to projected revenues. The actors who attend the red carpet premiere have no idea what they’re going to see on screen. The scripts they were given had false scenes in them as a means of forensic watermarking that helps identify leaks. When you’re protecting 10-year story arcs and plans for what comes after phase 6 of the Multiverse Saga, you develop an appreciation for what needs long-term protection.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="this-is-a-developer-problem-not-a-ciso-shopping-problem"&gt;This is a developer problem, not a CISO shopping problem&lt;/h2&gt;
-
-
-
-&lt;p&gt;CISOs are directing attention to have quantum security risks added to the corporate risk register. It belongs there. But the problem to be solved is not a quick fix, despite what some snake oil salesmen might be pushing. There is no simple configuration checkbox on AWS or Azure or GCP where you “turn on” post-quantum cryptography (PQC) and then you’re good to go. This is a shared responsibility problem. Just as migrating to the cloud doesn’t magically make your infrastructure more secure, quantum vendors cannot solve this without significant developer engagement.&lt;/p&gt;
-
-
-
-&lt;p&gt;Here’s why this lands on developers: The majority of all internet traffic is not human-generated traffic from laptops to servers and back. It’s API traffic. Your company most likely delivers services using a host of third-party solutions, all accessed via APIs. So your API client needs to learn how to speak PQC algorithms just as much as that remote API endpoint needs to learn how to speak PQC algorithms. Otherwise, the connection will negotiate down to a common protocol that both can speak and it won’t be TLSv1.3 with PQC algorithms.&lt;/p&gt;
-
-
-
-&lt;p&gt;Without significant engagement from developers, QA teams and product owners, the quantum decryption risk will remain in play. You cannot transfer this risk by adding more cyber insurance policy coverage. The entire cyber insurance industry itself is in a bit of an existential doubt situation regarding whether cybersecurity can reasonably be insured against, given the systemic impacts of supply chain attacks that cascade across entire industries.&lt;/p&gt;
-
-
-
-&lt;p&gt;What can developers actually do? Three concrete steps this quarter:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Step one&lt;/strong&gt;: Inventory your algorithms and data with a view towards which sensitive data ought to be protected with PQC. This is a data classification exercise where you need to add a column to track whether the datastore or application qualifies for PQC.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Step two&lt;/strong&gt;: Check your internet-facing assets to see which, if any, are already capable of supporting TLSv1.3 with PQC algorithms.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Step three&lt;/strong&gt;: Create internal capability to test new ciphers so that once NIST is able to “bless” another set of candidates (two of the first set of four algorithms have already been broken), you’ll be positioned to implement them without a five- to 10-year lag time.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-fearmongering-critics-are-missing-the-point"&gt;The fearmongering critics are missing the point&lt;/h2&gt;
-
-
-
-&lt;p&gt;Critics say this is fearmongering and that we’ll have warning signs before quantum becomes a real threat. They’re wrong on the timeline. In my discussions with colleagues on the quantum security working group for the World Economic Forum, we see that financial services, healthcare and manufacturing are making plans now because they understand something crucial: It took us at least 10 years to get financial services to move to SHA-256 for encryption and for PCI compliance requirements to deprecate SSLv3 after TLS came into play in 1999. The insecure protocols weren’t formally deprecated until PCI DSS version 3.1 in 2015. That’s the current speed of “crypto agility” in financial services.&lt;/p&gt;
-
-
-
-&lt;p&gt;The cryptographically relevant quantum computer risk, being about five to 10 years away, is essentially a now risk, given the rate of adoption of new cryptography standards. The most dangerous myth seems to be that it can be put off to tomorrow and that nothing needs to be done today.&lt;/p&gt;
-
-
-
-&lt;p&gt;We’ve seen recent kerfuffles over &lt;a href="https://www.linkedin.com/pulse/chinese-did-crack-rsa-quantum-yet-marin-ivezic-kew0c/" rel="noreferrer noopener" target="_blank"&gt;factoring 22-bit RSA keys in research papers published in China&lt;/a&gt;, which is just a trivial academic milestone that doesn’t purport the demise of RSA-2048 encryption. But we will continue to see advancements in hybrid classical-quantum approaches to factoring integers. The writing is on the wall.&lt;/p&gt;
-
-
-
-&lt;p&gt;Meanwhile, I’ve seen some pretty insane LinkedIn assertions from organizations making statements about computers with 4,000 qubits. For RSA-2048 to be broken, according to Shor’s algorithm, we would need around 20 million qubit quantum computers. So we are still orders of magnitude away. (The marketing teams will make sweeping generalizations about achievements and write them off as “good enough,” often comparing physical qubits and logical qubits as if they’re the same thing, but that is a classic apples-and-oranges fallacy.)&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="monday-morning-action-items"&gt;Monday morning action items&lt;/h2&gt;
-
-
-
-&lt;p&gt;The moment when a cryptographically relevant quantum computer comes into existence won’t arrive with fanfare or bombast. Hence, the idea of the silent boom. But by then, it will be too late for incident response.&lt;/p&gt;
-
-
-
-&lt;p&gt;What you should do Monday morning: Start that data classification exercise. Figure out what needs protecting for the long term versus what has a shorter shelf life. In the world of DNS, we have Time To Live (TTL) that declares how long a resolver can cache a response. Think of a “PQC TTL” for your sensitive data, because not everything needs 30-year protection.&lt;/p&gt;
-
-
-
-&lt;p&gt;Just as the HTTPS-everywhere movement took time to gain traction, so too will the PQC-everywhere efforts. The difference is we can’t wait for the attack to happen before we start preparing. There’s no such thing as quantum incident response — only quantum readiness.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;/strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;&lt;strong&gt;Want to join?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4073058/theres-no-such-thing-as-quantum-incident-response-and-that-changes-everything.html</guid>
+      <title>Redis security advisory (AV25-646)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av25-646</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av25-646</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.21</comments>
-      <pubDate>Thu, 16 Oct 2025 11:14:00 +0000</pubDate>
+      <comments>Score: 7.19</comments>
+      <pubDate>Mon, 06 Oct 2025 18:25:02 +0000</pubDate>
     </item>
     <item>
       <title>17 suspected human traffickers arrested in Albania and Colombia</title>
@@ -126,7 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.23</comments>
-      <pubDate>Sat, 18 Oct 2025 18:22:01 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2025 19:17:51 +0000</pubDate>
     </item>
     <item>
       <title>AL25-013 – Vulnerability impacting Oracle E-Business Suite - CVE-2025-61882</title>
@@ -166,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.28</comments>
-      <pubDate>Sat, 18 Oct 2025 18:22:01 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2025 19:17:51 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV25-649)</title>
@@ -185,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-650</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.32</comments>
       <pubDate>Wed, 08 Oct 2025 19:33:38 +0000</pubDate>
     </item>
     <item>
@@ -196,7 +97,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.34</comments>
-      <pubDate>Sat, 18 Oct 2025 18:22:01 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2025 19:17:51 +0000</pubDate>
     </item>
     <item>
       <title>The expanding CISO role: From security operator to enterprise risk strategist</title>
@@ -245,7 +146,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4073996/the-expanding-ciso-role-from-security-operator-to-enterprise-risk-strategist.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Thu, 16 Oct 2025 18:41:44 +0000</pubDate>
     </item>
     <item>
@@ -259,6 +160,16 @@
       <pubDate>Thu, 09 Oct 2025 12:55:35 +0000</pubDate>
     </item>
     <item>
+      <title>SonicWall security advisory (AV25-603) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.40</comments>
+      <pubDate>Thu, 09 Oct 2025 17:12:15 +0000</pubDate>
+    </item>
+    <item>
       <title>Luxury hybrid car thieves taken down in Belgium, Italy and Spain</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/luxury-hybrid-car-thieves-taken-down-in-belgium-italy-and-spain</link>
       <description>A highly specialised organised crime network responsible for the theft of more than 100 luxury hybrid cars has been dismantled in an international operation led by the Italian Carabinieri with support from Europol and Eurojust. The estimated value of all stolen cars is of at least EUR 3 million.</description>
@@ -266,17 +177,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.41</comments>
-      <pubDate>Sat, 18 Oct 2025 18:22:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>SonicWall security advisory (AV25-603) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-603</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
-      <pubDate>Thu, 09 Oct 2025 17:12:15 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2025 19:17:51 +0000</pubDate>
     </item>
     <item>
       <title>Esri security advisory (AV25-652)</title>
@@ -295,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-653</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
+      <comments>Score: 7.50</comments>
       <pubDate>Fri, 10 Oct 2025 14:13:43 +0000</pubDate>
     </item>
     <item>
@@ -326,7 +227,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 18 Oct 2025 18:22:01 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2025 19:17:51 +0000</pubDate>
     </item>
     <item>
       <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
@@ -336,7 +237,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 18 Oct 2025 18:22:01 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2025 19:17:51 +0000</pubDate>
     </item>
     <item>
       <title>Major blow to billion-euro glass eel trafficking networks</title>
@@ -346,7 +247,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 18 Oct 2025 18:22:01 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2025 19:17:51 +0000</pubDate>
     </item>
     <item>
       <title>Counterfeit and substandard food worth EUR 95 million seized in global operation</title>
@@ -356,7 +257,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Sat, 18 Oct 2025 18:22:01 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2025 19:17:51 +0000</pubDate>
     </item>
     <item>
       <title>Five central suspects arrested in whole-sale cocaine trafficking case</title>
@@ -366,7 +267,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Sat, 18 Oct 2025 18:22:01 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2025 19:17:51 +0000</pubDate>
     </item>
     <item>
       <title>CISOs face quantum leap in prioritizing quantum resilience</title>
@@ -540,18 +441,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4074154/cisos-face-quantum-leap-in-prioritizing-quantum-resilience.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 17 Oct 2025 10:01:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cybercrime-as-a-service takedown: 7 arrested</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</link>
-      <description>An action day performed in Latvia on 10 October 2025 led to the arrest of five cybercriminals of Latvian nationality and the seizure of infrastructure used to enable crimes against thousands of victims across Europe. During the operation codenamed ‘SIMCARTEL’, law enforcement arrested two further suspects, took down five servers and seized 1 200 SIM box devices alongside 40 000 active SIM cards. Investigators from Austria, Estonia and Latvia, together with their colleagues at Europol und Eurojust, were able to attribute to the criminal network more than 1 700 individual cyber fraud cases in Austria and 1 500 in Latvia, with a total loss of several million euros. The financial loss in Austria alone amounts to around EUR 4.5 million, as well as EUR 420 000 in Latvia.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
-      <pubDate>Sat, 18 Oct 2025 18:22:01 +0000</pubDate>
     </item>
     <item>
       <title>Government considered destroying its data hub after decade-long intrusion</title>
@@ -621,8 +512,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4074876/government-considered-destroying-its-data-hub-after-decade-long-intrusion.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Fri, 17 Oct 2025 23:44:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cybercrime-as-a-service takedown: 7 arrested</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</link>
+      <description>An action day performed in Latvia on 10 October 2025 led to the arrest of five cybercriminals of Latvian nationality and the seizure of infrastructure used to enable crimes against thousands of victims across Europe. During the operation codenamed ‘SIMCARTEL’, law enforcement arrested two further suspects, took down five servers and seized 1 200 SIM box devices alongside 40 000 active SIM cards. Investigators from Austria, Estonia and Latvia, together with their colleagues at Europol und Eurojust, were able to attribute to the criminal network more than 1 700 individual cyber fraud cases in Austria and 1 500 in Latvia, with a total loss of several million euros. The financial loss in Austria alone amounts to around EUR 4.5 million, as well as EUR 420 000 in Latvia.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.20</comments>
+      <pubDate>Sat, 18 Oct 2025 19:17:51 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-656)</title>
@@ -631,7 +532,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-656</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Tue, 14 Oct 2025 13:00:25 +0000</pubDate>
     </item>
     <item>
@@ -641,7 +542,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-657</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Tue, 14 Oct 2025 13:11:26 +0000</pubDate>
     </item>
     <item>
@@ -651,7 +552,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-658</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Tue, 14 Oct 2025 13:14:53 +0000</pubDate>
     </item>
     <item>
@@ -661,7 +562,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-659</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Tue, 14 Oct 2025 14:06:31 +0000</pubDate>
     </item>
     <item>
@@ -671,7 +572,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-660</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Tue, 14 Oct 2025 14:38:59 +0000</pubDate>
     </item>
     <item>
@@ -681,7 +582,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-661</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.38</comments>
       <pubDate>Tue, 14 Oct 2025 15:11:02 +0000</pubDate>
     </item>
     <item>
@@ -691,7 +592,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-october-2025-monthly-rollup-av25-662</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Tue, 14 Oct 2025 15:29:15 +0000</pubDate>
     </item>
     <item>
@@ -701,7 +602,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-663</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Tue, 14 Oct 2025 17:32:38 +0000</pubDate>
     </item>
     <item>
@@ -711,7 +612,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-october-2025-monthly-rollup-av25-664</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Tue, 14 Oct 2025 17:40:06 +0000</pubDate>
     </item>
     <item>
@@ -721,7 +622,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-665</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Tue, 14 Oct 2025 18:39:50 +0000</pubDate>
     </item>
     <item>
@@ -731,7 +632,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Wed, 15 Oct 2025 12:27:38 +0000</pubDate>
     </item>
     <item>
@@ -741,7 +642,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-667</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.73</comments>
       <pubDate>Wed, 15 Oct 2025 12:50:24 +0000</pubDate>
     </item>
     <item>
@@ -751,7 +652,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-668</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.74</comments>
       <pubDate>Wed, 15 Oct 2025 13:26:08 +0000</pubDate>
     </item>
     <item>
@@ -761,7 +662,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av25-669</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.80</comments>
+      <comments>Score: 8.78</comments>
       <pubDate>Wed, 15 Oct 2025 15:39:55 +0000</pubDate>
     </item>
     <item>
@@ -771,7 +672,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-670</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.81</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Wed, 15 Oct 2025 16:00:01 +0000</pubDate>
     </item>
     <item>
@@ -781,7 +682,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-671</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Wed, 15 Oct 2025 19:51:08 +0000</pubDate>
     </item>
     <item>
@@ -791,7 +692,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Wed, 15 Oct 2025 20:10:49 +0000</pubDate>
     </item>
     <item>
@@ -801,7 +702,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-014-security-incident-impacting-f5</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Wed, 15 Oct 2025 20:21:43 +0000</pubDate>
     </item>
     <item>
@@ -811,7 +712,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.27</comments>
+      <comments>Score: 9.25</comments>
       <pubDate>Thu, 16 Oct 2025 13:56:15 +0000</pubDate>
     </item>
     <item>
@@ -821,7 +722,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.29</comments>
+      <comments>Score: 9.26</comments>
       <pubDate>Thu, 16 Oct 2025 14:37:14 +0000</pubDate>
     </item>
     <item>
@@ -831,7 +732,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-675</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.41</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Thu, 16 Oct 2025 19:44:46 +0000</pubDate>
     </item>
     <item>
@@ -841,7 +742,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-676</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Thu, 16 Oct 2025 20:29:51 +0000</pubDate>
     </item>
     <item>
@@ -851,7 +752,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Thu, 16 Oct 2025 20:36:47 +0000</pubDate>
     </item>
     <item>
@@ -861,7 +762,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.88</comments>
+      <comments>Score: 9.85</comments>
       <pubDate>Fri, 17 Oct 2025 12:47:20 +0000</pubDate>
     </item>
     <item>
@@ -871,7 +772,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av25-678</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.98</comments>
+      <comments>Score: 9.95</comments>
       <pubDate>Fri, 17 Oct 2025 15:57:39 +0000</pubDate>
     </item>
   </channel>
