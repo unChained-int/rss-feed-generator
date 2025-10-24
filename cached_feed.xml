@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 24 Oct 2025 06:31:52 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Oct 2025 07:21:19 +0000</lastBuildDate>
     <item>
       <title>Microsoft security advisory - October 2025 monthly rollup (AV25-666)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</link>
@@ -16,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Wed, 15 Oct 2025 12:27:38 +0000</pubDate>
     </item>
     <item>
@@ -28,243 +28,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
       <pubDate>Wed, 15 Oct 2025 12:50:24 +0000</pubDate>
-    </item>
-    <item>
-      <title>Salesforce’s glaring Dreamforce omission: Vital security lessons from Salesloft Drift</title>
-      <link>https://www.csoonline.com/article/4076024/dreamforce-finds-salesforce-weathering-a-security-storm.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Salesforce’s &lt;a href="https://www.cio.com/article/3516181/dreamforce-2024-latest-news-and-insights.html"&gt;2025 Dreamforce conference&lt;/a&gt; last week offered attendees a range of sessions on best practices for securing their Salesforce environments and AI agents, and about what Salesforce itself is doing with AI to improve security. The company even &lt;a href="https://www.csoonline.com/article/4069285/salesforce-ai-agents-set-to-assist-enterprises-with-security-and-compliance.html"&gt;released two new agents aimed at CISOs ahead of the event&lt;/a&gt;, one to handle security issues and an agent for addressing privacy and compliance.&lt;/p&gt;
-
-
-
-&lt;p&gt;Overall, security as a shared responsibility was the theme: Salesforce is doing its part, and customers need to do theirs.&lt;/p&gt;
-
-
-
-&lt;p&gt;But what the conference didn’t address were weaknesses exposed by the recent spate of Salesforce-related breaches that affected more than 700 companies and nearly 1.5 billion records, inspiring 70-plus lawsuits.&lt;/p&gt;
-
-
-
-&lt;p&gt;“I was at the event, and I talked to all the leadership, and this was not one of the topics,” says Chirag Mehta, a vice president at Constellation Research. “This didn’t come up.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The omission was a likely missed opportunity, given that the lessons of what has gone down in the Salesforce ecosystem over the past few months are significant for the increasingly connected and AI-infused future that is central to Salesforce’s agentic vision.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="anatomy-of-a-third-party-cyber-disaster"&gt;Anatomy of a third-party cyber disaster&lt;/h2&gt;
-
-
-
-&lt;p&gt;At issue is one of the largest SaaS supply-chain breaches in recent years. According to the &lt;a href="https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift"&gt;Google Threat Intelligence Group&lt;/a&gt;, over &lt;a href="https://cyberscoop.com/salesforce-salesloft-drift-attack-spree-google/"&gt;700 organizations&lt;/a&gt; were impacted by an August breach in which the “actor systematically exported large volumes of data from numerous corporate Salesforce instances.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Seeing as the data had been stored by Salesforce, non-cyber professionals might assume this was a Salesforce breach, but that was not the case, Mehta says.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Yes, the breach happened in a Salesforce instance,” he explains. “But it was not caused by something Salesforce did. The people who understand what’s going on, they understand what Salesforce is supposed to do, and what the customers were supposed to do.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Instead, the breach occurred when a &lt;a href="https://www.csoonline.com/article/4046407/attackers-steal-data-from-salesforce-instances-via-compromised-ai-live-chat-tool.html"&gt;threat actor obtained Salesforce OAuth tokens&lt;/a&gt; from third-party AI chat tool Salesloft Drift and used the tokens to download large volumes of data from Salesforce instances.&lt;/p&gt;
-
-
-
-&lt;p&gt;Salesforce, which has attempted to minimize the breach’s severity by saying “&lt;a href="https://help.salesforce.com/s/articleView?id=005134951&amp;amp;type=1"&gt;a small number of customers&lt;/a&gt;” were affected, noted that when it detected the activity, it “invalidated active Access and Refresh Tokens, and removed Drift from AppExchange. We then notified affected customers.”&lt;/p&gt;
-
-
-
-&lt;p&gt;But according to Salesforce customer Cloudflare, the CDN giant saw the &lt;a href="https://blog.cloudflare.com/response-to-salesloft-drift-incident/"&gt;first signs&lt;/a&gt; of reconnaissance related to the breach on Aug. 9, with an attacker gaining access to Cloudflare’s Salesforce tenant on Aug. 12. By Aug. 17, the attackers had analyzed Cloudflare’s Salesforce case workflows, derived insights into how Cloudflare’s team members handle various types of cases, and completed their exfiltration.&lt;/p&gt;
-
-
-
-&lt;p&gt;Three days later, on Aug. 20, Salesforce revoked Salesloft Drift connections and published its notice on its website. “At that point, Cloudflare had not yet been notified, and we had no indication that this vendor action might relate to our environment,” Cloudflare’s security leaders stated.&lt;/p&gt;
-
-
-
-&lt;p&gt;Cloudflare wasn’t alone. Hundreds of companies were affected, including some of the biggest names in cybersecurity.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.mitiga.io/blog/shinyhunters-and-unc6395-inside-the-salesforce-and-salesloft-breaches"&gt;Mitiga Security researcher Idan Cohen wrote&lt;/a&gt;: “In the Drift case, customers weren’t careless. The attackers didn’t hack their way in. They logged in, pretending to be a trusted third-party service.”&lt;/p&gt;
-
-
-
-&lt;p&gt;This wasn’t the only case involving breached Salesforce accounts. In June, a different group of attackers, known as ShinyHunters, &lt;a href="https://www.csoonline.com/article/4035701/we-too-were-breached-says-google-months-after-revealing-salesforce-attacks.html"&gt;pretended to be IT support personnel&lt;/a&gt;, in order to trick users into approving a connection to a malicious version of Salesforce’s Data Loader application that then exfiltrated data from Salesforce environments.&lt;/p&gt;
-
-
-
-&lt;p&gt;Google, whose threat intelligence team described these attacks in a June report, itself fell victim to such an attack in August.&lt;/p&gt;
-
-
-
-&lt;p&gt;By October, &lt;a href="https://www.csoonline.com/article/4067846/extortion-gang-opens-data-leak-site-to-squeeze-victims-of-its-salesforce-attacks.html"&gt;attackers claimed to have stolen more than 1.5 billion Salesforce records&lt;/a&gt; from 760 companies. They also launched an extortion campaign against Salesforce and its compromised enterprise customers, including Toyota, FedEx, Hulu, and UPS.&lt;/p&gt;
-
-
-
-&lt;p&gt;Multiple lawsuits have been filed against Salesforce, claiming the company didn’t do enough to vet third-party applications connected to its systems, or to monitor for signs of data exfiltration and other malicious activity.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Salesforce … had the duty and ability to control its software environment and prevent these attacks from succeeding through implementation of security protocols that other companies in Salesforce’s industry regularly and routinely implement. But Salesforce did not,” said one complaint in a &lt;a href="https://mdlcases.com/wp-content/uploads/2025/09/MDL-3164.pdf"&gt;class-action lawsuit&lt;/a&gt; filed on Aug. 29 in California.&lt;/p&gt;
-
-
-
-&lt;p&gt;The potential for OAuth exploitation “was a known risk” and Salesforce failed to vet third-party connections, build protections, or monitor its networks against this kind of malicious activity, another group of class-action claimants said in a &lt;a href="https://www.pacermonitor.com/public/filings/DM725Z2I/Johnson_v_Salesforce_Inc__candce-25-08011__0001.0.pdf"&gt;complaint&lt;/a&gt; filed in September.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to San Diego law firm CaseyGerry, there are now more than &lt;a href="https://caseygerry.com/blog/salesforce-data-breach-lawsuit/"&gt;70 cases filed&lt;/a&gt; across the country related to the Salesforce data breach.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-biggest-blind-spot"&gt;The biggest blind spot&lt;/h2&gt;
-
-
-
-&lt;p&gt;When companies delegate access to third parties via OAuth integrations, it creates a systemic security blind spot that spans all industries.&lt;/p&gt;
-
-
-
-&lt;p&gt;By stealing those tokens, attackers can gain access to all connected systems. “Authorizing a malicious connected app bypasses many traditional defenses such as MFA, password resets and login monitoring, and because OAuth tokens are issued by Salesforce itself, activity coming from the malicious app can look like it’s from a trusted integration,” the FBI &lt;a href="https://www.ic3.gov/CSA/2025/250912.pdf"&gt;warned&lt;/a&gt; in an alert released in September.&lt;/p&gt;
-
-
-
-&lt;p&gt;The exploitation of such weaknesses is only going to get worse — especially as AI-related integrations increasingly become the norm.&lt;/p&gt;
-
-
-
-&lt;p&gt;Whereas a traditional CRM integration might need contact data, “an AI sales assistant typically requires contacts, email histories, calendar information, deal pipeline data, conversation logs, and product catalogs,” noted Trend Micro AI security expert Fernando Tucci in a report on why the &lt;a href="https://www.trendmicro.com/en_us/research/25/i/ai-app-breach.html"&gt;breach of Salesloft Drift — an AI chatbot — hits differently&lt;/a&gt;. “This broader access pattern means a single compromised AI integration can expose significantly more sensitive information than traditional point solutions.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Worse, because AI chatbots are specifically designed to access large data sets, when a malicious actor piggybacks on the same connection to steal data, the traffic pattern can look legitimate.&lt;/p&gt;
-
-
-
-&lt;p&gt;Understanding all these partnerships and connections requires close coordination with vendor management, says Steve Winterfeld, advisory CISO at Akamai. “Plus, understanding where your data is takes both culture-driven policies and technical controls,” he says.&lt;/p&gt;
-
-
-
-&lt;p&gt;With white-labeled services, APIs, and now LLMs, these two goals are much more complex. “If you haven’t conducted a supply chain breach exercise yet, now is the time,” Winterfeld says. “These recent events underscore the importance of validating your program.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Ironically, many security firms were among the victims, including Zscaler, Cloudflare, Palo Alto Networks, Pager Duty, SpyCloud, Tenable, Proofpoint, Rubrik, BeyondTrust, Bugcrowd, JFrog, CyberArk, and Black Duck.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="one-company-who-didnt-fall-victim"&gt;One company who didn’t fall victim&lt;/h2&gt;
-
-
-
-&lt;p&gt;One company that wasn’t scathed by the breaches was cloud-based IAM vendor Okta. Why? It allowed connections only from authorized IP addresses.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.okta.com/newsroom/articles/the-salesloft-incident--a-wake-up-call-for-saas-security-and-ips/"&gt;According to Okta&lt;/a&gt;, when the company learned of the compromise, it immediately reviewed its logs and found attempts to access resources with stolen tokens — but those attempts failed.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The single most important control that prevented this breach was our enforcement of inbound IP restrictions,” the company said. “The threat actor attempted to use a compromised token to access our Salesforce instance, but the attack failed because the connection originated from an unauthorized IP address. This security layer proved essential, blocking the unauthorized attempt at the front door before any access could be gained.”&lt;/p&gt;
-
-
-
-&lt;p&gt;This whitelisting approach to security is a powerful tactic, but it’s difficult to implement because it requires a great deal of discipline.&lt;/p&gt;
-
-
-
-&lt;p&gt;Another challenge is that not all SaaS vendors support this capability. “Many providers in the cloud-first world do not offer this foundational security feature, creating a significant challenge for protecting interconnected systems,” Okta said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Foundational security benchmarks for SaaS providers are only now coming together, following the &lt;a href="https://www.csoonline.com/article/4063383/cloud-security-alliance-launches-framework-to-improve-saas-security.html"&gt;Cloud Security Alliance’s recently launched SaaS Security Capability Framework (SSCF)&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Okta noted that Salesforce already offers this functionality, but added that using it requires “significant effort,” given that restrictions have to be configured for APIs and users.&lt;/p&gt;
-
-
-
-&lt;p&gt;Another way to protect connections is to limit them to a specific client, using demonstrating proof of possession (DPoP), which prevents the reuse of stolen tokens, but this is even more difficult in practice because it requires changes to the authentication flow and adds new requirements for clients and servers. Another option is mutual TLS, which offers even stronger security, but at an even higher cost of complexity.&lt;/p&gt;
-
-
-
-&lt;p&gt;In the financial sector, for example, some regulators mandate DPoP or mTLS; while it isn’t mandated in healthcare, there’s a use case there as well, according to &lt;a href="https://tyk.io/blog/demonstrating-proof-of-possession-dpop-oauth2-security-for-fapi-2-0-and-open-banking/"&gt;Tyk Technologies&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;More companies should be looking at upgrading this as their use of interconnected SaaS apps and AI tools increases.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Internet Engineering Task Force &lt;a href="https://datatracker.ietf.org/doc/html/rfc9700#name-sender-constrained-access-t"&gt;included&lt;/a&gt; both DPoP and mTLS among its best practices for OAuth security.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="compounding-risk-going-forward"&gt;Compounding risk going forward&lt;/h2&gt;
-
-
-
-&lt;p&gt;When companies allow connections to systems outside their perimeter, they need to understand the risks they are assuming and the security controls available to them, Constellation’s Mehta says.&lt;/p&gt;
-
-
-
-&lt;p&gt;Even a control as straightforward and common as multi-factor authentication can be difficult to implement for all employees, he says.&lt;/p&gt;
-
-
-
-&lt;p&gt;“From a solution provider perspective, they provide a specific set of security controls and features and it’s up to the customers to make sure they actually use them. In my view, it is a shared responsibility,” Mehta says.&lt;/p&gt;
-
-
-
-&lt;p&gt;Shared responsibility for security was an important part of the message of last week’s Dreamforce, but discussion of the Salesloft incident was conspicuously missing — a loss for attendees.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because if anything can be taken away from the past few months of Salesforce-related cybersecurity, it’s that software supply-chain security is more important than ever. And it will only increase in importance as more systems get connected — a key tenet of &lt;a href="https://www.cio.com/article/4066640/salesforce-trusted-ai-foundation-provides-scaffolding-for-the-agentic-enterprise.html"&gt;Salesforce’s aim to power the agentic enterprise&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Software supply-chain security is already not so easy to achieve, and, even as Salesforce promises to make this easier with the help of AI, it is AI itself that will make the problem that much harder to solve.&lt;/p&gt;
-
-
-
-&lt;h4 class="wp-block-heading"&gt;More &lt;a href="https://www.cio.com/article/3490106/salesforce-latest-news-and-insights.html"&gt;Salesforce news&lt;/a&gt;:&lt;/h4&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;a href="https://www.cio.com/article/4071597/salesforce-updates-its-agentic-ai-pitch-with-agentforce-360.html"&gt;Salesforce updates its agentic AI pitch with Agentforce 360&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.infoworld.com/article/4070540/lessons-from-the-salesforce-breach.html"&gt;Lessons from the Salesforce breach&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.cio.com/article/4069900/salesforce-brings-agentic-ai-to-it-service-management.html"&gt;Salesforce brings agentic AI to IT service management&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.cio.com/article/4046713/salesforce-ai-research-unveils-new-tools-for-ai-agents.html"&gt;Salesforce AI Research unveils new tools for AI agents&lt;/a&gt; &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4076024/dreamforce-finds-salesforce-weathering-a-security-storm.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
-      <pubDate>Wed, 22 Oct 2025 07:30:00 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV25-668)</title>
@@ -293,38 +56,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-670</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Wed, 15 Oct 2025 16:00:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV25-671)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-671</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-671</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Wed, 15 Oct 2025 19:51:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco security advisory (AV25-672)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-672</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-672</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
-      <pubDate>Wed, 15 Oct 2025 20:10:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL25-014 Security Incident impacting F5</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al25-014-security-incident-impacting-f5</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-014-security-incident-impacting-f5</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
-      <pubDate>Wed, 15 Oct 2025 20:21:43 +0000</pubDate>
     </item>
     <item>
       <title>4 factors creating bottlenecks for enterprise GenAI adoption</title>
@@ -560,8 +293,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4076511/4-factors-creating-bottlenecks-for-enterprise-genai-adoption.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.48</comments>
       <pubDate>Wed, 22 Oct 2025 09:24:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV25-671)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-671</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-671</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.48</comments>
+      <pubDate>Wed, 15 Oct 2025 19:51:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cisco security advisory (AV25-672)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-672</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-672</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.48</comments>
+      <pubDate>Wed, 15 Oct 2025 20:10:49 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL25-014 Security Incident impacting F5</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al25-014-security-incident-impacting-f5</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-014-security-incident-impacting-f5</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.48</comments>
+      <pubDate>Wed, 15 Oct 2025 20:21:43 +0000</pubDate>
     </item>
     <item>
       <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
@@ -571,7 +334,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 24 Oct 2025 04:31:52 +0000</pubDate>
+      <pubDate>Fri, 24 Oct 2025 05:21:20 +0000</pubDate>
     </item>
     <item>
       <title>Europe’s borders go digital</title>
@@ -581,7 +344,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 24 Oct 2025 04:31:52 +0000</pubDate>
+      <pubDate>Fri, 24 Oct 2025 05:21:20 +0000</pubDate>
     </item>
     <item>
       <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
@@ -591,7 +354,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Fri, 24 Oct 2025 04:31:52 +0000</pubDate>
+      <pubDate>Fri, 24 Oct 2025 05:21:20 +0000</pubDate>
     </item>
     <item>
       <title>‘I am not a robot’: Russian hackers use fake CAPTCHA lures to deploy espionage tools</title>
@@ -697,7 +460,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4077031/i-am-not-a-robot-russian-hackers-use-fake-captcha-lures-to-deploy-espionage-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Wed, 22 Oct 2025 12:04:10 +0000</pubDate>
     </item>
     <item>
@@ -717,7 +480,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Thu, 16 Oct 2025 14:37:14 +0000</pubDate>
     </item>
     <item>
@@ -737,7 +500,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-676</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Thu, 16 Oct 2025 20:29:51 +0000</pubDate>
     </item>
     <item>
@@ -747,7 +510,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Thu, 16 Oct 2025 20:36:47 +0000</pubDate>
     </item>
     <item>
@@ -758,7 +521,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Fri, 24 Oct 2025 04:31:52 +0000</pubDate>
+      <pubDate>Fri, 24 Oct 2025 05:21:20 +0000</pubDate>
     </item>
     <item>
       <title>Five central suspects arrested in whole-sale cocaine trafficking case</title>
@@ -768,7 +531,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Fri, 24 Oct 2025 04:31:52 +0000</pubDate>
+      <pubDate>Fri, 24 Oct 2025 05:21:20 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV25-616) – Update 1</title>
@@ -788,7 +551,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.75</comments>
-      <pubDate>Fri, 24 Oct 2025 04:31:52 +0000</pubDate>
+      <pubDate>Fri, 24 Oct 2025 05:21:20 +0000</pubDate>
     </item>
     <item>
       <title>Zimbra security advisory (AV25-678)</title>
@@ -797,7 +560,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av25-678</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Fri, 17 Oct 2025 15:57:39 +0000</pubDate>
     </item>
     <item>
@@ -938,7 +701,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4077445/serious-vulnerability-found-in-rust-library.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Wed, 22 Oct 2025 23:57:00 +0000</pubDate>
     </item>
     <item>
@@ -1210,7 +973,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3552765/6-risk-assessment-frameworks-im-vergleich.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Thu, 23 Oct 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1319,7 +1082,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4077438/manipulating-the-meeting-notetaker-the-rise-of-ai-summarization-optimization.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Thu, 23 Oct 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1330,7 +1093,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Fri, 24 Oct 2025 04:31:52 +0000</pubDate>
+      <pubDate>Fri, 24 Oct 2025 05:21:19 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-679)</title>
@@ -1339,7 +1102,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-679</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Mon, 20 Oct 2025 13:16:11 +0000</pubDate>
     </item>
     <item>
@@ -1349,7 +1112,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-680</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Mon, 20 Oct 2025 13:28:26 +0000</pubDate>
     </item>
     <item>
@@ -1359,7 +1122,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-681</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Mon, 20 Oct 2025 15:21:22 +0000</pubDate>
     </item>
     <item>
@@ -1369,7 +1132,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-682</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Mon, 20 Oct 2025 15:41:56 +0000</pubDate>
     </item>
     <item>
@@ -1379,7 +1142,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-683</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Mon, 20 Oct 2025 15:52:27 +0000</pubDate>
     </item>
     <item>
@@ -1389,7 +1152,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-485</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Mon, 20 Oct 2025 16:07:40 +0000</pubDate>
     </item>
     <item>
@@ -1399,7 +1162,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-684</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Mon, 20 Oct 2025 16:18:53 +0000</pubDate>
     </item>
     <item>
@@ -1409,7 +1172,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av25-685</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Mon, 20 Oct 2025 16:26:22 +0000</pubDate>
     </item>
     <item>
@@ -1419,7 +1182,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av25-640</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.65</comments>
       <pubDate>Mon, 20 Oct 2025 18:21:00 +0000</pubDate>
     </item>
     <item>
@@ -1546,7 +1309,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4078306/ai-browsers-can-be-abused-by-malicious-ai-sidebar-extensions-report-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Fri, 24 Oct 2025 00:18:20 +0000</pubDate>
     </item>
     <item>
@@ -1832,8 +1595,205 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3494345/der-kaufratgeber-fur-cloud-access-security-broker.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Fri, 24 Oct 2025 03:39:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ransomware recovery perils: 40% of paying victims still lose their data</title>
+      <link>https://www.csoonline.com/article/4077484/ransomware-recovery-perils-40-of-paying-victims-still-lose-their-data.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Two in five companies that pay cybercriminals for ransomware decryption fail to recover data as a result, according to a survey of 1,000s SMEs by insurance provider Hiscox.&lt;/p&gt;
+
+
+
+&lt;p&gt;The survey also revealed that ransomware remains a major threat, with 27% of businesses surveyed reporting an attack in the past year. Of those affected, 80% — which includes both insured and uninsured businesses — paid a ransom in an attempt to recover or protect critical data.&lt;/p&gt;
+
+
+
+&lt;p&gt;But only 60% successfully recovered all or part of their data as a result, &lt;a href="https://www.hiscox.ie/sites/ireland-new/files/2025-09/Hiscox%20Cyber%20Readiness%20Report%202025.pdf"&gt;Hiscox’s Cyber Readiness Report&lt;/a&gt; found.&lt;/p&gt;
+
+
+
+&lt;p&gt;A &lt;a href="https://qbeeurope.com/news-and-events/press-releases/ransomware-attacks-to-rise-by-40-by-2026-qbe-warns/"&gt;QBE Insurance report&lt;/a&gt; earlier this month on cybercrime and cloud-based threats revealed that ransomware incidents nearly tripled year-on-year in Q1 2025, reaching &lt;strong&gt;1,537 in Q1 2025&lt;/strong&gt; compared to 572 in the same quarter last year. CrowdStrike’s 2025 State of Ransomware Survey released this month also found that &lt;a href="https://www.csoonline.com/article/4075912/ai-enabled-ransomware-attacks-cisos-top-security-concern-with-good-reason.html"&gt;93% of ransomware-paying victims had data stolen anyway&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="flawed-ransomware-encryption-often-frustrates-recovery"&gt;Flawed ransomware encryption often frustrates recovery&lt;/h2&gt;
+
+
+
+&lt;p&gt;Hiscox’s statistics on the plight of ransomware victims highlight just one of myriad difficulties organizations face when attempting to recover from &lt;a href="https://www.csoonline.com/article/563507/what-is-ransomware-how-it-works-and-how-to-remove-it.html"&gt;ransomware&lt;/a&gt; attacks, industry experts say.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The 60% recovery rate reflects several technical and operational realities encountered regularly in incident response,” &lt;a href="https://www.linkedin.com/in/james-m-john/?originalSubdomain=uk"&gt;James John&lt;/a&gt;, incident response manager at cybersecurity firm Bridewell, tells CSO. “Firstly, &lt;a href="https://www.csoonline.com/article/3838121/the-dirty-dozen-12-worst-ransomware-groups-active-today.html"&gt;ransomware operators&lt;/a&gt; vary significantly in sophistication. Whilst established groups like LockBit or ALPHV typically provide functional decryptors, as they have a ‘reputation’ to maintain, smaller operations often deploy flawed encryption implementations or simply disappear after payment.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Decryptors are frequently slow and unreliable, John adds.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Large-scale decryption across enterprise environments can take weeks and often fails on corrupted files or complex database systems,” he explains. “Cases exist where the decryption process itself causes additional data corruption.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Even when decryptor tools are supplied, they may contain bugs, or leave files corrupted or inaccessible. Many organizations also rely on untested — and vulnerable — backups. Making matters still worse, many ransomware victims discover that their backups were also encrypted as part of the attack.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Criminals often use flawed or incompatible encryption tools, and many businesses lack the infrastructure to restore data cleanly, especially if backups are patchy or systems are still compromised,” says &lt;a href="https://www.linkedin.com/in/darylflack/?originalSubdomain=uk"&gt;Daryl Flack&lt;/a&gt;, partner at UK-based managed security provider Avella Security and cybersecurity advisor to the UK Government.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="additional-recovery-pressures"&gt;Additional recovery pressures&lt;/h2&gt;
+
+
+
+&lt;p&gt;Modern ransomware attacks now routinely involve double or triple extortion whereby attackers &lt;a href="https://www.csoonline.com/article/4032874/ransomware-attacks-the-evolving-extortion-threat-to-us-financial-institutions.html"&gt;threaten to leak stolen data&lt;/a&gt; or launch distributed denial of service (DDoS) attacks even after payment.&lt;/p&gt;
+
+
+
+&lt;p&gt;This fundamentally changes the calculus on what victims can expect in cases where they decide to make a ransomware payment, which more often than not fails to resolve many of the problems arising from a ransomware attack.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Paying only addresses the encryption element, not the broader compromise,” Bridewell’s John notes.&lt;/p&gt;
+
+
+
+&lt;p&gt;Moreover, a ransomware incident puts an organization under enormous pressure, with legal, operational, and reputational issues all converging, &lt;a href="https://www.csoonline.com/article/3825444/ransomware-gangs-extort-victims-17-hours-after-intrusion-on-average.html"&gt;often within a matter of hours&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;These factors, combined with the inherent uncertainty of dealing with criminals, help explain why paying the ransom so often falls short of achieving full data recovery.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://harperjames.co.uk/our-people/lillian-tsang/"&gt;Lillian Tsang&lt;/a&gt;, senior solicitor in Harper James’ data protection and privacy team, warns that even when a decryption key is received, some data may already be permanently damaged, altered, or stolen.&lt;/p&gt;
+
+
+
+&lt;p&gt;“That creates operational challenges but also raises data protection concerns, particularly where personal data is involved,” Tsang explains. “If records are lost or compromised, this can amount to a personal data breach under UK GDPR, which brings reporting obligations and the potential for regulatory scrutiny.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Paying a ransom doesn’t give a business any legal recourse if the criminals fail to deliver and, worse, “payment can create further risk if funds are unknowingly transferred to a sanctioned group,” Tsang warns.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="financial-resilience-and-legal-issues"&gt;Financial resilience and legal issues&lt;/h2&gt;
+
+
+
+&lt;p&gt;How a ransomware attack plays out in practice is illustrated by an account from an executive at Kantsu, a midsize Japanese logistics company. Kantsu President Hisahiro Tatsujo &lt;a href="https://www.cio.com/article/4036296/%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E6%94%BB%E6%92%83%E3%81%AB%E3%81%95%E3%82%89%E3%81%95%E3%82%8C%E3%81%9F%E4%BC%81%E6%A5%AD%E7%B5%8C%E5%96%B6%E8%80%85%E3%81%8C%E8%AA%9E%E3%82%8B%E5%AF%BE%E5%BF%9C.html"&gt;told CIO.com about the company’s efforts to restore operations following a ransomware attack&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;Kantsu — which did not pay a ransomware — was obliged to ask financial institutions for loans to cover the cost of recovering its operations because, although it was insured, its insurance firm had to go through a claims process before making a payout. The incident illustrated how enterprises need a financial as well as an operational plan to successfully recover from ransomware attacks.&lt;/p&gt;
+
+
+
+&lt;p&gt;Moreover, when systems are disrupted by ransomware attacks, legal obligations kick in almost immediately with requirements to notify regulators and affected individuals, especially if personal data is affected by a breach.&lt;/p&gt;
+
+
+
+&lt;p&gt;“One of the biggest challenges is making rapid, high-stakes decisions with only fragments of information,” says Harper James’ Tsang. “Senior leaders have to weigh the legal risks of payment, the impact on business continuity, and the potential consequences for individuals, often with limited technical clarity.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="forewarned-is-forearmed"&gt;Forewarned is forearmed&lt;/h2&gt;
+
+
+
+&lt;p&gt;Some experts advise maintaining a retainer with an incident response firm as part of &lt;a href="https://www.csoonline.com/article/515730/business-continuity-and-disaster-recovery-planning-the-basics.html"&gt;disaster recovery plans&lt;/a&gt; that anticipate the all-too-real possibility of a ransomware attack.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Having a retainer with a reputable incident response or negotiation firm — one equipped to handle cryptocurrency transactions — is crucial,” says &lt;a href="https://www.linkedin.com/in/jeremysamide/"&gt;Jeremy Samide&lt;/a&gt;, CEO at Blackwired, a cybersec company focused on direct threat intelligence. “Such firms manage &lt;a href="https://www.csoonline.com/article/3568817/the-ransomware-negotiation-playbook-adds-new-chapters.html"&gt;negotiations&lt;/a&gt;, have access to multiple crypto types (e.g., Bitcoin, Monero, Zcash), and can execute transfers securely if payment becomes the only path to recovery.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Samide adds: “Preparation doesn’t mean capitulation — it means being ready for every scenario.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Harper James’ Tsang cautions against setting aside funds to pay criminals in the event of ransomware attacks.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Setting aside funds to pay a ransom is increasingly viewed as problematic,” Tsang says. “While payment isn’t illegal in itself, it may breach sanctions, it can fuel further criminal activity, and there is no guarantee of a positive outcome.”&lt;/p&gt;
+
+
+
+&lt;p&gt;A more secure legal and strategic position comes from investing in resilience through strong security measures, well-tested recovery plans, clear reporting protocols, and cyber insurance, Tsang advises.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Cyber insurance is crucial for ransomware attacks because not only does it provide financial protection, but it can also give organizations access to specialized support that can significantly reduce damage and downtime,” Tsang explains.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.csoonline.com/article/571703/cyber-insurance-explained.html"&gt;Cyber insurance&lt;/a&gt; policies often offer active crisis management, with provisions that can cover:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;Immediate incident response and forensic investigation&lt;/li&gt;
+
+
+
+&lt;li&gt;Containment and remediation of infected systems&lt;/li&gt;
+
+
+
+&lt;li&gt;Negotiation and legal coordination with attackers&lt;/li&gt;
+
+
+
+&lt;li&gt;Data recovery and business continuity support&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;“Insurance can’t prevent an attack — but it can soften the blow, bring structure to chaos, and ensure that organizations don’t navigate ransomware crises alone,” says Blackwired’s Samide.&lt;/p&gt;
+
+
+
+&lt;p&gt;But cyber insurance still comes with caveats, other experts caution.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Insurance premiums are rising, and insurers now expect a stronger baseline of cybersecurity measures — multi-factor authentication, patch management, and tested backups — before offering or renewing coverage,” says Avella Security’s Flack. “This shift encourages organizations to adopt better security practices as part of their risk management approach.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="cyber-recovery"&gt;Cyber recovery&lt;/h2&gt;
+
+
+
+&lt;p&gt;Cyber recovery following a ransomware attack needs to be treated similarly to disaster recovery with a fully defined, in-house recovery plan, fully documented, where uncompromised data can be restored confidently, experts advise.&lt;/p&gt;
+
+
+
+&lt;p&gt;“When enterprises are hit by ransomware, one of the first and most pressing challenges is assessing the full scope of the attack — identifying which data has been compromised, which systems are affected, and whether existing backups can be trusted,” &lt;a href="https://www.linkedin.com/in/mcgann/"&gt;Jim McGann&lt;/a&gt;, CMO at Index Engines, explains. “Even when backups are available, verifying their integrity is a major hurdle, as they may contain corrupted or altered files that could reintroduce the threat during recovery.”&lt;/p&gt;
+
+
+
+&lt;p&gt;“Enterprises now need in-house recovery plans that include forensic-level data validation of data, not just restoration,” McGann advises.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4077484/ransomware-recovery-perils-40-of-paying-victims-still-lose-their-data.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.99</comments>
+      <pubDate>Fri, 24 Oct 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Zyxel security advisory (AV25-686)</title>
@@ -1842,7 +1802,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-686</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Tue, 21 Oct 2025 17:54:43 +0000</pubDate>
     </item>
     <item>
@@ -1852,7 +1812,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Tue, 21 Oct 2025 19:51:42 +0000</pubDate>
     </item>
     <item>
@@ -1862,7 +1822,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.59</comments>
+      <comments>Score: 9.57</comments>
       <pubDate>Wed, 22 Oct 2025 12:50:07 +0000</pubDate>
     </item>
     <item>
@@ -1872,7 +1832,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-689</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.59</comments>
+      <comments>Score: 9.57</comments>
       <pubDate>Wed, 22 Oct 2025 12:56:54 +0000</pubDate>
     </item>
     <item>
@@ -1882,7 +1842,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-690</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.65</comments>
       <pubDate>Wed, 22 Oct 2025 15:57:04 +0000</pubDate>
     </item>
     <item>
@@ -1892,7 +1852,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ericsson-security-advisory-av25-691</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.69</comments>
+      <comments>Score: 9.66</comments>
       <pubDate>Wed, 22 Oct 2025 16:16:02 +0000</pubDate>
     </item>
     <item>
@@ -1902,7 +1862,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-692</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.74</comments>
+      <comments>Score: 9.71</comments>
       <pubDate>Wed, 22 Oct 2025 18:07:42 +0000</pubDate>
     </item>
     <item>
@@ -1912,7 +1872,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av25-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Wed, 22 Oct 2025 19:06:30 +0000</pubDate>
     </item>
     <item>
@@ -1922,7 +1882,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-694</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Wed, 22 Oct 2025 19:13:46 +0000</pubDate>
     </item>
     <item>
@@ -1932,7 +1892,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-583</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.41</comments>
+      <comments>Score: 10.38</comments>
       <pubDate>Thu, 23 Oct 2025 15:13:39 +0000</pubDate>
     </item>
     <item>
@@ -1942,7 +1902,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-695</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.44</comments>
+      <comments>Score: 10.41</comments>
       <pubDate>Thu, 23 Oct 2025 16:10:05 +0000</pubDate>
     </item>
   </channel>
