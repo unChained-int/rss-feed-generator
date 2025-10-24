@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Oct 2025 23:19:26 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Oct 2025 01:38:06 +0000</lastBuildDate>
     <item>
       <title>Adobe security advisory (AV25-667)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-667</link>
@@ -16,193 +16,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-667</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
+      <comments>Score: 7.47</comments>
       <pubDate>Wed, 15 Oct 2025 12:50:24 +0000</pubDate>
-    </item>
-    <item>
-      <title>Self-propagating worm found in marketplaces for Visual Studio Code extensions</title>
-      <link>https://www.csoonline.com/article/4076718/self-propagating-worm-found-in-marketplaces-for-visual-studio-code-extensions-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A month after a self-propagating worm was &lt;a href="https://www.upguard.com/blog/the-shai-hulud-attack-explained" rel="noreferrer noopener" target="_blank"&gt;discovered in the open source NPM code repository&lt;/a&gt;, a similar worm has been found targeting Visual Studio Code extensions in open marketplaces.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.koi.ai/blog/glassworm-first-self-propagating-worm-using-invisible-code-hits-openvsx-marketplace" rel="noreferrer noopener" target="_blank"&gt;Researchers at Israel-based Koi Security&lt;/a&gt; say the malware, which they dub GlassWorm, has been found in extensions in the OpenVSX and Microsoft VS Code marketplaces.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This is one of the most sophisticated supply chain attacks we’ve ever analyzed,” the researchers warn. “And it’s spreading right now.”&lt;/p&gt;
-
-
-
-&lt;p&gt;If the compromised extensions are folded into code, they harvest NPM, GitHub, and Git credentials left by developers in their work, drain funds from 49 cryptocurrency wallets, deploy SOCKS proxy servers on developer computers, install hidden VNX servers for remote access, and use stolen credentials to compromise additional packages and extensions.&lt;/p&gt;
-
-
-
-&lt;p&gt;Seven OpenVSX extensions were compromised last week and were downloaded over 35,000 times, the report says. In addition, another infected extension was detected in the VS Code marketplace over the weekend.&lt;/p&gt;
-
-
-
-&lt;p&gt;The worms in the extensions evade detection using an old technique: Including malware written with Unicode variation selectors. These are special characters that are part of the Unicode specification but don’t produce any visual output.&lt;/p&gt;
-
-
-
-&lt;p&gt;“To a developer doing code review, it looks like blank lines or whitespace,” says Koi Security. “To static analysis tools scanning for suspicious code, it looks like nothing at all.” But to a JavaScript interpreter, it’s executable code.&lt;/p&gt;
-
-
-
-&lt;p&gt;“CISOs should treat this as an immediate security incident if their developers use VS Code,” says Tanya Janca, head of the Canadian secure coding training consultancy SheHacksPurple.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Because extensions inherit full VS Code permissions, once installed they can steal credentials, exfiltrate source code, and enable remote command and control (for example, via VNC and SOCKS proxies). Risk level: Very High.”&lt;/p&gt;
-
-
-
-&lt;p&gt;CISOs should start their incident response processes immediately, she said, conducting an inventory to see which corporate applications use VS Code, which extensions they contain, and determining if any are on the known affected list.&lt;/p&gt;
-
-
-
-&lt;p&gt;They should also monitor for suspicious application behavior, she added, specifically strange outgoing connections and processes mentioned in the research, unapproved VNC servers, and long-lived SOCKS proxy processes.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="educate-your-developers"&gt;Educate your developers&lt;/h2&gt;
-
-
-
-&lt;p&gt;In the meantime, Janca recommends disabling all application auto-updates, and educating all developers about the situation and the extensions to watch for.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Block access to the OpenVSX registry and all other untrusted/unknown marketplaces, permanently,” she advises. “Have developers log out of their developer tools and reboot. Revoke and then rotate any credentials that might have been spilled before logging back into everything.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Follow normal practices for incident response, she concluded: Detect, contain, eradicate, recover.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="marketplaces-targeted"&gt;Marketplaces targeted&lt;/h2&gt;
-
-
-
-&lt;p&gt;The Koi Security report is the latest in a series of warnings that threat actors are increasingly targeting VS Code marketplaces in supply chain attacks.  Last week, &lt;a href="https://www.csoonline.com/article/4072829/tigerjacks-malicious-vscode-extensions-mine-steal-and-stay-hidden.html" target="_blank"&gt;Koi Security exposed&lt;/a&gt; a threat actor dubbed TigerJack spreading malicious extensions. And &lt;a href="https://www.infoworld.com/article/4074939/threat-actors-are-spreading-malicious-extensions-via-vs-marketplaces.html" target="_blank"&gt;researchers at Wiz just published research&lt;/a&gt; showing the widespread abuse of the OpenVSX and VS Code marketplaces.&lt;/p&gt;
-
-
-
-&lt;p&gt;The use of Unicode to hide malware was &lt;a href="https://www.csoonline.com/article/4059606/meet-shadowleak-impossible-to-detect-data-theft-using-ai.html" target="_blank"&gt;exposed as recently as last month&lt;/a&gt; by researchers at Radware, who found it being used to compromise ChatGPT.&lt;/p&gt;
-
-
-
-&lt;p&gt;These reports should come as no surprise. Open code marketplaces, where developers can upload code for others to use in their applications, have long been targets for threat actors as vehicles for inserting malicious code into projects. The code then spreads into developer or customer environments to steal credentials and data. Collectively, these are known as supply chain attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;Among the most targeted repositories are GitHub, GitLab and &lt;a href="https://www.infoworld.com/article/4060306/npm-attacks-and-the-security-of-software-supply-chains.html" target="_blank"&gt;NPM&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft gives developers the ability to add extensions and themes to Visual Studio Code to make life easier for developers, as well as to enhance functionality. An extension can add features like debuggers, new languages, or other development tools, while a theme is a type of extension that changes the appearance of the editor, controlling things like colors and fonts.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="leverages-blockchain"&gt;Leverages blockchain&lt;/h2&gt;
-
-
-
-&lt;p&gt;Koi Security researchers came across the wormed extension in OpenVSX when their risk engine flagged suspicious activity in an update of an extension called CodeJoy. a developer productivity tool with hundreds of downloads. However, version 1.8.3 introduced some suspicious behavioural changes. The source code included what looked like massive gap between lines that was actually malicious code encoded in unprintable Unicode characters that can’t be viewed in a code editor.&lt;/p&gt;
-
-
-
-&lt;p&gt;Worse, the malware uses the public &lt;a href="https://solana.com/" rel="noreferrer noopener" target="_blank"&gt;Solana blockchain&lt;/a&gt; as a command and control infrastructure (C2) for its goal of hunting for login credentials, especially those for crypto wallets. The malware also reaches out to a Google Calendar event as a backup C2 mechanism.&lt;/p&gt;
-
-
-
-&lt;p&gt;The stolen NPM, GitHub, Git, and OpenVSX credentials also help the malware spread as a worm.&lt;/p&gt;
-
-
-
-&lt;p&gt;Finally, the malware injects a remote access trojan onto the workstations of victim developers, turning them into SOCKS proxy servers. The workstations can then be used to access an organization’s IT systems, becoming internal network access points, persistent backdoors, proxies for attacking other internal systems and data exfiltration channels.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="developers-are-prime-target"&gt;Developers are ‘prime target’&lt;/h2&gt;
-
-
-
-&lt;p&gt;Developers are a prime target for attacks these days, pointed out &lt;a href="https://www.sans.org/profiles/dr-johannes-ullrich" rel="noreferrer noopener" target="_blank"&gt;Johannes Ullrich&lt;/a&gt;, dean of research at the SANS Institute. What they often don’t realize is that any extension they install, even if it appears benign, has full access to their code and may make modifications without explicitly informing the developer.&lt;/p&gt;
-
-
-
-&lt;p&gt;CISOs must include developers in discussions about securing development tools, he advises. Limiting permitted tools is often counterproductive, as developers will identify workarounds to get work done. Security must cooperate with developers to assist them in using the tools they need securely, and any endpoint protection product needs to be tuned to support the unique usage patterns of developers.&lt;/p&gt;
-
-
-
-&lt;p&gt;This isn’t just a supply-chain problem, said &lt;a href="https://www.linkedin.com/in/will-baxter-1b350611/" rel="noreferrer noopener" target="_blank"&gt;Will Baxter&lt;/a&gt;, field CISO at Team Cymru, it’s a new infrastructure layer merging cyber-crime tooling, blockchain resilience, and developer-tooling pivoting. Registry operators, threat researchers and blockchain-monitoring partners need to share intelligence and work together more closely to flag these hybrid attacks, he added.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="more-advice-to-csos"&gt;More advice to CSOs&lt;/h2&gt;
-
-
-
-&lt;p&gt;Janca says to lower the risk of supply chain attacks, security leaders and application security professionals should:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;reduce attack surface whenever possible: Only install features and other software that they use, for instance, uninstall any VS Code extensions that are not used, and remove all unused dependencies from code;&lt;/li&gt;
-
-
-
-&lt;li&gt;monitor all employee workstations for anomalous behavior, with more focus on those who have privileged access, such as software developers.&lt;/li&gt;
-
-
-
-&lt;li&gt;apply least privilege for identity and access management, especially for developer machines&lt;/li&gt;
-
-
-
-&lt;li&gt;implement a fast and efficient change management process that includes software supply chain changes;&lt;/li&gt;
-
-
-
-&lt;li&gt;train developers on secure coding, protecting their supply chain, and their role during incident response, to help prevent issues like this in the future or to respond faster and more gracefully&lt;br /&gt;There are various security scanning tools that can be used to reduce risk and catch issues before they become security incidents, such as extension scanners, secret scanners, supply chain security tooling (SCA and SBOM), and endpoint protection;&lt;/li&gt;
-
-
-
-&lt;li&gt;follow proper secret manage best practices, so that malicious packages like these cannot harvest credentials;&lt;/li&gt;
-
-
-
-&lt;li&gt;only approved repositories, marketplaces, etc. should be used in an organizations. Block all unknown or untrusted places for downloading code, packages, images, and extensions;&lt;/li&gt;
-
-
-
-&lt;li&gt;harden the entire software supply chain, not just third-party components and code. This includes regular updates and locking down access to the CI/CD, developer IDEs and workstations, artifacts, and more.&lt;/li&gt;
-
-
-
-&lt;li&gt;push governments to provide a solution to the very insecure open source software ecosystem that so many of us rely on. Or, give preference closed-source development languages and frameworks, though this, she admits, wouldn’t have helped in this case, as .Net is closed source but VS Code Marketplace is not.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.infoworld.com/article/4076668/self-propagating-worm-found-in-marketplaces-for-visual-studio-code-extensions.html" target="_blank"&gt;InfoWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4076718/self-propagating-worm-found-in-marketplaces-for-visual-studio-code-extensions-2.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
-      <pubDate>Wed, 22 Oct 2025 01:39:49 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV25-668)</title>
@@ -211,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-668</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
+      <comments>Score: 7.48</comments>
       <pubDate>Wed, 15 Oct 2025 13:26:08 +0000</pubDate>
     </item>
     <item>
@@ -221,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av25-669</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Wed, 15 Oct 2025 15:39:55 +0000</pubDate>
     </item>
     <item>
@@ -231,28 +46,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-670</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Wed, 15 Oct 2025 16:00:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</link>
-      <description>From 15 to 19 September 2025, Europol supported the fourth edition of the EMPACT Trafficking in Human Beings (THB) Hackathon, an action week against human trafficking enabled online. It was led by Dutch authorities, with the support of Germany and the United Kingdom, and brought together 73 specialists from 26 countries across the world. Eurojust also participated in the action.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 23 Oct 2025 21:19:26 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europe’s borders go digital</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</link>
-      <description>The Entry/Exit System (EES) is the new IT system that digitally records the entry and exit of non-EU nationals travelling to 29 European countries for short stays. The system has already recorded over 300 000 movements, with the number continuing to grow daily. The EES began implementation on 12 October 2025 and will be fully operational by 10 April 2026.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 23 Oct 2025 21:19:26 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV25-671)</title>
@@ -261,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-671</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Wed, 15 Oct 2025 19:51:08 +0000</pubDate>
     </item>
     <item>
@@ -271,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Wed, 15 Oct 2025 20:10:49 +0000</pubDate>
     </item>
     <item>
@@ -281,8 +76,28 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-014-security-incident-impacting-f5</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Wed, 15 Oct 2025 20:21:43 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europe’s borders go digital</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</link>
+      <description>The Entry/Exit System (EES) is the new IT system that digitally records the entry and exit of non-EU nationals travelling to 29 European countries for short stays. The system has already recorded over 300 000 movements, with the number continuing to grow daily. The EES began implementation on 12 October 2025 and will be fully operational by 10 April 2026.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 23 Oct 2025 23:38:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</link>
+      <description>From 15 to 19 September 2025, Europol supported the fourth edition of the EMPACT Trafficking in Human Beings (THB) Hackathon, an action week against human trafficking enabled online. It was led by Dutch authorities, with the support of Germany and the United Kingdom, and brought together 73 specialists from 26 countries across the world. Eurojust also participated in the action.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 23 Oct 2025 23:38:06 +0000</pubDate>
     </item>
     <item>
       <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
@@ -292,7 +107,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Thu, 23 Oct 2025 21:19:26 +0000</pubDate>
+      <pubDate>Thu, 23 Oct 2025 23:38:06 +0000</pubDate>
     </item>
     <item>
       <title>Sendmarc appoints Dan Levinson as Customer Success Director in North America</title>
@@ -370,18 +185,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4076877/sendmarc-appoints-dan-levinson-as-customer-success-director-in-north-america.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Wed, 22 Oct 2025 06:38:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>Counterfeit and substandard food worth EUR 95 million seized in global operation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/counterfeit-and-substandard-food-worth-eur-95-million-seized-in-global-operation</link>
-      <description>Europol, OLAF, DG SANTE and 31 countries across Europe and beyond, together with food and beverage producers from the private sector, joined forces in the fourteenth edition of Operation OPSON. This yearly effort targets the criminals behind counterfeit and substandard food and beverages. Law enforcement, customs and food regulatory agencies seized 259 012 packages, 1 416 168 litres of beverages and 11 566 958 kilograms of food, including meat and seafood.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/counterfeit-and-substandard-food-worth-eur-95-million-seized-in-global-operation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Thu, 23 Oct 2025 21:19:26 +0000</pubDate>
     </item>
     <item>
       <title>CAASM and EASM: Top 12 attack surface discovery and management tools</title>
@@ -581,28 +386,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/574797/9-attack-surface-discovery-and-management-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Wed, 22 Oct 2025 07:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV25-673)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Thu, 16 Oct 2025 13:56:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV25-674)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Thu, 16 Oct 2025 14:37:14 +0000</pubDate>
     </item>
     <item>
       <title>Salesforce’s glaring Dreamforce omission: Vital security lessons from Salesloft Drift</title>
@@ -838,38 +623,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4076024/dreamforce-finds-salesforce-weathering-a-security-storm.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Wed, 22 Oct 2025 07:30:00 +0000</pubDate>
     </item>
     <item>
-      <title>[Control systems] Schneider Electric security advisory (AV25-675)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-675</link>
+      <title>HPE security advisory (AV25-673)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</link>
       <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-675</guid>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
-      <pubDate>Thu, 16 Oct 2025 19:44:46 +0000</pubDate>
+      <comments>Score: 7.62</comments>
+      <pubDate>Thu, 16 Oct 2025 13:56:15 +0000</pubDate>
     </item>
     <item>
-      <title>[Control systems] Siemens security advisory (AV25-676)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-676</link>
+      <title>Mozilla security advisory (AV25-674)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</link>
       <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-676</guid>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
-      <pubDate>Thu, 16 Oct 2025 20:29:51 +0000</pubDate>
+      <comments>Score: 7.62</comments>
+      <pubDate>Thu, 16 Oct 2025 14:37:14 +0000</pubDate>
     </item>
     <item>
-      <title>WatchGuard security advisory (AV25-677)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
+      <title>Counterfeit and substandard food worth EUR 95 million seized in global operation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/counterfeit-and-substandard-food-worth-eur-95-million-seized-in-global-operation</link>
+      <description>Europol, OLAF, DG SANTE and 31 countries across Europe and beyond, together with food and beverage producers from the private sector, joined forces in the fourteenth edition of Operation OPSON. This yearly effort targets the criminals behind counterfeit and substandard food and beverages. Law enforcement, customs and food regulatory agencies seized 259 012 packages, 1 416 168 litres of beverages and 11 566 958 kilograms of food, including meat and seafood.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/counterfeit-and-substandard-food-worth-eur-95-million-seized-in-global-operation</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Thu, 16 Oct 2025 20:36:47 +0000</pubDate>
+      <comments>Score: 7.63</comments>
+      <pubDate>Thu, 23 Oct 2025 23:38:06 +0000</pubDate>
     </item>
     <item>
       <title>4 factors creating bottlenecks for enterprise GenAI adoption</title>
@@ -1105,8 +890,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4076511/4-factors-creating-bottlenecks-for-enterprise-genai-adoption.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Wed, 22 Oct 2025 09:24:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] Schneider Electric security advisory (AV25-675)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-675</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-675</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.65</comments>
+      <pubDate>Thu, 16 Oct 2025 19:44:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] Siemens security advisory (AV25-676)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-676</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-676</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.66</comments>
+      <pubDate>Thu, 16 Oct 2025 20:29:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>WatchGuard security advisory (AV25-677)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.66</comments>
+      <pubDate>Thu, 16 Oct 2025 20:36:47 +0000</pubDate>
     </item>
     <item>
       <title>Five central suspects arrested in whole-sale cocaine trafficking case</title>
@@ -1116,17 +931,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Thu, 23 Oct 2025 21:19:26 +0000</pubDate>
-    </item>
-    <item>
-      <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</link>
-      <description>The conference “From CLICK to CRIME: Investigating Intellectual Property Crime in the Digital Age” was held on 22 and 23 October 2025 in Sofia, Bulgaria. Jointly organised by Europol, the European Union Intellectual Property Office (EUIPO) and Bulgaria’s General Directorate Combating Organised Crime (GDBOP), the event highlighted the vital importance of collaboration in tackling online crime. The participants reaffirmed the importance of strong collective efforts in tackling online-enabled intellectual property crime to protect consumers, safeguard creativity and uphold trust in the digital economy.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
-      <pubDate>Thu, 23 Oct 2025 21:19:26 +0000</pubDate>
+      <pubDate>Thu, 23 Oct 2025 23:38:06 +0000</pubDate>
     </item>
     <item>
       <title>‘I am not a robot’: Russian hackers use fake CAPTCHA lures to deploy espionage tools</title>
@@ -1232,8 +1037,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4077031/i-am-not-a-robot-russian-hackers-use-fake-captcha-lures-to-deploy-espionage-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 22 Oct 2025 12:04:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</link>
+      <description>The conference “From CLICK to CRIME: Investigating Intellectual Property Crime in the Digital Age” was held on 22 and 23 October 2025 in Sofia, Bulgaria. Jointly organised by Europol, the European Union Intellectual Property Office (EUIPO) and Bulgaria’s General Directorate Combating Organised Crime (GDBOP), the event highlighted the vital importance of collaboration in tackling online crime. The participants reaffirmed the importance of strong collective efforts in tackling online-enabled intellectual property crime to protect consumers, safeguard creativity and uphold trust in the digital economy.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.75</comments>
+      <pubDate>Thu, 23 Oct 2025 23:38:06 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV25-616) – Update 1</title>
@@ -1242,7 +1057,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Fri, 17 Oct 2025 12:47:20 +0000</pubDate>
     </item>
     <item>
@@ -1252,7 +1067,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av25-678</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Fri, 17 Oct 2025 15:57:39 +0000</pubDate>
     </item>
     <item>
@@ -1393,18 +1208,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4077445/serious-vulnerability-found-in-rust-library.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Wed, 22 Oct 2025 23:57:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cybercrime-as-a-service takedown: 7 arrested</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</link>
-      <description>An action day performed in Latvia on 10 October 2025 led to the arrest of five cybercriminals of Latvian nationality and the seizure of infrastructure used to enable crimes against thousands of victims across Europe. During the operation codenamed ‘SIMCARTEL’, law enforcement arrested two further suspects, took down five servers and seized 1 200 SIM box devices alongside 40 000 active SIM cards. Investigators from Austria, Estonia and Latvia, together with their colleagues at Europol und Eurojust, were able to attribute to the criminal network more than 1 700 individual cyber fraud cases in Austria and 1 500 in Latvia, with a total loss of several million euros. The financial loss in Austria alone amounts to around EUR 4.5 million, as well as EUR 420 000 in Latvia.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
-      <pubDate>Thu, 23 Oct 2025 21:19:26 +0000</pubDate>
     </item>
     <item>
       <title>6 Risk-Assessment-Frameworks im Vergleich</title>
@@ -1675,8 +1480,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3552765/6-risk-assessment-frameworks-im-vergleich.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Thu, 23 Oct 2025 04:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cybercrime-as-a-service takedown: 7 arrested</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</link>
+      <description>An action day performed in Latvia on 10 October 2025 led to the arrest of five cybercriminals of Latvian nationality and the seizure of infrastructure used to enable crimes against thousands of victims across Europe. During the operation codenamed ‘SIMCARTEL’, law enforcement arrested two further suspects, took down five servers and seized 1 200 SIM box devices alongside 40 000 active SIM cards. Investigators from Austria, Estonia and Latvia, together with their colleagues at Europol und Eurojust, were able to attribute to the criminal network more than 1 700 individual cyber fraud cases in Austria and 1 500 in Latvia, with a total loss of several million euros. The financial loss in Austria alone amounts to around EUR 4.5 million, as well as EUR 420 000 in Latvia.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercrime-service-takedown-7-arrested</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.20</comments>
+      <pubDate>Thu, 23 Oct 2025 23:38:06 +0000</pubDate>
     </item>
     <item>
       <title>Manipulating the meeting notetaker: The rise of AI summarization optimization</title>
@@ -1784,7 +1599,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4077438/manipulating-the-meeting-notetaker-the-rise-of-ai-summarization-optimization.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Thu, 23 Oct 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1794,7 +1609,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-679</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Mon, 20 Oct 2025 13:16:11 +0000</pubDate>
     </item>
     <item>
@@ -1804,7 +1619,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-680</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Mon, 20 Oct 2025 13:28:26 +0000</pubDate>
     </item>
     <item>
@@ -1814,7 +1629,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-681</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Mon, 20 Oct 2025 15:21:22 +0000</pubDate>
     </item>
     <item>
@@ -1824,7 +1639,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-682</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Mon, 20 Oct 2025 15:41:56 +0000</pubDate>
     </item>
     <item>
@@ -1834,7 +1649,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-683</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Mon, 20 Oct 2025 15:52:27 +0000</pubDate>
     </item>
     <item>
@@ -1844,7 +1659,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-485</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Mon, 20 Oct 2025 16:07:40 +0000</pubDate>
     </item>
     <item>
@@ -1854,7 +1669,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-684</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Mon, 20 Oct 2025 16:18:53 +0000</pubDate>
     </item>
     <item>
@@ -1864,7 +1679,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av25-685</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Mon, 20 Oct 2025 16:26:22 +0000</pubDate>
     </item>
     <item>
@@ -1874,8 +1689,135 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av25-640</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.79</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Mon, 20 Oct 2025 18:21:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI browsers can be abused by malicious AI sidebar extensions: Report</title>
+      <link>https://www.csoonline.com/article/4078306/ai-browsers-can-be-abused-by-malicious-ai-sidebar-extensions-report-2.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;AI browsers may be smart, but they’re not smart enough to block a common threat: Malicious extensions.&lt;/p&gt;
+
+
+
+&lt;p&gt;That’s the conclusion of researchers at SquareX, who on Thursday &lt;a href="https://labs.sqrx.com/ai-sidebar-spoofing-720e0c91d290" rel="noreferrer noopener" target="_blank"&gt;released a report&lt;/a&gt; showing how attackers can exploit AI sidebars through compromised browser extensions.&lt;/p&gt;
+
+
+
+&lt;p&gt;This attack vector isn’t new. Malicious extensions have been &lt;a href="https://www.csoonline.com/article/4017474/verified-but-vulnerable-malicious-extensions-exploit-ide-trust-badges.html" target="_blank"&gt;inserted into browser web stores&lt;/a&gt; to infect standard browsers such as Chrome, Edge, Firefox, and others for years.&lt;/p&gt;
+
+
+
+&lt;p&gt;What SquareX discovered are malicious extensions that can spoof the legitimate AI sidebars people use for queries. Their goal is to trick users into going to malicious websites, running data exfiltration commands, or installing backdoors. AI sidebar spoofing even works on the just-released OpenAI Atlas browser, SquareX says.&lt;/p&gt;
+
+
+
+&lt;p&gt;One solution for CISOs and CIOs is to ban the use of AI browsers, it suggests. That assumes the IT department can manage which browsers staff are using, particularly if they are allowed to use their own internet-connected devices. At the very least, IT must audit all extensions installed by employees for AI and non-AI browsers, the report says.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="treat-anything-ai-with-zero-trust-protocols"&gt;Treat anything AI with zero-trust protocols&lt;/h2&gt;
+
+
+
+&lt;p&gt;CISOs and CIOs need to treat anything AI with the strongest zero-trust protocols available, commented &lt;a href="https://cypfer.com/team-member/ed-dubrovsky/" rel="noreferrer noopener" target="_blank"&gt;Ed Dubrovsky&lt;/a&gt;, chief operating officer of incident response firm Cypfer, at least until some better functioning guardrails are established. &lt;/p&gt;
+
+
+
+&lt;p&gt;“Establish a set of guardrails around AI use and functionality,” he said, “and if you are allowing AI vulnerable software into your corporate network, segment it into a place where it can’t get into the Digital Crown Jewels, or even have an awareness of them.” &lt;/p&gt;
+
+
+
+&lt;p&gt;He pointed out that AI is a completely different playing field, and CSOs are not yet prepared for it. The challenge is that IT leaders are trying to think of AI as a new tool or toolset and are trying to apply software development and maintenance methodologies to its management. &lt;/p&gt;
+
+
+
+&lt;p&gt;But in his view, AI is closer to “I just hired 100 new employees with very little vetting or appropriate security controls, how do I secure my assets in case some of them are malicious?”&lt;/p&gt;
+
+
+
+&lt;p&gt;“AI is not only a language chatbot, but it also has agentic function where tasks are defined and deployed, and AI software can be written and deployed by AI,” he said. “This pushes the human away from the keyboard, in a way, and replaces it with a new software capability.” &lt;/p&gt;
+
+
+
+&lt;p&gt;The risk is that AI is not, and likely never will be, completely foolproof, he added. There may come a day where AI will be powerful enough to avoid most human ability to fool it, but, he asked, can it avoid being manipulated by other AIs? &lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="dumpster-fires"&gt;‘Dumpster fires’&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.linkedin.com/in/dbshipley/?originalSubdomain=ca" rel="noreferrer noopener" target="_blank"&gt;David Shipley&lt;/a&gt;, head of Canadian employee security awareness training firm Beauceron Security, agrees.&lt;/p&gt;
+
+
+
+&lt;p&gt;“I think if CISOs are bored and want to spice up their lives with an incident, they should roll out these AI-powered hot messes to their users,” he said .&lt;/p&gt;
+
+
+
+&lt;p&gt;“But, if they’re like most CISOs and they have lots of problems, but free time and boredom aren’t on that list, they should avoid these dumpster fires [AI browsers] at all costs.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Building and supporting a legitimate browser and extension ecosystem is difficult work, he argued, pointing out that even Apple, Google, and Microsoft still have issues.&lt;/p&gt;
+
+
+
+&lt;p&gt;“I think it’s a mistake to think of the risk as just being about extensions,” he added. “It’s the fundamental DNA of these browsers that is bad; the companies aren’t incented to pay enough attention to the problems, and bad extensions are just the straw that breaks cybersecurity’s back.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="how-it-works"&gt;How it works&lt;/h2&gt;
+
+
+
+&lt;p&gt;CISOs have a tough challenge: It’s not hard to fool an employee into downloading and installing a malicious extension for any browser; browser extensions are supposed to be attractive add-on utilities such as password managers or AI productivity assistants. They are promoted in phishing and smishing messages, social media posts and, when threat actors are able, uploaded to marketplaces such as the Google Chrome Web Store. They can be malware disguised as a legitimate extension or can be a compromised version of one.&lt;/p&gt;
+
+
+
+&lt;p&gt;In AI Sidebar Spoofing, says the SquareX report, once a victim opens a new AI browser tab, the malicious extension injects JavaScript into the web page to create a fake sidebar that looks exactly like a legitimate sidebar. When the user enters a prompt into the spoofed sidebar, the extension hooks into its AI engine. But if the prompt requests certain instructions or guides, the responses can be manipulated to include additional instructions to the user. So, for example, if the user asks for good file sharing sites, the malicious extension might provide a link to the attacker’s file sharing site that requests high risk OAuth permissions that it can harvest. In the hands of a hacker, they could allow access to the victim’s email.&lt;/p&gt;
+
+
+
+&lt;p&gt;In one test, when a SquareX researcher asked a malicious sidebar extension how to install the Homebrew package manager for macOS or Linux, the instructions included an installation command line that executed a reverse shell command that would have connected the victim’s device to the attacker’s server. That would have given the attacker a system shell in which to execute commands on the victim’s machine.&lt;/p&gt;
+
+
+
+&lt;p&gt;It’s critical that infosec leaders set granular browser-native policies that prevent users from carrying out malicious tasks as instructed by a fake AI sidebar, says the report. These would include a policy that blocks advanced phishing sites using advanced machine learning and page heuristic analysis, a policy that  blocks high risk permissions from being granted to non-allowlisted apps, and a policy that warns users about and blocks copies of malicious/risky Linux commands.&lt;/p&gt;
+
+
+
+&lt;p&gt;The research “is a warning shot for the early days of agentic browsing and [reminds users] that the implicit trust model of the UI needs rethinking,” said &lt;a href="https://www.exabeam.com/blog/incident-response/what-the-most-significant-government-collaboration-on-threat-detection-and-logging-got-right-and-wrong-and-what-you-should-know-about-it/" rel="noreferrer noopener" target="_blank"&gt;Gabrielle Hempel&lt;/a&gt;, security operations strategist at Exabeam.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The main issue here is that agentic-AI browsers introduce an entirely new attack surface. This attack, a malicious extension injecting a fake AI sidebar overlay that looks like the real one, allows threat actors to hijack the ‘trusted’ AI assistant UI and trick users into executing dangerous operations,” she pointed out. “Organizations need to be taking this seriously, because when you delegate browsing and actions to an AI sidebar, you are elevating what previously might have been a minor risk into a material risk to cloud assets, credentials, and devices.”&lt;/p&gt;
+
+
+
+&lt;p&gt;IT leaders should restrict AI browser use for high-risk functions until they are proven secure, she advised, adding that, because the attack uses an extension with host and storage permissions, organizations should revisit their extension approval workflows for those as well. In fact, any productivity tool that requests broad access should require scrutiny. &lt;/p&gt;
+
+
+
+&lt;p&gt;“Segmentation is also important once these tools are implemented: least privilege applies here and AI interaction with certain tabs/services should be limited,” she said. &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.computerworld.com/article/4078274/ai-browsers-can-be-abused-by-malicious-ai-sidebar-extensions-report.html" target="_blank"&gt;Computerworld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4078306/ai-browsers-can-be-abused-by-malicious-ai-sidebar-extensions-report-2.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.94</comments>
+      <pubDate>Fri, 24 Oct 2025 00:18:20 +0000</pubDate>
     </item>
     <item>
       <title>Zyxel security advisory (AV25-686)</title>
@@ -1884,7 +1826,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-686</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.29</comments>
+      <comments>Score: 9.24</comments>
       <pubDate>Tue, 21 Oct 2025 17:54:43 +0000</pubDate>
     </item>
     <item>
@@ -1894,7 +1836,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.34</comments>
+      <comments>Score: 9.28</comments>
       <pubDate>Tue, 21 Oct 2025 19:51:42 +0000</pubDate>
     </item>
     <item>
@@ -1904,7 +1846,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.79</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Wed, 22 Oct 2025 12:50:07 +0000</pubDate>
     </item>
     <item>
@@ -1914,7 +1856,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-689</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.80</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Wed, 22 Oct 2025 12:56:54 +0000</pubDate>
     </item>
     <item>
@@ -1924,7 +1866,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-690</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.88</comments>
+      <comments>Score: 9.82</comments>
       <pubDate>Wed, 22 Oct 2025 15:57:04 +0000</pubDate>
     </item>
     <item>
@@ -1934,7 +1876,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ericsson-security-advisory-av25-691</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.89</comments>
+      <comments>Score: 9.83</comments>
       <pubDate>Wed, 22 Oct 2025 16:16:02 +0000</pubDate>
     </item>
     <item>
@@ -1944,7 +1886,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-692</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.95</comments>
+      <comments>Score: 9.88</comments>
       <pubDate>Wed, 22 Oct 2025 18:07:42 +0000</pubDate>
     </item>
     <item>
@@ -1954,7 +1896,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av25-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.98</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Wed, 22 Oct 2025 19:06:30 +0000</pubDate>
     </item>
     <item>
@@ -1964,7 +1906,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-694</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.99</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Wed, 22 Oct 2025 19:13:46 +0000</pubDate>
     </item>
     <item>
@@ -1974,7 +1916,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-583</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.68</comments>
+      <comments>Score: 10.59</comments>
       <pubDate>Thu, 23 Oct 2025 15:13:39 +0000</pubDate>
     </item>
     <item>
@@ -1984,7 +1926,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-695</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.71</comments>
+      <comments>Score: 10.62</comments>
       <pubDate>Thu, 23 Oct 2025 16:10:05 +0000</pubDate>
     </item>
   </channel>
