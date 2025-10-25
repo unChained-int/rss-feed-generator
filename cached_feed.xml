@@ -8,60 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Oct 2025 15:19:55 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Oct 2025 16:25:08 +0000</lastBuildDate>
     <item>
-      <title>Critical Microsoft WSUS flaw exploited in wild after insufficient patch</title>
-      <link>https://www.csoonline.com/article/4078952/critical-microsoft-wsus-flaw-exploited-in-wild-after-insufficient-patch.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Microsoft released out-of-band patches on Thursday to “comprehensively” fix a critical vulnerability in the Windows Server Update Service (WSUS) after the first patches released on Oct. 14 proved insufficient. Attackers exploited the vulnerability in the wild after a detailed vulnerability analysis and proof-of-concept exploit were published this week.&lt;/p&gt;
-
-
-
-&lt;p&gt;Tracked as CVE-2025-59287, the vulnerability stems from an unsafe deserialization of the AuthorizationCookie object in WSUS environments. Successful exploitation enables remote code execution with SYSTEM privileges.&lt;/p&gt;
-
-
-
-&lt;p&gt;WSUS is commonly used in enterprise environments to deliver Microsoft updates to Windows systems in a controlled manner. The service is not enabled by default on Windows servers but can be turned on by enabling the WSUS Server Role.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft included a patch for CVE-2025-59287 in its &lt;a href="https://www.csoonline.com/article/4072485/october-2025-patch-tuesday-holes-in-windows-server-update-service-and-an-ancient-modem-driver.html"&gt;October Patch Tuesday release on Oct. 14&lt;/a&gt;. But the initial fix was apparently not complete and required a new round of updates for Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2022 (23H2 Edition, Server Core installation), and Windows Server 2025.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to the company’s &lt;a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-59287"&gt;updated advisory&lt;/a&gt;, organizations should deploy these updates as soon as possible. Work-arounds include disabling the WSUS Server Role or blocking inbound traffic to ports 8530 and 8531, but both these actions will render the service non-operational until the patches can be deployed.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="attacks-observed-in-the-wild"&gt;Attacks observed in the wild&lt;/h2&gt;
-
-
-
-&lt;p&gt;Microsoft’s advisory doesn’t mention in-the-wild exploitation, but researchers from cybersecurity firm Huntress and &lt;a href="https://advisories.ncsc.nl/2025/ncsc-2025-0310.html"&gt;the Dutch government’s National Cybersecurity Center&lt;/a&gt; separately reported evidence of attacks. This came after a detailed analysis and proof-of-concept exploit for the flaw &lt;a href="https://hawktrace.com/blog/CVE-2025-59287-UNAUTH"&gt;was posted by researchers from cybersecurity firm HawkTrace&lt;/a&gt; on Wednesday.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Starting around 2025-10-23 23:34 UTC, Huntress observed threat actors targeting WSUS instances publicly exposed on their default ports (8530/TCP and 8531/TCP),” the company wrote in &lt;a href="https://www.huntress.com/blog/exploitation-of-windows-server-update-services-remote-code-execution-vulnerability"&gt;a blog post&lt;/a&gt; Friday. “Attackers leveraged exposed WSUS endpoints to send specially crafted requests (multiple POST calls to WSUS web services) that triggered a deserialization RCE against the update service.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The exploit activity resulted in the WSUS worker process spawning command prompt and PowerShell instances. A base64-encoded payload was downloaded and executed in PowerShell with the goal of discovering servers on the network and gathering user information which was then sent back to a remote attacker-controlled URL.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Huntress report includes detailed indicators of compromise, forensic artifacts, and detection rules in the open Sigma SIEM detection format.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4078952/critical-microsoft-wsus-flaw-exploited-in-wild-after-insufficient-patch.html</guid>
+      <title>Adobe security advisory (AV25-667)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-667</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-667</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.32</comments>
-      <pubDate>Fri, 24 Oct 2025 21:27:37 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 12:50:24 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV25-668)</title>
@@ -110,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Wed, 15 Oct 2025 20:10:49 +0000</pubDate>
     </item>
     <item>
@@ -120,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-014-security-incident-impacting-f5</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Wed, 15 Oct 2025 20:21:43 +0000</pubDate>
     </item>
     <item>
@@ -131,7 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.41</comments>
-      <pubDate>Sat, 25 Oct 2025 13:19:55 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 14:25:08 +0000</pubDate>
     </item>
     <item>
       <title>HPE security advisory (AV25-673)</title>
@@ -140,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Thu, 16 Oct 2025 13:56:15 +0000</pubDate>
     </item>
     <item>
@@ -150,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Thu, 16 Oct 2025 14:37:14 +0000</pubDate>
     </item>
     <item>
@@ -180,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Thu, 16 Oct 2025 20:36:47 +0000</pubDate>
     </item>
     <item>
@@ -191,7 +147,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 25 Oct 2025 13:19:55 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 14:25:08 +0000</pubDate>
     </item>
     <item>
       <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
@@ -201,7 +157,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 25 Oct 2025 13:19:55 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 14:25:08 +0000</pubDate>
     </item>
     <item>
       <title>Europe’s borders go digital</title>
@@ -211,7 +167,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 25 Oct 2025 13:19:55 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 14:25:08 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV25-616) – Update 1</title>
@@ -220,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Fri, 17 Oct 2025 12:47:20 +0000</pubDate>
     </item>
     <item>
@@ -241,7 +197,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Sat, 25 Oct 2025 13:19:55 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 14:25:08 +0000</pubDate>
     </item>
     <item>
       <title>Counterfeit and substandard food worth EUR 95 million seized in global operation</title>
@@ -251,7 +207,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Sat, 25 Oct 2025 13:19:55 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 14:25:08 +0000</pubDate>
     </item>
     <item>
       <title>AI browsers can be abused by malicious AI sidebar extensions: Report</title>
@@ -377,7 +333,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4078306/ai-browsers-can-be-abused-by-malicious-ai-sidebar-extensions-report-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Fri, 24 Oct 2025 00:18:20 +0000</pubDate>
     </item>
     <item>
@@ -388,17 +344,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Sat, 25 Oct 2025 13:19:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</link>
-      <description>The conference “From CLICK to CRIME: Investigating Intellectual Property Crime in the Digital Age” was held on 22 and 23 October 2025 in Sofia, Bulgaria. Jointly organised by Europol, the European Union Intellectual Property Office (EUIPO) and Bulgaria’s General Directorate Combating Organised Crime (GDBOP), the event highlighted the vital importance of collaboration in tackling online crime. The participants reaffirmed the importance of strong collective efforts in tackling online-enabled intellectual property crime to protect consumers, safeguard creativity and uphold trust in the digital economy.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
-      <pubDate>Sat, 25 Oct 2025 13:19:55 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 14:25:08 +0000</pubDate>
     </item>
     <item>
       <title>Cloud Access Security Broker – ein Kaufratgeber</title>
@@ -683,8 +629,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3494345/der-kaufratgeber-fur-cloud-access-security-broker.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Fri, 24 Oct 2025 03:39:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</link>
+      <description>The conference “From CLICK to CRIME: Investigating Intellectual Property Crime in the Digital Age” was held on 22 and 23 October 2025 in Sofia, Bulgaria. Jointly organised by Europol, the European Union Intellectual Property Office (EUIPO) and Bulgaria’s General Directorate Combating Organised Crime (GDBOP), the event highlighted the vital importance of collaboration in tackling online crime. The participants reaffirmed the importance of strong collective efforts in tackling online-enabled intellectual property crime to protect consumers, safeguard creativity and uphold trust in the digital economy.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.75</comments>
+      <pubDate>Sat, 25 Oct 2025 14:25:08 +0000</pubDate>
     </item>
     <item>
       <title>Ransomware recovery perils: 40% of paying victims still lose their data</title>
@@ -880,7 +836,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4077484/ransomware-recovery-perils-40-of-paying-victims-still-lose-their-data.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Fri, 24 Oct 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -951,28 +907,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4078672/lazarus-group-targets-european-drone-makers-in-new-espionage-campaign.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Fri, 24 Oct 2025 12:09:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV25-679)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-679</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-679</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
-      <pubDate>Mon, 20 Oct 2025 13:16:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>Dell security advisory (AV25-680)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-680</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-680</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
-      <pubDate>Mon, 20 Oct 2025 13:28:26 +0000</pubDate>
     </item>
     <item>
       <title>UN agreement on cybercrime criticized over risks to cybersecurity researchers</title>
@@ -1074,8 +1010,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4078735/un-agreement-on-cybercrime-criticized-over-risks-to-cybersecurity-researchers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Fri, 24 Oct 2025 15:39:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV25-679)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-679</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-679</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.11</comments>
+      <pubDate>Mon, 20 Oct 2025 13:16:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dell security advisory (AV25-680)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-680</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-680</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.11</comments>
+      <pubDate>Mon, 20 Oct 2025 13:28:26 +0000</pubDate>
     </item>
     <item>
       <title>Ubuntu security advisory (AV25-681)</title>
@@ -1084,7 +1040,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-681</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Mon, 20 Oct 2025 15:21:22 +0000</pubDate>
     </item>
     <item>
@@ -1094,7 +1050,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-682</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Mon, 20 Oct 2025 15:41:56 +0000</pubDate>
     </item>
     <item>
@@ -1104,7 +1060,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-683</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Mon, 20 Oct 2025 15:52:27 +0000</pubDate>
     </item>
     <item>
@@ -1114,7 +1070,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-485</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Mon, 20 Oct 2025 16:07:40 +0000</pubDate>
     </item>
     <item>
@@ -1124,7 +1080,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-684</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Mon, 20 Oct 2025 16:18:53 +0000</pubDate>
     </item>
     <item>
@@ -1134,7 +1090,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av25-685</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Mon, 20 Oct 2025 16:26:22 +0000</pubDate>
     </item>
     <item>
@@ -1144,7 +1100,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av25-640</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Mon, 20 Oct 2025 18:21:00 +0000</pubDate>
     </item>
     <item>
@@ -1155,7 +1111,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Sat, 25 Oct 2025 13:19:55 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 14:25:08 +0000</pubDate>
     </item>
     <item>
       <title>Zyxel security advisory (AV25-686)</title>
@@ -1164,7 +1120,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-686</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Tue, 21 Oct 2025 17:54:43 +0000</pubDate>
     </item>
     <item>
@@ -1174,7 +1130,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Tue, 21 Oct 2025 19:51:42 +0000</pubDate>
     </item>
     <item>
@@ -1184,7 +1140,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Wed, 22 Oct 2025 12:50:07 +0000</pubDate>
     </item>
     <item>
@@ -1194,7 +1150,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-689</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Wed, 22 Oct 2025 12:56:54 +0000</pubDate>
     </item>
     <item>
@@ -1204,7 +1160,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-690</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Wed, 22 Oct 2025 15:57:04 +0000</pubDate>
     </item>
     <item>
@@ -1214,7 +1170,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ericsson-security-advisory-av25-691</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Wed, 22 Oct 2025 16:16:02 +0000</pubDate>
     </item>
     <item>
@@ -1224,7 +1180,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-692</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Wed, 22 Oct 2025 18:07:42 +0000</pubDate>
     </item>
     <item>
@@ -1234,7 +1190,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av25-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.97</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Wed, 22 Oct 2025 19:06:30 +0000</pubDate>
     </item>
     <item>
@@ -1244,7 +1200,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-694</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.97</comments>
+      <comments>Score: 8.95</comments>
       <pubDate>Wed, 22 Oct 2025 19:13:46 +0000</pubDate>
     </item>
     <item>
@@ -1254,7 +1210,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-583</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.40</comments>
       <pubDate>Thu, 23 Oct 2025 15:13:39 +0000</pubDate>
     </item>
     <item>
@@ -1264,7 +1220,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-695</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Thu, 23 Oct 2025 16:10:05 +0000</pubDate>
     </item>
     <item>
@@ -1274,7 +1230,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.10</comments>
       <pubDate>Fri, 24 Oct 2025 16:05:25 +0000</pubDate>
     </item>
     <item>
@@ -1284,7 +1240,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-015-vulnerability-impacting-microsoft-windows-server-update-services-cve-2025-59287</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.22</comments>
+      <comments>Score: 10.18</comments>
       <pubDate>Fri, 24 Oct 2025 18:31:30 +0000</pubDate>
     </item>
   </channel>
