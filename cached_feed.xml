@@ -8,147 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Oct 2025 01:39:27 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Oct 2025 03:04:31 +0000</lastBuildDate>
     <item>
-      <title>Serious vulnerability found in Rust library</title>
-      <link>https://www.csoonline.com/article/4077445/serious-vulnerability-found-in-rust-library.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Developers creating projects in the Rust programming language, as well as IT leaders with Rust-based applications in their environments, should pay attention to a serious vulnerability found in one of the programming language’s libraries.&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers at Edera say they have uncovered a critical boundary-parsing bug, dubbed TARmageddon (&lt;a href="https://www.cve.org/CVERecord?id=CVE-2025-62518" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-62518&lt;/a&gt;), in the popular &lt;em&gt;async-tar&lt;/em&gt; Rust library. And not only is it in this library, but also in its many forks, including the widely used &lt;em&gt;tokio-tar&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;“In the worst-case scenario, this vulnerability has a severity of 8.1 (High) and can lead to Remote Code Execution (RCE) through file overwriting attacks, such as replacing configuration files or hijacking build backends,” &lt;a href="https://edera.dev/stories/tarmageddon" rel="noreferrer noopener" target="_blank"&gt;the researchers say in a report. &lt;/a&gt;Among the other possible impacts is the spread of the infection via applications, also known as a supply chain attack.&lt;/p&gt;
-
-
-
-&lt;p&gt;The first recommended action is to patch all active forks, since this vulnerability impacts major, widely-used projects, the researchers say, including &lt;em&gt;uv&lt;/em&gt; (Astral’s Python package manager), &lt;em&gt;testcontainers&lt;/em&gt;, and &lt;em&gt;wasmCloud&lt;/em&gt;. “Due to the widespread nature of &lt;em&gt;tokio-tar&lt;/em&gt; in various forms, it is not possible to truly quantify upfront the blast radius of this bug across the ecosystem,” they say.&lt;/p&gt;
-
-
-
-&lt;p&gt;To make things worse, the researchers warn, the highly downloaded &lt;em&gt;tokio-tar&lt;/em&gt; remains unpatched, probably because it’s no longer actively maintained.&lt;/p&gt;
-
-
-
-&lt;p&gt;Edera suggests that developers who rely on &lt;em&gt;tokio-tar&lt;/em&gt; consider migrating to an actively maintained fork such as &lt;em&gt;astral-tokio-tar&lt;/em&gt; version 0.5.6 or later, which has been patched.&lt;/p&gt;
-
-
-
-&lt;p&gt;IT leaders also need to scan their applications to see if any were developed in Rust and are at risk.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-is-it-critical"&gt;Why is it critical?&lt;/h2&gt;
-
-
-
-&lt;p&gt;TAR files are used in Unix and Linux systems for bundling multiple directories and files into an archive file that retains the full directory structure and metadata of the original information, explains Robert Beggs, head of Canadian incident response firm DigitalDefence. Archive files are commonly used in backups, or for packing software for purposes such as distributing source code.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because of the way in which particular versions of the TAR libraries have been written, a potential vulnerability exists, he said in an email to &lt;em&gt;CSO&lt;/em&gt;, noting,  “In the worst case, it would allow an attacker to execute arbitrary code on a host system and engage in malicious actions, such as overwriting critical files (configuration files, build scripts), or gaining unauthorized filesystem access.” Exploitation could also result in the compromise of any system that extracts files from the malicious TAR.  &lt;/p&gt;
-
-
-
-&lt;p&gt;“The vulnerability is especially serious because the vulnerable TAR libraries are often present as part of applications that are not actively maintained, and may be missed when patching or otherwise mitigating the issue,” he added.&lt;/p&gt;
-
-
-
-&lt;p&gt;While there are as yet no known exploits of this vulnerability, Beggs said that can change quickly. “It is a high severity vulnerability  — 8.1 on a scale of 1 to 10 –,” he pointed out, “so it will likely attract the attention of attackers.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="recommendations"&gt;Recommendations&lt;/h2&gt;
-
-
-
-&lt;p&gt;He recommends infosec leaders: &lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;audit code to identify dependencies for forks or wrappers of &lt;em&gt;tokio-tar &lt;/em&gt;and ensure that they are also patched&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;review usage of TAR files in continuous integration/continuous deployment environments as well as containers, and ensure that they are patched;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;isolate (sandbox) archives when processing, and avoid extracting TAR files from untrusted sources;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;continue to monitor for possible exploits or further vulnerabilities associated with the library.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Admins may also be interested in &lt;a href="https://github.com/astral-sh/tokio-tar/security/advisories/GHSA-j5gw-2vrg-8fgx" rel="noreferrer noopener" target="_blank"&gt;this advisory explaining the problem&lt;/a&gt; created by Astral Security, which maintains &lt;em&gt;astral-tokio-tar&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The bug was discovered in July and disclosed that month to maintainers of all libraries, the Rust Foundation, and a certain number of projects. It was agreed details wouldn’t be released until this week.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because the most popular fork (&lt;em&gt;tokio-tar&lt;/em&gt;, with over 5 million downloads on crates.io) appears to be no longer actively maintained, Edera co-ordinated a decentralized disclosure across the complex fork lineage.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="possible-consequences"&gt;Possible consequences&lt;/h2&gt;
-
-
-
-&lt;p&gt;The vulnerability is a desynchronization flaw that allows an attacker to ‘smuggle’ additional archive entries into TAR extractions, says Edera. It occurs when processing nested TAR files that exhibit a specific mismatch between their PAX extended headers and ustar headers. The flaw stems from the parser’s inconsistent logic when determining file data boundaries.&lt;/p&gt;
-
-
-
-&lt;p&gt;Among the possible infection scenarios painted by Edera are&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;an attack on Python package managers using &lt;em&gt;tokio-tar&lt;/em&gt;. An attacker uploads a malicious package to the open source PyPI repository, from which developers download useful utilities. The package’s outer TAR container has a legitimate file but the hidden inner TAR contains a malicious one that hijacks the build backend. This hidden inner TAR introduces unexpected or overwritten files, which compromises the test environment and pollutes the supply chain;&lt;/li&gt;
-
-
-
-&lt;li&gt;an attack on any system with separate ‘scan/approve’ phases.  A security scanner analyzes the outer, clean TAR and approves its limited file set. However, the extraction process using the vulnerable library pulls in additional, unapproved, and unscanned files from the inner TAR, resulting in a security control bypass and policy violation.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Rust developers say the language allows the creation of memory-safe applications, but, say Edera researchers, “the discovery of TARmageddon is an important reminder that Rust is not a silver bullet.”&lt;/p&gt;
-
-
-
-&lt;p&gt;“It does not eliminate logic bugs,” the report points out, “and this parsing inconsistency is fundamentally a logic flaw. Developers must remain vigilant against all classes of vulnerabilities, regardless of the language used.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The report is also a reminder of the hazards of relying on unmaintained open source libraries in code. &lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4077445/serious-vulnerability-found-in-rust-library.html</guid>
+      <title>[Control systems] ABB security advisory (AV25-670)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-670</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-670</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.38</comments>
-      <pubDate>Wed, 22 Oct 2025 23:57:00 +0000</pubDate>
+      <pubDate>Wed, 15 Oct 2025 16:00:01 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV25-671)</title>
@@ -157,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-671</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Wed, 15 Oct 2025 19:51:08 +0000</pubDate>
     </item>
     <item>
@@ -167,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Wed, 15 Oct 2025 20:10:49 +0000</pubDate>
     </item>
     <item>
@@ -177,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-014-security-incident-impacting-f5</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Wed, 15 Oct 2025 20:21:43 +0000</pubDate>
     </item>
     <item>
@@ -188,27 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.41</comments>
-      <pubDate>Fri, 24 Oct 2025 23:39:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV25-673)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Thu, 16 Oct 2025 13:56:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV25-674)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Thu, 16 Oct 2025 14:37:14 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 01:04:31 +0000</pubDate>
     </item>
     <item>
       <title>6 Risk-Assessment-Frameworks im Vergleich</title>
@@ -479,8 +328,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3552765/6-risk-assessment-frameworks-im-vergleich.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
+      <comments>Score: 7.45</comments>
       <pubDate>Thu, 23 Oct 2025 04:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV25-673)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-673</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.47</comments>
+      <pubDate>Thu, 16 Oct 2025 13:56:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV25-674)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-674</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.48</comments>
+      <pubDate>Thu, 16 Oct 2025 14:37:14 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] Schneider Electric security advisory (AV25-675)</title>
@@ -489,7 +358,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-675</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
+      <comments>Score: 7.50</comments>
       <pubDate>Thu, 16 Oct 2025 19:44:46 +0000</pubDate>
     </item>
     <item>
@@ -520,7 +389,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 24 Oct 2025 23:39:27 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 01:04:31 +0000</pubDate>
     </item>
     <item>
       <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
@@ -530,7 +399,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 24 Oct 2025 23:39:27 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 01:04:31 +0000</pubDate>
     </item>
     <item>
       <title>Europe’s borders go digital</title>
@@ -540,17 +409,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 24 Oct 2025 23:39:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</link>
-      <description>The 15th Europol Data Protection Experts Network (EDEN) conference took place from 21 to 22 October 2025 at the University of Malta’s Valletta Campus. Jointly organised by the Academy of European Law (ERA) and EDEN, and co-hosted by the Maltese Police Force and the University of Malta, the event gathered senior policymakers, data protection officers, law enforcement officials and academics from across Europe.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
-      <pubDate>Fri, 24 Oct 2025 23:39:27 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 01:04:31 +0000</pubDate>
     </item>
     <item>
       <title>Manipulating the meeting notetaker: The rise of AI summarization optimization</title>
@@ -658,8 +517,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4077438/manipulating-the-meeting-notetaker-the-rise-of-ai-summarization-optimization.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Thu, 23 Oct 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</link>
+      <description>The 15th Europol Data Protection Experts Network (EDEN) conference took place from 21 to 22 October 2025 at the University of Malta’s Valletta Campus. Jointly organised by the Academy of European Law (ERA) and EDEN, and co-hosted by the Maltese Police Force and the University of Malta, the event gathered senior policymakers, data protection officers, law enforcement officials and academics from across Europe.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.55</comments>
+      <pubDate>Sat, 25 Oct 2025 01:04:31 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV25-616) – Update 1</title>
@@ -668,8 +537,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Fri, 17 Oct 2025 12:47:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>Zimbra security advisory (AV25-678)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av25-678</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av25-678</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Fri, 17 Oct 2025 15:57:39 +0000</pubDate>
     </item>
     <item>
       <title>Counterfeit and substandard food worth EUR 95 million seized in global operation</title>
@@ -679,17 +558,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Fri, 24 Oct 2025 23:39:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Zimbra security advisory (AV25-678)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av25-678</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av25-678</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Fri, 17 Oct 2025 15:57:39 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 01:04:31 +0000</pubDate>
     </item>
     <item>
       <title>Five central suspects arrested in whole-sale cocaine trafficking case</title>
@@ -699,7 +568,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Fri, 24 Oct 2025 23:39:27 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 01:04:31 +0000</pubDate>
     </item>
     <item>
       <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
@@ -709,7 +578,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.75</comments>
-      <pubDate>Fri, 24 Oct 2025 23:39:27 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 01:04:31 +0000</pubDate>
     </item>
     <item>
       <title>Critical Microsoft WSUS flaw exploited in wild after insufficient patch</title>
@@ -762,7 +631,7 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4078952/critical-microsoft-wsus-flaw-exploited-in-wild-after-insufficient-patch.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 24 Oct 2025 21:27:37 +0000</pubDate>
     </item>
     <item>
@@ -889,7 +758,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4078306/ai-browsers-can-be-abused-by-malicious-ai-sidebar-extensions-report-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.03</comments>
       <pubDate>Fri, 24 Oct 2025 00:18:20 +0000</pubDate>
     </item>
     <item>
@@ -1175,7 +1044,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3494345/der-kaufratgeber-fur-cloud-access-security-broker.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Fri, 24 Oct 2025 03:39:00 +0000</pubDate>
     </item>
     <item>
@@ -1186,17 +1055,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Fri, 24 Oct 2025 23:39:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV25-679)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-679</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-679</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
-      <pubDate>Mon, 20 Oct 2025 13:16:11 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 01:04:31 +0000</pubDate>
     </item>
     <item>
       <title>Ransomware recovery perils: 40% of paying victims still lose their data</title>
@@ -1392,8 +1251,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4077484/ransomware-recovery-perils-40-of-paying-victims-still-lose-their-data.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Fri, 24 Oct 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV25-679)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-679</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-679</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.27</comments>
+      <pubDate>Mon, 20 Oct 2025 13:16:11 +0000</pubDate>
     </item>
     <item>
       <title>Dell security advisory (AV25-680)</title>
@@ -1402,7 +1271,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-680</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.28</comments>
       <pubDate>Mon, 20 Oct 2025 13:28:26 +0000</pubDate>
     </item>
     <item>
@@ -1412,7 +1281,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-681</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.30</comments>
       <pubDate>Mon, 20 Oct 2025 15:21:22 +0000</pubDate>
     </item>
     <item>
@@ -1422,7 +1291,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-682</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Mon, 20 Oct 2025 15:41:56 +0000</pubDate>
     </item>
     <item>
@@ -1432,7 +1301,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-683</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Mon, 20 Oct 2025 15:52:27 +0000</pubDate>
     </item>
     <item>
@@ -1442,7 +1311,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-485</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Mon, 20 Oct 2025 16:07:40 +0000</pubDate>
     </item>
     <item>
@@ -1452,7 +1321,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-684</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.34</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Mon, 20 Oct 2025 16:18:53 +0000</pubDate>
     </item>
     <item>
@@ -1462,7 +1331,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av25-685</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.34</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Mon, 20 Oct 2025 16:26:22 +0000</pubDate>
     </item>
     <item>
@@ -1472,7 +1341,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av25-640</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Mon, 20 Oct 2025 18:21:00 +0000</pubDate>
     </item>
     <item>
@@ -1543,7 +1412,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4078672/lazarus-group-targets-european-drone-makers-in-new-espionage-campaign.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Fri, 24 Oct 2025 12:09:36 +0000</pubDate>
     </item>
     <item>
@@ -1646,7 +1515,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4078735/un-agreement-on-cybercrime-criticized-over-risks-to-cybersecurity-researchers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Fri, 24 Oct 2025 15:39:11 +0000</pubDate>
     </item>
     <item>
@@ -1656,7 +1525,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-686</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Tue, 21 Oct 2025 17:54:43 +0000</pubDate>
     </item>
     <item>
@@ -1666,7 +1535,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Tue, 21 Oct 2025 19:51:42 +0000</pubDate>
     </item>
     <item>
@@ -1676,7 +1545,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Wed, 22 Oct 2025 12:50:07 +0000</pubDate>
     </item>
     <item>
@@ -1686,7 +1555,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-689</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Wed, 22 Oct 2025 12:56:54 +0000</pubDate>
     </item>
     <item>
@@ -1696,7 +1565,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-690</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Wed, 22 Oct 2025 15:57:04 +0000</pubDate>
     </item>
     <item>
@@ -1706,7 +1575,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ericsson-security-advisory-av25-691</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.20</comments>
+      <comments>Score: 9.17</comments>
       <pubDate>Wed, 22 Oct 2025 16:16:02 +0000</pubDate>
     </item>
     <item>
@@ -1716,7 +1585,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-692</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.24</comments>
+      <comments>Score: 9.21</comments>
       <pubDate>Wed, 22 Oct 2025 18:07:42 +0000</pubDate>
     </item>
     <item>
@@ -1726,7 +1595,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av25-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.27</comments>
+      <comments>Score: 9.23</comments>
       <pubDate>Wed, 22 Oct 2025 19:06:30 +0000</pubDate>
     </item>
     <item>
@@ -1736,7 +1605,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-694</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.27</comments>
+      <comments>Score: 9.24</comments>
       <pubDate>Wed, 22 Oct 2025 19:13:46 +0000</pubDate>
     </item>
     <item>
@@ -1746,7 +1615,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-583</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.79</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Thu, 23 Oct 2025 15:13:39 +0000</pubDate>
     </item>
     <item>
@@ -1756,7 +1625,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-695</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.82</comments>
+      <comments>Score: 9.78</comments>
       <pubDate>Thu, 23 Oct 2025 16:10:05 +0000</pubDate>
     </item>
     <item>
@@ -1766,7 +1635,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.62</comments>
+      <comments>Score: 10.57</comments>
       <pubDate>Fri, 24 Oct 2025 16:05:25 +0000</pubDate>
     </item>
     <item>
@@ -1776,7 +1645,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-015-vulnerability-impacting-microsoft-windows-server-update-services-cve-2025-59287</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.71</comments>
+      <comments>Score: 10.66</comments>
       <pubDate>Fri, 24 Oct 2025 18:31:30 +0000</pubDate>
     </item>
   </channel>
