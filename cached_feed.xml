@@ -8,106 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Oct 2025 12:45:54 +0000</lastBuildDate>
-    <item>
-      <title>Atlas browser exploit lets attackers hijack ChatGPT memory</title>
-      <link>https://www.csoonline.com/article/4080144/atlas-browser-exploit-lets-attackers-hijack-chatgpt-memory.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Days after cybersecurity analysts &lt;a href="https://www.computerworld.com/article/4078115/enterprises-should-not-install-openais-new-atlas-browser-analysts-warn.html" target="_blank"&gt;warned&lt;/a&gt; enterprises against installing OpenAI’s new Atlas browser, researchers have discovered a vulnerability that allows attackers to infect systems with malicious code, granting themselves access privileges, or deploy malware. The development raises immediate questions about the enterprise readiness of AI-native browsers.&lt;/p&gt;
-
-
-
-&lt;p&gt;The &lt;a href="https://www.computerworld.com/article/4077980/has-openai-shown-us-a-future-for-safari.html?utm=hybrid_search"&gt;Atlas&lt;/a&gt; browser has come under scrutiny after researchers at LayerX Security revealed that attackers could exploit the flaw to inject malicious instructions directly into a user’s ChatGPT memory and potentially execute remote code.&lt;/p&gt;
-
-
-
-&lt;p&gt;To prevent attackers from exploiting the vulnerability, LayerX has reported the exploit to OpenAI without sharing any additional technical information.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-the-exploitation-works"&gt;How the exploitation works&lt;/h2&gt;
-
-
-
-&lt;p&gt;The exploit works in five steps. In the first step, a user logs in to ChatGPT, and an authentication cookie or token is held in their browser. In the next step, the user clicks on a malicious link that leads them to a compromised web page, Or Eshed, co-founder and CEO of LayerX, &lt;a href="https://layerxsecurity.com/blog/layerx-identifies-vulnerability-in-new-chatgpt-atlas-browser/" rel="noreferrer noopener" target="_blank"&gt;explained&lt;/a&gt; in a blog post.&lt;/p&gt;
-
-
-
-&lt;p&gt;In the next step, the malicious page invokes a Cross-Site Request Forgery (&lt;a href="https://www.csoonline.com/article/520886/application-security-threat-watch-cross-site-request-forgery-csrf.html?utm=hybrid_search"&gt;CSRF&lt;/a&gt;) request to take advantage of the user’s pre-existing authentication into ChatGPT. In the fourth step, the CSRF exploit then injects hidden instructions into ChatGPT’s memory, without the user’s knowledge, thereby tainting the core LLM memory.&lt;/p&gt;
-
-
-
-&lt;p&gt;In the fifth step, the tainted memories are invoked when the user queries ChatGPT, allowing deployment of malicious code that can give attackers control over systems or code.&lt;/p&gt;
-
-
-
-&lt;p&gt;ChatGPT’s &lt;a href="https://www.computerworld.com/article/1611984/chatgpt-will-remember-what-you-did-last-summer.html?utm=hybrid_search"&gt;memory&lt;/a&gt; is a useful tool designed for the AI chatbot to remember details such as users’ queries, chat, and activities, preferences, style notes, and respond with personalized and relevant information.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Memory is account‑level and persists across sessions, browsers, and devices, so a single successful lure follows the user from home to office and from personal to corporate contexts,” said &lt;a href="https://ankura.com/experts-and-advisors/amit-jaju" rel="noreferrer noopener" target="_blank"&gt;Amit Jaju&lt;/a&gt;, global partner/senior managing director – India at Ankura Consulting. “In BYOD or mixed‑use environments, that persistence re‑triggers risky behaviors even after a reboot or browser change, expanding blast radius beyond a single endpoint. This is especially concerning where personal ChatGPT accounts are used for work tasks.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Jaju added that adoption inside enterprises is currently very low. Atlas just launched, is macOS‑only, and enterprise access is off by default. So, exposure is limited to pilots and unsanctioned installations. But business workspaces have it available by default, so spillover into work use is plausible.&lt;/p&gt;
-
-
-
-&lt;p&gt;An OpenAI spokesperson said, “To our knowledge, this issue doesn’t impact ChatGPT Atlas, which isn’t vulnerable to this kind of cross-site request forgery (CSRF) attack. We’ve reached out to LayerX for more information – based on what’s been provided so far, we haven’t been able to reproduce the results of the report. We have not seen any real-world attempts to exploit this to date.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-to-detect-a-hit"&gt;How to detect a hit&lt;/h2&gt;
-
-
-
-&lt;p&gt;Detecting a memory-based compromise in ChatGPT Atlas is not like hunting for traditional malware. There are no files, registry keys, or executables to isolate. Instead, security teams need to look for behavioral anomalies such as subtle shifts in how the assistant responds, what it suggests, and when it does so.&lt;/p&gt;
-
-
-
-&lt;p&gt;“There are clues, but they sit outside the usual stack. For example, an assistant that suddenly starts offering scripts with outbound URLs, or one that begins anticipating user intent too accurately, may be relying on injected memory entries. When memory is compromised, the AI can act with unearned context. That should be a red flag,” said &lt;a href="https://greyhoundresearch.com/svg/" rel="noreferrer noopener" target="_blank"&gt;Sanchit Vir Gogia&lt;/a&gt;, CEO and chief analyst at Greyhound Research.&lt;/p&gt;
-
-
-
-&lt;p&gt;He added, from a forensic perspective, analysts need to pivot toward correlating browser logs, memory change timestamps, and prompt-response sequences. Exporting and parsing chat history is essential. SOC teams should pay close attention to sequences where users clicked on unknown links followed by unusual memory updates or AI-driven agent actions.&lt;/p&gt;
-
-
-
-&lt;p&gt;As this is not a plug-and-play detection problem, redemption and mitigation start with keeping Atlas disabled for the enterprise by default. In Business, it should be confined to tightly scoped pilots with non‑sensitive data. &lt;/p&gt;
-
-
-
-&lt;p&gt;Jaju added that for monitoring, enterprises should add detections for AI‑suggested code, fetching remote payloads, unusual egress after ChatGPT usage, and session‑riding behaviors in SaaS. He also suggested enabling web filtering on newly registered or uncategorized domains.&lt;/p&gt;
-
-
-
-&lt;p&gt;The moment an Atlas user’s memory is compromised, the threat resides in the cloud-bound identity, not in any one machine. That is why the response must start with the account. Memory must be cleared. Credentials should be rotated. All recent chat history should be reviewed for signs of tampering, hidden logic, or manipulated task flow, noted Gogia.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="are-ai-browsers-safe"&gt;Are AI browsers safe?&lt;/h2&gt;
-
-
-
-&lt;p&gt;Along with identifying the vulnerability, LayerX &lt;a href="https://layerxsecurity.com/blog/layerx-finds-that-perplexitys-comet-browser-is-up-to-85-more-vulnerable-to-phishing-and-web-attacks-than-chrome/" rel="noreferrer noopener" target="_blank"&gt;claimed&lt;/a&gt; that ChatGPT Atlas is also not equipped to stop phishing attacks. In the tests conducted by the company, ChatGPT Atlas had a failure rate of over 94%. Of the total 103 in-the-wild attacks, 97 attacks went through successfully.&lt;/p&gt;
-
-
-
-&lt;p&gt;The results were not very promising for other AI browsers, which the company tested last month. Perplexity’s Comet and Genspark were only able to stopped only 7% phishing attacks, while only Arc browser’s Dia was able to stop around 46% attacks. The traditional browsers, such as Edge and Chrome, on the other hand, are relatively well equipped and were able to stop about 50% of phishing attacks using their out-of-the-box protections.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4080144/atlas-browser-exploit-lets-attackers-hijack-chatgpt-memory.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
-      <pubDate>Tue, 28 Oct 2025 11:40:27 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 30 Oct 2025 13:33:22 +0000</lastBuildDate>
     <item>
       <title>Copilot diagrams could leak corporate emails via indirect prompt injection</title>
       <link>https://www.csoonline.com/article/4080154/copilot-diagrams-could-leak-corporate-emails-via-indirect-prompt-injection.html</link>
@@ -172,8 +73,19 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4080154/copilot-diagrams-could-leak-corporate-emails-via-indirect-prompt-injection.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Tue, 28 Oct 2025 11:56:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>PhantomRaven Malware Found in 126 npm Packages Stealing GitHub Tokens From Devs</title>
+      <link>https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html</link>
+      <description>Cybersecurity researchers have uncovered yet another active software supply chain attack campaign targeting the npm registry with over 100 malicious packages that can steal authentication tokens, CI/CD secrets, and GitHub credentials from developers' machines.
+The campaign has been codenamed PhantomRaven by Koi Security. The activity is assessed to have begun in August 2025, when the first</description>
+      <guid isPermaLink="false">https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.43</comments>
+      <pubDate>Thu, 30 Oct 2025 15:46:00 +0530</pubDate>
     </item>
     <item>
       <title>Zyxel security advisory (AV25-686)</title>
@@ -184,27 +96,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.44</comments>
       <pubDate>Tue, 21 Oct 2025 17:54:43 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] ABB security advisory (AV25-687)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
-      <pubDate>Tue, 21 Oct 2025 19:51:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>PhantomRaven Malware Found in 126 npm Packages Stealing GitHub Tokens From Devs</title>
-      <link>https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html</link>
-      <description>Cybersecurity researchers have uncovered yet another active software supply chain attack campaign targeting the npm registry with over 100 malicious packages that can steal authentication tokens, CI/CD secrets, and GitHub credentials from developers' machines.
-The campaign has been codenamed PhantomRaven by Koi Security. The activity is assessed to have begun in August 2025, when the first</description>
-      <guid isPermaLink="false">https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Thu, 30 Oct 2025 15:46:00 +0530</pubDate>
     </item>
     <item>
       <title>How evolving regulations are redefining CISO responsibility</title>
@@ -344,8 +235,18 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.csoonline.com/article/4079450/how-evolving-regulations-are-redefining-ciso-responsibility.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Tue, 28 Oct 2025 14:13:45 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] ABB security advisory (AV25-687)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.45</comments>
+      <pubDate>Tue, 21 Oct 2025 19:51:42 +0000</pubDate>
     </item>
     <item>
       <title>Global experts advance the joint fight against crypto-enabled crime</title>
@@ -355,17 +256,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Thu, 30 Oct 2025 10:45:54 +0000</pubDate>
-    </item>
-    <item>
-      <title>Sweden hosts naval exercise with 200 special tactics operators</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/sweden-hosts-naval-exercise-200-special-tactics-operators</link>
-      <description>Preparing to fight terrorism on land and seaThe exercise scenario focused on the deployment of special intervention units and naval assets during day- and night-time, simulating terrorist and hostage incidents on board of cruise liners and ferries. Day after day, the participants faced new challenges on the water and on some of the archipelago’s many islands, slowly preparing them for...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/sweden-hosts-naval-exercise-200-special-tactics-operators</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 30 Oct 2025 10:45:54 +0000</pubDate>
+      <pubDate>Thu, 30 Oct 2025 11:33:22 +0000</pubDate>
     </item>
     <item>
       <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
@@ -375,7 +266,17 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 30 Oct 2025 10:45:54 +0000</pubDate>
+      <pubDate>Thu, 30 Oct 2025 11:33:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sweden hosts naval exercise with 200 special tactics operators</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/sweden-hosts-naval-exercise-200-special-tactics-operators</link>
+      <description>Preparing to fight terrorism on land and seaThe exercise scenario focused on the deployment of special intervention units and naval assets during day- and night-time, simulating terrorist and hostage incidents on board of cruise liners and ferries. Day after day, the participants faced new challenges on the water and on some of the archipelago’s many islands, slowly preparing them for...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/sweden-hosts-naval-exercise-200-special-tactics-operators</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 30 Oct 2025 11:33:22 +0000</pubDate>
     </item>
     <item>
       <title>Europe’s borders go digital</title>
@@ -385,7 +286,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 30 Oct 2025 10:45:54 +0000</pubDate>
+      <pubDate>Thu, 30 Oct 2025 11:33:22 +0000</pubDate>
     </item>
     <item>
       <title>Oracle security advisory – October 2025 quarterly rollup (AV25-688)</title>
@@ -415,17 +316,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Thu, 30 Oct 2025 10:45:54 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</link>
-      <description>Europol is calling for a coordinated European response to tackle caller ID spoofing, an in increasingly common tool, used for online fraud and social engineering scams. Caller ID spoofing occurs when criminals falsify the information displayed on phones, making numbers appear legitimate to deceive victims. This practice is driving substantial financial and societal harm, with an estimated EUR 850 million lost worldwide each year.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Thu, 30 Oct 2025 10:45:54 +0000</pubDate>
+      <pubDate>Thu, 30 Oct 2025 11:33:22 +0000</pubDate>
     </item>
     <item>
       <title>SolarWinds security advisory (AV25-690)</title>
@@ -448,6 +339,16 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <pubDate>Wed, 22 Oct 2025 16:16:02 +0000</pubDate>
     </item>
     <item>
+      <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</link>
+      <description>Europol is calling for a coordinated European response to tackle caller ID spoofing, an in increasingly common tool, used for online fraud and social engineering scams. Caller ID spoofing occurs when criminals falsify the information displayed on phones, making numbers appear legitimate to deceive victims. This practice is driving substantial financial and societal harm, with an estimated EUR 850 million lost worldwide each year.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.56</comments>
+      <pubDate>Thu, 30 Oct 2025 11:33:22 +0000</pubDate>
+    </item>
+    <item>
       <title>Google Chrome security advisory (AV25-692)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-692</link>
       <description>No description available</description>
@@ -464,7 +365,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-694</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Wed, 22 Oct 2025 19:13:46 +0000</pubDate>
     </item>
     <item>
@@ -474,7 +375,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/canada-says-hacktivists-breached-water-and-energy-facilities/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.64</comments>
       <pubDate>Wed, 29 Oct 2025 15:03:06 -0400</pubDate>
     </item>
     <item>
@@ -485,7 +386,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Thu, 30 Oct 2025 10:45:54 +0000</pubDate>
+      <pubDate>Thu, 30 Oct 2025 11:33:22 +0000</pubDate>
     </item>
     <item>
       <title>Adobe security advisory (AV25-583) - Update 1</title>
@@ -504,7 +405,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-695</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Thu, 23 Oct 2025 16:10:05 +0000</pubDate>
     </item>
     <item>
@@ -515,7 +416,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.75</comments>
-      <pubDate>Thu, 30 Oct 2025 10:45:54 +0000</pubDate>
+      <pubDate>Thu, 30 Oct 2025 11:33:22 +0000</pubDate>
     </item>
     <item>
       <title>Software Bill of Material umsetzen: Die besten SBOM-Tools</title>
@@ -756,18 +657,8 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.csoonline.com/article/3492152/software-bill-of-material-umsetzen-die-8-besten-sbom-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Wed, 29 Oct 2025 04:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft security advisory – October 2025 monthly rollup (AV25-666) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
-      <pubDate>Fri, 24 Oct 2025 16:05:25 +0000</pubDate>
     </item>
     <item>
       <title>Notable post-quantum cryptography initiatives paving the way toward Q-Day</title>
@@ -1047,7 +938,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.csoonline.com/article/654887/11-notable-post-quantum-cryptography-initiatives-launched-in-2023.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Wed, 29 Oct 2025 06:45:00 +0000</pubDate>
     </item>
     <item>
@@ -1190,8 +1081,18 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.csoonline.com/article/4079887/top-7-agentic-ai-use-cases-for-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Wed, 29 Oct 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft security advisory – October 2025 monthly rollup (AV25-666) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.92</comments>
+      <pubDate>Fri, 24 Oct 2025 16:05:25 +0000</pubDate>
     </item>
     <item>
       <title>AL25-015 - Vulnerability impacting Microsoft Windows Server Update Services - CVE-2025-59287</title>
@@ -1200,7 +1101,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-015-vulnerability-impacting-microsoft-windows-server-update-services-cve-2025-59287</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Fri, 24 Oct 2025 18:31:30 +0000</pubDate>
     </item>
     <item>
@@ -1339,7 +1240,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.csoonline.com/article/4080374/is-your-perimeter-having-an-identity-crisis.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Wed, 29 Oct 2025 09:02:00 +0000</pubDate>
     </item>
     <item>
@@ -1350,7 +1251,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Thu, 30 Oct 2025 10:45:54 +0000</pubDate>
+      <pubDate>Thu, 30 Oct 2025 11:33:22 +0000</pubDate>
     </item>
     <item>
       <title>Volvo’s recent security breach: 5 tips to speed incident response while preserving forensic integrity</title>
@@ -1600,7 +1501,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.csoonline.com/article/4079615/volvos-recent-security-breach-5-tips-to-speed-incident-response-while-preserving-forensic-integrity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Tue, 28 Oct 2025 11:04:00 +0000</pubDate>
     </item>
     <item>
@@ -1727,7 +1628,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.csoonline.com/article/4079956/tips-for-cisos-switching-between-industries.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.77</comments>
+      <comments>Score: 8.74</comments>
       <pubDate>Thu, 30 Oct 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1737,7 +1638,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-696</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Mon, 27 Oct 2025 12:27:11 +0000</pubDate>
     </item>
     <item>
@@ -1747,18 +1648,8 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-697</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Mon, 27 Oct 2025 12:36:09 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ubuntu security advisory (AV25-698)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-698</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-698</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
-      <pubDate>Mon, 27 Oct 2025 12:56:45 +0000</pubDate>
     </item>
     <item>
       <title>Cybersecurity management for boards: Metrics that matter</title>
@@ -2036,8 +1927,18 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.csoonline.com/article/4081319/cybersecurity-management-for-boards-metrics-that-matter.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Thu, 30 Oct 2025 10:33:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ubuntu security advisory (AV25-698)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-698</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-698</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.88</comments>
+      <pubDate>Mon, 27 Oct 2025 12:56:45 +0000</pubDate>
     </item>
     <item>
       <title>Typo hackers sneak cross-platform credential stealer into 10 npm packages</title>
@@ -2107,7 +2008,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.csoonline.com/article/4081790/typo-hackers-sneak-cross-platform-credential-stealer-into-10-npm-packages.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Thu, 30 Oct 2025 11:36:56 +0000</pubDate>
     </item>
     <item>
@@ -2246,7 +2147,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://www.csoonline.com/article/4081831/chromium-flaw-crashes-chrome-edge-atlas-researcher-publishes-exploit-after-googles-silence.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.95</comments>
       <pubDate>Thu, 30 Oct 2025 12:27:18 +0000</pubDate>
     </item>
     <item>
@@ -2256,7 +2157,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-699</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.01</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Mon, 27 Oct 2025 18:49:08 +0000</pubDate>
     </item>
     <item>
@@ -2266,7 +2167,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-700</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Mon, 27 Oct 2025 19:08:50 +0000</pubDate>
     </item>
     <item>
@@ -2276,7 +2177,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-701</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.40</comments>
       <pubDate>Tue, 28 Oct 2025 12:28:12 +0000</pubDate>
     </item>
     <item>
@@ -2286,7 +2187,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-tomcat-security-advisory-av25-702</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Tue, 28 Oct 2025 12:59:26 +0000</pubDate>
     </item>
     <item>
@@ -2296,7 +2197,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av25-703</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.52</comments>
       <pubDate>Tue, 28 Oct 2025 17:04:38 +0000</pubDate>
     </item>
     <item>
@@ -2306,7 +2207,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-704</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.60</comments>
+      <comments>Score: 9.58</comments>
       <pubDate>Tue, 28 Oct 2025 19:22:31 +0000</pubDate>
     </item>
     <item>
@@ -2316,7 +2217,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-705</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.13</comments>
+      <comments>Score: 10.10</comments>
       <pubDate>Wed, 29 Oct 2025 13:04:17 +0000</pubDate>
     </item>
     <item>
@@ -2326,7 +2227,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-706</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.12</comments>
       <pubDate>Wed, 29 Oct 2025 13:38:56 +0000</pubDate>
     </item>
     <item>
@@ -2336,7 +2237,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.16</comments>
+      <comments>Score: 10.13</comments>
       <pubDate>Wed, 29 Oct 2025 14:01:33 +0000</pubDate>
     </item>
     <item>
@@ -2346,7 +2247,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-707</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.27</comments>
+      <comments>Score: 10.24</comments>
       <pubDate>Wed, 29 Oct 2025 17:26:15 +0000</pubDate>
     </item>
     <item>
@@ -2356,7 +2257,7 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av25-708</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.31</comments>
+      <comments>Score: 10.28</comments>
       <pubDate>Wed, 29 Oct 2025 18:32:49 +0000</pubDate>
     </item>
     <item>
@@ -2366,8 +2267,18 @@ The campaign has been codenamed PhantomRaven by Koi Security. The activity is as
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av25-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.35</comments>
+      <comments>Score: 10.32</comments>
       <pubDate>Wed, 29 Oct 2025 19:43:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>Drupal security advisory (AV25-709)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-709</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-709</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.99</comments>
+      <pubDate>Thu, 30 Oct 2025 13:21:42 +0000</pubDate>
     </item>
   </channel>
 </rss>
