@@ -8,249 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 31 Oct 2025 06:33:39 +0000</lastBuildDate>
-    <item>
-      <title>Software Bill of Material umsetzen: Die besten SBOM-Tools</title>
-      <link>https://www.csoonline.com/article/3492152/software-bill-of-material-umsetzen-die-8-besten-sbom-tools.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;div class="extendedBlock-wrapper block-coreImage"&gt;&lt;figure class="wp-block-image size-large"&gt;&lt;img alt="Nur wenn Sie wissen, was drinsteckt, können Sie sich sicher sein, dass alles mit rechten Dingen zugeht. Das gilt für Fast Food wie für Software. " src="https://images.computerwoche.de/bdb/3353396/1200x.jpg" title="Nur wenn Sie wissen, was drinsteckt, können Sie sich sicher sein, dass alles mit rechten Dingen zugeht. Das gilt für Fast Food wie für Software. " width="1200" /&gt;&lt;figcaption class="wp-element-caption"&gt;&lt;p class="foundryImageCaption"&gt;Nur wenn Sie wissen, was drinsteckt, können Sie sich sicher sein, dass alles mit rechten Dingen zugeht. Das gilt für Fast Food wie für Software. &lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt; Foto: Geka – shutterstock.com&lt;/p&gt;&lt;/div&gt;&lt;p&gt;Um Software abzusichern, muss man wissen, was in ihrem Code steckt. Aus diesem Grund ist eine Software Bill of Material, SBOM oder Software-Stückliste heute unerlässlich. Der SolarWinds-Angriff sowie die Log4j-Schwachstelle haben verdeutlicht, wie wichtig es ist, die Sicherheit von Softwarelieferketten in den Fokus zu nehmen – insbesondere, wenn es um Open Source Software geht. &lt;a href="https://www.sonarsource.com/open-source-maintainer-survey-2023.pdf" rel="noreferrer noopener" target="_blank"&gt;Einer Umfrage&lt;/a&gt; (PDF) des Open-Source-Unternehmens Tidelift zufolge enthalten heute 92 Prozent aller Anwendungen Open-Source-Komponenten. Eine durchschnittliche, moderne Applikation besteht demnach sogar zu 70 Prozent aus quelloffener Software.&lt;/p&gt;
-
-
-
-&lt;p&gt;Die Antwort auf die potenziellen Risiken sind – wenn es nach der &lt;a href="https://www.linuxfoundation.org/tools/the-state-of-software-bill-of-materials-sbom-and-cybersecurity-readiness/" rel="noopener" target="_blank" title="Linux Foundation"&gt;Linux Foundation&lt;/a&gt;, der &lt;a href="https://openssf.org/" rel="noopener" target="_blank" title="Open Source Security Foundation"&gt;Open Source Security Foundation&lt;/a&gt; und &lt;a href="https://www.openchainproject.org/" rel="noopener" target="_blank" title="OpenChain"&gt;OpenChain&lt;/a&gt; geht – SBOMs: Formale und maschinenlesbare Metadaten, die ein Softwarepaket und seinen Inhalt eindeutig identifizieren. Die Software-Stücklisten können auch andere Informationen enthalten, etwa Copyright- oder Lizenzdaten. Dabei ist eine Software Bill of Material so konzipiert, dass sie organisationsübergreifend ausgetauscht werden kann. Besonders hilfreich ist eine SBOM, um die Transparenz über die von den Teilnehmern einer &lt;a href="https://www.csoonline.com/article/3492023/supply-chain-risk-management-so-wird-ihre-lieferkette-resilient.html" target="_blank" title="Softwarelieferkette"&gt;Softwarelieferkette&lt;/a&gt; gelieferten Komponenten zu gewährleisten.&lt;/p&gt;
-
-
-
-&lt;h1 class="wp-block-heading" id="sbom-best-practices"&gt;SBOM – Best Practices&lt;/h1&gt;
-
-
-
-&lt;p&gt;Eine SBOM sollte beinhalten:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;p&gt;die Open-Source-Bibliotheken der Anwendung;&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;Plugins, Erweiterungen und andere Zusatzmodule;&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;von In-House-Entwicklern selbst geschriebenen Quellcode;&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;Informationen über die Versionen dieser Komponenten, ihren Lizenzierungs- und Patch-Status;&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;automatische kryptografische Signatur und Überprüfung von Komponenten;&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;automatische Scans, um SBOMs als Teil der CI/CD-Pipeline zu erstellen.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Dabei sollte eine Software Bill of Material ein einheitliches Format verwenden. Zu den gängigen SBOM-Formaten gehören:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;p&gt;Software Package Data Exchange (SPDX),&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;Software Identification (SWID) Tagging und&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;OWASP CycloneDX.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Bislang hat sich keiner der drei Standards von den anderen abgesetzt und einen De-facto-Industriestandard geschaffen. Um SBOMs praktikabel zu machen, sollte die SBOM-Erstellung nicht nur automatisiert, sondern in die &lt;a href="https://www.csoonline.com/article/3495227/schwachstelle-in-argo-cd-cloud-infrastruktur-in-gefahr.html" target="_blank" title="CI/CD-Pipeline"&gt;CI/CD-Pipeline&lt;/a&gt; integriert werden. Oder wie die National Telecommunications and Information Administration (NTIA) es &lt;a href="https://www.ntia.doc.gov/files/ntia/publications/copado_-_2021.06.17.pdf" rel="noopener" target="_blank" title="ausdrückt"&gt;ausdrückt&lt;/a&gt; (PDF): “Das ultimative Ziel ist es, SBOMs in Maschinengeschwindigkeit zu generieren.”&lt;/p&gt;
-
-
-
-&lt;h1 class="wp-block-heading" id="software-bill-of-materials-use-cases"&gt;Software Bill of Materials – Use Cases&lt;/h1&gt;
-
-
-
-&lt;p&gt;Auch bei SBOMs gibt es drei verschiedene Anwendungsfälle. Im Allgemeinen sind das:&lt;/p&gt;
-
-
-
-&lt;ol class="wp-block-list"&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Softwarehersteller&lt;/strong&gt; verwenden SBOMs, um Erstellung und Wartung der von ihnen gelieferten Software zu unterstützen.&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Softwareeinkäufer&lt;/strong&gt; nutzen SBOMs, um sich vor dem Kauf abzusichern, Rabatte auszuhandeln und Implementierungsstrategien aufzusetzen.&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Softwarebetreiber&lt;/strong&gt; nutzen SBOMs für das Vulnerability- und Asset-Management, um Lizenzen und Compliance zu managen und Abhängigkeiten und Risiken in Sachen Software und Komponenten schnell zu identifizieren.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;Gartner &lt;a href="https://anchore.com/sbom/gartner-innovation-insights-sboms/" rel="noopener" target="_blank" title="geht davon aus"&gt;geht davon aus&lt;/a&gt;, dass bis zum Jahr 2025 60 Prozent der Unternehmen, die Software für kritische Infrastrukturen entwickeln oder beschaffen, SBOMs vorschreiben und standardisieren werden. Heute liegt dieser Wert bei weniger als 20 Prozent.&lt;/p&gt;
-
-
-
-&lt;h1 class="wp-block-heading" id="empfehlenswerte-sbom-tools"&gt;Empfehlenswerte SBOM-Tools&lt;/h1&gt;
-
-
-
-&lt;p&gt;Bei drei verschiedenen SBOM-Formaten und einer Vielzahl von Metadaten, die innerhalb einer Software Bill of Material verfolgt werden können, ist es nicht verwunderlich, dass es kein SBOM-Tool gibt, das sämtliche Bedürfnisse erfüllt. &lt;a href="https://anchore.com/sbom/gartner-innovation-insights-sboms/" rel="noopener" target="_blank" title="Gartner empfiehlt"&gt;Gartner empfiehlt&lt;/a&gt;, Tools zu verwenden, die folgende Funktionen mitbringen:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;p&gt;SBOMs während des Build-Prozesses erstellen;&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;Quellcode und Binärdateien (wie Container-Images) analysieren;&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;SBOMs bearbeiten;&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;SBOMs in lesbaren Formaten anzeigen, vergleichen, importieren und validieren;&lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;SBOM-Inhalte von einem Format oder Dateityp in andere übersetzen, beziehungsweise die Informationen zusammenführen; &lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;Einbindung anderer Tools über APIs und Bibliotheken;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Keines der folgenden acht Tools erfüllt (bislang) all diese Empfehlungen. Wir empfehlen Ihnen, die Tools auszuprobieren und anschließend zu ermitteln, welches für Ihre Zwecke am besten geeignet ist. Diese acht SBOM-Tools verdienen Ihre Aufmerksamkeit:&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://anchore.com/sbom/" rel="noopener" target="_blank" title="Anchore"&gt;Anchore&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Das Unternehmen ist bereits seit sechs Jahren im SBOM-Business tätig. Die Grundlage des Unternehmens bilden zwei Open-Source-Projekte:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;p&gt;Syft ist ein Tool mit Kommandozeilen-Interface und eine Bibliothek, um SBOMs aus Container-Images und Dateisystemen zu erzeugen. &lt;/p&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;p&gt;Grype ist ein einfach zu integrierendes Tool, um Container-Images und Dateisysteme auf Schwachstellen zu scannen.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Zusammen können diese beiden Werkzeuge Software-Stücklisten in jeder Phase des Entwicklungsprozesses erzeugen, von Quellcode-Repositories und CI/CD-Pipelines bis hin zu Container-Registries und Laufzeiten. Diese SBOMs werden in einem zentralen Repository aufbewahrt, um vollständige Transparenz und kontinuierliches Monitoring zu gewährleisten – auch nach der Bereitstellung. Die Tools von Anchore unterstützen CycloneDX, SPDX und das proprietäre SBOM-Format von Syft. Das Anbieterunternehmen bündelt seine SBOM-Funktionalität in der Plattform Anchore Enterprise 4.0 Software SCM (Supply Chain Management).&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://fossa.com/lp/simplify-sbom-generation-fossa" rel="noopener" target="_blank" title="FOSSA"&gt;FOSSA&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Die Flaggschiff-Programme von FOSSA sind ein Open Source License Compliance Manager und ein Open Source Vulnerability Scanner. Der Ansatz von FOSSA sieht vor, dass Sie das SBOM-Tool in Ihr bevorzugtes Versionskontrollsystem wie GitHub, BitBucket oder GitLab integrieren. Sie können auch die CLI von FOSSA verwenden und das Tool lokal ausführen oder es in Ihre CI/CD-Pipeline integrieren.&lt;/p&gt;
-
-
-
-&lt;p&gt;In jedem Fall identifiziert FOSSA im Rahmen eines Projektscans automatisch sowohl direkte als auch indirekte Abhängigkeiten in der Codebasis.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://about.gitlab.com/" rel="noreferrer noopener" target="_blank"&gt;GitLab (ehemals Rezilion)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Beim DevSecOps-Anbieter ist SBOM Teil seiner ganzheitlichen Software-Sicherheits- und Schwachstellen-Systeme. Dynamic SBOM verwendet eine dynamische Laufzeitanalyse, um die Angriffsfläche Ihrer Software zu monitoren. Es sucht also ständig nach bekannten Schwachstellen in den Komponenten. Neben der Bereitstellung eines Live-Inventars aller Softwarekomponenten in Ihren CI/CD-, Staging- und Produktionsumgebungen wird Ihre SBOM ständig aktualisiert. Sie können Ihre Software Bill of Material im CycloneDX-Format und als Excel-Tabelle exportieren.&lt;/p&gt;
-
-
-
-&lt;p&gt;Nach der Übernahme durch GitLab wurden die SBOM-Funktionalitäten von Rezilion im Jahr 2022 &lt;a href="https://about.gitlab.com/blog/2022/03/23/gitlab-rezilion-integration-reduces-vulnerability-backlog-identifies-exploitable-risks-to-fix/"&gt;in die DevSecOps-Plattform integriert&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.mend.io/sca/" rel="noopener" target="_blank" title="Mend"&gt;Mend&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Früher unter dem Namen WhiteSource bekannt, bietet Mend eine Vielzahl von SCA-Tools (Software Composition Analysis) an. Eine SBOM-Funktionalität ist in das SCA-Toolset integriert. Die Lösung von Mend ist weniger ein Entwicklerprogramm oder ein CI/CD-Tool – sondern vielmehr ein Open-Source-Lizenz- und Sicherheitsmechanismus für Programmierer.&lt;/p&gt;
-
-
-
-&lt;p&gt;Mit Hilfe von Mend lassen sich sämtliche Softwarekomponenten tracken, direkte und indirekte Abhängigkeiten identifizieren, Schwachstellen aufdecken, Remediationspfade bereitstellen und automatisch SBOM-Einträge aktualisieren.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://github.com/opensbom-generator/spdx-sbom-generator" rel="noopener" target="_blank" title="SPDX SBOM Generator"&gt;SPDX SBOM Generator&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Dieses eigenständige Open-Source-Tool tut das, was sein Name verspricht: SPDX-SBOMs aus aktuellen Paketmanagern oder Build-Systemen erstellen. Sie können seine CLI verwenden, um SBOM-Daten aus Ihrem Code zu erzeugen. Das Tool erzeugt Berichte über Komponenten, Lizenzen, Copyrights und Sicherheitsreferenzen Ihres Codes. Diese Daten werden in der SPDX v2.2-Spezifikation exportiert.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.startleftsecurity.com/tauruseer-application-security-posture-management-platform" rel="noopener" target="_blank" title="Start Left Security"&gt;Start Left Security&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Dieses SBOM-Tool wird als Software-as-a-Service (SaaS) angeboten. Auf der Grundlage einer patentierten, anwendungszentrierten Integrationsmethodik kombiniert das ehemals unter dem Namen TauruSeer bekannte Angebot seine Cognition-Engine-Sicherheitsüberprüfung mit SBOM. Das Paket hilft Ihnen, Ihren Code für Ihre Entwickler und Kunden abzusichern und zu tracken.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://github.com/tern-tools/tern" rel="noopener" target="_blank" title="Tern Project"&gt;Tern Project&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Dieses quelloffene SBOM-Projekt lässt sich gut mit SPDX SBOM Generator kombinieren. Anstatt mit Paketmanagern oder Build-Systemen zu arbeiten, erzeugt dieses SCA-Tool und die Python-Bibliothek eine SBOM für Container-Images und Docker-Dateien. Darüber hinaus lassen sich auch SBOMs im SPDX-Format erzeugen.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.vigilant-ops.com/products/" rel="noopener" target="_blank" title="Vigilant Ops"&gt;Vigilant Ops&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Dieser Cybersicherheitsanbieter aus dem Healthcare-Bereich konzentriert sich mit seiner InSight-Plattform auf Software-Stücklisten. Seine SaaS-Plattform generiert und pflegt zertifizierte SBOMs und sorgt für deren authentifizierten Austausch. Sie bietet Sicherheit durch kontinuierliche Schwachstellenüberwachung. Die SBOM-Zertifizierung verwendet patentierte Algorithmen, um sicherzustellen, dass alle Komponenten validiert und Schwachstellen verlinkt sind.&lt;/p&gt;
-
-
-
-&lt;p&gt;Die Sicherheitsfunktionen können auch für SBOMs verwendet werden, die von anderen Programmen erstellt wurden. Diese werden sowohl im Ruhezustand als auch während der Übertragung verschlüsselt.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Sie wollen weitere interessante Beiträge rund um das Thema IT-Sicherheit lesen? &lt;/strong&gt;&lt;a href="https://www.csoonline.com/de/newsletters/signup/" target="_blank"&gt;&lt;strong&gt;Unser kostenloser Newsletter&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt; liefert Ihnen alles, was Sicherheitsentscheider und -experten wissen sollten, direkt in Ihre Inbox.&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/3492152/software-bill-of-material-umsetzen-die-8-besten-sbom-tools.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
-      <pubDate>Wed, 29 Oct 2025 04:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 31 Oct 2025 07:21:15 +0000</lastBuildDate>
     <item>
       <title>Zyxel security advisory (AV25-686)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-686</link>
@@ -268,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Tue, 21 Oct 2025 19:51:42 +0000</pubDate>
     </item>
     <item>
@@ -549,7 +307,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/654887/11-notable-post-quantum-cryptography-initiatives-launched-in-2023.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Wed, 29 Oct 2025 06:45:00 +0000</pubDate>
     </item>
     <item>
@@ -692,7 +450,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4079887/top-7-agentic-ai-use-cases-for-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Wed, 29 Oct 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -732,28 +490,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ericsson-security-advisory-av25-691</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Wed, 22 Oct 2025 16:16:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV25-692)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-692</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-692</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Wed, 22 Oct 2025 18:07:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Drupal security advisory (AV25-694)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-694</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-694</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Wed, 22 Oct 2025 19:13:46 +0000</pubDate>
     </item>
     <item>
       <title>Is your perimeter having an identity crisis?</title>
@@ -891,8 +629,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4080374/is-your-perimeter-having-an-identity-crisis.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
+      <comments>Score: 7.47</comments>
       <pubDate>Wed, 29 Oct 2025 09:02:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV25-692)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-692</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-692</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.47</comments>
+      <pubDate>Wed, 22 Oct 2025 18:07:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Drupal security advisory (AV25-694)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-694</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-694</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.48</comments>
+      <pubDate>Wed, 22 Oct 2025 19:13:46 +0000</pubDate>
     </item>
     <item>
       <title>Global experts advance the joint fight against crypto-enabled crime</title>
@@ -902,17 +660,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Fri, 31 Oct 2025 04:33:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europe’s borders go digital</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</link>
-      <description>The Entry/Exit System (EES) is the new IT system that digitally records the entry and exit of non-EU nationals travelling to 29 European countries for short stays. The system has already recorded over 300 000 movements, with the number continuing to grow daily. The EES began implementation on 12 October 2025 and will be fully operational by 10 April 2026.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 31 Oct 2025 04:33:39 +0000</pubDate>
+      <pubDate>Fri, 31 Oct 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
@@ -922,7 +670,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 31 Oct 2025 04:33:39 +0000</pubDate>
+      <pubDate>Fri, 31 Oct 2025 05:21:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europe’s borders go digital</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</link>
+      <description>The Entry/Exit System (EES) is the new IT system that digitally records the entry and exit of non-EU nationals travelling to 29 European countries for short stays. The system has already recorded over 300 000 movements, with the number continuing to grow daily. The EES began implementation on 12 October 2025 and will be fully operational by 10 April 2026.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 31 Oct 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>Sweden hosts naval exercise with 200 special tactics operators</title>
@@ -932,7 +690,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 31 Oct 2025 04:33:39 +0000</pubDate>
+      <pubDate>Fri, 31 Oct 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
@@ -942,7 +700,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Fri, 31 Oct 2025 04:33:39 +0000</pubDate>
+      <pubDate>Fri, 31 Oct 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
@@ -952,7 +710,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.56</comments>
-      <pubDate>Fri, 31 Oct 2025 04:33:39 +0000</pubDate>
+      <pubDate>Fri, 31 Oct 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>Adobe security advisory (AV25-583) - Update 1</title>
@@ -971,7 +729,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-695</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Thu, 23 Oct 2025 16:10:05 +0000</pubDate>
     </item>
     <item>
@@ -982,7 +740,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Fri, 31 Oct 2025 04:33:39 +0000</pubDate>
+      <pubDate>Fri, 31 Oct 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
@@ -992,7 +750,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.75</comments>
-      <pubDate>Fri, 31 Oct 2025 04:33:39 +0000</pubDate>
+      <pubDate>Fri, 31 Oct 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft security advisory – October 2025 monthly rollup (AV25-666) – Update 1</title>
@@ -1001,18 +759,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2025-monthly-rollup-av25-666</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Fri, 24 Oct 2025 16:05:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL25-015 - Vulnerability impacting Microsoft Windows Server Update Services - CVE-2025-59287</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al25-015-vulnerability-impacting-microsoft-windows-server-update-services-cve-2025-59287</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-015-vulnerability-impacting-microsoft-windows-server-update-services-cve-2025-59287</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
-      <pubDate>Fri, 24 Oct 2025 18:31:30 +0000</pubDate>
     </item>
     <item>
       <title>Critical Claroty Authentication Bypass Flaw Opened OT to Attack</title>
@@ -1021,8 +769,18 @@
       <guid isPermaLink="false">https://www.darkreading.com/ics-ot-security/claroty-patches-authentication-bypass-flaw</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 30 Oct 2025 20:29:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL25-015 - Vulnerability impacting Microsoft Windows Server Update Services - CVE-2025-59287</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al25-015-vulnerability-impacting-microsoft-windows-server-update-services-cve-2025-59287</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-015-vulnerability-impacting-microsoft-windows-server-update-services-cve-2025-59287</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.78</comments>
+      <pubDate>Fri, 24 Oct 2025 18:31:30 +0000</pubDate>
     </item>
     <item>
       <title>Tips for CISOs switching between industries</title>
@@ -1148,7 +906,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4079956/tips-for-cisos-switching-between-industries.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Thu, 30 Oct 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1159,7 +917,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Fri, 31 Oct 2025 04:33:39 +0000</pubDate>
+      <pubDate>Fri, 31 Oct 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>Cybersecurity management for boards: Metrics that matter</title>
@@ -1437,7 +1195,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4081319/cybersecurity-management-for-boards-metrics-that-matter.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Thu, 30 Oct 2025 10:33:00 +0000</pubDate>
     </item>
     <item>
@@ -1508,7 +1266,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4081790/typo-hackers-sneak-cross-platform-credential-stealer-into-10-npm-packages.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.26</comments>
       <pubDate>Thu, 30 Oct 2025 11:36:56 +0000</pubDate>
     </item>
     <item>
@@ -1647,7 +1405,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4081831/chromium-flaw-crashes-chrome-edge-atlas-researcher-publishes-exploit-after-googles-silence.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Thu, 30 Oct 2025 12:27:18 +0000</pubDate>
     </item>
     <item>
@@ -1710,7 +1468,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4079505/strengthening-security-with-a-converged-security-and-networking-platform-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Thu, 30 Oct 2025 18:13:30 +0000</pubDate>
     </item>
     <item>
@@ -1720,7 +1478,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-696</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Mon, 27 Oct 2025 12:27:11 +0000</pubDate>
     </item>
     <item>
@@ -1730,7 +1488,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-697</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Mon, 27 Oct 2025 12:36:09 +0000</pubDate>
     </item>
     <item>
@@ -1740,7 +1498,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-698</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Mon, 27 Oct 2025 12:56:45 +0000</pubDate>
     </item>
     <item>
@@ -1750,7 +1508,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-699</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Mon, 27 Oct 2025 18:49:08 +0000</pubDate>
     </item>
     <item>
@@ -1760,7 +1518,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-700</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Mon, 27 Oct 2025 19:08:50 +0000</pubDate>
     </item>
     <item>
@@ -1871,8 +1629,151 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4082195/malicious-packages-in-npm-evade-dependency-detection-through-invisible-url-links-report.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.73</comments>
       <pubDate>Fri, 31 Oct 2025 00:42:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI-powered bug hunting shakes up bounty industry — for better or worse</title>
+      <link>https://www.csoonline.com/article/4082265/ai-powered-bug-hunting-shakes-up-bounty-industry-for-better-or-worse.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;AI-powered bug hunting has changed the calculus of what makes for an effective bounty program by accelerating vulnerability discovery — and subjecting code maintainers to ballooning volumes of AI flaw-hunting slop.&lt;/p&gt;
+
+
+
+&lt;p&gt;Security researchers are using large language models (LLMs) to automate reconnaissance, reverse engineer APIs, and scan codebases faster than ever. By applying AI tools to techniques ranging from fuzzing and exploit automation to pattern recognition across codebases and websites, researchers are discovering flaws at accelerated rates.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Over the past year, we’ve entered what we call the era of the ‘bionic hacker,’ which is human researchers using agentic AI systems to collect data, triage, and advance discovery,” says &lt;a href="https://www.linkedin.com/in/crystal-hazen-0x01/"&gt;Crystal Hazen&lt;/a&gt;, senior bug bounty program manager at HackerOne, which has added AI tools to its platform to help streamline submissions and triage.&lt;/p&gt;
+
+
+
+&lt;p&gt;Research by HackerOne found a 210% increase in valid AI-related vulnerability reports this year compared to 2024. It also saw a 339% jump in total bounties paid for AI vulnerabilities this year, as &lt;a href="https://www.csoonline.com/article/657751/top-bug-bounty-programs.html"&gt;bug bounty programs&lt;/a&gt; evolve to address vulnerabilities in AI-enabled applications, with prompt-injection flaws, model manipulation, and insecure plug-in design accounting for the majority of findings.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="ai-slop-taxes-defenders"&gt;AI slop taxes defenders&lt;/h2&gt;
+
+
+
+&lt;p&gt;Industry experts advise that AI should only be used as a ‘research assistant’ or guide rather than the principle mechanism of vulnerability discovery.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.linkedin.com/in/intidc/?originalSubdomain=be"&gt;Inti De Ceukelaire&lt;/a&gt;, chief hacker officer at bug bounty platform Intigriti, says AI has &lt;a href="https://www.csoonline.com/article/3632268/gen-ai-is-transforming-the-cyber-threat-landscape-by-democratizing-vulnerability-hunting.html"&gt;leveled the playing field for hackers&lt;/a&gt; because it can help less skilled researchers to identify potentially vulnerable systems or analyze code for flaws. But the results of AI-based analysis are not always reliable — and this has created practical problems.&lt;/p&gt;
+
+
+
+&lt;p&gt;“We have seen AI acting as an echo chamber and amplifier for individuals that believe they might be onto something, luring them into a downwards spiral of confirmation bias,” De Ceukelaire tells CSO.&lt;/p&gt;
+
+
+
+&lt;p&gt;Security teams dealing with external vulnerability reports will need to be increasingly skeptical of inbound reports that show signs of relying heavily on AI.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Bug bounty platforms offering triage services could help with this, as they are able to measure the track record of researchers over time, and use in-depth technologies to detect and recognize AI slop before it gets to the company,” De Ceukelaire says.&lt;/p&gt;
+
+
+
+&lt;p&gt;Other security experts agree that outcomes of applying AI tools to bug hunting have thus far been mixed, while arguing that problems can be mitigated by careful triage.&lt;/p&gt;
+
+
+
+&lt;p&gt;“AI tools, when properly applied and validated, do provide high impact findings, but we’re also seeing programs being overwhelmed by huge numbers of reports, most of which are slop, to put it delicately,” says &lt;a href="https://www.procircular.com/people/bobby-kuzma/"&gt;Bobby Kuzma&lt;/a&gt;, director of offensive cyber operations at cybersecurity and compliance consulting firm ProCircular.&lt;/p&gt;
+
+
+
+&lt;p&gt;Triaging the increasing volume of variable-quality reports generated by some AI tools is putting a strain on under-resourced programs, including those associated with critical open-source software projects.&lt;/p&gt;
+
+
+
+&lt;p&gt;For example, the curl project — a command-line tool commonly used for downloading files — has put out public entreaties to stop submitting AI-detected bugs. Maintainers of the project complained that they were spending &lt;a href="https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/"&gt;too much time on low-quality bug reports generated using AI tools&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;Project lead Daniel Stenberg compared the barrage of unsubstantiated and false reports to a denial-of-service attack. More recently, Stenberg softened his criticism following the submission of some genuine bug reports partly generated by AI tools.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="firehose-of-false-positives"&gt;Firehose of ‘false positives’&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.linkedin.com/in/gunterollmann/"&gt;Gunter Ollmann&lt;/a&gt;, CTO at Cobalt.io, warns that AI is exacerbating the existing problem that comes from vendors getting swamped with often low-quality bug submissions.&lt;/p&gt;
+
+
+
+&lt;p&gt;Security researchers turning to AI is creating a “firehose of noise, false positives, and duplicates,” according to Ollmann.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The future of security testing isn’t about managing a crowd of bug hunters finding duplicate and low-quality bugs; it’s about accessing on demand the best experts to find and fix exploitable vulnerabilities — as part of a continuous, programmatic, offensive security program,” Ollmann says.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.linkedin.com/in/trevorhorwitz/"&gt;Trevor Horwitz&lt;/a&gt;, CISO at UK-based investment research platform TrustNet, adds: “The best results still come from people who know how to guide the tools. AI brings speed and scale, but human judgment is what turns output into impact.”&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.wiz.io/authors/gal-nagli"&gt;Gal Nagli&lt;/a&gt;, head of threat exposure at cloud security vendor Wiz and a bug bounty hunter, tells CSO that AI tools are yet to make a dramatic difference in bug bounty hunting, at least when it comes to more skilled practitioners. &lt;/p&gt;
+
+
+
+&lt;p&gt;For example, researchers who automate infrastructure-based vulnerabilities at scale — like default credentials or subdomain takeovers — already have reliable tooling and detections in place. “AI isn’t needed in those cases,” Nagli says.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The real value of AI is in augmenting expert researchers, especially when testing authenticated portals or analyzing sprawling codebases and JavaScript files,” Nagli explains. “It helps uncover vulnerabilities that were previously too complex or subtle to detect without AI.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The latest generation of models can provide real assistance to skilled bug bounty hunters, not by replacing them, but by enhancing what they’re able to find.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Fully autonomous agents still struggle, especially with authentication and scenarios where human context is critical,” Nagli adds.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="enterprise-risk-management"&gt;Enterprise risk management&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.csoonline.com/article/3619983/bug-bounty-programs-why-companies-need-them-now-more-than-ever.html"&gt;Bug bounty programs&lt;/a&gt; have matured into extensions of enterprise risk management strategies by constantly surfacing real threats before attackers exploit them.&lt;/p&gt;
+
+
+
+&lt;p&gt;Security leaders are moving toward continuous, data-driven exposure management, combining human intelligence with automation to maintain real-time visibility across assets, supply chains, and APIs.&lt;/p&gt;
+
+
+
+&lt;p&gt;HackerOne reports 83% of organizations surveyed now use bug bounties, and payouts grew 13% year-over-year, reaching $81 million across all programs.&lt;/p&gt;
+
+
+
+&lt;p&gt;As common vulnerability types like cross-site scripting (XSS) and SQL injection become easier to mitigate, organizations are shifting their focus and rewards toward findings that expose deeper systemic risk, including identity, access, and business logic flaws, according to HackerOne.&lt;/p&gt;
+
+
+
+&lt;p&gt;HackerOne’s latest annual benchmark report shows that improper access control and insecure direct object reference (IDOR) vulnerabilities increased between 18% and 29% year over year, highlighting where both attackers and defenders are now concentrating their efforts.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The challenge for organizations in 2025 will be balancing speed, transparency, and trust: measuring crowdsourced offensive testing while maintaining responsible disclosure, fair payouts, and AI-augmented vulnerability report validation,” HackerOne’s Hazen concludes.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4082265/ai-powered-bug-hunting-shakes-up-bounty-industry-for-better-or-worse.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.99</comments>
+      <pubDate>Fri, 31 Oct 2025 07:01:00 +0000</pubDate>
     </item>
     <item>
       <title>HashiCorp security advisory (AV25-701)</title>
@@ -1881,7 +1782,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-701</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.01</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Tue, 28 Oct 2025 12:28:12 +0000</pubDate>
     </item>
     <item>
@@ -1891,7 +1792,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-tomcat-security-advisory-av25-702</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Tue, 28 Oct 2025 12:59:26 +0000</pubDate>
     </item>
     <item>
@@ -1901,7 +1802,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av25-703</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Tue, 28 Oct 2025 17:04:38 +0000</pubDate>
     </item>
     <item>
@@ -1911,7 +1812,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-704</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.16</comments>
+      <comments>Score: 9.14</comments>
       <pubDate>Tue, 28 Oct 2025 19:22:31 +0000</pubDate>
     </item>
     <item>
@@ -1921,7 +1822,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-705</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.60</comments>
+      <comments>Score: 9.57</comments>
       <pubDate>Wed, 29 Oct 2025 13:04:17 +0000</pubDate>
     </item>
     <item>
@@ -1931,7 +1832,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-706</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.59</comments>
       <pubDate>Wed, 29 Oct 2025 13:38:56 +0000</pubDate>
     </item>
     <item>
@@ -1941,7 +1842,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.62</comments>
+      <comments>Score: 9.60</comments>
       <pubDate>Wed, 29 Oct 2025 14:01:33 +0000</pubDate>
     </item>
     <item>
@@ -1951,7 +1852,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-707</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.72</comments>
+      <comments>Score: 9.69</comments>
       <pubDate>Wed, 29 Oct 2025 17:26:15 +0000</pubDate>
     </item>
     <item>
@@ -1961,7 +1862,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av25-708</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.75</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Wed, 29 Oct 2025 18:32:49 +0000</pubDate>
     </item>
     <item>
@@ -1971,7 +1872,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av25-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.78</comments>
+      <comments>Score: 9.76</comments>
       <pubDate>Wed, 29 Oct 2025 19:43:30 +0000</pubDate>
     </item>
     <item>
@@ -1981,7 +1882,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-709</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.34</comments>
+      <comments>Score: 10.32</comments>
       <pubDate>Thu, 30 Oct 2025 13:21:42 +0000</pubDate>
     </item>
     <item>
@@ -1991,7 +1892,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-710</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.38</comments>
+      <comments>Score: 10.35</comments>
       <pubDate>Thu, 30 Oct 2025 14:19:45 +0000</pubDate>
     </item>
     <item>
@@ -2001,7 +1902,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-629</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.55</comments>
+      <comments>Score: 10.52</comments>
       <pubDate>Thu, 30 Oct 2025 19:05:03 +0000</pubDate>
     </item>
   </channel>
