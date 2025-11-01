@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Nov 2025 19:15:42 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Nov 2025 20:21:14 +0000</lastBuildDate>
+    <item>
+      <title>Zyxel security advisory (AV25-686)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-686</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-686</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.25</comments>
+      <pubDate>Tue, 21 Oct 2025 17:54:43 +0000</pubDate>
+    </item>
     <item>
       <title>[Control systems] ABB security advisory (AV25-687)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</link>
@@ -16,147 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-687</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Tue, 21 Oct 2025 19:51:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Chromium flaw crashes Chrome, Edge, Atlas: Researcher publishes exploit after Google’s silence</title>
-      <link>https://www.csoonline.com/article/4081831/chromium-flaw-crashes-chrome-edge-atlas-researcher-publishes-exploit-after-googles-silence.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A vulnerability in Chromium’s rendering engine can crash Chrome, Microsoft Edge, and seven other browsers within seconds if exploited by attackers, a security researcher warned after Google ignored his vulnerability report for two months.&lt;/p&gt;
-
-
-
-&lt;p&gt;Jose Pino published proof-of-concept code for the flaw on October 29, potentially exposing more than three billion users to browser crashes and system instability. The vulnerability exploits a fundamental design weakness in Blink, the rendering engine that powers all Chromium-based browsers.&lt;/p&gt;
-
-
-
-&lt;p&gt;The timing raises uncomfortable questions about Google’s vulnerability response process. Pino reported the flaw on August 28 and followed up on August 30. He received no response before deciding to publish his research.&lt;/p&gt;
-
-
-
-&lt;p&gt;“I decided to publish this PoC to draw attention to a severe issue affecting broad internet users after my initial report two months ago went unanswered,” Pino said in &lt;a href="https://github.com/jofpin/brash" rel="noreferrer noopener" target="_blank"&gt;technical documentation published on GitHub&lt;/a&gt;. “I believe public awareness is necessary when responsible disclosure does not produce timely mitigation.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Google, Microsoft, and seven other affected browser vendors, including Opera and Vivaldi, did not respond to requests for comment.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-the-attack-works"&gt;How the attack works&lt;/h2&gt;
-
-
-
-&lt;p&gt;The vulnerability, which Pino called Brash, exploits the complete absence of rate limiting on document.title API updates in Blink. By flooding the browser with millions of title changes per second, an attacker can saturate the main thread and force a crash.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The attack vector originates from the complete absence of rate limiting on document.title API updates,” Pino wrote in the technical document. “This allows injecting millions of DOM mutations per second, and during this injection attempt, it saturates the main thread, disrupting the event loop and causing the interface to collapse.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The exploit affects Chromium versions 143.0.7483.0 and earlier. Pino tested 11 browsers across macOS, Windows, Linux, and Android. Nine proved vulnerable: Chrome, Edge, Vivaldi, Arc, Dia, Opera, Perplexity Comet, ChatGPT Atlas, and Brave.&lt;/p&gt;
-
-
-
-&lt;p&gt;Firefox and Safari emerged unscathed. Both use different rendering engines — Gecko and WebKit, respectively — that don’t share Blink’s architectural flaw. All iOS browsers also escaped because Apple requires them to use WebKit, Pino added in the document.&lt;/p&gt;
-
-
-
-&lt;p&gt;In Pino’s testing, the exploit produced a predictable collapse timeline. Zero to five seconds triggered extreme CPU consumption. Five to 10 seconds froze tabs completely. Ten to 15 seconds produced browser collapse or “Page Unresponsive” dialogs. Fifteen to 60 seconds required forced termination.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="beyond-desktop-crashes-enterprise-automation-at-risk"&gt;Beyond desktop crashes: enterprise automation at risk&lt;/h2&gt;
-
-
-
-&lt;p&gt;While crashed browsers disrupt individual users, the vulnerability poses greater risks to enterprise automation. Organizations running headless Chromium browsers for AI agents, trading systems, or operational monitoring face potential workflow paralysis, the document stated.&lt;/p&gt;
-
-
-
-&lt;p&gt;Pino’s documentation outlined several enterprise attack scenarios. AI agents querying compromised websites could crash mid-analysis, halting automated trading decisions. Fraud detection dashboards could collapse during peak transaction periods.&lt;/p&gt;
-
-
-
-&lt;p&gt;Web-based surgical navigation systems could fail during critical procedures. “The browser process collapses, stopping the entire analysis pipeline,” according to the research documentation.&lt;/p&gt;
-
-
-
-&lt;p&gt;Pino’s proof-of-concept code included scheduling parameters that let attackers trigger crashes at specific times. An attacker could inject the code with a time delay, letting it lie dormant until a critical moment—market opening, shift change, peak operations.&lt;/p&gt;
-
-
-
-&lt;p&gt;“A critical feature that amplifies Brash’s danger is its ability to be programmed to execute at specific moments,” Pino’s documentation stated. “An attacker can inject the code with a temporal trigger, remaining dormant until a predetermined exact time.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="when-disclosure-breaks-down"&gt;When disclosure breaks down&lt;/h2&gt;
-
-
-
-&lt;p&gt;Google’s silence on Pino’s report highlights persistent tensions in &lt;a href="https://www.csoonline.com/article/550736/responsible-disclosure-cyber-security-ethics.html"&gt;vulnerability disclosure&lt;/a&gt;. Google’s own Project Zero team enforces a strict 90-day disclosure deadline, the industry standard, for vulnerabilities it discovers in third-party software.&lt;/p&gt;
-
-
-
-&lt;p&gt;The company’s &lt;a href="https://chromium.googlesource.com/chromium/src/+/main/docs/security/vrp-faq.md" rel="noreferrer noopener" target="_blank"&gt;Chrome Vulnerability Reward Program documentation&lt;/a&gt; pledges to “respond promptly and fix bugs in a sensible timeframe.” It states that most security bugs are automatically opened for public access 14 weeks after fixes are committed to Chromium.&lt;/p&gt;
-
-
-
-&lt;p&gt;But that timeline assumes vendors respond. Pino received no acknowledgment of his August 28 report. His two-month wait fell well short of the 90-day standard, yet exceeded what many researchers consider reasonable when facing vendor silence.&lt;/p&gt;
-
-
-
-&lt;p&gt;The disclosure debate has raged for years. Microsoft once &lt;a href="https://www.csoonline.com/article/550236/microsoft-blasts-google-for-vulnerability-disclosure-policy.html"&gt;criticized Google&lt;/a&gt; for publishing Windows vulnerabilities before patches were ready, calling it a “gotcha” that left customers exposed. Yet vendors that don’t respond leave researchers with few options.&lt;/p&gt;
-
-
-
-&lt;p&gt;Pino noted another complication. “The problem is more serious than it seems, since each company that uses Chromium has customized functionalities, which leads me to believe that the fix must be independent for each one,” he said in the documentation.&lt;/p&gt;
-
-
-
-&lt;p&gt;Google addressed at least six Chrome zero-day vulnerabilities in 2024, according to the company&lt;em&gt;’&lt;/em&gt;s security advisories. But this architectural flaw in Blink has received no public acknowledgment. The Chromium project’s public issue tracker contained no entries matching the vulnerability as of October 30.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft, Brave, and other affected vendors had issued no security advisories by press time.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="limited-options-for-enterprise-security-teams"&gt;Limited options for enterprise security teams&lt;/h2&gt;
-
-
-
-&lt;p&gt;CIOs face difficult choices. The vulnerability affects Blink’s core, so standard browser hardening measures — content security policies, site isolation, extension restrictions — provide no protection.&lt;/p&gt;
-
-
-
-&lt;p&gt;Pino’s proof-of-concept code remained publicly accessible on GitHub under Creative Commons and MIT licenses. The documentation included disclaimers limiting use to educational and security research in controlled environments.&lt;/p&gt;
-
-
-
-&lt;p&gt;He also published a live demonstration at brash.run that executed the exploit against visitors’ browsers. The code included configurable intensity settings ranging from “moderate” observation modes to “extreme” instant collapse configurations.&lt;/p&gt;
-
-
-
-&lt;p&gt;The documentation specified that the exploit would cease working once vendors patched the vulnerability. But without response timelines from Google or other browser makers, enterprise security teams have no way to plan their defenses or communicate risks to business units that depend on browser-based workflows.&lt;/p&gt;
-
-
-
-&lt;p&gt;The silence leaves a critical question unanswered: When vendors don’t respond to &lt;a href="https://www.csoonline.com/article/570573/6-tips-for-receiving-and-responding-to-third-party-security-disclosures.html"&gt;properly disclosed vulnerabilities&lt;/a&gt;, how long should researchers wait before warning the public?&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4081831/chromium-flaw-crashes-chrome-edge-atlas-researcher-publishes-exploit-after-googles-silence.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
-      <pubDate>Thu, 30 Oct 2025 12:27:18 +0000</pubDate>
     </item>
     <item>
       <title>Europol welcomes the European Investment Bank to its secure information exchange network</title>
@@ -166,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.28</comments>
-      <pubDate>Sat, 01 Nov 2025 17:15:42 +0000</pubDate>
+      <pubDate>Sat, 01 Nov 2025 18:21:14 +0000</pubDate>
     </item>
     <item>
       <title>Oracle security advisory – October 2025 quarterly rollup (AV25-688)</title>
@@ -175,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.30</comments>
       <pubDate>Wed, 22 Oct 2025 12:50:07 +0000</pubDate>
     </item>
     <item>
@@ -185,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-689</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.30</comments>
       <pubDate>Wed, 22 Oct 2025 12:56:54 +0000</pubDate>
     </item>
     <item>
@@ -195,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-690</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
+      <comments>Score: 7.31</comments>
       <pubDate>Wed, 22 Oct 2025 15:57:04 +0000</pubDate>
     </item>
     <item>
@@ -205,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ericsson-security-advisory-av25-691</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
+      <comments>Score: 7.31</comments>
       <pubDate>Wed, 22 Oct 2025 16:16:02 +0000</pubDate>
     </item>
     <item>
@@ -225,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-694</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.32</comments>
       <pubDate>Wed, 22 Oct 2025 19:13:46 +0000</pubDate>
     </item>
     <item>
@@ -288,7 +159,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4079505/strengthening-security-with-a-converged-security-and-networking-platform-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Thu, 30 Oct 2025 18:13:30 +0000</pubDate>
     </item>
     <item>
@@ -308,7 +179,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-695</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Thu, 23 Oct 2025 16:10:05 +0000</pubDate>
     </item>
     <item>
@@ -319,27 +190,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Sat, 01 Nov 2025 17:15:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Sweden hosts naval exercise with 200 special tactics operators</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/sweden-hosts-naval-exercise-200-special-tactics-operators</link>
-      <description>Preparing to fight terrorism on land and seaThe exercise scenario focused on the deployment of special intervention units and naval assets during day- and night-time, simulating terrorist and hostage incidents on board of cruise liners and ferries. Day after day, the participants faced new challenges on the water and on some of the archipelago’s many islands, slowly preparing them for...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/sweden-hosts-naval-exercise-200-special-tactics-operators</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 01 Nov 2025 17:15:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europe’s borders go digital</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</link>
-      <description>The Entry/Exit System (EES) is the new IT system that digitally records the entry and exit of non-EU nationals travelling to 29 European countries for short stays. The system has already recorded over 300 000 movements, with the number continuing to grow daily. The EES began implementation on 12 October 2025 and will be fully operational by 10 April 2026.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 01 Nov 2025 17:15:42 +0000</pubDate>
+      <pubDate>Sat, 01 Nov 2025 18:21:14 +0000</pubDate>
     </item>
     <item>
       <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
@@ -349,7 +200,27 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 01 Nov 2025 17:15:42 +0000</pubDate>
+      <pubDate>Sat, 01 Nov 2025 18:21:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europe’s borders go digital</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</link>
+      <description>The Entry/Exit System (EES) is the new IT system that digitally records the entry and exit of non-EU nationals travelling to 29 European countries for short stays. The system has already recorded over 300 000 movements, with the number continuing to grow daily. The EES began implementation on 12 October 2025 and will be fully operational by 10 April 2026.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe’s-borders-go-digital</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 01 Nov 2025 18:21:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sweden hosts naval exercise with 200 special tactics operators</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/sweden-hosts-naval-exercise-200-special-tactics-operators</link>
+      <description>Preparing to fight terrorism on land and seaThe exercise scenario focused on the deployment of special intervention units and naval assets during day- and night-time, simulating terrorist and hostage incidents on board of cruise liners and ferries. Day after day, the participants faced new challenges on the water and on some of the archipelago’s many islands, slowly preparing them for...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/sweden-hosts-naval-exercise-200-special-tactics-operators</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 01 Nov 2025 18:21:14 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft security advisory – October 2025 monthly rollup (AV25-666) – Update 1</title>
@@ -368,28 +239,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-015-vulnerability-impacting-microsoft-windows-server-update-services-cve-2025-59287</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Fri, 24 Oct 2025 18:31:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</link>
-      <description>The 15th Europol Data Protection Experts Network (EDEN) conference took place from 21 to 22 October 2025 at the University of Malta’s Valletta Campus. Jointly organised by the Academy of European Law (ERA) and EDEN, and co-hosted by the Maltese Police Force and the University of Malta, the event gathered senior policymakers, data protection officers, law enforcement officials and academics from across Europe.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
-      <pubDate>Sat, 01 Nov 2025 17:15:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</link>
-      <description>Europol is calling for a coordinated European response to tackle caller ID spoofing, an in increasingly common tool, used for online fraud and social engineering scams. Caller ID spoofing occurs when criminals falsify the information displayed on phones, making numbers appear legitimate to deceive victims. This practice is driving substantial financial and societal harm, with an estimated EUR 850 million lost worldwide each year.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Sat, 01 Nov 2025 17:15:42 +0000</pubDate>
     </item>
     <item>
       <title>Malicious packages in npm evade dependency detection through invisible URL links: Report</title>
@@ -499,8 +350,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4082195/malicious-packages-in-npm-evade-dependency-detection-through-invisible-url-links-report.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Fri, 31 Oct 2025 00:42:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</link>
+      <description>The 15th Europol Data Protection Experts Network (EDEN) conference took place from 21 to 22 October 2025 at the University of Malta’s Valletta Campus. Jointly organised by the Academy of European Law (ERA) and EDEN, and co-hosted by the Maltese Police Force and the University of Malta, the event gathered senior policymakers, data protection officers, law enforcement officials and academics from across Europe.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.55</comments>
+      <pubDate>Sat, 01 Nov 2025 18:21:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</link>
+      <description>Europol is calling for a coordinated European response to tackle caller ID spoofing, an in increasingly common tool, used for online fraud and social engineering scams. Caller ID spoofing occurs when criminals falsify the information displayed on phones, making numbers appear legitimate to deceive victims. This practice is driving substantial financial and societal harm, with an estimated EUR 850 million lost worldwide each year.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.56</comments>
+      <pubDate>Sat, 01 Nov 2025 18:21:14 +0000</pubDate>
     </item>
     <item>
       <title>AI-powered bug hunting shakes up bounty industry — for better or worse</title>
@@ -642,18 +513,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4082265/ai-powered-bug-hunting-shakes-up-bounty-industry-for-better-or-worse.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Fri, 31 Oct 2025 07:01:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</link>
-      <description>The conference “From CLICK to CRIME: Investigating Intellectual Property Crime in the Digital Age” was held on 22 and 23 October 2025 in Sofia, Bulgaria. Jointly organised by Europol, the European Union Intellectual Property Office (EUIPO) and Bulgaria’s General Directorate Combating Organised Crime (GDBOP), the event highlighted the vital importance of collaboration in tackling online crime. The participants reaffirmed the importance of strong collective efforts in tackling online-enabled intellectual property crime to protect consumers, safeguard creativity and uphold trust in the digital economy.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
-      <pubDate>Sat, 01 Nov 2025 17:15:42 +0000</pubDate>
     </item>
     <item>
       <title>Aembit Introduces Identity and Access Management for Agentic AI</title>
@@ -745,8 +606,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4082320/aembit-introduces-identity-and-access-management-for-agentic-ai.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Fri, 31 Oct 2025 07:30:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</link>
+      <description>The conference “From CLICK to CRIME: Investigating Intellectual Property Crime in the Digital Age” was held on 22 and 23 October 2025 in Sofia, Bulgaria. Jointly organised by Europol, the European Union Intellectual Property Office (EUIPO) and Bulgaria’s General Directorate Combating Organised Crime (GDBOP), the event highlighted the vital importance of collaboration in tackling online crime. The participants reaffirmed the importance of strong collective efforts in tackling online-enabled intellectual property crime to protect consumers, safeguard creativity and uphold trust in the digital economy.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.75</comments>
+      <pubDate>Sat, 01 Nov 2025 18:21:14 +0000</pubDate>
     </item>
     <item>
       <title>Bug-Bounty-Programm trifft KI – ein zweischneidiges Schwert</title>
@@ -817,7 +688,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4082459/bug-bounty-programm-trifft-ki-ein-zweischneidiges-schwert.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Fri, 31 Oct 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1114,7 +985,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4082062/the-unified-linkage-model-a-new-lens-for-understanding-cyber-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Fri, 31 Oct 2025 10:33:00 +0000</pubDate>
     </item>
     <item>
@@ -1181,7 +1052,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4082497/openai-launches-aardvark-to-detect-and-patch-hidden-bugs-in-code.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Fri, 31 Oct 2025 12:11:00 +0000</pubDate>
     </item>
     <item>
@@ -1191,7 +1062,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-696</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Mon, 27 Oct 2025 12:27:11 +0000</pubDate>
     </item>
     <item>
@@ -1201,7 +1072,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-697</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Mon, 27 Oct 2025 12:36:09 +0000</pubDate>
     </item>
     <item>
@@ -1211,7 +1082,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-698</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Mon, 27 Oct 2025 12:56:45 +0000</pubDate>
     </item>
     <item>
@@ -1221,7 +1092,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-699</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Mon, 27 Oct 2025 18:49:08 +0000</pubDate>
     </item>
     <item>
@@ -1231,7 +1102,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-700</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Mon, 27 Oct 2025 19:08:50 +0000</pubDate>
     </item>
     <item>
@@ -1318,7 +1189,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4082701/chinese-hackers-target-western-diplomats-using-hard-to-patch-windows-shortcut-flaw.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Fri, 31 Oct 2025 21:25:28 +0000</pubDate>
     </item>
     <item>
@@ -1329,7 +1200,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Sat, 01 Nov 2025 17:15:42 +0000</pubDate>
+      <pubDate>Sat, 01 Nov 2025 18:21:14 +0000</pubDate>
     </item>
     <item>
       <title>HashiCorp security advisory (AV25-701)</title>
@@ -1338,7 +1209,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-701</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Tue, 28 Oct 2025 12:28:12 +0000</pubDate>
     </item>
     <item>
@@ -1348,7 +1219,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-tomcat-security-advisory-av25-702</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Tue, 28 Oct 2025 12:59:26 +0000</pubDate>
     </item>
     <item>
@@ -1358,7 +1229,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av25-703</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Tue, 28 Oct 2025 17:04:38 +0000</pubDate>
     </item>
     <item>
@@ -1368,7 +1239,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-704</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Tue, 28 Oct 2025 19:22:31 +0000</pubDate>
     </item>
     <item>
@@ -1378,7 +1249,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-705</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.77</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Wed, 29 Oct 2025 13:04:17 +0000</pubDate>
     </item>
     <item>
@@ -1388,7 +1259,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-706</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.76</comments>
       <pubDate>Wed, 29 Oct 2025 13:38:56 +0000</pubDate>
     </item>
     <item>
@@ -1398,7 +1269,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.79</comments>
+      <comments>Score: 8.77</comments>
       <pubDate>Wed, 29 Oct 2025 14:01:33 +0000</pubDate>
     </item>
     <item>
@@ -1408,7 +1279,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-707</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Wed, 29 Oct 2025 17:26:15 +0000</pubDate>
     </item>
     <item>
@@ -1418,7 +1289,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av25-708</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Wed, 29 Oct 2025 18:32:49 +0000</pubDate>
     </item>
     <item>
@@ -1428,7 +1299,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av25-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Wed, 29 Oct 2025 19:43:30 +0000</pubDate>
     </item>
     <item>
@@ -1438,7 +1309,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-709</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.28</comments>
+      <comments>Score: 9.26</comments>
       <pubDate>Thu, 30 Oct 2025 13:21:42 +0000</pubDate>
     </item>
     <item>
@@ -1448,7 +1319,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-710</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.28</comments>
       <pubDate>Thu, 30 Oct 2025 14:19:45 +0000</pubDate>
     </item>
     <item>
@@ -1458,7 +1329,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-629</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Thu, 30 Oct 2025 19:05:03 +0000</pubDate>
     </item>
     <item>
@@ -1468,7 +1339,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-711</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.01</comments>
+      <comments>Score: 9.98</comments>
       <pubDate>Fri, 31 Oct 2025 16:01:34 +0000</pubDate>
     </item>
     <item>
@@ -1478,7 +1349,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av25-712</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.07</comments>
       <pubDate>Fri, 31 Oct 2025 18:59:47 +0000</pubDate>
     </item>
     <item>
@@ -1488,7 +1359,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-713</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.13</comments>
+      <comments>Score: 10.09</comments>
       <pubDate>Fri, 31 Oct 2025 19:41:15 +0000</pubDate>
     </item>
   </channel>
