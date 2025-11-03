@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 03 Nov 2025 09:27:47 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Nov 2025 10:27:02 +0000</lastBuildDate>
     <item>
       <title>Adobe security advisory (AV25-485) – Update 1</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-485</link>
@@ -50,93 +50,6 @@
       <pubDate>Mon, 20 Oct 2025 18:21:00 +0000</pubDate>
     </item>
     <item>
-      <title>Chinese hackers target Western diplomats using hard-to-patch Windows shortcut flaw</title>
-      <link>https://www.csoonline.com/article/4082701/chinese-hackers-target-western-diplomats-using-hard-to-patch-windows-shortcut-flaw.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Chinese hackers have been spotted targeting European diplomats using a longstanding Windows shortcut vulnerability that’s been popular with threat groups as far back as 2017.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to security company &lt;a href="https://arcticwolf.com/resources/blog/unc6384-weaponizes-zdi-can-25373-vulnerability-to-deploy-plugx/" rel="noreferrer noopener" target="_blank"&gt;Arctic Wolf&lt;/a&gt;, whose researchers uncovered the latest campaign, the latest attacks saw spear phishing emails sent to officials working for the governments of Hungary, Belgium, Serbia, Italy, and The Netherlands during September and October.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Chinese government-operated group suspected of being behind the campaign is named UNC6384 by the Google Threat Intelligence Group (GTIG). The same group is believed to have targeted diplomats of several Asian countries earlier in 2025, which might give the impression that UNC6384 is a recently discovered threat actor, hence its UNC (“uncategorized”) status.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, Arctic Wolf said it believed the group’s tools, techniques, and procedures (TTPs) strongly resemble those of a known Chinese threat group, “Mustang Panda,” which has been around since 2012.&lt;/p&gt;
-
-
-
-&lt;p&gt;On the face of it, this looks like just another Chinese cyber-espionage campaign against foreign governments. But there is a deeper story: the Windows vulnerability used in the campaign, which Microsoft has so far been unwilling – or unable – to patch.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ghost-flaw"&gt;Ghost flaw&lt;/h2&gt;
-
-
-
-&lt;p&gt;According to Arctic Wolf, the latest campaign used spear phishing emails with diplomatic themes to lure targets into executing malicious Windows .LNK shortcut files. The vulnerability stems from a flaw in Windows UI parsing that allows command-line instructions to be hidden in &lt;a href="https://detection.fyi/sigmahq/sigma/windows/process_creation/proc_creation_win_susp_lnk_exec_hidden_cmd/" rel="noreferrer noopener" target="_blank"&gt;.LNK format whitespace&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;This allows the attackers to launch a sequence of malicious actions while displaying a decoy PDF showing the agenda for a genuine European Commission meeting scheduled to have been held in Brussels on September 26. The result is the deployment of the PlugX remote access Trojan, which has been popular since 2008 as a tool for opening backdoors into Windows systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;Trend Micro told Microsoft about the weakness in September 2024, after which it was given a &lt;a href="https://cve.org/CVERecord?id=CVE-2025-9491" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-9491&lt;/a&gt; identifier. However, it turns out that the company’s Zero Day Initiative (ZDI) had noticed the same issue in 2017, when it was given a separate internal ‘candidate’ identifier, &lt;a href="https://www.trendmicro.com/en_us/research/25/c/windows-shortcut-zero-day-exploit.html" rel="noreferrer noopener" target="_blank"&gt;ZDI-CAN-25373&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The vulnerability has been exploited by state-sponsored APT groups from North Korea, Iran, Russia, and China,” said Trend Micro in a &lt;a href="https://www.trendmicro.com/en/research/25/c/windows-shortcut-zero-day-exploit.html" rel="noreferrer noopener" target="_blank"&gt;March 2018 blog&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Despite there being a formal CVE, Microsoft appears reluctant to address the issue. As Trend Micro noted in a more recent blog from 2025, “We submitted a proof-of-concept exploit through Trend ZDI’s bug bounty program to Microsoft, who declined to address this vulnerability with a security patch.”&lt;/p&gt;
-
-
-
-&lt;p&gt;That reluctance probably stems from the fact that CVE-2025-9491/ZDI-CAN-25373 would be difficult to patch without breaking legacy applications that depend on its current design.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="mitigation"&gt;Mitigation&lt;/h2&gt;
-
-
-
-&lt;p&gt;In the absence of a patch, organizations worried about .LNK attacks should consider blocking .LNK files or disabling their execution in Windows Explorer, Arctic Wolf advised.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This should be put in place across all Windows systems, prioritizing endpoints used by personnel with access to sensitive diplomatic or policy information. While this vulnerability was disclosed in March 2025, adoption by threat actors within months of disclosure necessitates urgent monitoring and countermeasures,” it said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Organizations could also block the command and control (C2) domains used by attackers, although these will change over time. In addition, Arctic Wolf recommends that IT teams search for the presence of Canon printer assistant utilities such as &lt;em&gt;cnmpaui.exe&lt;/em&gt;, which are part of the campaign’s exploit chain.&lt;/p&gt;
-
-
-
-&lt;p&gt; “The breadth of targeting across multiple European nations within a condensed timeframe suggests either a large-scale coordinated intelligence collection operation or deployment of multiple parallel operational teams with shared tooling but independent targeting,” Arctic Wolf noted, adding that the fact that UNC6384 had jumped on the flaw so quickly since it was made public earlier in 2025 suggested that the group had access to advanced capabilities and resources.&lt;/p&gt;
-
-
-
-&lt;p&gt;It’s not as if attacks exploiting Windows shortcut files in different ways are terribly new or innovative. During 2025, they’ve been abused in different ways by &lt;a href="https://www.csoonline.com/article/3987073/after-helping-russia-on-the-ground-north-korea-targets-ukraine-with-cyberespionage.html" target="_blank"&gt;Russian cyber-campaigns&lt;/a&gt; against Ukraine, &lt;a href="https://www.csoonline.com/article/3986671/stealth-rat-uses-a-powershell-loader-for-fileless-attacks.html" target="_blank"&gt;Chinese attacks&lt;/a&gt; using the Remcos RAT, and to target companies in the &lt;a href="https://www.csoonline.com/article/3837964/polyglot-files-used-to-spread-new-backdoor.html" target="_blank"&gt;United Arab Emirates (UAE)&lt;/a&gt;. In June the technique was used to hide payloads in attacks abusing the &lt;a href="https://www.csoonline.com/article/4009636/phishing-campaign-abuses-cloudflare-tunnels-to-sneak-malware-past-firewalls.html" target="_blank"&gt;Cloudflare Tunnel service&lt;/a&gt;. The issue is really that this type of flaw, which exploits an otherwise useful feature, is simply difficult to patch.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4082701/chinese-hackers-target-western-diplomats-using-hard-to-patch-windows-shortcut-flaw.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.14</comments>
-      <pubDate>Fri, 31 Oct 2025 21:25:28 +0000</pubDate>
-    </item>
-    <item>
       <title>654 war crimes suspects tied to Russian paramilitary</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/654-war-crimes-suspects-tied-to-russian-paramilitary</link>
       <description>Europol’s Core International Crimes Team supported Moldova and Ukraine in a second phase of war crimes investigation against members of Wagner and Redut mercenary groups.</description>
@@ -144,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.17</comments>
-      <pubDate>Mon, 03 Nov 2025 07:27:47 +0000</pubDate>
+      <pubDate>Mon, 03 Nov 2025 08:27:02 +0000</pubDate>
     </item>
     <item>
       <title>Zyxel security advisory (AV25-686)</title>
@@ -173,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.21</comments>
+      <comments>Score: 7.20</comments>
       <pubDate>Wed, 22 Oct 2025 12:50:07 +0000</pubDate>
     </item>
     <item>
@@ -183,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-689</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.21</comments>
+      <comments>Score: 7.20</comments>
       <pubDate>Wed, 22 Oct 2025 12:56:54 +0000</pubDate>
     </item>
     <item>
@@ -254,7 +167,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.28</comments>
-      <pubDate>Mon, 03 Nov 2025 07:27:47 +0000</pubDate>
+      <pubDate>Mon, 03 Nov 2025 08:27:02 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft security advisory – October 2025 monthly rollup (AV25-666) – Update 1</title>
@@ -284,7 +197,7 @@
 Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old from the Russia-controlled city of Donetsk, Ukraine, was previously referenced in U.S. federal charging documents only by his online handle "MrICQ." According to a 13-year-old indictment filed by prosecutors in Nebraska, MrICQ was a developer for a cybercrime group known as "Jabber Zeus."</description>
       <guid isPermaLink="false">https://krebsonsecurity.com/2025/11/alleged-jabber-zeus-coder-mricq-in-u-s-custody/</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Sun, 02 Nov 2025 20:37:24 +0000</pubDate>
     </item>
     <item>
@@ -295,17 +208,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Mon, 03 Nov 2025 07:27:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</link>
-      <description>From 15 to 19 September 2025, Europol supported the fourth edition of the EMPACT Trafficking in Human Beings (THB) Hackathon, an action week against human trafficking enabled online. It was led by Dutch authorities, with the support of Germany and the United Kingdom, and brought together 73 specialists from 26 countries across the world. Eurojust also participated in the action.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 03 Nov 2025 07:27:47 +0000</pubDate>
+      <pubDate>Mon, 03 Nov 2025 08:27:02 +0000</pubDate>
     </item>
     <item>
       <title>Europe’s borders go digital</title>
@@ -315,7 +218,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 03 Nov 2025 07:27:47 +0000</pubDate>
+      <pubDate>Mon, 03 Nov 2025 08:27:02 +0000</pubDate>
     </item>
     <item>
       <title>Sweden hosts naval exercise with 200 special tactics operators</title>
@@ -325,7 +228,17 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 03 Nov 2025 07:27:47 +0000</pubDate>
+      <pubDate>Mon, 03 Nov 2025 08:27:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>Over 30 potential victims identified in action against human trafficking enabled online</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</link>
+      <description>From 15 to 19 September 2025, Europol supported the fourth edition of the EMPACT Trafficking in Human Beings (THB) Hackathon, an action week against human trafficking enabled online. It was led by Dutch authorities, with the support of Germany and the United Kingdom, and brought together 73 specialists from 26 countries across the world. Eurojust also participated in the action.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/over-30-potential-victims-identified-in-action-against-human-trafficking-enabled-online</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 03 Nov 2025 08:27:02 +0000</pubDate>
     </item>
     <item>
       <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
@@ -335,7 +248,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Mon, 03 Nov 2025 07:27:47 +0000</pubDate>
+      <pubDate>Mon, 03 Nov 2025 08:27:02 +0000</pubDate>
     </item>
     <item>
       <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
@@ -345,7 +258,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.56</comments>
-      <pubDate>Mon, 03 Nov 2025 07:27:47 +0000</pubDate>
+      <pubDate>Mon, 03 Nov 2025 08:27:02 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-696)</title>
@@ -354,7 +267,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-696</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Mon, 27 Oct 2025 12:27:11 +0000</pubDate>
     </item>
     <item>
@@ -364,7 +277,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-697</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Mon, 27 Oct 2025 12:36:09 +0000</pubDate>
     </item>
     <item>
@@ -374,7 +287,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-698</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Mon, 27 Oct 2025 12:56:45 +0000</pubDate>
     </item>
     <item>
@@ -385,7 +298,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.75</comments>
-      <pubDate>Mon, 03 Nov 2025 07:27:47 +0000</pubDate>
+      <pubDate>Mon, 03 Nov 2025 08:27:02 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV25–699)</title>
@@ -394,7 +307,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-699</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 27 Oct 2025 18:49:08 +0000</pubDate>
     </item>
     <item>
@@ -404,7 +317,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-700</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 27 Oct 2025 19:08:50 +0000</pubDate>
     </item>
     <item>
@@ -414,7 +327,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-701</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Tue, 28 Oct 2025 12:28:12 +0000</pubDate>
     </item>
     <item>
@@ -424,7 +337,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-tomcat-security-advisory-av25-702</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Tue, 28 Oct 2025 12:59:26 +0000</pubDate>
     </item>
     <item>
@@ -434,8 +347,94 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av25-703</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Tue, 28 Oct 2025 17:04:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>US Appeals Court lowers burden of proof for data breach lawsuits</title>
+      <link>https://www.csoonline.com/article/4082749/us-appeals-court-lowers-burden-of-proof-for-data-breach-lawsuits.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;An October decision of the 4th US Circuit Court of Appeals in Virginia has — yet again — altered the risk calculus of data breaches by easing litigants’ ability to successfully sue breached companies in limited situations.&lt;/p&gt;
+
+
+
+&lt;p&gt;The case involved an insurance company data breach that resulted in the driver’s license information of almost 3 million customers being leaked. Until this appellate decision, most courts had ruled that having certain types of data stolen alone is not sufficient to prove damages. With such data, plaintiffs must provide proof of actual damage or evidence of actual fraud, the courts have mostly ruled.&lt;/p&gt;
+
+
+
+&lt;p&gt;Whereas theft of private data, such as medical records, has automatically been considered damaging, most data available from a driver’s license, for example, is public, with even a driver’s license number not helpful to a fraudster, unless joined with other information to enable identity theft. Courts have ruled that plaintiffs must prove thieves had indeed accessed multiple pieces of information.&lt;/p&gt;
+
+
+
+&lt;p&gt;The 4th Circuit softened that, ruling that because the attackers placed the information on the &lt;a href="https://www.csoonline.com/article/564313/what-is-the-dark-web-how-to-access-it-and-what-youll-find.html"&gt;dark web&lt;/a&gt;, that suggested a greater risk of actual fraud. Thieves willing to pay for such data wouldn’t be willing to pay if they didn’t have access to other data to complete fraudulent activity. &lt;/p&gt;
+
+
+
+&lt;p&gt;“The dark web, an anonymous online network for unregulated content and markets, is not a traditional method of communicating information like a newspaper or radio broadcast,” the &lt;a href="https://www.courtlistener.com/opinion/10704605/christopher-holmes-v-elephant-insurance-company/?q=ELEPHANT+INSURANCE+COMPANY"&gt;4th Circuit judges ruled&lt;/a&gt;. “But, not dissimilar to the internet more generally, it is a forum accessible to all — or at least to those with some degree of proficiency with computers. Information listed on it thus either reaches, or is sure to reach, the public or is close to doing so.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Moreover, because one of the plaintiffs alleged the information was found to be for sale on the dark web, rather than published openly, which would limit its exposure, the judges explored whether the existence of a paywall should make a difference in terms of proving harm and concluded that it didn’t.&lt;/p&gt;
+
+
+
+&lt;p&gt;“We do not see why this should make a difference. One classic example of publicity in public-disclosure tort cases is listing information in a newspaper,” the 4th Circuit judges ruled. “Yet many newspapers are only accessible with payment, too. We see no reason to treat the internet differently. Paywalled or not, information listed on the internet is ordinarily accessible to many.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The panel also clarified what constitutes data being sensitive: “Undoubtedly, a driver’s license number is unlike the details of an affair or a medical condition. People do not consider their driver’s licenses embarrassing and hand them to bartenders and waiters and police officers without hesitation.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="how-cisos-should-respond"&gt;How CISOs should respond&lt;/h2&gt;
+
+
+
+&lt;p&gt;Attorneys watching the case said there are various implications for what CISOs should do differently given the panel’s ruling. &lt;/p&gt;
+
+
+
+&lt;p&gt;Cybersecurity consultant &lt;a href="https://formergov.com/directory/brianlevine"&gt;Brian Levine&lt;/a&gt;, a former federal prosecutor who today serves as executive director of FormerGov, a directory of former government and military specialists, said this decision “is yet another reason why &lt;a href="https://www.csoonline.com/article/4046242/a-cisos-guide-to-monitoring-the-dark-web.html"&gt;CISOs should monitor the dark web&lt;/a&gt;. It may be an early warning that they may be getting a lawsuit.”&lt;/p&gt;
+
+
+
+&lt;p&gt;That dark web information may also provide critical guidance for lawyers negotiating with plaintiffs. If the data is definitely not on the dark web, there is a better chance for dismissal and therefore a better chance that a lowball settlement offer may be accepted. But if the data appears on the dark web, that quickly changes.&lt;/p&gt;
+
+
+
+&lt;p&gt;“For plaintiffs whose data was breached but not publicly disclosed, the court found no standing because the risk of future misuse was deemed too speculative. Emotional distress and time spent monitoring accounts were not concrete injuries without actual misuse or public exposure,” Levine said. “This reinforces a high bar for plaintiffs in data breach cases who haven’t yet suffered tangible consequences.”&lt;/p&gt;
+
+
+
+&lt;p&gt;This decision also forces CISOs to reevaluate how financially exposed the enterprise will be should a breach happen, said &lt;a href="https://www.linkedin.com/in/raschcyber/"&gt;Mark Rasch&lt;/a&gt;, a former federal prosecutor who specializes in technology legal issues. Prior to this 4th Circuit decision, “a lot of enterprises thought that a data breach might be no big deal because the victims can’t really demonstrate harm, so we don’t need to worry.” This decision changes that.&lt;/p&gt;
+
+
+
+&lt;p&gt;The court created a new “publication versus theft” dynamic, Rasch said, where a dark web publication of the information may be enough for a case to proceed. To be clear, the panel’s decision involved whether plaintiffs would be allowed to proceed to discovery and other early stages of the court process. &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.linkedin.com/in/douglasabrush/"&gt;Douglas Brush&lt;/a&gt;, a special master with the US federal courts, said that a critical factor behind these legal shifts is a flood of lawsuits initiated instantly when an enterprise announces a breach, long before meaningful details are known.&lt;/p&gt;
+
+
+
+&lt;p&gt;CISOs have thought “‘if we lose any of this data, there’s blood in the water,’” Brush said. “The line CISOs must monitor is the shift from private possession to public accessibility. CISOs should track and document what becomes public, not just what was taken: screenshots, hashes, first-seen timestamps, and linkage to internal systems. That record now drives standing, class scope, and exposure.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The case could unintentionally motivate attackers to threaten enterprises with dark web publication, giving them leverage to extort more money by suggesting that failure to pay will make the attackers publish and thereby strengthen plaintiffs’ cases against the enterprise.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4082749/us-appeals-court-lowers-burden-of-proof-for-data-breach-lawsuits.html</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.96</comments>
+      <pubDate>Mon, 03 Nov 2025 09:30:00 +0000</pubDate>
     </item>
     <item>
       <title>Mozilla security advisory (AV25-704)</title>
@@ -444,7 +443,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-704</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Tue, 28 Oct 2025 19:22:31 +0000</pubDate>
     </item>
     <item>
@@ -454,7 +453,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-705</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Wed, 29 Oct 2025 13:04:17 +0000</pubDate>
     </item>
     <item>
@@ -464,8 +463,18 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-706</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Wed, 29 Oct 2025 13:38:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL25-016 Internet-accessible industrial control systems (ICS) abused by hacktivists</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.19</comments>
+      <pubDate>Wed, 29 Oct 2025 14:01:33 +0000</pubDate>
     </item>
     <item>
       <title>Cybercrime-as-a-service takedown: 7 arrested</title>
@@ -475,17 +484,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Mon, 03 Nov 2025 07:27:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL25-016 Internet-accessible industrial control systems (ICS) abused by hacktivists</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
-      <pubDate>Wed, 29 Oct 2025 14:01:33 +0000</pubDate>
+      <pubDate>Mon, 03 Nov 2025 08:27:02 +0000</pubDate>
     </item>
     <item>
       <title>Jenkins security advisory (AV25-707)</title>
@@ -494,7 +493,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-707</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Wed, 29 Oct 2025 17:26:15 +0000</pubDate>
     </item>
     <item>
@@ -504,7 +503,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av25-708</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Wed, 29 Oct 2025 18:32:49 +0000</pubDate>
     </item>
     <item>
@@ -514,7 +513,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av25-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.26</comments>
       <pubDate>Wed, 29 Oct 2025 19:43:30 +0000</pubDate>
     </item>
     <item>
@@ -524,7 +523,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-709</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Thu, 30 Oct 2025 13:21:42 +0000</pubDate>
     </item>
     <item>
@@ -534,7 +533,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-710</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Thu, 30 Oct 2025 14:19:45 +0000</pubDate>
     </item>
     <item>
@@ -544,7 +543,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-629</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Thu, 30 Oct 2025 19:05:03 +0000</pubDate>
     </item>
     <item>
@@ -691,7 +690,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://www.csoonline.com/article/4080670/what-does-aligning-security-to-the-business-really-mean.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Mon, 03 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -701,7 +700,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-711</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Fri, 31 Oct 2025 16:01:34 +0000</pubDate>
     </item>
     <item>
@@ -711,7 +710,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av25-712</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Fri, 31 Oct 2025 18:59:47 +0000</pubDate>
     </item>
     <item>
@@ -721,7 +720,7 @@ Sources close to the investigation say Yuriy Igorevich Rybtsov, a 41-year-old fr
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-713</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Fri, 31 Oct 2025 19:41:15 +0000</pubDate>
     </item>
   </channel>
