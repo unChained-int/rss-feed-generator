@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Nov 2025 16:25:14 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Nov 2025 17:20:18 +0000</lastBuildDate>
     <item>
       <title>AL25-016 Internet-accessible industrial control systems (ICS) abused by hacktivists</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</link>
@@ -26,19 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-707</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Wed, 29 Oct 2025 17:26:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>Hidden Logic Bombs in Malware-Laced NuGet Packages Set to Detonate Years After Installation</title>
-      <link>https://thehackernews.com/2025/11/hidden-logic-bombs-in-malware-laced.html</link>
-      <description>A set of nine malicious NuGet packages has been identified as capable of dropping time-delayed payloads to sabotage database operations and corrupt industrial control systems.
-According to software supply chain security company Socket, the packages were published in 2023 and 2024 by a user named "shanhai666" and are designed to run malicious code after specific trigger dates in August 2027 and</description>
-      <guid isPermaLink="false">https://thehackernews.com/2025/11/hidden-logic-bombs-in-malware-laced.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
-      <pubDate>Fri, 07 Nov 2025 17:25:00 +0530</pubDate>
     </item>
     <item>
       <title>Docker security advisory (AV25–708)</title>
@@ -51,79 +40,13 @@ According to software supply chain security company Socket, the packages were pu
       <pubDate>Wed, 29 Oct 2025 18:32:49 +0000</pubDate>
     </item>
     <item>
-      <title>Cisco fixes critical flaws in Unified Contact Center Express</title>
-      <link>https://www.csoonline.com/article/4086396/cisco-fixes-critical-flaws-in-unified-contact-center-express.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Cisco released patches for two critical vulnerabilities in its Unified Contact Center Express (CCX) that could allow attackers to bypass authentication and execute commands as root on the underlying system.&lt;/p&gt;
-
-
-
-&lt;p&gt;The company also warned today about a new attack variation targeting two previously patched vulnerabilities in its Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) software. The flaws were exploited in the wild by a cyberespionage group tracked as UAT4356 or Storm-1849.&lt;/p&gt;
-
-
-
-&lt;p&gt;The two vulnerabilities in Unified CCX impact version 15.0, as well as versions 12.5 SU3 and earlier, regardless of configuration. The company released versions 15.0 ES01 and 12.5 SU3 ES07 to address these flaws and urged customers to install them.&lt;/p&gt;
-
-
-
-&lt;p&gt;Cisco Unified CCX is a contact center solution for midsize businesses with up to 400 agents. It performs automated call routing and interactive voice response, and it enables agents to interact with customers through multiple channels, including voice, web chat, email, and social media through a unified desktop client.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="authentication-bypass-and-remote-code-execution"&gt;Authentication bypass and remote code execution&lt;/h2&gt;
-
-
-
-&lt;p&gt;One of the flaws, tracked as CVE-2025-20354, is located in the Editor application and allows a remote attacker to bypass authentication and obtain the ability to create and execute scripts with administrative privileges. This vulnerability received a CVSS rating of 9.4 out of 10.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This vulnerability is due to improper authentication mechanisms in the communication between the CCX Editor and an affected Unified CCX server,” the company said in &lt;a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cc-unauth-rce-QeN8h7mQ"&gt;its advisory&lt;/a&gt;. “An attacker could exploit this vulnerability by redirecting the authentication flow to a malicious server and tricking the CCX Editor into believing the authentication was successful.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The second flaw, tracked as CVE-2025-20354, could allow an unauthenticated attacker to upload a specially crafted file to a vulnerable Cisco Unified CCX server through the Java Remote Method Invocation (RMI) process. This attack could result in the execution of commands on the underlying OS with root privileges. The CVSS severity rating for this flaw is 9.8.&lt;/p&gt;
-
-
-
-&lt;p&gt;While Cisco is not aware of any malicious exploitation of these flaws, users should deploy the patches as soon as possible as these are the type of flaws that attackers tend to adopt very quickly.&lt;/p&gt;
-
-
-
-&lt;p&gt;The company has &lt;a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cc-mult-vuln-gK4TFXSn"&gt;also patched four medium severity flaws&lt;/a&gt; in Unified CCX, Cisco Unified Contact Center Enterprise (CCE), Cisco Packaged Contact Center Enterprise (CCE) and Cisco Unified Intelligence Center (UIC).&lt;/p&gt;
-
-
-
-&lt;p&gt;Tracked as CVE-2025-20374, CVE-2025-20375, CVE-2025-20376, and CVE-2025-20377, these flaws can lead to sensitive information disclosure, arbitrary file download, arbitrary command execution, and privilege escalation to root. However, to be exploited, they require authentication as a valid user.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="new-attack-variant-for-asa-and-ftd"&gt;New attack variant for ASA and FTD&lt;/h2&gt;
-
-
-
-&lt;p&gt;Separately, Cisco warned that hackers have developed a new attack variant for &lt;a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-webvpn-z5xP8EUB"&gt;CVE-2025-20333&lt;/a&gt; and &lt;a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-webvpn-YROOTUW"&gt;CVE-2025-20362&lt;/a&gt;, two actively exploited flaws in Cisco ASA and FTD originally patched in September. While the flaws were initially exploited for unauthorized access to VPN endpoints and remote code execution, the new attack variation can only lead to unexpected device reboots and denial-of-service conditions.&lt;br /&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4086396/cisco-fixes-critical-flaws-in-unified-contact-center-express.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
-      <pubDate>Fri, 07 Nov 2025 01:45:52 +0000</pubDate>
-    </item>
-    <item>
       <title>ISC BIND security advisory (AV25-693) – Update 1</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av25-693</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av25-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Wed, 29 Oct 2025 19:43:30 +0000</pubDate>
     </item>
     <item>
@@ -134,7 +57,7 @@ According to software supply chain security company Socket, the packages were pu
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Fri, 07 Nov 2025 14:25:14 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 15:20:18 +0000</pubDate>
     </item>
     <item>
       <title>Europol and UEFA united for fair and safe football</title>
@@ -144,7 +67,7 @@ According to software supply chain security company Socket, the packages were pu
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 07 Nov 2025 14:25:14 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 15:20:18 +0000</pubDate>
     </item>
     <item>
       <title>Sweden hosts naval exercise with 200 special tactics operators</title>
@@ -154,7 +77,7 @@ According to software supply chain security company Socket, the packages were pu
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 07 Nov 2025 14:25:14 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 15:20:18 +0000</pubDate>
     </item>
     <item>
       <title>Drupal security advisory (AV25-709)</title>
@@ -173,18 +96,8 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-710</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Thu, 30 Oct 2025 14:19:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</link>
-      <description>The 15th Europol Data Protection Experts Network (EDEN) conference took place from 21 to 22 October 2025 at the University of Malta’s Valletta Campus. Jointly organised by the Academy of European Law (ERA) and EDEN, and co-hosted by the Maltese Police Force and the University of Malta, the event gathered senior policymakers, data protection officers, law enforcement officials and academics from across Europe.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
-      <pubDate>Fri, 07 Nov 2025 14:25:14 +0000</pubDate>
     </item>
     <item>
       <title>Russian APT abuses Windows Hyper-V for persistence and malware execution</title>
@@ -274,8 +187,18 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.csoonline.com/article/4085272/russian-apt-abuses-windows-hyper-v-for-persistence-and-malware-execution.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Wed, 05 Nov 2025 21:24:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</link>
+      <description>The 15th Europol Data Protection Experts Network (EDEN) conference took place from 21 to 22 October 2025 at the University of Malta’s Valletta Campus. Jointly organised by the Academy of European Law (ERA) and EDEN, and co-hosted by the Maltese Police Force and the University of Malta, the event gathered senior policymakers, data protection officers, law enforcement officials and academics from across Europe.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/15th-eden-event-data-protection-and-cybersecurity-in-law-enforcement</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.55</comments>
+      <pubDate>Fri, 07 Nov 2025 15:20:18 +0000</pubDate>
     </item>
     <item>
       <title>VMware security advisory (AV25-629) – Update 1</title>
@@ -284,7 +207,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-629</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Thu, 30 Oct 2025 19:05:03 +0000</pubDate>
     </item>
     <item>
@@ -295,7 +218,18 @@ According to software supply chain security company Socket, the packages were pu
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.56</comments>
-      <pubDate>Fri, 07 Nov 2025 14:25:14 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 15:20:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>From Log4j to IIS, China’s Hackers Turn Legacy Bugs into Global Espionage Tools</title>
+      <link>https://thehackernews.com/2025/11/from-log4j-to-iis-chinas-hackers-turn.html</link>
+      <description>A China-linked threat actor has been attributed to a cyber attack targeting an U.S. non-profit organization with an aim to establish long-term persistence, as part of broader activity aimed at U.S. entities that are linked to or involved in policy issues.
+The organization, according to a report from Broadcom's Symantec and Carbon Black teams, is "active in attempting to influence U.S. government</description>
+      <guid isPermaLink="false">https://thehackernews.com/2025/11/from-log4j-to-iis-chinas-hackers-turn.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Fri, 07 Nov 2025 21:37:00 +0530</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV25-711)</title>
@@ -324,7 +258,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-713</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Fri, 31 Oct 2025 19:41:15 +0000</pubDate>
     </item>
     <item>
@@ -335,7 +269,7 @@ According to software supply chain security company Socket, the packages were pu
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.75</comments>
-      <pubDate>Fri, 07 Nov 2025 14:25:14 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 15:20:18 +0000</pubDate>
     </item>
     <item>
       <title>9 top bug bounty programs launched in 2025</title>
@@ -496,7 +430,7 @@ According to software supply chain security company Socket, the packages were pu
 
 
 
-&lt;p&gt;Chip giant &lt;a href="https://www.intigriti.com/blog/business-insights/intigriti-teams-with-nvidia-to-launch-bug-bounty-vulnerability-disclosure-program"&gt;Nvidia has teamed up with bug bounty platform Intigriti&lt;/a&gt; to launch a bug bounty and no financial reward vulnerability disclosure program (VDP), which is due to go live early in 2026.&lt;/p&gt;
+&lt;p&gt;Chip giant &lt;a href="https://www.intigriti.com/blog/business-insights/intigriti-teams-with-nvidia-to-launch-bug-bounty-vulnerability-disclosure-program"&gt;Nvidia has teamed up with bug bounty platform Intigriti&lt;/a&gt; to launch a bug bounty and no financial reward vulnerability disclosure program (VDP), which went live this summer.&lt;/p&gt;
 
 
 
@@ -529,7 +463,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.csoonline.com/article/657751/top-bug-bounty-programs.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Thu, 06 Nov 2025 06:30:00 +0000</pubDate>
     </item>
     <item>
@@ -656,7 +590,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.csoonline.com/article/4080709/what-past-erp-mishaps-can-teach-cisos-about-security-platformization.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 06 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -759,7 +693,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.csoonline.com/article/4082701/chinese-hackers-target-western-diplomats-using-hard-to-patch-windows-shortcut-flaw.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Thu, 06 Nov 2025 08:50:21 +0000</pubDate>
     </item>
     <item>
@@ -898,7 +832,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.csoonline.com/article/4085072/digital-health-cant-scale-if-cybersecurity-falls-behind.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Thu, 06 Nov 2025 09:09:00 +0000</pubDate>
     </item>
     <item>
@@ -909,7 +843,7 @@ According to software supply chain security company Socket, the packages were pu
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.03</comments>
-      <pubDate>Fri, 07 Nov 2025 14:25:14 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 15:20:18 +0000</pubDate>
     </item>
     <item>
       <title>54 individuals arrested in action against labour exploitation</title>
@@ -919,7 +853,17 @@ According to software supply chain security company Socket, the packages were pu
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.05</comments>
-      <pubDate>Fri, 07 Nov 2025 14:25:14 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 15:20:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cyberattacks surge against IoT, mobile devices in critical infrastructure</title>
+      <link>https://www.cybersecuritydive.com/news/mobile-iot-attacks-surge-critical-infrastructure-zscaler/805008/</link>
+      <description>&lt;figure&gt;&lt;div&gt;&lt;img src="https://imgproxy.divecdn.com/4sXKvGIHbz-z0PSL3BRdJQrD3m2pfJqLAES5d7CTXNY/g:nowe:0:42/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjI1NzEyNDYxLmpwZw==.webp" /&gt;&lt;/div&gt;&lt;/figure&gt;&lt;p&gt;Manufacturing and energy firms saw some of the biggest increases in malware activity targeting connected devices.&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://www.cybersecuritydive.com/news/mobile-iot-attacks-surge-critical-infrastructure-zscaler/805008/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.12</comments>
+      <pubDate>Fri, 07 Nov 2025 10:58:55 -0500</pubDate>
     </item>
     <item>
       <title>Cybercrime-as-a-service takedown: 7 arrested</title>
@@ -929,7 +873,7 @@ According to software supply chain security company Socket, the packages were pu
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Fri, 07 Nov 2025 14:25:14 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 15:20:18 +0000</pubDate>
     </item>
     <item>
       <title>ID verification laws are fueling the next wave of breaches</title>
@@ -938,7 +882,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/id-verification-laws-are-fueling-the-next-wave-of-breaches/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.28</comments>
       <pubDate>Fri, 07 Nov 2025 10:05:15 -0500</pubDate>
     </item>
     <item>
@@ -948,7 +892,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-714</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Mon, 03 Nov 2025 14:03:39 +0000</pubDate>
     </item>
     <item>
@@ -958,7 +902,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-715</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Mon, 03 Nov 2025 14:10:17 +0000</pubDate>
     </item>
     <item>
@@ -968,7 +912,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-716</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Mon, 03 Nov 2025 14:14:54 +0000</pubDate>
     </item>
     <item>
@@ -978,38 +922,8 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-717</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Mon, 03 Nov 2025 14:32:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] CISA ICS security advisories (AV25–718)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-718</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-718</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
-      <pubDate>Mon, 03 Nov 2025 14:46:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] ABB security advisory (AV25-719)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-719</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-719</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
-      <pubDate>Mon, 03 Nov 2025 15:23:54 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV25-720)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-720</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-720</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
-      <pubDate>Mon, 03 Nov 2025 15:48:18 +0000</pubDate>
     </item>
     <item>
       <title>Malicious npm packages contain Vidar infostealer</title>
@@ -1177,8 +1091,38 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.csoonline.com/article/4086415/malicious-npm-packages-contain-vidar-infostealer-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Fri, 07 Nov 2025 02:34:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] CISA ICS security advisories (AV25–718)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-718</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-718</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.43</comments>
+      <pubDate>Mon, 03 Nov 2025 14:46:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] ABB security advisory (AV25-719)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-719</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-719</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.44</comments>
+      <pubDate>Mon, 03 Nov 2025 15:23:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV25-720)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-720</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-720</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.45</comments>
+      <pubDate>Mon, 03 Nov 2025 15:48:18 +0000</pubDate>
     </item>
     <item>
       <title>Ubiquiti security advisory (AV25-721)</title>
@@ -1187,7 +1131,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av25-721</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Mon, 03 Nov 2025 16:57:22 +0000</pubDate>
     </item>
     <item>
@@ -1335,7 +1279,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.csoonline.com/article/3493645/data-security-posture-management-die-besten-dspm-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Fri, 07 Nov 2025 04:07:00 +0000</pubDate>
     </item>
     <item>
@@ -1534,7 +1478,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.csoonline.com/article/4083736/why-cant-enterprises-get-a-handle-on-the-cloud-misconfiguration-problem.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Fri, 07 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1681,7 +1625,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.csoonline.com/article/4086135/business-continuity-and-cybersecurity-two-sides-of-the-same-coin.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.77</comments>
+      <comments>Score: 8.74</comments>
       <pubDate>Fri, 07 Nov 2025 10:50:00 +0000</pubDate>
     </item>
     <item>
@@ -1691,7 +1635,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-722</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Tue, 04 Nov 2025 14:20:03 +0000</pubDate>
     </item>
     <item>
@@ -1701,7 +1645,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-november-2025-monthly-rollup-av25-723</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.84</comments>
       <pubDate>Tue, 04 Nov 2025 14:37:46 +0000</pubDate>
     </item>
     <item>
@@ -1711,7 +1655,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-725</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Tue, 04 Nov 2025 18:27:10 +0000</pubDate>
     </item>
     <item>
@@ -1778,7 +1722,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://www.csoonline.com/article/4086100/nikkeis-slack-breach-leaks-sensitive-data-from-more-than-17000-users.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.24</comments>
+      <comments>Score: 9.21</comments>
       <pubDate>Thu, 06 Nov 2025 20:13:36 +0000</pubDate>
     </item>
     <item>
@@ -1788,7 +1732,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-724</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.45</comments>
       <pubDate>Wed, 05 Nov 2025 18:08:43 +0000</pubDate>
     </item>
     <item>
@@ -1798,7 +1742,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-726</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.51</comments>
+      <comments>Score: 9.49</comments>
       <pubDate>Wed, 05 Nov 2025 19:51:20 +0000</pubDate>
     </item>
     <item>
@@ -1808,7 +1752,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.18</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Thu, 06 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -1818,7 +1762,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.91</comments>
+      <comments>Score: 10.87</comments>
       <pubDate>Fri, 07 Nov 2025 14:12:09 +0000</pubDate>
     </item>
     <item>
@@ -1828,7 +1772,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.92</comments>
+      <comments>Score: 10.88</comments>
       <pubDate>Fri, 07 Nov 2025 14:28:44 +0000</pubDate>
     </item>
     <item>
@@ -1838,7 +1782,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.98</comments>
+      <comments>Score: 10.94</comments>
       <pubDate>Fri, 07 Nov 2025 15:59:01 +0000</pubDate>
     </item>
     <item>
@@ -1848,7 +1792,7 @@ According to software supply chain security company Socket, the packages were pu
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-730</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.99</comments>
+      <comments>Score: 10.95</comments>
       <pubDate>Fri, 07 Nov 2025 16:09:33 +0000</pubDate>
     </item>
   </channel>
