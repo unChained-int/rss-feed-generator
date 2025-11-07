@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Nov 2025 22:20:53 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Nov 2025 23:20:04 +0000</lastBuildDate>
+    <item>
+      <title>Google Chrome security advisory (AV25-706)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-706</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-706</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.38</comments>
+      <pubDate>Wed, 29 Oct 2025 13:38:56 +0000</pubDate>
+    </item>
     <item>
       <title>AL25-016 Internet-accessible industrial control systems (ICS) abused by hacktivists</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</link>
@@ -16,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Wed, 29 Oct 2025 14:01:33 +0000</pubDate>
     </item>
     <item>
@@ -30,104 +40,13 @@
       <pubDate>Wed, 29 Oct 2025 17:26:15 +0000</pubDate>
     </item>
     <item>
-      <title>Russian APT abuses Windows Hyper-V for persistence and malware execution</title>
-      <link>https://www.csoonline.com/article/4085272/russian-apt-abuses-windows-hyper-v-for-persistence-and-malware-execution.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Cyberespionage groups are always looking for novel ways to establish covert and long-term persistent access to compromised systems. The latest example comes from a Russian APT group known as Curly COMrades, which deploys Linux-based virtual machines on compromised Windows 10 machines to hide their malware tools.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The attackers enabled the Hyper-V role on selected victim systems to deploy a minimalistic, Alpine Linux-based virtual machine,” researchers from Bitdefender wrote in &lt;a href="https://www.bitdefender.com/en-gb/blog/businessinsights/curly-comrades-evasion-persistence-hidden-hyper-v-virtual-machines"&gt;a report on Curly COMrades’ activity&lt;/a&gt;. “This hidden environment, with its lightweight footprint (only 120MB disk space and 256MB memory), hosted their custom reverse shell, CurlyShell, and a reverse proxy, CurlCat.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Hyper-V is a bare-metal hypervisor included in Windows 10 and 11 Pro and Enterprise editions, as well as Windows Server. When the feature is enabled, users can create virtual machines with different operating systems that run on the same hardware as the Windows host.&lt;/p&gt;
-
-
-
-&lt;p&gt;Curly COMrades is a Russia-aligned APT group first documented by Bitdefender in August after &lt;a href="https://www.csoonline.com/article/4039318/russian-apt-group-curly-comrades-employs-novel-backdoor-and-persistence-tricks.html"&gt;it targeted key government and judicial organizations from EU-hopefuls Moldova and Georgia&lt;/a&gt;. The name comes from the group’s heavy usage of the curl.exe tool and its hijacking of Component Object Model (COM) objects for persistence.&lt;/p&gt;
-
-
-
-&lt;p&gt;The group is known for other novel techniques, such as inserting malware into the CLSID and COM handler associated with a Windows scheduled task that is enabled and executed by the system periodically when .NET applications are installed or updated. The obscure scheduled task corresponds to a Microsoft tool called NGEN (Native Image Generator).&lt;/p&gt;
-
-
-
-&lt;p&gt;The group’s Hyper-V abuse came to light after Bitdefender researchers continued their forensic investigation of the group’s activities and compromises with the help of the Georgian government’s CERT.&lt;/p&gt;
-
-
-
-&lt;p&gt;“By isolating the malware and its execution environment within a VM, the attackers effectively bypassed many traditional host-based EDR detections,” the researchers concluded. “EDR needs to be complemented by host-based network inspection to detect C2 traffic escaping the VM, and proactive hardening tools to restrict the initial abuse of native system binaries.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="enabling-hyper-v-covertly"&gt;Enabling Hyper-V covertly&lt;/h2&gt;
-
-
-
-&lt;p&gt;Logs extracted from a compromised system revealed that the attackers first used the Windows Deployment Image Servicing and Management (DISM) command-line tool to enable the Hyper-V hypervisor itself, while also disabling its graphical management interface, Hyper-V Manager.&lt;/p&gt;
-
-
-
-&lt;p&gt;The group then downloaded a RAR archive masquerading as an MP4 video file and extracted its contents. The archive contained two VHDX (virtual hard disk) and VMCX (virtual machine configuration) files corresponding to a pre-built Alpine Linux VM.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attackers then used the Import-VM and Start-VM PowerShell cmdlets to import the virtual machine into Hyper-V and start it with the name WSL — a deception tactic given that WSL on Windows stands for Windows Subsystem for Linux, another feature that allows running Linux containers under the Windows kernel. More popular than Hyper-V for virtualization on Windows, WSL is widely used by developers, making its presence less likely to receive scrutiny.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Alpine Linux VM is very small and hosts only two custom implants that Bitdefender has dubbed CurlyShell and CurlCat. They are both built using libcurl, an open-source network transfer library that supports a large variety of protocols.&lt;/p&gt;
-
-
-
-&lt;p&gt;CurlyShell uses libcurl to connect to a command-and-control (C2) server and set up a reverse shell, meaning it listens for commands issued by the server, passes them to the Linux command line, and returns the output. Meanwhile, CurlCat acts as a proxy for tunneling SSH traffic as HTTP requests, making that traffic harder to detect by network monitoring tools.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="other-malware-tools"&gt;Other malware tools&lt;/h2&gt;
-
-
-
-&lt;p&gt;The researchers also found additional malware payloads left by the attackers on systems, including a custom PowerShell script used to inject a Kerberos ticket into LSASS to enable authentication and command execution on remote systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;Another PowerShell script was pushed to multiple systems via domain Group Policy to change the password of an account called user or to create it if it didn’t exist. A variant of this script targeted an account called camera instead.&lt;/p&gt;
-
-
-
-&lt;p&gt;With the help of the Georgian CERT who seized one of the group’s C2 servers, the researchers were also able to analyze how attackers had set up their infrastructure, which proved equally sophisticated. The attackers had disabled certificate revocation in CurlCat, which allowed them to deploy custom certificates on their C2 server and still use encrypted HTTPS traffic. A proxy server listening to incoming traffic on port 443 (HTTPS) then decrypted and relayed that traffic to an SSH server with a custom configuration.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The sophistication demonstrated by Curly COMrades confirms a key trend: as EDR/XDR solutions become commodity tools, threat actors are getting better at bypassing them through tooling or techniques like VM isolation,” the researchers said. “To counter this, organizations must move beyond relying on a single security layer and implement defense-in-depth, multilayered security. It is critical to start designing the entire environment to be hostile to attackers.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Bitdefender &lt;a href="https://github.com/bitdefender/malware-ioc/blob/master/2025_11_04-curlycomrades-iocs.csv"&gt;published indicators of compromise&lt;/a&gt; related to this attack campaign on GitHub.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4085272/russian-apt-abuses-windows-hyper-v-for-persistence-and-malware-execution.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
-      <pubDate>Wed, 05 Nov 2025 21:24:08 +0000</pubDate>
-    </item>
-    <item>
       <title>Docker security advisory (AV25–708)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av25-708</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av25-708</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Wed, 29 Oct 2025 18:32:49 +0000</pubDate>
     </item>
     <item>
@@ -157,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-710</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Thu, 30 Oct 2025 14:19:45 +0000</pubDate>
     </item>
     <item>
@@ -168,7 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Fri, 07 Nov 2025 20:20:53 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 21:20:04 +0000</pubDate>
     </item>
     <item>
       <title>Europol and UEFA united for fair and safe football</title>
@@ -178,7 +97,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 07 Nov 2025 20:20:53 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 21:20:04 +0000</pubDate>
     </item>
     <item>
       <title>Sweden hosts naval exercise with 200 special tactics operators</title>
@@ -188,7 +107,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 07 Nov 2025 20:20:53 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 21:20:04 +0000</pubDate>
     </item>
     <item>
       <title>VMware security advisory (AV25-629) – Update 1</title>
@@ -208,7 +127,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Fri, 07 Nov 2025 20:20:53 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 21:20:04 +0000</pubDate>
     </item>
     <item>
       <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
@@ -218,7 +137,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.56</comments>
-      <pubDate>Fri, 07 Nov 2025 20:20:53 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 21:20:04 +0000</pubDate>
     </item>
     <item>
       <title>9 top bug bounty programs launched in 2025</title>
@@ -412,18 +331,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/657751/top-bug-bounty-programs.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Thu, 06 Nov 2025 06:30:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>SonicWall security advisory (AV25-711)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-711</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-711</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
-      <pubDate>Fri, 31 Oct 2025 16:01:34 +0000</pubDate>
     </item>
     <item>
       <title>What past ERP mishaps can teach CISOs about security platformization</title>
@@ -549,8 +458,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4080709/what-past-erp-mishaps-can-teach-cisos-about-security-platformization.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Thu, 06 Nov 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>SonicWall security advisory (AV25-711)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-711</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-711</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.64</comments>
+      <pubDate>Fri, 31 Oct 2025 16:01:34 +0000</pubDate>
     </item>
     <item>
       <title>Progress security advisory (AV25-712)</title>
@@ -559,7 +478,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av25-712</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Fri, 31 Oct 2025 18:59:47 +0000</pubDate>
     </item>
     <item>
@@ -569,7 +488,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-713</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Fri, 31 Oct 2025 19:41:15 +0000</pubDate>
     </item>
     <item>
@@ -672,7 +591,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4082701/chinese-hackers-target-western-diplomats-using-hard-to-patch-windows-shortcut-flaw.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Thu, 06 Nov 2025 08:50:21 +0000</pubDate>
     </item>
     <item>
@@ -811,7 +730,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4085072/digital-health-cant-scale-if-cybersecurity-falls-behind.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Thu, 06 Nov 2025 09:09:00 +0000</pubDate>
     </item>
     <item>
@@ -822,7 +741,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.75</comments>
-      <pubDate>Fri, 07 Nov 2025 20:20:53 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 21:20:04 +0000</pubDate>
     </item>
     <item>
       <title>Cyberattacks surge against IoT, mobile devices in critical infrastructure</title>
@@ -831,7 +750,7 @@
       <guid isPermaLink="false">https://www.cybersecuritydive.com/news/mobile-iot-attacks-surge-critical-infrastructure-zscaler/805008/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Fri, 07 Nov 2025 10:58:55 -0500</pubDate>
     </item>
     <item>
@@ -842,7 +761,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.03</comments>
-      <pubDate>Fri, 07 Nov 2025 20:20:53 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 21:20:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>ID verification laws are fueling the next wave of breaches</title>
+      <link>https://www.bleepingcomputer.com/news/security/id-verification-laws-are-fueling-the-next-wave-of-breaches/</link>
+      <description>ID laws are forcing companies to store massive amounts of sensitive data, turning compliance into a security risk. Acronis explains how integrated backup and cybersecurity platforms help MSPs reduce complexity and close the gaps attackers exploit. [...]</description>
+      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/id-verification-laws-are-fueling-the-next-wave-of-breaches/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.04</comments>
+      <pubDate>Fri, 07 Nov 2025 10:05:15 -0500</pubDate>
     </item>
     <item>
       <title>54 individuals arrested in action against labour exploitation</title>
@@ -852,17 +781,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.05</comments>
-      <pubDate>Fri, 07 Nov 2025 20:20:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>ID verification laws are fueling the next wave of breaches</title>
-      <link>https://www.bleepingcomputer.com/news/security/id-verification-laws-are-fueling-the-next-wave-of-breaches/</link>
-      <description>ID laws are forcing companies to store massive amounts of sensitive data, turning compliance into a security risk. Acronis explains how integrated backup and cybersecurity platforms help MSPs reduce complexity and close the gaps attackers exploit. [...]</description>
-      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/id-verification-laws-are-fueling-the-next-wave-of-breaches/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
-      <pubDate>Fri, 07 Nov 2025 10:05:15 -0500</pubDate>
+      <pubDate>Fri, 07 Nov 2025 21:20:04 +0000</pubDate>
     </item>
     <item>
       <title>Cybercrime-as-a-service takedown: 7 arrested</title>
@@ -872,7 +791,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Fri, 07 Nov 2025 20:20:53 +0000</pubDate>
+      <pubDate>Fri, 07 Nov 2025 21:20:04 +0000</pubDate>
     </item>
     <item>
       <title>Malicious npm packages contain Vidar infostealer</title>
@@ -1040,7 +959,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086415/malicious-npm-packages-contain-vidar-infostealer-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Fri, 07 Nov 2025 02:34:07 +0000</pubDate>
     </item>
     <item>
@@ -1188,7 +1107,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3493645/data-security-posture-management-die-besten-dspm-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Fri, 07 Nov 2025 04:07:00 +0000</pubDate>
     </item>
     <item>
@@ -1198,7 +1117,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-714</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Mon, 03 Nov 2025 14:03:39 +0000</pubDate>
     </item>
     <item>
@@ -1208,7 +1127,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-715</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Mon, 03 Nov 2025 14:10:17 +0000</pubDate>
     </item>
     <item>
@@ -1218,7 +1137,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-716</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Mon, 03 Nov 2025 14:14:54 +0000</pubDate>
     </item>
     <item>
@@ -1228,7 +1147,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-717</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Mon, 03 Nov 2025 14:32:06 +0000</pubDate>
     </item>
     <item>
@@ -1238,7 +1157,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-718</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Mon, 03 Nov 2025 14:46:11 +0000</pubDate>
     </item>
     <item>
@@ -1248,7 +1167,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Mon, 03 Nov 2025 15:23:54 +0000</pubDate>
     </item>
     <item>
@@ -1258,18 +1177,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-720</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Mon, 03 Nov 2025 15:48:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ubiquiti security advisory (AV25-721)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av25-721</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av25-721</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
-      <pubDate>Mon, 03 Nov 2025 16:57:22 +0000</pubDate>
     </item>
     <item>
       <title>Why can’t enterprises get a handle on the cloud misconfiguration problem?</title>
@@ -1467,8 +1376,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4083736/why-cant-enterprises-get-a-handle-on-the-cloud-misconfiguration-problem.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Fri, 07 Nov 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ubiquiti security advisory (AV25-721)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av25-721</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av25-721</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.38</comments>
+      <pubDate>Mon, 03 Nov 2025 16:57:22 +0000</pubDate>
     </item>
     <item>
       <title>Business continuity and cybersecurity: Two sides of the same coin</title>
@@ -1614,7 +1533,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086135/business-continuity-and-cybersecurity-two-sides-of-the-same-coin.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Fri, 07 Nov 2025 10:50:00 +0000</pubDate>
     </item>
     <item>
@@ -1624,7 +1543,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-722</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Tue, 04 Nov 2025 14:20:03 +0000</pubDate>
     </item>
     <item>
@@ -1634,7 +1553,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-november-2025-monthly-rollup-av25-723</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.73</comments>
       <pubDate>Tue, 04 Nov 2025 14:37:46 +0000</pubDate>
     </item>
     <item>
@@ -1644,7 +1563,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-725</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.81</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Tue, 04 Nov 2025 18:27:10 +0000</pubDate>
     </item>
     <item>
@@ -1711,7 +1630,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086100/nikkeis-slack-breach-leaks-sensitive-data-from-more-than-17000-users.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 9.02</comments>
       <pubDate>Thu, 06 Nov 2025 20:13:36 +0000</pubDate>
     </item>
     <item>
@@ -1721,7 +1640,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-724</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.32</comments>
+      <comments>Score: 9.30</comments>
       <pubDate>Wed, 05 Nov 2025 18:08:43 +0000</pubDate>
     </item>
     <item>
@@ -1731,7 +1650,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-726</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.36</comments>
+      <comments>Score: 9.34</comments>
       <pubDate>Wed, 05 Nov 2025 19:51:20 +0000</pubDate>
     </item>
     <item>
@@ -1741,7 +1660,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.99</comments>
+      <comments>Score: 9.96</comments>
       <pubDate>Thu, 06 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -1751,7 +1670,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.67</comments>
+      <comments>Score: 10.64</comments>
       <pubDate>Fri, 07 Nov 2025 14:12:09 +0000</pubDate>
     </item>
     <item>
@@ -1761,7 +1680,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.69</comments>
+      <comments>Score: 10.65</comments>
       <pubDate>Fri, 07 Nov 2025 14:28:44 +0000</pubDate>
     </item>
     <item>
@@ -1771,7 +1690,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.74</comments>
+      <comments>Score: 10.71</comments>
       <pubDate>Fri, 07 Nov 2025 15:59:01 +0000</pubDate>
     </item>
     <item>
@@ -1781,7 +1700,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-730</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.75</comments>
+      <comments>Score: 10.71</comments>
       <pubDate>Fri, 07 Nov 2025 16:09:33 +0000</pubDate>
     </item>
     <item>
@@ -1791,7 +1710,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-november-2025-monthly-rollup-av25-731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.84</comments>
+      <comments>Score: 10.80</comments>
       <pubDate>Fri, 07 Nov 2025 18:22:37 +0000</pubDate>
     </item>
   </channel>
