@@ -8,120 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Nov 2025 15:20:08 +0000</lastBuildDate>
-    <item>
-      <title>Mozilla security advisory (AV25-704)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-704</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-704</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.27</comments>
-      <pubDate>Tue, 28 Oct 2025 19:22:31 +0000</pubDate>
-    </item>
-    <item>
-      <title>Chinese hackers target Western diplomats using hard-to-patch Windows shortcut flaw</title>
-      <link>https://www.csoonline.com/article/4082701/chinese-hackers-target-western-diplomats-using-hard-to-patch-windows-shortcut-flaw.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Chinese hackers have been spotted targeting European diplomats using a longstanding Windows shortcut vulnerability that’s been popular with threat groups as far back as 2017.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to security company &lt;a href="https://arcticwolf.com/resources/blog/unc6384-weaponizes-zdi-can-25373-vulnerability-to-deploy-plugx/" rel="noreferrer noopener" target="_blank"&gt;Arctic Wolf&lt;/a&gt;, whose researchers uncovered the latest campaign, the latest attacks saw spear phishing emails sent to officials working for the governments of Hungary, Belgium, Serbia, Italy, and The Netherlands during September and October.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Chinese government-operated group suspected of being behind the campaign is named UNC6384 by the Google Threat Intelligence Group (GTIG). The same group is believed to have targeted diplomats of several Asian countries earlier in 2025, which might give the impression that UNC6384 is a recently discovered threat actor, hence its UNC (“uncategorized”) status.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, Arctic Wolf said it believed the group’s tools, techniques, and procedures (TTPs) strongly resemble those of a known Chinese threat group, “Mustang Panda,” which has been around since 2012.&lt;/p&gt;
-
-
-
-&lt;p&gt;On the face of it, this looks like just another Chinese cyber-espionage campaign against foreign governments. But there is a deeper story: the Windows vulnerability used in the campaign, which Microsoft has so far been unwilling — or unable — to patch.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ghost-flaw"&gt;Ghost flaw&lt;/h2&gt;
-
-
-
-&lt;p&gt;According to Arctic Wolf, the latest campaign used spear phishing emails with diplomatic themes to lure targets into executing malicious Windows .LNK shortcut files. The vulnerability stems from a flaw in Windows UI parsing that allows command-line instructions to be hidden in &lt;a href="https://detection.fyi/sigmahq/sigma/windows/process_creation/proc_creation_win_susp_lnk_exec_hidden_cmd/" rel="noreferrer noopener" target="_blank"&gt;.LNK format whitespace&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;This allows the attackers to launch a sequence of malicious actions while displaying a decoy PDF showing the agenda for a genuine European Commission meeting scheduled to have been held in Brussels on September 26. The result is the deployment of the PlugX remote access Trojan, which has been popular since 2008 as a tool for opening backdoors into Windows systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;Trend Micro told Microsoft about the weakness in September 2024, after which it was given a &lt;a href="https://cve.org/CVERecord?id=CVE-2025-9491" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-9491&lt;/a&gt; identifier. However, it turns out that the company’s Zero Day Initiative (ZDI) had noticed the same issue in 2017, when it was given a separate internal ‘candidate’ identifier, &lt;a href="https://www.trendmicro.com/en_us/research/25/c/windows-shortcut-zero-day-exploit.html" rel="noreferrer noopener" target="_blank"&gt;ZDI-CAN-25373&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The vulnerability has been exploited by state-sponsored APT groups from North Korea, Iran, Russia, and China,” said Trend Micro in a &lt;a href="https://www.trendmicro.com/en/research/25/c/windows-shortcut-zero-day-exploit.html" rel="noreferrer noopener" target="_blank"&gt;March 2018 blog&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Despite there being a formal CVE, Microsoft appears reluctant to address the issue. As Trend Micro noted in a more recent blog from 2025, “We submitted a proof-of-concept exploit through Trend ZDI’s bug bounty program to Microsoft, who declined to address this vulnerability with a security patch.”&lt;/p&gt;
-
-
-
-&lt;p&gt;That reluctance probably stems from the fact that CVE-2025-9491/ZDI-CAN-25373 would be difficult to patch without breaking legacy applications that depend on its current design.&lt;/p&gt;
-
-
-
-&lt;p&gt;On November 1, the day after this article was first published, Microsoft released an &lt;a href="https://msrc.microsoft.com/update-guide/advisory/ADV25258226" rel="noreferrer noopener" target="_blank"&gt;advisory notice on Windows LNK file UI behavior&lt;/a&gt;. In it, the company reiterated that it does not consider this a vulnerability. &lt;/p&gt;
-
-
-
-&lt;p&gt;The advisory noted that .lnk files cannot be delivered via browser unless packaged in a .zip file that is then opened by the user. “Attempting to open a .lnk file downloaded from the Internet automatically triggers a security warning advising users not to open files from unknown sources, and we strongly recommend heeding this warning,” Microsoft said in the advisory. “Double-clicking on a .lnk file produces a warning stating that the file format is not trusted; a victim must click through this prompt,” it added.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Due to the user interaction involved and the fact that the system already warns users that this format is untrusted, Microsoft does not consider this a vulnerability” it concluded.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="mitigation"&gt;Mitigation&lt;/h2&gt;
-
-
-
-&lt;p&gt;In the absence of a patch, organizations worried about .LNK attacks should consider blocking .LNK files or disabling their execution in Windows Explorer, Arctic Wolf advised.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This should be put in place across all Windows systems, prioritizing endpoints used by personnel with access to sensitive diplomatic or policy information. While this vulnerability was disclosed in March 2025, adoption by threat actors within months of disclosure necessitates urgent monitoring and countermeasures,” it said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Organizations could also block the command and control (C2) domains used by attackers, although these will change over time. In addition, Arctic Wolf recommends that IT teams search for the presence of Canon printer assistant utilities such as &lt;em&gt;cnmpaui.exe&lt;/em&gt;, which are part of the campaign’s exploit chain.&lt;/p&gt;
-
-
-
-&lt;p&gt; “The breadth of targeting across multiple European nations within a condensed timeframe suggests either a large-scale coordinated intelligence collection operation or deployment of multiple parallel operational teams with shared tooling but independent targeting,” Arctic Wolf noted, adding that the fact that UNC6384 had jumped on the flaw so quickly since it was made public earlier in 2025 suggested that the group had access to advanced capabilities and resources.&lt;/p&gt;
-
-
-
-&lt;p&gt;It’s not as if attacks exploiting Windows shortcut files in different ways are terribly new or innovative. During 2025, they’ve been abused in different ways by &lt;a href="https://www.csoonline.com/article/3987073/after-helping-russia-on-the-ground-north-korea-targets-ukraine-with-cyberespionage.html" target="_blank"&gt;Russian cyber-campaigns&lt;/a&gt; against Ukraine, &lt;a href="https://www.csoonline.com/article/3986671/stealth-rat-uses-a-powershell-loader-for-fileless-attacks.html" target="_blank"&gt;Chinese attacks&lt;/a&gt; using the Remcos RAT, and to target companies in the &lt;a href="https://www.csoonline.com/article/3837964/polyglot-files-used-to-spread-new-backdoor.html" target="_blank"&gt;United Arab Emirates (UAE)&lt;/a&gt;. In June the technique was used to hide payloads in attacks abusing the &lt;a href="https://www.csoonline.com/article/4009636/phishing-campaign-abuses-cloudflare-tunnels-to-sneak-malware-past-firewalls.html" target="_blank"&gt;Cloudflare Tunnel service&lt;/a&gt;. The issue is really that this type of flaw, which exploits an otherwise useful feature, is simply difficult to patch.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This article was updated on November 6 with information about a new advisory notice from Microsoft.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4082701/chinese-hackers-target-western-diplomats-using-hard-to-patch-windows-shortcut-flaw.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.27</comments>
-      <pubDate>Thu, 06 Nov 2025 08:50:21 +0000</pubDate>
-    </item>
+    <lastBuildDate>Sat, 08 Nov 2025 16:25:14 +0000</lastBuildDate>
     <item>
       <title>Digital health can’t scale if cybersecurity falls behind</title>
       <link>https://www.csoonline.com/article/4085072/digital-health-cant-scale-if-cybersecurity-falls-behind.html</link>
@@ -258,8 +145,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4085072/digital-health-cant-scale-if-cybersecurity-falls-behind.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.27</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Thu, 06 Nov 2025 09:09:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Veeam security advisory (AV25-703)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av25-703</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av25-703</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.26</comments>
+      <pubDate>Tue, 28 Oct 2025 17:04:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV25-704)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-704</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-704</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.26</comments>
+      <pubDate>Tue, 28 Oct 2025 19:22:31 +0000</pubDate>
     </item>
     <item>
       <title>Cyberattacks surge against IoT, mobile devices in critical infrastructure</title>
@@ -268,7 +175,7 @@
       <guid isPermaLink="false">https://www.cybersecuritydive.com/news/mobile-iot-attacks-surge-critical-infrastructure-zscaler/805008/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
+      <comments>Score: 7.28</comments>
       <pubDate>Fri, 07 Nov 2025 10:58:55 -0500</pubDate>
     </item>
     <item>
@@ -308,7 +215,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-707</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Wed, 29 Oct 2025 17:26:15 +0000</pubDate>
     </item>
     <item>
@@ -348,7 +255,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-710</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Thu, 30 Oct 2025 14:19:45 +0000</pubDate>
     </item>
     <item>
@@ -358,7 +265,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-629</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Thu, 30 Oct 2025 19:05:03 +0000</pubDate>
     </item>
     <item>
@@ -368,7 +275,7 @@
       <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/id-verification-laws-are-fueling-the-next-wave-of-breaches/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Fri, 07 Nov 2025 10:05:15 -0500</pubDate>
     </item>
     <item>
@@ -379,7 +286,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Sat, 08 Nov 2025 13:20:08 +0000</pubDate>
+      <pubDate>Sat, 08 Nov 2025 14:25:14 +0000</pubDate>
     </item>
     <item>
       <title>Europol and UEFA united for fair and safe football</title>
@@ -389,7 +296,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Nov 2025 13:20:08 +0000</pubDate>
+      <pubDate>Sat, 08 Nov 2025 14:25:14 +0000</pubDate>
     </item>
     <item>
       <title>Sweden hosts naval exercise with 200 special tactics operators</title>
@@ -399,7 +306,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Nov 2025 13:20:08 +0000</pubDate>
+      <pubDate>Sat, 08 Nov 2025 14:25:14 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV25-711)</title>
@@ -408,7 +315,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-711</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Fri, 31 Oct 2025 16:01:34 +0000</pubDate>
     </item>
     <item>
@@ -419,17 +326,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Sat, 08 Nov 2025 13:20:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</link>
-      <description>Europol is calling for a coordinated European response to tackle caller ID spoofing, an in increasingly common tool, used for online fraud and social engineering scams. Caller ID spoofing occurs when criminals falsify the information displayed on phones, making numbers appear legitimate to deceive victims. This practice is driving substantial financial and societal harm, with an estimated EUR 850 million lost worldwide each year.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Sat, 08 Nov 2025 13:20:08 +0000</pubDate>
+      <pubDate>Sat, 08 Nov 2025 14:25:14 +0000</pubDate>
     </item>
     <item>
       <title>Progress security advisory (AV25-712)</title>
@@ -442,13 +339,23 @@
       <pubDate>Fri, 31 Oct 2025 18:59:47 +0000</pubDate>
     </item>
     <item>
+      <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</link>
+      <description>Europol is calling for a coordinated European response to tackle caller ID spoofing, an in increasingly common tool, used for online fraud and social engineering scams. Caller ID spoofing occurs when criminals falsify the information displayed on phones, making numbers appear legitimate to deceive victims. This practice is driving substantial financial and societal harm, with an estimated EUR 850 million lost worldwide each year.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.56</comments>
+      <pubDate>Sat, 08 Nov 2025 14:25:14 +0000</pubDate>
+    </item>
+    <item>
       <title>HPE security advisory (AV25-713)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-713</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-713</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Fri, 31 Oct 2025 19:41:15 +0000</pubDate>
     </item>
     <item>
@@ -617,18 +524,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086415/malicious-npm-packages-contain-vidar-infostealer-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Fri, 07 Nov 2025 02:34:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</link>
-      <description>The conference “From CLICK to CRIME: Investigating Intellectual Property Crime in the Digital Age” was held on 22 and 23 October 2025 in Sofia, Bulgaria. Jointly organised by Europol, the European Union Intellectual Property Office (EUIPO) and Bulgaria’s General Directorate Combating Organised Crime (GDBOP), the event highlighted the vital importance of collaboration in tackling online crime. The participants reaffirmed the importance of strong collective efforts in tackling online-enabled intellectual property crime to protect consumers, safeguard creativity and uphold trust in the digital economy.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
-      <pubDate>Sat, 08 Nov 2025 13:20:08 +0000</pubDate>
     </item>
     <item>
       <title>Data Security Posture Management: Die besten DSPM-Tools</title>
@@ -775,8 +672,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3493645/data-security-posture-management-die-besten-dspm-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Fri, 07 Nov 2025 04:07:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</link>
+      <description>The conference “From CLICK to CRIME: Investigating Intellectual Property Crime in the Digital Age” was held on 22 and 23 October 2025 in Sofia, Bulgaria. Jointly organised by Europol, the European Union Intellectual Property Office (EUIPO) and Bulgaria’s General Directorate Combating Organised Crime (GDBOP), the event highlighted the vital importance of collaboration in tackling online crime. The participants reaffirmed the importance of strong collective efforts in tackling online-enabled intellectual property crime to protect consumers, safeguard creativity and uphold trust in the digital economy.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.75</comments>
+      <pubDate>Sat, 08 Nov 2025 14:25:14 +0000</pubDate>
     </item>
     <item>
       <title>Why can’t enterprises get a handle on the cloud misconfiguration problem?</title>
@@ -974,7 +881,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4083736/why-cant-enterprises-get-a-handle-on-the-cloud-misconfiguration-problem.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Fri, 07 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1121,7 +1028,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086135/business-continuity-and-cybersecurity-two-sides-of-the-same-coin.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Fri, 07 Nov 2025 10:50:00 +0000</pubDate>
     </item>
     <item>
@@ -1132,7 +1039,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.03</comments>
-      <pubDate>Sat, 08 Nov 2025 13:20:08 +0000</pubDate>
+      <pubDate>Sat, 08 Nov 2025 14:25:14 +0000</pubDate>
     </item>
     <item>
       <title>54 individuals arrested in action against labour exploitation</title>
@@ -1142,7 +1049,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.05</comments>
-      <pubDate>Sat, 08 Nov 2025 13:20:08 +0000</pubDate>
+      <pubDate>Sat, 08 Nov 2025 14:25:14 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-714)</title>
@@ -1151,7 +1058,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-714</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Mon, 03 Nov 2025 14:03:39 +0000</pubDate>
     </item>
     <item>
@@ -1161,7 +1068,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-715</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Mon, 03 Nov 2025 14:10:17 +0000</pubDate>
     </item>
     <item>
@@ -1171,7 +1078,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-716</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Mon, 03 Nov 2025 14:14:54 +0000</pubDate>
     </item>
     <item>
@@ -1181,7 +1088,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-717</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Mon, 03 Nov 2025 14:32:06 +0000</pubDate>
     </item>
     <item>
@@ -1191,7 +1098,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-718</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Mon, 03 Nov 2025 14:46:11 +0000</pubDate>
     </item>
     <item>
@@ -1201,7 +1108,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Mon, 03 Nov 2025 15:23:54 +0000</pubDate>
     </item>
     <item>
@@ -1211,7 +1118,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-720</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Mon, 03 Nov 2025 15:48:18 +0000</pubDate>
     </item>
     <item>
@@ -1221,7 +1128,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av25-721</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Mon, 03 Nov 2025 16:57:22 +0000</pubDate>
     </item>
     <item>
@@ -1232,7 +1139,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Sat, 08 Nov 2025 13:20:08 +0000</pubDate>
+      <pubDate>Sat, 08 Nov 2025 14:25:14 +0000</pubDate>
     </item>
     <item>
       <title>Apple security advisory (AV25-722)</title>
@@ -1241,7 +1148,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-722</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Tue, 04 Nov 2025 14:20:03 +0000</pubDate>
     </item>
     <item>
@@ -1251,7 +1158,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-november-2025-monthly-rollup-av25-723</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Tue, 04 Nov 2025 14:37:46 +0000</pubDate>
     </item>
     <item>
@@ -1261,7 +1168,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-725</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Tue, 04 Nov 2025 18:27:10 +0000</pubDate>
     </item>
     <item>
@@ -1328,7 +1235,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086100/nikkeis-slack-breach-leaks-sensitive-data-from-more-than-17000-users.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Thu, 06 Nov 2025 20:13:36 +0000</pubDate>
     </item>
     <item>
@@ -1338,7 +1245,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-724</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Wed, 05 Nov 2025 18:08:43 +0000</pubDate>
     </item>
     <item>
@@ -1348,7 +1255,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-726</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.98</comments>
+      <comments>Score: 8.96</comments>
       <pubDate>Wed, 05 Nov 2025 19:51:20 +0000</pubDate>
     </item>
     <item>
@@ -1358,7 +1265,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Thu, 06 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -1368,7 +1275,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.08</comments>
+      <comments>Score: 10.04</comments>
       <pubDate>Fri, 07 Nov 2025 14:12:09 +0000</pubDate>
     </item>
     <item>
@@ -1378,7 +1285,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.09</comments>
+      <comments>Score: 10.05</comments>
       <pubDate>Fri, 07 Nov 2025 14:28:44 +0000</pubDate>
     </item>
     <item>
@@ -1388,7 +1295,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.10</comments>
       <pubDate>Fri, 07 Nov 2025 15:59:01 +0000</pubDate>
     </item>
     <item>
@@ -1398,7 +1305,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-730</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.11</comments>
       <pubDate>Fri, 07 Nov 2025 16:09:33 +0000</pubDate>
     </item>
     <item>
@@ -1408,7 +1315,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-november-2025-monthly-rollup-av25-731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.22</comments>
+      <comments>Score: 10.18</comments>
       <pubDate>Fri, 07 Nov 2025 18:22:37 +0000</pubDate>
     </item>
   </channel>
