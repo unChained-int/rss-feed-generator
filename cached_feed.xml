@@ -8,175 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Nov 2025 13:26:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Nov 2025 14:18:25 +0000</lastBuildDate>
     <item>
-      <title>Malicious npm packages contain Vidar infostealer</title>
-      <link>https://www.csoonline.com/article/4086415/malicious-npm-packages-contain-vidar-infostealer-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Malicious code continues to be uploaded to open source repositories, making it a challenge for responsible developers to trust what’s there, and for CISOs to trust applications that include open source code.&lt;/p&gt;
-
-
-
-&lt;p&gt;The latest example comes from researchers at Datadog Security, who said that last month they found 17 packages (23 releases) in the &lt;a href="https://securitylabs.datadoghq.com/articles/mut-4831-trojanized-npm-packages-vidar/" rel="noreferrer noopener" target="_blank"&gt;npm repository that contained downloader malware&lt;/a&gt; for Windows systems that executes via a postinstall script.&lt;/p&gt;
-
-
-
-&lt;p&gt;The associated packages masquerade as Telegram bot helper packages, icon libraries, or legitimate-seeming forks of preexisting projects such as Cursor and React. They provide legitimate functionality, but their actual goal is to execute the Vidar infostealer malware on the victim system. Datadog believes this is the first public disclosure of Vidar malware being delivered via npm packages.&lt;/p&gt;
-
-
-
-&lt;p&gt;Both of the accounts offering these packages (aartje and&lt;strong&gt; &lt;/strong&gt;saliii229911 ) have since been banned. However, they were on the registry for about two weeks, and the malicious packages were downloaded at least 2,240 times. However, the researchers believe many of those downloads were likely by automated scrapers, with some occurring after the packages had been removed and replaced with empty security holding packages.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="all-sorts-of-nasty-things"&gt;All sorts of nasty things&lt;/h2&gt;
-
-
-
-&lt;p&gt;Malicious compromise of open source components can lead to all sorts of nasty things. First, threat actors can steal developers’ credentials and insert backdoors into their code. Second, the malicious code in the downloaded component itself could spread around the world to the developer’s customers.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Datadog discovery is just another in a long list of malicious code uploaded to npm, PyPI, GitHub, and other open source repositories.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.csoonline.com/article/4082195/malicious-packages-in-npm-evade-dependency-detection-through-invisible-url-links-report.html" target="_blank"&gt;Last week, Koi Security reported&lt;/a&gt; finding 126 malicious packages in npm, and in September, &lt;a href="https://www.csoonline.com/article/4058059/warning-hackers-have-inserted-credential-stealing-code-into-some-npm-libraries.html" target="_blank"&gt;researchers at Step Security reported&lt;/a&gt; that dozens of npm libraries had been replaced with credential stealing code. The same month, &lt;a href="https://www.csoonline.com/article/4053725/massive-npm-supply-chain-attack-hits-18-popular-packages-with-2b-weekly-downloads.html" target="_blank"&gt;researchers at Aikido reported&lt;/a&gt; that 18 highly popular and highly downloaded npm packages had been contaminated.&lt;/p&gt;
-
-
-
-&lt;p&gt;“I don’t know how to easily solve this problem without requiring a full security view of any newly submitted code, and that’s not fast, cheap, or easy,” commented &lt;a href="https://www.knowbe4.com/press/roger-grimes-joins-knowbe4-as-data-driven-defense-evangelist" rel="noreferrer noopener" target="_blank"&gt;Roger Grimes&lt;/a&gt;, digital defence CISO advisor at KnowBe4.&lt;/p&gt;
-
-
-
-&lt;p&gt;“But it really is the only answer if you want reliable, safe, open source code.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Ironically, he said, one of the biggest reasons given for the world to use open source code is that it’s readily reviewable, so anyone can look at it to see and stop vulnerabilities. “But the reality is that almost no one security reviews any of the tens of millions of lines of open source code,” he pointed out. &lt;/p&gt;
-
-
-
-&lt;p&gt;“There have been dozens of open source projects that attempted to implement more default code review and all have failed,” he said. “One of my favorite related quotes of all time is, ‘Asking for users to review open source code before using is like asking passengers of an airliner to step outside the jet and review it for flight safety before they fly.’ I’m not sure who said that first, but it’s a brilliant summary of why volunteer open source code review really doesn’t work.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="typosquatting"&gt;Typosquatting&lt;/h2&gt;
-
-
-
-&lt;p&gt;One favorite tactic of threat actors trying to infect the open source software supply chain is typosquatting, the creation of packages with names similar to those of legitimate ones to trick unwitting developers searching for a particular library. For example, in 2018 a researcher found that &lt;a href="https://bertusk.medium.com/detecting-cyber-attacks-in-the-python-package-index-pypi-61ab2b585c67" rel="noreferrer noopener" target="_blank"&gt;threat actors had created phony libraries in the Python repository&lt;/a&gt; called ‘diango,’ ‘djago,’ ‘dajngo,’ to dupe developers seeking the popular ‘django’ Python library.&lt;/p&gt;
-
-
-
-&lt;p&gt;CISOs should ensure that employees are educated about the issue of typosquatting and learn what to look for. IT departments should keep a comprehensive inventory of what components are used by all approved software against which audits can be conducted, to ensure only approved components are in place. This inventory and audit should be performed to validate any new components that are introduced.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-more-to-do"&gt;What more to do?&lt;/h2&gt;
-
-
-
-&lt;p&gt;There’s no shortage of advice for developers and IT and infosec leaders to help them avoid being victimized by malicious packages in open source repositories.&lt;/p&gt;
-
-
-
-&lt;p&gt;One tactic is to include a &lt;a href="https://www.csoonline.com/article/573185/what-is-an-sbom-software-bill-of-materials-explained.html" target="_blank"&gt;software bill of materials&lt;/a&gt; in every application an IT department acquires. With it, the DevOps/DevSecOps teams can track software components, identify vulnerabilities, and ensure compliance. &lt;/p&gt;
-
-
-
-&lt;p&gt;In 2021, the US Cybersecurity and Infrastructure Security Agency (CISA) and the US National Institute for Standards and Technology (NIST) published an advisory, &lt;a href="https://www.cisa.gov/sites/default/files/publications/defending_against_software_supply_chain_attacks_508.pdf" rel="noreferrer noopener" target="_blank"&gt;&lt;em&gt;Defending Against Software Supply Chain Attacks&lt;/em&gt;, &lt;/a&gt;providing advice for creating secure open source apps. It starts with the creation of a formal supply chain risk management program to ensure that supply chain risk receives attention across the organization, even among executives and managers within operations and personnel across supporting roles, such as IT, acquisitions, legal, risk management, and security.&lt;/p&gt;
-
-
-
-&lt;p&gt;An organization can reduce its software attack surface through configuration management, the advisory says, which includes:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;placing configurations under change control;&lt;/li&gt;
-
-
-
-&lt;li&gt;conducting security impact analyses;&lt;/li&gt;
-
-
-
-&lt;li&gt;implementing manufacturer-provided guidelines to harden software, operating systems, and firmware;&lt;/li&gt;
-
-
-
-&lt;li&gt;• maintaining an information system component inventory.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;In addition, the Open Source Web Application Security Project (OWASP) offers this advice to developers using npm:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;always vet and perform due diligence on third-party modules that you install to confirm their health and credibility;&lt;/li&gt;
-
-
-
-&lt;li&gt;hold off on immediate upgrades to new versions; allow new package versions some time to circulate before trying them out.&lt;/li&gt;
-
-
-
-&lt;li&gt;before upgrading, make sure to review changelogs and release notes for the upgraded version.&lt;/li&gt;
-
-
-
-&lt;li&gt;when installing packages, make sure to add the &lt;em&gt;ignore-scripts&lt;/em&gt; suffix to disable the execution of any scripts by third-party packages.&lt;/li&gt;
-
-
-
-&lt;li&gt;consider adding &lt;em&gt;ignore-scripts&lt;/em&gt; to the .npmrc project file, or to the global npm configuration.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Finally, &lt;a href="https://www.andrewkrug.com/bio/" rel="noreferrer noopener" target="_blank"&gt;Andrew Krug&lt;/a&gt;, Datadog’s head of security advocacy, offered these additional tips:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;give developers the ability to install real-time package scanning at installation;&lt;/li&gt;
-
-
-
-&lt;li&gt;guard against typosquatting and dependency confusion by prioritizing the use of internal package repositories as a guardrail for approved packages;&lt;/li&gt;
-
-
-
-&lt;li&gt;maintain software bills of materials;&lt;/li&gt;
-
-
-
-&lt;li&gt;Deploy SCA (software composition analysis) at every phase of the software development lifecycle. Traditional SCA tools only periodically analyze code snapshots, he said, but effective detection must be complemented with real-time visibility into deployed services, including production, to reprioritize issues and focus on those exposed in sensitive environments.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.infoworld.com/article/4086337/malicious-npm-packages-contain-vidar-infostealer.html" target="_blank"&gt;InfoWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4086415/malicious-npm-packages-contain-vidar-infostealer-2.html</guid>
+      <title>Red Hat security advisory (AV25-700)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-700</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-700</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.17</comments>
-      <pubDate>Fri, 07 Nov 2025 02:34:07 +0000</pubDate>
+      <comments>Score: 7.16</comments>
+      <pubDate>Mon, 27 Oct 2025 19:08:50 +0000</pubDate>
     </item>
     <item>
       <title>654 war crimes suspects tied to Russian paramilitary</title>
@@ -186,27 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.17</comments>
-      <pubDate>Sun, 09 Nov 2025 11:26:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>HashiCorp security advisory (AV25-701)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-701</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-701</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.20</comments>
-      <pubDate>Tue, 28 Oct 2025 12:28:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>Apache Tomcat security advisory (AV25-702)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/apache-tomcat-security-advisory-av25-702</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-tomcat-security-advisory-av25-702</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.20</comments>
-      <pubDate>Tue, 28 Oct 2025 12:59:26 +0000</pubDate>
+      <pubDate>Sun, 09 Nov 2025 12:18:25 +0000</pubDate>
     </item>
     <item>
       <title>Data Security Posture Management: Die besten DSPM-Tools</title>
@@ -353,8 +174,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3493645/data-security-posture-management-die-besten-dspm-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.20</comments>
+      <comments>Score: 7.18</comments>
       <pubDate>Fri, 07 Nov 2025 04:07:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>HashiCorp security advisory (AV25-701)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-701</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-701</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.20</comments>
+      <pubDate>Tue, 28 Oct 2025 12:28:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>Apache Tomcat security advisory (AV25-702)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/apache-tomcat-security-advisory-av25-702</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-tomcat-security-advisory-av25-702</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.20</comments>
+      <pubDate>Tue, 28 Oct 2025 12:59:26 +0000</pubDate>
     </item>
     <item>
       <title>Veeam security advisory (AV25-703)</title>
@@ -363,7 +204,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av25-703</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.21</comments>
+      <comments>Score: 7.20</comments>
       <pubDate>Tue, 28 Oct 2025 17:04:38 +0000</pubDate>
     </item>
     <item>
@@ -375,46 +216,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.21</comments>
       <pubDate>Tue, 28 Oct 2025 19:22:31 +0000</pubDate>
-    </item>
-    <item>
-      <title>VMware security advisory (AV25-705)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-705</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-705</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
-      <pubDate>Wed, 29 Oct 2025 13:04:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV25-706)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-706</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-706</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
-      <pubDate>Wed, 29 Oct 2025 13:38:56 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL25-016 Internet-accessible industrial control systems (ICS) abused by hacktivists</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
-      <pubDate>Wed, 29 Oct 2025 14:01:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Jenkins security advisory (AV25-707)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-707</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-707</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.27</comments>
-      <pubDate>Wed, 29 Oct 2025 17:26:15 +0000</pubDate>
     </item>
     <item>
       <title>Why can’t enterprises get a handle on the cloud misconfiguration problem?</title>
@@ -612,8 +413,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4083736/why-cant-enterprises-get-a-handle-on-the-cloud-misconfiguration-problem.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.27</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Fri, 07 Nov 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>VMware security advisory (AV25-705)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-705</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-705</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.25</comments>
+      <pubDate>Wed, 29 Oct 2025 13:04:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV25-706)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-706</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-706</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.25</comments>
+      <pubDate>Wed, 29 Oct 2025 13:38:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL25-016 Internet-accessible industrial control systems (ICS) abused by hacktivists</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-016-internet-accessible-industrial-control-systems-ics-abused-hacktivists</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.25</comments>
+      <pubDate>Wed, 29 Oct 2025 14:01:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>Jenkins security advisory (AV25-707)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-707</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-707</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.26</comments>
+      <pubDate>Wed, 29 Oct 2025 17:26:15 +0000</pubDate>
     </item>
     <item>
       <title>Docker security advisory (AV25–708)</title>
@@ -654,16 +495,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.33</comments>
       <pubDate>Thu, 30 Oct 2025 14:19:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>VMware security advisory (AV25-629) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-629</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-629</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Thu, 30 Oct 2025 19:05:03 +0000</pubDate>
     </item>
     <item>
       <title>Business continuity and cybersecurity: Two sides of the same coin</title>
@@ -809,8 +640,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086135/business-continuity-and-cybersecurity-two-sides-of-the-same-coin.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 07 Nov 2025 10:50:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>VMware security advisory (AV25-629) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-629</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-629</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.35</comments>
+      <pubDate>Thu, 30 Oct 2025 19:05:03 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV25-711)</title>
@@ -829,7 +670,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av25-712</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Fri, 31 Oct 2025 18:59:47 +0000</pubDate>
     </item>
     <item>
@@ -850,7 +691,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Sun, 09 Nov 2025 11:26:00 +0000</pubDate>
+      <pubDate>Sun, 09 Nov 2025 12:18:25 +0000</pubDate>
     </item>
     <item>
       <title>Europol and UEFA united for fair and safe football</title>
@@ -860,7 +701,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 09 Nov 2025 11:26:00 +0000</pubDate>
+      <pubDate>Sun, 09 Nov 2025 12:18:25 +0000</pubDate>
     </item>
     <item>
       <title>Sweden hosts naval exercise with 200 special tactics operators</title>
@@ -870,7 +711,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 09 Nov 2025 11:26:00 +0000</pubDate>
+      <pubDate>Sun, 09 Nov 2025 12:18:25 +0000</pubDate>
     </item>
     <item>
       <title>15th EDEN Event: Data Protection and Cybersecurity in Law Enforcement</title>
@@ -880,7 +721,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Sun, 09 Nov 2025 11:26:00 +0000</pubDate>
+      <pubDate>Sun, 09 Nov 2025 12:18:25 +0000</pubDate>
     </item>
     <item>
       <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
@@ -890,7 +731,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.56</comments>
-      <pubDate>Sun, 09 Nov 2025 11:26:00 +0000</pubDate>
+      <pubDate>Sun, 09 Nov 2025 12:18:25 +0000</pubDate>
     </item>
     <item>
       <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
@@ -900,7 +741,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.75</comments>
-      <pubDate>Sun, 09 Nov 2025 11:26:00 +0000</pubDate>
+      <pubDate>Sun, 09 Nov 2025 12:18:25 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-714)</title>
@@ -909,7 +750,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-714</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 03 Nov 2025 14:03:39 +0000</pubDate>
     </item>
     <item>
@@ -919,7 +760,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-715</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 03 Nov 2025 14:10:17 +0000</pubDate>
     </item>
     <item>
@@ -929,7 +770,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-716</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 03 Nov 2025 14:14:54 +0000</pubDate>
     </item>
     <item>
@@ -939,7 +780,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-717</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 03 Nov 2025 14:32:06 +0000</pubDate>
     </item>
     <item>
@@ -949,7 +790,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-718</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 03 Nov 2025 14:46:11 +0000</pubDate>
     </item>
     <item>
@@ -959,7 +800,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 03 Nov 2025 15:23:54 +0000</pubDate>
     </item>
     <item>
@@ -979,18 +820,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av25-721</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Mon, 03 Nov 2025 16:57:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operation Chargeback: 4.3 million cardholders affected, EUR 300 million in damages</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-chargeback-43-million-cardholders-affected-eur-300-million-in-damages</link>
-      <description>On 4 November 2025, an international coordinated action day targeted three major fraud and money laundering networks as part of Operation “Chargeback.” Led by the Cybercrime Department (Landeszentralstelle Cybercrime) of the General Prosecutor's Office (Generalstaatsanwaltschaft) in Koblenz, Germany, and the German Federal Criminal Police Office (Bundeskriminalamt), the operation has been investigating these networks since December 2020. More than 60 house searches were conducted and a total of 18 arrest warrants executed. The criminal networks are suspected of misusing credit card data from over 4.3 million cardholders across 193 countries. In total, the estimated damage from the fraud scheme exceeds EUR 300 million, with attempted damages amounting to over EUR 750 million.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-chargeback-43-million-cardholders-affected-eur-300-million-in-damages</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
-      <pubDate>Sun, 09 Nov 2025 11:26:00 +0000</pubDate>
     </item>
     <item>
       <title>Nikkei’s Slack breach leaks sensitive data from more than 17,000 users</title>
@@ -1056,8 +887,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086100/nikkeis-slack-breach-leaks-sensitive-data-from-more-than-17000-users.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Thu, 06 Nov 2025 20:13:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operation Chargeback: 4.3 million cardholders affected, EUR 300 million in damages</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-chargeback-43-million-cardholders-affected-eur-300-million-in-damages</link>
+      <description>On 4 November 2025, an international coordinated action day targeted three major fraud and money laundering networks as part of Operation “Chargeback.” Led by the Cybercrime Department (Landeszentralstelle Cybercrime) of the General Prosecutor's Office (Generalstaatsanwaltschaft) in Koblenz, Germany, and the German Federal Criminal Police Office (Bundeskriminalamt), the operation has been investigating these networks since December 2020. More than 60 house searches were conducted and a total of 18 arrest warrants executed. The criminal networks are suspected of misusing credit card data from over 4.3 million cardholders across 193 countries. In total, the estimated damage from the fraud scheme exceeds EUR 300 million, with attempted damages amounting to over EUR 750 million.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-chargeback-43-million-cardholders-affected-eur-300-million-in-damages</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.03</comments>
+      <pubDate>Sun, 09 Nov 2025 12:18:25 +0000</pubDate>
     </item>
     <item>
       <title>54 individuals arrested in action against labour exploitation</title>
@@ -1067,7 +908,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.05</comments>
-      <pubDate>Sun, 09 Nov 2025 11:26:00 +0000</pubDate>
+      <pubDate>Sun, 09 Nov 2025 12:18:25 +0000</pubDate>
     </item>
     <item>
       <title>Apple security advisory (AV25-722)</title>
@@ -1076,7 +917,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-722</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Tue, 04 Nov 2025 14:20:03 +0000</pubDate>
     </item>
     <item>
@@ -1086,8 +927,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-november-2025-monthly-rollup-av25-723</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Tue, 04 Nov 2025 14:37:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tenable security advisory (AV25-725)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-725</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-725</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.20</comments>
+      <pubDate>Tue, 04 Nov 2025 18:27:10 +0000</pubDate>
     </item>
     <item>
       <title>Cybercrime-as-a-service takedown: 7 arrested</title>
@@ -1097,17 +948,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.20</comments>
-      <pubDate>Sun, 09 Nov 2025 11:26:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tenable security advisory (AV25-725)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-725</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-725</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
-      <pubDate>Tue, 04 Nov 2025 18:27:10 +0000</pubDate>
+      <pubDate>Sun, 09 Nov 2025 12:18:25 +0000</pubDate>
     </item>
     <item>
       <title>VMware security advisory (AV25-724) – Update 1</title>
@@ -1116,7 +957,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-724</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Wed, 05 Nov 2025 18:08:43 +0000</pubDate>
     </item>
     <item>
@@ -1126,7 +967,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-726</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Wed, 05 Nov 2025 19:51:20 +0000</pubDate>
     </item>
     <item>
@@ -1136,7 +977,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Thu, 06 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -1146,7 +987,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Fri, 07 Nov 2025 14:12:09 +0000</pubDate>
     </item>
     <item>
@@ -1156,7 +997,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Fri, 07 Nov 2025 14:28:44 +0000</pubDate>
     </item>
     <item>
@@ -1166,7 +1007,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.49</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Fri, 07 Nov 2025 15:59:01 +0000</pubDate>
     </item>
     <item>
@@ -1176,7 +1017,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-730</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Fri, 07 Nov 2025 16:09:33 +0000</pubDate>
     </item>
     <item>
@@ -1186,7 +1027,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-november-2025-monthly-rollup-av25-731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Fri, 07 Nov 2025 18:22:37 +0000</pubDate>
     </item>
   </channel>
