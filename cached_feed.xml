@@ -8,207 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Nov 2025 14:22:22 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Nov 2025 15:25:24 +0000</lastBuildDate>
     <item>
-      <title>North Korean hackers exploit Google’s safety tools for remote wipe</title>
-      <link>https://www.csoonline.com/article/4088037/north-korean-hackers-exploit-googles-safety-tools-for-remote-wipe.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;North Korea-linked threat actors have found a novel way to weaponize Google’s own security ecosystem, using it to wipe espionage data from victim phones remotely.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to findings by Genians Security Center (GSC), the attackers leveraged the Android device-tracing and management service “Find Hub” to remotely wipe data on Android phones and tablets.&lt;/p&gt;
-
-
-
-&lt;p&gt;“While Find Hub is intended to safeguard Android devices, this is the first confirmed case in which a state-sponsored threat actor obtained remote control by compromising Google accounts, then used the service to perform location tracking and remote wipe,” GSC researchers said in a blog post. “This development demonstrates a realistic risk that the feature can be abused within APT campaigns.”&lt;/p&gt;
-
-
-
-&lt;p&gt;GSC has attributed these activities to the KONNI APT group, known to be associated with the &lt;a href="https://www.csoonline.com/article/2066558/north-korean-kimsuky-groups-attack-chain-blends-with-legitimate-traffic.html"&gt;Kimsuky&lt;/a&gt; or APT37 groups.&lt;/p&gt;
-
-
-
-&lt;p&gt;The campaign was further bolstered by social engineering via the popular Korean messenger KaKaoTalk, where victims were sent malicious apps disguised as psychological “stress-relief” programs.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="from-the-lost-phone-feature-to-a-wipe-bomb"&gt;From the lost phone feature to a wipe bomb&lt;/h2&gt;
-
-
-
-&lt;p&gt;GSC found that the attackers compromised legitimate Google accounts to take full advantage of Find Hub’s remote-management functionality. Once logged in, they could track location and execute wipe commands on Android devices, effectively deleting personal data and disabling the device’s normal alert channels.&lt;/p&gt;
-
-
-
-&lt;p&gt;“A notable finding is that immediately after confirming through Find Hub’s location query that the victim was outside, the threat actor executed a remote reset command on the victim’s devices,” the researchers added. “The remote reset halted normal device operation, blocking notification and message alerts from messenger applications and effectively cutting off the account owner’s awareness channel, thereby delaying detection and response.”&lt;/p&gt;
-
-
-
-&lt;p&gt;By cutting the device off, the attacker creates a silent window for further propagation and control.&lt;/p&gt;
-
-
-
-&lt;p&gt;The blog &lt;a href="https://www.genians.co.kr/en/blog/threat_intelligence/android" rel="noreferrer noopener" target="_blank"&gt;explained&lt;/a&gt; that initial access was obtained through spear-phishing emails impersonating South Korea’s National Tax Service (NTS). Victims received an email with an attachment that, once executed, installed malicious scripts (Autolt-based) or dropped a RAT to steal Google credentials.&lt;/p&gt;
-
-
-
-&lt;p&gt;“To prevent the unauthorized abuse of remote wipe features through compromised Google accounts, service providers should review and implement real-time security verification measures, such as additional authentication processes that confirm the legitimate device owner,” researchers recommended.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-social-engineering-link"&gt;The social engineering link&lt;/h2&gt;
-
-
-
-&lt;p&gt;The threat continues beyond device wiping, with attackers distributing malware by compromising &lt;a href="https://www.csoonline.com/article/538482/data-protection-android-messaging-malware-targets-tibetan-activists.html"&gt;KakaoTalk&lt;/a&gt; accounts of trusted contacts.&lt;br /&gt;&lt;br /&gt;GSC found that malicious files disguised as “stress-relief programs” were sent to close contacts via the messenger. “Among the victims was a professional psychological counselor who supports North Korean defector youths during resettlement by addressing psychological difficulties and providing services such as career guidance, educational counseling, and mentoring to help stabilize their well-being,” researchers added.&lt;/p&gt;
-
-
-
-&lt;p&gt;While one attack vector used device neutralization to disable alerts, the other launched the malware distribution via compromised chat accounts. GSC called this mix unprecedented among known state-sponsored APT actors and that it shows the attacker’s “tactical maturity and advanced evasion strategy”.&lt;/p&gt;
-
-
-
-&lt;p&gt;Reinforcing verification of files received via messenger platforms before opening and execution, and using clear warning prompts to help users avoid downloading or running malicious files, might help against this vector, the blog noted. The Genians findings, like the recent &lt;a href="https://www.csoonline.com/article/4070281/clayrat-spyware-turns-phones-into-distribution-hubs-via-sms-and-telegram.html"&gt;ClayRat&lt;/a&gt; and &lt;a href="https://www.csoonline.com/article/3840157/badbox-android-botnet-disrupted-through-coordinated-threat-hunting.html"&gt;Badbox 2.0&lt;/a&gt; campaigns, highlight a growing trend of attackers exploiting trusted apps and built-in services instead of relying on complex zero-day exploits.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4088037/north-korean-hackers-exploit-googles-safety-tools-for-remote-wipe.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
-      <pubDate>Tue, 11 Nov 2025 12:06:40 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU-Kommission will DSGVO für KI und Cookie-Tracking lockern</title>
-      <link>https://www.csoonline.com/article/4088083/eu-kommission-will-dsgvo-fur-ki-und-cookie-tracking-lockern.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-large is-resized"&gt; srcset="https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?quality=50&amp;amp;strip=all 4032w, https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?resize=300%2C168&amp;amp;quality=50&amp;amp;strip=all 300w, https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?resize=768%2C432&amp;amp;quality=50&amp;amp;strip=all 768w, https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?resize=1024%2C576&amp;amp;quality=50&amp;amp;strip=all 1024w, https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?resize=1536%2C864&amp;amp;quality=50&amp;amp;strip=all 1536w, https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?resize=2048%2C1152&amp;amp;quality=50&amp;amp;strip=all 2048w, https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?resize=1240%2C697&amp;amp;quality=50&amp;amp;strip=all 1240w, https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?resize=150%2C84&amp;amp;quality=50&amp;amp;strip=all 150w, https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?resize=854%2C480&amp;amp;quality=50&amp;amp;strip=all 854w, https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?resize=640%2C360&amp;amp;quality=50&amp;amp;strip=all 640w, https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2645792213.jpg?resize=444%2C250&amp;amp;quality=50&amp;amp;strip=all 444w" width="1024" height="576" sizes="auto, (max-width: 1024px) 100vw, 1024px"&gt;&lt;figcaption class="wp-element-caption"&gt;Die vorgeschlagenen Änderungen der EU-Kommission durch das „Digital Omnibus”-Paket  gefährden laut Datenschützern die DSGVO.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;Alicia97 – shutterstock.com&lt;/p&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Laut einem durchgesickerten Entwurf, über den die deutsche Interessenvertretung &lt;a href="https://netzpolitik.org/2025/digitaler-omnibus-eu-kommission-will-datenschutzgrundverordnung-und-ki-regulierung-schleifen/" rel="noreferrer noopener" target="_blank"&gt;Netzpolitik.org&lt;/a&gt; berichtet, würde das bevorstehende „Digital Omnibus”-Paket der EU-Kommission die Datenschutz-Grundverordnung (DSGVO) massiv verändern. Der Vorschlag soll am 19. November 2025 offiziell vorgestellt werden. Datenschützer befürchten jedoch, dass dies die DSGVO schwächen könnte.&lt;/p&gt;
-
-
-
-&lt;p&gt;So bemängelt der Datenschutzrechtler Max Schrems, dass viele Elemente der vorgeschlagenen Reform gegen die Rechtsprechung des Europäischen Gerichtshofs (EuGH), europäische Konventionen und die Europäische Charta der Grundrechte verstoßen würden. „Das wäre der extremste Angriff auf die Privatsphäre der Europäer seit in Krafttreten der DSGVO.“&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="cookies-unterliegen-der-dsgvo"&gt;Cookies unterliegen der DSGVO&lt;/h2&gt;
-
-
-
-&lt;p&gt;Der Entwurf würde Artikel 88a in die DSGVO aufnehmen, um die „Verarbeitung personenbezogener Daten auf und von Endgeräten” abzudecken. Dadurch würde die Cookie-Regulierung von der ePrivacy-Richtlinie in die DSGVO verlagert werden.&lt;/p&gt;
-
-
-
-&lt;p&gt;Derzeit verlangt Artikel 5 Absatz 3 der ePrivacy-Richtlinie, dass Websites die ausdrückliche Zustimmung einholen müssen, bevor sie nicht essenzielle Cookies auf den Geräten der Nutzer speichern oder darauf zugreifen dürfen.&lt;/p&gt;
-
-
-
-&lt;p&gt;Die Kommission argumentierte, dass dies aufgrund sich überschneidender Zuständigkeiten der nationalen Behörden zu Rechtsunsicherheit und „höheren &lt;a href="https://www.csoonline.com/de/compliance/" target="_blank"&gt;Compliance&lt;/a&gt;-Kosten“ geführt habe.&lt;/p&gt;
-
-
-
-&lt;p&gt;Nach der vorgeschlagenen Änderung könnten Webseiten Daten, die über Cookies gesammelt wurden, auf der Grundlage einer „geschlossenen Liste von Zwecken mit geringem Risiko“ oder auf jeder anderen Rechtsgrundlage gemäß der DSGVO, einschließlich berechtigter Interessen, verarbeiten. Dies würde eine wesentliche Veränderung vom Opt-in- zum Opt-out-Tracking bedeuten.&lt;/p&gt;
-
-
-
-&lt;p&gt;Anstatt die Nutzer im Voraus um ihre Zustimmung zu bitten, könnten Unternehmen sie standardmäßig tracken und es den Einzelnen überlassen, später Widerspruch einzulegen.&lt;/p&gt;
-
-
-
-&lt;p&gt;„Zwar ist die Einwilligung erforderlich, um die Kontrolle der betroffenen Personen zu gewährleisten, doch ist sie nicht immer die am besten geeignete Rechtsgrundlage für die anschließende Verarbeitung“, &lt;a href="https://cdn.netzpolitik.org/wp-upload/2025/11/EU-Kommission-Digital-Omnibus-A-Data-Act-und-DSGVO.pdf" rel="noreferrer noopener" target="_blank"&gt;heißt es in dem Entwurf&lt;/a&gt;. „Darüber hinaus führte das duale System aus ePrivacy-Richtlinie und Datenschutz-Grundverordnung dazu, dass verschiedene nationale Behörden für die Überwachung der Vorschriften der beiden Rechtsrahmen zuständig waren.“&lt;/p&gt;
-
-
-
-&lt;p&gt;Datenschutzgruppen werfen der Kommission vor, sie nutze die „Cookie-Müdigkeit“ als Vorwand, um die Datenschutzstandards zu verwässern.&lt;/p&gt;
-
-
-
-&lt;p&gt;„Die DSGVO, der ePrivacy-Rahmen und das KI-Gesetz sind keine Hindernisse für Innovation – sie sind die Grundlage des menschenzentrierten digitalen Modells Europas“, schrieb die Bürgerrechtsvereinigung &lt;a href="https://edri.org/our-work/consultation-response-to-the-european-commissions-call-for-evidence-on-the-digital-omnibus/" rel="noreferrer noopener" target="_blank"&gt;European Digital Rights (EDRi)&lt;/a&gt; in einem Blogbeitrag im Oktober 2025. „Unter dem Vorwand der Kohärenz scheint die Kommission jedoch bereit zu sein, den ePrivacy-Schutz zu schwächen. “&lt;/p&gt;
-
-
-
-&lt;p&gt;Der Entwurf enthält auch einen Artikel 88b, der vorsieht, dass Browser oder Betriebssysteme die Einwilligungspräferenzen der Nutzer automatisch übermitteln müssen, sobald technische Standards definiert sind, wodurch die derzeitige Flut von Cookie-Bannern möglicherweise auslaufen würde.&lt;/p&gt;
-
-
-
-&lt;p&gt;Für Medienunternehmen gibt es jedoch eine Ausnahmeregelung. Nachrichtenorganisationen könnten weiterhin eine ausdrückliche Einwilligung verlangen, was die Kommission mit dem Schutz der „wirtschaftlichen Grundlage“ des Journalismus begründete.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="grunes-licht-fur-ki-training"&gt;Grünes Licht für KI-Training&lt;/h2&gt;
-
-
-
-&lt;p&gt;Darüber hinaus befasst sich der Änderungsvorschlag direkt mit einer der umstrittensten Fragen des &lt;a href="https://www.csoonline.com/article/3491652/ai-act-wie-europas-ki-gesetz-cisos-fordert.html" target="_blank"&gt;EU-Datenschutzrechts&lt;/a&gt;: ob Unternehmen KI-Systeme mit personenbezogenen Daten trainieren dürfen.&lt;/p&gt;
-
-
-
-&lt;p&gt;Der Entwurf sieht vor, dass das Training, Testen und Validieren von KI auf der Grundlage des „berechtigten Interesses“ der DSGVO durchgeführt werden darf, sofern Unternehmen Schutzmaßnahmen wie Datenminimierung, Transparenz und ein bedingungsloses Widerspruchsrecht implementieren.&lt;/p&gt;
-
-
-
-&lt;p&gt;„Die Verarbeitung personenbezogener Daten für das KI-Training kann daher zum Zwecke eines berechtigten Interesses durchgeführt werden”, heißt es im Entwurf, wobei hinzugefügt wird, dass Entwickler sicherstellen müssen, dass das Training „für die betroffene Person und die Gesellschaft insgesamt von Vorteil ist”.&lt;/p&gt;
-
-
-
-&lt;p&gt;Die Kommission führte die Notwendigkeit, Verzerrungen zu erkennen und genaue Modellergebnisse zu gewährleisten, als Beispiele für „vorteilhafte” Zwecke an.&lt;/p&gt;
-
-
-
-&lt;p&gt;Datenschutzanwälte warnten jedoch, dass die Berufung auf ein berechtigtes Interesse für die KI-Verarbeitung die Tür für groß angelegtes Data Mining ohne individuelle Zustimmung öffnen könnte, was die DSGVO ursprünglich verhindern sollte.&lt;/p&gt;
-
-
-
-&lt;p&gt;Der Entwurf würde auch eine begrenzte Ausnahme für Daten besonderer Kategorien (sensible Daten) einführen, die versehentlich in KI-Datensätzen auftauchen. Wenn es einen „unverhältnismäßigen Aufwand“ erfordern würde, solche Daten zu entfernen, könnten Unternehmen sie unter Schutzmaßnahmen, die ihre Verwendung oder Offenlegung verhindern, aufbewahren.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="schutz-sensibler-daten-eingeschrankt"&gt;Schutz sensibler Daten eingeschränkt&lt;/h2&gt;
-
-
-
-&lt;p&gt;Eine weitere umstrittene Änderung des Vorschlags wäre die Einschränkung der Definition sensibler Daten gemäß Artikel 9 der DSGVO. Ein stärkerer Schutz würde nur dann gelten, wenn Informationen direkt Merkmale wie Herkuft, Religion oder Gesundheit offenlegen, wobei Daten, die diese Merkmale nur durch Analyse oder Schlussfolgerungen implizieren, ausgeschlossen wären.&lt;/p&gt;
-
-
-
-&lt;p&gt;„Für die meisten Arten von personenbezogenen Daten, die in Artikel 9 Absatz 1 aufgeführt sind, bestehen keine derartigen erheblichen Risiken, wenn die Daten nicht von Natur aus sensibel sind“, heißt es in dem Entwurf.&lt;/p&gt;
-
-
-
-&lt;p&gt;Kritiker warnen, dass dies Unternehmen ermöglichen könnte, aus scheinbar neutralen Daten geschützte Merkmale wie sexuelle Orientierung oder politische Meinungen abzuleiten, ohne dass höhere rechtliche Schutzmaßnahmen ausgelöst werden.&lt;/p&gt;
-
-
-
-&lt;p&gt;Das &lt;a href="https://www.europeanlawinstitute.eu/fileadmin/user_upload/p_eli/Publications/ELI_Response_-_Simpler__fairer__more_effective.pdf" rel="noreferrer noopener" target="_blank"&gt;European Law Institute&lt;/a&gt; räumte in seiner Stellungnahme vom 14. Oktober 2025 ein, dass begrenzte Aktualisierungen der DSGVO notwendig sein könnten, warnte jedoch, dass „Verbesserungen nicht auf Kosten des Schutzes der Grundrechte gehen dürfen“.&lt;/p&gt;
-
-
-
-&lt;p&gt;Die vorgeschlagenen Änderungen könnten die Datenverwaltung von Unternehmen in ganz Europa erheblich verändern. Unternehmen würden für die meisten Tracking-Cookies keine Einwilligungsmanagementsysteme mehr benötigen, müssten jedoch detaillierte Unterlagen führen, um die Verarbeitung unter „berechtigtem Interesse“ zu rechtfertigen.&lt;/p&gt;
-
-
-
-&lt;p&gt;Das European Digital Rights Network kritisierte die Konsultation als „ausgeschlossen durch Design“ mit „außerordentlich kurzen“ Fristen und Realitätschecks, die sich „fast ausschließlich auf die Stimmen der Industrie“ konzentrierten.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4088083/eu-kommission-will-dsgvo-fur-ki-und-cookie-tracking-lockern.html</guid>
+      <title>New UK laws to strengthen critical infrastructure cyber defenses</title>
+      <link>https://www.bleepingcomputer.com/news/security/new-uk-laws-to-strengthen-critical-infrastructure-cyber-defenses/</link>
+      <description>The United Kingdom has introduced new legislation to boost cybersecurity defenses for hospitals, energy systems, water supplies, and transport networks against cyberattacks, linked to annual damages of nearly £15 billion ($19.6 billion). [...]</description>
+      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/new-uk-laws-to-strengthen-critical-infrastructure-cyber-defenses/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.40</comments>
-      <pubDate>Tue, 11 Nov 2025 13:24:59 +0000</pubDate>
+      <pubDate>Wed, 12 Nov 2025 09:08:54 -0500</pubDate>
     </item>
     <item>
       <title>Apple security advisory (AV25-722)</title>
@@ -231,14 +40,13 @@
       <pubDate>Tue, 04 Nov 2025 14:37:46 +0000</pubDate>
     </item>
     <item>
-      <title>New UK laws to strengthen critical infrastructure cyber defenses</title>
-      <link>https://www.bleepingcomputer.com/news/security/new-uk-laws-to-strengthen-critical-infrastructure-cyber-defenses/</link>
-      <description>The United Kingdom has introduced new legislation to boost cybersecurity defenses for hospitals, energy systems, water supplies, and transport networks against cyberattacks, linked to annual damages of nearly £15 billion ($19.6 billion). [...]</description>
-      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/new-uk-laws-to-strengthen-critical-infrastructure-cyber-defenses/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
+      <title>Google Sues to Disrupt Chinese SMS Phishing Triad</title>
+      <link>https://krebsonsecurity.com/2025/11/google-sues-to-disrupt-chinese-sms-phishing-triad/</link>
+      <description>Google is suing more than two dozen unnamed individuals allegedly involved in peddling a popular China-based mobile phishing service that helps scammers impersonate hundreds of trusted brands, blast out text message lures, and convert phished payment card data into mobile wallets from Apple and Google.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2025/11/google-sues-to-disrupt-chinese-sms-phishing-triad/</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
-      <pubDate>Wed, 12 Nov 2025 09:08:54 -0500</pubDate>
+      <comments>Score: 7.42</comments>
+      <pubDate>Thu, 13 Nov 2025 14:47:22 +0000</pubDate>
     </item>
     <item>
       <title>Tenable security advisory (AV25-725)</title>
@@ -258,7 +66,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Thu, 13 Nov 2025 12:22:22 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 13:25:24 +0000</pubDate>
     </item>
     <item>
       <title>Sweden hosts naval exercise with 200 special tactics operators</title>
@@ -268,7 +76,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 13 Nov 2025 12:22:22 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 13:25:24 +0000</pubDate>
     </item>
     <item>
       <title>Europol and UEFA united for fair and safe football</title>
@@ -278,17 +86,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 13 Nov 2025 12:22:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</link>
-      <description>Europol is calling for a coordinated European response to tackle caller ID spoofing, an in increasingly common tool, used for online fraud and social engineering scams. Caller ID spoofing occurs when criminals falsify the information displayed on phones, making numbers appear legitimate to deceive victims. This practice is driving substantial financial and societal harm, with an estimated EUR 850 million lost worldwide each year.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Thu, 13 Nov 2025 12:22:22 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 13:25:24 +0000</pubDate>
     </item>
     <item>
       <title>Active Directory Under Siege: Why Critical Infrastructure Needs Stronger Security</title>
@@ -297,7 +95,7 @@
       <guid isPermaLink="false">https://thehackernews.com/2025/11/active-directory-under-siege-why.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Wed, 12 Nov 2025 16:37:00 +0530</pubDate>
     </item>
     <item>
@@ -309,6 +107,16 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.56</comments>
       <pubDate>Wed, 05 Nov 2025 18:08:43 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</link>
+      <description>Europol is calling for a coordinated European response to tackle caller ID spoofing, an in increasingly common tool, used for online fraud and social engineering scams. Caller ID spoofing occurs when criminals falsify the information displayed on phones, making numbers appear legitimate to deceive victims. This practice is driving substantial financial and societal harm, with an estimated EUR 850 million lost worldwide each year.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fake-number-real-damage-europol-urges-action-against-caller-id-spoofing</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.56</comments>
+      <pubDate>Thu, 13 Nov 2025 13:25:24 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV25-726)</title>
@@ -328,7 +136,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Thu, 13 Nov 2025 12:22:22 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 13:25:24 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV25-619) – Update 1</title>
@@ -339,16 +147,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.72</comments>
       <pubDate>Thu, 06 Nov 2025 18:18:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</link>
-      <description>The conference “From CLICK to CRIME: Investigating Intellectual Property Crime in the Digital Age” was held on 22 and 23 October 2025 in Sofia, Bulgaria. Jointly organised by Europol, the European Union Intellectual Property Office (EUIPO) and Bulgaria’s General Directorate Combating Organised Crime (GDBOP), the event highlighted the vital importance of collaboration in tackling online crime. The participants reaffirmed the importance of strong collective efforts in tackling online-enabled intellectual property crime to protect consumers, safeguard creativity and uphold trust in the digital economy.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
-      <pubDate>Thu, 13 Nov 2025 12:22:22 +0000</pubDate>
     </item>
     <item>
       <title>November Patch Tuesday: Zero day Windows kernel flaw in servers, controllers, and PCs</title>
@@ -498,48 +296,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4088341/november-patch-tuesday-zero-day-windows-kernel-flaw-in-servers-controllers-and-pcs.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 12 Nov 2025 03:03:27 +0000</pubDate>
     </item>
     <item>
-      <title>Apple security advisory (AV25-727)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</guid>
+      <title>From CLICK to CRIME: investigating intellectual property crime in the digital age</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</link>
+      <description>The conference “From CLICK to CRIME: Investigating Intellectual Property Crime in the Digital Age” was held on 22 and 23 October 2025 in Sofia, Bulgaria. Jointly organised by Europol, the European Union Intellectual Property Office (EUIPO) and Bulgaria’s General Directorate Combating Organised Crime (GDBOP), the event highlighted the vital importance of collaboration in tackling online crime. The participants reaffirmed the importance of strong collective efforts in tackling online-enabled intellectual property crime to protect consumers, safeguard creativity and uphold trust in the digital economy.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/click-to-crime-investigating-intellectual-property-crime-in-digital-age</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
-      <pubDate>Fri, 07 Nov 2025 14:12:09 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV25-728)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
-      <pubDate>Fri, 07 Nov 2025 14:28:44 +0000</pubDate>
-    </item>
-    <item>
-      <title>Drupal security advisory (AV25-729)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
-      <pubDate>Fri, 07 Nov 2025 15:59:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV25-730)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-730</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-730</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
-      <pubDate>Fri, 07 Nov 2025 16:09:33 +0000</pubDate>
+      <comments>Score: 7.75</comments>
+      <pubDate>Thu, 13 Nov 2025 13:25:24 +0000</pubDate>
     </item>
     <item>
       <title>Zero-day exploits hit Cisco ISE and Citrix systems in an advanced campaign</title>
@@ -616,8 +384,48 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4089200/zero-day-exploits-hit-cisco-ise-and-citrix-systems-in-an-advanced-campaign.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Thu, 13 Nov 2025 12:15:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>Apple security advisory (AV25-727)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.88</comments>
+      <pubDate>Fri, 07 Nov 2025 14:12:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV25-728)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.88</comments>
+      <pubDate>Fri, 07 Nov 2025 14:28:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>Drupal security advisory (AV25-729)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.90</comments>
+      <pubDate>Fri, 07 Nov 2025 15:59:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV25-730)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-730</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-730</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.90</comments>
+      <pubDate>Fri, 07 Nov 2025 16:09:33 +0000</pubDate>
     </item>
     <item>
       <title>Qualcomm security advisory – November 2025 monthly rollup (AV25-731)</title>
@@ -626,7 +434,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-november-2025-monthly-rollup-av25-731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Fri, 07 Nov 2025 18:22:37 +0000</pubDate>
     </item>
     <item>
@@ -797,18 +605,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4088198/beyond-the-checklist-shifting-from-compliance-frameworks-to-real-time-risk-assessments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Wed, 12 Nov 2025 10:43:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operation Chargeback: 4.3 million cardholders affected, EUR 300 million in damages</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-chargeback-43-million-cardholders-affected-eur-300-million-in-damages</link>
-      <description>On 4 November 2025, an international coordinated action day targeted three major fraud and money laundering networks as part of Operation “Chargeback.” Led by the Cybercrime Department (Landeszentralstelle Cybercrime) of the General Prosecutor's Office (Generalstaatsanwaltschaft) in Koblenz, Germany, and the German Federal Criminal Police Office (Bundeskriminalamt), the operation has been investigating these networks since December 2020. More than 60 house searches were conducted and a total of 18 arrest warrants executed. The criminal networks are suspected of misusing credit card data from over 4.3 million cardholders across 193 countries. In total, the estimated damage from the fraud scheme exceeds EUR 300 million, with attempted damages amounting to over EUR 750 million.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-chargeback-43-million-cardholders-affected-eur-300-million-in-damages</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
-      <pubDate>Thu, 13 Nov 2025 12:22:22 +0000</pubDate>
     </item>
     <item>
       <title>Malicious npm package sneaks into GitHub Actions builds</title>
@@ -878,8 +676,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4088529/malicious-npm-package-sneaks-into-github-actions-builds.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Wed, 12 Nov 2025 11:58:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operation Chargeback: 4.3 million cardholders affected, EUR 300 million in damages</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-chargeback-43-million-cardholders-affected-eur-300-million-in-damages</link>
+      <description>On 4 November 2025, an international coordinated action day targeted three major fraud and money laundering networks as part of Operation “Chargeback.” Led by the Cybercrime Department (Landeszentralstelle Cybercrime) of the General Prosecutor's Office (Generalstaatsanwaltschaft) in Koblenz, Germany, and the German Federal Criminal Police Office (Bundeskriminalamt), the operation has been investigating these networks since December 2020. More than 60 house searches were conducted and a total of 18 arrest warrants executed. The criminal networks are suspected of misusing credit card data from over 4.3 million cardholders across 193 countries. In total, the estimated damage from the fraud scheme exceeds EUR 300 million, with attempted damages amounting to over EUR 750 million.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-chargeback-43-million-cardholders-affected-eur-300-million-in-damages</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.03</comments>
+      <pubDate>Thu, 13 Nov 2025 13:25:24 +0000</pubDate>
     </item>
     <item>
       <title>54 individuals arrested in action against labour exploitation</title>
@@ -889,7 +697,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.05</comments>
-      <pubDate>Thu, 13 Nov 2025 12:22:22 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 13:25:24 +0000</pubDate>
     </item>
     <item>
       <title>Google asks US court to shut down Lighthouse phishing-as-a-service operation</title>
@@ -1007,7 +815,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4088993/google-asks-us-court-to-shut-down-lighthouse-phishing-as-a-service-operation.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Thu, 13 Nov 2025 02:36:02 +0000</pubDate>
     </item>
     <item>
@@ -1224,7 +1032,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4087656/what-cisos-need-to-know-about-new-tools-for-securing-mcp-servers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Thu, 13 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1234,7 +1042,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-732</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Mon, 10 Nov 2025 14:22:38 +0000</pubDate>
     </item>
     <item>
@@ -1244,7 +1052,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-733</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Mon, 10 Nov 2025 14:35:30 +0000</pubDate>
     </item>
     <item>
@@ -1254,7 +1062,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-734</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Mon, 10 Nov 2025 14:44:30 +0000</pubDate>
     </item>
     <item>
@@ -1264,7 +1072,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-735</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Mon, 10 Nov 2025 15:21:41 +0000</pubDate>
     </item>
     <item>
@@ -1274,7 +1082,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-736</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Mon, 10 Nov 2025 15:34:02 +0000</pubDate>
     </item>
     <item>
@@ -1395,7 +1203,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4089046/rogue-mcp-servers-can-take-over-cursors-built-in-browser.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Thu, 13 Nov 2025 14:05:00 +0000</pubDate>
     </item>
     <item>
@@ -1405,7 +1213,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.00</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Mon, 10 Nov 2025 20:01:16 +0000</pubDate>
     </item>
     <item>
@@ -1496,7 +1304,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4088549/uk-cybersecurity-bill-brings-tougher-rules-for-critical-infrastructure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.06</comments>
+      <comments>Score: 9.02</comments>
       <pubDate>Wed, 12 Nov 2025 12:35:25 +0000</pubDate>
     </item>
     <item>
@@ -1506,7 +1314,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av25-737</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.11</comments>
       <pubDate>Wed, 12 Nov 2025 15:15:37 +0000</pubDate>
     </item>
     <item>
@@ -1516,7 +1324,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.16</comments>
+      <comments>Score: 10.12</comments>
       <pubDate>Wed, 12 Nov 2025 15:40:41 +0000</pubDate>
     </item>
     <item>
@@ -1526,7 +1334,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2025-monthly-rollup-av25-739</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.17</comments>
+      <comments>Score: 10.13</comments>
       <pubDate>Wed, 12 Nov 2025 15:58:11 +0000</pubDate>
     </item>
     <item>
@@ -1536,7 +1344,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-740</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.19</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Wed, 12 Nov 2025 16:33:12 +0000</pubDate>
     </item>
     <item>
@@ -1546,7 +1354,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-741</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.19</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Wed, 12 Nov 2025 16:35:40 +0000</pubDate>
     </item>
     <item>
@@ -1556,7 +1364,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-742</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.20</comments>
+      <comments>Score: 10.16</comments>
       <pubDate>Wed, 12 Nov 2025 16:49:08 +0000</pubDate>
     </item>
     <item>
@@ -1566,7 +1374,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-743</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.20</comments>
+      <comments>Score: 10.17</comments>
       <pubDate>Wed, 12 Nov 2025 17:02:17 +0000</pubDate>
     </item>
     <item>
@@ -1576,7 +1384,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av25-744</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.26</comments>
+      <comments>Score: 10.23</comments>
       <pubDate>Wed, 12 Nov 2025 18:51:37 +0000</pubDate>
     </item>
     <item>
@@ -1586,7 +1394,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-745</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.28</comments>
+      <comments>Score: 10.24</comments>
       <pubDate>Wed, 12 Nov 2025 19:12:32 +0000</pubDate>
     </item>
     <item>
@@ -1596,7 +1404,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-746</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.29</comments>
+      <comments>Score: 10.25</comments>
       <pubDate>Wed, 12 Nov 2025 19:31:33 +0000</pubDate>
     </item>
     <item>
@@ -1606,7 +1414,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-747</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.33</comments>
+      <comments>Score: 10.30</comments>
       <pubDate>Wed, 12 Nov 2025 20:53:35 +0000</pubDate>
     </item>
     <item>
@@ -1616,7 +1424,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av25-748</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.35</comments>
+      <comments>Score: 10.31</comments>
       <pubDate>Wed, 12 Nov 2025 21:17:22 +0000</pubDate>
     </item>
     <item>
@@ -1626,8 +1434,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-749</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.36</comments>
+      <comments>Score: 10.32</comments>
       <pubDate>Wed, 12 Nov 2025 21:36:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>Drupal security advisory (AV25-750)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-750</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-750</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.95</comments>
+      <pubDate>Thu, 13 Nov 2025 14:16:01 +0000</pubDate>
     </item>
   </channel>
 </rss>
