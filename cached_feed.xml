@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Nov 2025 03:15:41 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Nov 2025 04:27:33 +0000</lastBuildDate>
+    <item>
+      <title>Tenable security advisory (AV25-725)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-725</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-725</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.38</comments>
+      <pubDate>Tue, 04 Nov 2025 18:27:10 +0000</pubDate>
+    </item>
     <item>
       <title>November Patch Tuesday: Zero day Windows kernel flaw in servers, controllers, and PCs</title>
       <link>https://www.csoonline.com/article/4088341/november-patch-tuesday-zero-day-windows-kernel-flaw-in-servers-controllers-and-pcs.html</link>
@@ -157,86 +167,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4088341/november-patch-tuesday-zero-day-windows-kernel-flaw-in-servers-controllers-and-pcs.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Wed, 12 Nov 2025 03:03:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Zero-day exploits hit Cisco ISE and Citrix systems in an advanced campaign</title>
-      <link>https://www.csoonline.com/article/4089200/zero-day-exploits-hit-cisco-ise-and-citrix-systems-in-an-advanced-campaign.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The Amazon Threat Intelligence team has now disclosed an advanced persistent threat (APT) campaign that exploited vulnerabilities in Citrix systems and Cisco’s Identity Service Engine (ISE), allowing hackers to breach critical identity infrastructure even before the flaws were made publicly known.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Amazon’s findings, attackers had exploited “insufficient input validation” in a public API to inject a custom web shell disguised as a native Cisco ISE component, operating entirely in-memory, leveraging Java reflection and non-standard decoding routines to evade detection.&lt;/p&gt;
-
-
-
-&lt;p&gt;The other flaw abused in the campaign, dubbed Citrix Bleed 2, affected Citrix NetScaler ADC and NetScaler Gateway devices to allow memory overread via a similar input validation issue.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This discovery highlights the trend of threat actors focusing on critical identity and network access control infrastructure—the systems enterprises rely on to enforce security policies and manage authentication across their networks,” CJ Moses, the CISO of Amazon Integrated Security, said in a blog post.&lt;/p&gt;
-
-
-
-&lt;p&gt;Citrix wasn’t aware of the flaw being exploited as zero-days when they disclosed and patched them &lt;a href="https://www.csoonline.com/article/4014701/patch-now-citrix-bleed-2-vulnerability-actively-exploited-in-the-wild.html"&gt;earlier this year&lt;/a&gt;. The Cisco ISE flaw, however, was flagged by the &lt;a href="https://www.csoonline.com/article/4024887/cisco-warns-of-another-critical-rce-flaw-in-ise-urges-immediate-patching.html"&gt;company&lt;/a&gt; as well as &lt;a href="https://www.cisa.gov/news-events/alerts/2025/07/28/cisa-adds-three-known-exploited-vulnerabilities-catalog" rel="noreferrer noopener" target="_blank"&gt;CISA&lt;/a&gt; for known exploitation attempts in the wild.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="tooling-and-exploitation"&gt;Tooling and exploitation&lt;/h2&gt;
-
-
-
-&lt;p&gt;Amazon’s honeypot service “&lt;a href="https://aws.amazon.com/blogs/security/how-aws-tracks-the-clouds-biggest-security-threats-and-helps-shut-them-down/" rel="noreferrer noopener" target="_blank"&gt;Madpot&lt;/a&gt;” first detected exploitation attempts against the Citrix vulnerability (&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5777" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-5777&lt;/a&gt;) prior to its public disclosure–suggesting weaponization in the wild. Further investigation revealed anomalous payloads targeting an undocumented endpoint in Cisco ISE, exploiting vulnerable deserialization logic to achieve pre-authentication remote-code execution (&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20337" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-20337&lt;/a&gt;).&lt;/p&gt;
-
-
-
-&lt;p&gt;“What made this discovery particularly concerning was that exploitation was occurring in the wild before Cisco had assigned a CVE number or released comprehensive patches across all affected branches of Cisco ISE,” Moses &lt;a href="https://aws.amazon.com/blogs/security/amazon-discovers-apt-exploiting-cisco-and-citrix-zero-days/"&gt;said&lt;/a&gt;. “This &lt;em&gt;patch-gap&lt;/em&gt; exploitation technique is a hallmark of sophisticated threat actors who closely monitor security updates and quickly weaponize vulnerabilities.“&lt;/p&gt;
-
-
-
-&lt;p&gt;Amazon did not immediately respond to CSO’s queries on why it’s sharing information about the zero-day exploits months after.&lt;/p&gt;
-
-
-
-&lt;p&gt;After gaining access, the actor deployed a tailor-made web shell disguised as the “IdentityAuditAction” component of Cisco ISE. It ran entirely in memory, registered as an HTTP listener in the Tomcat server, used DES encryption with non-standard Base-64 encoding, and required specific HTTP headers for access.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="implication-for-enterprise-defense"&gt;Implication for enterprise defense&lt;/h2&gt;
-
-
-
-&lt;p&gt;The attack challenges assumptions that identity management and network-access systems are inherently secure. The pre-authentication nature of these exploits, the blog noted, reveals that even well-configured and meticulously maintained systems can be affected.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The campaign underscored the evolving tactics of threat actors targeting critical enterprise infrastructure at the network edge,” Moses said. “The threat actor’s custom tooling demonstrated a deep understanding of enterprise Java applications, Tomcat internals, and the specific architectural nuances of the Cisco Identity Service Engine.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Amazon recommends organizations adopt a layered defence, which includes limiting access to privileged security appliance endpoints (firewall, proxies, access gateways), employing monitoring for unusual in-memory activity, and treating identity systems as high-risk zones subject to the same scrutiny as public-facing servers.&lt;/p&gt;
-
-
-
-&lt;p&gt;The revelation fits into a broader pattern of attackers moving to remote-access and identity infrastructure, a trend that first came into focus during the &lt;a href="https://www.csoonline.com/article/657085/citrix-urges-immediate-patching-of-critically-vulnerable-product-lines.html"&gt;Citrix Bleed&lt;/a&gt; wave in late 2023, when credential harvesting exploits against Citrix ADC and Gateway appliances fuelled widespread intrusions. &lt;/p&gt;
-
-
-
-&lt;p&gt;Since then, more such campaigns have emerged, including one by Scattered Spider involving a &lt;a href="https://www.csoonline.com/article/4020567/anatomy-of-a-scattered-spider-attack-a-growing-ransomware-threat-evolves.html"&gt;help-desk hack&lt;/a&gt; enabling access to the C-suite’s identity infrastructure (Microsoft Entra ID/ Active Directory).&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4089200/zero-day-exploits-hit-cisco-ise-and-citrix-systems-in-an-advanced-campaign.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
-      <pubDate>Thu, 13 Nov 2025 12:15:39 +0000</pubDate>
     </item>
     <item>
       <title>VMware security advisory (AV25-724) – Update 1</title>
@@ -255,7 +187,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-726</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Wed, 05 Nov 2025 19:51:20 +0000</pubDate>
     </item>
     <item>
@@ -266,7 +198,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Fri, 14 Nov 2025 01:15:41 +0000</pubDate>
+      <pubDate>Fri, 14 Nov 2025 02:27:33 +0000</pubDate>
     </item>
     <item>
       <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
@@ -276,7 +208,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 14 Nov 2025 01:15:41 +0000</pubDate>
+      <pubDate>Fri, 14 Nov 2025 02:27:33 +0000</pubDate>
     </item>
     <item>
       <title>Europol and UEFA united for fair and safe football</title>
@@ -286,7 +218,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 14 Nov 2025 01:15:41 +0000</pubDate>
+      <pubDate>Fri, 14 Nov 2025 02:27:33 +0000</pubDate>
     </item>
     <item>
       <title>Sweden hosts naval exercise with 200 special tactics operators</title>
@@ -296,7 +228,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 14 Nov 2025 01:15:41 +0000</pubDate>
+      <pubDate>Fri, 14 Nov 2025 02:27:33 +0000</pubDate>
     </item>
     <item>
       <title>Fake number, real damage: Europol urges action against caller ID spoofing</title>
@@ -306,17 +238,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.56</comments>
-      <pubDate>Fri, 14 Nov 2025 01:15:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>End of the game for cybercrime infrastructure: 1025 servers taken down</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down</link>
-      <description>Between 10 and 14 November 2025, the latest phase of Operation Endgame was coordinated from Europol’s headquarters in The Hague. The actions targeted one of the biggest infostealers (Rhadamanthys), the Remote Access Trojan VenomRAT, and the botnet Elysium, all of which played a key role in international cybercrime. Authorities took down these three large cybercrime enablers. The main suspect for VenomRAT was also arrested in Greece on 3 November 2025.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Fri, 14 Nov 2025 01:15:41 +0000</pubDate>
+      <pubDate>Fri, 14 Nov 2025 02:27:33 +0000</pubDate>
     </item>
     <item>
       <title>Beyond the checklist: Shifting from compliance frameworks to real-time risk assessments</title>
@@ -486,18 +408,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4088198/beyond-the-checklist-shifting-from-compliance-frameworks-to-real-time-risk-assessments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Wed, 12 Nov 2025 10:43:00 +0000</pubDate>
     </item>
     <item>
-      <title>Cisco security advisory (AV25-619) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-619</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-619</guid>
+      <title>End of the game for cybercrime infrastructure: 1025 servers taken down</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down</link>
+      <description>Between 10 and 14 November 2025, the latest phase of Operation Endgame was coordinated from Europol’s headquarters in The Hague. The actions targeted one of the biggest infostealers (Rhadamanthys), the Remote Access Trojan VenomRAT, and the botnet Elysium, all of which played a key role in international cybercrime. Authorities took down these three large cybercrime enablers. The main suspect for VenomRAT was also arrested in Greece on 3 November 2025.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Thu, 06 Nov 2025 18:18:46 +0000</pubDate>
+      <comments>Score: 7.62</comments>
+      <pubDate>Fri, 14 Nov 2025 02:27:33 +0000</pubDate>
     </item>
     <item>
       <title>Malicious npm package sneaks into GitHub Actions builds</title>
@@ -567,8 +489,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4088529/malicious-npm-package-sneaks-into-github-actions-builds.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Wed, 12 Nov 2025 11:58:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cisco security advisory (AV25-619) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-619</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-619</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.63</comments>
+      <pubDate>Thu, 06 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
       <title>UK authorities propose law to set minimum cyber standards for critical sectors</title>
@@ -577,7 +509,7 @@
       <guid isPermaLink="false">https://www.cybersecuritydive.com/news/uk-authorities-law-cyber-standards-critical-sectors/805416/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Thu, 13 Nov 2025 10:43:00 -0500</pubDate>
     </item>
     <item>
@@ -587,7 +519,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 07 Nov 2025 14:12:09 +0000</pubDate>
     </item>
     <item>
@@ -597,7 +529,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 07 Nov 2025 14:28:44 +0000</pubDate>
     </item>
     <item>
@@ -607,7 +539,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Fri, 07 Nov 2025 15:59:01 +0000</pubDate>
     </item>
     <item>
@@ -617,7 +549,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-730</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Fri, 07 Nov 2025 16:09:33 +0000</pubDate>
     </item>
     <item>
@@ -627,7 +559,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-november-2025-monthly-rollup-av25-731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Fri, 07 Nov 2025 18:22:37 +0000</pubDate>
     </item>
     <item>
@@ -638,7 +570,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.03</comments>
-      <pubDate>Fri, 14 Nov 2025 01:15:41 +0000</pubDate>
+      <pubDate>Fri, 14 Nov 2025 02:27:33 +0000</pubDate>
     </item>
     <item>
       <title>54 individuals arrested in action against labour exploitation</title>
@@ -648,7 +580,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.05</comments>
-      <pubDate>Fri, 14 Nov 2025 01:15:41 +0000</pubDate>
+      <pubDate>Fri, 14 Nov 2025 02:27:33 +0000</pubDate>
     </item>
     <item>
       <title>Google asks US court to shut down Lighthouse phishing-as-a-service operation</title>
@@ -766,7 +698,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4088993/google-asks-us-court-to-shut-down-lighthouse-phishing-as-a-service-operation.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Thu, 13 Nov 2025 02:36:02 +0000</pubDate>
     </item>
     <item>
@@ -983,7 +915,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4087656/what-cisos-need-to-know-about-new-tools-for-securing-mcp-servers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Thu, 13 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1104,7 +1036,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4089046/rogue-mcp-servers-can-take-over-cursors-built-in-browser.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Thu, 13 Nov 2025 14:05:00 +0000</pubDate>
     </item>
     <item>
@@ -1114,7 +1046,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-732</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Mon, 10 Nov 2025 14:22:38 +0000</pubDate>
     </item>
     <item>
@@ -1124,7 +1056,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-733</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.64</comments>
       <pubDate>Mon, 10 Nov 2025 14:35:30 +0000</pubDate>
     </item>
     <item>
@@ -1134,28 +1066,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-734</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.64</comments>
       <pubDate>Mon, 10 Nov 2025 14:44:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>Red Hat security advisory (AV25-735)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-735</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-735</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
-      <pubDate>Mon, 10 Nov 2025 15:21:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] CISA ICS security advisories (AV25–736)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-736</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-736</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
-      <pubDate>Mon, 10 Nov 2025 15:34:02 +0000</pubDate>
     </item>
     <item>
       <title>UK cybersecurity bill brings tougher rules for critical infrastructure</title>
@@ -1245,8 +1157,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4088549/uk-cybersecurity-bill-brings-tougher-rules-for-critical-infrastructure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.64</comments>
       <pubDate>Wed, 12 Nov 2025 12:35:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>Red Hat security advisory (AV25-735)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-735</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-735</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.65</comments>
+      <pubDate>Mon, 10 Nov 2025 15:21:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] CISA ICS security advisories (AV25–736)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-736</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-736</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.65</comments>
+      <pubDate>Mon, 10 Nov 2025 15:34:02 +0000</pubDate>
     </item>
     <item>
       <title>WatchGuard security advisory (AV25-677) – Update 1</title>
@@ -1255,7 +1187,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.73</comments>
       <pubDate>Mon, 10 Nov 2025 20:01:16 +0000</pubDate>
     </item>
     <item>
@@ -1404,7 +1336,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4089682/agentic-ai-opens-door-to-new-id-challenges-report.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Fri, 14 Nov 2025 02:12:25 +0000</pubDate>
     </item>
     <item>
@@ -1414,7 +1346,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av25-737</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.75</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Wed, 12 Nov 2025 15:15:37 +0000</pubDate>
     </item>
     <item>
@@ -1424,7 +1356,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Wed, 12 Nov 2025 15:40:41 +0000</pubDate>
     </item>
     <item>
@@ -1434,7 +1366,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2025-monthly-rollup-av25-739</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Wed, 12 Nov 2025 15:58:11 +0000</pubDate>
     </item>
     <item>
@@ -1444,7 +1376,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-740</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.79</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Wed, 12 Nov 2025 16:33:12 +0000</pubDate>
     </item>
     <item>
@@ -1454,7 +1386,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-741</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.79</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Wed, 12 Nov 2025 16:35:40 +0000</pubDate>
     </item>
     <item>
@@ -1464,7 +1396,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-742</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.79</comments>
+      <comments>Score: 9.76</comments>
       <pubDate>Wed, 12 Nov 2025 16:49:08 +0000</pubDate>
     </item>
     <item>
@@ -1474,7 +1406,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-743</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.80</comments>
+      <comments>Score: 9.77</comments>
       <pubDate>Wed, 12 Nov 2025 17:02:17 +0000</pubDate>
     </item>
     <item>
@@ -1484,7 +1416,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av25-744</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.85</comments>
+      <comments>Score: 9.82</comments>
       <pubDate>Wed, 12 Nov 2025 18:51:37 +0000</pubDate>
     </item>
     <item>
@@ -1494,7 +1426,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-745</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.86</comments>
+      <comments>Score: 9.83</comments>
       <pubDate>Wed, 12 Nov 2025 19:12:32 +0000</pubDate>
     </item>
     <item>
@@ -1504,7 +1436,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-746</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.87</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Wed, 12 Nov 2025 19:31:33 +0000</pubDate>
     </item>
     <item>
@@ -1514,7 +1446,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-747</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.88</comments>
       <pubDate>Wed, 12 Nov 2025 20:53:35 +0000</pubDate>
     </item>
     <item>
@@ -1524,7 +1456,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av25-748</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.89</comments>
       <pubDate>Wed, 12 Nov 2025 21:17:22 +0000</pubDate>
     </item>
     <item>
@@ -1534,7 +1466,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-749</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.90</comments>
       <pubDate>Wed, 12 Nov 2025 21:36:47 +0000</pubDate>
     </item>
     <item>
@@ -1544,7 +1476,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-750</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.49</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Thu, 13 Nov 2025 14:16:01 +0000</pubDate>
     </item>
     <item>
@@ -1554,7 +1486,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-751</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.56</comments>
+      <comments>Score: 10.52</comments>
       <pubDate>Thu, 13 Nov 2025 16:12:21 +0000</pubDate>
     </item>
     <item>
@@ -1564,7 +1496,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.75</comments>
+      <comments>Score: 10.70</comments>
       <pubDate>Thu, 13 Nov 2025 20:59:38 +0000</pubDate>
     </item>
     <item>
@@ -1574,7 +1506,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-rockwell-automation-security-advisory-av25-753</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.75</comments>
+      <comments>Score: 10.70</comments>
       <pubDate>Thu, 13 Nov 2025 21:03:08 +0000</pubDate>
     </item>
     <item>
@@ -1583,7 +1515,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/dark-reading-virtual-event-cybersecurity-outlook-2026</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 528.94</comments>
+      <comments>Score: 522.40</comments>
       <pubDate>Wed, 03 Dec 2025 16:00:00 +0000</pubDate>
     </item>
   </channel>
