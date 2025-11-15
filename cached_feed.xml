@@ -8,224 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Nov 2025 01:42:52 +0000</lastBuildDate>
-    <item>
-      <title>What CISOs need to know about new tools for securing MCP servers</title>
-      <link>https://www.csoonline.com/article/4087656/what-cisos-need-to-know-about-new-tools-for-securing-mcp-servers.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Model Context Protocol allows AI agents to connect to data sources but the first iteration of this standard &lt;a href="https://www.csoonline.com/article/4015222/mcp-uses-and-risks.html"&gt;lacked serious security&lt;/a&gt;. Over the past few months, a multitude of vendors appeared to help solve the problem. Is the technology now ready for prime-time, or is it still too early to put into production?&lt;/p&gt;
-
-
-
-&lt;p&gt;Some progress has been made on the core protocol side. In March, support was added for OAuth authentication, and in June, the protocol added support for third-party authentication servers such as Auth0, Okta, or a company’s own identity management system.&lt;/p&gt;
-
-
-
-&lt;p&gt;The MCP standards body also launched an official &lt;a href="https://modelcontextprotocol.info/tools/registry/"&gt;MCP registry&lt;/a&gt; in September, in order to address the problem of malicious MCP servers masquerading as legitimate ones.&lt;/p&gt;
-
-
-
-&lt;p&gt;But significant security gaps remain. For example, authentication is optional, and the systems are vulnerable to prompt injections, tool poisoning, token theft, cross-server attacks, message tampering and more.&lt;/p&gt;
-
-
-
-&lt;p&gt;Companies looking to get ahead of the competition when it comes to building agentic AI systems have to do a lot of security heavy lifting to keep these tools from exposing all their corporate secrets and sensitive data.&lt;/p&gt;
-
-
-
-&lt;p&gt;And, over the past few months, vendors have been stepping up. Today, the major AI platforms have added security infrastructure, as have core technology providers, existing cybersecurity vendors, and a fleet of emerging players.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="challenges-of-different-uses-of-mcp-servers"&gt;Challenges of different uses of MCP servers&lt;/h2&gt;
-
-
-
-&lt;p&gt;There are three main types of MCP server deployments, and each one has their own security challenges.&lt;/p&gt;
-
-
-
-&lt;p&gt;When a company sets up an internal MCP server, on infrastructure they control, to access internal data or tools, to be used by AI agents that they also control. First, a low-risk use of this might be to allow employees to use AI agents to search through non-sensitive documents or databases, such as product descriptions. A higher-risk use case might be to allow access to customer data.&lt;/p&gt;
-
-
-
-&lt;p&gt;Second, a company might allow their AI agents to access external data sources or tools via MCP servers. Here, one concern might be that the information the AI agents get back might include malicious instructions because either the server or the data source is compromised by an attacker.&lt;/p&gt;
-
-
-
-&lt;p&gt;The third deployment type is that of an internal MCP server exposing a company’s data or tools to the outside world. Again, this could be a low-risk use case if the MCP server provides access to product descriptions or user manuals. But it could also be extremely risky if MCP servers that allow external partners to connect in and place orders, submit invoices, and change their payment addresses.&lt;/p&gt;
-
-
-
-&lt;p&gt;There are ways to ease into MCP deployments, says Anh Hatzopoulos, co-founder and CEO at PepperMill, a no-code AI platform. For example, an MCP server that goes and gets public LinkedIn information is going to be safer than one that handles financial transactions, she says. “With moving money, I’m surprised that people are going hard at it right now, given the security problems with MCPs. But someone has to do it — and someone will discover those security problems.”&lt;/p&gt;
-
-
-
-&lt;p&gt;In fact, for many tech companies, especially SaaS vendors, MCP servers are already a must-have. “They can’t wait,” says Peter Nebel, chief strategy officer at cloud consultancy AllCloud. “If they wait, their competition will be there before them and have the MCP advantage.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Companies that have already released official MCP servers for public use include PayPal, Notion, HubSpot, CloudFlare, Atlassian, Slack, and GitHub. There are also third-party providers building MCP servers. Zapier, for example, currently offers MCP connections to 8,000 different apps.&lt;/p&gt;
-
-
-
-&lt;p&gt;If a vendor doesn’t offer their own, official MCP server, someone else might set up unofficial ones that use the vendor’s APIs. For example, there are already MCP servers out there for LinkedIn, Spotify, eBay, YouTube, AWS, Zillow, and many other platforms, some more trustworthy than others. Developers and power users are downloading them and using them to give their AI agents access to those platforms, but it’s not always obvious where some of these less-than-official MCP servers are coming from, who’s maintaining them, and what else they do under the covers.&lt;/p&gt;
-
-
-
-&lt;p&gt;Pulse MCP &lt;a href="https://www.pulsemcp.com/servers"&gt;lists&lt;/a&gt; over 6,000 servers. MCP marketplace MCP.so currently &lt;a href="https://mcp.so/"&gt;lists&lt;/a&gt; more than 16,000. And a GitHub search for “MCP server” produces more than 45,000 results.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-to-look-for-in-an-mcp-security-platform"&gt;What to look for in an MCP security platform&lt;/h2&gt;
-
-
-
-&lt;p&gt;Whether a company connects their own agents to third-party MCP servers, their own MCP servers to third-party agents, or their own servers to their own agents, there’s going to be the potential for data leakage, prompt injections and other security threats.&lt;/p&gt;
-
-
-
-&lt;p&gt;That means companies will need to check for authorizations and permissions, implement fine-grained access controls, and log everything, says AllCloud’s Nevel.&lt;/p&gt;
-
-
-
-&lt;p&gt;Here are some other MCP security tools that vendors are offering today:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;MCP server detection&lt;/strong&gt;: It’s easy for company employees to download and run their own MCP servers. These servers could boost their productivity or they could be a new attack vector. Some MCP security vendors are offering scanning services to help companies find all instances of shadow MCP servers in their environments.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Runtime protection&lt;/strong&gt;: AI agents communicate with MCP servers in plain English. That creates the potential for prompt injections, data leaks and other security issues. Many MCP security vendors offer tools to monitor all communications for these and similar problems.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Authentication and access controls&lt;/strong&gt;: The core MCP protocol now supports OAuth, but that’s just the start. For additional security, vendors offer zero trust and least privilege control frameworks.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Logging and observability&lt;/strong&gt;: Vendors can provide platforms to collect MCP logs, alert security teams about security events or policy violations, collect compliance data, or feed logs into existing security infrastructure.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="vedors-offering-mcp-security-tools"&gt;Vedors offering MCP security tools&lt;/h2&gt;
-
-
-
-&lt;p&gt;Below, we divide in three sections the list of vendors offering MCP security tools.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="hyperscalers"&gt;Hyperscalers&lt;/h3&gt;
-
-
-
-&lt;p&gt;For companies all-in on a particular cloud platform, going with the MCP tools provided by that particular hyperscaler can be an easy way to get started.&lt;/p&gt;
-
-
-
-&lt;p&gt;AWS launched its own agentic AI platform in July. Amazon Bedrock AgentCore includes a gateway that supports multiple protocols, including MCP, an identity management system and observability. In October, AWS followed this up with a set of guidelines for securing MCP servers with &lt;a href="https://builder.aws.com/content/33oERPjcEutnPmaud1BvlPRP9zR/security-guidelines-for-model-context-protocol-in-aws"&gt;zero trust&lt;/a&gt; best practices.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft announced a basic Azure MCP server in April, added support for the Azure Key Vault in May, announced MCP support in the Azure AI Foundry Agent Service in June, and announced Azure API Management support in August. Azure API Management means that MCP servers can have secure and governed access to resources, with observability and control.&lt;/p&gt;
-
-
-
-&lt;p&gt;In October, Microsoft announced the Microsoft Agent Framework, which includes support for both MCP and the Agent2Agent protocol, protection against prompt injection, PII detection, and multi-agent observability to ensure that the systems are doing what they’re supposed to be doing.&lt;/p&gt;
-
-
-
-&lt;p&gt;Google Cloud announced its MCP Toolbox for Databases in April with authentication and observability built in. In September, it released a reference architecture for securing MCP servers on the Google Cloud Platform, based around a centralized MCP proxy architecture. It uses the Google Identity Platform to validate identities and issue OAuth tokens, uses Model Armor to check messages for prompt injections, jailbreaks, or sensitive data, and a Secret Manager to store API keys, credentials, and sensitive configuration values. Its Artifact Registry can store MCP server images and scan them for vulnerabilities before they are deployed.&lt;/p&gt;
-
-
-
-&lt;p&gt;Google also recommends using network-level security controls to isolate MCP servers and reduce the risk of lateral movement. Finally, Google’s Security Command Center can identify unauthorized access and data exfiltration attempts.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="major-technology-providers"&gt;Major technology providers&lt;/h3&gt;
-
-
-
-&lt;p&gt;Cloudflare: Cloudflare announced &lt;a href="https://blog.cloudflare.com/zero-trust-mcp-server-portals/"&gt;MCP Server Portals&lt;/a&gt;, which enable enterprises to centralize, secure, and observe every MCP connection. This feature is part of Cloudflare One, the company’s secure access service edge (SASE) platform.&lt;/p&gt;
-
-
-
-&lt;p&gt;Palo Alto Networks: The company launched the &lt;a href="https://www.paloaltonetworks.com/blog/2025/06/securing-ai-agent-innovation-prisma-airs-mcp-server/"&gt;Prisma AIRS MCP Server&lt;/a&gt; in June. It sits between the AI agent and the MCP server and detects malicious content in data, helping protect against prompt injection attacks, as well as web and DNS attacks. Another tool, MCP Security in Cortex Cloud WAAS, sits at the network boundary, and inspects MCP communications for malicious activity.&lt;/p&gt;
-
-
-
-&lt;p&gt;SentinelOne: &lt;a href="https://www.sentinelone.com/blog/avoiding-mcp-mania-how-to-secure-the-next-frontier-of-ai/"&gt;SentinelOne Singularity Platform&lt;/a&gt; offers visibility into the MCP interaction chain, as well as alerts and automated incident response, for both local and remote MCP servers.&lt;/p&gt;
-
-
-
-&lt;p&gt;VMware: In August, parent company Broadcom &lt;a href="https://www.networkworld.com/article/4045708/vmware-explore-2025-broadcom-tackles-agentic-ai-security-challenges.html"&gt;announced&lt;/a&gt; that VMware Cloud Foundation will offer more security for agentic workflows, including MCP servers.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="startups"&gt;Startups&lt;/h3&gt;
-
-
-
-&lt;p&gt;Acuvity: &lt;a href="https://acuvity.ai/"&gt;Acuvity&lt;/a&gt; secures MCP servers by hardening them with least-privilege execution, immutable runtimes, continuous vulnerability scanning, authentication, and threat detection.&lt;/p&gt;
-
-
-
-&lt;p&gt;Akto: API security company Akto launched an &lt;a href="https://www.akto.io/mcp-security"&gt;MCP security&lt;/a&gt; solution in June, claiming to be the first dedicated security solution specifically built to protect MCP servers. It includes a discovery tool for finding the MCP servers deployed in corporate environments, security testing tools, and monitoring and threat detection.&lt;/p&gt;
-
-
-
-&lt;p&gt;Invariant Labs: Their &lt;a href="https://github.com/invariantlabs-ai/mcp-scan"&gt;MCP-Scan&lt;/a&gt; is an open-source scanner that performs static analysis of MCP servers and does real-time monitoring to detect tool poisoning attacks, rug pulls, and prompt injection attacks. A commercial product, Invariant Guardrails, is a proxy that sits between AI agents and MCP servers and protects against project injections and other MCP security threats, and allows companies to impose rules such as prohibiting PII from going to external email addresses.&lt;/p&gt;
-
-
-
-&lt;p&gt;Javelin: The company’s &lt;a href="https://www.getjavelin.com/ai-security"&gt;AI Security Fabric platform&lt;/a&gt; includes MCP security, such as functionality to scan for risky servers, or to block or require review of agent tools or data requests. In addition, MCP guardrails stop unsafe calls and poisoned inputs in real-time and prevent prompt injections and data leakage.&lt;/p&gt;
-
-
-
-&lt;p&gt;Lasso Security: Open source &lt;a href="https://github.com/lasso-security/mcp-gateway"&gt;MCP gateway&lt;/a&gt; that allows configuration and lifecycle management of MCP servers and sanitizes sensitive information in MCP messages.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://go.mcptotal.io/"&gt;MCPTotal&lt;/a&gt;: Offers a hub to manage, run and monitor MCP servers in a secure, sandboxed environment, as well as a gateway to protect AI workflows interacting with both internal and external MCP servers, and a governance tool to monitor and enforce AI tool use policies.&lt;/p&gt;
-
-
-
-&lt;p&gt;Noma: Recently launched &lt;a href="https://noma.security/solutions/ai-agent-security/"&gt;AI Agent Security&lt;/a&gt; solution offers support for discovery of MCP connections, vulnerability scanning, access policy enforcement, real-time prompt guardrails, and audit trails.&lt;/p&gt;
-
-
-
-&lt;p&gt;Obot: The &lt;a href="https://obot.ai/"&gt;Obot MCP gateway&lt;/a&gt; is an open-source platform to manage MCP servers, define security access policies, and track usage and compliance.&lt;/p&gt;
-
-
-
-&lt;p&gt;Operant: Operant &lt;a href="https://www.operant.ai/solutions/mcp-gateway"&gt;MCP Gateway&lt;/a&gt; automatically catalogs MCP tools, discovers AI agents, and tracks traffic between agents and servers to eliminate MCP blind spots. It can also identify threat vectors such as tool poisoning, jailbreaks and unauthorized access, prevent data leaks, and establish a centralized governance framework for agents and tools across the enterprise.&lt;/p&gt;
-
-
-
-&lt;p&gt;Solo: The company’s &lt;a href="https://www.solo.io/products/agentgateway-enterprise"&gt;Agent Gateway&lt;/a&gt; was overhauled in August to support MCP and A2A protocols and protects against malicious prompts and data leaks, enforces strong authentication, and centralizes logging and tracing for every interaction.&lt;/p&gt;
-
-
-
-&lt;p&gt;Teleport: Its &lt;a href="https://goteleport.com/use-cases/secure-model-context-protocol/"&gt;Secure MCP&lt;/a&gt; tool for its Infrastructure Identity Platform allows companies to unify how they govern human, machine, workload, device, and AI identities. MCP Security provides identity, access control, governance, and audit tools in a zero trust and least privilege environment.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4087656/what-cisos-need-to-know-about-new-tools-for-securing-mcp-servers.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Thu, 13 Nov 2025 07:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Sat, 15 Nov 2025 03:09:48 +0000</lastBuildDate>
     <item>
       <title>Apple security advisory (AV25-727)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</link>
@@ -233,8 +16,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Fri, 07 Nov 2025 14:12:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV25-728)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Fri, 07 Nov 2025 14:28:44 +0000</pubDate>
     </item>
     <item>
       <title>End of the game for cybercrime infrastructure: 1025 servers taken down</title>
@@ -244,17 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Fri, 14 Nov 2025 23:42:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV25-728)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Fri, 07 Nov 2025 14:28:44 +0000</pubDate>
+      <pubDate>Sat, 15 Nov 2025 01:09:48 +0000</pubDate>
     </item>
     <item>
       <title>Drupal security advisory (AV25-729)</title>
@@ -263,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Fri, 07 Nov 2025 15:59:01 +0000</pubDate>
     </item>
     <item>
@@ -273,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-730</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Fri, 07 Nov 2025 16:09:33 +0000</pubDate>
     </item>
     <item>
@@ -283,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-november-2025-monthly-rollup-av25-731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Fri, 07 Nov 2025 18:22:37 +0000</pubDate>
     </item>
     <item>
@@ -404,7 +187,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4089046/rogue-mcp-servers-can-take-over-cursors-built-in-browser.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Thu, 13 Nov 2025 14:05:00 +0000</pubDate>
     </item>
     <item>
@@ -415,7 +198,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.03</comments>
-      <pubDate>Fri, 14 Nov 2025 23:42:52 +0000</pubDate>
+      <pubDate>Sat, 15 Nov 2025 01:09:48 +0000</pubDate>
     </item>
     <item>
       <title>54 individuals arrested in action against labour exploitation</title>
@@ -425,7 +208,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.05</comments>
-      <pubDate>Fri, 14 Nov 2025 23:42:52 +0000</pubDate>
+      <pubDate>Sat, 15 Nov 2025 01:09:48 +0000</pubDate>
     </item>
     <item>
       <title>Agentic AI opens door to new ID challenges: Report</title>
@@ -573,7 +356,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4089682/agentic-ai-opens-door-to-new-id-challenges-report.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.08</comments>
       <pubDate>Fri, 14 Nov 2025 02:12:25 +0000</pubDate>
     </item>
     <item>
@@ -695,7 +478,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4089848/press-release-cio100-and-cso30-asean-awards-2025-celebrate-regional-excellence-in-technology-leadership.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Fri, 14 Nov 2025 06:53:00 +0000</pubDate>
     </item>
     <item>
@@ -914,7 +697,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4027000/the-books-shaping-todays-cybersecurity-leaders.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Fri, 14 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -924,7 +707,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-732</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Mon, 10 Nov 2025 14:22:38 +0000</pubDate>
     </item>
     <item>
@@ -934,7 +717,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-733</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Mon, 10 Nov 2025 14:35:30 +0000</pubDate>
     </item>
     <item>
@@ -944,7 +727,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-734</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Mon, 10 Nov 2025 14:44:30 +0000</pubDate>
     </item>
     <item>
@@ -954,7 +737,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-735</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.30</comments>
       <pubDate>Mon, 10 Nov 2025 15:21:41 +0000</pubDate>
     </item>
     <item>
@@ -964,7 +747,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-736</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.30</comments>
       <pubDate>Mon, 10 Nov 2025 15:34:02 +0000</pubDate>
     </item>
     <item>
@@ -974,7 +757,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Mon, 10 Nov 2025 20:01:16 +0000</pubDate>
     </item>
     <item>
@@ -1056,7 +839,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4090107/bundestag-beschliest-nis2-umsetzung.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Fri, 14 Nov 2025 12:58:34 +0000</pubDate>
     </item>
     <item>
@@ -1127,7 +910,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4090217/arista-palo-alto-bolster-ai-data-center-security-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Fri, 14 Nov 2025 15:20:44 +0000</pubDate>
     </item>
     <item>
@@ -1198,7 +981,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086912/how-shadow-it-leaves-every-industry-in-the-dark.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Fri, 14 Nov 2025 16:44:32 +0000</pubDate>
     </item>
     <item>
@@ -1319,7 +1102,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086813/why-network-visibility-is-the-thread-that-holds-cybersecurity-together.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Fri, 14 Nov 2025 16:46:25 +0000</pubDate>
     </item>
     <item>
@@ -1382,7 +1165,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086904/why-soc-efficiency-is-the-most-valuable-currency-in-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Fri, 14 Nov 2025 16:47:23 +0000</pubDate>
     </item>
     <item>
@@ -1453,8 +1236,151 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086908/from-detection-to-response-why-confidence-is-the-real-game-changer.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Fri, 14 Nov 2025 16:48:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Worm flooding npm registry with token stealers still isn’t under control</title>
+      <link>https://www.csoonline.com/article/4090568/worm-flooding-npm-registry-with-token-stealers-still-isnt-under-control-2.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;A coordinated token farming campaign continues to flood the open source npm registry, with tens of thousands of infected packages created almost daily to steal tokens from unsuspecting developers using the Tea Protocol to reward coding work.&lt;/p&gt;
+
+
+
+&lt;p&gt;On Thursday, &lt;a href="https://aws.amazon.com/blogs/security/amazon-inspector-detects-over-150000-malicious-packages-linked-to-token-farming-campaign/"&gt;researchers at Amazon said&lt;/a&gt; there were over 150,000 packages in the campaign. But in an interview on Friday, an executive at software supply chain management provider Sonatype, which wrote about the campaign in April 2024, told &lt;em&gt;CSO&lt;/em&gt; that number has now grown to 153,000.&lt;/p&gt;
+
+
+
+&lt;p&gt;“It’s unfortunate that the worm isn’t under control yet,” said Sonatype CTO &lt;a href="https://www.sonatype.com/company" rel="noreferrer noopener" target="_blank"&gt;Brian Fox&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;And while this payload merely steals tokens, other threat actors are paying attention, he predicted.&lt;/p&gt;
+
+
+
+&lt;p&gt;“I’m sure somebody out there in the world is looking at this massively replicating worm and wondering if they can ride that, not just to get the Tea tokens but to put some actual malware in there, because if it’s replicating that fast, why wouldn’t you?”&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.sonatype.com/blog/devs-flood-npm-with-10000-packages-to-reward-themselves-with-tea-tokens"&gt;When Sonatype wrote about the campaign just over a year ago&lt;/a&gt;, it found a mere 15,000 packages that appeared to come from a single person.&lt;/p&gt;
+
+
+
+&lt;p&gt;With the swollen numbers reported this week, Amazon researchers wrote that it’s “one of the largest package flooding incidents in open source registry history, and represents a defining moment in supply chain security.”&lt;/p&gt;
+
+
+
+&lt;p&gt;This campaign is just the latest way threat actors are taking advantage of security holes in a number of open source repositories, which runs the risk of damaging the reputation of sites like npm, PyPI and others.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.csoonline.com/article/4081492/modern-supply-chain-attacks-and-their-real-world-impact.html"&gt;&lt;strong&gt;Related content: Supply chain attacks and their consequences&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;“The malware infestation in open-source repositories is a full-blown crisis, out of control and dangerously eroding trust in the open-source upstream supply chain,” said &lt;a href="https://www.linkedin.com/in/draidman/" rel="noreferrer noopener" target="_blank"&gt;Dmitry Raidman&lt;/a&gt;, CTO of Cybeats, which makes a software bill of materials solution.&lt;/p&gt;
+
+
+
+&lt;p&gt;As evidence, he pointed to t&lt;a href="https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem"&gt;he Shai‑Hulud worm’s rapid exploitation&lt;/a&gt; of the npm ecosystem, which shows how quickly attackers can hijack developer tokens, corrupt packages, and propagate laterally across the entire dependency ecosystem. “What began as a single compromise explodes in a few hours, leaving the whole ecosystem and every downstream project in the industry at risk in a matter of days, regardless of whether it is open source or commercial.”&lt;/p&gt;
+
+
+
+&lt;p&gt;This past September, Raidman &lt;a href="https://www.cybeats.com/blog/the-alarming-acceleration-of-supply-chain-attacks-from-nx-to-qix-in-just-13-days"&gt;wrote about the compromise of the Nx build system&lt;/a&gt; after threat actors pushed malicious versions of the package into npm. Within hours, he wrote, developers around the world were unknowingly pulling in code that stole SSH keys, authentication tokens, and cryptocurrency wallets.&lt;/p&gt;
+
+
+
+&lt;p&gt;These and more recent large scale uploads of malicious packages into open source repositories are “just the beginning,” he warned, unless developers and repository maintainers improve security.&lt;/p&gt;
+
+
+
+&lt;p&gt;The Amazon and Sonatype reports aren’t the first to detect this campaign. Australian researcher &lt;a href="https://melbourne2024.cyberconference.com.au/speakers/paul-mccarty-ebbdx" rel="noreferrer noopener" target="_blank"&gt;Paul McCarty&lt;/a&gt; of SourceCodeRed confirmed to us this is the worm he dubbed ‘IndonesianFoods’ &lt;a href="https://sourcecodered.com/indonesianfoods-npm-worm/"&gt;in a blog this week.&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-tea-protocol"&gt;The Tea Protocol&lt;/h2&gt;
+
+
+
+&lt;p&gt;The Tea Protocol is a blockchain-based platform that gives open-source developers and package maintainers tokens called Tea as rewards for their software work. These tokens are also supposed to help secure the software supply chain and enable decentralized governance across the network, &lt;a href="https://tea.xyz/"&gt;say its creators on their website.&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Developers put Tea code that links to the blockchain in their apps; the more an app is downloaded, the more Tea tokens they get, which can then be cashed in through a fund. The worm scheme is an attempt to make the blockchain think apps created by the threat actors are highly popular and therefore earn a lot of tokens.&lt;/p&gt;
+
+
+
+&lt;p&gt;At the moment, the tokens have no value. But it is suspected that the threat actors are positioning themselves to receive real cryptocurrency tokens when the Tea Protocol launches its Mainnet, where Tea tokens will have actual monetary value and can be traded.&lt;/p&gt;
+
+
+
+&lt;p&gt;For now, says Sonatype’s Fox, the scheme wastes the time of npm administrators, who are trying to expel over 100,000 packages. But Fox and Amazon point out the scheme could inspire others to take advantage of other reward-based systems for financial gain, or to deliver malware.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="what-it-leaders-and-developers-should-do"&gt;What IT leaders and developers should do&lt;/h2&gt;
+
+
+
+&lt;p&gt;To lower the odds of abuse, open source repositories should tighten their access control, limiting the number of users who can upload code, said Raidman of Cybeats. That includes the use of multi-factor authentication in case login credentials of developers are stolen, he said, and adding digital signing capabilities to uploaded code to authenticate the author.&lt;/p&gt;
+
+
+
+&lt;p&gt;IT leaders should insist all code their firm uses has a software bill of materials (SBOM), so security teams can see the components. They also need to insist developers know the versions of the open source code they include in their apps, and confirm only approved and safe versions are being used and not automatically changed just because a new version is downloaded from a repository.&lt;/p&gt;
+
+
+
+&lt;p&gt;Sonatype’s Fox said IT leaders need to buy tools that can intercept and block malicious downloads from repositories. Antivirus software is useless here, he said, because malicious code uploaded to repositories won’t contain the signatures that AV tools are supposed to detect.&lt;/p&gt;
+
+
+
+&lt;p&gt;In response to emailed questions, the authors of the Amazon blog, researchers Chi Tran and Charlie Bacon, said open source repositories need to deploy advanced detection systems to identify suspicious patterns like malicious configuration files, minimal or cloned code, predictable code naming schemes and circular dependency chains.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Equally important,” they add, “is monitoring package publishing velocity, since automated tools create at speeds no human developer could match. In addition, enhanced author validation and accountability measures are crucial for prevention. This includes implementing stronger identity verification for new accounts, monitoring for coordinated publishing activity across multiple developer accounts, as seen in this campaign, and applying ‘guilt by association’ principles where packages from accounts linked to malicious activity receive heightened scrutiny. Repositories should also track behavioral patterns like rapid account creation followed by mass package publishing, which are hallmarks of automated abuse.”&lt;/p&gt;
+
+
+
+&lt;p&gt;CISOs discovering these packages in their environments “face an uncomfortable reality,” the Amazon authors add: “Their current security controls had failed to detect a coordinated supply chain attack.”&lt;/p&gt;
+
+
+
+&lt;p&gt;SourceCodeRed’s McCarty said IT leaders need to protect developers’ laptops, as well as their automated continuous integration and delivery pipelines (CI/CD). Traditional security tools like EDR and SCA don’t scan for malware, he warned. “The number of people that buy Snyk thinking it does this is huge,” he said. &lt;/p&gt;
+
+
+
+&lt;p&gt;McCarty has created two open source malware scanning tools. One, &lt;a href="https://opensourcemalware.com/"&gt;opensourcemalware.com&lt;/a&gt;, is an open database of malicious content like npm packages. It can be checked to see if a package being used is malicious. The second is the automated open-source &lt;a href="https://github.com/6mile/MALOSS"&gt;MALOSS&lt;/a&gt; tool, which is effectively a scanner that checks opensourcemalware.com and other sources automatically. MALOSS can be used in a CI/CD pipeline or on a local workstation.&lt;/p&gt;
+
+
+
+&lt;p&gt;He also recommends the use of a commercial or open source package firewall, which effectively allows a developer to only install approved packages. &lt;/p&gt;
+
+
+
+&lt;p&gt;“The enterprise has more options than I think they realize,” he told CSO. “They just often don’t realize that there are tools and solutions to address this risk.  Maturity is really low in this space.”&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.infoworld.com/article/4090561/worm-flooding-npm-registry-with-token-stealers-still-isnt-under-control.html" target="_blank"&gt;InfoWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4090568/worm-flooding-npm-registry-with-token-stealers-still-isnt-under-control-2.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.94</comments>
+      <pubDate>Sat, 15 Nov 2025 01:47:38 +0000</pubDate>
     </item>
     <item>
       <title>GitHub security advisory (AV25-737)</title>
@@ -1463,7 +1389,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av25-737</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.14</comments>
       <pubDate>Wed, 12 Nov 2025 15:15:37 +0000</pubDate>
     </item>
     <item>
@@ -1473,7 +1399,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Wed, 12 Nov 2025 15:40:41 +0000</pubDate>
     </item>
     <item>
@@ -1483,7 +1409,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2025-monthly-rollup-av25-739</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Wed, 12 Nov 2025 15:58:11 +0000</pubDate>
     </item>
     <item>
@@ -1493,7 +1419,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-740</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.17</comments>
       <pubDate>Wed, 12 Nov 2025 16:33:12 +0000</pubDate>
     </item>
     <item>
@@ -1503,7 +1429,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-741</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.17</comments>
       <pubDate>Wed, 12 Nov 2025 16:35:40 +0000</pubDate>
     </item>
     <item>
@@ -1513,7 +1439,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-742</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.18</comments>
       <pubDate>Wed, 12 Nov 2025 16:49:08 +0000</pubDate>
     </item>
     <item>
@@ -1523,7 +1449,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-743</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.22</comments>
+      <comments>Score: 9.18</comments>
       <pubDate>Wed, 12 Nov 2025 17:02:17 +0000</pubDate>
     </item>
     <item>
@@ -1533,7 +1459,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av25-744</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.26</comments>
+      <comments>Score: 9.23</comments>
       <pubDate>Wed, 12 Nov 2025 18:51:37 +0000</pubDate>
     </item>
     <item>
@@ -1543,7 +1469,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-745</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.27</comments>
+      <comments>Score: 9.23</comments>
       <pubDate>Wed, 12 Nov 2025 19:12:32 +0000</pubDate>
     </item>
     <item>
@@ -1553,7 +1479,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-746</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.27</comments>
+      <comments>Score: 9.24</comments>
       <pubDate>Wed, 12 Nov 2025 19:31:33 +0000</pubDate>
     </item>
     <item>
@@ -1563,7 +1489,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-747</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.31</comments>
+      <comments>Score: 9.27</comments>
       <pubDate>Wed, 12 Nov 2025 20:53:35 +0000</pubDate>
     </item>
     <item>
@@ -1573,7 +1499,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av25-748</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.32</comments>
+      <comments>Score: 9.28</comments>
       <pubDate>Wed, 12 Nov 2025 21:17:22 +0000</pubDate>
     </item>
     <item>
@@ -1583,7 +1509,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-749</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.32</comments>
+      <comments>Score: 9.29</comments>
       <pubDate>Wed, 12 Nov 2025 21:36:47 +0000</pubDate>
     </item>
     <item>
@@ -1593,7 +1519,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-750</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Thu, 13 Nov 2025 14:16:01 +0000</pubDate>
     </item>
     <item>
@@ -1603,7 +1529,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-751</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.82</comments>
+      <comments>Score: 9.78</comments>
       <pubDate>Thu, 13 Nov 2025 16:12:21 +0000</pubDate>
     </item>
     <item>
@@ -1613,7 +1539,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Thu, 13 Nov 2025 20:59:38 +0000</pubDate>
     </item>
     <item>
@@ -1623,7 +1549,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-rockwell-automation-security-advisory-av25-753</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Thu, 13 Nov 2025 21:03:08 +0000</pubDate>
     </item>
     <item>
@@ -1633,7 +1559,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-754</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.53</comments>
+      <comments>Score: 10.48</comments>
       <pubDate>Fri, 14 Nov 2025 13:43:32 +0000</pubDate>
     </item>
     <item>
@@ -1643,7 +1569,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-755</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.53</comments>
+      <comments>Score: 10.48</comments>
       <pubDate>Fri, 14 Nov 2025 13:49:50 +0000</pubDate>
     </item>
     <item>
@@ -1653,7 +1579,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-756</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.65</comments>
+      <comments>Score: 10.59</comments>
       <pubDate>Fri, 14 Nov 2025 16:52:23 +0000</pubDate>
     </item>
     <item>
@@ -1663,7 +1589,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-757</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.65</comments>
+      <comments>Score: 10.60</comments>
       <pubDate>Fri, 14 Nov 2025 16:56:53 +0000</pubDate>
     </item>
     <item>
@@ -1673,7 +1599,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-758</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.65</comments>
+      <comments>Score: 10.60</comments>
       <pubDate>Fri, 14 Nov 2025 17:02:10 +0000</pubDate>
     </item>
     <item>
@@ -1683,7 +1609,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-017-vulnerability-impacting-fortinet-fortiweb-cve-2025-64446</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.73</comments>
+      <comments>Score: 10.68</comments>
       <pubDate>Fri, 14 Nov 2025 19:04:48 +0000</pubDate>
     </item>
     <item>
@@ -1693,7 +1619,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-759</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.79</comments>
+      <comments>Score: 10.73</comments>
       <pubDate>Fri, 14 Nov 2025 20:27:37 +0000</pubDate>
     </item>
     <item>
@@ -1702,7 +1628,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/dark-reading-virtual-event-cybersecurity-outlook-2026</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 418.84</comments>
+      <comments>Score: 412.58</comments>
       <pubDate>Wed, 03 Dec 2025 16:00:00 +0000</pubDate>
     </item>
   </channel>
