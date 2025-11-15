@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Nov 2025 07:19:59 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Nov 2025 08:27:10 +0000</lastBuildDate>
+    <item>
+      <title>Apple security advisory (AV25-727)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-727</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Fri, 07 Nov 2025 14:12:09 +0000</pubDate>
+    </item>
     <item>
       <title>Google Chrome security advisory (AV25-728)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-728</link>
@@ -40,134 +50,13 @@
       <pubDate>Fri, 07 Nov 2025 16:09:33 +0000</pubDate>
     </item>
     <item>
-      <title>Rogue MCP servers can take over Cursor’s built-in browser</title>
-      <link>https://www.csoonline.com/article/4089046/rogue-mcp-servers-can-take-over-cursors-built-in-browser.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;AI agents and coding copilots are shaking up how — and what — developers code. But they’re also rapidly expanding the attack surface of developer machines&lt;/p&gt;
-
-
-
-&lt;p&gt;The latest example: Security researchers have shown how a rogue Model Context Protocol (MCP) server can inject malicious code into the built-in browser feature of Cursor, a popular AI-powered code editor.&lt;/p&gt;
-
-
-
-&lt;p&gt;“We demonstrate how a single malicious MCP server can replace login pages inside Cursor’s internal browser with an attacker-controlled page that harvests credentials and sends them to a remote attacker,” researchers from AI cybersecurity firm Knostic.ai wrote in &lt;a href="https://www.knostic.ai/blog/mcp-hijacked-cursor-browser"&gt;new research&lt;/a&gt; shared with CSO. “We also show how that same capability allows an attacker to fully compromise the victim’s workstation.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Originally developed by Anthropic to facilitate communication between large language models (LLMs) and external data sources or applications to improve workflow context, MCP has become a key component for developing AI agents that automate tasks by leveraging external tools.&lt;/p&gt;
-
-
-
-&lt;p&gt;The protocol uses a client-server architecture, in which applications expose functionality to LLMs through an MCP server and AI agents or applications connect to those services through an MCP client. Integrated development environments (IDEs) such as Microsoft’s Visual Studio Code — and those based on it, like Cursor and Windsurf — natively support integration with MCP servers.&lt;/p&gt;
-
-
-
-&lt;p&gt;To enhance security, most IDE vendors maintain repositories with vetted MCP servers, but IDE users can also deploy custom servers manually. Such servers can be found all over the internet, including GitHub. Earlier this year, researchers found hundreds of MCP servers in public GitHub repositories that &lt;a href="https://www.csoonline.com/article/4012712/misconfigured-mcp-servers-expose-ai-agent-systems-to-compromise.html"&gt;had dangerous misconfigurations&lt;/a&gt;, including default exposure to untrusted networks and OS command injection paths.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="attacking-cursor-and-other-vs-code-based-ides"&gt;Attacking Cursor and other VS Code-based IDEs&lt;/h2&gt;
-
-
-
-&lt;p&gt;Cursor is essentially a fork of VS Code with code added to turn it into an AI-assisted coding tool, whereas VS Code gets its AI capabilities through extensions. Knostic researcher Dor Munis, who developed the MCP attack against Cursor, told CSO that unlike VS Code, which performs integrity checks of its own files, Cursor does not. As a result, any modification of its own code will not present the user with a warning.&lt;/p&gt;
-
-
-
-&lt;p&gt;VS Code, and by extension Cursor and other VS Code forks, is built on Electron, a framework used to develop cross-platform applications with Node.js and the Blink browser engine from Chrome. Because of this, these applications employ a JavaScript interpreter. As IDEs, they also have file system access and elevated permissions to perform tasks.&lt;/p&gt;
-
-
-
-&lt;p&gt;Knostic researchers recently published &lt;a href="https://www.knostic.ai/blog/demonstrating-code-injection-vscode-cursor"&gt;a proof-of-concept attack against Cursor implemented through a malicious extension&lt;/a&gt; that injected malicious JavaScript into the running IDE to execute actions and manipulate its user interface. Malicious extensions have also been found &lt;a href="http://csoonline.com/article/4072829/tigerjacks-malicious-vscode-extensions-mine-steal-and-stay-hidden.html"&gt;in the VSCode Marketplace and the OpenVSX registry&lt;/a&gt;, which Cursor also uses, including &lt;a href="https://www.csoonline.com/article/4076718/self-propagating-worm-found-in-marketplaces-for-visual-studio-code-extensions-2.html"&gt;a self-propagating worm that harvests credentials&lt;/a&gt; from developer machines.&lt;/p&gt;
-
-
-
-&lt;p&gt;Knostic’s newly unveiled attack is similar in concept, but delivered via a malicious MCP server, it expands the attack surface beyond extensions.&lt;/p&gt;
-
-
-
-&lt;p&gt;“An MCP server should be treated exactly like VS Code extensions in terms of security,” Munis said. That’s because MCP servers are essentially downloaded to run on your computer, and inherit the permissions of the IDE you use, he explained.&lt;/p&gt;
-
-
-
-&lt;p&gt;In his proof-of-concept attack, Munis shows that an MCP server can inject JavaScript code into &lt;a href="https://cursor.com/docs/agent/browser"&gt;the built-in browser&lt;/a&gt; that Cursor recently added to allow developers to visually test changes to their application code and to allow Cursor’s AI agent to automatically perform tasks that require browsing. Using this technique, Munis replaced the browser’s actively displayed page with a log-in prompt, like in a phishing scenario, but without the URL ever changing — in other words, injected code’s changes happen on the fly.&lt;/p&gt;
-
-
-
-&lt;p&gt;Of course, the impact of such an attack would depend on what the victim is doing in the browser. Developers might be displaying sensitive data from the web app they’re working on, or they might be logged into a service. It’s worth noting that the internal browser saves authentication cookies for the session and those could also be targeted.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attack was developed to prove successful JavaScript code injection via an MCP server, but just like with the extension attack, it could be expanded to perform other malicious actions inside the Cursor IDE itself.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="defenses"&gt;Defenses&lt;/h2&gt;
-
-
-
-&lt;p&gt;Organizations must review and control, both through policy and access controls, the IDE extensions and MCP servers their developers use. They should do this just like they should be vetting application dependencies from package registries such as npm or PyPI to prevent the compromise of developer machines or inheriting vulnerabilities in their code.&lt;/p&gt;
-
-
-
-&lt;p&gt;Attackers are increasingly using VS Code extensions as an attack vector to target developers and it’s only a matter of time before they’ll start abusing MCP servers more widely.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Try to find the project’s GitHub repo and review the code,” the Knostic team advised. “This is a program you install on your computer that can do anything. If there’s doubt about its credibility, DO NOT USE IT.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Using auto-run modes, in which agents are allowed to perform tasks automatically inside the IDE without a human approving the steps, also known as YOLO mode, should also be avoided.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Never blindly enable anything, especially MCP functionality,” the team warned. “Don’t assume that everything your AI agent generated is as you expected. Read through the code before you perform actions in the embedded browser.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://cursor.com/docs/context/mcp#security-considerations"&gt;In its MCP documentation&lt;/a&gt;, Cursor itself warns developers to:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Verify an MCP server’s source and only install from trusted developers and repositories&lt;/li&gt;
-
-
-
-&lt;li&gt;Check what data and APIs the server is supposed to access&lt;/li&gt;
-
-
-
-&lt;li&gt;Use API keys with restricted permissions&lt;/li&gt;
-
-
-
-&lt;li&gt;Audit the server’s code for critical integrations&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4089046/rogue-mcp-servers-can-take-over-cursors-built-in-browser.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
-      <pubDate>Thu, 13 Nov 2025 14:05:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Qualcomm security advisory – November 2025 monthly rollup (AV25-731)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-november-2025-monthly-rollup-av25-731</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-november-2025-monthly-rollup-av25-731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Fri, 07 Nov 2025 18:22:37 +0000</pubDate>
     </item>
     <item>
@@ -178,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Sat, 15 Nov 2025 05:19:59 +0000</pubDate>
+      <pubDate>Sat, 15 Nov 2025 06:27:10 +0000</pubDate>
     </item>
     <item>
       <title>Agentic AI opens door to new ID challenges: Report</title>
@@ -326,7 +215,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4089682/agentic-ai-opens-door-to-new-id-challenges-report.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Fri, 14 Nov 2025 02:12:25 +0000</pubDate>
     </item>
     <item>
@@ -337,7 +226,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.03</comments>
-      <pubDate>Sat, 15 Nov 2025 05:19:59 +0000</pubDate>
+      <pubDate>Sat, 15 Nov 2025 06:27:10 +0000</pubDate>
     </item>
     <item>
       <title>54 individuals arrested in action against labour exploitation</title>
@@ -347,7 +236,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.05</comments>
-      <pubDate>Sat, 15 Nov 2025 05:19:59 +0000</pubDate>
+      <pubDate>Sat, 15 Nov 2025 06:27:10 +0000</pubDate>
     </item>
     <item>
       <title>Press Release: CIO100 and CSO30 ASEAN Awards Gala 2025 Celebrate Regional Excellence in Technology Leadership</title>
@@ -468,7 +357,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4089848/press-release-cio100-and-cso30-asean-awards-2025-celebrate-regional-excellence-in-technology-leadership.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Fri, 14 Nov 2025 06:53:00 +0000</pubDate>
     </item>
     <item>
@@ -687,7 +576,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4027000/the-books-shaping-todays-cybersecurity-leaders.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Fri, 14 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -697,7 +586,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-732</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Mon, 10 Nov 2025 14:22:38 +0000</pubDate>
     </item>
     <item>
@@ -707,7 +596,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-733</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Mon, 10 Nov 2025 14:35:30 +0000</pubDate>
     </item>
     <item>
@@ -717,7 +606,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-734</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Mon, 10 Nov 2025 14:44:30 +0000</pubDate>
     </item>
     <item>
@@ -727,7 +616,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-735</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Mon, 10 Nov 2025 15:21:41 +0000</pubDate>
     </item>
     <item>
@@ -737,7 +626,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-736</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Mon, 10 Nov 2025 15:34:02 +0000</pubDate>
     </item>
     <item>
@@ -819,7 +708,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4090107/bundestag-beschliest-nis2-umsetzung.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Fri, 14 Nov 2025 12:58:34 +0000</pubDate>
     </item>
     <item>
@@ -829,7 +718,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Mon, 10 Nov 2025 20:01:16 +0000</pubDate>
     </item>
     <item>
@@ -900,7 +789,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4090217/arista-palo-alto-bolster-ai-data-center-security-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Fri, 14 Nov 2025 15:20:44 +0000</pubDate>
     </item>
     <item>
@@ -971,7 +860,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086912/how-shadow-it-leaves-every-industry-in-the-dark.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Fri, 14 Nov 2025 16:44:32 +0000</pubDate>
     </item>
     <item>
@@ -1092,7 +981,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086813/why-network-visibility-is-the-thread-that-holds-cybersecurity-together.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Fri, 14 Nov 2025 16:46:25 +0000</pubDate>
     </item>
     <item>
@@ -1155,7 +1044,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086904/why-soc-efficiency-is-the-most-valuable-currency-in-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Fri, 14 Nov 2025 16:47:23 +0000</pubDate>
     </item>
     <item>
@@ -1226,7 +1115,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4086908/from-detection-to-response-why-confidence-is-the-real-game-changer.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Fri, 14 Nov 2025 16:48:16 +0000</pubDate>
     </item>
     <item>
@@ -1369,7 +1258,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4090568/worm-flooding-npm-registry-with-token-stealers-still-isnt-under-control-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.73</comments>
       <pubDate>Sat, 15 Nov 2025 01:47:38 +0000</pubDate>
     </item>
     <item>
@@ -1619,7 +1508,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3491733/was-ist-social-engineering.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Sat, 15 Nov 2025 03:36:00 +0000</pubDate>
     </item>
     <item>
@@ -1629,7 +1518,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av25-737</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Wed, 12 Nov 2025 15:15:37 +0000</pubDate>
     </item>
     <item>
@@ -1639,7 +1528,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.06</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Wed, 12 Nov 2025 15:40:41 +0000</pubDate>
     </item>
     <item>
@@ -1649,7 +1538,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2025-monthly-rollup-av25-739</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Wed, 12 Nov 2025 15:58:11 +0000</pubDate>
     </item>
     <item>
@@ -1659,7 +1548,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-740</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Wed, 12 Nov 2025 16:33:12 +0000</pubDate>
     </item>
     <item>
@@ -1669,7 +1558,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-741</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Wed, 12 Nov 2025 16:35:40 +0000</pubDate>
     </item>
     <item>
@@ -1679,7 +1568,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-742</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Wed, 12 Nov 2025 16:49:08 +0000</pubDate>
     </item>
     <item>
@@ -1689,7 +1578,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-743</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Wed, 12 Nov 2025 17:02:17 +0000</pubDate>
     </item>
     <item>
@@ -1699,7 +1588,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av25-744</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Wed, 12 Nov 2025 18:51:37 +0000</pubDate>
     </item>
     <item>
@@ -1709,7 +1598,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-745</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Wed, 12 Nov 2025 19:12:32 +0000</pubDate>
     </item>
     <item>
@@ -1719,7 +1608,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-746</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.15</comments>
+      <comments>Score: 9.12</comments>
       <pubDate>Wed, 12 Nov 2025 19:31:33 +0000</pubDate>
     </item>
     <item>
@@ -1729,7 +1618,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-747</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Wed, 12 Nov 2025 20:53:35 +0000</pubDate>
     </item>
     <item>
@@ -1739,7 +1628,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av25-748</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Wed, 12 Nov 2025 21:17:22 +0000</pubDate>
     </item>
     <item>
@@ -1749,7 +1638,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-749</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.17</comments>
       <pubDate>Wed, 12 Nov 2025 21:36:47 +0000</pubDate>
     </item>
     <item>
@@ -1759,7 +1648,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-750</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.58</comments>
       <pubDate>Thu, 13 Nov 2025 14:16:01 +0000</pubDate>
     </item>
     <item>
@@ -1769,7 +1658,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-751</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.66</comments>
+      <comments>Score: 9.63</comments>
       <pubDate>Thu, 13 Nov 2025 16:12:21 +0000</pubDate>
     </item>
     <item>
@@ -1779,7 +1668,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.80</comments>
+      <comments>Score: 9.76</comments>
       <pubDate>Thu, 13 Nov 2025 20:59:38 +0000</pubDate>
     </item>
     <item>
@@ -1789,7 +1678,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-rockwell-automation-security-advisory-av25-753</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.80</comments>
+      <comments>Score: 9.77</comments>
       <pubDate>Thu, 13 Nov 2025 21:03:08 +0000</pubDate>
     </item>
     <item>
@@ -1799,7 +1688,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-754</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.33</comments>
+      <comments>Score: 10.29</comments>
       <pubDate>Fri, 14 Nov 2025 13:43:32 +0000</pubDate>
     </item>
     <item>
@@ -1809,7 +1698,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-755</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.33</comments>
+      <comments>Score: 10.29</comments>
       <pubDate>Fri, 14 Nov 2025 13:49:50 +0000</pubDate>
     </item>
     <item>
@@ -1819,7 +1708,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-756</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.44</comments>
+      <comments>Score: 10.40</comments>
       <pubDate>Fri, 14 Nov 2025 16:52:23 +0000</pubDate>
     </item>
     <item>
@@ -1829,7 +1718,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-757</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.44</comments>
+      <comments>Score: 10.40</comments>
       <pubDate>Fri, 14 Nov 2025 16:56:53 +0000</pubDate>
     </item>
     <item>
@@ -1839,7 +1728,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-758</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.45</comments>
+      <comments>Score: 10.41</comments>
       <pubDate>Fri, 14 Nov 2025 17:02:10 +0000</pubDate>
     </item>
     <item>
@@ -1849,7 +1738,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-017-vulnerability-impacting-fortinet-fortiweb-cve-2025-64446</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.52</comments>
+      <comments>Score: 10.48</comments>
       <pubDate>Fri, 14 Nov 2025 19:04:48 +0000</pubDate>
     </item>
     <item>
@@ -1859,7 +1748,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-759</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.57</comments>
+      <comments>Score: 10.53</comments>
       <pubDate>Fri, 14 Nov 2025 20:27:37 +0000</pubDate>
     </item>
     <item>
@@ -1868,7 +1757,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/dark-reading-virtual-event-cybersecurity-outlook-2026</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 395.09</comments>
+      <comments>Score: 390.52</comments>
       <pubDate>Wed, 03 Dec 2025 16:00:00 +0000</pubDate>
     </item>
   </channel>
