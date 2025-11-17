@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 17 Nov 2025 07:22:43 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Nov 2025 08:33:09 +0000</lastBuildDate>
     <item>
       <title>Strike against synthetics: authorities seize tonnes of chemicals in Central and Eastern Europe</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/strike-against-synthetics-authorities-seize-tonnes-of-chemicals-in-central-and-eastern-europe</link>
@@ -17,152 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.29</comments>
-      <pubDate>Mon, 17 Nov 2025 05:22:43 +0000</pubDate>
-    </item>
-    <item>
-      <title>Spam flooding npm registry with token stealers still isn’t under control</title>
-      <link>https://www.csoonline.com/article/4090568/worm-flooding-npm-registry-with-token-stealers-still-isnt-under-control-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A coordinated token farming campaign continues to flood the open source npm registry, with tens of thousands of infected packages created almost daily to steal tokens from unsuspecting developers using the Tea Protocol to reward coding work.&lt;/p&gt;
-
-
-
-&lt;p&gt;On Thursday, &lt;a href="https://aws.amazon.com/blogs/security/amazon-inspector-detects-over-150000-malicious-packages-linked-to-token-farming-campaign/"&gt;researchers at Amazon said&lt;/a&gt; there were over 150,000 packages in the campaign. But in an interview on Friday, an executive at software supply chain management provider Sonatype, which wrote about the campaign in April 2024, told &lt;em&gt;CSO&lt;/em&gt; that number has now grown to 153,000.&lt;/p&gt;
-
-
-
-&lt;p&gt;And while this payload merely steals tokens, other threat actors are paying attention, said Sonatype CTO Brian Fox.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.sonatype.com/blog/devs-flood-npm-with-10000-packages-to-reward-themselves-with-tea-tokens"&gt;When Sonatype wrote about the campaign just over a year ago&lt;/a&gt;, it found a mere 15,000 packages that appeared to come from a single person.&lt;/p&gt;
-
-
-
-&lt;p&gt;With the swollen numbers reported this week, Amazon researchers wrote that it’s “one of the largest package flooding incidents in open source registry history, and represents a defining moment in supply chain security.”&lt;/p&gt;
-
-
-
-&lt;p&gt;This campaign is just the latest way threat actors are taking advantage of security holes in a number of open source repositories, which runs the risk of damaging the reputation of sites like npm, PyPI and others.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.csoonline.com/article/4081492/modern-supply-chain-attacks-and-their-real-world-impact.html"&gt;&lt;strong&gt;Related content: Supply chain attacks and their consequences&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;“The malware infestation in open-source repositories is a full-blown crisis, out of control and dangerously eroding trust in the open-source upstream supply chain,” said &lt;a href="https://www.linkedin.com/in/draidman/" rel="noreferrer noopener" target="_blank"&gt;Dmitry Raidman&lt;/a&gt;, CTO of Cybeats, which makes a software bill of materials solution.&lt;/p&gt;
-
-
-
-&lt;p&gt;As evidence, he pointed to t&lt;a href="https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem"&gt;he Shai‑Hulud worm’s rapid exploitation&lt;/a&gt; of the npm ecosystem, which shows how quickly attackers can hijack developer tokens, corrupt packages, and propagate laterally across the entire dependency ecosystem. “What began as a single compromise explodes in a few hours, leaving the whole ecosystem and every downstream project in the industry at risk in a matter of days, regardless of whether it is open source or commercial.”&lt;/p&gt;
-
-
-
-&lt;p&gt;This past September, Raidman &lt;a href="https://www.cybeats.com/blog/the-alarming-acceleration-of-supply-chain-attacks-from-nx-to-qix-in-just-13-days"&gt;wrote about the compromise of the Nx build system&lt;/a&gt; after threat actors pushed malicious versions of the package into npm. Within hours, he wrote, developers around the world were unknowingly pulling in code that stole SSH keys, authentication tokens, and cryptocurrency wallets.&lt;/p&gt;
-
-
-
-&lt;p&gt;These and more recent large scale uploads of malicious packages into open source repositories are “just the beginning,” he warned, unless developers and repository maintainers improve security.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Amazon and Sonatype reports aren’t the first to detect this campaign. Australian researcher &lt;a href="https://melbourne2024.cyberconference.com.au/speakers/paul-mccarty-ebbdx" rel="noreferrer noopener" target="_blank"&gt;Paul McCarty&lt;/a&gt; of SourceCodeRed confirmed to us that this is the spam he dubbed ‘IndonesianFoods’ &lt;a href="https://sourcecodered.com/indonesianfoods-npm-worm/"&gt;in a blog this week.&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-tea-protocol"&gt;The Tea Protocol&lt;/h2&gt;
-
-
-
-&lt;p&gt;The Tea Protocol is a blockchain-based platform that gives open-source developers and package maintainers tokens called Tea as rewards for their software work. These tokens are also supposed to help secure the software supply chain and enable decentralized governance across the network, &lt;a href="https://tea.xyz/"&gt;say its creators on their website.&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Developers put Tea code that links to the blockchain in their apps; the more an app is downloaded, the more Tea tokens they get, which can then be cashed in through a fund. The spam scheme is an attempt to make the blockchain think apps created by the threat actors are highly popular and therefore earn a lot of tokens.&lt;/p&gt;
-
-
-
-&lt;p&gt;At the moment, the tokens have no value. But it is suspected that the threat actors are positioning themselves to receive real cryptocurrency tokens when the Tea Protocol launches its Mainnet, where Tea tokens will have actual monetary value and can be traded.&lt;/p&gt;
-
-
-
-&lt;p&gt;For now, says Sonatype’s Fox, the scheme wastes the time of npm administrators, who are trying to expel over 100,000 packages. But Fox and Amazon point out the scheme could inspire others to take advantage of other reward-based systems for financial gain, or to deliver malware.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-it-leaders-and-developers-should-do"&gt;What IT leaders and developers should do&lt;/h2&gt;
-
-
-
-&lt;p&gt;To lower the odds of abuse, open source repositories should tighten their access control, limiting the number of users who can upload code, said Raidman of Cybeats. That includes the use of multi-factor authentication in case login credentials of developers are stolen, he said, and adding digital signing capabilities to uploaded code to authenticate the author.&lt;/p&gt;
-
-
-
-&lt;p&gt;IT leaders should insist all code their firm uses has a software bill of materials (SBOM), so security teams can see the components. They also need to insist developers know the versions of the open source code they include in their apps, and confirm only approved and safe versions are being used and not automatically changed just because a new version is downloaded from a repository.&lt;/p&gt;
-
-
-
-&lt;p&gt;Sonatype’s Fox said IT leaders need to buy tools that can intercept and block malicious downloads from repositories. Antivirus software is useless here, he said, because malicious code uploaded to repositories won’t contain the signatures that AV tools are supposed to detect.&lt;/p&gt;
-
-
-
-&lt;p&gt;In response to emailed questions, the authors of the Amazon blog, researchers Chi Tran and Charlie Bacon, said open source repositories need to deploy advanced detection systems to identify suspicious patterns like malicious configuration files, minimal or cloned code, predictable code naming schemes and circular dependency chains.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Equally important,” they add, “is monitoring package publishing velocity, since automated tools create at speeds no human developer could match. In addition, enhanced author validation and accountability measures are crucial for prevention. This includes implementing stronger identity verification for new accounts, monitoring for coordinated publishing activity across multiple developer accounts, as seen in this campaign, and applying ‘guilt by association’ principles where packages from accounts linked to malicious activity receive heightened scrutiny. Repositories should also track behavioral patterns like rapid account creation followed by mass package publishing, which are hallmarks of automated abuse.”&lt;/p&gt;
-
-
-
-&lt;p&gt;CISOs discovering these packages in their environments “face an uncomfortable reality,” the Amazon authors add: “Their current security controls had failed to detect a coordinated supply chain attack.”&lt;/p&gt;
-
-
-
-&lt;p&gt;SourceCodeRed’s McCarty said IT leaders need to protect developers’ laptops, as well as their automated continuous integration and delivery pipelines (CI/CD). Traditional security tools like EDR and SCA don’t scan for malware, he warned. “The number of people that buy Snyk thinking it does this is huge,” he said. &lt;/p&gt;
-
-
-
-&lt;p&gt;McCarty has created two open source malware scanning tools. One, &lt;a href="https://opensourcemalware.com/"&gt;opensourcemalware.com&lt;/a&gt;, is an open database of malicious content like npm packages. It can be checked to see if a package being used is malicious. The second is the automated open-source &lt;a href="https://github.com/6mile/MALOSS"&gt;MALOSS&lt;/a&gt; tool, which is effectively a scanner that checks opensourcemalware.com and other sources automatically. MALOSS can be used in a CI/CD pipeline or on a local workstation.&lt;/p&gt;
-
-
-
-&lt;p&gt;He also recommends the use of a commercial or open source package firewall, which effectively allows a developer to only install approved packages. &lt;/p&gt;
-
-
-
-&lt;p&gt;“The enterprise has more options than I think they realize,” he told CSO. “They just often don’t realize that there are tools and solutions to address this risk.  Maturity is really low in this space.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.infoworld.com/article/4090561/worm-flooding-npm-registry-with-token-stealers-still-isnt-under-control.html" target="_blank"&gt;InfoWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4090568/worm-flooding-npm-registry-with-token-stealers-still-isnt-under-control-2.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
-      <pubDate>Sat, 15 Nov 2025 01:47:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>6 arrested for smuggling migrants from Türkiye to France and Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</link>
-      <description>On 13 November 2025, the German Federal Police, in close cooperation with French border police and with the support of Europol and Eurojust, have dismantled a criminal network believed to have smuggled nearly 600 people into Europe between 2021 and 2023.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
-      <pubDate>Mon, 17 Nov 2025 05:22:43 +0000</pubDate>
+      <pubDate>Mon, 17 Nov 2025 06:33:09 +0000</pubDate>
     </item>
     <item>
       <title>Was ist Social Engineering?</title>
@@ -411,8 +266,27 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3491733/was-ist-social-engineering.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.30</comments>
       <pubDate>Sat, 15 Nov 2025 03:36:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Patch Tuesday, November 2025 Edition</title>
+      <link>https://krebsonsecurity.com/2025/11/microsoft-patch-tuesday-november-2025-edition/</link>
+      <description>Microsoft this week pushed security updates to fix more than 60 vulnerabilities in its Windows operating systems and supported software, including at least one zero-day bug that is already being exploited. Microsoft also fixed a glitch that prevented some Windows 10 users from taking advantage of an extra year of security updates, which is nice because the zero-day flaw and other critical weaknesses patched today affect all versions of Windows, including Windows 10.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2025/11/microsoft-patch-tuesday-november-2025-edition/</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.31</comments>
+      <pubDate>Sun, 16 Nov 2025 21:47:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>6 arrested for smuggling migrants from Türkiye to France and Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</link>
+      <description>On 13 November 2025, the German Federal Police, in close cooperation with French border police and with the support of Europol and Eurojust, have dismantled a criminal network believed to have smuggled nearly 600 people into Europe between 2021 and 2023.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.33</comments>
+      <pubDate>Mon, 17 Nov 2025 06:33:09 +0000</pubDate>
     </item>
     <item>
       <title>Six arrests in a kidnap plot against an Albanian drug trafficker</title>
@@ -422,16 +296,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.35</comments>
-      <pubDate>Mon, 17 Nov 2025 05:22:43 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Patch Tuesday, November 2025 Edition</title>
-      <link>https://krebsonsecurity.com/2025/11/microsoft-patch-tuesday-november-2025-edition/</link>
-      <description>Microsoft this week pushed security updates to fix more than 60 vulnerabilities in its Windows operating systems and supported software, including at least one zero-day bug that is already being exploited. Microsoft also fixed a glitch that prevented some Windows 10 users from taking advantage of an extra year of security updates, which is nice because the zero-day flaw and other critical weaknesses patched today affect all versions of Windows, including Windows 10.</description>
-      <guid isPermaLink="false">https://krebsonsecurity.com/2025/11/microsoft-patch-tuesday-november-2025-edition/</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Sun, 16 Nov 2025 21:47:14 +0000</pubDate>
+      <pubDate>Mon, 17 Nov 2025 06:33:09 +0000</pubDate>
     </item>
     <item>
       <title>Apple security advisory (AV25-727)</title>
@@ -460,7 +325,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-729</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Fri, 07 Nov 2025 15:59:01 +0000</pubDate>
     </item>
     <item>
@@ -480,7 +345,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-november-2025-monthly-rollup-av25-731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Fri, 07 Nov 2025 18:22:37 +0000</pubDate>
     </item>
     <item>
@@ -491,7 +356,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Mon, 17 Nov 2025 05:22:43 +0000</pubDate>
+      <pubDate>Mon, 17 Nov 2025 06:33:09 +0000</pubDate>
     </item>
     <item>
       <title>Europol and UEFA united for fair and safe football</title>
@@ -501,7 +366,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 17 Nov 2025 05:22:43 +0000</pubDate>
+      <pubDate>Mon, 17 Nov 2025 06:33:09 +0000</pubDate>
     </item>
     <item>
       <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
@@ -511,7 +376,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 17 Nov 2025 05:22:43 +0000</pubDate>
+      <pubDate>Mon, 17 Nov 2025 06:33:09 +0000</pubDate>
     </item>
     <item>
       <title>End of the game for cybercrime infrastructure: 1025 servers taken down</title>
@@ -521,7 +386,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Mon, 17 Nov 2025 05:22:43 +0000</pubDate>
+      <pubDate>Mon, 17 Nov 2025 06:33:09 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-732)</title>
@@ -530,7 +395,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-732</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Mon, 10 Nov 2025 14:22:38 +0000</pubDate>
     </item>
     <item>
@@ -540,7 +405,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-733</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Mon, 10 Nov 2025 14:35:30 +0000</pubDate>
     </item>
     <item>
@@ -550,7 +415,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-734</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Mon, 10 Nov 2025 14:44:30 +0000</pubDate>
     </item>
     <item>
@@ -560,7 +425,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-735</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 10 Nov 2025 15:21:41 +0000</pubDate>
     </item>
     <item>
@@ -570,7 +435,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-736</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 10 Nov 2025 15:34:02 +0000</pubDate>
     </item>
     <item>
@@ -580,7 +445,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Mon, 10 Nov 2025 20:01:16 +0000</pubDate>
     </item>
     <item>
@@ -591,7 +456,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.03</comments>
-      <pubDate>Mon, 17 Nov 2025 05:22:43 +0000</pubDate>
+      <pubDate>Mon, 17 Nov 2025 06:33:09 +0000</pubDate>
     </item>
     <item>
       <title>54 individuals arrested in action against labour exploitation</title>
@@ -601,7 +466,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.05</comments>
-      <pubDate>Mon, 17 Nov 2025 05:22:43 +0000</pubDate>
+      <pubDate>Mon, 17 Nov 2025 06:33:09 +0000</pubDate>
     </item>
     <item>
       <title>GitHub security advisory (AV25-737)</title>
@@ -610,7 +475,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av25-737</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Wed, 12 Nov 2025 15:15:37 +0000</pubDate>
     </item>
     <item>
@@ -620,7 +485,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Wed, 12 Nov 2025 15:40:41 +0000</pubDate>
     </item>
     <item>
@@ -630,7 +495,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2025-monthly-rollup-av25-739</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Wed, 12 Nov 2025 15:58:11 +0000</pubDate>
     </item>
     <item>
@@ -640,7 +505,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-740</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Wed, 12 Nov 2025 16:33:12 +0000</pubDate>
     </item>
     <item>
@@ -650,7 +515,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-741</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Wed, 12 Nov 2025 16:35:40 +0000</pubDate>
     </item>
     <item>
@@ -660,7 +525,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-742</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Wed, 12 Nov 2025 16:49:08 +0000</pubDate>
     </item>
     <item>
@@ -670,7 +535,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-743</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Wed, 12 Nov 2025 17:02:17 +0000</pubDate>
     </item>
     <item>
@@ -680,7 +545,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av25-744</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.28</comments>
       <pubDate>Wed, 12 Nov 2025 18:51:37 +0000</pubDate>
     </item>
     <item>
@@ -690,7 +555,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-745</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.28</comments>
       <pubDate>Wed, 12 Nov 2025 19:12:32 +0000</pubDate>
     </item>
     <item>
@@ -700,7 +565,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-746</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.28</comments>
       <pubDate>Wed, 12 Nov 2025 19:31:33 +0000</pubDate>
     </item>
     <item>
@@ -710,7 +575,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-747</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.30</comments>
       <pubDate>Wed, 12 Nov 2025 20:53:35 +0000</pubDate>
     </item>
     <item>
@@ -720,7 +585,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av25-748</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Wed, 12 Nov 2025 21:17:22 +0000</pubDate>
     </item>
     <item>
@@ -730,7 +595,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-749</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Wed, 12 Nov 2025 21:36:47 +0000</pubDate>
     </item>
     <item>
@@ -740,7 +605,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-750</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Thu, 13 Nov 2025 14:16:01 +0000</pubDate>
     </item>
     <item>
@@ -750,7 +615,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-751</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Thu, 13 Nov 2025 16:12:21 +0000</pubDate>
     </item>
     <item>
@@ -760,7 +625,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Thu, 13 Nov 2025 20:59:38 +0000</pubDate>
     </item>
     <item>
@@ -770,7 +635,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-rockwell-automation-security-advisory-av25-753</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Thu, 13 Nov 2025 21:03:08 +0000</pubDate>
     </item>
     <item>
@@ -888,7 +753,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4025731/empathie-trifft-it-sicherheit-der-weg-zu-gelebter-compliance.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Mon, 17 Nov 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1103,8 +968,102 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4085479/the-rise-of-the-chief-trust-officer-where-does-the-ciso-fit.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.98</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Mon, 17 Nov 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gipfel in Berlin – Europa strebt digitale Souveränität an</title>
+      <link>https://www.csoonline.com/article/4090833/gipfel-in-berlin-europa-strebt-digitale-souveranitat-an.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-large"&gt;&lt;img alt="EU" class="wp-image-4090844" height="576" src="https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2630309855.jpg?quality=50&amp;amp;strip=all&amp;amp;w=1024" width="1024" /&gt;&lt;figcaption class="wp-element-caption"&gt;Am 18. November 2025 findet der Summit on European Digital Sovereignty in Berlin statt.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;mr_tigga – shutterstock.com&lt;/p&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Bundeskanzler Friedrich Merz (CDU) und Frankreichs Präsident, Emmanuel Macron, haben sich angekündigt zum Treffen der Digitalminister und IT-Fachleute in Berlin. Rund 900 Teilnehmer werden beim Europäischen Gipfel zur Digitalen Souveränität am Dienstag erwartet. Was lange Zeit ein Nischenthema für IT-Fachleute war, steht inzwischen weit oben auf der politischen Agenda. &lt;/p&gt;
+
+
+
+&lt;p&gt;Denn viele Unternehmer und auch Führungskräfte in der öffentlichen Verwaltung stellen sich die bange Frage: Wie sicher sind meine Daten in den Clouds großer US-Tech-Unternehmen wie Amazon Web Services (AWS), Microsoft Azure oder Google Cloud? Und könnte vielleicht eines Tages der Zugang zu meinem E-Mail-Konto blockiert sein? Hier geht es ausdrücklich nicht um Sorgen wegen möglicher Hackerangriffe, sondern um etwaige Maßnahmen auf Geheiß der US-Regierung. &lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="kein-anti-us-tech-gipfel"&gt;Kein Anti-US-Tech-Gipfel&lt;/h2&gt;
+
+
+
+&lt;p&gt;Aus der Bundesregierung ist zwar zu hören, der Gipfel in Berlin richte sich nicht explizit gegen die USA. Doch vielleicht will man mit Blick auf bestehende Abhängigkeiten und heikle Zollfragen auch einfach kein Öl ins Feuer gießen.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="zugriff-der-us-justiz"&gt;Zugriff der US-Justiz?&lt;/h2&gt;
+
+
+
+&lt;p&gt;Das 2022 vom Bundesinnenministerium gegründete Zentrum für Digitale Souveränität in der Öffentlichen Verwaltung hat diesen Sommer jedenfalls unter der Überschrift “US-Recht kennt keine Grenzen” folgenden Hinweis auf juristische Risiken veröffentlicht: “Durch Gesetze wie den &lt;a href="https://www.csoonline.com/article/3494286/nis2-dora-data-act-co-die-wichtigsten-security-gesetze-im-uberblick.html" target="_blank"&gt;CLOUD Act&lt;/a&gt; und FISA 702 unterliegen alle US-Cloud-Anbieter der Pflicht, Daten auch dann offenzulegen, wenn sie außerhalb der USA gespeichert sind.” Dasselbe gelte für entsprechende verbindliche Anordnungen des US-Präsidenten. Die Amazon Web Services Cloud wird beispielsweise für die Speicherung von Aufzeichnungen von Bodycams der Bundespolizei genutzt.&lt;/p&gt;
+
+
+
+&lt;p&gt;FISA 702 ermöglicht US-Geheimdiensten wie der NSA das Abfangen von Kommunikation, die von US-amerikanischen Unternehmen bereitgestellt wird. Der Cloud Act erlaubt US-Ermittlungs- und Strafverfolgungsbehörden den Zugriff auf Daten, die von US-Unternehmen gespeichert werden, unabhängig davon, wo sich die Daten physisch befinden – also auch in europäischen Rechenzentren.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="geopolitische-herausforderungen"&gt;Geopolitische Herausforderungen&lt;/h2&gt;
+
+
+
+&lt;p&gt;“Die Stärkung der europäischen digitalen Souveränität ist für die Bundesregierung wie auch für die Regierungen der anderen EU-Mitgliedstaaten ein wichtiges Thema – gerade auch mit Blick auf die aktuellen geopolitischen Herausforderungen”, sagt ein Sprecher des Digitalministeriums. Von dem Gipfel solle “das starke Signal ausgehen, dass sich Europa der Herausforderungen bewusst ist und die digitale Souveränität engagiert vorantreibt”.&lt;/p&gt;
+
+
+
+&lt;p&gt;Für das Zentrum für Digitale Souveränität ist es das erklärte Ziel, die “kritischen Abhängigkeiten” der öffentlichen Verwaltung von großen, zumeist nicht-europäischen Software- und Cloud-Anbietern aufzulösen, deren Lösungen inzwischen fester Teil vieler staatlicher IT-Infrastrukturen geworden ist.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="ohne-cloud-geht-fast-nichts-mehr"&gt;Ohne Cloud geht fast nichts mehr&lt;/h2&gt;
+
+
+
+&lt;p&gt;Auch Unternehmen sind teils alarmiert. Laut einer im Frühsommer veröffentlichten Studie des Branchenverbands Bitkom, nutzen neun von zehn deutschen Unternehmen mit mindestens 20 Mitarbeitern Cloud-Dienste. Gleichzeitig sehen 78 Prozent der befragten Führungskräfte und IT-Fachleute die enge Bindung an amerikanische Cloud-Anbieter kritisch. Der Wunsch nach leistungsstarken europäischen Alternativen ist daher groß – vorausgesetzt die gleichen Funktionen werden angeboten.&lt;/p&gt;
+
+
+
+&lt;p&gt;Die Präsidentin des Bundesamtes für Sicherheit in der Informationstechnik (BSI), Claudia Plattner, hatte im August erklärt, der US-Cloud-Act sei eines von diversen Gesetzen in den USA, die dem Staat viele Zugriffsmöglichkeiten zubilligten. So etwas finde man auch in China. Die Antwort auf die Frage der Kontrolle sollte aber nicht politisch sein, sondern technologisch. “Es geht darum, sicherzustellen, dass ein Zugriff technisch nicht möglich ist”, betont sie. Dabei gehe es insbesondere um Verschlüsselung und die Frage, ob der Nutzer die Hoheit über diese Schlüssel habe.&lt;/p&gt;
+
+
+
+&lt;p&gt;Sven Kummer, Gründer eines Software-Unternehmens für sicheren Newsletter-Versand aus Freiburg, sagt, es sei gut, dass versucht werde, die Nutzung großer US-Cloud-Dienstleister mit &lt;a href="https://www.csoonline.com/de/cloud-security/page/3/" target="_blank"&gt;Sicherheitsmaßnahmen&lt;/a&gt; zu verknüpfen. Cloud-Dienstleister dieser Größenordnung auch in Europa zu haben, wäre “natürlich auch toll”, sagt der Geschäftsführer von rapidmail. Und fügt bedauernd hinzu: “Das ist leider noch nicht der Fall.” &lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="der-serverstandort-wird-immer-wichtiger"&gt;Der Serverstandort wird immer wichtiger&lt;/h2&gt;
+
+
+
+&lt;p&gt;Während früher kaum ein Kunde habe wissen wollen, wo die Server von rapidmail stehen, sei das seit einigen Monaten die Frage, die seine Kundendienst-Mitarbeiter am häufigsten beantworten müssten, berichtet Kummer. Die Antwort: In einem Rechenzentrum in Frankfurt am Main.&lt;/p&gt;
+
+
+
+&lt;p&gt;Für sein eigenes Unternehmen gelte: “Solange es irgendwie um Daten geht, die unseren Kunden gehören, dann hätte ich sie gerne so in Reichweite, dass ich auch wirklich mit Sicherheit unseren Kunden sagen kann: ‘Hey, hier haben wir unsere Hand drauf, sonst ist es niemand, und das bleibt auch so.'” Seine Kunden sind vor allem kleine und mittelständische Unternehmen, Vereine, Verbände oder auch Solo-Unternehmer. Sie erwarten von Kummer und seinem Team, dass ihre Newsletter gut aussehen, bei den Empfängern nicht im Spam-Ordner landen, dass alle Datenschutz-Regeln eingehalten werden und niemand Unbefugtes Zugriff auf sensible Daten hat – etwa auf die Empfängerlisten. &lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="einfach-mal-machen-in-deutschland-schwierig"&gt;Einfach mal machen – in Deutschland schwierig&lt;/h2&gt;
+
+
+
+&lt;p&gt;Seit 2021 gehört rapidmail zur deutsch-französischen Positive Group. Das Konzept, einfach einmal etwas auszuprobieren, zu gucken, ob es funktioniert und, wenn es nicht funktioniert, das Nächste auszuprobieren, sei in Deutschland wegen der vielen Regularien nicht umsetzbar, sagt Kummer. “Das ist in den USA oder in anderen Ländern einfach deutlich einfacher, einfach mal was zu probieren.” Bürokratieabbau und der Zugang zu Wagniskapital wären aus seiner Sicht wichtig, damit Deutschland im internationalen Wettbewerb der Tech-Start-Ups aufholt – wichtiger als Förderung und riesige KI-Rechenzentren. (dpa/jm)&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4090833/gipfel-in-berlin-europa-strebt-digitale-souveranitat-an.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.98</comments>
+      <pubDate>Mon, 17 Nov 2025 08:04:37 +0000</pubDate>
     </item>
     <item>
       <title>Splunk security advisory (AV25-754)</title>
@@ -1113,7 +1072,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-754</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Fri, 14 Nov 2025 13:43:32 +0000</pubDate>
     </item>
     <item>
@@ -1123,7 +1082,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-755</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Fri, 14 Nov 2025 13:49:50 +0000</pubDate>
     </item>
     <item>
@@ -1133,7 +1092,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-756</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Fri, 14 Nov 2025 16:52:23 +0000</pubDate>
     </item>
     <item>
@@ -1143,7 +1102,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-757</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Fri, 14 Nov 2025 16:56:53 +0000</pubDate>
     </item>
     <item>
@@ -1153,7 +1112,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-758</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Fri, 14 Nov 2025 17:02:10 +0000</pubDate>
     </item>
     <item>
@@ -1163,7 +1122,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-017-vulnerability-impacting-fortinet-fortiweb-cve-2025-64446</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Fri, 14 Nov 2025 19:04:48 +0000</pubDate>
     </item>
     <item>
@@ -1173,7 +1132,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-759</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.14</comments>
       <pubDate>Fri, 14 Nov 2025 20:27:37 +0000</pubDate>
     </item>
     <item>
@@ -1182,7 +1141,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/dark-reading-virtual-event-cybersecurity-outlook-2026</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 239.91</comments>
+      <comments>Score: 237.01</comments>
       <pubDate>Wed, 03 Dec 2025 16:00:00 +0000</pubDate>
     </item>
   </channel>
