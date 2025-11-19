@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Nov 2025 11:20:04 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Nov 2025 12:48:07 +0000</lastBuildDate>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV25–736)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-736</link>
@@ -16,127 +16,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-736</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Mon, 10 Nov 2025 15:34:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>Akira ransomware expands to Nutanix AHV, raising stakes for enterprise security</title>
-      <link>https://www.csoonline.com/article/4090995/akira-ransomware-expands-to-nutanix-ahv-raising-stakes-for-enterprise-security.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The Cybersecurity and Infrastructure Security Agency (CISA), along with the FBI and several international partners, has issued a new advisory warning organizations about the growing threat posed by the Akira ransomware group to critical infrastructure.&lt;/p&gt;
-
-
-
-&lt;p&gt;The latest update shows the ransomware group has expanded its capabilities beyond VMware ESXi and Hyper-V environments and is now targeting Nutanix AHV virtual machines as well.&lt;/p&gt;
-
-
-
-&lt;p&gt;While Akira initially focused on small and medium businesses in North America, Europe, and Australia, in the past, the group has increasingly shifted toward large enterprises with recent incidents infecting organizations in manufacturing, information technology, healthcare, financial services, and food and agriculture.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Akira’s expansion beyond Windows into Linux servers, VMware ESXi, Hyper-V, and now Nutanix AHV is not some side experiment. It is a very deliberate signal that this group is planning for the long haul. Multi-platform ransomware is expensive to build and even harder to maintain,” said Sanchit Vir Gogia, chief analyst and CEO at Greyhound Research.&lt;/p&gt;
-
-
-
-&lt;p&gt;As of late September 2025, Akira ransomware has claimed approximately $244.17 million in ransomware proceeds, noted &lt;a href="https://www.csoonline.com/article/3984087/cisas-alert-pivot-reflects-a-new-era-of-decentralized-cyber-threat-communication.html?utm=hybrid_search"&gt;CISA&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-akira-breaks-in"&gt;How Akira breaks in&lt;/h2&gt;
-
-
-
-&lt;p&gt;To gain initial access, the &lt;a href="https://www.csoonline.com/article/3838121/the-dirty-dozen-12-worst-ransomware-groups-active-today.html"&gt;Akira&lt;/a&gt; threat actor exploited poorly secured virtual private network (VPN) services without multi-factor authentication (MFA), using known common vulnerabilities and exposures in products like Cisco and &lt;a href="https://www.csoonline.com/article/4034988/akira-affiliates-abuse-legitimate-windows-drivers-to-evade-detection-in-sonicwall-attacks.html"&gt;SonicWall&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The techniques used include deploying password spraying techniques, in addition to spearphishing, abusing valid credentials, and techniques that leverage external-facing services, like Remote Desktop Protocol. In some incidents, it had also gained access through the &lt;a href="https://www.networkworld.com/article/4038192/critical-ssh-vulnerabilities-expose-enterprise-network-infrastructure-as-patching-lags.html"&gt;Secure Shell(SSH)&lt;/a&gt; protocol by exploiting a router’s IP address. Post tunnelling through a targeted router, it exploited publicly available vulnerabilities, such as those found in the Veeam Backup and Replication component of unpatched Veeam backup servers, &lt;a href="https://www.cisa.gov/sites/default/files/2025-11/aa24-109a-stopransomware-akira-ransomware_3.pdf"&gt;noted&lt;/a&gt; the advisory.&lt;/p&gt;
-
-
-
-&lt;p&gt;Malicious commands were executed, including Visual Basic (VB) scripts. Akira threat actors used nltest /dclist: and nltest/DOMAIN_TRUSTS for network and domain discovery. In addition, to avoid detection, it abused remote access tools such as AnyDesk and LogMeIn to maintain persistence and blend in with administrator activity. It leveraged Impacket to execute the remote command wmiexec.py and also uninstalled endpoint detection and response (EDR) systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;Threat actors also created new user accounts and added them to the administrator group to establish a foothold in the environment.&lt;/p&gt;
-
-
-
-&lt;p&gt;For command and control (C2) communications, it previously used two ransomware variants against different system architectures during one attempted compromise – Windows-specific “Megazord” ransomware and Akira ESXi encryptor, Akira_v2. However, Megazord has likely fallen out of use since 2024.&lt;/p&gt;
-
-
-
-&lt;p&gt;As per the new update, tunneling utilities, such as Ngrok, are being used to initiate encrypted sessions that bypass perimeter monitoring is being used. It also uses PowerShell and Windows Management Instrumentation Command-line (WMIC) to disable services and execute malicious scripts.&lt;/p&gt;
-
-
-
-&lt;p&gt;It has been using tools such as FileZilla and WinRAR to collect data and WinSCP and RClone to exfiltrate data. And post exfiltrating data, it used a double-extortion model, including encrypting systems and threatening to leak sensitive information. The advisory noted Akira threat actors were able to exfiltrate data in just over two hours from initial access.&lt;/p&gt;
-
-
-
-&lt;p&gt;Akira threat actors use ChaCha20 stream cipher with an RSA public-key cryptosystem for a fast and secure key exchange. While earlier the encrypted files appeared with a .akira or .powerranges extension, the new Akira_v2 variant also uses .akiranew or .aki.&lt;/p&gt;
-
-
-
-&lt;p&gt;To inhibit system recovery and impede forensic analysis, Akira’s encryptor (w.exe) used PowerShell commands to delete Volume Shadow Copy Service (VSS) copies on Windows systems. As per the new update, a ransom note named fn.txt or akira_readme.txt appears in both the root directory and each user’s home directory.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="threat-that-thrives-in-enterprise-blind-spots"&gt;Threat that thrives in enterprise blind spots&lt;/h2&gt;
-
-
-
-&lt;p&gt;Experts indicate that Akira leverages the blind spots that enterprises acknowledge but rarely fix. Of the blind spots, remote access tops the list, followed by patching.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Akira wins not because it has reinvented ransomware, but because it has perfected the parts enterprises fail to take seriously. It exploits the inertia around forgotten VPN appliances, under-patched firewalls, ageing backup servers, and edge devices that fall outside everyday security conversations. The threat is subtle, persistent, and designed to thrive in the grey areas that organisations neglect,” said Gogia.&lt;/p&gt;
-
-
-
-&lt;p&gt;Gogia noted that network appliances and backup platforms are often months or years behind on updates, which is why Akira regularly exploits Cisco ASA, SonicWall, ESXi, and &lt;a href="https://www.csoonline.com/article/3850731/critical-remote-code-execution-flaw-patched-in-veeam-backup-servers.html"&gt;Veeam&lt;/a&gt; vulnerabilities that should have been long closed.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="rethinking-ransomware-defence"&gt;Rethinking ransomware defence&lt;/h2&gt;
-
-
-
-&lt;p&gt;While the standard guidance includes patching, &lt;a href="https://www.csoonline.com/article/3535222/mfa-adoption-is-catching-up-but-is-not-quite-there.html"&gt;MFA&lt;/a&gt;, and regular backups, Akira wave drives home a clear need for additional defence mechanisms to be put in place.&lt;/p&gt;
-
-
-
-&lt;p&gt;“In 2025 alone, Akira ransomware accounted for about 8–11% of all successful ransomware attacks globally, with a 38% increase in incident count and a notable expansion into multi-platform attack methods,” said Devroop Dhar, co-founder and MD at Primus Partner. “This versatility means simultaneous disruption of endpoints and core business infrastructure, demonstrating a calculated, long-term vision by Akira’s developers to match the complexity and hybrid nature of modern enterprise systems.”&lt;/p&gt;
-
-
-
-&lt;p&gt;“Best practice now means robust network segmentation to confine breaches, vigilant monitoring for unusual admin activity, and extending detection and response to backup servers, hypervisor consoles, and connected devices,” added Dhar.&lt;/p&gt;
-
-
-
-&lt;p&gt;Proactive threat hunting, strict privilege management, and rehearsed recovery plans are vital, too, noted Dhar.&lt;/p&gt;
-
-
-
-&lt;p&gt;Enterprises must also rehearse full-scale ransomware scenarios. “These exercises need to blend technical recovery with legal strategy, communication plans, and data leak contingencies. The organisations that withstand Akira are not the ones with the most tools. They are the ones that have integrated their defences, shortened their detection windows, and treated resilience as an operational discipline rather than an aspiration,” added Gogia.&lt;/p&gt;
-
-
-
-&lt;p&gt;Dhar added that thinking like an attacker is now an essential skill, and plugging the gaps before they are exploited is what stands between disruption and survival.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4090995/akira-ransomware-expands-to-nutanix-ahv-raising-stakes-for-enterprise-security.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
-      <pubDate>Mon, 17 Nov 2025 12:26:48 +0000</pubDate>
     </item>
     <item>
       <title>WatchGuard security advisory (AV25-677) – Update 1</title>
@@ -145,48 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
+      <comments>Score: 7.45</comments>
       <pubDate>Mon, 10 Nov 2025 20:01:16 +0000</pubDate>
-    </item>
-    <item>
-      <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</link>
-      <description>Between 10 and 14 November, Europol, in collaboration with the European Union Intellectual Property Office (EUIPO) and the Spanish National Police (Policía Nacional), organised an "Intellectual Property Crime Cyber-Patrol Week”. A total of 30 investigators participated in this operation hosted at the EUIPO headquarters in Alicante, Spain, where they used advanced Open-Source Intelligence Techniques (OSINT) and cutting-edge online investigative tools...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 19 Nov 2025 09:20:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and UEFA united for fair and safe football</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-uefa-united-for-fair-and-safe-football</link>
-      <description>Today, 5 November 2025, Europol and UEFA have renewed and extended their Memorandum of Understanding, focused on preventing and combating crime while protecting the integrity of European football. The memorandum was signed at UEFA headquarters in Nyon by the Executive Director of Europol, Catherine De Bolle, and by the President of UEFA, Aleksander Čeferin. Europol and UEFA committed to cooperate...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-uefa-united-for-fair-and-safe-football</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 19 Nov 2025 09:20:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</link>
-      <description>Today marks ten years since one of the deadliest terrorist attacks in recent European history was carried out in Paris - at the Stade de France, in the streets and inside the Bataclan concert hall. On 13 November 2015, 132 people lost their lives and many more were injured during what became a night of profound tragedy for France and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 19 Nov 2025 09:20:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</link>
-      <description>Conducted on 13 November 2025, this operational action by the European Union Internet Referral Unit (EU IRU) involved the referral of thousands of URLs leading to dangerous and illicit online material. This includes around 5 408 links to jihadist content, 1 070 links to violent right-wing extremist and terrorist content, and 105 links to racist and xenophobic content.This joint action...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 19 Nov 2025 09:20:04 +0000</pubDate>
     </item>
     <item>
       <title>5 key ways attack surface management will evolve in 2026</title>
@@ -386,8 +227,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4090333/5-key-ways-attack-surface-management-will-evolve-in-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Mon, 17 Nov 2025 15:18:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing the winners of the 2025 Europol photo competition</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</link>
+      <description>Three awards were given out, each decided by a different group of voters:the international law enforcement community represented at Europol’s headquarters,members of the public,and the Heads of Communication of the European law enforcement authorities.The winners of Capture25The Europol Community Vote by the Liaison Bureaux went to Johan Jacob Kleist from Denmark with his photo of a ‘police officer patrolling beneath...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 19 Nov 2025 10:48:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</link>
+      <description>Today marks ten years since one of the deadliest terrorist attacks in recent European history was carried out in Paris - at the Stade de France, in the streets and inside the Bataclan concert hall. On 13 November 2015, 132 people lost their lives and many more were injured during what became a night of profound tragedy for France and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 19 Nov 2025 10:48:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</link>
+      <description>Between 10 and 14 November, Europol, in collaboration with the European Union Intellectual Property Office (EUIPO) and the Spanish National Police (Policía Nacional), organised an "Intellectual Property Crime Cyber-Patrol Week”. A total of 30 investigators participated in this operation hosted at the EUIPO headquarters in Alicante, Spain, where they used advanced Open-Source Intelligence Techniques (OSINT) and cutting-edge online investigative tools...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 19 Nov 2025 10:48:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</link>
+      <description>Conducted on 13 November 2025, this operational action by the European Union Internet Referral Unit (EU IRU) involved the referral of thousands of URLs leading to dangerous and illicit online material. This includes around 5 408 links to jihadist content, 1 070 links to violent right-wing extremist and terrorist content, and 105 links to racist and xenophobic content.This joint action...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 19 Nov 2025 10:48:07 +0000</pubDate>
     </item>
     <item>
       <title>End of the game for cybercrime infrastructure: 1025 servers taken down</title>
@@ -397,7 +278,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Wed, 19 Nov 2025 09:20:04 +0000</pubDate>
+      <pubDate>Wed, 19 Nov 2025 10:48:07 +0000</pubDate>
     </item>
     <item>
       <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
@@ -407,7 +288,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.65</comments>
-      <pubDate>Wed, 19 Nov 2025 09:20:04 +0000</pubDate>
+      <pubDate>Wed, 19 Nov 2025 10:48:07 +0000</pubDate>
     </item>
     <item>
       <title>GitHub security advisory (AV25-737)</title>
@@ -416,7 +297,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av25-737</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Wed, 12 Nov 2025 15:15:37 +0000</pubDate>
     </item>
     <item>
@@ -426,7 +307,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 12 Nov 2025 15:40:41 +0000</pubDate>
     </item>
     <item>
@@ -436,7 +317,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2025-monthly-rollup-av25-739</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 12 Nov 2025 15:58:11 +0000</pubDate>
     </item>
     <item>
@@ -446,7 +327,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-740</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 12 Nov 2025 16:33:12 +0000</pubDate>
     </item>
     <item>
@@ -456,7 +337,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-741</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 12 Nov 2025 16:35:40 +0000</pubDate>
     </item>
     <item>
@@ -466,7 +347,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-742</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 12 Nov 2025 16:49:08 +0000</pubDate>
     </item>
     <item>
@@ -476,7 +357,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-743</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Wed, 12 Nov 2025 17:02:17 +0000</pubDate>
     </item>
     <item>
@@ -486,7 +367,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av25-744</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 12 Nov 2025 18:51:37 +0000</pubDate>
     </item>
     <item>
@@ -496,7 +377,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-745</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 12 Nov 2025 19:12:32 +0000</pubDate>
     </item>
     <item>
@@ -506,7 +387,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-746</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Wed, 12 Nov 2025 19:31:33 +0000</pubDate>
     </item>
     <item>
@@ -516,7 +397,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-747</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 12 Nov 2025 20:53:35 +0000</pubDate>
     </item>
     <item>
@@ -526,7 +407,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av25-748</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 12 Nov 2025 21:17:22 +0000</pubDate>
     </item>
     <item>
@@ -536,7 +417,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-749</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 12 Nov 2025 21:36:47 +0000</pubDate>
     </item>
     <item>
@@ -710,7 +591,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4030328/so-verandert-ki-ihre-grc-strategie.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Tue, 18 Nov 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -720,7 +601,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-750</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Thu, 13 Nov 2025 14:16:01 +0000</pubDate>
     </item>
     <item>
@@ -730,7 +611,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-751</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Thu, 13 Nov 2025 16:12:21 +0000</pubDate>
     </item>
     <item>
@@ -903,7 +784,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4089732/rethinking-identity-for-the-ai-era-cisos-must-build-trust-at-machine-speed.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Tue, 18 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -913,7 +794,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 13 Nov 2025 20:59:38 +0000</pubDate>
     </item>
     <item>
@@ -923,7 +804,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-rockwell-automation-security-advisory-av25-753</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 13 Nov 2025 21:03:08 +0000</pubDate>
     </item>
     <item>
@@ -934,7 +815,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 8.05</comments>
-      <pubDate>Wed, 19 Nov 2025 09:20:04 +0000</pubDate>
+      <pubDate>Wed, 19 Nov 2025 10:48:07 +0000</pubDate>
     </item>
     <item>
       <title>Splunk security advisory (AV25-754)</title>
@@ -943,7 +824,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-754</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Fri, 14 Nov 2025 13:43:32 +0000</pubDate>
     </item>
     <item>
@@ -953,38 +834,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-755</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Fri, 14 Nov 2025 13:49:50 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV25-756)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-756</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-756</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
-      <pubDate>Fri, 14 Nov 2025 16:52:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>Samsung mobile security advisory (AV25-757)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-757</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-757</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
-      <pubDate>Fri, 14 Nov 2025 16:56:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fortinet security advisory (AV25-758)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-758</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-758</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
-      <pubDate>Fri, 14 Nov 2025 17:02:10 +0000</pubDate>
     </item>
     <item>
       <title>Energiesektor im Visier von Hackern</title>
@@ -1097,8 +948,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4092016/energiesektor-im-visier-von-hackern.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 18 Nov 2025 14:30:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV25-756)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-756</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-756</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.20</comments>
+      <pubDate>Fri, 14 Nov 2025 16:52:23 +0000</pubDate>
+    </item>
+    <item>
+      <title>Samsung mobile security advisory (AV25-757)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-757</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-757</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.20</comments>
+      <pubDate>Fri, 14 Nov 2025 16:56:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortinet security advisory (AV25-758)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-758</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-758</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.20</comments>
+      <pubDate>Fri, 14 Nov 2025 17:02:10 +0000</pubDate>
     </item>
     <item>
       <title>AL25-017 - Vulnerability impacting Fortinet FortiWeb – CVE-2025-64446</title>
@@ -1107,7 +988,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-017-vulnerability-impacting-fortinet-fortiweb-cve-2025-64446</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Fri, 14 Nov 2025 19:04:48 +0000</pubDate>
     </item>
     <item>
@@ -1117,8 +998,167 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-759</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Fri, 14 Nov 2025 20:27:37 +0000</pubDate>
+    </item>
+    <item>
+      <title>Overcome the myriad challenges of password management to bolster data protection</title>
+      <link>https://www.csoonline.com/article/4010789/overcome-the-myriad-challenges-of-password-management-to-bolster-data-protection.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Strengthening the protection of confidential and sensitive data is currently a priority for 40% of chief security officers.&lt;a href="#_ftn1" id="_ftnref1"&gt;&lt;sup&gt;[1]&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;And both enterprises and small and mid-sized businesses have already made significant investments in authentication, access controls and identity and access management (IAM).&lt;a href="#_ftn2" id="_ftnref2"&gt;&lt;sup&gt;[2]&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;But these investments are not effective without robust passwords. At the same time, password management is a cost for IT and security teams, and an inconvenience for technology users.&lt;/p&gt;
+
+
+
+&lt;p&gt;The scale of the problem should not be underestimated. The Verizon Data Breach Investigations Report says that half of data breaches, and over 80% of attacks on web applications involved compromised credentials.&lt;a href="#_ftn3" id="_ftnref3"&gt;&lt;sup&gt;[3]&lt;/sup&gt;&lt;/a&gt; And the average employee now has to manage over 100 unique user &lt;a&gt;accounts&lt;/a&gt; .&lt;a href="#_ftn4" id="_ftnref4"&gt;&lt;sup&gt;[4]&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;This leaves businesses facing a number of challenges around password management.&lt;/p&gt;
+
+
+
+&lt;p&gt;These include SSO (single sign on) authentication; automation, and integration with their identity infrastructure, including Lightweight Directory Access Protocol and Active Directory.&lt;/p&gt;
+
+
+
+&lt;p&gt;In addition, IT teams have to meet compliance responsibilities, ensuring that passwords and password management complies with GDPR, security standards such as ISO27001, and the business’ backup, recovery and auditing requirements.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading"&gt;&lt;strong&gt;Cutting down password overheads&lt;/strong&gt;&lt;/h3&gt;
+
+
+
+&lt;p&gt;Mid-sized businesses and enterprises all want to reduce the cost of passwords and identity management. But they want to do this without sacrificing flexibility, the time it takes to resolve password issues, and of course, security.&lt;/p&gt;
+
+
+
+&lt;p&gt;Dedicated password management solutions can help with this. The right tools can reduce password-related support costs by as much 80&lt;a&gt;%.&lt;/a&gt;&lt;a href="#_ftn5" id="_ftnref5"&gt;&lt;sup&gt;[5]&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Even greater benefits come from improved security. Organisations that have moved to their own password management infrastructure say they see a 60% decrease in password-related security incidents&lt;a&gt;.&lt;/a&gt;&lt;a href="#_ftn6" id="_ftnref6"&gt;&lt;sup&gt;[6]&lt;/sup&gt;&lt;/a&gt; &lt;/p&gt;
+
+
+
+&lt;p&gt;However effective a solution might be on a technical level, it will not produce the promised security or productivity benefits unless it is adopted widely.&lt;/p&gt;
+
+
+
+&lt;p&gt;Here, CIOs and security teams need to consider the user experience and the user interface of the tools they are deploying. Even the best solution is ineffective if users ignore it.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading"&gt;&lt;strong&gt;Deploying password management&lt;/strong&gt;&lt;/h3&gt;
+
+
+
+&lt;p&gt;These factors are prompting more organisations to deploy their own password management tools.&lt;/p&gt;
+
+
+
+&lt;p&gt;This gives IT and security teams complete control over password management, and control of data locations, or “sovereignty”, and access.&lt;/p&gt;
+
+
+
+&lt;p&gt;Additional capabilities include automated password rotation, and integration with single sign on (SSO), multi-factor authentication systems, and privileged access management.&lt;/p&gt;
+
+
+
+&lt;p&gt;This goes far beyond the password and identity management capabilities of the majority of enterprise applications. And there are further benefits of a single, centralised approach to password and identity management, rather than relying on each software vendor’s own approach.&lt;/p&gt;
+
+
+
+&lt;p&gt;CIOs, though, will want any dedicated password management tool to integrate with those applications, including through APIs. And they will want it to support multiple locations, including international operations.&lt;/p&gt;
+
+
+
+&lt;p&gt;The investment, though, will pay off.&lt;/p&gt;
+
+
+
+&lt;p&gt;Moving to a dedicated password manager – locally or in the cloud – can bring considerable savings. Passwork, for example, has a total cost of ownership that is up to 30% lower than comparable, alternative tools.&lt;/p&gt;
+
+
+
+&lt;p&gt;But it is not just about value for money. Investing in password management is about efficiency: reduced overheads, less time wasted on routine password management, and an improved user experience.&lt;/p&gt;
+
+
+
+&lt;p&gt;And it is investing in an essential part of any comprehensive approach to compliance and security.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://passwork.pro/?utm_source=csoonline&amp;amp;utm_medium=article&amp;amp;utm_campaign=blackfriday2025" rel="noreferrer noopener" target="_blank"&gt;Start your free trial today — explore all features now, and secure up to 50% off for your team during our Black Friday sale! Activate your discount from November 26 to December 3, 2025.&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+
+
+
+&lt;hr class="wp-block-separator has-alpha-channel-opacity" /&gt;
+
+
+
+&lt;p&gt;&lt;a href="#_ftnref1" id="_ftn1"&gt;[1]&lt;/a&gt; Foundry, CSO Security Priorities Study, 2024&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="#_ftnref2" id="_ftn2"&gt;[2]&lt;/a&gt; Foundry, CSO Security Priorities Study, 2024&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="#_ftnref3" id="_ftn3"&gt;[3]&lt;/a&gt;Verizon DRIR 2023, pages 5 &amp;amp; 8  https://www.verizon.com/business/resources/Te46/reports/2023-dbir-public-sector-snapshot.pdf – client supplied reference, citation and permissions needed&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="#_ftnref4" id="_ftn4"&gt;[4]&lt;/a&gt; Passwork 2024, User Study on Passwork management practices. Sample size: 100 users&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="#_ftnref5" id="_ftn5"&gt;[5]&lt;/a&gt; Gartner, &lt;a href="https://www.gartner.com/en/documents/2785217"&gt;Best Practices for Password Management report, 2020&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="#_ftnref6" id="_ftn6"&gt;[6]&lt;/a&gt; Kaspersky,  &lt;a href="https://www.kaspersky.com/about/press-releases/patch-management-combined-with-robust-password-policies-reduce-the-risk-of-cyberattacks-to-businesses-by-up-to-60"&gt;Patch management combined with robust password policies reduce the risk of cyberattacks to businesses by up to 60%&lt;/a&gt; &lt;/p&gt;
+
+
+
+&lt;hr class="wp-block-separator has-alpha-channel-opacity" /&gt;
+
+
+
+&lt;p&gt;&lt;a id="_msocom_1"&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt; &lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4010789/overcome-the-myriad-challenges-of-password-management-to-bolster-data-protection.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.81</comments>
+      <pubDate>Wed, 19 Nov 2025 08:06:00 +0000</pubDate>
     </item>
     <item>
       <title>More work for admins as Google patches latest zero-day Chrome vulnerability</title>
@@ -1208,7 +1248,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4092287/more-work-for-admins-as-google-patches-latest-zero-day-chrome-vulnerability.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.35</comments>
+      <comments>Score: 9.30</comments>
       <pubDate>Tue, 18 Nov 2025 18:16:18 +0000</pubDate>
     </item>
     <item>
@@ -1218,7 +1258,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.48</comments>
+      <comments>Score: 9.45</comments>
       <pubDate>Mon, 17 Nov 2025 13:37:05 +0000</pubDate>
     </item>
     <item>
@@ -1228,7 +1268,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.49</comments>
+      <comments>Score: 9.45</comments>
       <pubDate>Mon, 17 Nov 2025 13:54:26 +0000</pubDate>
     </item>
     <item>
@@ -1238,7 +1278,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Mon, 17 Nov 2025 14:04:44 +0000</pubDate>
     </item>
     <item>
@@ -1248,7 +1288,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-763</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Mon, 17 Nov 2025 14:17:21 +0000</pubDate>
     </item>
     <item>
@@ -1258,7 +1298,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-764</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Mon, 17 Nov 2025 16:08:23 +0000</pubDate>
     </item>
     <item>
@@ -1268,7 +1308,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-765</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.62</comments>
+      <comments>Score: 9.58</comments>
       <pubDate>Mon, 17 Nov 2025 18:43:46 +0000</pubDate>
     </item>
     <item>
@@ -1278,7 +1318,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-766</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.20</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Tue, 18 Nov 2025 13:59:18 +0000</pubDate>
     </item>
     <item>
@@ -1288,7 +1328,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-767</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.23</comments>
+      <comments>Score: 10.18</comments>
       <pubDate>Tue, 18 Nov 2025 14:47:40 +0000</pubDate>
     </item>
     <item>
@@ -1298,7 +1338,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-768</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.45</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Tue, 18 Nov 2025 21:02:07 +0000</pubDate>
     </item>
     <item>
@@ -1308,7 +1348,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-769</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.46</comments>
+      <comments>Score: 10.41</comments>
       <pubDate>Tue, 18 Nov 2025 21:22:18 +0000</pubDate>
     </item>
     <item>
@@ -1317,7 +1357,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/dark-reading-virtual-event-cybersecurity-outlook-2026</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 140.06</comments>
+      <comments>Score: 137.95</comments>
       <pubDate>Wed, 03 Dec 2025 16:00:00 +0000</pubDate>
     </item>
   </channel>
