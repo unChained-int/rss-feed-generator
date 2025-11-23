@@ -8,129 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 23 Nov 2025 07:21:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Nov 2025 08:28:00 +0000</lastBuildDate>
     <item>
-      <title>Sneaky2FA phishing tool adds ability to insert legit-looking URLs</title>
-      <link>https://www.csoonline.com/article/4094165/sneaky2fa-phishing-tool-adds-ability-to-insert-legit-looking-urls.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Since the introduction of multi-factor authentication (MFA), threat actors have been finding ways to get around what can be an effective defense against phishing attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;In their latest move, those behind the Sneaky2FA phishing-as-a-service (PhaaS) kit have added browser-in-the-browser (BITB) functionality to help crooks design phishing pages that fool victims.&lt;/p&gt;
-
-
-
-&lt;p&gt;This function allows the crook to embed a browser window on the victim’s desktop containing a phishing page that includes a URL address bar that can be customized by the attacker to look like a legitimate address to, for example, Microsoft online. BITB differs from attacker-in-the-middle (AITM) attacks, where the threat actor creates an embedded browser window that contains the actual phishing page. &lt;/p&gt;
-
-
-
-&lt;p&gt;Employees trained to look for suspicious URLs might even be fooled, because the internet address looks real. However,  the pop-up window, enabled through a reverse proxy, contains an iframe pointing to a malicious server that captures credentials and MFA codes entered by the unwitting victim. Then the attacker can steal the live session of the account being targeted, as well as user credentials, by logging in in real time.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-warning-to-csos"&gt;A warning to CSOs&lt;/h2&gt;
-
-
-
-&lt;p&gt;The report this week &lt;a href="https://pushsecurity.com/blog/analyzing-the-latest-sneaky2fa-phishing-page/" rel="noreferrer noopener" target="_blank"&gt;from researchers at Push Security &lt;/a&gt;describing the Sneaky2FA browser-in-the-browser capability is a warning to CSOs that they have to adapt their employee security awareness training as well as their defensive technology.&lt;/p&gt;
-
-
-
-&lt;p&gt;BITB tactics are spreading, says the report. It notes that Raccoon0365 was another PhaaS service that has utilized BITB functionality after announcing a ‘BITB mini-panel’ would be added to its offerings. In September, Cloudflare and Microsoft &lt;a href="https://www.csoonline.com/article/4058634/microsoft-and-cloudflare-execute-rugpull-on-massive-phishing-empire.html" target="_blank"&gt;dismantled that gang’s IT infrastructure&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;BITB has been known as a concept since 2022, notes David Shipley, head of Canadian-based security awareness training firm Beauceron Security. In fact, he added, it is increasingly used by advanced red teams in penetration tests to defeat security controls like MFA.&lt;/p&gt;
-
-
-
-&lt;p&gt;“It hasn’t been widely used because it hasn’t been needed to get the job done when it comes to compromising organizations,” he said. But as defenses improve, he’s seen use of this technique increase.&lt;/p&gt;
-
-
-
-&lt;p&gt;What’s dangerous, he said, is that phishing-as-a-service tools are making it easier for entry-level criminals to use these more advanced techniques. &lt;/p&gt;
-
-
-
-&lt;p&gt;“This is why I’ve always hated it when people use language like ‘phishing resistant,’ or even worse, ‘phishing proof’ solutions. Additional identity controls like MFA add more friction and resiliency, but can still be bypassed by clever attackers. That’s why it’s critical organizations have both robust technology security control as well as an aware community.” &lt;/p&gt;
-
-
-
-&lt;p&gt;That means CSOs and infosec leaders have to do more than just annual compliance-driven security training, Shipley said, instead motivating employees to keep an eye out for unusual things in messaging so they spot and stop phishing and other cyber attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;“That’s where many organizations are struggling,” he said. “Not in instructing people or passing on knowledge, but in creating a security culture that motivates people to apply knowledge.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/article/570795/how-to-hack-2fa.html" target="_blank"&gt;Related content: How MFA gets hacked&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;The addition of BITB, along with the improvement of detection evasion techniques, means that traditional security controls such as email gateways, web filters, and signature-based defenses will continue to be reliably bypassed, Push Security’s report says. &lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-look-at-sneaky2fa"&gt;A look at Sneaky2FA&lt;/h2&gt;
-
-
-
-&lt;p&gt;Sneaky2FA operates through a full-featured bot on Telegram, says the report. Customers reportedly receive access to a licensed, obfuscated version of the source code and deploy it independently. This means they can customize it to their needs. On the other hand, the report notes, Sneaky2FA implementations can be reliably profiled and tracked due to the codebase similarities.&lt;/p&gt;
-
-
-
-&lt;p&gt;Sneaky2FA has been frequently seen using anti-analysis techniques to detect or disable browser developer tools so they can block attempts to analyze the page for malicious content, the report adds.&lt;/p&gt;
-
-
-
-&lt;p&gt;Defenders should note that the HTML and JavaScript of Sneaky2FA pages are heavily obfuscated to evade static detection and pattern-matching, the report says. This includes using tactics such as breaking up UI text with invisible tags, embedding background and interface elements as encoded images instead of text, and other changes that are invisible to the user, but make it hard for scanning tools to fingerprint the page.&lt;/p&gt;
-
-
-
-&lt;p&gt;Campaigns are also known to use a ‘burn-and-replace’ tactic, hiding behind a fresh, long, randomized URL that lies dormant or serves harmless content until right before the attack, and then quickly vanishes. This is to defeat domain reputation or pattern-matching defense technologies.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-game-of-cat-and-mouse"&gt;A game of cat and mouse&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.linkedin.com/in/daniel-g-/"&gt;Dan Green&lt;/a&gt;, author of the Push Security report, told &lt;em&gt;CSO &lt;/em&gt;in an email that email isn’t the only way BITB attacks are spreading. In the past several months, his firm has seen LinkedIn Messenger and Google Search being used as well.&lt;/p&gt;
-
-
-
-&lt;p&gt;“We would encourage security teams to re-evaluate how they approach phishing detection,” he said. “[Phishing] is becoming increasingly sophisticated, it’s no longer just an email problem, and the risks are significant. A compromised enterprise cloud account (for example, Microsoft or Google Workspace) is effectively the key to everything you access in the course of the modern workday. This isn’t just the direct access to your enterprise cloud suite, but the downstream application access via SSO (single sign-on) that can be hijacked by the attacker. Most breaches start with compromised identities today, compared with software exploits or malware execution.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://blog.knowbe4.com/author/roger-grimes"&gt;Roger Grimes&lt;/a&gt;, data driven defense CISO advisor at security awareness training provider KnowBe4, noted that browser vendors have worked for decades trying to prevent malicious popup boxes from appearing because they are so tricky. However, he added, criminals keep on figuring out ways to bypass the protections.&lt;/p&gt;
-
-
-
-&lt;p&gt;On the other hand, he added, it is getting ever harder for criminals to create malicious popup boxes. Users still have a chance to see what is happening if they are aware, he said. “Sadly,” he said, “a large percentage of users don’t.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Educating users by providing information and examples of how browser pop-up attacks work is key, he said. In addition, CSOs should make sure browsers used by employees are as well configured as they can be to prevent these types of attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Browser vendors will respond and close the holes, but it’s always a reactive game of cat-and-mouse with the defenders always behind.” he said. “Pretty soon AI-enabled defense tools will do a better job at preventing them from happening at all. We just have to cover the gap for now.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4094165/sneaky2fa-phishing-tool-adds-ability-to-insert-legit-looking-urls.html</guid>
+      <title>Palo Alto Networks security advisory (AV25-748)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av25-748</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av25-748</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
-      <pubDate>Fri, 21 Nov 2025 02:03:54 +0000</pubDate>
+      <comments>Score: 7.29</comments>
+      <pubDate>Wed, 12 Nov 2025 21:17:22 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] Siemens security advisory (AV25-749)</title>
@@ -139,18 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-749</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
+      <comments>Score: 7.29</comments>
       <pubDate>Wed, 12 Nov 2025 21:36:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>6 arrested for smuggling migrants from Türkiye to France and Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</link>
-      <description>On 13 November 2025, the German Federal Police, in close cooperation with French border police and with the support of Europol and Eurojust, have dismantled a criminal network believed to have smuggled nearly 600 people into Europe between 2021 and 2023.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
-      <pubDate>Sun, 23 Nov 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>So rechtfertigen Sie Ihre Security-Investitionen</title>
@@ -297,8 +174,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4051211/so-rechtfertigen-sie-ihre-security-investitionen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.32</comments>
       <pubDate>Fri, 21 Nov 2025 04:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>6 arrested for smuggling migrants from Türkiye to France and Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</link>
+      <description>On 13 November 2025, the German Federal Police, in close cooperation with French border police and with the support of Europol and Eurojust, have dismantled a criminal network believed to have smuggled nearly 600 people into Europe between 2021 and 2023.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.33</comments>
+      <pubDate>Sun, 23 Nov 2025 06:28:00 +0000</pubDate>
     </item>
     <item>
       <title>Drupal security advisory (AV25-750)</title>
@@ -327,7 +214,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Thu, 13 Nov 2025 20:59:38 +0000</pubDate>
     </item>
     <item>
@@ -337,7 +224,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-rockwell-automation-security-advisory-av25-753</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Thu, 13 Nov 2025 21:03:08 +0000</pubDate>
     </item>
     <item>
@@ -450,7 +337,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4091641/recognizing-and-responding-to-cyber-threats-what-differentiates-ndr-edr-and-xdr.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Fri, 21 Nov 2025 07:30:00 +0000</pubDate>
     </item>
     <item>
@@ -480,7 +367,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-756</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Fri, 14 Nov 2025 16:52:23 +0000</pubDate>
     </item>
     <item>
@@ -490,7 +377,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-757</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Fri, 14 Nov 2025 16:56:53 +0000</pubDate>
     </item>
     <item>
@@ -500,7 +387,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-758</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Fri, 14 Nov 2025 17:02:10 +0000</pubDate>
     </item>
     <item>
@@ -510,7 +397,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-017-vulnerability-impacting-fortinet-fortiweb-cve-2025-64446</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
+      <comments>Score: 7.47</comments>
       <pubDate>Fri, 14 Nov 2025 19:04:48 +0000</pubDate>
     </item>
     <item>
@@ -522,56 +409,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
       <pubDate>Fri, 14 Nov 2025 20:27:37 +0000</pubDate>
-    </item>
-    <item>
-      <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</link>
-      <description>On 19 November 2025, a coordinated effort led by Bulgarian authorities and supported by Europol, resulted in the dismantling of a criminal network involved in large-scale trafficking of cultural goods across Europe and beyond. This operation was conducted under the framework of a Europol operational taskforce. The action day involved law enforcement and judicial authorities from Albania, France, Germany, Greece,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 23 Nov 2025 05:21:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</link>
-      <description>Today marks ten years since one of the deadliest terrorist attacks in recent European history was carried out in Paris - at the Stade de France, in the streets and inside the Bataclan concert hall. On 13 November 2015, 132 people lost their lives and many more were injured during what became a night of profound tragedy for France and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 23 Nov 2025 05:21:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</link>
-      <description>Conducted on 13 November 2025, this operational action by the European Union Internet Referral Unit (EU IRU) involved the referral of thousands of URLs leading to dangerous and illicit online material. This includes around 5 408 links to jihadist content, 1 070 links to violent right-wing extremist and terrorist content, and 105 links to racist and xenophobic content.This joint action...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 23 Nov 2025 05:21:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</link>
-      <description>Between 10 and 14 November, Europol, in collaboration with the European Union Intellectual Property Office (EUIPO) and the Spanish National Police (Policía Nacional), organised an "Intellectual Property Crime Cyber-Patrol Week”. A total of 30 investigators participated in this operation hosted at the EUIPO headquarters in Alicante, Spain, where they used advanced Open-Source Intelligence Techniques (OSINT) and cutting-edge online investigative tools...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 23 Nov 2025 05:21:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>Announcing the winners of the 2025 Europol photo competition</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</link>
-      <description>Three awards were given out, each decided by a different group of voters:the international law enforcement community represented at Europol’s headquarters,members of the public,and the Heads of Communication of the European law enforcement authorities.The winners of Capture25The Europol Community Vote by the Liaison Bureaux went to Johan Jacob Kleist from Denmark with his photo of a ‘police officer patrolling beneath...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 23 Nov 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>Ransomware gangs seize a new hostage: your AWS S3 buckets</title>
@@ -645,8 +482,58 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094475/ransomware-gangs-find-a-new-hostage-your-aws-s3-buckets.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Fri, 21 Nov 2025 11:46:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</link>
+      <description>On 19 November 2025, a coordinated effort led by Bulgarian authorities and supported by Europol, resulted in the dismantling of a criminal network involved in large-scale trafficking of cultural goods across Europe and beyond. This operation was conducted under the framework of a Europol operational taskforce. The action day involved law enforcement and judicial authorities from Albania, France, Germany, Greece,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 23 Nov 2025 06:28:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</link>
+      <description>Conducted on 13 November 2025, this operational action by the European Union Internet Referral Unit (EU IRU) involved the referral of thousands of URLs leading to dangerous and illicit online material. This includes around 5 408 links to jihadist content, 1 070 links to violent right-wing extremist and terrorist content, and 105 links to racist and xenophobic content.This joint action...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 23 Nov 2025 06:28:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</link>
+      <description>Between 10 and 14 November, Europol, in collaboration with the European Union Intellectual Property Office (EUIPO) and the Spanish National Police (Policía Nacional), organised an "Intellectual Property Crime Cyber-Patrol Week”. A total of 30 investigators participated in this operation hosted at the EUIPO headquarters in Alicante, Spain, where they used advanced Open-Source Intelligence Techniques (OSINT) and cutting-edge online investigative tools...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 23 Nov 2025 06:28:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing the winners of the 2025 Europol photo competition</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</link>
+      <description>Three awards were given out, each decided by a different group of voters:the international law enforcement community represented at Europol’s headquarters,members of the public,and the Heads of Communication of the European law enforcement authorities.The winners of Capture25The Europol Community Vote by the Liaison Bureaux went to Johan Jacob Kleist from Denmark with his photo of a ‘police officer patrolling beneath...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 23 Nov 2025 06:28:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</link>
+      <description>Today marks ten years since one of the deadliest terrorist attacks in recent European history was carried out in Paris - at the Stade de France, in the streets and inside the Bataclan concert hall. On 13 November 2015, 132 people lost their lives and many more were injured during what became a night of profound tragedy for France and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 23 Nov 2025 06:28:00 +0000</pubDate>
     </item>
     <item>
       <title>OAuth token compromise hits Salesforce ecosystem again, Gainsight impacted</title>
@@ -752,18 +639,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094506/oauth-token-compromise-hits-salesforce-ecosystem-again-gainsight-impacted.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Fri, 21 Nov 2025 12:42:16 +0000</pubDate>
-    </item>
-    <item>
-      <title>End of the game for cybercrime infrastructure: 1025 servers taken down</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down</link>
-      <description>Between 10 and 14 November 2025, the latest phase of Operation Endgame was coordinated from Europol’s headquarters in The Hague. The actions targeted one of the biggest infostealers (Rhadamanthys), the Remote Access Trojan VenomRAT, and the botnet Elysium, all of which played a key role in international cybercrime. Authorities took down these three large cybercrime enablers. The main suspect for VenomRAT was also arrested in Greece on 3 November 2025.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Sun, 23 Nov 2025 05:21:15 +0000</pubDate>
     </item>
     <item>
       <title>How to turn threat intel into real security wins</title>
@@ -1139,18 +1016,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4093927/how-to-turn-threat-intel-into-real-security-wins.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Fri, 21 Nov 2025 14:43:00 +0000</pubDate>
     </item>
     <item>
-      <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</link>
-      <description>A new digital platform, Help4U, developed by Europol and CENTRIC, has been launched to support children and teenagers facing sexual abuse or online harm. Designed to be simple, private, and accessible, Help4U supports young people with finding trusted advice, understanding their rights, and connecting with people who can help. The platform offers clear, practical guidance for anyone under 18 who needs help, as well as information for parents, teachers, and professionals supporting them.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</guid>
+      <title>End of the game for cybercrime infrastructure: 1025 servers taken down</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down</link>
+      <description>Between 10 and 14 November 2025, the latest phase of Operation Endgame was coordinated from Europol’s headquarters in The Hague. The actions targeted one of the biggest infostealers (Rhadamanthys), the Remote Access Trojan VenomRAT, and the botnet Elysium, all of which played a key role in international cybercrime. Authorities took down these three large cybercrime enablers. The main suspect for VenomRAT was also arrested in Greece on 3 November 2025.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
-      <pubDate>Sun, 23 Nov 2025 05:21:15 +0000</pubDate>
+      <comments>Score: 7.62</comments>
+      <pubDate>Sun, 23 Nov 2025 06:28:00 +0000</pubDate>
     </item>
     <item>
       <title>From code to boardroom: A GenAI GRC approach to supply chain risk</title>
@@ -1284,8 +1161,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094519/from-code-to-boardroom-a-genai-grc-approach-to-supply-chain-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.64</comments>
       <pubDate>Fri, 21 Nov 2025 16:33:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</link>
+      <description>A new digital platform, Help4U, developed by Europol and CENTRIC, has been launched to support children and teenagers facing sexual abuse or online harm. Designed to be simple, private, and accessible, Help4U supports young people with finding trusted advice, understanding their rights, and connecting with people who can help. The platform offers clear, practical guidance for anyone under 18 who needs help, as well as information for parents, teachers, and professionals supporting them.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.65</comments>
+      <pubDate>Sun, 23 Nov 2025 06:28:00 +0000</pubDate>
     </item>
     <item>
       <title>FCC reversal removes federal cyber safeguards targeting telecom weaknesses post-Salt Typhoon attacks</title>
@@ -1399,7 +1286,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094745/fcc-reversal-removes-federal-cyber-safeguards-targeting-telecom-weaknesses-post-salt-typhoon-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Sat, 22 Nov 2025 00:46:12 +0000</pubDate>
     </item>
     <item>
@@ -1409,7 +1296,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Mon, 17 Nov 2025 13:37:05 +0000</pubDate>
     </item>
     <item>
@@ -1419,7 +1306,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Mon, 17 Nov 2025 13:54:26 +0000</pubDate>
     </item>
     <item>
@@ -1429,7 +1316,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Mon, 17 Nov 2025 14:04:44 +0000</pubDate>
     </item>
     <item>
@@ -1439,7 +1326,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-763</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Mon, 17 Nov 2025 14:17:21 +0000</pubDate>
     </item>
     <item>
@@ -1449,7 +1336,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-764</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Mon, 17 Nov 2025 16:08:23 +0000</pubDate>
     </item>
     <item>
@@ -1459,7 +1346,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-765</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Mon, 17 Nov 2025 18:43:46 +0000</pubDate>
     </item>
     <item>
@@ -1469,7 +1356,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-767</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Tue, 18 Nov 2025 14:47:40 +0000</pubDate>
     </item>
     <item>
@@ -1479,7 +1366,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-768</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Tue, 18 Nov 2025 21:02:07 +0000</pubDate>
     </item>
     <item>
@@ -1489,7 +1376,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-769</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Tue, 18 Nov 2025 21:22:18 +0000</pubDate>
     </item>
     <item>
@@ -1670,7 +1557,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4093403/root-causes-of-security-breaches-remain-elusive-jeopardizing-resilience.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Fri, 21 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1680,7 +1567,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-770</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Wed, 19 Nov 2025 16:40:21 +0000</pubDate>
     </item>
     <item>
@@ -1690,7 +1577,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-771</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Wed, 19 Nov 2025 18:20:23 +0000</pubDate>
     </item>
     <item>
@@ -1700,7 +1587,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-772</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.65</comments>
       <pubDate>Wed, 19 Nov 2025 19:42:28 +0000</pubDate>
     </item>
     <item>
@@ -1710,7 +1597,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-773</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Wed, 19 Nov 2025 19:45:27 +0000</pubDate>
     </item>
     <item>
@@ -1720,7 +1607,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-766</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Wed, 19 Nov 2025 20:19:02 +0000</pubDate>
     </item>
     <item>
@@ -1730,7 +1617,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-774</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Thu, 20 Nov 2025 13:40:09 +0000</pubDate>
     </item>
     <item>
@@ -1740,7 +1627,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-775</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 9.05</comments>
       <pubDate>Thu, 20 Nov 2025 16:11:09 +0000</pubDate>
     </item>
     <item>
@@ -1750,7 +1637,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-776</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.58</comments>
       <pubDate>Fri, 21 Nov 2025 14:32:07 +0000</pubDate>
     </item>
     <item>
@@ -1760,7 +1647,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-777</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.63</comments>
+      <comments>Score: 9.60</comments>
       <pubDate>Fri, 21 Nov 2025 15:08:26 +0000</pubDate>
     </item>
     <item>
@@ -1770,7 +1657,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av25-778</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.64</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Fri, 21 Nov 2025 15:30:05 +0000</pubDate>
     </item>
     <item>
@@ -1780,7 +1667,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.82</comments>
+      <comments>Score: 9.78</comments>
       <pubDate>Fri, 21 Nov 2025 21:38:07 +0000</pubDate>
     </item>
     <item>
@@ -1789,7 +1676,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/dark-reading-virtual-event-cybersecurity-outlook-2026</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 54.32</comments>
+      <comments>Score: 53.71</comments>
       <pubDate>Wed, 03 Dec 2025 16:00:00 +0000</pubDate>
     </item>
   </channel>
