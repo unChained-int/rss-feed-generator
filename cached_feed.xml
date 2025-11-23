@@ -8,81 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 23 Nov 2025 18:30:18 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Nov 2025 19:18:21 +0000</lastBuildDate>
     <item>
-      <title>Ransomware gangs seize a new hostage: your AWS S3 buckets</title>
-      <link>https://www.csoonline.com/article/4094475/ransomware-gangs-find-a-new-hostage-your-aws-s3-buckets.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Ransomware operators are shifting their focus from traditional on-premises targets to cloud storage services, especially S3 buckets used by Amazon Web Services (AWS), cybersecurity researchers have warned.&lt;/p&gt;
-
-
-
-&lt;p&gt;A recent Trend Micro report outlined a new wave of attacks, where attackers integrate with cloud-native encryption and key management services rather than merely stealing or deleting data.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Malicious activity targeting S3 buckets isn’t new, although the techniques continue to evolve as organizations harden their cloud environments,” said Crystal Morin, senior cybersecurity strategist at Sysdig. “As defenders adopt stronger perimeter protections, these attackers are starting to abuse built-in capabilities, such as encryption management and key rotation, to make data unrecoverable.”&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Trend Micro, attackers are probing a range of S3 setups, from buckets with AWS-managed KMS keys to customer-provided keys, imported key material, and even entirely external key stores.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-s3-is-the-new-ransomware-battleground"&gt;Why S3 is the new ransomware battleground&lt;/h2&gt;
-
-
-
-&lt;p&gt;On-premise ransomware traditionally involved dropping malware, encrypting desktops or servers, and threatening payment. But as organizations have migrated critical workloads and backups to cloud services, researchers noted, attackers are &lt;a href="https://www.csoonline.com/article/4033018/ransomware-goes-cloud-native-to-target-your-backup-infrastructure.html"&gt;following the data&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Trend Micro report lists several prime cloud targets, including compute snapshots, static storage (S3) buckets, databases, containers/registries, and backup vaults. Among these, S3 is especially valuable because it often holds backups, logs, configuration data, and static assets–things an organization most wants back.&lt;/p&gt;
-
-
-
-&lt;p&gt;To succeed, attackers typically look for S3 buckets that have: versioning disabled ( so old versions can’t be restored), object-lock disabled ( so files can be overwritten or deleted), wide write permissions (via mis-configured IAM policies or leaked credentials), and hold high-value data (backup files, production config dumps).&lt;/p&gt;
-
-
-
-&lt;p&gt;Once inside, the attackers try to impose a “complete and irreversible lockout” of data, which may involve encryption objects with keys inaccessible to the victim, deleting backups, and scheduling key deletion so AWS and the customer can’t recover the data.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This research is a systematic and theoretical threat modelling exercise on how an attacker might encrypt and ransom an AWS environment within an account boundary–something we’ve talked about over the last 10 years,” said Trey Ford, chief strategy and trust officer at Bugcrowd.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="weaponizing-cloud-encryption-and-key-management"&gt;Weaponizing cloud encryption and key management&lt;/h2&gt;
-
-
-
-&lt;p&gt;Trend Micro has &lt;a href="https://www.trendmicro.com/en_us/research/25/k/s3-ransomware.html" rel="noreferrer noopener" target="_blank"&gt;identified&lt;/a&gt; five S3 ransomware variants that increasingly exploit AWS’s built-in encryption paths. One abuses default AWS-managed KMS keys (SSE-KMS) by encrypting data with an attacker-created key and scheduling that key for deletion. Another uses customer-provided keys (SSE-C), where AWS has no copy, making recovery impossible. The third one exfiltrates S3 bucket data (with no versioning) and deletes the originals.&lt;/p&gt;
-
-
-
-&lt;p&gt;The final two variants go deeper into key management infrastructure. One relies on imported key material (&lt;a href="https://aws.amazon.com/blogs/security/how-to-byok-bring-your-own-key-to-aws-kms-for-less-than-15-00-a-year-using-aws-cloudhsm/" rel="noreferrer noopener" target="_blank"&gt;BYOK&lt;/a&gt;), letting attackers encrypt data and then destroy or expire the imported keys. The other abuses AWS’s External Key Store (XKS), where key operations happen outside AWS, which means that if attackers control the external key source, neither the customer nor AWS can restore access. Together, the techniques reveal that attackers are using AWS itself as the encryption mechanism.&lt;/p&gt;
-
-
-
-&lt;p&gt;“I can’t recall having seen this done in the wild,” Ford added. “This specifically targets the use of external or customer-provided keys (SSE-C or XKS, respectively) to assert control over key management for the cryptography used in storage.” &lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers urge customers to harden their &lt;a href="https://www.csoonline.com/article/3816939/abandoned-aws-s3-buckets-open-door-to-remote-code-execution-and-supply-chain-compromises.html"&gt;S3 environments&lt;/a&gt; by enforcing least privilege access, enabling protective controls like versioning and Object Lock, and closely regulating the use of customer-provided or external key sources that can undermine recovery. Isolating backups in separate accounts and continuously monitoring cloud audit logs for signs of suspicious key activity, mass encryption, or large-scale object deletions was also recommended.&lt;br /&gt;&lt;br /&gt;“An ‘assume breach’ mindset is essential in the cloud: runtime environments should be immutable, identities must have tightly scoped permissions and short-lived credentials, networks need meaningful segmentation, and critical datasets must have backups,” Morin added. “Modern operations depend on complex supply chains, and a ransomware affecting a key partner can disrupt your business just as completely as a direct compromise.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4094475/ransomware-gangs-find-a-new-hostage-your-aws-s3-buckets.html</guid>
+      <title>Ivanti security advisory (AV25-746)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-746</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-746</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.26</comments>
-      <pubDate>Fri, 21 Nov 2025 11:46:59 +0000</pubDate>
+      <pubDate>Wed, 12 Nov 2025 19:31:33 +0000</pubDate>
     </item>
     <item>
       <title>Mozilla security advisory (AV25-747)</title>
@@ -218,7 +153,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094506/oauth-token-compromise-hits-salesforce-ecosystem-again-gainsight-impacted.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.26</comments>
       <pubDate>Fri, 21 Nov 2025 12:42:16 +0000</pubDate>
     </item>
     <item>
@@ -229,7 +164,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.29</comments>
-      <pubDate>Sun, 23 Nov 2025 16:30:18 +0000</pubDate>
+      <pubDate>Sun, 23 Nov 2025 17:18:21 +0000</pubDate>
     </item>
     <item>
       <title>Drupal security advisory (AV25-750)</title>
@@ -240,26 +175,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.31</comments>
       <pubDate>Thu, 13 Nov 2025 14:16:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitLab security advisory (AV25-751)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-751</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-751</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
-      <pubDate>Thu, 13 Nov 2025 16:12:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>6 arrested for smuggling migrants from Türkiye to France and Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</link>
-      <description>On 13 November 2025, the German Federal Police, in close cooperation with French border police and with the support of Europol and Eurojust, have dismantled a criminal network believed to have smuggled nearly 600 people into Europe between 2021 and 2023.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
-      <pubDate>Sun, 23 Nov 2025 16:30:18 +0000</pubDate>
     </item>
     <item>
       <title>How to turn threat intel into real security wins</title>
@@ -635,8 +550,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4093927/how-to-turn-threat-intel-into-real-security-wins.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.31</comments>
       <pubDate>Fri, 21 Nov 2025 14:43:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitLab security advisory (AV25-751)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-751</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-751</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.32</comments>
+      <pubDate>Thu, 13 Nov 2025 16:12:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>6 arrested for smuggling migrants from Türkiye to France and Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</link>
+      <description>On 13 November 2025, the German Federal Police, in close cooperation with French border police and with the support of Europol and Eurojust, have dismantled a criminal network believed to have smuggled nearly 600 people into Europe between 2021 and 2023.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.33</comments>
+      <pubDate>Sun, 23 Nov 2025 17:18:21 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] Schneider Electric security advisory (AV25-752)</title>
@@ -645,7 +580,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 13 Nov 2025 20:59:38 +0000</pubDate>
     </item>
     <item>
@@ -655,7 +590,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-rockwell-automation-security-advisory-av25-753</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 13 Nov 2025 21:03:08 +0000</pubDate>
     </item>
     <item>
@@ -790,7 +725,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094519/from-code-to-boardroom-a-genai-grc-approach-to-supply-chain-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Fri, 21 Nov 2025 16:33:00 +0000</pubDate>
     </item>
     <item>
@@ -840,7 +775,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-758</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Fri, 14 Nov 2025 17:02:10 +0000</pubDate>
     </item>
     <item>
@@ -871,17 +806,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 23 Nov 2025 16:30:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</link>
-      <description>Today marks ten years since one of the deadliest terrorist attacks in recent European history was carried out in Paris - at the Stade de France, in the streets and inside the Bataclan concert hall. On 13 November 2015, 132 people lost their lives and many more were injured during what became a night of profound tragedy for France and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 23 Nov 2025 16:30:18 +0000</pubDate>
+      <pubDate>Sun, 23 Nov 2025 17:18:21 +0000</pubDate>
     </item>
     <item>
       <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
@@ -891,17 +816,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 23 Nov 2025 16:30:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>Announcing the winners of the 2025 Europol photo competition</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</link>
-      <description>Three awards were given out, each decided by a different group of voters:the international law enforcement community represented at Europol’s headquarters,members of the public,and the Heads of Communication of the European law enforcement authorities.The winners of Capture25The Europol Community Vote by the Liaison Bureaux went to Johan Jacob Kleist from Denmark with his photo of a ‘police officer patrolling beneath...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 23 Nov 2025 16:30:18 +0000</pubDate>
+      <pubDate>Sun, 23 Nov 2025 17:18:21 +0000</pubDate>
     </item>
     <item>
       <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
@@ -911,7 +826,27 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 23 Nov 2025 16:30:18 +0000</pubDate>
+      <pubDate>Sun, 23 Nov 2025 17:18:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing the winners of the 2025 Europol photo competition</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</link>
+      <description>Three awards were given out, each decided by a different group of voters:the international law enforcement community represented at Europol’s headquarters,members of the public,and the Heads of Communication of the European law enforcement authorities.The winners of Capture25The Europol Community Vote by the Liaison Bureaux went to Johan Jacob Kleist from Denmark with his photo of a ‘police officer patrolling beneath...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 23 Nov 2025 17:18:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</link>
+      <description>Today marks ten years since one of the deadliest terrorist attacks in recent European history was carried out in Paris - at the Stade de France, in the streets and inside the Bataclan concert hall. On 13 November 2015, 132 people lost their lives and many more were injured during what became a night of profound tragedy for France and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 23 Nov 2025 17:18:21 +0000</pubDate>
     </item>
     <item>
       <title>FCC reversal removes federal cyber safeguards targeting telecom weaknesses post-Salt Typhoon attacks</title>
@@ -1025,7 +960,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094745/fcc-reversal-removes-federal-cyber-safeguards-targeting-telecom-weaknesses-post-salt-typhoon-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Sat, 22 Nov 2025 00:46:12 +0000</pubDate>
     </item>
     <item>
@@ -1036,7 +971,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Sun, 23 Nov 2025 16:30:18 +0000</pubDate>
+      <pubDate>Sun, 23 Nov 2025 17:18:21 +0000</pubDate>
     </item>
     <item>
       <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
@@ -1046,7 +981,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.65</comments>
-      <pubDate>Sun, 23 Nov 2025 16:30:18 +0000</pubDate>
+      <pubDate>Sun, 23 Nov 2025 17:18:21 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-760)</title>
@@ -1055,7 +990,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Mon, 17 Nov 2025 13:37:05 +0000</pubDate>
     </item>
     <item>
@@ -1065,7 +1000,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Mon, 17 Nov 2025 13:54:26 +0000</pubDate>
     </item>
     <item>
@@ -1095,7 +1030,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-764</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Mon, 17 Nov 2025 16:08:23 +0000</pubDate>
     </item>
     <item>
@@ -1115,7 +1050,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-767</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Tue, 18 Nov 2025 14:47:40 +0000</pubDate>
     </item>
     <item>
@@ -1296,7 +1231,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4093403/root-causes-of-security-breaches-remain-elusive-jeopardizing-resilience.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Fri, 21 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1306,7 +1241,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-768</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 18 Nov 2025 21:02:07 +0000</pubDate>
     </item>
     <item>
@@ -1316,7 +1251,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-769</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 18 Nov 2025 21:22:18 +0000</pubDate>
     </item>
     <item>
@@ -1326,7 +1261,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-770</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Wed, 19 Nov 2025 16:40:21 +0000</pubDate>
     </item>
     <item>
@@ -1336,7 +1271,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-771</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Wed, 19 Nov 2025 18:20:23 +0000</pubDate>
     </item>
     <item>
@@ -1346,7 +1281,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-772</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Wed, 19 Nov 2025 19:42:28 +0000</pubDate>
     </item>
     <item>
@@ -1356,7 +1291,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-773</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Wed, 19 Nov 2025 19:45:27 +0000</pubDate>
     </item>
     <item>
@@ -1366,7 +1301,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-766</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Wed, 19 Nov 2025 20:19:02 +0000</pubDate>
     </item>
     <item>
@@ -1376,7 +1311,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-774</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.80</comments>
+      <comments>Score: 8.78</comments>
       <pubDate>Thu, 20 Nov 2025 13:40:09 +0000</pubDate>
     </item>
     <item>
@@ -1386,7 +1321,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-775</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Thu, 20 Nov 2025 16:11:09 +0000</pubDate>
     </item>
     <item>
@@ -1396,7 +1331,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-776</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.33</comments>
+      <comments>Score: 9.31</comments>
       <pubDate>Fri, 21 Nov 2025 14:32:07 +0000</pubDate>
     </item>
     <item>
@@ -1406,7 +1341,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-777</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.34</comments>
+      <comments>Score: 9.32</comments>
       <pubDate>Fri, 21 Nov 2025 15:08:26 +0000</pubDate>
     </item>
     <item>
@@ -1416,7 +1351,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av25-778</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.35</comments>
+      <comments>Score: 9.33</comments>
       <pubDate>Fri, 21 Nov 2025 15:30:05 +0000</pubDate>
     </item>
     <item>
@@ -1426,7 +1361,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.51</comments>
+      <comments>Score: 9.49</comments>
       <pubDate>Fri, 21 Nov 2025 21:38:07 +0000</pubDate>
     </item>
     <item>
@@ -1435,7 +1370,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/dark-reading-virtual-event-cybersecurity-outlook-2026</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 48.47</comments>
+      <comments>Score: 48.08</comments>
       <pubDate>Wed, 03 Dec 2025 16:00:00 +0000</pubDate>
     </item>
   </channel>
