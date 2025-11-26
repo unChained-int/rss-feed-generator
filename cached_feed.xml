@@ -8,137 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Nov 2025 18:29:59 +0000</lastBuildDate>
-    <item>
-      <title>AWS S3-Buckets im Visier von Ransomware-Banden</title>
-      <link>https://www.csoonline.com/article/4095199/aws-s3-buckets-im-visier-von-ransomware-banden.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-large"&gt;&lt;img alt="Angriff auf Cloud-Speicher" class="wp-image-4095207" height="576" src="https://b2b-contenthub.com/wp-content/uploads/2025/11/shutterstock_2558721353.jpg?quality=50&amp;amp;strip=all&amp;amp;w=1024" width="1024" /&gt;&lt;figcaption class="wp-element-caption"&gt;Ransomware-Banden haben ihren Fokus von traditionellen lokalen Zielen auf Cloud-Speicherdienste und insbesondere Amazon S3 verlagert.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt; ImageFlow – shutterstock.com&lt;/p&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Ein aktueller &lt;a href="https://www.trendmicro.com/en_us/research/25/k/s3-ransomware.html" rel="noreferrer noopener" target="_blank"&gt;Bericht von Trend Micro&lt;/a&gt; beschreibt eine neue Welle von Angriffen, bei denen Angreifer Cloud-native Verschlüsselungs- und Schlüsselverwaltungsdienste integrieren, anstatt lediglich Daten zu stehlen oder zu löschen.&lt;/p&gt;
-
-
-
-&lt;p&gt;„Böswillige Aktivitäten, die auf S3 Buckets abzielen, sind nichts Neues, obwohl Unternehmen ihre Cloud-Umgebungen immer besser absichern“, kommentiert Crystal Morin, Senior Cybersecurity Strategist bei Sysdig. „Da Verteidiger stärkere Perimeterschutzmaßnahmen einsetzen, beginnen Angreifer, integrierte Funktionen wie Encryption Management und Key Rotation zu missbrauchen, um Daten zu zerstörren.“&lt;/p&gt;
-
-
-
-&lt;p&gt;Laut Trend Micro untersuchen Angreifer eine Reihe von S3-Konfigurationen, von Buckets mit AWS-verwalteten KMS-Schlüsseln bis hin zu vom Kunden bereitgestellten Keys, importiertem Schlüsselmaterial und sogar vollständig externen Schlüsselspeichern.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="warum-s3-ein-begehrtes-ransomware-ziel-ist"&gt;Warum S3 ein begehrtes Ransomware-Ziel ist&lt;/h2&gt;
-
-
-
-&lt;p&gt;Bei On-Premises-Ransomware werden traditionell Malware eingeschleust, Desktops oder Server verschlüsselt und Zahlungen erpresst. Da Unternehmen jedoch wichtige Workloads und Backups in Cloud-Dienste migriert haben, verfolgen Angreifer laut Forschern nun die Daten.&lt;/p&gt;
-
-
-
-&lt;p&gt;Der Trend-Micro-Bericht listet mehrere wichtige Cloud-Ziele auf, darunter Compute-Snapshots, statische Speicher (S3 Buckets), Datenbanken, Container/Registries und Backup-Tresore. Unter diesen ist S3 besonders wertvoll, da es häufig Backups, Protokolle, Konfigurationsdaten und statische Assets enthält – also Dinge, die ein Unternehmen am dringendsten zurückhaben möchte.&lt;/p&gt;
-
-
-
-&lt;p&gt;Um erfolgreich zu sein, suchen Cyberkriminelle in der Regel nach S3 Buckets, bei denen Folgendes der Fall ist:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Versionierung deaktiviert (alte Versionen können nicht wiederhergestellt werden),&lt;/li&gt;
-
-
-
-&lt;li&gt;Objekt-Sperre deaktiviert (Dateien lassen sich überschreiben oder löschen),&lt;/li&gt;
-
-
-
-&lt;li&gt;weitreichende Schreibberechtigungen (durch falsch konfigurierte IAM-Richtlinien oder durchgesickerte Anmeldedaten), und&lt;/li&gt;
-
-
-
-&lt;li&gt;hochwertige Daten (Backup-Dateien, Produktionskonfigurations-Dumps).&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Sobald sie sich Zugang verschafft haben, versuchen die Angreifer, eine „vollständige und irreversible Sperrung” der Daten zu erzwingen. Dazu können sie Objekte mit für das Opfer unzugänglichen Keys verschlüsseln, Backups löschen und die Löschung von Schlüsseln planen, damit AWS und der Kunde die Daten nicht wiederherstellen können.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="cloud-verschlusselung-und-schlusselverwaltung-als-waffe"&gt;Cloud-Verschlüsselung und Schlüsselverwaltung als Waffe&lt;/h2&gt;
-
-
-
-&lt;p&gt;Trend Micro hat fünf &lt;a href="https://www.csoonline.com/article/3803194/perfide-ransomware-attacke-gegen-aws-nutzer.html" target="_blank"&gt;S3-Ransomware&lt;/a&gt;-Varianten identifiziert, die zunehmend die in AWS integrierten Verschlüsselungspfade ausnutzen. Eine Variante missbraucht die standardmäßigen, von AWS verwalteten KMS-Schlüssel (SSE-KMS), indem sie Daten mit einem vom Angreifer erstellten Schlüssel verschlüsselt und diesen Schlüssel zur Löschung vormerkt. Eine andere Variante verwendet vom Kunden bereitgestellte Schlüssel (SSE-C), von denen AWS keine Kopie hat, sodass eine Wiederherstellung unmöglich ist. Die dritte Variante exfiltriert S3-Bucket-Daten (ohne Versionierung) und löscht die Originale.&lt;/p&gt;
-
-
-
-&lt;p&gt;Die letzten beiden Varianten dringen tiefer in die Key-Management-Infrastruktur &lt;a&gt;ein&lt;/a&gt;&lt;a href="#_msocom_2"&gt;[MB2]&lt;/a&gt; . Eine stützt sich auf importiertes Schlüsselmaterial (Bring your own key – &lt;a href="https://aws.amazon.com/blogs/security/how-to-byok-bring-your-own-key-to-aws-kms-for-less-than-15-00-a-year-using-aws-cloudhsm/"&gt;BYOK&lt;/a&gt;), wodurch Angreifer Daten verschlüsseln und anschließend die importierten Schlüssel zerstören oder ungültig machen können. Die andere missbraucht den External Key Store (XKS) von AWS, bei dem Schlüsseloperationen außerhalb von AWS stattfinden. Das bedeutet, dass weder der Kunde noch AWS den Zugriff wiederherstellen können, wenn Angreifer die externe Schlüsselquelle kontrollieren. Zusammengenommen zeigen diese Techniken, dass Angreifer AWS selbst als Verschlüsselungsmechanismus nutzen.&lt;/p&gt;
-
-
-
-&lt;p&gt;„Ich kann mich nicht erinnern, dies jemals in der Praxis gesehen zu haben“, betont Trey Ford, Chief Strategy and Trust Officer bei Bugcrowd. „Diese Untersuchung ist eine systematische und theoretische Bedrohungsmodellierung. Sie zeigt auf, wie ein Angreifer eine AWS-Umgebung innerhalb einer Kontogrenze verschlüsseln und Lösegeld dafür verlangen könnte.“&lt;/p&gt;
-
-
-
-&lt;p&gt;Ford fügt hinzu: „Dies zielt speziell auf die Verwendung externer oder vom Kunden bereitgestellter Schlüssel (SSE-C bzw. XKS) ab, um die Kontrolle über die Schlüsselverwaltung für die in der Speicherung verwendete Kryptografie zu erlangen.“&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="schutzmasnahmen"&gt;Schutzmaßnahmen&lt;/h2&gt;
-
-
-
-&lt;p&gt;Die Trend-Micro-Forscher fordern Kunden dringend auf, ihre S3-Umgebungen zu sichern, indem sie Least-Priviledge-Zugang erzwingen und Schutzmaßnahmen wie Versionierung und Object Lock aktivieren. Zudem sollten Unternehmen bereitgestellte oder externe Schlüsselquellen, die die Wiederherstellung beeinträchtigen können, streng regulieren. Außerdem wird empfohlen, Backups in separaten Konten zu isolieren und die Cloud-Audit-Protokolle kontinuierlich auf Anzeichen verdächtiger Schlüsselaktivitäten, Massenverschlüsselung oder groß angelegte Objektlöschungen zu überwachen.&lt;/p&gt;
-
-
-
-&lt;p&gt;„Eine ‚Assume Breach‘-Mentalität ist in der Cloud unerlässlich: Laufzeitumgebungen sollten unveränderlich sein, Identitäten müssen über streng begrenzte Berechtigungen und kurzlebige Anmeldedaten verfügen“, erklärt Morin von Sysdig. Nach Meinung des Experten benötigen Netzwerke eine sinnvolle Segmentierung und kritische Datensätze müssen gesichert werden. „Moderne Betriebsabläufe sind von komplexen Lieferketten abhängig, und eine Ransomware, die einen wichtigen Partner betrifft, kann Ihr Unternehmen genauso vollständig lahmlegen wie eine direkte Kompromittierung.“ (jm)&lt;/p&gt;
-
-
-
-&lt;hr class="wp-block-separator has-alpha-channel-opacity" /&gt;
-
-
-
-&lt;p&gt;&lt;a id="_msocom_1"&gt;&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a id="_msocom_2"&gt;&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4095199/aws-s3-buckets-im-visier-von-ransomware-banden.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
-      <pubDate>Mon, 24 Nov 2025 13:54:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>6 arrested for smuggling migrants from Türkiye to France and Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</link>
-      <description>On 13 November 2025, the German Federal Police, in close cooperation with French border police and with the support of Europol and Eurojust, have dismantled a criminal network believed to have smuggled nearly 600 people into Europe between 2021 and 2023.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
-      <pubDate>Wed, 26 Nov 2025 16:29:59 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 26 Nov 2025 19:18:54 +0000</lastBuildDate>
     <item>
       <title>What keeps CISOs awake at night — and why Zurich might hold the cure</title>
       <link>https://www.csoonline.com/article/4094608/what-keeps-cisos-awake-at-night-and-why-zurich-might-hold-the-cure.html</link>
@@ -349,48 +219,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094608/what-keeps-cisos-awake-at-night-and-why-zurich-might-hold-the-cure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Mon, 24 Nov 2025 15:27:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV25-760)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
-      <pubDate>Mon, 17 Nov 2025 13:37:05 +0000</pubDate>
-    </item>
-    <item>
-      <title>Dell security advisory (AV25-761)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
-      <pubDate>Mon, 17 Nov 2025 13:54:26 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ubuntu security advisory (AV25-762)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
-      <pubDate>Mon, 17 Nov 2025 14:04:44 +0000</pubDate>
-    </item>
-    <item>
-      <title>Red Hat security advisory (AV25-763)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-763</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-763</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
-      <pubDate>Mon, 17 Nov 2025 14:17:21 +0000</pubDate>
     </item>
     <item>
       <title>2026 CSO Hall of Fame call for nominations</title>
@@ -708,8 +538,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/568125/cso-hall-of-fame-honorees.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Mon, 24 Nov 2025 17:47:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV25-760)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.40</comments>
+      <pubDate>Mon, 17 Nov 2025 13:37:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dell security advisory (AV25-761)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.40</comments>
+      <pubDate>Mon, 17 Nov 2025 13:54:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ubuntu security advisory (AV25-762)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.40</comments>
+      <pubDate>Mon, 17 Nov 2025 14:04:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>Red Hat security advisory (AV25-763)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-763</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-763</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.40</comments>
+      <pubDate>Mon, 17 Nov 2025 14:17:21 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV25–764)</title>
@@ -732,56 +602,6 @@
       <pubDate>Mon, 17 Nov 2025 18:43:46 +0000</pubDate>
     </item>
     <item>
-      <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</link>
-      <description>On 19 November 2025, a coordinated effort led by Bulgarian authorities and supported by Europol, resulted in the dismantling of a criminal network involved in large-scale trafficking of cultural goods across Europe and beyond. This operation was conducted under the framework of a Europol operational taskforce. The action day involved law enforcement and judicial authorities from Albania, France, Germany, Greece,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 26 Nov 2025 16:29:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</link>
-      <description>Today marks ten years since one of the deadliest terrorist attacks in recent European history was carried out in Paris - at the Stade de France, in the streets and inside the Bataclan concert hall. On 13 November 2015, 132 people lost their lives and many more were injured during what became a night of profound tragedy for France and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 26 Nov 2025 16:29:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</link>
-      <description>Conducted on 13 November 2025, this operational action by the European Union Internet Referral Unit (EU IRU) involved the referral of thousands of URLs leading to dangerous and illicit online material. This includes around 5 408 links to jihadist content, 1 070 links to violent right-wing extremist and terrorist content, and 105 links to racist and xenophobic content.This joint action...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 26 Nov 2025 16:29:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</link>
-      <description>Between 10 and 14 November, Europol, in collaboration with the European Union Intellectual Property Office (EUIPO) and the Spanish National Police (Policía Nacional), organised an "Intellectual Property Crime Cyber-Patrol Week”. A total of 30 investigators participated in this operation hosted at the EUIPO headquarters in Alicante, Spain, where they used advanced Open-Source Intelligence Techniques (OSINT) and cutting-edge online investigative tools...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 26 Nov 2025 16:29:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>Announcing the winners of the 2025 Europol photo competition</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</link>
-      <description>Three awards were given out, each decided by a different group of voters:the international law enforcement community represented at Europol’s headquarters,members of the public,and the Heads of Communication of the European law enforcement authorities.The winners of Capture25The Europol Community Vote by the Liaison Bureaux went to Johan Jacob Kleist from Denmark with his photo of a ‘police officer patrolling beneath...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 26 Nov 2025 16:29:59 +0000</pubDate>
-    </item>
-    <item>
       <title>Zyxel security advisory (AV25-767)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-767</link>
       <description>No description available</description>
@@ -792,6 +612,56 @@
       <pubDate>Tue, 18 Nov 2025 14:47:40 +0000</pubDate>
     </item>
     <item>
+      <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</link>
+      <description>On 19 November 2025, a coordinated effort led by Bulgarian authorities and supported by Europol, resulted in the dismantling of a criminal network involved in large-scale trafficking of cultural goods across Europe and beyond. This operation was conducted under the framework of a Europol operational taskforce. The action day involved law enforcement and judicial authorities from Albania, France, Germany, Greece,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 26 Nov 2025 17:18:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</link>
+      <description>Conducted on 13 November 2025, this operational action by the European Union Internet Referral Unit (EU IRU) involved the referral of thousands of URLs leading to dangerous and illicit online material. This includes around 5 408 links to jihadist content, 1 070 links to violent right-wing extremist and terrorist content, and 105 links to racist and xenophobic content.This joint action...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 26 Nov 2025 17:18:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</link>
+      <description>Between 10 and 14 November, Europol, in collaboration with the European Union Intellectual Property Office (EUIPO) and the Spanish National Police (Policía Nacional), organised an "Intellectual Property Crime Cyber-Patrol Week”. A total of 30 investigators participated in this operation hosted at the EUIPO headquarters in Alicante, Spain, where they used advanced Open-Source Intelligence Techniques (OSINT) and cutting-edge online investigative tools...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 26 Nov 2025 17:18:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing the winners of the 2025 Europol photo competition</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</link>
+      <description>Three awards were given out, each decided by a different group of voters:the international law enforcement community represented at Europol’s headquarters,members of the public,and the Heads of Communication of the European law enforcement authorities.The winners of Capture25The Europol Community Vote by the Liaison Bureaux went to Johan Jacob Kleist from Denmark with his photo of a ‘police officer patrolling beneath...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/announcing-winners-of-2025-europol-photo-competition</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 26 Nov 2025 17:18:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</link>
+      <description>Today marks ten years since one of the deadliest terrorist attacks in recent European history was carried out in Paris - at the Stade de France, in the streets and inside the Bataclan concert hall. On 13 November 2015, 132 people lost their lives and many more were injured during what became a night of profound tragedy for France and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 26 Nov 2025 17:18:54 +0000</pubDate>
+    </item>
+    <item>
       <title>Shai-Hulud v2 Campaign Spreads From npm to Maven, Exposing Thousands of Secrets</title>
       <link>https://thehackernews.com/2025/11/shai-hulud-v2-campaign-spreads-from-npm.html</link>
       <description>The second wave of the Shai-Hulud supply chain attack has spilled over to the Maven ecosystem after compromising more than 830 packages in the npm registry.
@@ -800,8 +670,18 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://thehackernews.com/2025/11/shai-hulud-v2-campaign-spreads-from-npm.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Wed, 26 Nov 2025 23:38:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>OnSolve CodeRED cyberattack disrupts emergency alert systems nationwide</title>
+      <link>https://www.bleepingcomputer.com/news/security/onsolve-codered-cyberattack-disrupts-emergency-alert-systems-nationwide/</link>
+      <description>Risk management company Crisis24 has confirmed its OnSolve CodeRED platform suffered a cyberattack that disrupted emergency notification systems used by state and local governments, police departments, and fire agencies across the United States. [...]</description>
+      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/onsolve-codered-cyberattack-disrupts-emergency-alert-systems-nationwide/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.54</comments>
+      <pubDate>Tue, 25 Nov 2025 16:48:40 -0500</pubDate>
     </item>
     <item>
       <title>HPE security advisory (AV25-768)</title>
@@ -810,7 +690,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-768</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 18 Nov 2025 21:02:07 +0000</pubDate>
     </item>
     <item>
@@ -820,18 +700,8 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-769</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 18 Nov 2025 21:22:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>OnSolve CodeRED cyberattack disrupts emergency alert systems nationwide</title>
-      <link>https://www.bleepingcomputer.com/news/security/onsolve-codered-cyberattack-disrupts-emergency-alert-systems-nationwide/</link>
-      <description>Risk management company Crisis24 has confirmed its OnSolve CodeRED platform suffered a cyberattack that disrupted emergency notification systems used by state and local governments, police departments, and fire agencies across the United States. [...]</description>
-      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/onsolve-codered-cyberattack-disrupts-emergency-alert-systems-nationwide/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Tue, 25 Nov 2025 16:48:40 -0500</pubDate>
     </item>
     <item>
       <title>New Shai-Hulud worm spreading through npm, GitHub</title>
@@ -963,7 +833,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://www.csoonline.com/article/4095578/new-shai-hulud-worm-spreading-through-npm-github.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 25 Nov 2025 00:19:00 +0000</pubDate>
     </item>
     <item>
@@ -974,7 +844,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Wed, 26 Nov 2025 16:29:59 +0000</pubDate>
+      <pubDate>Wed, 26 Nov 2025 17:18:54 +0000</pubDate>
     </item>
     <item>
       <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
@@ -984,7 +854,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.65</comments>
-      <pubDate>Wed, 26 Nov 2025 16:29:59 +0000</pubDate>
+      <pubDate>Wed, 26 Nov 2025 17:18:54 +0000</pubDate>
     </item>
     <item>
       <title>8 effektive Multicloud-Security-Tipps</title>
@@ -1149,8 +1019,17 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://www.csoonline.com/article/4008907/8-effektive-multicloud-security-tipps.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Tue, 25 Nov 2025 04:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Meet Rey, the Admin of ‘Scattered Lapsus$ Hunters’</title>
+      <link>https://krebsonsecurity.com/2025/11/meet-rey-the-admin-of-scattered-lapsus-hunters/</link>
+      <description>A prolific cybercriminal group that calls itself "Scattered LAPSUS$ Hunters" made headlines regularly this year by stealing data from and publicly mass extorting dozens of major corporations. But the tables seem to have turned somewhat for "Rey," the moniker chosen by the technical operator and public face of the hacker group: Earlier this week, Rey confirmed his real life identity and agreed to an interview after KrebsOnSecurity tracked him down and contacted his father.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2025/11/meet-rey-the-admin-of-scattered-lapsus-hunters/</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.66</comments>
+      <pubDate>Wed, 26 Nov 2025 17:22:36 +0000</pubDate>
     </item>
     <item>
       <title>Atlassian security advisory (AV25-770)</title>
@@ -1161,15 +1040,6 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <category>Cybersecurity</category>
       <comments>Score: 7.68</comments>
       <pubDate>Wed, 19 Nov 2025 16:40:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>Meet Rey, the Admin of ‘Scattered Lapsus$ Hunters’</title>
-      <link>https://krebsonsecurity.com/2025/11/meet-rey-the-admin-of-scattered-lapsus-hunters/</link>
-      <description>A prolific cybercriminal group that calls itself "Scattered LAPSUS$ Hunters" made headlines regularly this year by stealing data from and publicly mass extorting dozens of major corporations. But the tables seem to have turned somewhat for "Rey," the moniker chosen by the technical operator and public face of the hacker group: Earlier this week, Rey confirmed his real life identity and agreed to an interview after KrebsOnSecurity tracked him down and contacted his father.</description>
-      <guid isPermaLink="false">https://krebsonsecurity.com/2025/11/meet-rey-the-admin-of-scattered-lapsus-hunters/</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
-      <pubDate>Wed, 26 Nov 2025 17:22:36 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft Edge security advisory (AV25-771)</title>
@@ -1208,7 +1078,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-766</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 19 Nov 2025 20:19:02 +0000</pubDate>
     </item>
     <item>
@@ -1343,7 +1213,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://www.csoonline.com/article/4094743/7-signs-your-cybersecurity-framework-needs-rebuilding.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Tue, 25 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1353,7 +1223,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-774</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Thu, 20 Nov 2025 13:40:09 +0000</pubDate>
     </item>
     <item>
@@ -1363,7 +1233,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-775</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Thu, 20 Nov 2025 16:11:09 +0000</pubDate>
     </item>
     <item>
@@ -1538,7 +1408,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://www.csoonline.com/article/4095382/telecom-security-reboot-why-zero-trust-is-the-only-way-forward.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Tue, 25 Nov 2025 14:32:00 +0000</pubDate>
     </item>
     <item>
@@ -1548,7 +1418,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-776</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Fri, 21 Nov 2025 14:32:07 +0000</pubDate>
     </item>
     <item>
@@ -1558,7 +1428,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-777</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Fri, 21 Nov 2025 15:08:26 +0000</pubDate>
     </item>
     <item>
@@ -1568,7 +1438,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av25-778</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Fri, 21 Nov 2025 15:30:05 +0000</pubDate>
     </item>
     <item>
@@ -1578,7 +1448,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Fri, 21 Nov 2025 21:38:07 +0000</pubDate>
     </item>
     <item>
@@ -1669,7 +1539,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://www.csoonline.com/article/4095182/jpmorgan-citi-morgan-stanley-assess-fallout-from-situsamc-data-breach.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Mon, 24 Nov 2025 13:01:39 +0000</pubDate>
     </item>
     <item>
@@ -1802,7 +1672,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://www.csoonline.com/article/4096241/new-clickfix-attacks-use-fake-windows-update-screens-to-fool-employees.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Wed, 26 Nov 2025 01:00:37 +0000</pubDate>
     </item>
     <item>
@@ -1813,7 +1683,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://thehackernews.com/2025/11/qilin-ransomware-turns-south-korean-msp.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.33</comments>
       <pubDate>Wed, 26 Nov 2025 20:01:00 +0530</pubDate>
     </item>
     <item>
@@ -1944,7 +1814,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://www.csoonline.com/article/4096263/alliances-between-ransomware-groups-tied-to-recent-surge-in-cybercrime.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Wed, 26 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -2018,7 +1888,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://www.csoonline.com/article/4096763/neue-clickfix-kampagne-nutzt-fake-windows-updates.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.83</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Wed, 26 Nov 2025 14:13:26 +0000</pubDate>
     </item>
     <item>
@@ -2028,7 +1898,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-779</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.38</comments>
+      <comments>Score: 9.36</comments>
       <pubDate>Mon, 24 Nov 2025 16:31:06 +0000</pubDate>
     </item>
     <item>
@@ -2038,7 +1908,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-780</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.38</comments>
+      <comments>Score: 9.36</comments>
       <pubDate>Mon, 24 Nov 2025 16:42:54 +0000</pubDate>
     </item>
     <item>
@@ -2048,7 +1918,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-781</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.39</comments>
+      <comments>Score: 9.37</comments>
       <pubDate>Mon, 24 Nov 2025 16:56:29 +0000</pubDate>
     </item>
     <item>
@@ -2058,7 +1928,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-782</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.39</comments>
+      <comments>Score: 9.37</comments>
       <pubDate>Mon, 24 Nov 2025 17:10:30 +0000</pubDate>
     </item>
     <item>
@@ -2068,7 +1938,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-784</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.40</comments>
       <pubDate>Mon, 24 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -2078,7 +1948,7 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-783</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.40</comments>
       <pubDate>Mon, 24 Nov 2025 18:22:22 +0000</pubDate>
     </item>
     <item>
@@ -2088,8 +1958,28 @@ The Socket Research Team said it identified a Maven Central package named org.mv
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-785</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Tue, 25 Nov 2025 13:02:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitLab security advisory (AV25-786)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-786</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-786</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.96</comments>
+      <pubDate>Wed, 26 Nov 2025 18:24:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Splunk security advisory (AV25-787)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-787</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-787</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.99</comments>
+      <pubDate>Wed, 26 Nov 2025 19:06:51 +0000</pubDate>
     </item>
   </channel>
 </rss>
