@@ -8,81 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Nov 2025 15:22:39 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Nov 2025 16:30:07 +0000</lastBuildDate>
     <item>
-      <title>Oracle OIM zero‑day: Pre‑auth RCE forces rapid patching across enterprises</title>
-      <link>https://www.csoonline.com/article/4095150/oracle-oim-zero%e2%80%91day-pre%e2%80%91auth-rce-forces-rapid-patching-across-enterprises.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The Cybersecurity and Infrastructure Security Agency (CISA) has flagged a pre-authenticated, critical remote code execution flaw in Oracle Identity Manager (OIM), noting that it has been actively exploited, and added it to its Known Exploited Vulnerabilities (KEV) catalog.&lt;/p&gt;
-
-
-
-&lt;p&gt;The flaw was first identified by Searchlight Cyber, which found it capable of allowing complete authentication bypass, enabling RCE through the abuse of a Groovy-script compile endpoint.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Taking a closer look at the software running on Oracle Cloud’s login host and our customers’ attack surfaces, we discovered a pre-authentication RCE vulnerability in Oracle Identity Manager,” Searchlight researchers Adam Kues and Shubham Shah said in a blog post. “This pre-authentication RCE we found would also have been able to breach login.us2.oraclecloud.com, as it was running both OAM and OIM.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The now-fixed bug may have potentially exposed hundreds of enterprise and government entities that rely on Oracle’s Identity Management software for user-credential and identity security, researchers added.&lt;/p&gt;
-
-
-
-&lt;p&gt;Oracle shipped a fix for the flaw in its October 2025 Critical Patch Update (CPU), which federal civilian agencies can apply immediately to meet CISA’s &lt;a href="https://www.cisa.gov/news-events/alerts/2025/11/21/cisa-adds-one-known-exploited-vulnerability-catalog" rel="noreferrer noopener" target="_blank"&gt;deadline&lt;/a&gt; of December 12, 2025.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="flawed-authentication-filter-allows-bypass"&gt;Flawed authentication filter allows bypass&lt;/h2&gt;
-
-
-
-&lt;p&gt;The vulnerability in OIM stems from an authentication-filter implementation that uses a whitelist of URL patterns–a known error-prone design.&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers found that appending query strings like “?WSDL” or path parameters like “;.wadl” to protected endpoints ( like “/iam/governance/applicationmanagement/templates;.wadl”), would cause “SecurityFilter” in OIM’s web.xml to treat the route as “unauthenticated”—meaning that it requires no authentication.&lt;/p&gt;
-
-
-
-&lt;p&gt;Once past the filter, an attacker can reach the REST endpoint “/application/groovyscriptstatus” meant for syntax-checking Groovy code, not executing it. However, due to Groovy’s annotation processing, researchers demonstrated the ability to inject compile-time code that triggers outbound callbacks and code execution.&lt;/p&gt;
-
-
-
-&lt;p&gt;The flaw, tracked under &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61757" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-61757&lt;/a&gt;, received a critical severity rating of 9.8 out of 10, due to the ease of exploitability and presumably the existence of a &lt;a href="https://www.csoonline.com/article/4031603/32-of-exploited-vulnerabilities-are-now-zero-days-or-1-days.html"&gt;zero-day abuse&lt;/a&gt;. “Given the complexity of some previous Oracle Access Manager vulnerabilities, this one is somewhat trivial and easily exploitable by threat actors,” researchers noted.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-patching-urgency"&gt;The patching urgency&lt;/h2&gt;
-
-
-
-&lt;p&gt;In its CPU &lt;a href="https://www.oracle.com/security-alerts/cpuoct2025.html"&gt;advisory&lt;/a&gt;, Oracle addressed this flaw along with hundreds of others across its portfolio. Researchers call it a common Java filter flaw, which makes it a known territory for attackers.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The vulnerability our team discovered follows a familiar pattern in Java: filters designed to restrict authentication often contain easy-to-exploit authentication bypass flaws,” they &lt;a href="https://slcyber.io/research-center/breaking-oracles-identity-manager-pre-auth-rce/"&gt;said&lt;/a&gt;. “Logical flaws in how Java interprets request URIs are a gift that continues giving when paired with matrix parameters.”&lt;/p&gt;
-
-
-
-&lt;p&gt;In this case, the flaw affects OIM versions 12.2.1.4.0 and 14.1.2.1.0. According to Johannes Ullrich, Dean of Research for SANS Technology Institute, the proof-of-concept (POC) URL provided by Searchlight Cyber Research was accessed “several times between August 30th and September 9th” this year.&lt;/p&gt;
-
-
-
-&lt;p&gt;Attacker IP addresses &lt;a href="https://isc.sans.edu/diary/rss/32506" rel="noreferrer noopener" target="_blank"&gt;shared&lt;/a&gt; by Ullrich include 89.238.132.76, 185.245.82.81, and 138.199.29.153. Searchlight researchers noted that participating in capture-the-flag (&lt;a href="https://www.csoonline.com/article/552669/ctf-players-versus-professional-penetration-testers.html"&gt;CTF&lt;/a&gt;) style work and probing compile-time or annotation chains continues to yield fresh RCEs.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4095150/oracle-oim-zero%e2%80%91day-pre%e2%80%91auth-rce-forces-rapid-patching-across-enterprises.html</guid>
+      <title>6 arrested for smuggling migrants from Türkiye to France and Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</link>
+      <description>On 13 November 2025, the German Federal Police, in close cooperation with French border police and with the support of Europol and Eurojust, have dismantled a criminal network believed to have smuggled nearly 600 people into Europe between 2021 and 2023.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/6-arrested-for-smuggling-migrants-turkiye-to-france-and-germany</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.33</comments>
-      <pubDate>Mon, 24 Nov 2025 11:28:01 +0000</pubDate>
+      <pubDate>Wed, 26 Nov 2025 14:30:07 +0000</pubDate>
     </item>
     <item>
       <title>Invisible battles: How cybersecurity work erodes mental health in silence and what we can do about it</title>
@@ -376,7 +311,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094657/invisible-battles-how-cybersecurity-work-erodes-mental-health-in-silence-and-what-we-can-do-about-it.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Mon, 24 Nov 2025 13:35:00 +0000</pubDate>
     </item>
     <item>
@@ -443,7 +378,7 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="cloud-verschlusselung-und-schlusselverwaltung-als-waffe"&gt;Cloud-Verschlüsselung und Schlüsselverwaltung als Waffe&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="cloud-verschluesselung-und-schluesselverwaltung-als-waffe"&gt;Cloud-Verschlüsselung und Schlüsselverwaltung als Waffe&lt;/h2&gt;
 
 
 
@@ -463,7 +398,7 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="schutzmasnahmen"&gt;Schutzmaßnahmen&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="schutzmassnahmen"&gt;Schutzmaßnahmen&lt;/h2&gt;
 
 
 
@@ -496,58 +431,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4095199/aws-s3-buckets-im-visier-von-ransomware-banden.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Mon, 24 Nov 2025 13:54:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV25-760)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
-      <pubDate>Mon, 17 Nov 2025 13:37:05 +0000</pubDate>
-    </item>
-    <item>
-      <title>Dell security advisory (AV25-761)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
-      <pubDate>Mon, 17 Nov 2025 13:54:26 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ubuntu security advisory (AV25-762)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
-      <pubDate>Mon, 17 Nov 2025 14:04:44 +0000</pubDate>
-    </item>
-    <item>
-      <title>Red Hat security advisory (AV25-763)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-763</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-763</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
-      <pubDate>Mon, 17 Nov 2025 14:17:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] CISA ICS security advisories (AV25–764)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-764</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-764</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
-      <pubDate>Mon, 17 Nov 2025 16:08:23 +0000</pubDate>
     </item>
     <item>
       <title>What keeps CISOs awake at night — and why Zurich might hold the cure</title>
@@ -759,8 +644,58 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094608/what-keeps-cisos-awake-at-night-and-why-zurich-might-hold-the-cure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Mon, 24 Nov 2025 15:27:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV25-760)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.41</comments>
+      <pubDate>Mon, 17 Nov 2025 13:37:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dell security advisory (AV25-761)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.41</comments>
+      <pubDate>Mon, 17 Nov 2025 13:54:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ubuntu security advisory (AV25-762)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.41</comments>
+      <pubDate>Mon, 17 Nov 2025 14:04:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>Red Hat security advisory (AV25-763)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-763</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-763</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.41</comments>
+      <pubDate>Mon, 17 Nov 2025 14:17:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] CISA ICS security advisories (AV25–764)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-764</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-764</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.42</comments>
+      <pubDate>Mon, 17 Nov 2025 16:08:23 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] Siemens security advisory (AV25-765)</title>
@@ -769,7 +704,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-765</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Mon, 17 Nov 2025 18:43:46 +0000</pubDate>
     </item>
     <item>
@@ -1088,7 +1023,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/568125/cso-hall-of-fame-honorees.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Mon, 24 Nov 2025 17:47:27 +0000</pubDate>
     </item>
     <item>
@@ -1099,37 +1034,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 26 Nov 2025 13:22:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</link>
-      <description>Today marks ten years since one of the deadliest terrorist attacks in recent European history was carried out in Paris - at the Stade de France, in the streets and inside the Bataclan concert hall. On 13 November 2015, 132 people lost their lives and many more were injured during what became a night of profound tragedy for France and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 26 Nov 2025 13:22:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</link>
-      <description>Conducted on 13 November 2025, this operational action by the European Union Internet Referral Unit (EU IRU) involved the referral of thousands of URLs leading to dangerous and illicit online material. This includes around 5 408 links to jihadist content, 1 070 links to violent right-wing extremist and terrorist content, and 105 links to racist and xenophobic content.This joint action...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 26 Nov 2025 13:22:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</link>
-      <description>Between 10 and 14 November, Europol, in collaboration with the European Union Intellectual Property Office (EUIPO) and the Spanish National Police (Policía Nacional), organised an "Intellectual Property Crime Cyber-Patrol Week”. A total of 30 investigators participated in this operation hosted at the EUIPO headquarters in Alicante, Spain, where they used advanced Open-Source Intelligence Techniques (OSINT) and cutting-edge online investigative tools...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 26 Nov 2025 13:22:39 +0000</pubDate>
+      <pubDate>Wed, 26 Nov 2025 14:30:07 +0000</pubDate>
     </item>
     <item>
       <title>Announcing the winners of the 2025 Europol photo competition</title>
@@ -1139,7 +1044,37 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 26 Nov 2025 13:22:39 +0000</pubDate>
+      <pubDate>Wed, 26 Nov 2025 14:30:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</link>
+      <description>Today marks ten years since one of the deadliest terrorist attacks in recent European history was carried out in Paris - at the Stade de France, in the streets and inside the Bataclan concert hall. On 13 November 2015, 132 people lost their lives and many more were injured during what became a night of profound tragedy for France and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/10-years-remembering-victims-of-13-november-terrorist-attack-in-paris</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 26 Nov 2025 14:30:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</link>
+      <description>Conducted on 13 November 2025, this operational action by the European Union Internet Referral Unit (EU IRU) involved the referral of thousands of URLs leading to dangerous and illicit online material. This includes around 5 408 links to jihadist content, 1 070 links to violent right-wing extremist and terrorist content, and 105 links to racist and xenophobic content.This joint action...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 26 Nov 2025 14:30:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</link>
+      <description>Between 10 and 14 November, Europol, in collaboration with the European Union Intellectual Property Office (EUIPO) and the Spanish National Police (Policía Nacional), organised an "Intellectual Property Crime Cyber-Patrol Week”. A total of 30 investigators participated in this operation hosted at the EUIPO headquarters in Alicante, Spain, where they used advanced Open-Source Intelligence Techniques (OSINT) and cutting-edge online investigative tools...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 26 Nov 2025 14:30:07 +0000</pubDate>
     </item>
     <item>
       <title>Zyxel security advisory (AV25-767)</title>
@@ -1148,7 +1083,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av25-767</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Tue, 18 Nov 2025 14:47:40 +0000</pubDate>
     </item>
     <item>
@@ -1168,7 +1103,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-769</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Tue, 18 Nov 2025 21:22:18 +0000</pubDate>
     </item>
     <item>
@@ -1179,17 +1114,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Wed, 26 Nov 2025 13:22:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</link>
-      <description>A new digital platform, Help4U, developed by Europol and CENTRIC, has been launched to support children and teenagers facing sexual abuse or online harm. Designed to be simple, private, and accessible, Help4U supports young people with finding trusted advice, understanding their rights, and connecting with people who can help. The platform offers clear, practical guidance for anyone under 18 who needs help, as well as information for parents, teachers, and professionals supporting them.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
-      <pubDate>Wed, 26 Nov 2025 13:22:39 +0000</pubDate>
+      <pubDate>Wed, 26 Nov 2025 14:30:07 +0000</pubDate>
     </item>
     <item>
       <title>New Shai-Hulud worm spreading through npm, GitHub</title>
@@ -1321,7 +1246,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4095578/new-shai-hulud-worm-spreading-through-npm-github.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Tue, 25 Nov 2025 00:19:00 +0000</pubDate>
     </item>
     <item>
@@ -1331,8 +1256,18 @@
       <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/onsolve-codered-cyberattack-disrupts-emergency-alert-systems-nationwide/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Tue, 25 Nov 2025 16:48:40 -0500</pubDate>
+    </item>
+    <item>
+      <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</link>
+      <description>A new digital platform, Help4U, developed by Europol and CENTRIC, has been launched to support children and teenagers facing sexual abuse or online harm. Designed to be simple, private, and accessible, Help4U supports young people with finding trusted advice, understanding their rights, and connecting with people who can help. The platform offers clear, practical guidance for anyone under 18 who needs help, as well as information for parents, teachers, and professionals supporting them.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.65</comments>
+      <pubDate>Wed, 26 Nov 2025 14:30:07 +0000</pubDate>
     </item>
     <item>
       <title>Atlassian security advisory (AV25-770)</title>
@@ -1351,7 +1286,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-771</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Wed, 19 Nov 2025 18:20:23 +0000</pubDate>
     </item>
     <item>
@@ -1361,7 +1296,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-772</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 19 Nov 2025 19:42:28 +0000</pubDate>
     </item>
     <item>
@@ -1371,7 +1306,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-773</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 19 Nov 2025 19:45:27 +0000</pubDate>
     </item>
     <item>
@@ -1381,7 +1316,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-766</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 19 Nov 2025 20:19:02 +0000</pubDate>
     </item>
     <item>
@@ -1406,7 +1341,7 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="1-zentrale-autoritat-aufbauen"&gt;1. Zentrale Autorität aufbauen&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="1-zentrale-autoritaet-aufbauen"&gt;1. Zentrale Autorität aufbauen&lt;/h2&gt;
 
 
 
@@ -1490,7 +1425,7 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="5-verantwortung-ubernehmen"&gt;5. Verantwortung übernehmen&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="5-verantwortung-uebernehmen"&gt;5. Verantwortung übernehmen&lt;/h2&gt;
 
 
 
@@ -1502,7 +1437,7 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="6-kollaborative-management-umgebung-fordern"&gt;6. Kollaborative Management-Umgebung fördern&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="6-kollaborative-management-umgebung-foerdern"&gt;6. Kollaborative Management-Umgebung fördern&lt;/h2&gt;
 
 
 
@@ -1547,7 +1482,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4008907/8-effektive-multicloud-security-tipps.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Tue, 25 Nov 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1682,7 +1617,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094743/7-signs-your-cybersecurity-framework-needs-rebuilding.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Tue, 25 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1692,7 +1627,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-774</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Thu, 20 Nov 2025 13:40:09 +0000</pubDate>
     </item>
     <item>
@@ -1702,7 +1637,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-775</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Thu, 20 Nov 2025 16:11:09 +0000</pubDate>
     </item>
     <item>
@@ -1877,7 +1812,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4095382/telecom-security-reboot-why-zero-trust-is-the-only-way-forward.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Tue, 25 Nov 2025 14:32:00 +0000</pubDate>
     </item>
     <item>
@@ -1887,7 +1822,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-776</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Fri, 21 Nov 2025 14:32:07 +0000</pubDate>
     </item>
     <item>
@@ -1897,7 +1832,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-777</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Fri, 21 Nov 2025 15:08:26 +0000</pubDate>
     </item>
     <item>
@@ -1907,7 +1842,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av25-778</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Fri, 21 Nov 2025 15:30:05 +0000</pubDate>
     </item>
     <item>
@@ -1917,7 +1852,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Fri, 21 Nov 2025 21:38:07 +0000</pubDate>
     </item>
     <item>
@@ -2008,7 +1943,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4095182/jpmorgan-citi-morgan-stanley-assess-fallout-from-situsamc-data-breach.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Mon, 24 Nov 2025 13:01:39 +0000</pubDate>
     </item>
     <item>
@@ -2141,7 +2076,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4096241/new-clickfix-attacks-use-fake-windows-update-screens-to-fool-employees.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Wed, 26 Nov 2025 01:00:37 +0000</pubDate>
     </item>
     <item>
@@ -2152,7 +2087,7 @@
       <guid isPermaLink="false">https://thehackernews.com/2025/11/qilin-ransomware-turns-south-korean-msp.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Wed, 26 Nov 2025 20:01:00 +0530</pubDate>
     </item>
     <item>
@@ -2283,7 +2218,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4096263/alliances-between-ransomware-groups-tied-to-recent-surge-in-cybercrime.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Wed, 26 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -2357,7 +2292,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4096763/neue-clickfix-kampagne-nutzt-fake-windows-updates.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Wed, 26 Nov 2025 14:13:26 +0000</pubDate>
     </item>
     <item>
@@ -2367,7 +2302,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-779</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.46</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Mon, 24 Nov 2025 16:31:06 +0000</pubDate>
     </item>
     <item>
@@ -2377,7 +2312,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-780</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.46</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Mon, 24 Nov 2025 16:42:54 +0000</pubDate>
     </item>
     <item>
@@ -2387,7 +2322,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-781</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.44</comments>
       <pubDate>Mon, 24 Nov 2025 16:56:29 +0000</pubDate>
     </item>
     <item>
@@ -2397,7 +2332,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-782</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.44</comments>
       <pubDate>Mon, 24 Nov 2025 17:10:30 +0000</pubDate>
     </item>
     <item>
@@ -2407,7 +2342,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-784</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Mon, 24 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -2417,7 +2352,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-783</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Mon, 24 Nov 2025 18:22:22 +0000</pubDate>
     </item>
     <item>
@@ -2427,7 +2362,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-785</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.04</comments>
+      <comments>Score: 10.00</comments>
       <pubDate>Tue, 25 Nov 2025 13:02:24 +0000</pubDate>
     </item>
     <item>
@@ -2436,7 +2371,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/dark-reading-virtual-event-cybersecurity-outlook-2026</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 24.17</comments>
+      <comments>Score: 23.90</comments>
       <pubDate>Wed, 03 Dec 2025 16:00:00 +0000</pubDate>
     </item>
   </channel>
