@@ -8,140 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Nov 2025 08:32:08 +0000</lastBuildDate>
-    <item>
-      <title>New Shai-Hulud worm spreading through npm, GitHub</title>
-      <link>https://www.csoonline.com/article/4095578/new-shai-hulud-worm-spreading-through-npm-github.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A new version of the Shai-Hulud credentials-stealing self-propagating worm is expanding through the open npm registry, a threat that developers who download packages from the repository have to deal with immediately.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.wiz.io/blog/shai-hulud-2-0-ongoing-supply-chain-attack" rel="noreferrer noopener" target="_blank"&gt;Researchers at Wiz Inc. said Monday&lt;/a&gt; that in the early stages of the campaign late last week,&lt;sup&gt;  &lt;/sup&gt;a thousand new GitHub repositories containing harvested victim data were being added every 30 minutes. &lt;a href="https://research.jfrog.com/post/shai-hulud-the-second-coming/" rel="noreferrer noopener" target="_blank"&gt;And researchers at JFrog identified 181 compromised packages.&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;The current campaign introduces a new variant, which Wiz researchers dub Shai-Hulud 2.0, that executes malicious code during the preinstall phase, “significantly increasing potential exposure in build and runtime environments.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The threat leverages compromised package maintainer accounts to publish trojanized versions of legitimate npm packages. Once installed, the malware exfiltrates developer and CI/CD secrets to GitHub repositories, and also inserts the malicious payload into all of the users’ available npm packages. Threat actors could also use the exfiltrated secrets to break into and install more malware in victims’ IT systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;JFrog said this new variant generates randomized repository names for exfiltration, making it harder for security teams to hunt down and scrub the leaked secrets. JFrog also said the new payload contains new functionality, including privilege escalation, DNS hijacking, and the ability to delete data from the victim’s machine.&lt;/p&gt;
-
-
-
-&lt;p&gt;Multiple popular packages used by developers, including those from Zapier, ENS Domains, PostHog, and Postman, have been compromised.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.reversinglabs.com/blog/another-shai-hulud-npm-worm-is-spreading-heres-what-you-need-to-know" rel="noreferrer noopener" target="_blank"&gt;Researchers at ReversingLabs also noted &lt;/a&gt;the list of compromised packages includes AsyncAPI related packages, including &lt;a href="https://secure.software/npm/packages/@asyncapi/specs" rel="noreferrer noopener" target="_blank"&gt;&lt;em&gt;@asyncapi/specs&lt;/em&gt;&lt;/a&gt;, which has had more than 100 million lifetime downloads and an average of 1.4 million weekly downloads. This package in particular is also believed to be the ‘patient-zero’, or the first known infected package, for this wave of attack, the researchers added.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="second-wave-is-bigger-and-faster"&gt;Second wave is bigger and faster&lt;/h2&gt;
-
-
-
-&lt;p&gt;Developers and security teams looking for indicators of compromise should note that the new variant adds two new payload files: &lt;em&gt;setup_bun.js&lt;/em&gt; and &lt;em&gt;bun_environment.js&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The re-emergence of the worm indicates that this remains a current and serious threat to the npm ecosystem,” said &lt;a href="https://www.sans.org/profiles/dr-johannes-ullrich" rel="noreferrer noopener" target="_blank"&gt;Johannes Ullrich&lt;/a&gt;, dean of research at the SANS Institute. “CSOs must address this threat by monitoring the components used in their software and hardening their CI/CD pipelines to increase resilience in the event that malicious code is executed.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Shai-Hulud &lt;a href="https://www.csoonline.com/article/4058059/warning-hackers-have-inserted-credential-stealing-code-into-some-npm-libraries.html" target="_blank"&gt;first emerged in September&lt;/a&gt;, revealed by the discovery that dozens of npm libraries, including a color library with over 2 million downloads a week, had been replaced with malicious versions.&lt;/p&gt;
-
-
-
-&lt;p&gt;The initial Shai-Hulud wave was already one of the most severe JavaScript supply-chain attacks Wiz has seen, &lt;a href="https://www.linkedin.com/in/merav-bar-608351232/?originalSubdomain=il" rel="noreferrer noopener" target="_blank"&gt;Merav Bar&lt;/a&gt;, a company threat researcher and co-author of the report told &lt;em&gt;CSO&lt;/em&gt;. “This new wave is bigger and faster: more than 25,000 attacker-created repos across roughly 350 GitHub users, growing by about 1,000 repos every 30 minutes, with malware that steals developer and cloud credentials and runs in the preinstall phase, touching dev machines and CI/CD pipelines alike. That combination of scale, speed, and access makes it a high-impact campaign.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="assume-compromise"&gt;Assume compromise&lt;/h2&gt;
-
-
-
-&lt;p&gt;If an individual had pulled any of the affected packages during the November 21–23 window, she said, they should assume their environment is exposed. Remedies include clearing the npm cache on their workstation, removing &lt;em&gt;node_modules&lt;/em&gt;, reinstalling from clean versions, or pinning to versions published before the malicious releases, and rotating any tokens or secrets that were present (GitHub PATs, npm tokens, SSH keys, cloud credentials).&lt;/p&gt;
-
-
-
-&lt;p&gt;Enabling strong MFA on GitHub/npm and watching for unexpected new repos or workflow files in the developer’s personal account is also critical, she added.&lt;/p&gt;
-
-
-
-&lt;p&gt;Shai-Hulud’s second wave isn’t surprising, said &lt;a href="https://www.linkedin.com/in/brad-laporte/" rel="noreferrer noopener" target="_blank"&gt;Brad LaPorte&lt;/a&gt;, cybersecurity advisor at Morphisec. “The first attack showed how easily preinstall scripts could be weaponized. This wave proves what happens when those warnings aren’t acted on: larger scale, more destructive payloads, and automation that infects thousands of repositories in hours.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="recommendations-for-repositories"&gt;Recommendations for repositories&lt;/h2&gt;
-
-
-
-&lt;p&gt;To stop attackers from easily uploading malicious packages, npm needs to tighten its publishing process, LaPorte said, including ensuring the identity of new accounts is verified before they are allowed to publish packages; implementing rate limits to prevent attackers from uploading multiple malicious packages in a short period and monitoring package maintainers for suspicious activity such as sudden spikes in publishing or packages with significant unexplained changes.&lt;/p&gt;
-
-
-
-&lt;p&gt;“From what we’ve observed in the Shai-Hulud incidents,” said Bar of Wiz, “the core issue isn’t npm specifically. It’s that open-source registries now function as high-impact distribution hubs, and attackers are taking advantage of how much trust developers place in them. In that context, the most important thing is continuing to strengthen the guardrails around how packages are published and updated. That includes making it harder for compromised maintainer accounts to push malicious versions, increasing visibility into unusual publishing behavior, and helping downstream users quickly understand when a package version may be unsafe. Those are ecosystem-level defenses rather than criticisms of any single registry, but they reflect the direction the entire open-source community will need to move as attacks like Shai-Hulud become more automated and far-reaching.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Ensar Seker, CISO at SOCRadar, cautioned that Shai‑Hulud isn’t what he called typical package compromise. “It’s a worm embedded into the dev supply chain. It signals that attackers are shifting from targeting compiled binaries and runtime environments toward the very processes developers use to build and ship software. No organization should assume, ‘We don’t use npm, so we’re safe’, because even downstream dependencies or dev toolchains can become the launch pad.”&lt;/p&gt;
-
-
-
-&lt;p&gt;So far npm has focused on ensuring that package authors are properly authenticated and that packages are not altered after being published, said Ullrich of the SANS Institute. But, he added, this does not prevent a malicious actor from publishing malicious packages. Recently, npm further restricted the default access token lifetimes and started to revoke legacy ‘classic tokens,’ he acknowledged. “npm may need to implement some form of automated scanning for obvious malicious content, but it will be difficult to implement a meaningful solution.” &lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="recommendations-for-security-teams-developers"&gt;Recommendations for security teams, developers&lt;/h2&gt;
-
-
-
-&lt;p&gt;Wiz says security teams in organizations with application developer teams that use npm – and individual developers using npm and GitHub – should:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;clear each developer’s npm cache;&lt;/li&gt;
-
-
-
-&lt;li&gt;pin dependencies to known clean versions or roll back to pre-November 21 builds;&lt;/li&gt;
-
-
-
-&lt;li&gt;revoke and regenerate npm tokens, GitHub PATs, SSH keys and cloud provider credentials;&lt;/li&gt;
-
-
-
-&lt;li&gt;enforce phishing-resistant multifactor authentication for developer and CI/CD (continuous integration/continuous delivery) accounts.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Within GitHub and CI/CD environments, they should search for newly-created repositories with ‘Shai-Hulud’ in the description, review unauthorized workflows or suspicious commits referencing hulud, and monitor for new npm publishes under their organization.&lt;/p&gt;
-
-
-
-&lt;p&gt;For long-term protection CSOs and IT leaders are urged to restrict or disable lifecycle scripts (postinstall, preinstall) in CI/CD environments, limit outbound network access from built systems to trusted domains only, and make sure developers use only short-lived, scoped automation login tokens.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4095578/new-shai-hulud-worm-spreading-through-npm-github.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
-      <pubDate>Tue, 25 Nov 2025 00:19:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 27 Nov 2025 09:26:38 +0000</lastBuildDate>
     <item>
       <title>Europe tightens the net on sanctions evasion</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</link>
@@ -150,7 +17,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.25</comments>
-      <pubDate>Thu, 27 Nov 2025 06:32:08 +0000</pubDate>
+      <pubDate>Thu, 27 Nov 2025 07:26:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>Key provisions of the UK Cyber Resilience Bill Revealed</title>
+      <link>https://www.infosecurity-magazine.com/news/key-provisions-uk-cyber-resilience/</link>
+      <description>Shona Lester, head of the Cyber Security and Resilience Bill team within the UK government, outlined some of the provisions that should be included in the future law</description>
+      <guid isPermaLink="false">https://www.infosecurity-magazine.com/news/key-provisions-uk-cyber-resilience/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.26</comments>
+      <pubDate>Thu, 27 Nov 2025 09:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Strike against synthetics: authorities seize tonnes of chemicals in Central and Eastern Europe</title>
@@ -160,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.29</comments>
-      <pubDate>Thu, 27 Nov 2025 06:32:08 +0000</pubDate>
+      <pubDate>Thu, 27 Nov 2025 07:26:38 +0000</pubDate>
     </item>
     <item>
       <title>8 effektive Multicloud-Security-Tipps</title>
@@ -325,7 +202,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4008907/8-effektive-multicloud-security-tipps.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.29</comments>
       <pubDate>Tue, 25 Nov 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -336,7 +213,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.33</comments>
-      <pubDate>Thu, 27 Nov 2025 06:32:08 +0000</pubDate>
+      <pubDate>Thu, 27 Nov 2025 07:26:38 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-760)</title>
@@ -345,7 +222,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-760</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Mon, 17 Nov 2025 13:37:05 +0000</pubDate>
     </item>
     <item>
@@ -355,7 +232,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-761</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Mon, 17 Nov 2025 13:54:26 +0000</pubDate>
     </item>
     <item>
@@ -365,7 +242,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Mon, 17 Nov 2025 14:04:44 +0000</pubDate>
     </item>
     <item>
@@ -385,7 +262,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-764</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Mon, 17 Nov 2025 16:08:23 +0000</pubDate>
     </item>
     <item>
@@ -395,7 +272,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-765</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Mon, 17 Nov 2025 18:43:46 +0000</pubDate>
     </item>
     <item>
@@ -530,7 +407,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094743/7-signs-your-cybersecurity-framework-needs-rebuilding.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Tue, 25 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -571,7 +448,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 27 Nov 2025 06:32:08 +0000</pubDate>
+      <pubDate>Thu, 27 Nov 2025 07:26:38 +0000</pubDate>
     </item>
     <item>
       <title>10 years on: remembering the victims of the 13 November terrorist attack in Paris</title>
@@ -581,7 +458,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 27 Nov 2025 06:32:08 +0000</pubDate>
+      <pubDate>Thu, 27 Nov 2025 07:26:38 +0000</pubDate>
     </item>
     <item>
       <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
@@ -591,7 +468,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 27 Nov 2025 06:32:08 +0000</pubDate>
+      <pubDate>Thu, 27 Nov 2025 07:26:38 +0000</pubDate>
     </item>
     <item>
       <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
@@ -601,7 +478,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 27 Nov 2025 06:32:08 +0000</pubDate>
+      <pubDate>Thu, 27 Nov 2025 07:26:38 +0000</pubDate>
     </item>
     <item>
       <title>Announcing the winners of the 2025 Europol photo competition</title>
@@ -611,7 +488,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 27 Nov 2025 06:32:08 +0000</pubDate>
+      <pubDate>Thu, 27 Nov 2025 07:26:38 +0000</pubDate>
     </item>
     <item>
       <title>Telecom security reboot: Why zero trust is the only way forward</title>
@@ -785,7 +662,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4095382/telecom-security-reboot-why-zero-trust-is-the-only-way-forward.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 25 Nov 2025 14:32:00 +0000</pubDate>
     </item>
     <item>
@@ -795,7 +672,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-770</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Wed, 19 Nov 2025 16:40:21 +0000</pubDate>
     </item>
     <item>
@@ -805,7 +682,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-771</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Wed, 19 Nov 2025 18:20:23 +0000</pubDate>
     </item>
     <item>
@@ -815,7 +692,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-772</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Wed, 19 Nov 2025 19:42:28 +0000</pubDate>
     </item>
     <item>
@@ -825,7 +702,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-773</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Wed, 19 Nov 2025 19:45:27 +0000</pubDate>
     </item>
     <item>
@@ -839,14 +716,14 @@
       <pubDate>Wed, 19 Nov 2025 20:19:02 +0000</pubDate>
     </item>
     <item>
-      <title>End of the game for cybercrime infrastructure: 1025 servers taken down</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down</link>
-      <description>Between 10 and 14 November 2025, the latest phase of Operation Endgame was coordinated from Europol’s headquarters in The Hague. The actions targeted one of the biggest infostealers (Rhadamanthys), the Remote Access Trojan VenomRAT, and the botnet Elysium, all of which played a key role in international cybercrime. Authorities took down these three large cybercrime enablers. The main suspect for VenomRAT was also arrested in Greece on 3 November 2025.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down</guid>
+      <title>16.6 million packages of fake and harmful toys taken off EU markets</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/166-million-packages-of-fake-and-harmful-toys-taken-eu-markets</link>
+      <description>Fake toys are poisoning, deafening and injuring children across Europe, while causing major losses to the EU economy. 26 countries, coordinated by Europol, co-led by France, Spain and Romania, and supported by the EUIPO and OLAF, have once again led initiatives to take down the producers and importers of counterfeit toys. With the global toy market valued at up to EUR 300 billion annually, it also remains the second-most counterfeited industry globally.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/166-million-packages-of-fake-and-harmful-toys-taken-eu-markets</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Thu, 27 Nov 2025 06:32:08 +0000</pubDate>
+      <comments>Score: 7.64</comments>
+      <pubDate>Thu, 27 Nov 2025 07:26:38 +0000</pubDate>
     </item>
     <item>
       <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
@@ -856,7 +733,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.65</comments>
-      <pubDate>Thu, 27 Nov 2025 06:32:08 +0000</pubDate>
+      <pubDate>Thu, 27 Nov 2025 07:26:38 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV25-774)</title>
@@ -886,7 +763,7 @@
       <guid isPermaLink="false">https://thehackernews.com/2025/11/qilin-ransomware-turns-south-korean-msp.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Wed, 26 Nov 2025 20:01:00 +0530</pubDate>
     </item>
     <item>
@@ -1019,7 +896,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4096241/new-clickfix-attacks-use-fake-windows-update-screens-to-fool-employees.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Wed, 26 Nov 2025 01:00:37 +0000</pubDate>
     </item>
     <item>
@@ -1029,7 +906,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-776</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Fri, 21 Nov 2025 14:32:07 +0000</pubDate>
     </item>
     <item>
@@ -1039,7 +916,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-777</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Fri, 21 Nov 2025 15:08:26 +0000</pubDate>
     </item>
     <item>
@@ -1049,7 +926,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av25-778</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Fri, 21 Nov 2025 15:30:05 +0000</pubDate>
     </item>
     <item>
@@ -1059,7 +936,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Fri, 21 Nov 2025 21:38:07 +0000</pubDate>
     </item>
     <item>
@@ -1190,7 +1067,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4096263/alliances-between-ransomware-groups-tied-to-recent-surge-in-cybercrime.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Wed, 26 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1264,7 +1141,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4096763/neue-clickfix-kampagne-nutzt-fake-windows-updates.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Wed, 26 Nov 2025 14:13:26 +0000</pubDate>
     </item>
     <item>
@@ -1347,7 +1224,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4097087/ai-browsers-can-be-tricked-with-malicious-prompts-hidden-in-url-fragments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Thu, 27 Nov 2025 00:12:30 +0000</pubDate>
     </item>
     <item>
@@ -1462,7 +1339,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4097078/sonicwall-ransomware-attacks-offer-an-ma-lesson-for-csos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Thu, 27 Nov 2025 00:59:02 +0000</pubDate>
     </item>
     <item>
@@ -1709,7 +1586,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/657138/how-to-choose-the-best-cloud-security-posture-management-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.90</comments>
       <pubDate>Thu, 27 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1719,7 +1596,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-779</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Mon, 24 Nov 2025 16:31:06 +0000</pubDate>
     </item>
     <item>
@@ -1729,7 +1606,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-780</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.06</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Mon, 24 Nov 2025 16:42:54 +0000</pubDate>
     </item>
     <item>
@@ -1739,7 +1616,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-781</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.06</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Mon, 24 Nov 2025 16:56:29 +0000</pubDate>
     </item>
     <item>
@@ -1749,7 +1626,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-782</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 9.05</comments>
       <pubDate>Mon, 24 Nov 2025 17:10:30 +0000</pubDate>
     </item>
     <item>
@@ -1759,7 +1636,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-784</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Mon, 24 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -1769,7 +1646,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-783</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Mon, 24 Nov 2025 18:22:22 +0000</pubDate>
     </item>
     <item>
@@ -1779,7 +1656,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-785</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.52</comments>
       <pubDate>Tue, 25 Nov 2025 13:02:24 +0000</pubDate>
     </item>
     <item>
@@ -1789,7 +1666,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-786</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.45</comments>
+      <comments>Score: 10.42</comments>
       <pubDate>Wed, 26 Nov 2025 18:24:53 +0000</pubDate>
     </item>
     <item>
@@ -1799,7 +1676,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-787</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.48</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Wed, 26 Nov 2025 19:06:51 +0000</pubDate>
     </item>
   </channel>
