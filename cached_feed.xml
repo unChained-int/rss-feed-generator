@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Nov 2025 08:29:13 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Nov 2025 09:22:45 +0000</lastBuildDate>
     <item>
       <title>Ubuntu security advisory (AV25-762)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-762</link>
@@ -36,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-764</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.22</comments>
+      <comments>Score: 7.21</comments>
       <pubDate>Mon, 17 Nov 2025 16:08:23 +0000</pubDate>
     </item>
     <item>
@@ -48,89 +48,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.22</comments>
       <pubDate>Mon, 17 Nov 2025 18:43:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>AI browsers can be tricked with malicious prompts hidden in URL fragments</title>
-      <link>https://www.csoonline.com/article/4097087/ai-browsers-can-be-tricked-with-malicious-prompts-hidden-in-url-fragments.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Researchers have demonstrated another indirect prompt injection attack against AI-powered browsers and browser assistants that could lead to phishing, sensitive data exfiltration, credential theft, or malware downloads. The attack, dubbed HashJack, relies on rogue prompts added to URLs after the hash (#) symbol, also known as a named anchor or URL fragment.&lt;/p&gt;
-
-
-
-&lt;p&gt;“HashJack is the first known indirect prompt injection that can weaponize any legitimate website to manipulate AI browser assistants,” researchers from Cato Networks said in the &lt;a href="https://www.catonetworks.com/blog/cato-ctrl-hashjack-first-known-indirect-prompt-injection/"&gt;report&lt;/a&gt;. “As a result, AI browsers —  including Comet (Perplexity), Copilot for Edge (Microsoft), and Gemini for Chrome (Google) — can be used to enable a wide range of malicious attacks.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-client-side-attack"&gt;A client-side attack&lt;/h2&gt;
-
-
-
-&lt;p&gt;The # character inside a URL has multiple uses: The portion after it tells the browser to jump to a specific section of the loaded page; it can tell JavaScript code on the page what to display in an in-page dynamic navigation scenario; or it can be used to save state information about the user interface, such as user-selected options.&lt;/p&gt;
-
-
-
-&lt;p&gt;One important aspect is that URL fragment data is never sent to the web server or over the network. It’s only meant for the browser or the code already loaded on the client side. And it turns out that since AI browser assistants are designed to analyze the currently open website for context, they also read the URL fragments passed after #, and these can hide malicious prompts.&lt;/p&gt;
-
-
-
-&lt;p&gt;The client-side nature of this attack means traditional network defenses, such as IPS/IDS and network firewalls, can’t detect it. Server logs don’t capture the portion of URLs after # because it’s never sent to the server, and browser defenses like Content Security Policy (CSP) don’t trigger because nothing on the actual web page is changed.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="tricking-users-into-clicking-poisoned-links"&gt;Tricking users into clicking poisoned links&lt;/h2&gt;
-
-
-
-&lt;p&gt;HashJack is essentially a social engineering attack because it relies on tricking users to click on specially crafted URLs inside emails, chats, websites, or documents. However, this attack can be highly credible because it points to legitimate websites.&lt;/p&gt;
-
-
-
-&lt;p&gt;For example, imagine a spoofed email that claims to be from a bank advising customers about suspicious activity in their accounts. Hovering over the link included in the email shows that it points to the bank’s real website, HTTPS and everything, but it’s a long link and somewhere in it there’s the # character followed by a prompt for the AI assistant.&lt;/p&gt;
-
-
-
-&lt;p&gt;Many users are likely to trust such a message since it points to the real bank’s website and because long links with a lot of parameters and paths in them are not unusual. But the prompt that follows the # symbol will cause the AI browser assistant to provide attacker-altered instructions to the user, such as calling an attacker-controlled phone number or WhatsApp link for further customer support about the supposed situation.&lt;/p&gt;
-
-
-
-&lt;p&gt;In another scenario, a prompt included in the link can tell an AI browser that acts like an agent —  for example, Perplexity’s Comet —  to take information about the user’s account, transaction history, phone number, and so on from the opened bank site and append it as parameters in a request to the attacker’s server.&lt;/p&gt;
-
-
-
-&lt;p&gt;Other attacks could involve the prompt causing the AI assistant to display fake information that would mislead the user: fake investment advice promoting a certain stock, fabricated news, dangerous medical advice like wrong doses for medicine, malicious instructions that could open a backdoor on the computer, instructions to re-authenticate that include a link to a phishing site, a link to download malware, and so on.&lt;/p&gt;
-
-
-
-&lt;p&gt;URL fragments cannot modify page content. They are only used for in-page navigation using the code that’s already there, so they are normally harmless. However, it now turns out that they can be used to modify the output of in-browser AI assistants or agentic browsers, which gives them an entirely new risk profile.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This discovery is especially dangerous because it weaponizes legitimate websites through their URLs,” the researchers said. “Users see a trusted site, trust their AI browser, and in turn trust the AI assistant’s output-making the likelihood of success far higher than with traditional phishing.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Different behavior across AI assistantsThe impact was different between the tested AI assistants and across the various scenarios. For example, while prompt injections managed to influence the text output on all the products tested, injecting malicious links proved harder on Gemini Assistant for Chrome, where some links were rewritten as search URLs, and on Edge with Microsoft Copilot, which prompted for additional confirmation when clicking on links in messages.&lt;/p&gt;
-
-
-
-&lt;p&gt;Perplexity’s Comet, which is an agentic browser that does more than a built-in AI assistant, was the most susceptible one because it also could fetch attacker URLs in the background, with context information attached as parameters.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft and Perplexity deployed fixes, but Google did not consider the HashJack technique a vulnerability because it views this as part of intended behavior. It’s worth noting that Cato also tested Claude for Chrome and OpenAI’s Operator browser, but the HashJack technique didn’t work on them.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4097087/ai-browsers-can-be-tricked-with-malicious-prompts-hidden-in-url-fragments.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
-      <pubDate>Thu, 27 Nov 2025 00:12:30 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall ransomware attacks offer an M&amp;A lesson for CSOs</title>
@@ -244,7 +161,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4097078/sonicwall-ransomware-attacks-offer-an-ma-lesson-for-csos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.24</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Thu, 27 Nov 2025 00:59:02 +0000</pubDate>
     </item>
     <item>
@@ -255,7 +172,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.25</comments>
-      <pubDate>Sat, 29 Nov 2025 06:29:13 +0000</pubDate>
+      <pubDate>Sat, 29 Nov 2025 07:22:45 +0000</pubDate>
     </item>
     <item>
       <title>Zyxel security advisory (AV25-767)</title>
@@ -275,7 +192,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.29</comments>
-      <pubDate>Sat, 29 Nov 2025 06:29:13 +0000</pubDate>
+      <pubDate>Sat, 29 Nov 2025 07:22:45 +0000</pubDate>
     </item>
     <item>
       <title>HPE security advisory (AV25-768)</title>
@@ -305,7 +222,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.33</comments>
-      <pubDate>Sat, 29 Nov 2025 06:29:13 +0000</pubDate>
+      <pubDate>Sat, 29 Nov 2025 07:22:45 +0000</pubDate>
     </item>
     <item>
       <title>Atlassian security advisory (AV25-770)</title>
@@ -314,7 +231,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-770</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Wed, 19 Nov 2025 16:40:21 +0000</pubDate>
     </item>
     <item>
@@ -346,16 +263,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.37</comments>
       <pubDate>Wed, 19 Nov 2025 19:45:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV25-766) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-766</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-766</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
-      <pubDate>Wed, 19 Nov 2025 20:19:02 +0000</pubDate>
     </item>
     <item>
       <title>CSPM buyer’s guide: How to choose the best cloud security posture management tools</title>
@@ -601,8 +508,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/657138/how-to-choose-the-best-cloud-security-posture-management-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Thu, 27 Nov 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV25-766) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-766</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-766</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.37</comments>
+      <pubDate>Wed, 19 Nov 2025 20:19:02 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV25-774)</title>
@@ -621,7 +538,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-775</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
+      <comments>Score: 7.45</comments>
       <pubDate>Thu, 20 Nov 2025 16:11:09 +0000</pubDate>
     </item>
     <item>
@@ -692,7 +609,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4097381/microsoft-teams-guest-chat-feature-exposes-cross-tenant-blind-spot.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
+      <comments>Score: 7.48</comments>
       <pubDate>Thu, 27 Nov 2025 11:37:21 +0000</pubDate>
     </item>
     <item>
@@ -703,27 +620,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 29 Nov 2025 06:29:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</link>
-      <description>Conducted on 13 November 2025, this operational action by the European Union Internet Referral Unit (EU IRU) involved the referral of thousands of URLs leading to dangerous and illicit online material. This includes around 5 408 links to jihadist content, 1 070 links to violent right-wing extremist and terrorist content, and 105 links to racist and xenophobic content.This joint action...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 29 Nov 2025 06:29:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</link>
-      <description>Between 10 and 14 November, Europol, in collaboration with the European Union Intellectual Property Office (EUIPO) and the Spanish National Police (Policía Nacional), organised an "Intellectual Property Crime Cyber-Patrol Week”. A total of 30 investigators participated in this operation hosted at the EUIPO headquarters in Alicante, Spain, where they used advanced Open-Source Intelligence Techniques (OSINT) and cutting-edge online investigative tools...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 29 Nov 2025 06:29:13 +0000</pubDate>
+      <pubDate>Sat, 29 Nov 2025 07:22:45 +0000</pubDate>
     </item>
     <item>
       <title>Announcing the winners of the 2025 Europol photo competition</title>
@@ -733,7 +630,27 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 29 Nov 2025 06:29:13 +0000</pubDate>
+      <pubDate>Sat, 29 Nov 2025 07:22:45 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and partner countries combat online radicalisation on gaming platforms</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</link>
+      <description>Conducted on 13 November 2025, this operational action by the European Union Internet Referral Unit (EU IRU) involved the referral of thousands of URLs leading to dangerous and illicit online material. This includes around 5 408 links to jihadist content, 1 070 links to violent right-wing extremist and terrorist content, and 105 links to racist and xenophobic content.This joint action...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-partner-countries-combat-online-radicalisation-gaming-platforms</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 29 Nov 2025 07:22:45 +0000</pubDate>
+    </item>
+    <item>
+      <title>EUR 47 million in crypto traced to disrupt digital piracy services</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</link>
+      <description>Between 10 and 14 November, Europol, in collaboration with the European Union Intellectual Property Office (EUIPO) and the Spanish National Police (Policía Nacional), organised an "Intellectual Property Crime Cyber-Patrol Week”. A total of 30 investigators participated in this operation hosted at the EUIPO headquarters in Alicante, Spain, where they used advanced Open-Source Intelligence Techniques (OSINT) and cutting-edge online investigative tools...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-47-million-in-crypto-traced-to-disrupt-digital-piracy-services</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 29 Nov 2025 07:22:45 +0000</pubDate>
     </item>
     <item>
       <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
@@ -743,7 +660,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 29 Nov 2025 06:29:13 +0000</pubDate>
+      <pubDate>Sat, 29 Nov 2025 07:22:45 +0000</pubDate>
     </item>
     <item>
       <title>ServiceNow is in talks to buy identity security firm Veza for over $1 billion: report</title>
@@ -841,7 +758,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4097423/servicenow-is-in-talks-to-buy-identity-security-firm-veza-for-over-1-billion-report-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Thu, 27 Nov 2025 12:56:48 +0000</pubDate>
     </item>
     <item>
@@ -851,7 +768,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-776</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Fri, 21 Nov 2025 14:32:07 +0000</pubDate>
     </item>
     <item>
@@ -861,7 +778,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-777</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Fri, 21 Nov 2025 15:08:26 +0000</pubDate>
     </item>
     <item>
@@ -892,7 +809,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.64</comments>
-      <pubDate>Sat, 29 Nov 2025 06:29:13 +0000</pubDate>
+      <pubDate>Sat, 29 Nov 2025 07:22:45 +0000</pubDate>
     </item>
     <item>
       <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
@@ -902,7 +819,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.65</comments>
-      <pubDate>Sat, 29 Nov 2025 06:29:13 +0000</pubDate>
+      <pubDate>Sat, 29 Nov 2025 07:22:45 +0000</pubDate>
     </item>
     <item>
       <title>Security researchers caution app developers about risks in using Google Antigravity</title>
@@ -1066,7 +983,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4097698/security-researchers-caution-app-developers-about-risks-in-using-google-antigravity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Fri, 28 Nov 2025 01:56:57 +0000</pubDate>
     </item>
     <item>
@@ -1117,7 +1034,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4097728/eu-chat-control-proposals-should-be-red-flag-to-businesses-everywhere.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Fri, 28 Nov 2025 02:32:54 +0000</pubDate>
     </item>
     <item>
@@ -1184,7 +1101,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4095215/cso-in-eigener-sache-mit-smart-answers-zu-mehr-information.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Fri, 28 Nov 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1299,7 +1216,137 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4092639/empathy-meets-it-security-the-path-to-active-compliance.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.04</comments>
+      <pubDate>Fri, 28 Nov 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>7 Security-Praktiken zum Abgewöhnen</title>
+      <link>https://www.csoonline.com/article/4024816/7-security-praktiken-zum-abgewohnen.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-large"&gt;&lt;img alt="Floppy Headscratch  16z9" class="wp-image-4024818" height="576" src="https://b2b-contenthub.com/wp-content/uploads/2025/07/Sergio-Delle-Vedove-shutterstock_2188612669_16z9.jpg?quality=50&amp;amp;strip=all&amp;amp;w=1024" width="1024" /&gt;&lt;figcaption class="wp-element-caption"&gt;Aus der Zeit gefallen?&lt;/figcaption&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;Sergio Delle Vedove | shutterstock.com&lt;/p&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Schlechte Angewohnheiten &lt;a href="https://www.csoonline.com/article/3493061/positiv-denken-fur-sicherheitsentscheider-6-mindsets-die-sie-sofort-ablegen-sollten.html" target="_blank"&gt;abzustellen&lt;/a&gt; (oder bessere zu entwickeln), ist ein Prozess, der Geduld, Selbstbeherrschung und Entschlossenheit erfordert. Das gilt sowohl auf persönlicher als auch auf Security-technischer Ebene. &lt;/p&gt;
+
+
+
+&lt;p&gt;In diesem Artikel haben wir sieben Sicherheitspraktiken für Sie zusammengestellt, deren Haltbarkeitsdatum schon eine ganze Weile abgelaufen ist.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="1-perimeter-sicherheit-fur-ausreichend-halten"&gt;1. Perimeter-Sicherheit für ausreichend halten&lt;/h2&gt;
+
+
+
+&lt;p&gt;Die meisten Arbeitsumgebungen sind heute Cloud-basiert – in vielen Fällen mit Remote-Anteil. Das beobachtet auch &lt;a href="https://www.linkedin.com/in/amitbasu/" rel="noreferrer noopener" target="_blank"&gt;Amit Basu&lt;/a&gt;, CIO und CISO bei International Seaways, einem Transportdienstleister für Erdölprodukte. Seine Schlussfolgerung: “Die alte Praxis, eine fest definierte Grenze abzusichern, funktioniert einfach nicht mehr in hybriden und Cloud-First-Arbeitsumgebungen. Weil sich Benutzer und Daten sowohl innerhalb als auch außerhalb des traditionellen Perimeters befinden, sind Unternehmen, die ausschließlich auf Perimeter-Sicherheit setzen, gefährlichen Bedrohungen ausgesetzt.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Dazu gehören dem Sicherheits- und IT-Entscheider zufolge etwa Ransomware-Angriffe. Die bessere, zeitgemäßere Lösung sei es, auf &lt;a href="https://www.csoonline.com/article/3491851/was-ist-zero-trust.html" target="_blank"&gt;Zero Trust&lt;/a&gt; zu setzen.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="2-security-an-der-compliance-ausrichten"&gt;2. Security an der Compliance ausrichten&lt;/h2&gt;
+
+
+
+&lt;p&gt;In den Augen von &lt;a href="https://www.linkedin.com/in/georgegerchow/" rel="noreferrer noopener" target="_blank"&gt;George Gerchow&lt;/a&gt;, CSO beim Security-Dienstleister Bedrock Security, lassen sich zu viele Teams von Compliance leiten, wenn es darum geht, Sicherheitsprogramme auf die Beine zu stellen. Das laufe letztlich nur darauf hinaus, Checklisten abzuarbeiten, statt Herausforderungen im Bereich Cybersecurity zu lösen: “Diese GRC-orientierte Mentalität ist veraltet und dysfunktional.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Wie Gerchow ausführt, vermittle eine Compliance-orientierte Security ein falsches Gefühl der Sicherheit und binde Ressourcen, die eigentlich für &lt;a href="https://www.csoonline.com/article/3840232/11-ruinose-ransomware-bedrohungen.html" target="_blank"&gt;tatsächliche Bedrohungen&lt;/a&gt; eingesetzt werden sollten: “Das kann dann dazu führen, dass große GRC-Teams ihre Arbeitszeit damit verbringen, Kundenfragebögen zu beantworten oder sich an Audits abzuarbeiten. Stattdessen käme es eher darauf an, Daten zu schützen, Zugriffskontrollen zu managen und neue Bedrohungen im Blick zu behalten.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Deshalb ist der CSO überzeugt, dass Unternehmen zu den grundlegenden Prinzipien der IT-Sicherheit zurückkehren müssen. Abbilden lässt sich das seiner Meinung nach über einen &lt;a href="https://www.computerwoche.de/article/2826282/die-wichtigsten-ztna-anbieter-und-loesungen.html" target="_blank"&gt;Zero-Trust-Ansatz&lt;/a&gt; sowie Continuous Monitoring, beispielsweise mit dem &lt;a href="https://medium.com/@RocketMeUpCybersecurity/continuous-adaptive-risk-and-trust-assessment-carta-protocols-for-enterprise-security-e5ba998a2493" rel="noreferrer noopener" target="_blank"&gt;CARTA-Ansatz&lt;/a&gt; (Continuous Adaptive Risk and Trust Assessment).&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="3-legacy-vpns-beibehalten"&gt;3. Legacy-VPNs beibehalten&lt;/h2&gt;
+
+
+
+&lt;p&gt;Veraltete &lt;a href="https://www.csoonline.com/article/3491715/7-vpn-alternativen-wie-fernzugriff-sicherer-geht.html" target="_blank"&gt;VPN-Instanzen&lt;/a&gt; können ineffizient und schwerfällig sein, was zu erheblichen Ausfallzeiten führen kann und es diffiziler gestaltet, sie zu managen. Auch &lt;a href="https://www.cdw.com/content/cdw/en/articles/contributors/buck-bell.html" rel="noreferrer noopener" target="_blank"&gt;Buck Bell&lt;/a&gt;, Leiter der globalen Sicherheitsstrategie beim IT-Dienstleister CDW, ist kein “Fan”: “Legacy-VPNs können die Anforderungen des modernen Arbeitsplatzes nicht erfüllen. Insbesondere weil Führungskräfte heute einen nahtloseren und flexibleren Zugriff auf Ressourcen für ihre Teams benötigen – unabhängig davon, ob diese im Büro oder remote arbeiten.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Zudem seien solche Legacy-Systeme nicht skalierbar, weil sie mit den sich verändernden Sicherheitsanforderungen wachsender Unternehmen nicht Schritt halten können, meint Bell: “Das führt mit zunehmender Angriffsfläche zu Herausforderungen. Dass veraltete VPNs oft nicht mehr regelmäßig mit Aktualisierungen und Patches versorgt werden, vergrößert das Risikopotenzial noch weiter.” &lt;/p&gt;
+
+
+
+&lt;p&gt;Ein besserer Ansatz: auf &lt;a href="https://www.csoonline.com/article/3493712/secure-access-service-edge-der-grose-sase-kaufratgeber.html" target="_blank"&gt;Secure Access Service Edge&lt;/a&gt; (SASE) umsteigen und sich dem Zero-Trust-Ansatz verschreiben. Das kann auch Security-Experte Bell nur wärmstens empfehlen: “Diese Strategien erhöhen das Sicherheitsniveau, indem sie jeden Benutzer und jedes Gerät überprüfen, das auf Netzwerkressourcen zugreifen möchte.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="4-nur-auf-edr-setzen"&gt;4. Nur auf EDR setzen&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.csoonline.com/article/3616110/edr-software-ein-kaufratgeber.html" target="_blank"&gt;Endpoint Detection and Response&lt;/a&gt; (EDR)-Lösungen stellen ohne Zweifel einen erheblicher Fortschritt gegenüber herkömmlicher Antivirus-Software dar. Allerdings reicht dieser Ansatz allein in der heutigen Bedrohungslandschaft nicht mehr aus, wie &lt;a href="https://www.nopalcyber.com/leadership-team/michel-sahyoun-" rel="noreferrer noopener" target="_blank"&gt;Michel Sahyoun&lt;/a&gt;, Chief Solutions Architect beim Security-Anbieter NopalCyber, erklärt: „EDR eignet sich hervorragend, um Aktivitäten an Endpunkten zu überwachen, darauf zu reagieren und komplexe Angriffe zu erkennen. Allerdings umgehen Angreifer Endpunkte zunehmend und nehmen stattdessen &lt;a href="https://www.csoonline.com/article/3495515/7-fundamentale-cloud-bedrohungen.html" target="_blank"&gt;Cloud-Umgebungen&lt;/a&gt;, Netzwerkgeräte und eingebettete Systeme ins Visier.“&lt;/p&gt;
+
+
+
+&lt;p&gt;Eine übermäßige Abhängigkeit von EDR könne deshalb dazu beitragen, dass kritische Sicherheitslücken unbeachtet bleiben. Im schlimmsten Fall ermögliche das Cyberkriminellen, sich über längere Zeit unbemerkt im Unternehmensnetzwerk einzunisten, warnt der Manager: “Die Angreifer könnten beispielsweise &lt;a href="https://www.csoonline.com/article/3494981/bosartige-oauth-apps-cyberangreifer-missbrauchen-microsoft-privilegien.html" target="_blank"&gt;OAuth-Token ausnutzen&lt;/a&gt;, um sich unbefugten Zugriff auf Cloud-Plattformen zu verschaffen – ohne jemals mit einem Endpunkt zu interagieren, der über EDR-Software abgesichert ist.”&lt;/p&gt;
+
+
+
+&lt;p&gt;In ähnlicher Weise stellten Netzwerk- und IoT-Devices in vielen Fällen blinde Flecken dar – auch weil diese oft keine robusten Monitoring- und Forensik-Funktionen aufwiesen: “Cloud-Umgebung erschweren die Detection zusätzlich aufgrund begrenzter Logging- sowie kostenpflichtiger Visibility-Funktionen. Weil sich die Angriffe zunehmend darauf verlagern, Trust-Beziehungen, Identitäten und APIs auszunutzen, ist ein Endpoint-zentrierter Ansatz allein unzureichend”, konstatiert Sahyoun.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="5-sms-fur-2fa-nutzen"&gt;5. SMS für 2FA nutzen&lt;/h2&gt;
+
+
+
+&lt;p&gt;Die SMS-basierte Zwei-Faktor-Authentifizierung galt einst als enormer Fortschritt in Sachen Security (verglichen mit der Authentifizierung per Passwort). Doch auch dieses Verfahren ist inzwischen &lt;a href="https://www.csoonline.com/article/3494553/was-sind-passkeys.html" target="_blank"&gt;veraltet&lt;/a&gt; – und risikobehaftet.  &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://events.isc2.org/b/sp/aparna-ash-himmatramka-5702" rel="noreferrer noopener" target="_blank"&gt;Aparna Himmatramka&lt;/a&gt;, Senior Security Assurance Lead bei Microsoft, erklärt: “Leider wurde die TK-Infrastruktur nicht mit Blick auf Sicherheitsaspekte konzipiert. Darüber hinaus verwenden Mobilfunknetze auch heute noch veraltete Protokolle, die ausgenutzt werden können – und der Prozess der Übertragung von Telefonnummern zwischen Netzbetreibern erfolgt in vielen Fällen ohne strenge Identitätsprüfung. Das öffnet &lt;a href="https://www.computerwoche.de/article/2794098/so-stehlen-hacker-ihre-handynummer.html" target="_blank"&gt;SIM-Swapping-Angriffen&lt;/a&gt; Tür und Tor.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="6-on-premises-siems-einsetzen"&gt;6. On-Premises-SIEMs einsetzen&lt;/h2&gt;
+
+
+
+&lt;p&gt;Lokal installierte &lt;a href="https://www.csoonline.com/article/3835828/siem-kaufratgeber.html" target="_blank"&gt;SIEM-Tools&lt;/a&gt; sind Security-Manager Gerchow ebenfalls ein Dorn im Auge. Denn sie führten oft zu einer Flut von Warnmeldungen und seien zudem in vielen Fällen nicht Cloud-fähig. &lt;/p&gt;
+
+
+
+&lt;p&gt;“Das zwingt Unternehmen entweder dazu, enorme Datenmengen unter hohen Kosten zu verschieben und zu speichern – oder das Risiko einzugehen, wichtige Protokolle zu übersehen, die essenziell sind, um Cloud-Deployments abzusichern”, mahnt Gerchow. Er fügt hinzu: “Viele Unternehmen halten an lokalen SIEM-Installationen fest, weil sie sich scheuen, &lt;a href="https://www.csoonline.com/article/3494345/der-kaufratgeber-fur-cloud-access-security-broker.html" target="_blank"&gt;sensible Daten in der Cloud zu speichern&lt;/a&gt;. Aber seien wir ehrlich: Dieser Zug ist abgefahren – es ist Zeit, weiterzuziehen.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="7-passivitat-zulassen"&gt;7. Passivität zulassen&lt;/h2&gt;
+
+
+
+&lt;p&gt;Kaum jemand sieht sich selbst als potenzielles Opfer eines Phishing-Angriffs – dennoch fallen jeden Tag wieder viele Menschen auf &lt;a href="https://www.csoonline.com/article/3993294/diese-social-engineering-trends-sollten-sie-kennen.html" target="_blank"&gt;Social-Engineering-Taktiken&lt;/a&gt; herein.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.linkedin.com/in/kevin-sullivan-3204292b/" rel="noreferrer noopener" target="_blank"&gt;Kevin Sullivan&lt;/a&gt;, Principal Technology Consultant beim Softwareanbieter XTIUM, ist überzeugt, dass eine aktive Sicherheitskultur die Lösung ist, um das im Unternehmensumfeld zu verhindern: “Die richtigen Sicherheits-Tools und -Praktiken sind für jedes Unternehmen wichtig. Entscheidend sind dabei jedoch gute &lt;a href="https://www.csoonline.com/article/3604803/security-awareness-training-topics-best-practices-costs-free-options.html" target="_blank"&gt;Security-Awareness-Programme&lt;/a&gt;, die die Belegschaft aufklären und dazu befähigen, Daten, Systeme und Geschäftsprozesse aktiv zu schützen.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Unternehmen, die ein kontinuierliches Engagement für Weiterbildung vermissen ließen, sabotierten sich selbst, so der Berater – in diesem Fall würden auch erhebliche Investitionen in Security-Tools und -Strategien ins Leere laufen: “Eine gut geschulte und gut vorbereitete Benutzerbasis ist die erste und stärkste Verteidigungslinie.”&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Sie wollen weitere interessante Beiträge rund um das Thema IT-Sicherheit lesen? &lt;/strong&gt;&lt;a href="https://www.csoonline.com/de/newsletters/signup/" target="_blank"&gt;&lt;strong&gt;Unser kostenloser Newsletter&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt; liefert Ihnen alles, was Sicherheitsentscheider und -experten wissen sollten, direkt in Ihre Inbox.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4024816/7-security-praktiken-zum-abgewohnen.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.04</comments>
       <pubDate>Fri, 28 Nov 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1498,7 +1545,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/559539/the-cso-guide-to-top-security-conferences.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Fri, 28 Nov 2025 07:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1508,7 +1555,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-779</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Mon, 24 Nov 2025 16:31:06 +0000</pubDate>
     </item>
     <item>
@@ -1518,7 +1565,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-780</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Mon, 24 Nov 2025 16:42:54 +0000</pubDate>
     </item>
     <item>
@@ -1528,7 +1575,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-781</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Mon, 24 Nov 2025 16:56:29 +0000</pubDate>
     </item>
     <item>
@@ -1538,7 +1585,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-782</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Mon, 24 Nov 2025 17:10:30 +0000</pubDate>
     </item>
     <item>
@@ -1548,7 +1595,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-784</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.26</comments>
       <pubDate>Mon, 24 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -1558,7 +1605,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-783</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.26</comments>
       <pubDate>Mon, 24 Nov 2025 18:22:22 +0000</pubDate>
     </item>
     <item>
@@ -1568,7 +1615,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-785</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Tue, 25 Nov 2025 13:02:24 +0000</pubDate>
     </item>
     <item>
@@ -1697,7 +1744,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4097488/openai-admits-data-breach-after-analytics-partner-hit-by-phishing-attack-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Thu, 27 Nov 2025 14:41:32 +0000</pubDate>
     </item>
     <item>
@@ -1707,7 +1754,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-786</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Wed, 26 Nov 2025 18:24:53 +0000</pubDate>
     </item>
     <item>
@@ -1717,7 +1764,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-787</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Wed, 26 Nov 2025 19:06:51 +0000</pubDate>
     </item>
     <item>
@@ -1727,7 +1774,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-788</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.71</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Thu, 27 Nov 2025 19:01:36 +0000</pubDate>
     </item>
     <item>
@@ -1737,7 +1784,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av25-789</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.42</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Fri, 28 Nov 2025 17:25:13 +0000</pubDate>
     </item>
   </channel>
