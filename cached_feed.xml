@@ -8,134 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Dec 2025 23:20:28 +0000</lastBuildDate>
-    <item>
-      <title>Microsoft gives Windows admins a legacy migration headache with WINS sunset</title>
-      <link>https://www.csoonline.com/article/4098729/microsoft-gives-windows-admins-a-legacy-migration-headache-with-wins-sunset-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Microsoft has given system administrators until 2034 to stop using WINS (Windows Internet Name Service) NetBIOS name resolution technology in their networks — but even nine years may not be enough notice for some: WINS is very much still in use, supporting a niche range of difficult-to-replace legacy systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://learn.microsoft.com/windows-server/networking/technologies/wins/wins-top"&gt;WINS&lt;/a&gt; dates from Windows NT in 1994 and has long since been displaced by the more modern Domain Name System (DNS). It was deprecated in 2021 to coincide with the appearance of Windows Server 2022. This meant it would be supported but no longer developed, a clear signal that the clock was ticking.&lt;/p&gt;
-
-
-
-&lt;p&gt;Now, Microsoft has said, the last operating system to support WINS will be Windows Server 2025. That’s what determines the nine-year final migration deadline — the lifespan of Windows Server 2025 on the Long-Term Servicing Channel (LTSC).&lt;/p&gt;
-
-
-
-&lt;p&gt;“Organizations using WINS are strongly encouraged to migrate to modern DNS-based name resolution solutions,” the company said, perhaps stating the obvious, in a &lt;a href="https://support.microsoft.com/en-gb/topic/wins-removal-moving-forward-with-modern-name-resolution-f00381f0-7237-4f7b-8e78-aa6f9c5b279f"&gt;Windows Message Center advisory&lt;/a&gt; in early November.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Microsoft, the timescale is generous. “Our goal is to make planning and migrations as predictable and low-stress as possible. With advanced notice and a support runway, organizations can confidently modernize their environments at their own pace,” it said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="cutting-out-wins"&gt;Cutting out WINS&lt;/h2&gt;
-
-
-
-&lt;p&gt;Future versions of Windows without support for WINS will lose the WINS Server role and associated binaries, the WINS Microsoft Management Console (MMC) snap-in, and WINS automation APIs and related management interfaces, the company added.&lt;/p&gt;
-
-
-
-&lt;p&gt;WINS migration is yet another legacy issue inherited from the creative ferment of computer networking in the 1980s and 1990s. That era needed solutions to lots of networking problems in a hurry, especially how to turn a desktop PC operating system such as DOS or Windows into a practical server platform.&lt;/p&gt;
-
-
-
-&lt;p&gt;WINS solved an important challenge: how to connect the names used to identify computers using the 1980s’ NetBIOS network naming system with modern IP addresses. DNS, a hierarchical system that worked for Internet as well as network addresses, had rendered NetBIOS obsolete. But both ended up co-existing, examples of how the industry delivered more than one answer to the same problem.&lt;/p&gt;
-
-
-
-&lt;p&gt;Today, the arguments for getting rid of WINS extend beyond its obsolescence. It is also a security risk. In 2017, Fortinet’s &lt;a href="https://www.fortinet.com/blog/threat-research/wins-server-remote-memory-corruption-vulnerability-in-microsoft-windows-server"&gt;FortiGuard Labs discovered&lt;/a&gt; a WINS Server remote memory corruption vulnerability in Windows Server 2008, 2012, and 2016.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft’s reply to Fortinet made interesting reading: “A fix would require a complete overhaul of the code to be considered comprehensive. The functionality provided by WINS was replaced by DNS and Microsoft has advised customers to migrate away from it.”&lt;/p&gt;
-
-
-
-&lt;p&gt;In short, Microsoft had no plans to patch the issue. Its solution was that customers migrate away from WINS, a process it has since become clear could still be ongoing for some customers into the 2030s.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-wins-is-still-in-use"&gt;Why WINS is still in use&lt;/h2&gt;
-
-
-
-&lt;p&gt;Organizations still using WINS are likely to fall into one of two categories: those using it to support old technologies with long lifecycles such as operational technology (OT) systems, and those that have simply half-forgotten that they are still using it.&lt;/p&gt;
-
-
-
-&lt;p&gt;“For OT stacks built around WINS/NetBIOS, replacing them isn’t trivial because changing name resolution touches safety‑critical systems and bespoke integrations,” said &lt;a href="https://www.linkedin.com/in/kieranbuk/"&gt;Kieran Bhardwaj&lt;/a&gt;, head of security engineering at UK cyber security consultancy Bridewell, which specializes in advising on critical infrastructure.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Legacy technologies persist because some niche systems like industrial/OT environments are engineered for multi‑decade lifecycles. Many control systems are architecturally fixed and can’t be re‑platformed,” he said. “It’s also hard for Microsoft: WINS sits deep in the networking stack which means removing a once‑core component demands exhaustive regression to avoid unintended breakage.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Equally, according to &lt;a href="https://www.linkedin.com/in/william-wright-chcsp-2054a72a/?originalSubdomain=uk"&gt;William Wright&lt;/a&gt; of pen-testing company Closed Door Security, WINS was still running on some networks for the same reason that many legacy technologies overstay their usefulness: migration apathy.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Most organizations running WINS today probably aren’t actively using it for anything critical. They’ve just never had a compelling reason to turn it off,” he said. “It’s been quietly replicating in the background, consuming minimal resources, causing no obvious problems. That’s the nature of legacy infrastructure: It persists not because it’s needed, but because removing it requires effort and carries risk, while leaving it alone is free,” said Wright.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="wins-is-a-security-risk"&gt;WINS is a security risk&lt;/h2&gt;
-
-
-
-&lt;p&gt;WINS had major design limitations that made it a security risk, said Wright. “WINS has no mechanism to verify the legitimacy of name registrations, which makes it vulnerable to spoofing attacks,” said Wright.&lt;/p&gt;
-
-
-
-&lt;p&gt;“An attacker on the network can register malicious entries, including Web Proxy Auto-Discovery (WPAD) records to intercept web traffic, or redirect connections to systems they control. It’s a straightforward path for lateral movement,” he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Finding WINS still turned on inside a network was a godsend to hackers using open-source tools such as &lt;a href="https://github.com/SpiderLabs/Responder"&gt;Responder&lt;/a&gt; to conduct name resolution &lt;a href="https://www.resecurity.com/es/blog/article/from-broadcast-to-breach-llmnrnbt-ns-poisoning-in-action"&gt;poisoning attacks&lt;/a&gt; against legacy Windows protocols such as Link-Local Multicast Name Resolution (LLMNR) and the NetBIOS Name Service (NBT-NS), Wright added.&lt;/p&gt;
-
-
-
-&lt;p&gt;Worse, the presence of WINS often indicated that a target was using other vulnerable legacy protocols. “Systems often fall back to NetBIOS broadcast queries when WINS isn’t available, which are spoofable on local networks. This is exactly what tools like Responder exploit, and it remains a common technique in penetration testing and real-world attacks alike.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="network-inventory"&gt;Network inventory&lt;/h2&gt;
-
-
-
-&lt;p&gt;Organizations looking to rip WINS out should start with an inventory to find out where it is being used, Bhardwaj said: “Many organizations don’t realize a legacy asset still relies on WINS, so proactively inventory older segments and OT/ICS networks and verify resolution paths before the next upgrade window.”&lt;/p&gt;
-
-
-
-&lt;p&gt;“The trade-off is that customers still using WINS must put in the work to move to DNS by auditing dependencies, modernizing or isolating legacy workloads, and implementing DNS. But the payoff is a simpler, more secure platform.&lt;/p&gt;
-
-
-
-&lt;p&gt;In the end, even the brightest and best-performing technologies will one day be legacy. Migrating from WINS is a test of how well organizations are dealing with this wider problem. “There’s way too much legacy that is unused and that presents an attack surface for no reason,” said Bhardwaj.&lt;/p&gt;
-
-
-
-&lt;p&gt;This article first appeared on &lt;a href="https://www.computerworld.com/article/4098085/microsoft-gives-windows-admins-a-legacy-migration-headache-with-wins-sunset.html"&gt;Computerworld&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4098729/microsoft-gives-windows-admins-a-legacy-migration-headache-with-wins-sunset-2.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
-      <pubDate>Mon, 01 Dec 2025 16:31:04 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 04 Dec 2025 01:49:58 +0000</lastBuildDate>
     <item>
       <title>The first line of defense is still the network. But that’s only the beginning</title>
       <link>https://www.csoonline.com/article/4094717/the-first-line-of-defense-is-still-the-network-but-thats-only-the-beginning.html</link>
@@ -212,7 +85,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094717/the-first-line-of-defense-is-still-the-network-but-thats-only-the-beginning.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Mon, 01 Dec 2025 17:23:44 +0000</pubDate>
     </item>
     <item>
@@ -307,8 +180,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4094710/netscout-wins-overall-network-security-solution-of-the-year.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Mon, 01 Dec 2025 17:27:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europe tightens the net on sanctions evasion</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</link>
+      <description>Europol is reinforcing its support to EU Member States in enforcing EU sanctions, as criminal networks develop ever more sophisticated methods to bypass restrictive measures linked to Russia’s war of aggression against Ukraine.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.25</comments>
+      <pubDate>Wed, 03 Dec 2025 23:49:58 +0000</pubDate>
     </item>
     <item>
       <title>SecAlerts Cuts Through the Noise with a Smarter, Faster Way to Track Vulnerabilities</title>
@@ -318,7 +201,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://thehackernews.com/2025/12/secalerts-cuts-through-noise-with.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Tue, 02 Dec 2025 17:00:00 +0530</pubDate>
     </item>
     <item>
@@ -329,7 +212,7 @@ Taking into account that nearly 10% of</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.36</comments>
-      <pubDate>Wed, 03 Dec 2025 21:20:28 +0000</pubDate>
+      <pubDate>Wed, 03 Dec 2025 23:49:58 +0000</pubDate>
     </item>
     <item>
       <title>Europol and Spanish National Police disrupt activities of far-right terrorist group 'The Base'</title>
@@ -339,7 +222,7 @@ Taking into account that nearly 10% of</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.37</comments>
-      <pubDate>Wed, 03 Dec 2025 21:20:28 +0000</pubDate>
+      <pubDate>Wed, 03 Dec 2025 23:49:58 +0000</pubDate>
     </item>
     <item>
       <title>Dell security advisory (AV25-779)</title>
@@ -348,7 +231,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-779</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Mon, 24 Nov 2025 16:31:06 +0000</pubDate>
     </item>
     <item>
@@ -358,7 +241,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-780</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Mon, 24 Nov 2025 16:42:54 +0000</pubDate>
     </item>
     <item>
@@ -368,7 +251,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-781</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Mon, 24 Nov 2025 16:56:29 +0000</pubDate>
     </item>
     <item>
@@ -378,7 +261,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-782</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Mon, 24 Nov 2025 17:10:30 +0000</pubDate>
     </item>
     <item>
@@ -388,7 +271,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-784</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Mon, 24 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -398,7 +281,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-783</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Mon, 24 Nov 2025 18:22:22 +0000</pubDate>
     </item>
     <item>
@@ -408,7 +291,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-785</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
+      <comments>Score: 7.47</comments>
       <pubDate>Tue, 25 Nov 2025 13:02:24 +0000</pubDate>
     </item>
     <item>
@@ -419,7 +302,7 @@ Taking into account that nearly 10% of</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 03 Dec 2025 21:20:28 +0000</pubDate>
+      <pubDate>Wed, 03 Dec 2025 23:49:58 +0000</pubDate>
     </item>
     <item>
       <title>Announcing the winners of the 2025 Europol photo competition</title>
@@ -429,7 +312,7 @@ Taking into account that nearly 10% of</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 03 Dec 2025 21:20:28 +0000</pubDate>
+      <pubDate>Wed, 03 Dec 2025 23:49:58 +0000</pubDate>
     </item>
     <item>
       <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
@@ -439,7 +322,7 @@ Taking into account that nearly 10% of</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 03 Dec 2025 21:20:28 +0000</pubDate>
+      <pubDate>Wed, 03 Dec 2025 23:49:58 +0000</pubDate>
     </item>
     <item>
       <title>29 suspects arrested in two blows against human trafficking networks</title>
@@ -449,7 +332,7 @@ Taking into account that nearly 10% of</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 03 Dec 2025 21:20:28 +0000</pubDate>
+      <pubDate>Wed, 03 Dec 2025 23:49:58 +0000</pubDate>
     </item>
     <item>
       <title>Key questions CISOs must ask before adopting AI-enabled cyber solutions</title>
@@ -575,58 +458,8 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4094763/key-questions-cisos-must-ask-before-adopting-ai-enabled-cyber-solutions.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 02 Dec 2025 07:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>16.6 million packages of fake and harmful toys taken off EU markets</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/166-million-packages-of-fake-and-harmful-toys-taken-eu-markets</link>
-      <description>Fake toys are poisoning, deafening and injuring children across Europe, while causing major losses to the EU economy. 26 countries, coordinated by Europol, co-led by France, Spain and Romania, and supported by the EUIPO and OLAF, have once again led initiatives to take down the producers and importers of counterfeit toys. With the global toy market valued at up to EUR 300 billion annually, it also remains the second-most counterfeited industry globally.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/166-million-packages-of-fake-and-harmful-toys-taken-eu-markets</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
-      <pubDate>Wed, 03 Dec 2025 21:20:28 +0000</pubDate>
-    </item>
-    <item>
-      <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</link>
-      <description>A new digital platform, Help4U, developed by Europol and CENTRIC, has been launched to support children and teenagers facing sexual abuse or online harm. Designed to be simple, private, and accessible, Help4U supports young people with finding trusted advice, understanding their rights, and connecting with people who can help. The platform offers clear, practical guidance for anyone under 18 who needs help, as well as information for parents, teachers, and professionals supporting them.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
-      <pubDate>Wed, 03 Dec 2025 21:20:28 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitLab security advisory (AV25-786)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-786</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-786</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Wed, 26 Nov 2025 18:24:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>Splunk security advisory (AV25-787)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-787</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-787</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
-      <pubDate>Wed, 26 Nov 2025 19:06:51 +0000</pubDate>
-    </item>
-    <item>
-      <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/coordinated-strike-hits-violent-criminal-network-behind-large-scale-illegal-gambling-and-money-laundering-in-sweden</link>
-      <description>A coordinated law enforcement operation carried out in Sweden and Spain between 28 and 29 November targeted a violent criminal network operating in the Stockholm area. The group is believed to run extensive illegal gambling operations and launder significant criminal proceeds, both for its own benefit and for other criminal actors. The network is also linked to drug trafficking in Sweden and across the Nordic region, reinforcing its presence in local and regional criminal markets.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/coordinated-strike-hits-violent-criminal-network-behind-large-scale-illegal-gambling-and-money-laundering-in-sweden</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
-      <pubDate>Wed, 03 Dec 2025 21:20:28 +0000</pubDate>
     </item>
     <item>
       <title>Vaillant-CISO: “Starten statt Warten”</title>
@@ -731,8 +564,58 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4098347/vaillant-ciso-starten-statt-warten.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Tue, 02 Dec 2025 08:29:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>16.6 million packages of fake and harmful toys taken off EU markets</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/166-million-packages-of-fake-and-harmful-toys-taken-eu-markets</link>
+      <description>Fake toys are poisoning, deafening and injuring children across Europe, while causing major losses to the EU economy. 26 countries, coordinated by Europol, co-led by France, Spain and Romania, and supported by the EUIPO and OLAF, have once again led initiatives to take down the producers and importers of counterfeit toys. With the global toy market valued at up to EUR 300 billion annually, it also remains the second-most counterfeited industry globally.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/166-million-packages-of-fake-and-harmful-toys-taken-eu-markets</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.64</comments>
+      <pubDate>Wed, 03 Dec 2025 23:49:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitLab security advisory (AV25-786)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-786</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-786</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.64</comments>
+      <pubDate>Wed, 26 Nov 2025 18:24:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Help4U: A new digital platform to support young people facing online sexual abuse</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</link>
+      <description>A new digital platform, Help4U, developed by Europol and CENTRIC, has been launched to support children and teenagers facing sexual abuse or online harm. Designed to be simple, private, and accessible, Help4U supports young people with finding trusted advice, understanding their rights, and connecting with people who can help. The platform offers clear, practical guidance for anyone under 18 who needs help, as well as information for parents, teachers, and professionals supporting them.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/help4u-new-digital-platform-to-support-young-people-facing-online-sexual-abuse</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.65</comments>
+      <pubDate>Wed, 03 Dec 2025 23:49:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>Splunk security advisory (AV25-787)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-787</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-787</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.65</comments>
+      <pubDate>Wed, 26 Nov 2025 19:06:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/coordinated-strike-hits-violent-criminal-network-behind-large-scale-illegal-gambling-and-money-laundering-in-sweden</link>
+      <description>A coordinated law enforcement operation carried out in Sweden and Spain between 28 and 29 November targeted a violent criminal network operating in the Stockholm area. The group is believed to run extensive illegal gambling operations and launder significant criminal proceeds, both for its own benefit and for other criminal actors. The network is also linked to drug trafficking in Sweden and across the Nordic region, reinforcing its presence in local and regional criminal markets.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/coordinated-strike-hits-violent-criminal-network-behind-large-scale-illegal-gambling-and-money-laundering-in-sweden</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.67</comments>
+      <pubDate>Wed, 03 Dec 2025 23:49:58 +0000</pubDate>
     </item>
     <item>
       <title>AI Adoption Surges While Governance Lags — Report Warns of Growing Shadow Identity Risk</title>
@@ -822,7 +705,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4099211/ai-adoption-surges-while-governance-lags-report-warns-of-growing-shadow-identity-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Tue, 02 Dec 2025 11:58:00 +0000</pubDate>
     </item>
     <item>
@@ -1202,7 +1085,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/1251209/uk-cso-30-awards.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Tue, 02 Dec 2025 14:24:42 +0000</pubDate>
     </item>
     <item>
@@ -1212,7 +1095,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-788</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Thu, 27 Nov 2025 19:01:36 +0000</pubDate>
     </item>
     <item>
@@ -1222,7 +1105,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av25-789</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Fri, 28 Nov 2025 17:25:13 +0000</pubDate>
     </item>
     <item>
@@ -1426,7 +1309,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/3560109/security-tools-fur-ki-infrastrukturen-ein-kaufratgeber.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Wed, 03 Dec 2025 03:13:00 +0000</pubDate>
     </item>
     <item>
@@ -1645,7 +1528,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4094706/what-are-zero-day-attacks-and-why-do-they-work.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Mon, 01 Dec 2025 17:25:11 +0000</pubDate>
     </item>
     <item>
@@ -1800,7 +1683,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4097721/how-cisos-can-prepare-for-the-new-era-of-short-lived-tls-certificates.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Wed, 03 Dec 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1901,7 +1784,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4099360/ai-automation-and-integration-the-foundation-for-cyber-protection-in-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Wed, 03 Dec 2025 10:45:47 +0000</pubDate>
     </item>
     <item>
@@ -1976,7 +1859,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4100393/hybrid-2fa-phishing-kits-are-making-attacks-harder-to-detect.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Wed, 03 Dec 2025 16:23:29 +0000</pubDate>
     </item>
     <item>
@@ -1986,7 +1869,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-790</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.19</comments>
       <pubDate>Mon, 01 Dec 2025 16:00:31 +0000</pubDate>
     </item>
     <item>
@@ -1996,7 +1879,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-791</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.19</comments>
       <pubDate>Mon, 01 Dec 2025 16:12:55 +0000</pubDate>
     </item>
     <item>
@@ -2006,7 +1889,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-792</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.26</comments>
+      <comments>Score: 9.20</comments>
       <pubDate>Mon, 01 Dec 2025 16:23:13 +0000</pubDate>
     </item>
     <item>
@@ -2016,7 +1899,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-793</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.26</comments>
+      <comments>Score: 9.20</comments>
       <pubDate>Mon, 01 Dec 2025 16:28:51 +0000</pubDate>
     </item>
     <item>
@@ -2026,7 +1909,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-794</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.26</comments>
+      <comments>Score: 9.21</comments>
       <pubDate>Mon, 01 Dec 2025 16:41:23 +0000</pubDate>
     </item>
     <item>
@@ -2036,7 +1919,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-795</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.31</comments>
+      <comments>Score: 9.25</comments>
       <pubDate>Mon, 01 Dec 2025 18:27:35 +0000</pubDate>
     </item>
     <item>
@@ -2046,7 +1929,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-796</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.31</comments>
+      <comments>Score: 9.25</comments>
       <pubDate>Mon, 01 Dec 2025 18:43:36 +0000</pubDate>
     </item>
     <item>
@@ -2056,7 +1939,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-december-2025-monthly-rollup-av25-797</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.35</comments>
+      <comments>Score: 9.29</comments>
       <pubDate>Mon, 01 Dec 2025 20:23:41 +0000</pubDate>
     </item>
     <item>
@@ -2066,7 +1949,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openvpn-security-advisory-av25-798</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.81</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Tue, 02 Dec 2025 13:33:12 +0000</pubDate>
     </item>
     <item>
@@ -2076,7 +1959,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-december-2025-monthly-rollup-av25-799</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.89</comments>
+      <comments>Score: 9.82</comments>
       <pubDate>Tue, 02 Dec 2025 16:10:29 +0000</pubDate>
     </item>
     <item>
@@ -2086,7 +1969,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-struts-security-advisory-av25-800</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.89</comments>
       <pubDate>Tue, 02 Dec 2025 18:31:22 +0000</pubDate>
     </item>
     <item>
@@ -2096,7 +1979,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-801</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.02</comments>
+      <comments>Score: 9.94</comments>
       <pubDate>Tue, 02 Dec 2025 20:18:43 +0000</pubDate>
     </item>
     <item>
@@ -2106,7 +1989,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-802</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.68</comments>
+      <comments>Score: 10.59</comments>
       <pubDate>Wed, 03 Dec 2025 15:21:01 +0000</pubDate>
     </item>
     <item>
@@ -2116,7 +1999,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av25-803</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.68</comments>
+      <comments>Score: 10.59</comments>
       <pubDate>Wed, 03 Dec 2025 15:27:08 +0000</pubDate>
     </item>
     <item>
@@ -2126,7 +2009,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisories-av25-804</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.88</comments>
+      <comments>Score: 10.78</comments>
       <pubDate>Wed, 03 Dec 2025 20:19:41 +0000</pubDate>
     </item>
     <item>
@@ -2136,7 +2019,7 @@ Taking into account that nearly 10% of</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-805</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.88</comments>
+      <comments>Score: 10.78</comments>
       <pubDate>Wed, 03 Dec 2025 20:24:25 +0000</pubDate>
     </item>
     <item>
@@ -2145,7 +2028,7 @@ Taking into account that nearly 10% of</description>
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/gisec-global</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 143877540992388592.00</comments>
+      <comments>Score: 140191499007202048.00</comments>
       <pubDate>Tue, 05 May 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
