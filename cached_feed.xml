@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Dec 2025 11:18:12 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Dec 2025 12:41:55 +0000</lastBuildDate>
+    <item>
+      <title>Ubuntu security advisory (AV25-781)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-781</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-781</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.16</comments>
+      <pubDate>Mon, 24 Nov 2025 16:56:29 +0000</pubDate>
+    </item>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV25-782)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-782</link>
@@ -26,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-784</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.17</comments>
+      <comments>Score: 7.16</comments>
       <pubDate>Mon, 24 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -36,113 +46,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-783</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.17</comments>
+      <comments>Score: 7.16</comments>
       <pubDate>Mon, 24 Nov 2025 18:22:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>Suspicious traffic could be testing CDN evasion, says expert</title>
-      <link>https://www.csoonline.com/article/4101395/suspicious-traffic-could-be-testing-cdn-evasion-says-expert.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;An individual or group is doing new probing of content delivery networks (CDNs), an effort that CSOs, CIOs and network administrators should worry about if they use CDNs instead of web application firewalls to protect websites.&lt;/p&gt;
-
-
-
-&lt;p&gt;That’s the conclusion of &lt;a href="https://www.sans.org/profiles/dr-johannes-ullrich" rel="noreferrer noopener" target="_blank"&gt;Johannes Ullrich&lt;/a&gt;, dean of research at the SANS Institute, &lt;a href="https://isc.sans.edu/diary/32532" rel="noreferrer noopener" target="_blank"&gt;who this week said&lt;/a&gt;  his organization’s honeypots last month detected a curious amount of traffic with server requests that include CDN-related headers.&lt;/p&gt;
-
-
-
-&lt;p&gt;Perhaps, he said, someone is testing a tactic to evade CDN defences for launching either a targeted attack or a widespread distributed denial of service (DDoS) attack on a site.&lt;/p&gt;
-
-
-
-&lt;p&gt;For example, the honeypots have seen headers on traffic that include:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;“Cf-Warp-Tag-Id,” which is associated with Cloudflare’s Warp VPN service;&lt;/li&gt;
-
-
-
-&lt;li&gt;“X-Fastly-Request-Id,”, which is associated with the Fastly CDN;&lt;/li&gt;
-
-
-
-&lt;li&gt;“X-Akamai-Transformed,” a header added by Akamai;&lt;/li&gt;
-
-
-
-&lt;li&gt;and a puzzler: “X-T0Ken-Inf0.” Ullrich thinks it might contain a form of authentication token, but isn’t sure.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;In an interview, he said one explanation is that a threat actor is trying to get around a CDN’s filters by creating page requests that include a CDN-related header.&lt;/p&gt;
-
-
-
-&lt;p&gt;Another possible explanation is that these requests are merely going through a CDN, but, Ullrich said, “the requests we’re seeing don’t quite look like that.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Internet requests are messages sent from a client such as a web browser to a web server, requesting a web page. A wave of requests can be a DDoS attack, or mask a different kind of attack.&lt;/p&gt;
-
-
-
-&lt;p&gt;These days, many organizations use CDNs or cloud providers for basic DDoS protection and bot filtering in addition to load balancing. In a typical setup, Ullrich said, DNS is used to point clients to the CDN, which then forwards the request to a customer’s web server.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, there’s a problem: If an attacker can identify the IP address of the actual web server, they are often able to bypass the CDN and reach the web server directly. There are a few ways for users to prevent this. For example, depending on the CDN selected, it may be possible to allow access only from the CDN’s IP address space. However, for some of the larger providers, this list of addresses may be large and very dynamic. &lt;/p&gt;
-
-
-
-&lt;p&gt;Another option is to add custom headers. Some CDNs offer special custom headers with randomized values to identify requests that have passed through the CDN. And a less secure option is to look for any header that identifies the CDN. However, Ullrich noted, merely looking for a header should be avoided, as attackers can easily include this header in their traffic. This appears to be the activity the SANS honeypot has been seeing since November.&lt;/p&gt;
-
-
-
-&lt;p&gt;A spokesperson for CDN Cloudflare’s PR agency said a comment couldn’t be arranged by deadline.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Related content:&lt;/strong&gt; &lt;a href="https://www.networkworld.com/article/4092917/how-a-bot-management-file-push-crippled-cloudflares-global-network.html" target="_blank"&gt;How a bot management file push crippled Cloudflare’s global network&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.linkedin.com/in/kellman/" rel="noreferrer noopener" target="_blank"&gt;Kellman Meghu&lt;/a&gt;, chief security architect at DeepCove Security, says the activity seen by the SANS Institute’s honeypots isn’t new. But, he added, it only becomes an issue when there is improper access control, or the controls fail.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Origin web servers should be deployed with access controls, be it security groups or firewall rules, to only ever allow communication with the CDN service,” he said in an email. “Just deploying your web application as accessible to the world, and then overlaying a CDN to act as the front end seems like a terrible waste of money and effort. In today’s world of infrastructure-as-code, this can and should be easy to manage and mitigate as far as risk goes.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.aryaka.com/author/adityaksood/" rel="noreferrer noopener" target="_blank"&gt;Aditya Sood&lt;/a&gt;, VP of security engineering and AI strategy at Aryaka, said in an email that a surge in requests that include CDN-related headers “is clear experimentation from threat actors, and the impersonation isn’t just random noise, its reconnaissance. Attacks are probing to uncover the weak origin validation in organizations who are trusting the mere presence of a CDN-specific header instead of enforcing proper controls like IP allowlists, private network peering, or cryptographically validated tokens. When you see multiple CDN fingerprints being spoofed at roughly the same time, it usually means new tooling or automated scanners are being deployed in the wild.” &lt;/p&gt;
-
-
-
-&lt;p&gt;Proper origin hardening that includes strict IP allowlists, validated tokens, or private connectivity is essential to protect websites, he said. “Relying only on the presence of CDN-specific headers is no longer viable, and organizations that have not fully locked down their backend infrastructure may already be exposed.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Ullrich added that CDNs and other traffic filtering services will issue a unique value to each customer as proof that traffic has gone through its service, so web administrators should configure their web servers or next generation firewalls to only accept requests with that unique value.&lt;/p&gt;
-
-
-
-&lt;p&gt;The activity SANS has seen is “definitely something that should be seen as a warning that something that could become more than it is now,” he said. “Now it’s only a curiosity, but it could easily become more. You [admins] need to follow your content delivery network’s guidance to protect your web server from attacks like this.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4101395/suspicious-traffic-could-be-testing-cdn-evasion-says-expert.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.18</comments>
-      <pubDate>Fri, 05 Dec 2025 01:02:15 +0000</pubDate>
     </item>
     <item>
       <title>HashiCorp security advisory (AV25-785)</title>
@@ -153,16 +58,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.20</comments>
       <pubDate>Tue, 25 Nov 2025 13:02:24 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europe tightens the net on sanctions evasion</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</link>
-      <description>Europol is reinforcing its support to EU Member States in enforcing EU sanctions, as criminal networks develop ever more sophisticated methods to bypass restrictive measures linked to Russia’s war of aggression against Ukraine.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
-      <pubDate>Sun, 07 Dec 2025 09:18:12 +0000</pubDate>
     </item>
     <item>
       <title>Das CISO-Paradoxon: Innovation ermöglichen und Risiken managen</title>
@@ -255,8 +150,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4099334/das-ciso-paradoxon-innovation-ermoglichen-und-risiken-managen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Fri, 05 Dec 2025 04:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europe tightens the net on sanctions evasion</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</link>
+      <description>Europol is reinforcing its support to EU Member States in enforcing EU sanctions, as criminal networks develop ever more sophisticated methods to bypass restrictive measures linked to Russia’s war of aggression against Ukraine.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.25</comments>
+      <pubDate>Sun, 07 Dec 2025 10:41:55 +0000</pubDate>
     </item>
     <item>
       <title>GitLab security advisory (AV25-786)</title>
@@ -265,7 +170,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-786</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Wed, 26 Nov 2025 18:24:53 +0000</pubDate>
     </item>
     <item>
@@ -275,7 +180,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-787</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Wed, 26 Nov 2025 19:06:51 +0000</pubDate>
     </item>
     <item>
@@ -362,7 +267,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101513/spycloud-data-shows-corporate-users-3x-more-likely-to-be-targeted-by-phishing-than-by-malware.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.28</comments>
       <pubDate>Fri, 05 Dec 2025 06:44:45 +0000</pubDate>
     </item>
     <item>
@@ -543,7 +448,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101457/15-years-in-zero-trust-remains-elusive-with-ai-rising-to-complicate-the-challenge.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
+      <comments>Score: 7.29</comments>
       <pubDate>Fri, 05 Dec 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -553,7 +458,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-788</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Thu, 27 Nov 2025 19:01:36 +0000</pubDate>
     </item>
     <item>
@@ -564,7 +469,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.36</comments>
-      <pubDate>Sun, 07 Dec 2025 09:18:12 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 10:41:55 +0000</pubDate>
     </item>
     <item>
       <title>Europol and Spanish National Police disrupt activities of far-right terrorist group 'The Base'</title>
@@ -574,7 +479,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.37</comments>
-      <pubDate>Sun, 07 Dec 2025 09:18:12 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 10:41:55 +0000</pubDate>
     </item>
     <item>
       <title>GeoServer security advisory (AV25-789)</title>
@@ -583,7 +488,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av25-789</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Fri, 28 Nov 2025 17:25:13 +0000</pubDate>
     </item>
     <item>
@@ -764,7 +669,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101145/avoiding-the-next-technical-debt-building-ai-governance-before-it-breaks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.47</comments>
       <pubDate>Fri, 05 Dec 2025 14:22:00 +0000</pubDate>
     </item>
     <item>
@@ -775,27 +680,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 07 Dec 2025 09:18:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</link>
-      <description>On 19 November 2025, a coordinated effort led by Bulgarian authorities and supported by Europol, resulted in the dismantling of a criminal network involved in large-scale trafficking of cultural goods across Europe and beyond. This operation was conducted under the framework of a Europol operational taskforce. The action day involved law enforcement and judicial authorities from Albania, France, Germany, Greece,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 07 Dec 2025 09:18:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>29 suspects arrested in two blows against human trafficking networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/29-suspects-arrested-in-two-blows-against-human-trafficking-networks</link>
-      <description>France and Spain: disrupting a Chinese human trafficking networkConducted jointly by France and Spain, this operation targeted a Chinese organised crime group involved in trafficking human beings for sexual exploitation. The network, active for several years, coordinated sexual exploitation rings across France and multiple EU Member States. Members of the network rented apartments online for short terms, a modus operandi...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/29-suspects-arrested-in-two-blows-against-human-trafficking-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 07 Dec 2025 09:18:12 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 10:41:55 +0000</pubDate>
     </item>
     <item>
       <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
@@ -805,7 +690,27 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 07 Dec 2025 09:18:12 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 10:41:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</link>
+      <description>On 19 November 2025, a coordinated effort led by Bulgarian authorities and supported by Europol, resulted in the dismantling of a criminal network involved in large-scale trafficking of cultural goods across Europe and beyond. This operation was conducted under the framework of a Europol operational taskforce. The action day involved law enforcement and judicial authorities from Albania, France, Germany, Greece,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Dec 2025 10:41:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>29 suspects arrested in two blows against human trafficking networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/29-suspects-arrested-in-two-blows-against-human-trafficking-networks</link>
+      <description>France and Spain: disrupting a Chinese human trafficking networkConducted jointly by France and Spain, this operation targeted a Chinese organised crime group involved in trafficking human beings for sexual exploitation. The network, active for several years, coordinated sexual exploitation rings across France and multiple EU Member States. Members of the network rented apartments online for short terms, a modus operandi...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/29-suspects-arrested-in-two-blows-against-human-trafficking-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Dec 2025 10:41:55 +0000</pubDate>
     </item>
     <item>
       <title>Hardening browser security with zero-trust controls</title>
@@ -1145,7 +1050,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101173/hardening-browser-security-with-zero-trust-controls.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Fri, 05 Dec 2025 16:15:00 +0000</pubDate>
     </item>
     <item>
@@ -1156,7 +1061,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.64</comments>
-      <pubDate>Sun, 07 Dec 2025 09:18:12 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 10:41:55 +0000</pubDate>
     </item>
     <item>
       <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
@@ -1166,7 +1071,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.67</comments>
-      <pubDate>Sun, 07 Dec 2025 09:18:12 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 10:41:55 +0000</pubDate>
     </item>
     <item>
       <title>Insecure use of Signal app part of wider Department of Defense problem, suggests Senate report</title>
@@ -1236,7 +1141,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101859/insecure-use-of-signal-app-part-of-wider-department-of-defense-problem-suggests-senate-report.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Fri, 05 Dec 2025 21:52:08 +0000</pubDate>
     </item>
     <item>
@@ -1279,7 +1184,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4099959/submarine-cable-cybersecurity-protecting-critical-infrastructure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 04 Dec 2025 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1290,7 +1195,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Sun, 07 Dec 2025 09:18:12 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 10:41:55 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-790)</title>
@@ -1299,7 +1204,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-790</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Mon, 01 Dec 2025 16:00:31 +0000</pubDate>
     </item>
     <item>
@@ -1309,7 +1214,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-791</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Mon, 01 Dec 2025 16:12:55 +0000</pubDate>
     </item>
     <item>
@@ -1319,7 +1224,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-792</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Mon, 01 Dec 2025 16:23:13 +0000</pubDate>
     </item>
     <item>
@@ -1329,7 +1234,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-793</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Mon, 01 Dec 2025 16:28:51 +0000</pubDate>
     </item>
     <item>
@@ -1339,7 +1244,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-794</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Mon, 01 Dec 2025 16:41:23 +0000</pubDate>
     </item>
     <item>
@@ -1349,7 +1254,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-795</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Mon, 01 Dec 2025 18:27:35 +0000</pubDate>
     </item>
     <item>
@@ -1359,7 +1264,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-796</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Mon, 01 Dec 2025 18:43:36 +0000</pubDate>
     </item>
     <item>
@@ -1369,7 +1274,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-december-2025-monthly-rollup-av25-797</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Mon, 01 Dec 2025 20:23:41 +0000</pubDate>
     </item>
     <item>
@@ -1379,7 +1284,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openvpn-security-advisory-av25-798</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Tue, 02 Dec 2025 13:33:12 +0000</pubDate>
     </item>
     <item>
@@ -1389,18 +1294,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-december-2025-monthly-rollup-av25-799</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Tue, 02 Dec 2025 16:10:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>Apache Struts security advisory (AV25-800)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/apache-struts-security-advisory-av25-800</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-struts-security-advisory-av25-800</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
-      <pubDate>Tue, 02 Dec 2025 18:31:22 +0000</pubDate>
     </item>
     <item>
       <title>Coupang breach of 33.7 million accounts allegedly involved engineer insider</title>
@@ -1466,8 +1361,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101486/coupang-leaks-personal-information-of-33-7-million-accounts-suspected-of-poor-authentication-key-management.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Fri, 05 Dec 2025 03:27:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>Apache Struts security advisory (AV25-800)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/apache-struts-security-advisory-av25-800</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-struts-security-advisory-av25-800</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.22</comments>
+      <pubDate>Tue, 02 Dec 2025 18:31:22 +0000</pubDate>
     </item>
     <item>
       <title>HPE security advisory (AV25-801)</title>
@@ -1476,7 +1381,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-801</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Tue, 02 Dec 2025 20:18:43 +0000</pubDate>
     </item>
     <item>
@@ -1486,7 +1391,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-802</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Wed, 03 Dec 2025 15:21:01 +0000</pubDate>
     </item>
     <item>
@@ -1496,7 +1401,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av25-803</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Wed, 03 Dec 2025 15:27:08 +0000</pubDate>
     </item>
     <item>
@@ -1506,7 +1411,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-805</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Wed, 03 Dec 2025 20:24:25 +0000</pubDate>
     </item>
     <item>
@@ -1516,7 +1421,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-806</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Thu, 04 Dec 2025 13:45:26 +0000</pubDate>
     </item>
     <item>
@@ -1526,7 +1431,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-807</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Thu, 04 Dec 2025 13:54:05 +0000</pubDate>
     </item>
     <item>
@@ -1536,7 +1441,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-018-vulnerability-affecting-react-server-components-cve-2025-55182</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.00</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Thu, 04 Dec 2025 16:50:47 +0000</pubDate>
     </item>
     <item>
@@ -1546,7 +1451,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-808</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Thu, 04 Dec 2025 20:53:07 +0000</pubDate>
     </item>
     <item>
@@ -1556,7 +1461,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-809</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.51</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Fri, 05 Dec 2025 14:24:16 +0000</pubDate>
     </item>
     <item>
@@ -1566,7 +1471,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-810</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.51</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Fri, 05 Dec 2025 14:28:20 +0000</pubDate>
     </item>
     <item>
@@ -1576,7 +1481,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisories-av25-804</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.54</comments>
       <pubDate>Fri, 05 Dec 2025 16:58:47 +0000</pubDate>
     </item>
     <item>
@@ -1585,7 +1490,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/gisec-global</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 60000694969987320.00</comments>
+      <comments>Score: 59134992776481832.00</comments>
       <pubDate>Tue, 05 May 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
