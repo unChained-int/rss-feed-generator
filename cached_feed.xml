@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Dec 2025 01:58:23 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Dec 2025 03:41:26 +0000</lastBuildDate>
+    <item>
+      <title>VMware security advisory (AV25-784)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-784</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-784</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.18</comments>
+      <pubDate>Mon, 24 Nov 2025 18:18:46 +0000</pubDate>
+    </item>
     <item>
       <title>Red Hat security advisory (AV25-783)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-783</link>
@@ -20,425 +30,6 @@
       <pubDate>Mon, 24 Nov 2025 18:22:22 +0000</pubDate>
     </item>
     <item>
-      <title>From feeds to flows: Using a unified linkage model to operationalize threat intelligence</title>
-      <link>https://www.csoonline.com/article/4100422/from-feeds-to-flows-using-a-unified-linkage-model-to-operationalize-threat-intelligence.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-problem-static-intelligence-in-a-dynamic-world"&gt;The problem: Static intelligence in a dynamic world&lt;/h2&gt;
-
-
-
-&lt;p&gt;Every CISO knows the fatigue that comes with modern threat intelligence. Dozens of vendor feeds pour in daily — STIX packages, IP blocklists, domain indicators, malware hashes — all claiming to help your organization stay one step ahead.&lt;/p&gt;
-
-
-
-&lt;p&gt;Yet most threat feeds still behave like spreadsheets of badness. They tell you &lt;em&gt;what&lt;/em&gt; to watch for, but not &lt;em&gt;why it matters&lt;/em&gt; or &lt;em&gt;how it moves&lt;/em&gt; through your environment.&lt;/p&gt;
-
-
-
-&lt;p&gt;The result is a paradox of abundance: CISOs have more data than ever before, but less operational clarity. Analysts are overwhelmed by indicators disconnected from context or mission relevance.&lt;/p&gt;
-
-
-
-&lt;p&gt;Each feed represents a snapshot of a potential threat, but it does not capture the dynamic pathway through which that threat could exploit relationships within the enterprise.&lt;/p&gt;
-
-
-
-&lt;p&gt;Traditional intelligence products describe discrete artifacts; real-world attacks exploit linkages amongst users and cloud services, between supply-chain vendors and data repositories, between identity providers and DevOps pipelines.&lt;/p&gt;
-
-
-
-&lt;p&gt;The shift from threat feeds to threat flows requires a model that can describe those linkages, quantify their trustworthiness and prioritize risk based on how threats actually travel.&lt;/p&gt;
-
-
-
-&lt;p&gt;That’s where the &lt;a href="https://www.uscybersecurity.net/csmag/unified-linkage-models-recontextualizing-cybersecurity/" rel="noreferrer noopener" target="_blank"&gt;Unified Linkage Model (ULM)&lt;/a&gt; comes in.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="rhizomatic-networks-and-the-modern-attack-surface"&gt;Rhizomatic networks and the modern attack surface&lt;/h2&gt;
-
-
-
-&lt;p&gt;Classical network defense models assume hierarchical systems — servers at the core, clients at the edge and clear boundaries in between. But digital enterprises no longer look like trees; they behave more like &lt;em&gt;rhizomes&lt;/em&gt; — living systems of lateral, recursive connections.&lt;/p&gt;
-
-
-
-&lt;p&gt;A rhizomatic network, a term from &lt;a href="https://en.wikipedia.org/wiki/A_Thousand_Plateaus" rel="noreferrer noopener" target="_blank"&gt;Deleuze and Guattari’s &lt;em&gt;A Thousand Plateaus&lt;/em&gt;&lt;/a&gt;&lt;em&gt; &lt;/em&gt;and explored in this context elsewhere, is one where any node can seemingly connect to almost any other, directly or indirectly, through APIs, shared identity layers or multi-cloud infrastructure. In these environments, roots have become less permanent and topologies have become less predictable. Within this landscape, dependencies emerge dynamically and relationships evolve faster than documentation can keep up. This shift from hierarchy to rhizome changes the way we know how threats propagate. A compromise in one SaaS tenant can ripple laterally through adjacent cloud accounts, CI/CD pipelines or shared identity providers with surprising speed.&lt;/p&gt;
-
-
-
-&lt;p&gt;Attackers no longer exploit static perimeters — they weaponize &lt;em&gt;relationships&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.uscybersecurity.net/csmag/rhizomatic-threats-in-practice-applied-cybersecurity-modeling-for-emergent-threat-landscapes/" rel="noreferrer noopener" target="_blank"&gt;The ULM provides a structured way to visualize this chaos.&lt;/a&gt; By mapping three core linkage types — adjacency, inheritance and trustworthiness — the ULM reveals how risk moves rhizomatically through complex ecosystems. It transforms modern network entanglement into something quantifiable, allowing CISOs to reason about propagation rather than static exposure.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-unified-linkage-model-ulm"&gt;The unified linkage model (ULM)&lt;/h2&gt;
-
-
-
-&lt;p&gt;The ULM was conceived initially to describe how cyber risk propagates through interdependent systems — not merely by asset or vulnerability, but by &lt;em&gt;relationship&lt;/em&gt;. Instead of seeing networks as linear hierarchies, ULM views them as living ecosystems where risk flows along three primary linkage types:&lt;/p&gt;
-
-
-
-&lt;ol class="wp-block-list" start="1"&gt;
-&lt;li&gt;&lt;strong&gt;Adjacency linkages&lt;/strong&gt;: Proximity or shared interfaces between systems, such as network segments, APIs or shared infrastructure.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Inheritance linkages: &lt;/strong&gt;Dependencies and configuration flows, such as a compromised library in a build pipeline or inherited IAM policies.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.uscybersecurity.net/csmag/establishing-trustworthiness-an-adaptive-governance-approach/" rel="noreferrer noopener" target="_blank"&gt;&lt;strong&gt;Trustworthiness linkages&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;:&lt;/strong&gt; Human or contractual relationships, such as vendor access, federated identities or service-to-service tokens.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;Each linkage represents a potential &lt;em&gt;path of exploitation&lt;/em&gt;. Rather than treating each threat artifact in isolation, ULM maps how those artifacts connect — showing how an attacker could traverse from an initial compromise point to an ultimate target through adjacency, inheritance and trust.&lt;/p&gt;
-
-
-
-&lt;p&gt;This concept reframes threat intelligence from &lt;em&gt;collection&lt;/em&gt; to &lt;em&gt;connection&lt;/em&gt;. In the ULM view, the organization’s environment is not simply a list of assets but a graph of interactions. Threats are not isolated incidents but &lt;em&gt;flow across linkages&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="from-feeds-to-flows-building-a-living-threat-graph"&gt;From feeds to flows: Building a living threat graph&lt;/h2&gt;
-
-
-
-&lt;p&gt;Imagine receiving a feed that reports a malicious IP address associated with a phishing campaign. In most SOCs, that indicator enters a SIEM rule or firewall blocklist — a transactional act of defense. The intelligence stops there.&lt;/p&gt;
-
-
-
-&lt;p&gt;Now apply ULM thinking:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;The malicious IP is associated with a compromised third-party marketing tool.&lt;/li&gt;
-
-
-
-&lt;li&gt;That tool has API keys embedded in your marketing automation system.&lt;/li&gt;
-
-
-
-&lt;li&gt;The automation platform uses OAuth tokens that connect to your corporate CRM.&lt;/li&gt;
-
-
-
-&lt;li&gt;The CRM is integrated with your cloud identity provider.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Each linkage forms part of a &lt;em&gt;threat flow&lt;/em&gt; — a connected chain of potential exploitation that moves laterally through business processes, not just through ports and protocols.&lt;/p&gt;
-
-
-
-&lt;p&gt;By mapping linkages, the CISO can see that the “malicious IP” is not an isolated data point; it’s the first observable in a multi-stage flow that touches customer data, credentials and identity infrastructure.&lt;/p&gt;
-
-
-
-&lt;p&gt;When threat intelligence is structured as linkages, not lists, analysts can:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Correlate faster:&lt;/strong&gt; Identify shared infrastructure or behavior patterns across feeds.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Prioritize better&lt;/strong&gt;: Focus on threats that intersect with high-value or high-trust linkages.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Predict earlier&lt;/strong&gt; by anticipating propagation through modeling adjacent or inherited dependencies.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;In other words, &lt;em&gt;threat feeds become threat flows&lt;/em&gt; — intelligence with direction, momentum and consequence.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="operationalizing-ulm-in-threat-intelligence-pipelines"&gt;Operationalizing ULM in threat intelligence pipelines&lt;/h2&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="1-ingest-and-normalize"&gt;1. Ingest and normalize&lt;/h3&gt;
-
-
-
-&lt;p&gt;ULM begins by ingesting diverse threat feeds — commercial, open-source, government and internal telemetry. Each artifact (IP, domain, hash, tactic or technique) becomes a &lt;em&gt;node&lt;/em&gt; in the linkage model, enriched with metadata such as MITRE ATT&amp;amp;CK techniques, timestamps or confidence scores.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="2-establish-linkages"&gt;2. Establish linkages&lt;/h3&gt;
-
-
-
-&lt;p&gt;The system identifies relationships between nodes using multiple criteria:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Adjacency:&lt;/strong&gt; Shared IP ranges, ASN or cloud hosting; shared libraries or API keys.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Inheritance:&lt;/strong&gt; Supply-chain dependencies, build-system components or configuration drift.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Trustworthiness:&lt;/strong&gt; Credential sharing, federated SSO connections, vendor contracts or known trust relationships.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Linkages are scored for strength and directionality — similar to weights in a graph — producing a threat-linkage graph showing how a compromise could cascade across systems.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="3-integrate-with-mitre-attck-and-tips-and-fair"&gt;3. Integrate with MITRE ATT&amp;amp;CK and TIPs and FAIR&lt;/h3&gt;
-
-
-
-&lt;p&gt;ULM aligns naturally with &lt;a href="https://attack.mitre.org/" rel="noreferrer noopener" target="_blank"&gt;MITRE ATT&amp;amp;CK’s&lt;/a&gt; technique-level data.Each linkage can be annotated with the ATT&amp;amp;CK tactics it enables — from &lt;em&gt;Initial Access&lt;/em&gt; to &lt;em&gt;Impact&lt;/em&gt;. Integration with Threat Intelligence Platforms such as MISP or ThreatConnect allows ULM graphs to update dynamically as new indicators appear.&lt;/p&gt;
-
-
-
-&lt;p&gt;A previously benign linkage can instantly become high-risk when connected to a newly malicious node, turning static intel into a living, breathing operational map.&lt;/p&gt;
-
-
-
-&lt;p&gt;Similarly, the &lt;a href="https://www.fairinstitute.org/blog/extending-fair-unified-linkage-model-strengthens-cyber-risk-quantification-1" rel="noreferrer noopener" target="_blank"&gt;ULM bridges quantitative risk frameworks like FAIR and FAIR-CAM&lt;/a&gt; by embedding linkage dynamics into loss-event modeling, thereby enabling risk assessments not only of the magnitude of loss but of the &lt;strong&gt;pathway through which loss may propagate.&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="4-visualize-threat-flows"&gt;4. Visualize threat flows&lt;/h3&gt;
-
-
-
-&lt;p&gt;Visualization is key. And in the emerging environment of AI/ML models and cloud-based resources, this visualization can occur. Using ULM, CISOs can see attack pathways as flow diagrams rather than spreadsheets.&lt;/p&gt;
-
-
-
-&lt;p&gt;For instance:&lt;/p&gt;
-
-
-
-&lt;p&gt;A connection to a compromised supplier’s GitHub repo (inheritance linkage)&lt;/p&gt;
-
-
-
-&lt;p&gt;→ injects code into a shared container image (adjacency linkage)&lt;/p&gt;
-
-
-
-&lt;p&gt;→ which is deployed into production through an automated pipeline (trust linkage).&lt;/p&gt;
-
-
-
-&lt;p&gt;Such visualizations reveal choke points where a single control — code-signing enforcement or identity segmentation — can break multiple flow paths at once.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ulm-as-a-bridge-between-intelligence-and-authorization"&gt;ULM as a bridge between intelligence and authorization&lt;/h2&gt;
-
-
-
-&lt;p&gt;One of the persistent frustrations in enterprise security is the divide between intelligence and governance. Threat feeds inform SOCs; frameworks like NIST SP 800-37 Rev. 2, ISO/IEC 27001:2022 or the CMMC 2.0 Model govern compliance. The two rarely meet.&lt;/p&gt;
-
-
-
-&lt;p&gt;ULM provides the connective tissue.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because ULM formalizes relationships between systems, it can feed directly into risk management frameworks:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;a href="https://www.nist.gov/system/files/documents/2018/03/28/vickie_nist_risk_management_framework_overview-hpc.pdf" rel="noreferrer noopener" target="_blank"&gt;&lt;strong&gt;NIST RMF Step 1–2&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt; (Categorize/Select controls):&lt;/strong&gt; Use ULM to identify linkage-dense areas where compromise would have the highest propagation potential.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Step 3–4 (Implement/Assess):&lt;/strong&gt; Validate that controls exist along key linkages — authentication boundaries, code-inheritance chains, vendor access.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Step 6 (Monitor):&lt;/strong&gt; Continuously refresh linkages with new threat intel, transforming continuous monitoring into continuous linkage validation.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;In compliance contexts, ULM metrics — such as linkage density, trustworthiness scores and adjacency exposures — become measurable inputs for CMMC maturity, ISO 27001 risk registers or &lt;a href="https://csrc.nist.gov/pubs/sp/800/207/final" rel="noreferrer noopener" target="_blank"&gt;Zero Trust Architecture (SP 800-207)&lt;/a&gt; policy enforcement.&lt;/p&gt;
-
-
-
-&lt;p&gt;A threat flow, therefore, is not only a technical visualization but an auditable artifact of due diligence.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="zero-trust-and-the-flow-perspective"&gt;Zero trust and the flow perspective&lt;/h2&gt;
-
-
-
-&lt;p&gt;Zero trust architecture (ZTA) is often summarized as “never trust, always verify,” as formalized in NIST SP 800-207. ULM adds nuance by showing &lt;em&gt;what to verify&lt;/em&gt; and &lt;em&gt;where trust actually exists.&lt;/em&gt; Every trust boundary in a zero-trust design corresponds to one or more linkages in ULM:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;A user authenticating through an identity provider — &lt;em&gt;a trustworthiness linkage.&lt;/em&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;A microservice calling another via API — &lt;em&gt;an adjacency linkage.&lt;/em&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;A software update pipeline pulling from a third-party repo — an &lt;em&gt;inheritance linkage.&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;When threat intelligence is mapped onto those linkages, the CISO gains real-time visibility into which trust paths are under active threat.&lt;/p&gt;
-
-
-
-&lt;p&gt;Instead of treating zero trust as a static segmentation map, ULM enables a &lt;em&gt;dynamic trust model&lt;/em&gt; — continuously updated by threat-flow data.&lt;/p&gt;
-
-
-
-&lt;p&gt;This approach converts zero trust from an architectural goal to an operational feedback system. Each linkage is verified not only against access policies but also against active threat flows.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ciso-use-case-prioritizing-by-linkage-impact"&gt;CISO use case: Prioritizing by linkage impact&lt;/h2&gt;
-
-
-
-&lt;p&gt;Consider two simultaneous alerts:&lt;/p&gt;
-
-
-
-&lt;ol class="wp-block-list" start="1"&gt;
-&lt;li&gt;A phishing domain targeting the finance department.&lt;/li&gt;
-
-
-
-&lt;li&gt;A compromised API key in a DevOps integration.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;Both seem essential, but which deserves immediate attention?&lt;/p&gt;
-
-
-
-&lt;p&gt;A traditional feed-based approach might treat them equally. The ULM view quickly shows that the API key sits on a high-trust, high-inheritance linkage — it connects the build system to production containers and those containers share adjacency with customer data stores.&lt;/p&gt;
-
-
-
-&lt;p&gt;The phishing domain, by contrast, leads to isolated user inboxes with strong controls. By quantifying the linkage weight, the CISO can prioritize the DevOps compromise, knowing that its flow potential — the ability to move from one system to another — is far higher. This is attack-path prioritization, not just vulnerability management. It is the difference between chasing every indicator and focusing on the flows that matter.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="toward-a-flow-based-defense"&gt;Toward a flow-based defense&lt;/h2&gt;
-
-
-
-&lt;p&gt;Security teams often describe their posture in terms of &lt;em&gt;perimeters&lt;/em&gt;, boundaries, &lt;em&gt;endpoints&lt;/em&gt; or &lt;em&gt;controls&lt;/em&gt;. But adversaries don’t think in boxes — they believe in flows. They exploit the connective tissue: the forgotten trust token, the unmonitored CI/CD handoff, the shared SaaS credential.&lt;/p&gt;
-
-
-
-&lt;p&gt;The ULM provides a way to think and act like an attacker while maintaining the analytical rigor of a defender. By modeling linkages, CISOs can:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Visualize attack surfaces:&lt;/strong&gt; Understand not just what assets exist, but how they relate to each other.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Quantify propagation risk:&lt;/strong&gt; Measure how fast and far a compromise could move.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Operationalize threat intel: &lt;/strong&gt;Feed dynamic linkage updates into monitoring and response playbooks.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Align intelligence with compliance:&lt;/strong&gt; Demonstrate to auditors and boards that risk is understood &lt;em&gt;in context&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;In practice, adopting ULM doesn’t require replacing existing tools. Most organizations already possess the data — network maps, identity graphs, vulnerability scanners and threat feeds.&lt;/p&gt;
-
-
-
-&lt;p&gt;ULM unifies them into a linkage framework, transforming siloed outputs into a coherent risk narrative.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-cisos-call-to-action"&gt;The CISO’s call to action&lt;/h2&gt;
-
-
-
-&lt;p&gt;For decades, we have been trained to collect — logs, indicators, feeds. The next era of cybersecurity requires that we understand connections: how elements interact, inherit and propagate.&lt;/p&gt;
-
-
-
-&lt;p&gt;By adopting a linkage mindset, CISOs can elevate threat intelligence from reactive to predictive. The ULM provides the analytical bridge between static data and dynamic defense — a means to see threats not as isolated alerts but as &lt;em&gt;flows of intent&lt;/em&gt; moving through digital ecosystems.&lt;/p&gt;
-
-
-
-&lt;p&gt;The message is simple but powerful:&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Stop simply reading threat feeds.&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Start mapping threat flows.&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;That is how you operationalize threat intelligence in the age of rhizomatic, interconnected systems — and how CISOs finally gain the visibility to act, not just react.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;Additional details are available in my original research paper:  &lt;a href="https://www.uscybersecurity.net/csmag/unified-linkage-models-recontextualizing-cybersecurity/" rel="noreferrer noopener" target="_blank"&gt;Unified Linkage Models: Recontextualizing Cybersecurity&lt;/a&gt; (United States Cybersecurity magazine).&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4100422/from-feeds-to-flows-using-a-unified-linkage-model-to-operationalize-threat-intelligence.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.19</comments>
-      <pubDate>Thu, 04 Dec 2025 16:13:00 +0000</pubDate>
-    </item>
-    <item>
       <title>HashiCorp security advisory (AV25-785)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av25-785</link>
       <description>No description available</description>
@@ -447,16 +38,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.22</comments>
       <pubDate>Tue, 25 Nov 2025 13:02:24 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europe tightens the net on sanctions evasion</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</link>
-      <description>Europol is reinforcing its support to EU Member States in enforcing EU sanctions, as criminal networks develop ever more sophisticated methods to bypass restrictive measures linked to Russia’s war of aggression against Ukraine.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
-      <pubDate>Sat, 06 Dec 2025 23:58:23 +0000</pubDate>
     </item>
     <item>
       <title>AI creates new security risks for OT networks, warns NSA</title>
@@ -526,8 +107,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101239/ai-creates-new-security-risks-for-ot-networks-warns-nsa.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Thu, 04 Dec 2025 20:19:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europe tightens the net on sanctions evasion</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</link>
+      <description>Europol is reinforcing its support to EU Member States in enforcing EU sanctions, as criminal networks develop ever more sophisticated methods to bypass restrictive measures linked to Russia’s war of aggression against Ukraine.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.25</comments>
+      <pubDate>Sun, 07 Dec 2025 01:41:26 +0000</pubDate>
     </item>
     <item>
       <title>GitLab security advisory (AV25-786)</title>
@@ -546,7 +137,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-787</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.30</comments>
       <pubDate>Wed, 26 Nov 2025 19:06:51 +0000</pubDate>
     </item>
     <item>
@@ -557,27 +148,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.36</comments>
-      <pubDate>Sat, 06 Dec 2025 23:58:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and Spanish National Police disrupt activities of far-right terrorist group 'The Base'</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-spanish-national-police-disrupt-activities-of-far-right-terrorist-group-base</link>
-      <description>Europol supported the Spanish National Police (Policía Nacional) in disrupting activities of the far-right terrorist group 'The Base'. The operation took place over three days in Madrid and Valencia, resulting in significant seizures and the arrest of three suspected far-right extremists on 25 November 2025.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-spanish-national-police-disrupt-activities-of-far-right-terrorist-group-base</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
-      <pubDate>Sat, 06 Dec 2025 23:58:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] ABB security advisory (AV25-788)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-788</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-788</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
-      <pubDate>Thu, 27 Nov 2025 19:01:36 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 01:41:26 +0000</pubDate>
     </item>
     <item>
       <title>Suspicious traffic could be testing CDN evasion, says expert</title>
@@ -681,8 +252,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101395/suspicious-traffic-could-be-testing-cdn-evasion-says-expert.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Fri, 05 Dec 2025 01:02:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and Spanish National Police disrupt activities of far-right terrorist group 'The Base'</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-spanish-national-police-disrupt-activities-of-far-right-terrorist-group-base</link>
+      <description>Europol supported the Spanish National Police (Policía Nacional) in disrupting activities of the far-right terrorist group 'The Base'. The operation took place over three days in Madrid and Valencia, resulting in significant seizures and the arrest of three suspected far-right extremists on 25 November 2025.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-spanish-national-police-disrupt-activities-of-far-right-terrorist-group-base</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.37</comments>
+      <pubDate>Sun, 07 Dec 2025 01:41:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] ABB security advisory (AV25-788)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-788</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-788</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.39</comments>
+      <pubDate>Thu, 27 Nov 2025 19:01:36 +0000</pubDate>
     </item>
     <item>
       <title>Das CISO-Paradoxon: Innovation ermöglichen und Risiken managen</title>
@@ -775,7 +366,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4099334/das-ciso-paradoxon-innovation-ermoglichen-und-risiken-managen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Fri, 05 Dec 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -785,48 +376,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av25-789</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Fri, 28 Nov 2025 17:25:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</link>
-      <description>Europol Deputy Executive Director for Governance, Jurgen Ebner, joined the Heads of EU Justice &amp; Home Affairs Agencies in Vienna to reflect on joint achievements and align their future cooperation with the wider EU priorities.Marking the 25th anniversary of the EU Charter of Fundamental Rights, they adopted a joint statement pledging to intensify efforts to uphold and promote fundamental rights...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 06 Dec 2025 23:58:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</link>
-      <description>On 19 November 2025, a coordinated effort led by Bulgarian authorities and supported by Europol, resulted in the dismantling of a criminal network involved in large-scale trafficking of cultural goods across Europe and beyond. This operation was conducted under the framework of a Europol operational taskforce. The action day involved law enforcement and judicial authorities from Albania, France, Germany, Greece,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 06 Dec 2025 23:58:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>29 suspects arrested in two blows against human trafficking networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/29-suspects-arrested-in-two-blows-against-human-trafficking-networks</link>
-      <description>France and Spain: disrupting a Chinese human trafficking networkConducted jointly by France and Spain, this operation targeted a Chinese organised crime group involved in trafficking human beings for sexual exploitation. The network, active for several years, coordinated sexual exploitation rings across France and multiple EU Member States. Members of the network rented apartments online for short terms, a modus operandi...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/29-suspects-arrested-in-two-blows-against-human-trafficking-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 06 Dec 2025 23:58:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
-      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 06 Dec 2025 23:58:23 +0000</pubDate>
     </item>
     <item>
       <title>SpyCloud Data Shows Corporate Users 3x More Likely to Be Targeted by Phishing Than by Malware</title>
@@ -912,7 +463,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101513/spycloud-data-shows-corporate-users-3x-more-likely-to-be-targeted-by-phishing-than-by-malware.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.50</comments>
       <pubDate>Fri, 05 Dec 2025 06:44:45 +0000</pubDate>
     </item>
     <item>
@@ -1093,8 +644,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101457/15-years-in-zero-trust-remains-elusive-with-ai-rising-to-complicate-the-challenge.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Fri, 05 Dec 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</link>
+      <description>Europol Deputy Executive Director for Governance, Jurgen Ebner, joined the Heads of EU Justice &amp; Home Affairs Agencies in Vienna to reflect on joint achievements and align their future cooperation with the wider EU priorities.Marking the 25th anniversary of the EU Charter of Fundamental Rights, they adopted a joint statement pledging to intensify efforts to uphold and promote fundamental rights...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Dec 2025 01:41:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</link>
+      <description>On 19 November 2025, a coordinated effort led by Bulgarian authorities and supported by Europol, resulted in the dismantling of a criminal network involved in large-scale trafficking of cultural goods across Europe and beyond. This operation was conducted under the framework of a Europol operational taskforce. The action day involved law enforcement and judicial authorities from Albania, France, Germany, Greece,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Dec 2025 01:41:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>29 suspects arrested in two blows against human trafficking networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/29-suspects-arrested-in-two-blows-against-human-trafficking-networks</link>
+      <description>France and Spain: disrupting a Chinese human trafficking networkConducted jointly by France and Spain, this operation targeted a Chinese organised crime group involved in trafficking human beings for sexual exploitation. The network, active for several years, coordinated sexual exploitation rings across France and multiple EU Member States. Members of the network rented apartments online for short terms, a modus operandi...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/29-suspects-arrested-in-two-blows-against-human-trafficking-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Dec 2025 01:41:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
+      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Dec 2025 01:41:26 +0000</pubDate>
     </item>
     <item>
       <title>16.6 million packages of fake and harmful toys taken off EU markets</title>
@@ -1104,7 +695,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.64</comments>
-      <pubDate>Sat, 06 Dec 2025 23:58:23 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 01:41:26 +0000</pubDate>
     </item>
     <item>
       <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
@@ -1114,7 +705,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.67</comments>
-      <pubDate>Sat, 06 Dec 2025 23:58:23 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 01:41:26 +0000</pubDate>
     </item>
     <item>
       <title>Avoiding the next technical debt: Building AI governance before it breaks</title>
@@ -1294,7 +885,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101145/avoiding-the-next-technical-debt-building-ai-governance-before-it-breaks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Fri, 05 Dec 2025 14:22:00 +0000</pubDate>
     </item>
     <item>
@@ -1635,7 +1226,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101173/hardening-browser-security-with-zero-trust-controls.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 05 Dec 2025 16:15:00 +0000</pubDate>
     </item>
     <item>
@@ -1646,7 +1237,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Sat, 06 Dec 2025 23:58:23 +0000</pubDate>
+      <pubDate>Sun, 07 Dec 2025 01:41:26 +0000</pubDate>
     </item>
     <item>
       <title>Insecure use of Signal app part of wider Department of Defense problem, suggests Senate report</title>
@@ -1716,7 +1307,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101859/insecure-use-of-signal-app-part-of-wider-department-of-defense-problem-suggests-senate-report.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Fri, 05 Dec 2025 21:52:08 +0000</pubDate>
     </item>
     <item>
@@ -1759,7 +1350,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4099959/submarine-cable-cybersecurity-protecting-critical-infrastructure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Thu, 04 Dec 2025 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1769,7 +1360,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-790</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Mon, 01 Dec 2025 16:00:31 +0000</pubDate>
     </item>
     <item>
@@ -1779,7 +1370,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-791</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Mon, 01 Dec 2025 16:12:55 +0000</pubDate>
     </item>
     <item>
@@ -1789,7 +1380,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-792</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Mon, 01 Dec 2025 16:23:13 +0000</pubDate>
     </item>
     <item>
@@ -1799,7 +1390,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-793</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Mon, 01 Dec 2025 16:28:51 +0000</pubDate>
     </item>
     <item>
@@ -1809,7 +1400,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-794</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Mon, 01 Dec 2025 16:41:23 +0000</pubDate>
     </item>
     <item>
@@ -1819,7 +1410,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-795</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Mon, 01 Dec 2025 18:27:35 +0000</pubDate>
     </item>
     <item>
@@ -1829,7 +1420,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-796</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Mon, 01 Dec 2025 18:43:36 +0000</pubDate>
     </item>
     <item>
@@ -1839,7 +1430,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-december-2025-monthly-rollup-av25-797</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Mon, 01 Dec 2025 20:23:41 +0000</pubDate>
     </item>
     <item>
@@ -1849,7 +1440,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openvpn-security-advisory-av25-798</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Tue, 02 Dec 2025 13:33:12 +0000</pubDate>
     </item>
     <item>
@@ -1859,7 +1450,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-december-2025-monthly-rollup-av25-799</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Tue, 02 Dec 2025 16:10:29 +0000</pubDate>
     </item>
     <item>
@@ -1869,7 +1460,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-struts-security-advisory-av25-800</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Tue, 02 Dec 2025 18:31:22 +0000</pubDate>
     </item>
     <item>
@@ -1879,7 +1470,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-801</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Tue, 02 Dec 2025 20:18:43 +0000</pubDate>
     </item>
     <item>
@@ -1946,7 +1537,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101486/coupang-leaks-personal-information-of-33-7-million-accounts-suspected-of-poor-authentication-key-management.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Fri, 05 Dec 2025 03:27:33 +0000</pubDate>
     </item>
     <item>
@@ -1956,7 +1547,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-802</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Wed, 03 Dec 2025 15:21:01 +0000</pubDate>
     </item>
     <item>
@@ -1966,7 +1557,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av25-803</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Wed, 03 Dec 2025 15:27:08 +0000</pubDate>
     </item>
     <item>
@@ -1976,7 +1567,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-805</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Wed, 03 Dec 2025 20:24:25 +0000</pubDate>
     </item>
     <item>
@@ -1986,7 +1577,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-806</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 9.10</comments>
       <pubDate>Thu, 04 Dec 2025 13:45:26 +0000</pubDate>
     </item>
     <item>
@@ -1996,7 +1587,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-807</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 9.10</comments>
       <pubDate>Thu, 04 Dec 2025 13:54:05 +0000</pubDate>
     </item>
     <item>
@@ -2006,7 +1597,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-018-vulnerability-affecting-react-server-components-cve-2025-55182</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.17</comments>
       <pubDate>Thu, 04 Dec 2025 16:50:47 +0000</pubDate>
     </item>
     <item>
@@ -2016,7 +1607,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-808</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.26</comments>
       <pubDate>Thu, 04 Dec 2025 20:53:07 +0000</pubDate>
     </item>
     <item>
@@ -2026,7 +1617,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-809</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.71</comments>
       <pubDate>Fri, 05 Dec 2025 14:24:16 +0000</pubDate>
     </item>
     <item>
@@ -2036,7 +1627,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-810</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.71</comments>
       <pubDate>Fri, 05 Dec 2025 14:28:20 +0000</pubDate>
     </item>
     <item>
@@ -2046,7 +1637,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisories-av25-804</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.84</comments>
+      <comments>Score: 9.79</comments>
       <pubDate>Fri, 05 Dec 2025 16:58:47 +0000</pubDate>
     </item>
     <item>
@@ -2055,7 +1646,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/gisec-global</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 66125047820527688.00</comments>
+      <comments>Score: 64952457900117592.00</comments>
       <pubDate>Tue, 05 May 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
