@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Dec 2025 07:27:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Dec 2025 08:35:05 +0000</lastBuildDate>
+    <item>
+      <title>Grafana security advisory (AV25-778)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av25-778</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av25-778</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.06</comments>
+      <pubDate>Fri, 21 Nov 2025 15:30:05 +0000</pubDate>
+    </item>
     <item>
       <title>Oracle security advisory – October 2025 quarterly rollup (AV25-688) – Update 2</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-october-2025-quarterly-rollup-av25-688</link>
@@ -18,347 +28,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.07</comments>
       <pubDate>Fri, 21 Nov 2025 21:38:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>Hardening browser security with zero-trust controls</title>
-      <link>https://www.csoonline.com/article/4101173/hardening-browser-security-with-zero-trust-controls.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The shift from perimeter-based security to zero trust is now indispensable for combating modern threats. The obsolete “castle-and-moat” model, granting implicit trust to any device or user inside the network, collapsed with the rise of cloud, remote work and BYOD. Attackers now bypass traditional controls by targeting identity, exploiting AI-driven phishing, supply chain intrusions and advanced session hijacking.&lt;/p&gt;
-
-
-
-&lt;p&gt;The browser is at this frontline, serving as the universal access point for SaaS, developer tools and sensitive AI resources. As data from diverse trust domains converge, each access request demands rigorous, real-time validation of identity, device posture and behavior.&lt;/p&gt;
-
-
-
-&lt;p&gt;NIST SP 800-207 provides the model: decouple access from network location by using a policy engine, policy administrator and browser-based policy enforcement point to enforce dynamic, context-aware authorization. &lt;a href="https://csrc.nist.gov/pubs/sp/800/207/a/final" rel="noreferrer noopener" target="_blank"&gt;NIST SP 800-207A&lt;/a&gt; extends this to runtime control across multi-cloud and microservices. Simultaneously, &lt;a href="https://cloudsecurityalliance.org/resources/cisa-zero-trust-maturity-model-v2" rel="noreferrer noopener" target="_blank"&gt;CISA’s Zero Trust Maturity Model v2&lt;/a&gt; maps a clear implementation path spanning five pillars and emphasizing automation, analytics and governance as essential enablers.&lt;/p&gt;
-
-
-
-&lt;p&gt;This journal unites these leading standards with current enterprise practices, delivering a comprehensive browser-first ZTA framework that balances least-privileged access, SSO/MFA, device compliance and session isolation for secure, adaptable operations.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-imperative-for-browser-centric-zero-trust"&gt;The imperative for browser-centric zero trust&lt;/h2&gt;
-
-
-
-&lt;p&gt;As remote work and cloud adoption become the default operating model, the inability of implicit network trust and legacy VPNs to address the modern attack surface is undeniable. Adversaries now target the browser directly with attacks like cross-site scripting (XSS), session hijacking via stolen tokens and advanced phishing that bypasses traditional MFA. A browser-centric ZTA framework is the necessary response, built on the following six principles.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="1-identity-first-access-control"&gt;1. Identity-first access control&lt;/h3&gt;
-
-
-
-&lt;p&gt;Network proximity is now an inferior trust signal. Only federated, cryptographically verifiable identity tokens issued by centralized enterprise IdPs using OIDC or SAML are permitted as gates to corporate resources. This transition, well-documented by &lt;a href="https://fidoalliance.org/passkeys/"&gt;FIDO Alliance&lt;/a&gt; and &lt;a href="https://learn.microsoft.com/en-us/security/zero-trust/deploy/identity"&gt;Microsoft research&lt;/a&gt;, transfers the very concept of “inside” the organization from the network to the user’s validated persona. No session proceeds without a signed, short-lived identity claim.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="2-least-privileged-access-lpa"&gt;2. Least-privileged access (LPA)&lt;/h3&gt;
-
-
-
-&lt;p&gt;Legacy roles that confer standing privileges are antithetical to zero trust. LPA decrees that entitlements are minimized, time-bounded and context-aware. The application of just-in-time access, JWT token scoping and dynamic risk assessment ensures users receive only what is necessary for their current task, never more. Device state, resource value and behavior all adjust privilege in flight: a noncompliant device or anomalous login instantly narrows the access window.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="3-continuous-verification-and-adaptive-policy"&gt;3. Continuous verification and adaptive policy&lt;/h3&gt;
-
-
-
-&lt;p&gt;Zero trust is not “authenticate once, trust forever.” It is a continuous cycle of verification. Adaptive policy rules, executed by the policy engine, must re-evaluate access in real-time based on new telemetry. This “posture drift” can be triggered by numerous signals:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Behavioral:&lt;/strong&gt; If a user typically logs in from Texas at 9 am but suddenly authenticates from Eastern Europe at 3 am (“impossible travel”), adaptive rules flag the anomaly and restrict access.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Device:&lt;/strong&gt; An EDR agent detects a malicious process, changing the device’s health state from “compliant” to “at-risk.”&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Network:&lt;/strong&gt; A user moves from a trusted corporate network to an untrusted public Wi-Fi hotspot. In response, the PE can automatically initiate a session revocation, force a step-up MFA challenge or reduce the session to read-only.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="4-integrated-phishing-resistant-authentication"&gt;4. Integrated phishing-resistant authentication&lt;/h3&gt;
-
-
-
-&lt;p&gt;To secure the identity-first gate, the authentication method itself must be robust. Traditional MFA (like SMS or one-time passcodes) is phishable. The ZTA browser model mandates the adoption of phishing-resistant MFA, primarily through FIDO2/WebAuthn passkeys. As detailed by the &lt;a href="https://fidoalliance.org/passkeys/" rel="noreferrer noopener" target="_blank"&gt;FIDO Alliance, passkeys are a W3C standard&lt;/a&gt; that replaces passwords with cryptographic key pairs. The private key never leaves the user’s device (e.g., a YubiKey, a phone’s secure enclave or a Windows Hello TPM), making it impossible to phish. The user authenticates with a simple biometric or PIN, providing unparalleled security with a superior user experience. By 2025, passkey adoption will have moved from emerging to mainstream, with deployments showing authentication times under two seconds and proven reductions in phishing-related losses.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="5-device-health-gating"&gt;5. Device health gating&lt;/h3&gt;
-
-
-
-&lt;p&gt;A trusted user on a compromised device is a critical threat. The ZTA model must validate the &lt;em&gt;endpoint&lt;/em&gt; before issuing an access token. This “device health gating” is a cornerstone of modern IdP solutions. The conditional access policy engine queries the device for posture signals collected by an MDM (mobile device management) or EDR (endpoint detection and response) agent. As documented in &lt;a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview" rel="noreferrer noopener" target="_blank"&gt;Microsoft’s conditional access framework&lt;/a&gt;, policies enforce compliance before token issuance. Key signals include:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Patch level:&lt;/strong&gt; Is the OS fully patched?&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;EDR status:&lt;/strong&gt; Is the EDR agent (e.g., CrowdStrike, Defender) running and reporting no active threats?&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Disk encryption:&lt;/strong&gt; Is the primary drive encrypted (e.g., BitLocker, FileVault)?&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Device state:&lt;/strong&gt; Is the device jailbroken or rooted? Only devices that meet this baseline are considered “compliant” and eligible for access.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="6-remote-browser-isolation-rbi"&gt;6. Remote browser isolation (RBI)&lt;/h3&gt;
-
-
-
-&lt;p&gt;For the highest-risk activities, we must assume the endpoint &lt;em&gt;cannot&lt;/em&gt; be fully trusted and that web content &lt;em&gt;is&lt;/em&gt; malicious. Remote browser isolation (RBI) addresses this by executing risky or privileged web sessions in isolated, disposable cloud containers. The user’s endpoint never interacts with active web code; it only receives a stream of pixels (pixel-streaming RBI) or a sanitized, reconstructed version of the page (DOM-reconstruction RBI). As demonstrated by &lt;a href="https://www.cloudflare.com/zero-trust/products/browser-isolation/" rel="noreferrer noopener" target="_blank"&gt;zero trust solutions like Cloudflare RBI&lt;/a&gt;, this neutralizes all browser-based exploits, prevents malware from reaching the endpoint and can enforce data loss prevention (DLP) by disabling copy/paste or uploads from the isolated session.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="modern-workflows-and-policy-patterns-a-blueprint"&gt;Modern workflows and policy patterns: A blueprint&lt;/h2&gt;
-
-
-
-&lt;p&gt;A modern ZTA browser architecture is not a single product but an integrated system that operates on a continuous, per-request verification loop.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is the foundational user-facing workflow for all access.&lt;/p&gt;
-
-
-
-&lt;ol class="wp-block-list" start="1"&gt;
-&lt;li&gt;&lt;strong&gt;Request:&lt;/strong&gt; A user on a managed browser (e.g., Chrome Enterprise) attempts to access a protected app (e.g., test.company.com).&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Intercept &amp;amp; redirect:&lt;/strong&gt; An access proxy (ZTNA/PEP), like Cloudflare Access or Zscaler Private Access, intercepts the request. Seeing no valid session token, it redirects the browser to the enterprise IdP (e.g., Okta, Entra ID) to initiate an OIDC or SAML authentication flow.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Authentication:&lt;/strong&gt; The IdP authenticates the user. Based on policy, it requires a phishing-resistant MFA step using a FIDO2/WebAuthn passkey. The user taps their YubiKey or uses Windows Hello.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Contextual evaluation:&lt;/strong&gt; The IdP’s Conditional Access Policy Engine (PE) evaluates the request. It queries the Microsoft Intune or CrowdStrike ZTA integration for device posture. The policy is: ALLOW IF (user_group == ‘Sales’) AND (device_status == ‘Compliant’) AND (auth_method == ‘FIDO2’).&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Token issuance:&lt;/strong&gt; Upon success, the IdP mints a signed JSON Web Token (JWT). This token contains critical &lt;em&gt;claims&lt;/em&gt;: the user’s ID (sub), their roles (groups), the authentication method (amr) and a short-lived expiration (exp).&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Access granted:&lt;/strong&gt; Browser supplies JWT to proxy, proxy grants direct, secure application access.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="b-adaptive-session-management-and-least-privilege"&gt;B. Adaptive session management and least privilege&lt;/h3&gt;
-
-
-
-&lt;p&gt;This workflow demonstrates the “continuous verification” principle.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Scenario 1 — Posture drift:&lt;/strong&gt; The user is authenticated and working. Midway through the session, their EDR agent detects a high-priority threat (e.g., malware execution). The EDR agent instantly updates the device’s health state. The IdP’s conditional access, which leverages a continuous access evaluation protocol (CAEP), receives this signal and &lt;em&gt;immediately&lt;/em&gt; revokes all active session tokens for that device, forcing a logout and remediation.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Scenario 2 — Step-up authentication:&lt;/strong&gt; A user with a valid session for a low-risk app (like a wiki) clicks a link to a high-risk app (like the SAP admin console). The ZTNA proxy (PEP) intercepts this new request, recognizes the “Tier 0” sensitivity of the application and re-challenges the user, forcing a new step-up authentication with a hardware passkey before proceeding, even though they already have an active SSO session.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="c-privileged-and-sensitive-operations-via-isolation"&gt;C. Privileged and sensitive operations via isolation&lt;/h3&gt;
-
-
-
-&lt;p&gt;This workflow is for protecting “Tier 0” assets like administrator consoles.&lt;/p&gt;
-
-
-
-&lt;ol class="wp-block-list" start="1"&gt;
-&lt;li&gt;&lt;strong&gt;Request:&lt;/strong&gt; An administrator attempts to access the Okta admin console or an internal Kubernetes dashboard.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Policy enforcement:&lt;/strong&gt; After successful FIDO2 authentication, the ZTNA policy (PEP) for this “Tier 0” application is configured not with an “Allow” action, but with an “Isolate” action.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Isolation:&lt;/strong&gt; The user is transparently routed to an RBI service. The entire admin session is executed in a secure, disposable container in the cloud. Only benign pixels are streamed to the end-user’s browser.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;DLP &amp;amp; threat neutralization:&lt;/strong&gt; This mitigates two critical risks:
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Endpoint Malware: If the admin’s workstation is compromised, keyloggers or token-stealing malware cannot access the privileged session, as it’s not running locally.&lt;/li&gt;
-
-
-
-&lt;li&gt;Data Exfiltration: Granular RBI policies are applied: copy/paste, file downloads and printing are disabled for this session, preventing accidental or malicious credential or data leakage.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="d-forward-thinking-scim-provisioning"&gt;D. Forward-thinking SCIM provisioning&lt;/h3&gt;
-
-
-
-&lt;p&gt;This workflow is the automation backbone that makes LPA viable at scale.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;System for cross-domain identity management (SCIM) is an open standard (RFC 7643) for automating the exchange of user identity information between systems. &lt;a href="https://datatracker.ietf.org/doc/html/rfc7643" rel="noreferrer noopener" target="_blank"&gt;The SCIM protocol (RFC 7643)&lt;/a&gt; defines a REST API and schema for managing user and group resources.&lt;/li&gt;
-
-
-
-&lt;li&gt;The Workflow (Joiner/Mover/Leaver):
-&lt;ol class="wp-block-list" start="1"&gt;
-&lt;li&gt;&lt;strong&gt;Source event:&lt;/strong&gt; A manager in the HRIS (e.g., Workday) changes an employee’s role from “Sales Rep” to “Sales Manager.”&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;SCIM push:&lt;/strong&gt; The HRIS (or an integration layer) automatically triggers a SCIM PATCH request to the IdP (Okta, Entra ID).&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;IdP update:&lt;/strong&gt; The IdP updates the user’s attributes, removing them from the group:sales-rep and adding them to the group:sales-manager.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Policy propagation:&lt;/strong&gt; The IdP’s Policy Engine (PE) immediately uses this new attribute data.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Re-evaluation:&lt;/strong&gt; The next time the user authenticates (or their token expires), their access is re-evaluated. Their old access to rep-level tools is gone, and their new access to manager dashboards is automatically granted. This “Just-in-Time” provisioning prevents “privilege creep” and ensures all access decisions are based on accurate, real-time identity data.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="maturity-pathways-roadmap-to-optimal-state"&gt;Maturity pathways: Roadmap to optimal state&lt;/h2&gt;
-
-
-
-&lt;p&gt;This roadmap, aligned with the CISA ZTMM v2, allows organizations to make measurable, incremental progress.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Initial:&lt;/strong&gt; At this stage, the organization moves beyond the “Traditional” perimeter. All browser-accessed applications are federated with a central IdP and protected by an access proxy (ZTNA). SSO and passkey-based FIDO2/WebAuthn MFA are mandatory for all users. All access logs are centralized in a SIEM. This achieves the &lt;em&gt;Identity&lt;/em&gt; and &lt;em&gt;Network&lt;/em&gt; pillar foundations.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Advanced:&lt;/strong&gt; The organization builds on the initial foundation with richer context. Device compliance (via Intune/CrowdStrike integration) is enforced for all sessions. Policy decisions become adaptive, leveraging real-time telemetry from EDR and user behavior analytics (UBA). SCIM is fully implemented for automated provisioning from an identity source of truth (e.g., HRIS). This demonstrates maturity in the &lt;em&gt;Devices&lt;/em&gt; and &lt;em&gt;Automation&lt;/em&gt; capabilities.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Optimal:&lt;/strong&gt; At the highest level of maturity, access is determined on a per-request, least-privilege basis, fully aligning with NIST 800-207A. RBI is automatically and transparently enforced for all privileged, unmanaged or high-risk web sessions. The entire ecosystem is automated, with post-authentication security (like token theft detection and CAEP) fully integrated. This represents an optimal state across all CISA pillars, driven by robust automation and governance.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="operationalizing-zta-browser-security"&gt;Operationalizing ZTA browser security&lt;/h2&gt;
-
-
-
-&lt;p&gt;Implementing this architecture requires a shift in operational thinking.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Policy design:&lt;/strong&gt; Move from network rules to a “who, what, where, when, why” logic model. Policies should be readable statements: GRANT access IF (user_group == ‘Finance’) AND (app == ‘SAP’) AND (device_status == ‘Compliant’) AND (auth_method == ‘FIDO2’). Start with a default “deny” and create explicit “allow” rules, creating a policy matrix that maps user personas to data and applications.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Dynamic access:&lt;/strong&gt; Token claims must be context-bound and short-lived. A token issued for a read-only wiki should not be valid for accessing a finance application. True phishing resistance &lt;em&gt;requires&lt;/em&gt; eliminating all phishable recovery methods. This means deprecating SMS, email links and security questions in favor of passkey-based recovery or in-person identity verification.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Risk automation:&lt;/strong&gt; Session adaptation (step-up, revocation) must be triggered by automated analytics. Integrate the IdP and ZTNA solution with your SIEM/SOAR platform. An EDR alert (e.g., “high-severity malware”) or a UBA alert (e.g., “impossible travel”) should automatically trigger a SOAR playbook that calls the IdP’s API to revoke the user’s session tokens.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Governance-as-code:&lt;/strong&gt; Policies must not be managed via manual “click-ops” in a GUI. All ZTNA access rules, IdP Conditional Access policies and RBI configurations should be defined as code (e.g., using Terraform, HCL or JSON). This enables version control, peer review (via pull requests) and automated CI/CD pipelines, aligning with CISA’s cross-cutting controls for governance and automation.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="configuration-patterns-latest-2025"&gt;Configuration patterns (Latest, 2025)&lt;/h2&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Chrome Enterprise:&lt;/strong&gt; Use Chrome Browser Cloud Management to enforce a secure baseline on all corporate browsers. Enforce policies like BrowserSignin (to force login to a managed profile), PasswordManagerEnabled (set to false to mandate use of an enterprise password manager), SafeBrowsingProtectionLevel (set to Enhanced) and BuiltInDnsClientEnabled (to enforce secure DNS). &lt;a href="https://support.google.com/chrome/a/answer/2657289" rel="noreferrer noopener" target="_blank"&gt;Google’s Chrome Enterprise policies&lt;/a&gt; provide the full list of controls to manage extensions, data leakage and security settings.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Intune/conditional access:&lt;/strong&gt; Create a non-negotiable “baseline” policy: Require compliant device and Require phishing-resistant MFA for &lt;em&gt;all users&lt;/em&gt; accessing &lt;em&gt;all cloud apps&lt;/em&gt;. Then, create more granular policies. For example, block access entirely from high-risk countries or require a “Compliant + Hybrid Joined” device for access to legacy on-prem apps.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;FIDO2/WebAuthn passkeys:&lt;/strong&gt; Deploy passkeys (platform-based like Windows Hello and hardware-bound like YubiKeys) as the primary authenticator. Start with privileged users (admins) and high-value targets (executives, finance) first, then roll out to the general population.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Cloudflare RBI/ZTNA:&lt;/strong&gt; Configure clientless ZTNA to secure third-party and BYOD access without requiring an agent. Use Service Auth policies (based on mTLS certificates or service tokens) to secure non-human (RPA bot) access to web applications. Configure a “default-isolate” policy that automatically sends all traffic to unclassified or high-risk domains through the RBI service.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;SCIM automation:&lt;/strong&gt; Connect your IdP (Okta, Entra ID) to your source of truth (e.g., Workday) via a pre-built SCIM connector. Map HR attributes (e.g., Department, Role, EmploymentStatus) to IdP attributes. Use these attributes to drive dynamic group membership, which in turn drives all application access and ZTNA policies.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-browser-is-now-both-sword-and-shield"&gt;The browser is now both sword and shield&lt;/h2&gt;
-
-
-
-&lt;p&gt;Browser security is the linchpin for zero trust and organizational resilience. By converging validated identity, rigorous device posture, adaptive access policies, automated provisioning and session isolation, we not only defend against the sophisticated threats of 2025 but also set a foundation for scalable, measurable governance.&lt;/p&gt;
-
-
-
-&lt;p&gt;In moving from static perimeters to live, session-level policy enforcement, every click and credential is scrutinized, every privilege time-boxed, every access revocable by context and behavior not convenience or legacy. Teams must treat the browser not as an exposed window, but as the policy stronghold of the modern enterprise. &lt;/p&gt;
-
-
-
-&lt;p&gt;Building toward this architecture is a journey: Begin with SSO and robust MFA, enforce device compliance, automate provisioning and integrate RBI where risk justifies isolation. Codify policy, automate telemetry and develop governance as code. Refuse the ‘trusted network’ myth. Zero trust is here, and the browser is now both sword and shield.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4101173/hardening-browser-security-with-zero-trust-controls.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.07</comments>
-      <pubDate>Fri, 05 Dec 2025 16:15:00 +0000</pubDate>
     </item>
     <item>
       <title>Dell security advisory (AV25-779)</title>
@@ -407,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-784</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.14</comments>
+      <comments>Score: 7.13</comments>
       <pubDate>Mon, 24 Nov 2025 18:18:46 +0000</pubDate>
     </item>
     <item>
@@ -417,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-783</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.14</comments>
+      <comments>Score: 7.13</comments>
       <pubDate>Mon, 24 Nov 2025 18:22:22 +0000</pubDate>
     </item>
     <item>
@@ -498,7 +167,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101859/insecure-use-of-signal-app-part-of-wider-department-of-defense-problem-suggests-senate-report.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.20</comments>
+      <comments>Score: 7.17</comments>
       <pubDate>Fri, 05 Dec 2025 21:52:08 +0000</pubDate>
     </item>
     <item>
@@ -522,16 +191,6 @@
       <pubDate>Wed, 26 Nov 2025 19:06:51 +0000</pubDate>
     </item>
     <item>
-      <title>Europe tightens the net on sanctions evasion</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</link>
-      <description>Europol is reinforcing its support to EU Member States in enforcing EU sanctions, as criminal networks develop ever more sophisticated methods to bypass restrictive measures linked to Russia’s war of aggression against Ukraine.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europe-tightens-net-sanctions-evasion</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
-      <pubDate>Mon, 08 Dec 2025 05:27:08 +0000</pubDate>
-    </item>
-    <item>
       <title>[Control systems] ABB security advisory (AV25-788)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av25-788</link>
       <description>No description available</description>
@@ -549,7 +208,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.36</comments>
-      <pubDate>Mon, 08 Dec 2025 05:27:08 +0000</pubDate>
+      <pubDate>Mon, 08 Dec 2025 06:35:05 +0000</pubDate>
     </item>
     <item>
       <title>GeoServer security advisory (AV25-789)</title>
@@ -569,7 +228,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.37</comments>
-      <pubDate>Mon, 08 Dec 2025 05:27:08 +0000</pubDate>
+      <pubDate>Mon, 08 Dec 2025 06:35:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>New report explores use of robotics and unmanned systems in the fight against crime</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</link>
+      <description>Europol has today published The Unmanned Future(s): The Impact of Robotics and Unmanned Systems on Law Enforcement. The report, produced by the Europol Innovation Lab, provides an in-depth analysis of how unmanned systems could change society, crime and law enforcement, and discusses the challenges and opportunities they present.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.40</comments>
+      <pubDate>Mon, 08 Dec 2025 06:35:05 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -579,27 +248,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 08 Dec 2025 05:27:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</link>
-      <description>On 19 November 2025, a coordinated effort led by Bulgarian authorities and supported by Europol, resulted in the dismantling of a criminal network involved in large-scale trafficking of cultural goods across Europe and beyond. This operation was conducted under the framework of a Europol operational taskforce. The action day involved law enforcement and judicial authorities from Albania, France, Germany, Greece,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 08 Dec 2025 05:27:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
-      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 08 Dec 2025 05:27:08 +0000</pubDate>
+      <pubDate>Mon, 08 Dec 2025 06:35:05 +0000</pubDate>
     </item>
     <item>
       <title>29 suspects arrested in two blows against human trafficking networks</title>
@@ -609,7 +258,27 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 08 Dec 2025 05:27:08 +0000</pubDate>
+      <pubDate>Mon, 08 Dec 2025 06:35:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
+      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 08 Dec 2025 06:35:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>35 arrests in Bulgaria in a large art trafficking investigation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</link>
+      <description>On 19 November 2025, a coordinated effort led by Bulgarian authorities and supported by Europol, resulted in the dismantling of a criminal network involved in large-scale trafficking of cultural goods across Europe and beyond. This operation was conducted under the framework of a Europol operational taskforce. The action day involved law enforcement and judicial authorities from Albania, France, Germany, Greece,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/35-arrests-in-bulgaria-in-large-art-trafficking-investigation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 08 Dec 2025 06:35:05 +0000</pubDate>
     </item>
     <item>
       <title>16.6 million packages of fake and harmful toys taken off EU markets</title>
@@ -619,7 +288,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.64</comments>
-      <pubDate>Mon, 08 Dec 2025 05:27:08 +0000</pubDate>
+      <pubDate>Mon, 08 Dec 2025 06:35:05 +0000</pubDate>
     </item>
     <item>
       <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
@@ -629,7 +298,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.67</comments>
-      <pubDate>Mon, 08 Dec 2025 05:27:08 +0000</pubDate>
+      <pubDate>Mon, 08 Dec 2025 06:35:05 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-790)</title>
@@ -638,7 +307,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-790</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 01 Dec 2025 16:00:31 +0000</pubDate>
     </item>
     <item>
@@ -648,7 +317,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-791</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 01 Dec 2025 16:12:55 +0000</pubDate>
     </item>
     <item>
@@ -658,7 +327,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-792</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 01 Dec 2025 16:23:13 +0000</pubDate>
     </item>
     <item>
@@ -668,7 +337,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-793</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 01 Dec 2025 16:28:51 +0000</pubDate>
     </item>
     <item>
@@ -678,7 +347,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-794</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 01 Dec 2025 16:41:23 +0000</pubDate>
     </item>
     <item>
@@ -688,7 +357,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-795</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 01 Dec 2025 18:27:35 +0000</pubDate>
     </item>
     <item>
@@ -698,7 +367,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-796</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 01 Dec 2025 18:43:36 +0000</pubDate>
     </item>
     <item>
@@ -708,7 +377,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-december-2025-monthly-rollup-av25-797</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Mon, 01 Dec 2025 20:23:41 +0000</pubDate>
     </item>
     <item>
@@ -775,7 +444,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101486/coupang-leaks-personal-information-of-33-7-million-accounts-suspected-of-poor-authentication-key-management.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Fri, 05 Dec 2025 03:27:33 +0000</pubDate>
     </item>
     <item>
@@ -786,7 +455,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Mon, 08 Dec 2025 05:27:08 +0000</pubDate>
+      <pubDate>Mon, 08 Dec 2025 06:35:05 +0000</pubDate>
     </item>
     <item>
       <title>OpenVPN security advisory (AV25-798)</title>
@@ -795,7 +464,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openvpn-security-advisory-av25-798</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Tue, 02 Dec 2025 13:33:12 +0000</pubDate>
     </item>
     <item>
@@ -805,7 +474,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-december-2025-monthly-rollup-av25-799</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 02 Dec 2025 16:10:29 +0000</pubDate>
     </item>
     <item>
@@ -815,7 +484,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-struts-security-advisory-av25-800</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Tue, 02 Dec 2025 18:31:22 +0000</pubDate>
     </item>
     <item>
@@ -825,7 +494,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-801</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Tue, 02 Dec 2025 20:18:43 +0000</pubDate>
     </item>
     <item>
@@ -835,7 +504,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-802</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Wed, 03 Dec 2025 15:21:01 +0000</pubDate>
     </item>
     <item>
@@ -845,7 +514,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av25-803</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Wed, 03 Dec 2025 15:27:08 +0000</pubDate>
     </item>
     <item>
@@ -855,7 +524,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av25-805</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.30</comments>
       <pubDate>Wed, 03 Dec 2025 20:24:25 +0000</pubDate>
     </item>
     <item>
@@ -865,7 +534,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-806</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Thu, 04 Dec 2025 13:45:26 +0000</pubDate>
     </item>
     <item>
@@ -875,7 +544,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-807</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Thu, 04 Dec 2025 13:54:05 +0000</pubDate>
     </item>
     <item>
@@ -885,7 +554,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-018-vulnerability-affecting-react-server-components-cve-2025-55182</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Thu, 04 Dec 2025 16:50:47 +0000</pubDate>
     </item>
     <item>
@@ -895,7 +564,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-808</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.67</comments>
       <pubDate>Thu, 04 Dec 2025 20:53:07 +0000</pubDate>
     </item>
     <item>
@@ -1004,7 +673,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101952/vaillant-ciso-start-instead-of-waiting.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Mon, 08 Dec 2025 06:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1173,7 +842,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4101929/offensive-security-takes-center-stage-in-the-ai-era.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.98</comments>
+      <comments>Score: 8.93</comments>
       <pubDate>Mon, 08 Dec 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1183,7 +852,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-809</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 9.01</comments>
       <pubDate>Fri, 05 Dec 2025 14:24:16 +0000</pubDate>
     </item>
     <item>
@@ -1193,7 +862,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-810</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 9.01</comments>
       <pubDate>Fri, 05 Dec 2025 14:28:20 +0000</pubDate>
     </item>
     <item>
@@ -1203,7 +872,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisories-av25-804</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Fri, 05 Dec 2025 16:58:47 +0000</pubDate>
     </item>
     <item>
@@ -1212,7 +881,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/gisec-global</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 48641348360208664.00</comments>
+      <comments>Score: 48070804882032304.00</comments>
       <pubDate>Tue, 05 May 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
