@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Dec 2025 08:29:45 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Dec 2025 09:23:27 +0000</lastBuildDate>
+    <item>
+      <title>OpenVPN security advisory (AV25-798)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/openvpn-security-advisory-av25-798</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openvpn-security-advisory-av25-798</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.21</comments>
+      <pubDate>Tue, 02 Dec 2025 13:33:12 +0000</pubDate>
+    </item>
     <item>
       <title>Android security advisory – December 2025 monthly rollup (AV25-799)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-december-2025-monthly-rollup-av25-799</link>
@@ -16,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-december-2025-monthly-rollup-av25-799</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.22</comments>
+      <comments>Score: 7.21</comments>
       <pubDate>Tue, 02 Dec 2025 16:10:29 +0000</pubDate>
     </item>
     <item>
@@ -36,95 +46,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-801</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Tue, 02 Dec 2025 20:18:43 +0000</pubDate>
-    </item>
-    <item>
-      <title>Meet ConsentFix, a new twist on the ClickFix phishing attack</title>
-      <link>https://www.csoonline.com/article/4105230/meet-consentfix-a-new-twist-on-the-clickfix-phishing-attack.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A new variation of the ClickFix scam tries to get around phishing defenses by capturing an employee’s OAuth authentication token for Microsoft logins.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://pushsecurity.com/blog/consentfix/" rel="noreferrer noopener" target="_blank"&gt;Researchers at Push Security this week outlined the tactic&lt;/a&gt;, which they call ConsentFix, in a blog, calling it “a dangerous evolution of ClickFix and consent phishing that is incredibly hard for traditional security tools to detect and block.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Generally &lt;a href="https://www.csoonline.com/article/4096241/new-clickfix-attacks-use-fake-windows-update-screens-to-fool-employees.html" target="_blank"&gt;ClickFix&lt;/a&gt; attacks display a fake error or counterfeit CAPTCHA verification to a user to &lt;a href="https://www.csoonline.com/article/4016208/sixfold-surge-of-clickfix-attacks-threatens-corporate-defenses.html" target="_blank"&gt;get them to copy, paste and execute malicious commands&lt;/a&gt; on their devices.&lt;/p&gt;
-
-
-
-&lt;p&gt;What’s new in a ConsentFix attack is that the attack happens entirely inside a browser, say the researchers, which removes one of the key detection opportunities because the attack doesn’t touch an endpoint.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attack starts with a victim coming across a legitimate but compromised website they are looking for in a Google search, which completely circumvents email-based anti-phishing controls. Going to the site triggers a fake Cloudflare CAPTCHA-like verification page asking the victim to enter their business email address to prove they’re human. Doing so makes a Microsoft login page pop up which includes a legitimate URL, based on the victim’s email address, that would contain an OAuth token. The victim is asked to copy and paste that URL into a field, again, to verify they are human. The URL is captured by the threat actor, at which point the victim has granted the attacker access to their Microsoft account via Azure’s command line interface, say the researchers.&lt;/p&gt;
-
-
-
-&lt;p&gt;“At this point, the attacker has effective control of the victim’s Microsoft account, but without ever needing to phish a password, or pass an MFA (multifactor authentication) check,” says Push Security. “In fact, if the user was already logged in to their Microsoft account (i.e. they had an active session) no login is required at all.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://cybercrimeanalytics.com/about/" rel="noreferrer noopener" target="_blank"&gt;Christopher Kayser&lt;/a&gt;, social engineering expert and president of Canadian-based firm Cybercrime Analytics, says the attack plays on two tactics favored by threat actors: obedience (cut and paste this URL) and trust (this looks like a Microsoft login page). “People think because they are on a trusted [Microsoft] platform that this is OK,” he said in an interview.&lt;/p&gt;
-
-
-
-&lt;p&gt;But this attack also shows the failures of security awareness training that many organizations perform. If training is effective, employees should suspect there’s something wrong when an app asks for a business email address to confirm they are human, he said, and know that it’s suspicious when they’re asked to cut and paste anything online as a way of proving they are human.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This is an incredibly new, innovative attack method,” commented Roger Grimes, data-driven defense CISO advisor at KnowBe4. “It’s almost unfair to classify it as a Clickfix subvariant, even though it is.” However, the odds an employee will copy a long URL string as a test of their humanity has to be very, very low, he added. “It screams different and scammy even to the most unknowledgeable user. Can you see your grandparents doing this? Not me. But I’m sure some people do do it, or else the scammers would not try it,” he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;“My guess is that its rate of success is so, so low that it doesn’t become a popular scam method that most of us need to worry about,” he said. “What we do need to communicate to users is how often Cloudflare’s brand is being used in social engineering scams, and what the correct Cloudflare authentication/validation looks like. The Cloudflare CAPTCHA check has become the fake antivirus screen of today’s world.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Organizations must recognize that the ConsentFix attack highlights the dangers of implicit trust in first-party applications, and in the continued use of legacy OAuth scopes, said &lt;a href="https://www.gartner.com/analyst/b9cb00be7b" rel="noreferrer noopener" target="_blank"&gt;Avivah Litan&lt;/a&gt;, lead analyst for AI trust, risk and security management at Gartner. These include older permission sets within Microsoft Entra ID that grant broad access and are not subject to modern security controls or monitoring. &lt;/p&gt;
-
-
-
-&lt;p&gt;“Attackers exploit these legacy scopes to enumerate directory data, meaning they can systematically retrieve and map out user accounts, groups, and other directory objects within the organization,” she said. “This reconnaissance enables attackers to identify high-value targets and plan further attacks, all without triggering alerts that would be associated with newer, more tightly controlled permissions.”&lt;/p&gt;
-
-
-
-&lt;p&gt; The most effective mitigation strategy to this kind of attack is a combination of robust monitoring, strengthened consent governance and real-time user protection, Litan noted. “By addressing these foundational issues — specifically, by limiting the use of legacy OAuth scopes, tightening consent processes for all applications, and deploying browser-based security — enterprises can substantially reduce the risk of unauthorized access resulting from OAuth consent abuse and enhance their overall identity security posture.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Push Security notes that the attack could be successful because targeting a first-party app like Azure CLI means that many of the mitigating controls available for third-party app integrations don’t apply. Because there’s no login required, phishing-resistant authentication controls like passkeys have no impact on this attack, the researchers add. And the use of advanced detection evasion techniques makes this attack difficult to investigate, meaning these attacks are going undetected.&lt;/p&gt;
-
-
-
-&lt;p&gt;One of the problems is that most security awareness training isn’t doing enough to lower the odds of employees falling for phishing scams, said Kayser.&lt;/p&gt;
-
-
-
-&lt;p&gt;He cited a study of phishing messages sent to employees at a California hospital over a period of eight months. Those who had taken a cybersecurity awareness course were just as likely to have fallen for a phishing message as those who didn’t, he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Training often fails because instructors talk too much in technical terms, he said. Instead they should explain attacks, how they work and how to recognize them.&lt;/p&gt;
-
-
-
-&lt;p&gt;“If you can explain to people what’s going on, that sticks,” he maintained.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4105230/meet-consentfix-a-new-twist-on-the-clickfix-phishing-attack.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
-      <pubDate>Fri, 12 Dec 2025 00:20:44 +0000</pubDate>
     </item>
     <item>
       <title>OpenAI expands ‘defense in depth’ security to stop hackers using its AI models to launch cyberattacks</title>
@@ -230,7 +153,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4105279/openai-expands-defense-in-depth-security-to-stop-hackers-using-its-ai-models-to-launch-cyberattacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.24</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Fri, 12 Dec 2025 01:01:15 +0000</pubDate>
     </item>
     <item>
@@ -270,7 +193,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-806</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Thu, 04 Dec 2025 13:45:26 +0000</pubDate>
     </item>
     <item>
@@ -280,7 +203,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-807</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Thu, 04 Dec 2025 13:54:05 +0000</pubDate>
     </item>
     <item>
@@ -290,28 +213,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-018-vulnerability-affecting-react-server-components-cve-2025-55182</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Thu, 04 Dec 2025 16:50:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and Spanish National Police disrupt activities of far-right terrorist group 'The Base'</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-spanish-national-police-disrupt-activities-of-far-right-terrorist-group-base</link>
-      <description>Europol supported the Spanish National Police (Policía Nacional) in disrupting activities of the far-right terrorist group 'The Base'. The operation took place over three days in Madrid and Valencia, resulting in significant seizures and the arrest of three suspected far-right extremists on 25 November 2025.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-spanish-national-police-disrupt-activities-of-far-right-terrorist-group-base</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
-      <pubDate>Sun, 14 Dec 2025 06:29:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>Samsung mobile security advisory (AV25-808)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-808</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-808</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
-      <pubDate>Thu, 04 Dec 2025 20:53:07 +0000</pubDate>
     </item>
     <item>
       <title>How to simplify enterprise cybersecurity through effective identity management</title>
@@ -425,8 +328,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4104438/how-to-simplify-enterprise-cybersecurity-through-effective-identity-management.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Fri, 12 Dec 2025 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and Spanish National Police disrupt activities of far-right terrorist group 'The Base'</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-spanish-national-police-disrupt-activities-of-far-right-terrorist-group-base</link>
+      <description>Europol supported the Spanish National Police (Policía Nacional) in disrupting activities of the far-right terrorist group 'The Base'. The operation took place over three days in Madrid and Valencia, resulting in significant seizures and the arrest of three suspected far-right extremists on 25 November 2025.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-spanish-national-police-disrupt-activities-of-far-right-terrorist-group-base</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.37</comments>
+      <pubDate>Sun, 14 Dec 2025 07:23:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>Samsung mobile security advisory (AV25-808)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-808</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av25-808</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.37</comments>
+      <pubDate>Thu, 04 Dec 2025 20:53:07 +0000</pubDate>
     </item>
     <item>
       <title>New report explores use of robotics and unmanned systems in the fight against crime</title>
@@ -436,7 +359,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.40</comments>
-      <pubDate>Sun, 14 Dec 2025 06:29:45 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 07:23:27 +0000</pubDate>
     </item>
     <item>
       <title>HPE security advisory (AV25-809)</title>
@@ -445,7 +368,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-809</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Fri, 05 Dec 2025 14:24:16 +0000</pubDate>
     </item>
     <item>
@@ -455,7 +378,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-810</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Fri, 05 Dec 2025 14:28:20 +0000</pubDate>
     </item>
     <item>
@@ -476,7 +399,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 14 Dec 2025 06:29:45 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 07:23:27 +0000</pubDate>
     </item>
     <item>
       <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
@@ -486,7 +409,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 14 Dec 2025 06:29:45 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 07:23:27 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -496,7 +419,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 14 Dec 2025 06:29:45 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 07:23:27 +0000</pubDate>
     </item>
     <item>
       <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
@@ -506,7 +429,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 14 Dec 2025 06:29:45 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 07:23:27 +0000</pubDate>
     </item>
     <item>
       <title>EU Most Wanted website revamped with new fugitives added</title>
@@ -516,7 +439,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 14 Dec 2025 06:29:45 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 07:23:27 +0000</pubDate>
     </item>
     <item>
       <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
@@ -526,7 +449,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.67</comments>
-      <pubDate>Sun, 14 Dec 2025 06:29:45 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 07:23:27 +0000</pubDate>
     </item>
     <item>
       <title>A rapidly evolving criminal ecosystem: the escalating exploitation of vulnerable individuals</title>
@@ -536,7 +459,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Sun, 14 Dec 2025 06:29:45 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 07:23:27 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft flips security script: ‘In scope by default’ makes all vulnerabilities fair game for bug bounties</title>
@@ -660,7 +583,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4105950/microsoft-flips-security-script-in-scope-by-default-makes-all-vulnerabilities-fair-game-for-bug-bounties.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Sat, 13 Dec 2025 01:47:47 +0000</pubDate>
     </item>
     <item>
@@ -671,7 +594,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Sun, 14 Dec 2025 06:29:45 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 07:23:27 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV25-811)</title>
@@ -680,7 +603,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-811</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Mon, 08 Dec 2025 14:38:52 +0000</pubDate>
     </item>
     <item>
@@ -690,7 +613,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-812</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Mon, 08 Dec 2025 14:47:00 +0000</pubDate>
     </item>
     <item>
@@ -710,7 +633,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-814</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Mon, 08 Dec 2025 18:42:29 +0000</pubDate>
     </item>
     <item>
@@ -720,7 +643,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-815</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Mon, 08 Dec 2025 19:06:41 +0000</pubDate>
     </item>
     <item>
@@ -730,7 +653,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-816</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Mon, 08 Dec 2025 19:16:50 +0000</pubDate>
     </item>
     <item>
@@ -740,7 +663,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av25-817</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Tue, 09 Dec 2025 20:28:33 +0000</pubDate>
     </item>
     <item>
@@ -750,7 +673,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-december-2025-monthly-rollup-av25-818</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Tue, 09 Dec 2025 20:36:13 +0000</pubDate>
     </item>
     <item>
@@ -760,7 +683,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-819</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Tue, 09 Dec 2025 20:40:37 +0000</pubDate>
     </item>
     <item>
@@ -770,7 +693,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-820</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Tue, 09 Dec 2025 20:45:35 +0000</pubDate>
     </item>
     <item>
@@ -780,7 +703,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-821</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Tue, 09 Dec 2025 20:53:36 +0000</pubDate>
     </item>
     <item>
@@ -790,7 +713,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-december-2025-monthly-rollup-av25-822</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Tue, 09 Dec 2025 21:00:57 +0000</pubDate>
     </item>
     <item>
@@ -800,7 +723,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av25-823</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Wed, 10 Dec 2025 14:17:43 +0000</pubDate>
     </item>
     <item>
@@ -810,7 +733,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av25-824</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Wed, 10 Dec 2025 14:25:32 +0000</pubDate>
     </item>
     <item>
@@ -820,7 +743,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-825</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Wed, 10 Dec 2025 16:33:11 +0000</pubDate>
     </item>
     <item>
@@ -830,7 +753,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-826</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Wed, 10 Dec 2025 18:49:20 +0000</pubDate>
     </item>
     <item>
@@ -840,7 +763,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-827</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 9.01</comments>
       <pubDate>Thu, 11 Dec 2025 15:11:06 +0000</pubDate>
     </item>
     <item>
@@ -850,7 +773,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-828</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 9.01</comments>
       <pubDate>Thu, 11 Dec 2025 15:16:36 +0000</pubDate>
     </item>
     <item>
@@ -860,7 +783,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-829</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 9.01</comments>
       <pubDate>Thu, 11 Dec 2025 15:21:14 +0000</pubDate>
     </item>
     <item>
@@ -870,7 +793,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-830</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Fri, 12 Dec 2025 14:08:48 +0000</pubDate>
     </item>
     <item>
@@ -880,7 +803,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av25-789</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Fri, 12 Dec 2025 14:11:25 +0000</pubDate>
     </item>
     <item>
@@ -890,7 +813,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av25-831</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.64</comments>
+      <comments>Score: 9.62</comments>
       <pubDate>Fri, 12 Dec 2025 16:41:18 +0000</pubDate>
     </item>
     <item>
@@ -899,7 +822,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/gisec-global</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 10736002525496604.00</comments>
+      <comments>Score: 10636357915685452.00</comments>
       <pubDate>Tue, 05 May 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
