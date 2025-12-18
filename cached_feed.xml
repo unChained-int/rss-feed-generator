@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Dec 2025 17:25:52 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Dec 2025 18:36:09 +0000</lastBuildDate>
     <item>
       <title>Mozilla security advisory (AV25-819)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-819</link>
@@ -16,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-819</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Tue, 09 Dec 2025 20:40:37 +0000</pubDate>
     </item>
     <item>
@@ -26,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-820</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Tue, 09 Dec 2025 20:45:35 +0000</pubDate>
     </item>
     <item>
@@ -36,134 +36,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-december-2025-monthly-rollup-av25-822</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Tue, 09 Dec 2025 21:00:57 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft warns MSMQ may fail after update, breaking apps</title>
-      <link>https://www.csoonline.com/article/4108360/microsoft-warns-msmq-may-fail-after-update-breaking-apps-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A warning from Microsoft that a Windows patch issued last week may cause the Message Queuing (MSMQ) function in the operating system to malfunction could be behind multiple reports of internet of things (IoT) applications failing.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://ca.linkedin.com/in/dbshipley" rel="noreferrer noopener" target="_blank"&gt;David Shipley&lt;/a&gt;, head of Canadian security awareness training provider Beauceron Security, says he saw a query on a Microsoft learning forum today asking if the MSMQ problem is behind the failure of a firm’s point of sale system to issue sales receipts.&lt;/p&gt;
-
-
-
-&lt;p&gt;Another person posted a query on a different Microsoft forum about a building in an unnamed city being without its fire alarm or smoke detector systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;A link between these posts and the December 16 security update from Microsoft on the MSMQ issue couldn’t be confirmed. But Shipley said it is odd that Microsoft’s initial advice says that a workaround is available, but instead of detailing it, it &lt;a href="https://learn.microsoft.com/en-us/answers/questions/5666974/message-queuing-(msmq)-might-fail-with-the-decembe" rel="noreferrer noopener" target="_blank"&gt;urges admins to contact Microsoft Support For Businesses&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The scariest words when it comes to a serious bug in Windows you’re trying to fix, that’s crashing your applications, is, ‘Call us,’” he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;MSMQ is a protocol for secure messaging between applications, Shipley noted, so if there is a problem, “it’s going to break stuff.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The &lt;a href="https://learn.microsoft.com/en-us/windows/release-health/status-windows-10-22h2#3751msgdesc" rel="noreferrer noopener" target="_blank"&gt;Microsoft post&lt;/a&gt; says that individuals using Windows Home or Pro editions on personal devices are “very unlikely to experience this issue. This issue primarily affects enterprise or managed IT environments,” including those running clustered MSMQ environments under load.&lt;/p&gt;
-
-
-
-&lt;p&gt;Symptoms include:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;MSMQ becoming inactive;&lt;/li&gt;
-
-
-
-&lt;li&gt;Internet Information Services (IIS) sites failing with “Insufficient resources to perform operation” errors;&lt;/li&gt;
-
-
-
-&lt;li&gt;applications unable to write to queues;&lt;/li&gt;
-
-
-
-&lt;li&gt;errors such as “The message file ‘C:\Windows\System32\msmq\storage*.mq’ cannot be created” when creating message files;&lt;/li&gt;
-
-
-
-&lt;li&gt;misleading log entries such as “There is insufficient disk space or memory”, despite sufficient disk space and memory being available.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Affected are servers running Windows Server 2019 and 2016, Windows Server 2012 R2 and Windows Server 2012.&lt;/p&gt;
-
-
-
-&lt;p&gt;Also affected are PCs running Windows 10 version 22H2, Windows 10 version 21H2, Windows 10 version 1809, and Windows 10 version 1607. Support for Windows 10 ended October 14, so the issue should only affect these systems if admins have paid for extended support and received the December update.&lt;/p&gt;
-
-
-
-&lt;p&gt;This issue is caused by a December Patch Tuesday security update (KB5071546) that introduced changes to the MSMQ security model and NTFS permissions on the &lt;em&gt;C:\Windows\System32\MSMQ\ &lt;/em&gt;storage folder. MSMQ users now require write access to this folder, which is normally restricted to administrators, says Microsoft. As a result, attempts to send messages via MSMQ APIs might fail with resource errors.&lt;/p&gt;
-
-
-
-&lt;p&gt;“A workaround is available for affected devices,” says the Microsoft update. “To apply the workaround and mitigate this issue in your organization, please contact &lt;a href="https://support.serviceshub.microsoft.com/supportforbusiness/onboarding" rel="noreferrer noopener" target="_blank"&gt;Microsoft Support for business&lt;/a&gt;. We are investigating this issue and will provide more information when it is available.” &lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.linkedin.com/in/bicer/" rel="noreferrer noopener" target="_blank"&gt;Jack Bicer&lt;/a&gt;, director of vulnerability research at Action1, suggested as a temporary workaround for MSMQ failures that Windows admins grant write access to the MSMQ directory &lt;em&gt;C:\Windows\System32\msmq. &lt;/em&gt;Once Microsoft provides the official update, revert the directory permissions to their original state and deploy the fix, he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Danny Nguyen of Wicloud suggested on a Microsoft Learn forum that admins could either roll back the December security update (KB5071546) or adjust the permissions, as Bicer suggests. However, Nguyen urged admins to consult with their security team before making system-level permission changes.&lt;/p&gt;
-
-
-
-&lt;p&gt;A Microsoft spokesperson was asked for comment, but no response was received by press time.&lt;/p&gt;
-
-
-
-&lt;p&gt;This isn’t the first MSMQ problem in recent memory; &lt;a href="https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-30080" rel="noreferrer noopener" target="_blank"&gt;last year Microsoft discovered a remote code execution vulnerability &lt;/a&gt;(CVE-2024-30008) that carried a criticality rating of 9.8. &lt;/p&gt;
-
-
-
-&lt;p&gt;In this case, however, said Robert Beggs, head of Canadian incident response firm DigitalDefence, although the cause of the issue is a security patch, the impact and workaround are not strictly security issues. Therefore, he believes the fix is a workaround that does not involve security and security support, but regular support for a Windows system. &lt;/p&gt;
-
-
-
-&lt;p&gt;As for the company’s reason for asking admins to contact Microsoft Support for Business for the workaround, he suggested that Microsoft may want to spread the workload to ensure that security support is not overworked.&lt;/p&gt;
-
-
-
-&lt;p&gt;More broadly, warned Shipley, any update that leads to a business application failure is the kind of issue that turns admins off patching. December is the biggest month of the year for retail, and not the time for POS machines to go down because of the installation of a new patch.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.computerworld.com/article/4108289/microsoft-warns-msmq-may-fail-after-update-breaking-apps.html" target="_blank"&gt;Computerworld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4108360/microsoft-warns-msmq-may-fail-after-update-breaking-apps-2.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
-      <pubDate>Thu, 18 Dec 2025 03:17:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
-      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 18 Dec 2025 15:25:52 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -173,17 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 18 Dec 2025 15:25:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
-      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 18 Dec 2025 15:25:52 +0000</pubDate>
+      <pubDate>Thu, 18 Dec 2025 16:36:09 +0000</pubDate>
     </item>
     <item>
       <title>EU Most Wanted website revamped with new fugitives added</title>
@@ -193,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 18 Dec 2025 15:25:52 +0000</pubDate>
+      <pubDate>Thu, 18 Dec 2025 16:36:09 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
@@ -203,7 +67,27 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 18 Dec 2025 15:25:52 +0000</pubDate>
+      <pubDate>Thu, 18 Dec 2025 16:36:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
+      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 18 Dec 2025 16:36:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
+      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 18 Dec 2025 16:36:09 +0000</pubDate>
     </item>
     <item>
       <title>Adobe security advisory (AV25-823)</title>
@@ -232,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av25-825</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Wed, 10 Dec 2025 16:33:11 +0000</pubDate>
     </item>
     <item>
@@ -242,8 +126,20 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av25-826</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Wed, 10 Dec 2025 18:49:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>China-Aligned Threat Group Uses Windows Group Policy to Deploy Espionage Malware</title>
+      <link>https://thehackernews.com/2025/12/china-aligned-threat-group-uses-windows.html</link>
+      <description>A previously undocumented China-aligned threat cluster dubbed LongNosedGoblin has been attributed to a series of cyber attacks targeting governmental entities in Southeast Asia and Japan.
+The end goal of these attacks is cyber espionage, Slovak cybersecurity company ESET said in a report published today. The threat activity cluster has been assessed to be active since at least September 2023.
+"</description>
+      <guid isPermaLink="false">https://thehackernews.com/2025/12/china-aligned-threat-group-uses-windows.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.56</comments>
+      <pubDate>Thu, 18 Dec 2025 23:04:00 +0530</pubDate>
     </item>
     <item>
       <title>Russian APT group pivots to network edge device misconfigurations</title>
@@ -325,7 +221,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4107406/russian-apt-group-pivots-to-network-edge-device-misconfigurations.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 16 Dec 2025 23:54:27 +0000</pubDate>
     </item>
     <item>
@@ -336,7 +232,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Thu, 18 Dec 2025 15:25:52 +0000</pubDate>
+      <pubDate>Thu, 18 Dec 2025 16:36:09 +0000</pubDate>
     </item>
     <item>
       <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
@@ -346,7 +242,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.67</comments>
-      <pubDate>Thu, 18 Dec 2025 15:25:52 +0000</pubDate>
+      <pubDate>Thu, 18 Dec 2025 16:36:09 +0000</pubDate>
     </item>
     <item>
       <title>GitLab security advisory (AV25-827)</title>
@@ -355,7 +251,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-827</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Thu, 11 Dec 2025 15:11:06 +0000</pubDate>
     </item>
     <item>
@@ -365,7 +261,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-828</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Thu, 11 Dec 2025 15:16:36 +0000</pubDate>
     </item>
     <item>
@@ -375,7 +271,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-829</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Thu, 11 Dec 2025 15:21:14 +0000</pubDate>
     </item>
     <item>
@@ -495,7 +391,7 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4108496/cisco-confirms-zero-day-exploitation-of-secure-email-products.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Thu, 18 Dec 2025 10:58:30 +0000</pubDate>
     </item>
     <item>
@@ -626,7 +522,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4107317/the-devil-of-proposed-sec-ai-disclosure-rule-is-in-the-details.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 17 Dec 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1001,7 +897,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/557365/cloud-access-security-broker-buyers-guide.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 17 Dec 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1011,7 +907,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av25-830</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Fri, 12 Dec 2025 14:08:48 +0000</pubDate>
     </item>
     <item>
@@ -1021,8 +917,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av25-789</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Fri, 12 Dec 2025 14:11:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>FreePBX security advisory (AV25–831)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av25-831</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av25-831</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.87</comments>
+      <pubDate>Fri, 12 Dec 2025 16:41:18 +0000</pubDate>
     </item>
     <item>
       <title>A rapidly evolving criminal ecosystem: the escalating exploitation of vulnerable individuals</title>
@@ -1032,27 +938,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Thu, 18 Dec 2025 15:25:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>FreePBX security advisory (AV25–831)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av25-831</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av25-831</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
-      <pubDate>Fri, 12 Dec 2025 16:41:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
-      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
-      <pubDate>Thu, 18 Dec 2025 15:25:52 +0000</pubDate>
+      <pubDate>Thu, 18 Dec 2025 16:36:09 +0000</pubDate>
     </item>
     <item>
       <title>JumpCloud agent turns uninstall into a system shortcut</title>
@@ -1122,8 +1008,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4107744/jumpcloud-agent-turns-uninstall-into-a-system-shortcut.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Wed, 17 Dec 2025 11:37:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
+      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.91</comments>
+      <pubDate>Thu, 18 Dec 2025 16:36:09 +0000</pubDate>
     </item>
     <item>
       <title>CISA Flags Critical ASUS Live Update Flaw After Evidence of Active Exploitation</title>
@@ -1133,7 +1029,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://thehackernews.com/2025/12/cisa-flags-critical-asus-live-update.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Thu, 18 Dec 2025 10:31:00 +0530</pubDate>
     </item>
     <item>
@@ -1318,7 +1214,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://www.csoonline.com/article/4107332/do-liability-protection-rising-for-security-leaders-unless-youre-a-midtier-ciso.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Thu, 18 Dec 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1404,7 +1300,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://www.csoonline.com/article/4108430/russlands-einfluss-kritik-an-lucken-bei-cybersicherheit.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Thu, 18 Dec 2025 08:03:25 +0000</pubDate>
     </item>
     <item>
@@ -1414,7 +1310,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-019-vulnerabilities-impacting-fortinet-products-forticloud-sso-login-authentication-bypass-cve-2025-59718-cve-2025-59719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.82</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Mon, 15 Dec 2025 13:58:40 +0000</pubDate>
     </item>
     <item>
@@ -1424,7 +1320,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-832</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Mon, 15 Dec 2025 16:42:33 +0000</pubDate>
     </item>
     <item>
@@ -1434,7 +1330,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-833</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Mon, 15 Dec 2025 16:53:30 +0000</pubDate>
     </item>
     <item>
@@ -1444,7 +1340,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisory-av25-834</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Mon, 15 Dec 2025 17:10:44 +0000</pubDate>
     </item>
     <item>
@@ -1454,7 +1350,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-835</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Mon, 15 Dec 2025 17:25:10 +0000</pubDate>
     </item>
     <item>
@@ -1464,7 +1360,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-836</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.90</comments>
       <pubDate>Mon, 15 Dec 2025 19:18:26 +0000</pubDate>
     </item>
     <item>
@@ -1474,7 +1370,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-837</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Mon, 15 Dec 2025 19:28:09 +0000</pubDate>
     </item>
     <item>
@@ -1484,7 +1380,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-838</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Mon, 15 Dec 2025 19:36:43 +0000</pubDate>
     </item>
     <item>
@@ -1494,7 +1390,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-839</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Mon, 15 Dec 2025 19:49:08 +0000</pubDate>
     </item>
     <item>
@@ -1504,7 +1400,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av25-840</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Mon, 15 Dec 2025 19:56:49 +0000</pubDate>
     </item>
     <item>
@@ -1514,7 +1410,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-841</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Tue, 16 Dec 2025 17:02:46 +0000</pubDate>
     </item>
     <item>
@@ -1524,7 +1420,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-821</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.48</comments>
+      <comments>Score: 9.45</comments>
       <pubDate>Tue, 16 Dec 2025 19:31:35 +0000</pubDate>
     </item>
     <item>
@@ -1534,7 +1430,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-842</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.02</comments>
+      <comments>Score: 9.99</comments>
       <pubDate>Wed, 17 Dec 2025 14:34:22 +0000</pubDate>
     </item>
     <item>
@@ -1544,7 +1440,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-843</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.05</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Wed, 17 Dec 2025 15:25:20 +0000</pubDate>
     </item>
     <item>
@@ -1554,7 +1450,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.06</comments>
+      <comments>Score: 10.02</comments>
       <pubDate>Wed, 17 Dec 2025 15:39:24 +0000</pubDate>
     </item>
     <item>
@@ -1564,7 +1460,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-845</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.10</comments>
+      <comments>Score: 10.06</comments>
       <pubDate>Wed, 17 Dec 2025 16:54:30 +0000</pubDate>
     </item>
     <item>
@@ -1574,7 +1470,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-846</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.07</comments>
       <pubDate>Wed, 17 Dec 2025 17:18:01 +0000</pubDate>
     </item>
     <item>
@@ -1584,7 +1480,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-847</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.20</comments>
+      <comments>Score: 10.16</comments>
       <pubDate>Wed, 17 Dec 2025 20:01:56 +0000</pubDate>
     </item>
     <item>
@@ -1594,7 +1490,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-848</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.23</comments>
+      <comments>Score: 10.19</comments>
       <pubDate>Wed, 17 Dec 2025 20:49:24 +0000</pubDate>
     </item>
   </channel>
