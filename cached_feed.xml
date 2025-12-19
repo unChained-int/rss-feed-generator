@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 19 Dec 2025 14:25:12 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Dec 2025 15:26:24 +0000</lastBuildDate>
+    <item>
+      <title>Mozilla security advisory (AV25-819)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-819</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-819</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.35</comments>
+      <pubDate>Tue, 09 Dec 2025 20:40:37 +0000</pubDate>
+    </item>
     <item>
       <title>VMware security advisory (AV25-820)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-820</link>
@@ -30,88 +40,6 @@
       <pubDate>Tue, 09 Dec 2025 21:00:57 +0000</pubDate>
     </item>
     <item>
-      <title>JumpCloud agent turns uninstall into a system shortcut</title>
-      <link>https://www.csoonline.com/article/4107744/jumpcloud-agent-turns-uninstall-into-a-system-shortcut.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;JumpCloud’s Remote Assist for Windows agent contained a critical local privilege escalation flaw, allowing full system compromise.&lt;/p&gt;
-
-
-
-&lt;p&gt;Disclosed by XM Cyber, the vulnerability stems from insecure file operations during uninstall or update flows that execute with Windows NT AUTHORITY\SYSTEM privileges. The bug could allow a low-privileged local user to elevate themselves to full system control or induce denial-of-service conditions on corporate machines.&lt;/p&gt;
-
-
-
-&lt;p&gt;JumpCloud’s agent is widely used in enterprise environments as part of its cloud-based Directory-as-a-service platform, managing device access and remote support features across Windows endpoints. According to XM Cyber’s Hillel Pinto, attackers only need a local foothold to exploit the flaw, generally &lt;a href="https://www.csoonline.com/article/3970094/cybercriminals-switch-up-their-top-initial-access-vectors-of-choice.html"&gt;obtainable&lt;/a&gt; from phishing, remote support sessions, or developer machines.&lt;/p&gt;
-
-
-
-&lt;p&gt;Systems running Remote Assist for Windows before version 0.317 are vulnerable and need to be updated immediately to mitigate risks.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="privileged-uninstall-in-a-untrusted-temp-space"&gt;Privileged uninstall in a untrusted temp space&lt;/h2&gt;
-
-
-
-&lt;p&gt;The flaw, tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-34352"&gt;CVE-2025-34352&lt;/a&gt; and rated at CVSS 8.5 out of 10, highlights risks from improper handling of privileged operations on Windows endpoints. During uninstall or update operations, the JumpCloud agent triggers the Remote Assist uninstaller with system-level privileges, the highest possible authority in Windows.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, that routine performs create, write, execute, and delete actions on files in a user-writable %TEMP% subdirectory without validating the trustworthiness of the path or resetting access control lists.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because the uninstaller performs privileged file operations inside a user-controlled %TEMP% directory, a low-privileged attacker can abuse those operations to overwrite or delete protected system files.&lt;/p&gt;
-
-
-
-&lt;p&gt;“What we have is a JumpCloud process with NT AUTHORITY\SYSTEM privileges that is deleting, writing, and executing a file with a predictable filename from an untrusted path,” Pinto said in a blog &lt;a href="https://xmcyber.com/blog/jumpshot-xm-cyber-uncovers-critical-local-privilege-escalation-cve-2025-34352-in-jumpcloud-agent/" rel="noreferrer noopener" target="_blank"&gt;post&lt;/a&gt;. “The core of the exploit involves Link Following, utilizing mount points and symbolic links to redirect the privileged I/O operation.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="full-privilege-escalation-and-denial-of-service"&gt;Full privilege escalation and denial of service&lt;/h2&gt;
-
-
-
-&lt;p&gt;The vulnerability opens two primary exploitation vectors with significant operational impact: full privilege escalation to system level, and denial of service (DoS).&lt;/p&gt;
-
-
-
-&lt;p&gt;By manipulating filesystem paths and leveraging race conditions, an attacker can redirect the uninstaller’s operations to delete or overwrite protected installer configuration targets, ultimately triggering techniques that give them a system-level command prompt. System access on an enterprise endpoint effectively grants control over policy enforcement, credential theft paths, and lateral movement capabilities.&lt;/p&gt;
-
-
-
-&lt;p&gt;Alternatively, attackers can get the privileged process to write arbitrary data to sensitive system files (such as drivers), corrupting them and forcing blue screen of death (&lt;a href="https://www.csoonline.com/article/2589942/blue-screen-of-death-strikes-crowd-of-crowdstrike-servers.html"&gt;BSOD&lt;/a&gt;) conditions. This not only knocks machines offline but can require substantial remediation effort, particularly across distributed fleets.&lt;/p&gt;
-
-
-
-&lt;p&gt;Pinto said that updating to JumpCloud Remote Assist for Windows version 0.317.0 or later will remediate this issue. “My team and I responsibly disclosed the vulnerability to JumpCloud, which confirmed the findings and promptly released a patch.” While &gt;NIST&lt;/span&gt;’s National Vulnerability Database (NVD) marks the flaw as fixed and references the JumpCloud Agent release notes for patching, there is currently no note dedicated to the flaw on the page or on JumpCloud’s support site. JumpCloud did not immediately respond to CSO’s request for comments.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4107744/jumpcloud-agent-turns-uninstall-into-a-system-shortcut.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
-      <pubDate>Wed, 17 Dec 2025 11:37:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>CISA Flags Critical ASUS Live Update Flaw After Evidence of Active Exploitation</title>
-      <link>https://thehackernews.com/2025/12/cisa-flags-critical-asus-live-update.html</link>
-      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a critical flaw impacting ASUS Live Update to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation.
-The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been described as an "embedded malicious code vulnerability" introduced by means of a supply chain compromise</description>
-      <guid isPermaLink="false">https://thehackernews.com/2025/12/cisa-flags-critical-asus-live-update.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
-      <pubDate>Thu, 18 Dec 2025 10:31:00 +0530</pubDate>
-    </item>
-    <item>
       <title>New report explores use of robotics and unmanned systems in the fight against crime</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</link>
       <description>Europol has today published The Unmanned Future(s): The Impact of Robotics and Unmanned Systems on Law Enforcement. The report, produced by the Europol Innovation Lab, provides an in-depth analysis of how unmanned systems could change society, crime and law enforcement, and discusses the challenges and opportunities they present.</description>
@@ -119,7 +47,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.40</comments>
-      <pubDate>Fri, 19 Dec 2025 12:25:12 +0000</pubDate>
+      <pubDate>Fri, 19 Dec 2025 13:26:24 +0000</pubDate>
     </item>
     <item>
       <title>Adobe security advisory (AV25-823)</title>
@@ -162,6 +90,16 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <pubDate>Wed, 10 Dec 2025 18:49:20 +0000</pubDate>
     </item>
     <item>
+      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
+      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 19 Dec 2025 13:26:24 +0000</pubDate>
+    </item>
+    <item>
       <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
       <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
@@ -169,7 +107,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 19 Dec 2025 12:25:12 +0000</pubDate>
+      <pubDate>Fri, 19 Dec 2025 13:26:24 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -179,7 +117,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 19 Dec 2025 12:25:12 +0000</pubDate>
+      <pubDate>Fri, 19 Dec 2025 13:26:24 +0000</pubDate>
     </item>
     <item>
       <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
@@ -189,7 +127,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 19 Dec 2025 12:25:12 +0000</pubDate>
+      <pubDate>Fri, 19 Dec 2025 13:26:24 +0000</pubDate>
     </item>
     <item>
       <title>EU Most Wanted website revamped with new fugitives added</title>
@@ -199,17 +137,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 19 Dec 2025 12:25:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
-      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 19 Dec 2025 12:25:12 +0000</pubDate>
+      <pubDate>Fri, 19 Dec 2025 13:26:24 +0000</pubDate>
     </item>
     <item>
       <title>GitLab security advisory (AV25-827)</title>
@@ -218,7 +146,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av25-827</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Thu, 11 Dec 2025 15:11:06 +0000</pubDate>
     </item>
     <item>
@@ -228,7 +156,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-828</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Thu, 11 Dec 2025 15:16:36 +0000</pubDate>
     </item>
     <item>
@@ -238,7 +166,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-829</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Thu, 11 Dec 2025 15:21:14 +0000</pubDate>
     </item>
     <item>
@@ -249,7 +177,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Fri, 19 Dec 2025 12:25:12 +0000</pubDate>
+      <pubDate>Fri, 19 Dec 2025 13:26:24 +0000</pubDate>
     </item>
     <item>
       <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
@@ -259,7 +187,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.67</comments>
-      <pubDate>Fri, 19 Dec 2025 12:25:12 +0000</pubDate>
+      <pubDate>Fri, 19 Dec 2025 13:26:24 +0000</pubDate>
     </item>
     <item>
       <title>Atlassian security advisory (AV25-830)</title>
@@ -288,7 +216,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av25-831</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Fri, 12 Dec 2025 16:41:18 +0000</pubDate>
     </item>
     <item>
@@ -365,18 +293,8 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4109421/cisco-bestatigt-zero-day-exploit-fur-secure-email.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Fri, 19 Dec 2025 10:29:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>A rapidly evolving criminal ecosystem: the escalating exploitation of vulnerable individuals</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/rapidly-evolving-criminal-ecosystem-escalating-exploitation-of-vulnerable-individuals</link>
-      <description>Migrant smugglers and human traffickers are exploiting today’s geopolitical instability and economic pressures with unprecedented agility. Their business models continue to evolve at high speed, allowing criminals to recruit, transport and exploit vulnerable individuals while maximising profits. As a result, the EU faces a constantly shifting and increasingly digital criminal landscape. Both crime areas have undergone significant transformation in recent years, fuelled in particular by the rapid expansion of online tools for recruitment, advertising and exploitation. These and other latest trends are outlined in the 2025 Europol’s European Migrant Smuggling Centre yearly activity overview, published today.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/rapidly-evolving-criminal-ecosystem-escalating-exploitation-of-vulnerable-individuals</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
-      <pubDate>Fri, 19 Dec 2025 12:25:12 +0000</pubDate>
     </item>
     <item>
       <title>D&amp;O liability protection rising for security leaders — unless you’re a midtier CISO</title>
@@ -560,18 +478,18 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://www.csoonline.com/article/4107332/do-liability-protection-rising-for-security-leaders-unless-youre-a-midtier-ciso.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Thu, 18 Dec 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
-      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
+      <title>A rapidly evolving criminal ecosystem: the escalating exploitation of vulnerable individuals</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/rapidly-evolving-criminal-ecosystem-escalating-exploitation-of-vulnerable-individuals</link>
+      <description>Migrant smugglers and human traffickers are exploiting today’s geopolitical instability and economic pressures with unprecedented agility. Their business models continue to evolve at high speed, allowing criminals to recruit, transport and exploit vulnerable individuals while maximising profits. As a result, the EU faces a constantly shifting and increasingly digital criminal landscape. Both crime areas have undergone significant transformation in recent years, fuelled in particular by the rapid expansion of online tools for recruitment, advertising and exploitation. These and other latest trends are outlined in the 2025 Europol’s European Migrant Smuggling Centre yearly activity overview, published today.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/rapidly-evolving-criminal-ecosystem-escalating-exploitation-of-vulnerable-individuals</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
-      <pubDate>Fri, 19 Dec 2025 12:25:12 +0000</pubDate>
+      <comments>Score: 7.88</comments>
+      <pubDate>Fri, 19 Dec 2025 13:26:24 +0000</pubDate>
     </item>
     <item>
       <title>Russlands Einfluss – Kritik an Lücken bei Cybersicherheit</title>
@@ -656,8 +574,18 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://www.csoonline.com/article/4108430/russlands-einfluss-kritik-an-lucken-bei-cybersicherheit.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Thu, 18 Dec 2025 08:03:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
+      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.91</comments>
+      <pubDate>Fri, 19 Dec 2025 13:26:24 +0000</pubDate>
     </item>
     <item>
       <title>The innovative CISO’s bucket list: Human-led transformation at the core</title>
@@ -783,7 +711,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://www.csoonline.com/article/4108133/the-innovative-cisos-bucket-list-human-led-transformation-at-the-core.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Thu, 18 Dec 2025 15:30:00 +0000</pubDate>
     </item>
     <item>
@@ -793,18 +721,8 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-019-vulnerabilities-impacting-fortinet-products-forticloud-sso-login-authentication-bypass-cve-2025-59718-cve-2025-59719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Mon, 15 Dec 2025 13:58:40 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV25-832)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-832</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-832</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
-      <pubDate>Mon, 15 Dec 2025 16:42:33 +0000</pubDate>
     </item>
     <item>
       <title>HPE OneView vulnerable to remote code execution attack</title>
@@ -862,8 +780,18 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://www.csoonline.com/article/4109162/hpe-oneview-vulnerable-to-remote-code-execution-attack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Fri, 19 Dec 2025 01:49:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV25-832)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-832</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-832</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.49</comments>
+      <pubDate>Mon, 15 Dec 2025 16:42:33 +0000</pubDate>
     </item>
     <item>
       <title>HPE security advisory (AV25-833)</title>
@@ -872,7 +800,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-833</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Mon, 15 Dec 2025 16:53:30 +0000</pubDate>
     </item>
     <item>
@@ -882,7 +810,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisory-av25-834</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Mon, 15 Dec 2025 17:10:44 +0000</pubDate>
     </item>
     <item>
@@ -892,7 +820,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-835</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Mon, 15 Dec 2025 17:25:10 +0000</pubDate>
     </item>
     <item>
@@ -902,7 +830,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-836</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Mon, 15 Dec 2025 19:18:26 +0000</pubDate>
     </item>
     <item>
@@ -912,7 +840,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-837</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Mon, 15 Dec 2025 19:28:09 +0000</pubDate>
     </item>
     <item>
@@ -922,7 +850,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-838</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Mon, 15 Dec 2025 19:36:43 +0000</pubDate>
     </item>
     <item>
@@ -932,7 +860,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-839</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Mon, 15 Dec 2025 19:49:08 +0000</pubDate>
     </item>
     <item>
@@ -942,7 +870,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av25-840</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Mon, 15 Dec 2025 19:56:49 +0000</pubDate>
     </item>
     <item>
@@ -1141,7 +1069,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://www.csoonline.com/article/4109123/managing-agentic-ai-risk-lessons-from-the-owasp-top-10.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Fri, 19 Dec 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1151,7 +1079,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-841</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Tue, 16 Dec 2025 17:02:46 +0000</pubDate>
     </item>
     <item>
@@ -1161,7 +1089,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av25-821</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Tue, 16 Dec 2025 19:31:35 +0000</pubDate>
     </item>
     <item>
@@ -1171,7 +1099,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-842</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.40</comments>
       <pubDate>Wed, 17 Dec 2025 14:34:22 +0000</pubDate>
     </item>
     <item>
@@ -1181,7 +1109,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-843</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Wed, 17 Dec 2025 15:25:20 +0000</pubDate>
     </item>
     <item>
@@ -1191,7 +1119,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.46</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Wed, 17 Dec 2025 15:39:24 +0000</pubDate>
     </item>
     <item>
@@ -1201,7 +1129,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-845</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.49</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Wed, 17 Dec 2025 16:54:30 +0000</pubDate>
     </item>
     <item>
@@ -1211,7 +1139,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-846</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Wed, 17 Dec 2025 17:18:01 +0000</pubDate>
     </item>
     <item>
@@ -1221,7 +1149,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-847</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.54</comments>
       <pubDate>Wed, 17 Dec 2025 20:01:56 +0000</pubDate>
     </item>
     <item>
@@ -1231,8 +1159,18 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-848</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.59</comments>
+      <comments>Score: 9.57</comments>
       <pubDate>Wed, 17 Dec 2025 20:49:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dismantling Defenses: Trump 2.0 Cyber Year in Review</title>
+      <link>https://krebsonsecurity.com/2025/12/dismantling-defenses-trump-2-0-cyber-year-in-review/</link>
+      <description>The Trump administration has pursued a staggering range of policy pivots this past year that threaten to weaken the nation’s ability and willingness to address a broad spectrum of technology challenges, from cybersecurity and privacy to countering disinformation, fraud and corruption. These shifts, along with the president’s efforts to restrict free speech and freedom of the press, have come at such a rapid clip that many readers probably aren’t even aware of them all.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2025/12/dismantling-defenses-trump-2-0-cyber-year-in-review/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.73</comments>
+      <pubDate>Fri, 19 Dec 2025 15:14:55 +0000</pubDate>
     </item>
     <item>
       <title>Mozilla security advisory (AV25-849)</title>
@@ -1241,7 +1179,7 @@ The vulnerability, tracked as CVE-2025-59374 (CVSS score: 9.3), has been describ
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-849</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.31</comments>
+      <comments>Score: 10.28</comments>
       <pubDate>Thu, 18 Dec 2025 20:16:53 +0000</pubDate>
     </item>
   </channel>
