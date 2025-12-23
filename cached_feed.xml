@@ -8,78 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Dec 2025 18:35:46 +0000</lastBuildDate>
-    <item>
-      <title>WatchGuard fixes ‘critical’ zero-day allowing firewall takeover</title>
-      <link>https://www.csoonline.com/article/4109884/watchguard-fixes-critical-zero-day-allowing-firewall-takeover.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;WatchGuard has issued an urgent patch alert for its Firebox firewall appliances after discovering a critical-rated vulnerability that is under exploit by threat actors.&lt;/p&gt;
-
-
-
-&lt;p&gt;Tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14733" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-14733&lt;/a&gt;, with a CVSS score of 9.3, the flaw is an Out-of-bounds Write vulnerability affecting the iked process, a WatchGuard Fireware OS component responsible for the IKEv2 key exchange in IPSec VPNs.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to the &lt;a href="https://www.watchguard.com/wgrd-psirt/advisory/wgsa-2025-00027" rel="noreferrer noopener" target="_blank"&gt;WatchGuard advisory&lt;/a&gt;, this weakness could “allow a remote unauthenticated attacker to execute arbitrary code,” taking control of the appliance through remote code execution (RCE) without having to log in.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because it was under attack before a patch was made available by WatchGuard on December 18, this makes CVE-2025-14733 a bona fide zero-day vulnerability. The first job for admins should therefore be to check Firebox appliances for signs of current or recent compromise.&lt;/p&gt;
-
-
-
-&lt;p&gt;WatchGuard’s advisory lists four IP addresses associated with exploitation; outbound traffic to them is “a strong indicator of compromise,” while inbound connections from them “could indicate reconnaissance efforts or exploit attempts,” the advisory said. With logging enabled, other strong indicators were an IKE_AUTH request log message with an abnormally large CERT payload greater than 2,000 bytes, or evidence of an iked process hang, the company said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Affected Fireware OS versions are 2025.1 up to and including 2025.1.3, 12.0 up to and including 12.11.5, and legacy 11.10.2 up to and including 11.12.4_Update1. &lt;/p&gt;
-
-
-
-&lt;p&gt;The resolved versions are 2025.1.4, 12.11.6, 12.5.15 (T15 &amp;amp; T35 models), and 12.3.1_Update4 (B728352) for the FIPS-certified release. There is no fix for 11.x, which is considered &lt;a href="https://www.watchguard.com/wgrd-trust-center/end-of-life-policy" rel="noreferrer noopener" target="_blank"&gt;end of life&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Importantly, WatchGuard warned, patching may not be enough: “If the Firebox was previously configured with the mobile user VPN with IKEv2 or a branch office VPN using IKEv2 to a dynamic gateway peer, and both of those configurations have since been deleted, that Firebox may still be vulnerable if a branch office VPN to a static gateway peer is still configured.”&lt;/p&gt;
-
-
-
-&lt;p&gt;And some admins have even more post-patching tasks to perform, it said, noting, “in addition to installing the latest Fireware OS that contains the fix, administrators that have confirmed threat actor activity on their Firebox appliances must take precautions to rotate all locally stored secrets on vulnerable Firebox appliances.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="deja-vu"&gt;Deja vu&lt;/h2&gt;
-
-
-
-&lt;p&gt;In September, WatchGuard patched a similar &lt;a href="https://www.csoonline.com/article/4059623/watchguard-patches-critical-vpn-flaw-in-firewalls-that-could-lead-to-compromise.html" target="_blank"&gt;Firebox vulnerability, CVE-2025-9242&lt;/a&gt;, also affecting the iked VPN configuration and given a CVSS score of 9.3. At the time, WatchGuard said there were no reports of active exploitation, but by October, the company had &lt;a href="https://www.watchguard.com/wgrd-psirt/advisory/wgsa-2025-00015" rel="noreferrer noopener" target="_blank"&gt;revised this assessment&lt;/a&gt; after exploitation attempts were detected.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is a reminder not to read initial vulnerability assessments for this type of infrastructure too optimistically — exploitation is frequently detected after a flaw has been made public. Firewalls and VPNs are major targets for cybercriminals, and every significant vulnerability in them represents a clear and present cyber security risk.&lt;/p&gt;
-
-
-
-&lt;p&gt;Unfortunately, the evidence shows that some WatchGuard customers don’t patch vulnerabilities as quickly as they should. In October, &lt;a href="https://x.com/Shadowserver/status/1979902019696509099" rel="noreferrer noopener" target="_blank"&gt;a scan by The Shadowserver Foundation&lt;/a&gt; found that over 71,000 Firebox appliances had not yet been patched for CVE-2025-9242, including 23,000 in the US. Despite its zero-day status, it’s likely to be a similar story for CVE-2025-14733.&lt;/p&gt;
-
-
-
-&lt;p&gt;Slow or reluctant patching might also explain why Russian-aligned ‘Sandworm’ hackers were recently discovered to be &lt;a href="https://www.csoonline.com/article/4107406/russian-apt-group-pivots-to-network-edge-device-misconfigurations.html" target="_blank"&gt;targeting WatchGuard Firebox and XTM appliances&lt;/a&gt; by exploiting CVEs dating back several years.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4109884/watchguard-fixes-critical-zero-day-allowing-firewall-takeover.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Fri, 19 Dec 2025 17:40:54 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 23 Dec 2025 19:20:16 +0000</lastBuildDate>
     <item>
       <title>AL25-019 - Vulnerabilities impacting Fortinet products - FortiCloud SSO Login Authentication Bypass - CVE-2025-59718 and CVE-2025-59719</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/al25-019-vulnerabilities-impacting-fortinet-products-forticloud-sso-login-authentication-bypass-cve-2025-59718-cve-2025-59719</link>
@@ -87,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-019-vulnerabilities-impacting-fortinet-products-forticloud-sso-login-authentication-bypass-cve-2025-59718-cve-2025-59719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Mon, 15 Dec 2025 13:58:40 +0000</pubDate>
     </item>
     <item>
@@ -98,7 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Tue, 23 Dec 2025 16:35:46 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 17:20:16 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -108,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Tue, 23 Dec 2025 16:35:46 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 17:20:16 +0000</pubDate>
     </item>
     <item>
       <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
@@ -118,7 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Tue, 23 Dec 2025 16:35:46 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 17:20:16 +0000</pubDate>
     </item>
     <item>
       <title>EU Most Wanted website revamped with new fugitives added</title>
@@ -128,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Tue, 23 Dec 2025 16:35:46 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 17:20:16 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
@@ -138,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Tue, 23 Dec 2025 16:35:46 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 17:20:16 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft Edge security advisory (AV25-832)</title>
@@ -187,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-836</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Mon, 15 Dec 2025 19:18:26 +0000</pubDate>
     </item>
     <item>
@@ -197,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-837</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Mon, 15 Dec 2025 19:28:09 +0000</pubDate>
     </item>
     <item>
@@ -207,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-838</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Mon, 15 Dec 2025 19:36:43 +0000</pubDate>
     </item>
     <item>
@@ -217,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-839</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Mon, 15 Dec 2025 19:49:08 +0000</pubDate>
     </item>
     <item>
@@ -227,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av25-840</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Mon, 15 Dec 2025 19:56:49 +0000</pubDate>
     </item>
     <item>
@@ -238,17 +167,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Tue, 23 Dec 2025 16:35:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/coordinated-strike-hits-violent-criminal-network-behind-large-scale-illegal-gambling-and-money-laundering-in-sweden</link>
-      <description>A coordinated law enforcement operation carried out in Sweden and Spain between 28 and 29 November targeted a violent criminal network operating in the Stockholm area. The group is believed to run extensive illegal gambling operations and launder significant criminal proceeds, both for its own benefit and for other criminal actors. The network is also linked to drug trafficking in Sweden and across the Nordic region, reinforcing its presence in local and regional criminal markets.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/coordinated-strike-hits-violent-criminal-network-behind-large-scale-illegal-gambling-and-money-laundering-in-sweden</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
-      <pubDate>Tue, 23 Dec 2025 16:35:46 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 17:20:16 +0000</pubDate>
     </item>
     <item>
       <title>Podcast: Die IT-Tops und -Flops 2025</title>
@@ -272,7 +191,7 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="ki-grose-versprechen-bittere-realitat"&gt;KI: Große Versprechen, bittere Realität&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="ki-grosse-versprechen-bittere-realitaet"&gt;KI: Große Versprechen, bittere Realität&lt;/h2&gt;
 
 
 
@@ -296,7 +215,7 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="digitale-souveranitat-zwischen-anspruch-und-wirklichkeit"&gt;Digitale Souveränität zwischen Anspruch und Wirklichkeit&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="digitale-souveraenitaet-zwischen-anspruch-und-wirklichkeit"&gt;Digitale Souveränität zwischen Anspruch und Wirklichkeit&lt;/h2&gt;
 
 
 
@@ -335,7 +254,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4107605/podcast-die-it-tops-und-flops-2025-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Mon, 22 Dec 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -513,8 +432,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3842982/6-wichtige-punkte-fur-ihren-incident-response-plan.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Mon, 22 Dec 2025 04:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/coordinated-strike-hits-violent-criminal-network-behind-large-scale-illegal-gambling-and-money-laundering-in-sweden</link>
+      <description>A coordinated law enforcement operation carried out in Sweden and Spain between 28 and 29 November targeted a violent criminal network operating in the Stockholm area. The group is believed to run extensive illegal gambling operations and launder significant criminal proceeds, both for its own benefit and for other criminal actors. The network is also linked to drug trafficking in Sweden and across the Nordic region, reinforcing its presence in local and regional criminal markets.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/coordinated-strike-hits-violent-criminal-network-behind-large-scale-illegal-gambling-and-money-laundering-in-sweden</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.67</comments>
+      <pubDate>Tue, 23 Dec 2025 17:20:16 +0000</pubDate>
     </item>
     <item>
       <title>Red Hat security advisory (AV25-841)</title>
@@ -680,7 +609,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4109992/what-cisos-should-know-about-the-solarwinds-lawsuit-dismissal.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Mon, 22 Dec 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -690,7 +619,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av25-842</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Wed, 17 Dec 2025 14:34:22 +0000</pubDate>
     </item>
     <item>
@@ -710,7 +639,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Wed, 17 Dec 2025 15:39:24 +0000</pubDate>
     </item>
     <item>
@@ -720,8 +649,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av25-845</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Wed, 17 Dec 2025 16:54:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV25-846)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-846</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-846</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.87</comments>
+      <pubDate>Wed, 17 Dec 2025 17:18:01 +0000</pubDate>
     </item>
     <item>
       <title>A rapidly evolving criminal ecosystem: the escalating exploitation of vulnerable individuals</title>
@@ -731,17 +670,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Tue, 23 Dec 2025 16:35:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV25-846)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-846</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-846</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
-      <pubDate>Wed, 17 Dec 2025 17:18:01 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 17:20:16 +0000</pubDate>
     </item>
     <item>
       <title>Drupal security advisory (AV25-847)</title>
@@ -750,18 +679,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av25-847</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Wed, 17 Dec 2025 20:01:56 +0000</pubDate>
-    </item>
-    <item>
-      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
-      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
-      <pubDate>Tue, 23 Dec 2025 16:35:46 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV25-848) – Update 1</title>
@@ -774,34 +693,24 @@
       <pubDate>Wed, 17 Dec 2025 20:49:24 +0000</pubDate>
     </item>
     <item>
+      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
+      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.91</comments>
+      <pubDate>Tue, 23 Dec 2025 17:20:16 +0000</pubDate>
+    </item>
+    <item>
       <title>Mozilla security advisory (AV25-849)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-849</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-849</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Thu, 18 Dec 2025 20:16:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV25-851)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-851</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-851</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
-      <pubDate>Fri, 19 Dec 2025 15:35:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV25-852)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-852</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-852</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
-      <pubDate>Fri, 19 Dec 2025 15:43:43 +0000</pubDate>
     </item>
     <item>
       <title>Der Aufstieg des Chief Trust Officers: Wo passt der CISO hinein?</title>
@@ -869,7 +778,7 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="ciso-und-ctro-modell-fur-eine-funktionierende-partnerschaft"&gt;CISO und CTrO: Modell für eine funktionierende Partnerschaft?&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="ciso-und-ctro-modell-fuer-eine-funktionierende-partnerschaft"&gt;CISO und CTrO: Modell für eine funktionierende Partnerschaft?&lt;/h2&gt;
 
 
 
@@ -969,7 +878,7 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="ist-der-chief-trust-officer-der-nachste-schritt-fur-cisos"&gt;Ist der Chief Trust Officer der nächste Schritt für CISOs?&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="ist-der-chief-trust-officer-der-naechste-schritt-fuer-cisos"&gt;Ist der Chief Trust Officer der nächste Schritt für CISOs?&lt;/h2&gt;
 
 
 
@@ -994,7 +903,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4107832/der-aufstieg-des-chief-trust-officers-wo-passt-der-ciso-hinein.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Tue, 23 Dec 2025 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1080,8 +989,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3492180/cyber-risk-assessments-risikobewertung-hilft-cisos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Tue, 23 Dec 2025 04:01:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV25-851)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-851</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av25-851</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.42</comments>
+      <pubDate>Fri, 19 Dec 2025 15:35:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV25-852)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-852</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av25-852</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.42</comments>
+      <pubDate>Fri, 19 Dec 2025 15:43:43 +0000</pubDate>
     </item>
     <item>
       <title>HPE security advisory (AV25-853)</title>
@@ -1090,7 +1019,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-853</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Fri, 19 Dec 2025 20:41:30 +0000</pubDate>
     </item>
     <item>
@@ -1100,7 +1029,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-850</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Fri, 19 Dec 2025 20:55:26 +0000</pubDate>
     </item>
     <item>
@@ -1283,7 +1212,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4109999/agentic-ai-already-hinting-at-cybersecuritys-pending-identity-crisis.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Tue, 23 Dec 2025 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1514,7 +1443,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4110657/why-outsourced-cyber-defenses-create-systemic-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.77</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Tue, 23 Dec 2025 13:01:00 +0000</pubDate>
     </item>
     <item>
@@ -1617,7 +1546,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4111091/south-korean-firm-hit-with-us-investor-lawsuit-over-data-breach-disclosure-failures.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.75</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Tue, 23 Dec 2025 12:29:43 +0000</pubDate>
     </item>
     <item>
@@ -1627,7 +1556,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-854</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.04</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Mon, 22 Dec 2025 16:08:22 +0000</pubDate>
     </item>
     <item>
@@ -1637,7 +1566,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-855</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.05</comments>
+      <comments>Score: 10.03</comments>
       <pubDate>Mon, 22 Dec 2025 16:43:04 +0000</pubDate>
     </item>
     <item>
@@ -1647,7 +1576,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-856</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.07</comments>
+      <comments>Score: 10.04</comments>
       <pubDate>Mon, 22 Dec 2025 17:04:31 +0000</pubDate>
     </item>
     <item>
@@ -1657,7 +1586,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av25-857</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.08</comments>
       <pubDate>Mon, 22 Dec 2025 18:17:07 +0000</pubDate>
     </item>
     <item>
@@ -1667,7 +1596,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-020-vulnerability-impacting-watchguard-fireware-os-cve-2025-14733</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.15</comments>
+      <comments>Score: 10.12</comments>
       <pubDate>Mon, 22 Dec 2025 19:37:15 +0000</pubDate>
     </item>
     <item>
@@ -1677,7 +1606,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-858</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.83</comments>
+      <comments>Score: 10.80</comments>
       <pubDate>Tue, 23 Dec 2025 14:21:20 +0000</pubDate>
     </item>
     <item>
@@ -1687,7 +1616,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av25-859</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.83</comments>
+      <comments>Score: 10.80</comments>
       <pubDate>Tue, 23 Dec 2025 14:27:19 +0000</pubDate>
     </item>
     <item>
@@ -1697,8 +1626,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-860</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.91</comments>
+      <comments>Score: 10.88</comments>
       <pubDate>Tue, 23 Dec 2025 16:19:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>TeamViewer security advisory (AV25-861)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av25-861</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av25-861</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.98</comments>
+      <pubDate>Tue, 23 Dec 2025 18:56:58 +0000</pubDate>
     </item>
   </channel>
 </rss>
