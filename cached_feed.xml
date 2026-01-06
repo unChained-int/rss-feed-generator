@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Jan 2026 12:51:33 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Jan 2026 13:40:17 +0000</lastBuildDate>
+    <item>
+      <title>VMware security advisory (AV25-839)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-839</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-839</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.02</comments>
+      <pubDate>Mon, 15 Dec 2025 19:49:08 +0000</pubDate>
+    </item>
     <item>
       <title>ConnectWise security advisory (AV25-840)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av25-840</link>
@@ -38,101 +48,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.02</comments>
       <pubDate>Tue, 16 Dec 2025 19:31:35 +0000</pubDate>
-    </item>
-    <item>
-      <title>Critical vulnerability in IBM API Connect could allow authentication bypass</title>
-      <link>https://www.csoonline.com/article/4112265/critical-vulnerability-in-ibm-api-connect-could-allow-authentication-bypass-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;IBM is urging customers to quickly patch a critical vulnerability in its API Connect platform that could allow remote attackers to bypass authentication.&lt;/p&gt;
-
-
-
-&lt;p&gt;The company describes &lt;a href="https://www.ibm.com/products/api-connect" rel="noreferrer noopener" target="_blank"&gt;API Connect&lt;/a&gt; as a full lifecycle application programming interface (API) gateway used “to create, test, manage, secure, analyze, and socialize APIs.” &lt;/p&gt;
-
-
-
-&lt;p&gt;It particularly touts it as a way to “unlock the potential of agentic AI” by providing a central point of control for access to AI services via APIs. The platform also includes API Agent, which automates tasks across the API lifecycle using AI.&lt;/p&gt;
-
-
-
-&lt;p&gt;A key component is a customizable self-service portal that allows developers to easily onboard themselves, and to discover and consume multiple types of API, including SOAP, REST, events, ASyncAPIs, GraphQL, and others.&lt;/p&gt;
-
-
-
-&lt;p&gt;The flaw, tracked as &lt;a href="https://www.cve.org/CVERecord?id=CVE-2025-13915" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-13915&lt;/a&gt;, affects IBM API Connect versions 10.0.8.0 through 10.0.8.5, and version 10.0.11.0, and could give unauthorized access to the exposed applications, with no user interaction required.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="an-architectural-assumption-is-broken"&gt;An architectural assumption is broken&lt;/h2&gt;
-
-
-
-&lt;p&gt;“CVE-2025-13915 is not best understood as a security bug,” said &lt;a href="https://greyhoundresearch.com/svg/" rel="noreferrer noopener" target="_blank"&gt;Sanchit Vir Gogia&lt;/a&gt;, chief analyst at Greyhound Research. “It is better understood as a moment where a long standing architectural assumption finally breaks in the open. The assumption is simple and deeply embedded in enterprise design: If traffic passes through the API gateway, identity has been enforced and trust has been established. This vulnerability proves that assumption can fail completely.”&lt;/p&gt;
-
-
-
-&lt;p&gt;He noted that the classification of the weakness, which maps to &lt;a href="https://cwe.mitre.org/data/definitions/305.html" rel="noreferrer noopener" target="_blank"&gt;CWE-305&lt;/a&gt;, is important because it rules out a whole class of what he called comforting explanations. “This is not stolen credentials. It is not role misconfiguration. It is not a permissions mistake,” he said. “The authentication enforcement itself can be circumvented.” &lt;/p&gt;
-
-
-
-&lt;p&gt;When that happens, he explained, downstream services do not simply face elevated risk, they lose the foundation on which their access decisions were built because they do not revalidate identity. They were never designed to; they inherit trust. &lt;/p&gt;
-
-
-
-&lt;p&gt;“Once enforcement fails upstream, inherited trust becomes unearned trust, and the exposure propagates silently,”  he said. “This class of vulnerability aligns with automation, broad scanning, and opportunistic probing rather than careful targeting.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="interim-fixes-provided"&gt;Interim fixes provided&lt;/h2&gt;
-
-
-
-&lt;p&gt;IBM said that the issue was discovered during internal testing, and it has provided interim fixes for each affected version of the software, with individual update details for VMware, OCP/CP4I, and Kubernetes.&lt;/p&gt;
-
-
-
-&lt;p&gt;The only mitigation suggested for the flaw, according to IBM’s &lt;a href="https://www.ibm.com/support/pages/node/7255149" rel="noreferrer noopener" target="_blank"&gt;security bulletin&lt;/a&gt;, is this: “Customers unable to install the interim fix should disable self-service sign-up on their Developer Portal if enabled, which will help minimize their exposure to this vulnerability.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The company also notes in its &lt;a href="https://www.ibm.com/support/pages/node/7255318" rel="noreferrer noopener" target="_blank"&gt;installation instructions&lt;/a&gt; for the fixes that the image overrides described in the document must be removed when upgrading to the next release or fixpack.&lt;/p&gt;
-
-
-
-&lt;p&gt;This, said Gogia, further elevates the risk. “That is not a cosmetic detail,” he noted. “Management planes define configuration truth, lifecycle control, and operational authority across the platform. When remediation touches this layer, the vulnerability sits close to the control core, not at an isolated gateway edge. That raises both blast radius and remediation risk.” &lt;/p&gt;
-
-
-
-&lt;p&gt;This is because errors in these areas can turn into prolonged exposure or service instability. “[Image overrides] also introduce a governance hazard: Image overrides create shadow state; if they are not explicitly removed later, they persist quietly,” he pointed out. “Over time, they drift out of visibility, ownership, and audit scope. This is how temporary fixes turn into long term risk.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="most-valuable-outcome-learning"&gt;Most valuable outcome: Learning&lt;/h2&gt;
-
-
-
-&lt;p&gt;He added that the operational challenges involved in remediation are not so much in knowing what has to be done, but in doing it fast enough without breaking the business. And, he said, API governance now needs to include up to date inventories of APIs, their versions, dependencies, and exposure points, as well as monitoring of behavior.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The most valuable outcome here is not closure,” Gogia observed. “It is learning. Enterprises should ask what would have happened if this flaw had been exploited quietly for weeks. Which services would have trusted the gateway implicitly? Which logs would have shown abnormal behavior? Which teams would have noticed first? Those answers reveal whether trust assumptions are visible or invisible. Organizations that stop at patching will miss a rare opportunity to strengthen resilience before the next control plane failure arrives.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.infoworld.com/article/4112257/critical-vulnerability-in-ibm-api-connect-could-allow-authentication-bypass.html" target="_blank"&gt;InfoWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4112265/critical-vulnerability-in-ibm-api-connect-could-allow-authentication-bypass-2.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.02</comments>
-      <pubDate>Thu, 01 Jan 2026 01:55:48 +0000</pubDate>
     </item>
     <item>
       <title>Tenable security advisory (AV25-842)</title>
@@ -331,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-860</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.13</comments>
+      <comments>Score: 7.12</comments>
       <pubDate>Tue, 23 Dec 2025 16:19:21 +0000</pubDate>
     </item>
     <item>
@@ -362,57 +277,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.40</comments>
-      <pubDate>Tue, 06 Jan 2026 10:51:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</link>
-      <description>Europol Deputy Executive Director for Governance, Jurgen Ebner, joined the Heads of EU Justice and Home Affairs Agencies in Vienna to reflect on joint achievements and align their future cooperation with the wider EU priorities.Marking the 25th anniversary of the EU Charter of Fundamental Rights, they adopted a joint statement pledging to intensify efforts to uphold and promote fundamental rights...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 06 Jan 2026 10:51:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Most Wanted website revamped with new fugitives added</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
-      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 06 Jan 2026 10:51:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
-      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 06 Jan 2026 10:51:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
-      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 06 Jan 2026 10:51:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
-      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 06 Jan 2026 10:51:33 +0000</pubDate>
+      <pubDate>Tue, 06 Jan 2026 11:40:17 +0000</pubDate>
     </item>
     <item>
       <title>VS Code Forks Recommend Missing Extensions, Creating Supply Chain Risk in Open VSX</title>
@@ -422,8 +287,58 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://thehackernews.com/2026/01/vs-code-forks-recommend-missing.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Tue, 06 Jan 2026 16:55:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
+      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 06 Jan 2026 11:40:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</link>
+      <description>Europol Deputy Executive Director for Governance, Jurgen Ebner, joined the Heads of EU Justice and Home Affairs Agencies in Vienna to reflect on joint achievements and align their future cooperation with the wider EU priorities.Marking the 25th anniversary of the EU Charter of Fundamental Rights, they adopted a joint statement pledging to intensify efforts to uphold and promote fundamental rights...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 06 Jan 2026 11:40:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
+      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 06 Jan 2026 11:40:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Most Wanted website revamped with new fugitives added</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
+      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 06 Jan 2026 11:40:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
+      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 06 Jan 2026 11:40:17 +0000</pubDate>
     </item>
     <item>
       <title>AL25-021 - Vulnerability affecting MongoDB - CVE-2025-14847</title>
@@ -432,7 +347,7 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-021-vulnerability-affecting-mongodb-cve-2025-14847</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 29 Dec 2025 15:49:54 +0000</pubDate>
     </item>
     <item>
@@ -462,7 +377,7 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-865</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Mon, 29 Dec 2025 20:34:34 +0000</pubDate>
     </item>
     <item>
@@ -473,7 +388,7 @@ The problem, according to Koi, is that these</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Tue, 06 Jan 2026 10:51:33 +0000</pubDate>
+      <pubDate>Tue, 06 Jan 2026 11:40:17 +0000</pubDate>
     </item>
     <item>
       <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
@@ -483,7 +398,7 @@ The problem, according to Koi, is that these</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.67</comments>
-      <pubDate>Tue, 06 Jan 2026 10:51:33 +0000</pubDate>
+      <pubDate>Tue, 06 Jan 2026 11:40:17 +0000</pubDate>
     </item>
     <item>
       <title>SmarterTools security advisory (AV25-866)</title>
@@ -492,7 +407,7 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Tue, 30 Dec 2025 21:12:15 +0000</pubDate>
     </item>
     <item>
@@ -503,17 +418,7 @@ The problem, according to Koi, is that these</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Tue, 06 Jan 2026 10:51:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
-      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
-      <pubDate>Tue, 06 Jan 2026 10:51:33 +0000</pubDate>
+      <pubDate>Tue, 06 Jan 2026 11:40:17 +0000</pubDate>
     </item>
     <item>
       <title>Cybersecurity leaders’ resolutions for 2026</title>
@@ -743,8 +648,18 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4110151/cybersecurity-leaders-resolutions-for-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Mon, 05 Jan 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
+      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.91</comments>
+      <pubDate>Tue, 06 Jan 2026 11:40:17 +0000</pubDate>
     </item>
     <item>
       <title>How the Organizational Risk Culture Standard can supercharge your cybersecurity culture</title>
@@ -1096,7 +1011,7 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4112124/how-the-organizational-risk-culture-standard-can-supercharge-your-cybersecurity-culture.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Mon, 05 Jan 2026 13:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1149,7 +1064,7 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4112834/taiwan-subjected-to-2-6-million-chinese-cyberattacks-a-day-in-2025.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Mon, 05 Jan 2026 17:29:25 +0000</pubDate>
     </item>
     <item>
@@ -1270,7 +1185,7 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4112130/stress-caused-by-cybersecurity-threats-is-taking-its-toll.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Mon, 05 Jan 2026 17:40:00 +0000</pubDate>
     </item>
     <item>
@@ -1403,7 +1318,7 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4110767/why-cybersecurity-needs-to-focus-more-on-investigation-and-less-on-just-detection-and-response.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Mon, 05 Jan 2026 21:18:32 +0000</pubDate>
     </item>
     <item>
@@ -1520,7 +1435,7 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4110775/why-arbor-edge-defense-and-cdn-based-ddos-protection-are-better-together.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Mon, 05 Jan 2026 21:19:40 +0000</pubDate>
     </item>
     <item>
@@ -1715,7 +1630,7 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4110690/6-strategies-for-building-a-high-performance-cybersecurity-team.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.73</comments>
       <pubDate>Tue, 06 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1725,7 +1640,7 @@ The problem, according to Koi, is that these</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-867</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.15</comments>
+      <comments>Score: 10.12</comments>
       <pubDate>Mon, 05 Jan 2026 13:51:16 +0000</pubDate>
     </item>
   </channel>
