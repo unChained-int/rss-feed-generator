@@ -8,7 +8,27 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Jan 2026 20:29:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 21:25:26 +0000</lastBuildDate>
+    <item>
+      <title>Dell security advisory (AV25-856)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-856</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-856</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.05</comments>
+      <pubDate>Mon, 22 Dec 2025 17:04:31 +0000</pubDate>
+    </item>
+    <item>
+      <title>n8n security advisory (AV25-857)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av25-857</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av25-857</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.06</comments>
+      <pubDate>Mon, 22 Dec 2025 18:17:07 +0000</pubDate>
+    </item>
     <item>
       <title>AL25-020 – Vulnerability Impacting WatchGuard Fireware OS - CVE-2025-14733</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/al25-020-vulnerability-impacting-watchguard-fireware-os-cve-2025-14733</link>
@@ -58,109 +78,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.07</comments>
       <pubDate>Tue, 23 Dec 2025 18:56:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Rethinking Security for Agentic AI</title>
-      <link>https://www.securityweek.com/rethinking-security-for-agentic-ai/</link>
-      <description>&lt;p&gt;When software can think and act on its own, security strategies must shift from static policy enforcement to real-time behavioral governance.&lt;/p&gt;
-&lt;p&gt;The post &lt;a href="https://www.securityweek.com/rethinking-security-for-agentic-ai/"&gt;Rethinking Security for Agentic AI&lt;/a&gt; appeared first on &lt;a href="https://www.securityweek.com"&gt;SecurityWeek&lt;/a&gt;.&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://www.securityweek.com/rethinking-security-for-agentic-ai/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.08</comments>
-      <pubDate>Thu, 08 Jan 2026 14:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Critical RCE flaw allows full takeover of n8n AI workflow platform</title>
-      <link>https://www.csoonline.com/article/4113980/critical-rce-flaw-allows-full-takeover-of-n8n-ai-workflow-platform.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Researchers have released details about a critical vulnerability that was silently patched in n8n, a platform used by many companies to build LLM-powered agents and automated workflows. The flaw can allow unauthenticated attackers to completely take over local n8n deployments, execute commands on the underlying system, and extract sensitive corporate data workflows typically have access to.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The blast radius of a compromised n8n is massive,” researchers from data security company Cyera, who found the vulnerability, noted in their &lt;a href="https://www.cyera.com/research-labs/ni8mare-unauthenticated-remote-code-execution-in-n8n-cve-2026-21858"&gt;report on the vulnerability&lt;/a&gt;. “N8n is connecting countless systems, your organizational Google Drive, OpenAI API keys, Salesforce data, IAM systems, payment processors, customer databases, CI/CD pipelines, and more. It’s the central nervous system of your automation infrastructure.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The n8n developers &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-v4pr-fm98-w9pg"&gt;patched this issue in version 1.121.0&lt;/a&gt; released on Nov. 18, but the release notes did not mention security fixes at the time, which seems to be standard procedure as n8n security advisories are intentionally released with a delay. The project has patched other critical RCE vulnerabilities since then, such as &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp"&gt;CVE-2025-68613&lt;/a&gt;, &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v"&gt;CVE-2025-68668&lt;/a&gt;, and &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-v364-rw7m-3263"&gt;CVE-2026-21877&lt;/a&gt;, so users should ensure they always update to the latest available version.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="content-type-confusion-leads-to-arbitrary-file-reads"&gt;Content-Type confusion leads to arbitrary file reads&lt;/h2&gt;
-
-
-
-&lt;p&gt;The vulnerability, tracked as CVE-2026-21858, has a severity rating of 10.0 (critical) and enables a two-part attack. First, it allows unauthenticated attackers who have access to n8n web forms to leak internal files from the n8n server. This is because the &lt;code&gt;formWebhook&lt;/code&gt; function used by n8n Form nodes to receive data doesn’t validate whether the &lt;code&gt;Content-Type&lt;/code&gt; field of the POST request submitted by the user is set to &lt;code&gt;multipart/form-data&lt;/code&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Imagine a very common use case in which n8n has been used to build a chat interface that allows users to upload files to the system — for example, a customer support portal that accepts error screenshots or logs, an HR system for submitting CVs, or a knowledge base where employees can upload documents to index for later querying through an LLM-powered chatbot.&lt;/p&gt;
-
-
-
-&lt;p&gt;In the normal flow, when the content type is &lt;code&gt;multipart/form-data&lt;/code&gt; and the request body has a &lt;code&gt;files:&lt;/code&gt; definition, n8n will parse the request with its &lt;code&gt;parseFormData()&lt;/code&gt; function, which uses Node.js library Formidable to handle file uploads securely by storing the file in a temp directory with a random path before populating the &lt;code&gt;req.body.files&lt;/code&gt; global variable with the filename and location.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, if a request has a different content type, for example &lt;code&gt;application/json&lt;/code&gt;, n8n will parse the request body using another function called &lt;code&gt;parseBody()&lt;/code&gt;, which behaves differently. This function extracts the request’s data section to populate the &lt;code&gt;req.body.data&lt;/code&gt; global variable, but it also extracts any other section from the request to populate the corresponding &lt;code&gt;req.body.[section name]&lt;/code&gt; variables with their content.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because &lt;code&gt;formWebhook&lt;/code&gt; doesn’t validate whether a request with a &lt;code&gt;files&lt;/code&gt; section is actually &lt;code&gt;multipart/form-data&lt;/code&gt;, it will call the wrong parsing function on its body, resulting in the population of the &lt;code&gt;req.body.files&lt;/code&gt; variable with user-controlled values like filenames and paths. It will then call a function called &lt;code&gt;copyBinaryFile()&lt;/code&gt; to copy any files from the &lt;code&gt;req.body.files&lt;/code&gt; variable — which are supposed to be temp random paths — to persistent storage locations to be consumed by other nodes/workflows, leading to potential path traversal attacks, in which legitimate files on the system can be overwritten or loaded elsewhere in a workflow.&lt;/p&gt;
-
-
-
-&lt;p&gt;To exploit this vulnerability, an attacker can submit a request as &lt;code&gt;application/json&lt;/code&gt; with a &lt;code&gt;files&lt;/code&gt; section that specifies known file paths from the local system, including n8n configuration files that contain sensitive credentials and tokens. If these files are added into the context of an LLM-powered chatbot node, the attacker can then use the chat interface to ask questions about those files and leak their contents.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="from-arbitrary-file-read-to-admin-privileges"&gt;From arbitrary file read to admin privileges&lt;/h2&gt;
-
-
-
-&lt;p&gt;The second part of the attack enabled by this vulnerability opens the “blast radius” considerably, as the ability to read any local file has serious implications due to the way n8n tracks authenticated sessions.&lt;/p&gt;
-
-
-
-&lt;p&gt;Session cookies are strings stored in the user’s browser to maintain their authenticated status for a period of time. Attackers regularly steal session cookies from compromised systems to bypass authentication and log in as their victims on various websites.&lt;/p&gt;
-
-
-
-&lt;p&gt;In n8n, session cookies are generated by combining a user’s unique ID with a SHA256 hash of the user’s email and password and then signing the result with a secret key unique to each n8n installation.&lt;/p&gt;
-
-
-
-&lt;p&gt;The problem is that all the information needed to rebuild session cookies is located in local files. The unique secret key is stored in &lt;code&gt;/home/node/.n8n/config&lt;/code&gt; and all user records are stored in the &lt;code&gt;/home/node/.n8n/database.sqlite&lt;/code&gt; file. Leaking the contents of these two files allows attackers to recreate &lt;code&gt;n8n-auth&lt;/code&gt; cookies for any users, including administrators.&lt;/p&gt;
-
-
-
-&lt;p&gt;With administrator privileges attackers can create new workflows, and n8n offers a node called Execute Command that does exactly what the name implies — executes commands on the underlying operating system with the privileges of the n8n service.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Imagine a large enterprise with 10,000+ employees with one n8n server that anyone uses,” the researchers wrote in their report. “A compromised n8n instance doesn’t just mean losing one system — it means handing attackers the keys to everything. API credentials, OAuth tokens, database connections, cloud storage, all centralized in one place. N8n becomes a single point of failure and a goldmine for threat actors.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4113980/critical-rce-flaw-allows-full-takeover-of-n8n-ai-workflow-platform.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.08</comments>
-      <pubDate>Wed, 07 Jan 2026 19:22:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>MongoDB security advisory (AV25-862) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.09</comments>
-      <pubDate>Wed, 24 Dec 2025 15:54:36 +0000</pubDate>
     </item>
     <item>
       <title>6 strategies for building a high-performance cybersecurity team</title>
@@ -354,8 +271,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4110690/6-strategies-for-building-a-high-performance-cybersecurity-team.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.11</comments>
+      <comments>Score: 7.09</comments>
       <pubDate>Tue, 06 Jan 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MongoDB security advisory (AV25-862) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.09</comments>
+      <pubDate>Wed, 24 Dec 2025 15:54:36 +0000</pubDate>
     </item>
     <item>
       <title>AL25-021 - Vulnerability affecting MongoDB - CVE-2025-14847</title>
@@ -374,7 +301,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-863</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.32</comments>
       <pubDate>Mon, 29 Dec 2025 19:42:17 +0000</pubDate>
     </item>
     <item>
@@ -384,7 +311,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-864</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.32</comments>
       <pubDate>Mon, 29 Dec 2025 19:55:14 +0000</pubDate>
     </item>
     <item>
@@ -405,7 +332,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.40</comments>
-      <pubDate>Thu, 08 Jan 2026 18:29:17 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 19:25:26 +0000</pubDate>
     </item>
     <item>
       <title>SmarterTools security advisory (AV25-866)</title>
@@ -425,37 +352,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Jan 2026 18:29:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</link>
-      <description>Europol Deputy Executive Director for Governance, Jurgen Ebner, joined the Heads of EU Justice and Home Affairs Agencies in Vienna to reflect on joint achievements and align their future cooperation with the wider EU priorities.Marking the 25th anniversary of the EU Charter of Fundamental Rights, they adopted a joint statement pledging to intensify efforts to uphold and promote fundamental rights...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Jan 2026 18:29:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Most Wanted website revamped with new fugitives added</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
-      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Jan 2026 18:29:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
-      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Jan 2026 18:29:17 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 19:25:26 +0000</pubDate>
     </item>
     <item>
       <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
@@ -465,17 +362,37 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Jan 2026 18:29:17 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 19:25:26 +0000</pubDate>
     </item>
     <item>
-      <title>Law enforcement challenges major cocaine supply chains into Europe</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</link>
-      <description>Law enforcement authorities across Europe and South America continue to put sustained pressure on the criminal networks responsible for moving cocaine into Europe. Three recent actions coordinated by Europol, one targeting a Dutch-led network embedded in Colombian supply chains, another dismantling a Brazilian maritime trafficking operation and a third disrupting a Greek at-sea transfer criminal operation, highlight the ongoing efforts to disrupt the routes and structures used by organised crime.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</guid>
+      <title>EU Most Wanted website revamped with new fugitives added</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
+      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Thu, 08 Jan 2026 18:29:17 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 08 Jan 2026 19:25:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
+      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 08 Jan 2026 19:25:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</link>
+      <description>Europol Deputy Executive Director for Governance, Jurgen Ebner, joined the Heads of EU Justice and Home Affairs Agencies in Vienna to reflect on joint achievements and align their future cooperation with the wider EU priorities.Marking the 25th anniversary of the EU Charter of Fundamental Rights, they adopted a joint statement pledging to intensify efforts to uphold and promote fundamental rights...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 08 Jan 2026 19:25:26 +0000</pubDate>
     </item>
     <item>
       <title>Cybersecurity hat kein Budget-Problem</title>
@@ -588,7 +505,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4107963/cybersecurity-hat-kein-budget-problem.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Wed, 07 Jan 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -662,8 +579,18 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4114360/critical-jspdf-vulnerability-enables-arbitrary-file-read-in-node-js-deployments.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Thu, 08 Jan 2026 11:19:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Law enforcement challenges major cocaine supply chains into Europe</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</link>
+      <description>Law enforcement authorities across Europe and South America continue to put sustained pressure on the criminal networks responsible for moving cocaine into Europe. Three recent actions coordinated by Europol, one targeting a Dutch-led network embedded in Colombian supply chains, another dismantling a Brazilian maritime trafficking operation and a third disrupting a Greek at-sea transfer criminal operation, highlight the ongoing efforts to disrupt the routes and structures used by organised crime.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Thu, 08 Jan 2026 19:25:26 +0000</pubDate>
     </item>
     <item>
       <title>Automated data poisoning proposed as a solution for AI theft threat</title>
@@ -773,7 +700,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4113463/automated-data-poisoning-proposed-as-a-solution-for-ai-theft-threat.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Wed, 07 Jan 2026 05:00:12 +0000</pubDate>
     </item>
     <item>
@@ -784,7 +711,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.67</comments>
-      <pubDate>Thu, 08 Jan 2026 18:29:17 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 19:25:26 +0000</pubDate>
     </item>
     <item>
       <title>8 things CISOs can’t afford to get wrong in 2026</title>
@@ -1014,7 +941,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4110699/8-things-cisos-cant-afford-to-get-wrong-in-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 07 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1089,7 +1016,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4113746/microsoft-warns-of-a-surge-in-phishing-attacks-exploiting-email-routing-gaps.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Wed, 07 Jan 2026 11:49:15 +0000</pubDate>
     </item>
     <item>
@@ -1100,17 +1027,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Thu, 08 Jan 2026 18:29:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
-      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
-      <pubDate>Thu, 08 Jan 2026 18:29:17 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 19:25:26 +0000</pubDate>
     </item>
     <item>
       <title>How to eliminate IT blind spots in the modern, AI-driven enterprise</title>
@@ -1252,8 +1169,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4112470/how-to-eliminate-it-blind-spots-in-the-modern-ai-driven-enterprise.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Wed, 07 Jan 2026 14:47:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
+      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.91</comments>
+      <pubDate>Thu, 08 Jan 2026 19:25:26 +0000</pubDate>
     </item>
     <item>
       <title>Holes in Veeam Backup suite allow remote code execution, creation of malicious backup config files</title>
@@ -1353,7 +1280,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114165/holes-in-veeam-backup-suite-allow-remote-code-execution-creation-of-malicious-backup-config-files-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Thu, 08 Jan 2026 01:56:36 +0000</pubDate>
     </item>
     <item>
@@ -1419,7 +1346,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4109550/die-wichtigsten-ciso-trends-fur-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Thu, 08 Jan 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1630,7 +1557,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4110008/top-cyber-threats-to-your-ai-systems-and-infrastructure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Thu, 08 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1700,7 +1627,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114344/nis2-umsetzung-neues-bsi-portal-geht-an-den-start.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Thu, 08 Jan 2026 11:30:27 +0000</pubDate>
     </item>
     <item>
@@ -1778,7 +1705,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114453/phishing-angreifer-setzen-vermehrt-auf-e-mail-routing-lucken.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Thu, 08 Jan 2026 14:15:38 +0000</pubDate>
     </item>
     <item>
@@ -1788,7 +1715,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-001</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Mon, 05 Jan 2026 13:51:16 +0000</pubDate>
     </item>
     <item>
@@ -1947,7 +1874,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4113987/the-2-faces-of-ai-how-emerging-models-empower-and-endanger-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Thu, 08 Jan 2026 18:20:00 +0000</pubDate>
     </item>
     <item>
@@ -2224,7 +2151,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4113968/cybersecurity-at-the-edge-securing-rugged-iot-in-mission-critical-environments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Thu, 08 Jan 2026 14:40:00 +0000</pubDate>
     </item>
     <item>
@@ -2234,7 +2161,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-002</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Wed, 07 Jan 2026 14:46:07 +0000</pubDate>
     </item>
     <item>
@@ -2244,7 +2171,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-003</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Wed, 07 Jan 2026 14:59:54 +0000</pubDate>
     </item>
     <item>
@@ -2254,7 +2181,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-004</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.93</comments>
       <pubDate>Wed, 07 Jan 2026 15:35:09 +0000</pubDate>
     </item>
     <item>
@@ -2264,7 +2191,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-january-2026-monthly-rollup-av26-005</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.94</comments>
       <pubDate>Wed, 07 Jan 2026 15:51:49 +0000</pubDate>
     </item>
     <item>
@@ -2274,7 +2201,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-january-2026-monthly-rollup-av26-006</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.00</comments>
+      <comments>Score: 9.97</comments>
       <pubDate>Wed, 07 Jan 2026 16:50:20 +0000</pubDate>
     </item>
     <item>
@@ -2284,7 +2211,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-007</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.00</comments>
+      <comments>Score: 9.97</comments>
       <pubDate>Wed, 07 Jan 2026 16:58:18 +0000</pubDate>
     </item>
     <item>
@@ -2294,7 +2221,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-008</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.07</comments>
+      <comments>Score: 10.04</comments>
       <pubDate>Wed, 07 Jan 2026 18:58:32 +0000</pubDate>
     </item>
     <item>
@@ -2304,7 +2231,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.73</comments>
+      <comments>Score: 10.69</comments>
       <pubDate>Thu, 08 Jan 2026 13:42:11 +0000</pubDate>
     </item>
     <item>
@@ -2314,7 +2241,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-009</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.86</comments>
+      <comments>Score: 10.82</comments>
       <pubDate>Thu, 08 Jan 2026 17:00:25 +0000</pubDate>
     </item>
     <item>
@@ -2324,7 +2251,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-010</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.93</comments>
+      <comments>Score: 10.89</comments>
       <pubDate>Thu, 08 Jan 2026 18:45:20 +0000</pubDate>
     </item>
     <item>
@@ -2334,7 +2261,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-011</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.98</comments>
+      <comments>Score: 10.95</comments>
       <pubDate>Thu, 08 Jan 2026 20:06:02 +0000</pubDate>
     </item>
     <item>
@@ -2344,7 +2271,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-012</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.99</comments>
+      <comments>Score: 10.95</comments>
       <pubDate>Thu, 08 Jan 2026 20:15:51 +0000</pubDate>
     </item>
   </channel>
