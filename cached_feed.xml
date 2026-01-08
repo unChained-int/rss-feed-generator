@@ -8,17 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Jan 2026 17:30:02 +0000</lastBuildDate>
-    <item>
-      <title>[Control systems] CISA ICS security advisories (AV25–854)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-854</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-854</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.06</comments>
-      <pubDate>Mon, 22 Dec 2025 16:08:22 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 08 Jan 2026 18:33:34 +0000</lastBuildDate>
     <item>
       <title>IBM security advisory (AV25-855)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-855</link>
@@ -108,6 +98,88 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.09</comments>
       <pubDate>Wed, 24 Dec 2025 15:54:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Critical RCE flaw allows full takeover of n8n AI workflow platform</title>
+      <link>https://www.csoonline.com/article/4113980/critical-rce-flaw-allows-full-takeover-of-n8n-ai-workflow-platform.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Researchers have released details about a critical vulnerability that was silently patched in n8n, a platform used by many companies to build LLM-powered agents and automated workflows. The flaw can allow unauthenticated attackers to completely take over local n8n deployments, execute commands on the underlying system, and extract sensitive corporate data workflows typically have access to.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The blast radius of a compromised n8n is massive,” researchers from data security company Cyera, who found the vulnerability, noted in their &lt;a href="https://www.cyera.com/research-labs/ni8mare-unauthenticated-remote-code-execution-in-n8n-cve-2026-21858"&gt;report on the vulnerability&lt;/a&gt;. “N8n is connecting countless systems, your organizational Google Drive, OpenAI API keys, Salesforce data, IAM systems, payment processors, customer databases, CI/CD pipelines, and more. It’s the central nervous system of your automation infrastructure.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The n8n developers &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-v4pr-fm98-w9pg"&gt;patched this issue in version 1.121.0&lt;/a&gt; released on Nov. 18, but the release notes did not mention security fixes at the time, which seems to be standard procedure as n8n security advisories are intentionally released with a delay. The project has patched other critical RCE vulnerabilities since then, such as &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp"&gt;CVE-2025-68613&lt;/a&gt;, &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v"&gt;CVE-2025-68668&lt;/a&gt;, and &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-v364-rw7m-3263"&gt;CVE-2026-21877&lt;/a&gt;, so users should ensure they always update to the latest available version.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="content-type-confusion-leads-to-arbitrary-file-reads"&gt;Content-Type confusion leads to arbitrary file reads&lt;/h2&gt;
+
+
+
+&lt;p&gt;The vulnerability, tracked as CVE-2026-21858, has a severity rating of 10.0 (critical) and enables a two-part attack. First, it allows unauthenticated attackers who have access to n8n web forms to leak internal files from the n8n server. This is because the &lt;code&gt;formWebhook&lt;/code&gt; function used by n8n Form nodes to receive data doesn’t validate whether the &lt;code&gt;Content-Type&lt;/code&gt; field of the POST request submitted by the user is set to &lt;code&gt;multipart/form-data&lt;/code&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;Imagine a very common use case in which n8n has been used to build a chat interface that allows users to upload files to the system — for example, a customer support portal that accepts error screenshots or logs, an HR system for submitting CVs, or a knowledge base where employees can upload documents to index for later querying through an LLM-powered chatbot.&lt;/p&gt;
+
+
+
+&lt;p&gt;In the normal flow, when the content type is &lt;code&gt;multipart/form-data&lt;/code&gt; and the request body has a &lt;code&gt;files:&lt;/code&gt; definition, n8n will parse the request with its &lt;code&gt;parseFormData()&lt;/code&gt; function, which uses Node.js library Formidable to handle file uploads securely by storing the file in a temp directory with a random path before populating the &lt;code&gt;req.body.files&lt;/code&gt; global variable with the filename and location.&lt;/p&gt;
+
+
+
+&lt;p&gt;However, if a request has a different content type, for example &lt;code&gt;application/json&lt;/code&gt;, n8n will parse the request body using another function called &lt;code&gt;parseBody()&lt;/code&gt;, which behaves differently. This function extracts the request’s data section to populate the &lt;code&gt;req.body.data&lt;/code&gt; global variable, but it also extracts any other section from the request to populate the corresponding &lt;code&gt;req.body.[section name]&lt;/code&gt; variables with their content.&lt;/p&gt;
+
+
+
+&lt;p&gt;Because &lt;code&gt;formWebhook&lt;/code&gt; doesn’t validate whether a request with a &lt;code&gt;files&lt;/code&gt; section is actually &lt;code&gt;multipart/form-data&lt;/code&gt;, it will call the wrong parsing function on its body, resulting in the population of the &lt;code&gt;req.body.files&lt;/code&gt; variable with user-controlled values like filenames and paths. It will then call a function called &lt;code&gt;copyBinaryFile()&lt;/code&gt; to copy any files from the &lt;code&gt;req.body.files&lt;/code&gt; variable — which are supposed to be temp random paths — to persistent storage locations to be consumed by other nodes/workflows, leading to potential path traversal attacks, in which legitimate files on the system can be overwritten or loaded elsewhere in a workflow.&lt;/p&gt;
+
+
+
+&lt;p&gt;To exploit this vulnerability, an attacker can submit a request as &lt;code&gt;application/json&lt;/code&gt; with a &lt;code&gt;files&lt;/code&gt; section that specifies known file paths from the local system, including n8n configuration files that contain sensitive credentials and tokens. If these files are added into the context of an LLM-powered chatbot node, the attacker can then use the chat interface to ask questions about those files and leak their contents.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="from-arbitrary-file-read-to-admin-privileges"&gt;From arbitrary file read to admin privileges&lt;/h2&gt;
+
+
+
+&lt;p&gt;The second part of the attack enabled by this vulnerability opens the “blast radius” considerably, as the ability to read any local file has serious implications due to the way n8n tracks authenticated sessions.&lt;/p&gt;
+
+
+
+&lt;p&gt;Session cookies are strings stored in the user’s browser to maintain their authenticated status for a period of time. Attackers regularly steal session cookies from compromised systems to bypass authentication and log in as their victims on various websites.&lt;/p&gt;
+
+
+
+&lt;p&gt;In n8n, session cookies are generated by combining a user’s unique ID with a SHA256 hash of the user’s email and password and then signing the result with a secret key unique to each n8n installation.&lt;/p&gt;
+
+
+
+&lt;p&gt;The problem is that all the information needed to rebuild session cookies is located in local files. The unique secret key is stored in &lt;code&gt;/home/node/.n8n/config&lt;/code&gt; and all user records are stored in the &lt;code&gt;/home/node/.n8n/database.sqlite&lt;/code&gt; file. Leaking the contents of these two files allows attackers to recreate &lt;code&gt;n8n-auth&lt;/code&gt; cookies for any users, including administrators.&lt;/p&gt;
+
+
+
+&lt;p&gt;With administrator privileges attackers can create new workflows, and n8n offers a node called Execute Command that does exactly what the name implies — executes commands on the underlying operating system with the privileges of the n8n service.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Imagine a large enterprise with 10,000+ employees with one n8n server that anyone uses,” the researchers wrote in their report. “A compromised n8n instance doesn’t just mean losing one system — it means handing attackers the keys to everything. API credentials, OAuth tokens, database connections, cloud storage, all centralized in one place. N8n becomes a single point of failure and a goldmine for threat actors.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4113980/critical-rce-flaw-allows-full-takeover-of-n8n-ai-workflow-platform.html</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.14</comments>
+      <pubDate>Wed, 07 Jan 2026 19:22:22 +0000</pubDate>
     </item>
     <item>
       <title>6 strategies for building a high-performance cybersecurity team</title>
@@ -301,90 +373,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4110690/6-strategies-for-building-a-high-performance-cybersecurity-team.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.17</comments>
+      <comments>Score: 7.15</comments>
       <pubDate>Tue, 06 Jan 2026 07:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Critical RCE flaw allows full takeover of n8n AI workflow platform</title>
-      <link>https://www.csoonline.com/article/4113980/critical-rce-flaw-allows-full-takeover-of-n8n-ai-workflow-platform.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Researchers have released details about a critical vulnerability that was silently patched in n8n, a platform used by many companies to build LLM-powered agents and automated workflows. The flaw can allow unauthenticated attackers to completely take over local n8n deployments, execute commands on the underlying system, and extract sensitive corporate data workflows typically have access to.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The blast radius of a compromised n8n is massive,” researchers from data security company Cyera, who found the vulnerability, noted in their &lt;a href="https://www.cyera.com/research-labs/ni8mare-unauthenticated-remote-code-execution-in-n8n-cve-2026-21858"&gt;report on the vulnerability&lt;/a&gt;. “N8n is connecting countless systems, your organizational Google Drive, OpenAI API keys, Salesforce data, IAM systems, payment processors, customer databases, CI/CD pipelines, and more. It’s the central nervous system of your automation infrastructure.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The n8n developers &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-v4pr-fm98-w9pg"&gt;patched this issue in version 1.121.0&lt;/a&gt; released on Nov. 18, but the release notes did not mention security fixes at the time, which seems to be standard procedure as n8n security advisories are intentionally released with a delay. The project has patched other critical RCE vulnerabilities since then, such as &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp"&gt;CVE-2025-68613&lt;/a&gt;, &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v"&gt;CVE-2025-68668&lt;/a&gt;, and &lt;a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-v364-rw7m-3263"&gt;CVE-2026-21877&lt;/a&gt;, so users should ensure they always update to the latest available version.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="content-type-confusion-leads-to-arbitrary-file-reads"&gt;Content-Type confusion leads to arbitrary file reads&lt;/h2&gt;
-
-
-
-&lt;p&gt;The vulnerability, tracked as CVE-2026-21858, has a severity rating of 10.0 (critical) and enables a two-part attack. First, it allows unauthenticated attackers who have access to n8n web forms to leak internal files from the n8n server. This is because the &lt;code&gt;formWebhook&lt;/code&gt; function used by n8n Form nodes to receive data doesn’t validate whether the &lt;code&gt;Content-Type&lt;/code&gt; field of the POST request submitted by the user is set to &lt;code&gt;multipart/form-data&lt;/code&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Imagine a very common use case in which n8n has been used to build a chat interface that allows users to upload files to the system — for example, a customer support portal that accepts error screenshots or logs, an HR system for submitting CVs, or a knowledge base where employees can upload documents to index for later querying through an LLM-powered chatbot.&lt;/p&gt;
-
-
-
-&lt;p&gt;In the normal flow, when the content type is &lt;code&gt;multipart/form-data&lt;/code&gt; and the request body has a &lt;code&gt;files:&lt;/code&gt; definition, n8n will parse the request with its &lt;code&gt;parseFormData()&lt;/code&gt; function, which uses Node.js library Formidable to handle file uploads securely by storing the file in a temp directory with a random path before populating the &lt;code&gt;req.body.files&lt;/code&gt; global variable with the filename and location.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, if a request has a different content type, for example &lt;code&gt;application/json&lt;/code&gt;, n8n will parse the request body using another function called &lt;code&gt;parseBody()&lt;/code&gt;, which behaves differently. This function extracts the request’s data section to populate the &lt;code&gt;req.body.data&lt;/code&gt; global variable, but it also extracts any other section from the request to populate the corresponding &lt;code&gt;req.body.[section name]&lt;/code&gt; variables with their content.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because &lt;code&gt;formWebhook&lt;/code&gt; doesn’t validate whether a request with a &lt;code&gt;files&lt;/code&gt; section is actually &lt;code&gt;multipart/form-data&lt;/code&gt;, it will call the wrong parsing function on its body, resulting in the population of the &lt;code&gt;req.body.files&lt;/code&gt; variable with user-controlled values like filenames and paths. It will then call a function called &lt;code&gt;copyBinaryFile()&lt;/code&gt; to copy any files from the &lt;code&gt;req.body.files&lt;/code&gt; variable — which are supposed to be temp random paths — to persistent storage locations to be consumed by other nodes/workflows, leading to potential path traversal attacks, in which legitimate files on the system can be overwritten or loaded elsewhere in a workflow.&lt;/p&gt;
-
-
-
-&lt;p&gt;To exploit this vulnerability, an attacker can submit a request as &lt;code&gt;application/json&lt;/code&gt; with a &lt;code&gt;files&lt;/code&gt; section that specifies known file paths from the local system, including n8n configuration files that contain sensitive credentials and tokens. If these files are added into the context of an LLM-powered chatbot node, the attacker can then use the chat interface to ask questions about those files and leak their contents.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="from-arbitrary-file-read-to-admin-privileges"&gt;From arbitrary file read to admin privileges&lt;/h2&gt;
-
-
-
-&lt;p&gt;The second part of the attack enabled by this vulnerability opens the “blast radius” considerably, as the ability to read any local file has serious implications due to the way n8n tracks authenticated sessions.&lt;/p&gt;
-
-
-
-&lt;p&gt;Session cookies are strings stored in the user’s browser to maintain their authenticated status for a period of time. Attackers regularly steal session cookies from compromised systems to bypass authentication and log in as their victims on various websites.&lt;/p&gt;
-
-
-
-&lt;p&gt;In n8n, session cookies are generated by combining a user’s unique ID with a SHA256 hash of the user’s email and password and then signing the result with a secret key unique to each n8n installation.&lt;/p&gt;
-
-
-
-&lt;p&gt;The problem is that all the information needed to rebuild session cookies is located in local files. The unique secret key is stored in &lt;code&gt;/home/node/.n8n/config&lt;/code&gt; and all user records are stored in the &lt;code&gt;/home/node/.n8n/database.sqlite&lt;/code&gt; file. Leaking the contents of these two files allows attackers to recreate &lt;code&gt;n8n-auth&lt;/code&gt; cookies for any users, including administrators.&lt;/p&gt;
-
-
-
-&lt;p&gt;With administrator privileges attackers can create new workflows, and n8n offers a node called Execute Command that does exactly what the name implies — executes commands on the underlying operating system with the privileges of the n8n service.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Imagine a large enterprise with 10,000+ employees with one n8n server that anyone uses,” the researchers wrote in their report. “A compromised n8n instance doesn’t just mean losing one system — it means handing attackers the keys to everything. API credentials, OAuth tokens, database connections, cloud storage, all centralized in one place. N8n becomes a single point of failure and a goldmine for threat actors.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4113980/critical-rce-flaw-allows-full-takeover-of-n8n-ai-workflow-platform.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.18</comments>
-      <pubDate>Wed, 07 Jan 2026 19:22:22 +0000</pubDate>
     </item>
     <item>
       <title>Rethinking Security for Agentic AI</title>
@@ -394,7 +384,7 @@
       <guid isPermaLink="false">https://www.securityweek.com/rethinking-security-for-agentic-ai/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.20</comments>
+      <comments>Score: 7.15</comments>
       <pubDate>Thu, 08 Jan 2026 14:00:00 +0000</pubDate>
     </item>
     <item>
@@ -414,7 +404,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-863</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Mon, 29 Dec 2025 19:42:17 +0000</pubDate>
     </item>
     <item>
@@ -424,7 +414,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-864</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Mon, 29 Dec 2025 19:55:14 +0000</pubDate>
     </item>
     <item>
@@ -445,7 +435,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.40</comments>
-      <pubDate>Thu, 08 Jan 2026 15:30:02 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 16:33:34 +0000</pubDate>
     </item>
     <item>
       <title>SmarterTools security advisory (AV25-866)</title>
@@ -454,18 +444,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Tue, 30 Dec 2025 21:12:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
-      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Jan 2026 15:30:02 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -475,7 +455,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Jan 2026 15:30:02 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 16:33:34 +0000</pubDate>
     </item>
     <item>
       <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
@@ -485,7 +465,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Jan 2026 15:30:02 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 16:33:34 +0000</pubDate>
     </item>
     <item>
       <title>EU Most Wanted website revamped with new fugitives added</title>
@@ -495,7 +475,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Jan 2026 15:30:02 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 16:33:34 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
@@ -505,7 +485,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Jan 2026 15:30:02 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 16:33:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
+      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 08 Jan 2026 16:33:34 +0000</pubDate>
     </item>
     <item>
       <title>Law enforcement challenges major cocaine supply chains into Europe</title>
@@ -515,7 +505,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Thu, 08 Jan 2026 15:30:02 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 16:33:34 +0000</pubDate>
     </item>
     <item>
       <title>Coordinated strike hits violent criminal network behind large-scale illegal gambling and money laundering in Sweden</title>
@@ -525,7 +515,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.67</comments>
-      <pubDate>Thu, 08 Jan 2026 15:30:02 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 16:33:34 +0000</pubDate>
     </item>
     <item>
       <title>Cybersecurity hat kein Budget-Problem</title>
@@ -638,7 +628,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4107963/cybersecurity-hat-kein-budget-problem.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 07 Jan 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -749,7 +739,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4113463/automated-data-poisoning-proposed-as-a-solution-for-ai-theft-threat.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 07 Jan 2026 05:00:12 +0000</pubDate>
     </item>
     <item>
@@ -823,7 +813,7 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4114360/critical-jspdf-vulnerability-enables-arbitrary-file-read-in-node-js-deployments.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Thu, 08 Jan 2026 11:19:50 +0000</pubDate>
     </item>
     <item>
@@ -1054,7 +1044,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4110699/8-things-cisos-cant-afford-to-get-wrong-in-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 07 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1065,17 +1055,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Thu, 08 Jan 2026 15:30:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
-      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
-      <pubDate>Thu, 08 Jan 2026 15:30:02 +0000</pubDate>
+      <pubDate>Thu, 08 Jan 2026 16:33:34 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft warns of a surge in phishing attacks exploiting email routing gaps</title>
@@ -1149,8 +1129,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4113746/microsoft-warns-of-a-surge-in-phishing-attacks-exploiting-email-routing-gaps.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Wed, 07 Jan 2026 11:49:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
+      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.91</comments>
+      <pubDate>Thu, 08 Jan 2026 16:33:34 +0000</pubDate>
     </item>
     <item>
       <title>How to eliminate IT blind spots in the modern, AI-driven enterprise</title>
@@ -1292,7 +1282,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4112470/how-to-eliminate-it-blind-spots-in-the-modern-ai-driven-enterprise.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Wed, 07 Jan 2026 14:47:56 +0000</pubDate>
     </item>
     <item>
@@ -1393,7 +1383,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114165/holes-in-veeam-backup-suite-allow-remote-code-execution-creation-of-malicious-backup-config-files-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Thu, 08 Jan 2026 01:56:36 +0000</pubDate>
     </item>
     <item>
@@ -1459,7 +1449,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4109550/die-wichtigsten-ciso-trends-fur-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Thu, 08 Jan 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1670,7 +1660,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4110008/top-cyber-threats-to-your-ai-systems-and-infrastructure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Thu, 08 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1740,7 +1730,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114344/nis2-umsetzung-neues-bsi-portal-geht-an-den-start.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Thu, 08 Jan 2026 11:30:27 +0000</pubDate>
     </item>
     <item>
@@ -1750,7 +1740,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-001</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.82</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Mon, 05 Jan 2026 13:51:16 +0000</pubDate>
     </item>
     <item>
@@ -1828,8 +1818,167 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114453/phishing-angreifer-setzen-vermehrt-auf-e-mail-routing-lucken.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Thu, 08 Jan 2026 14:15:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>The 2 faces of AI: How emerging models empower and endanger cybersecurity</title>
+      <link>https://www.csoonline.com/article/4113987/the-2-faces-of-ai-how-emerging-models-empower-and-endanger-cybersecurity.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;In my long career of safeguarding digital assets, I’ve seen technology shifts come and go, but nothing compares to the disruptive force of AI and large language models (LLMs). AI is quite literally a double-edged sword when it comes to cybersecurity. The same capabilities that allow us to automate threat detection and write secure code faster are being weaponized by adversaries to create a new generation of cyberthreats. For any CISO or security leader, our primary focus must shift; we are no longer just fighting human adversaries, we are fighting AI-augmented, automated threat agents.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-offensive-edge"&gt;The offensive edge&lt;/h2&gt;
+
+
+
+&lt;p&gt;We are witnessing a drastic reduction in the cost and expertise required for cybercrime. What used to take a skilled human weeks can now be orchestrated by an AI agent in hours, driving what we call cyberthreat inflation.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="self-modifying-evasive-malware"&gt;Self-modifying, evasive malware&lt;/h3&gt;
+
+
+
+&lt;p&gt;More recently, the researchers at Google Threat Intelligence Group (GTIG) identified a disturbing new trend: malware that uses LLMs during execution to dynamically alter its own behavior and evade detection. This is not pre-generated code, this is code that adapts mid-execution.&lt;/p&gt;
+
+
+
+&lt;p&gt;In June 2025, &lt;a href="https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"&gt;GTIG identified an experimental malware called PROMPTFLUX&lt;/a&gt;, which connects to a commercial LLM API (such as the Gemini API) to request new code-obfuscation and evasion scripts on the fly. This technique, which allows for just-in-time code generation, represents a significant step toward autonomous and adaptive malware.&lt;/p&gt;
+
+
+
+&lt;p&gt;In another case, GTIG identified PROMPTSTEAL, which was being used by the Russia-linked APT28 group against Ukraine. This malware queries an LLM (the Qwen2.5-Coder model on Hugging Face) to generate reconnaissance commands instead of having them hard-coded.&lt;/p&gt;
+
+
+
+&lt;p&gt;Some analysis projects that the percentage of all malware detections with an LLM contribution has &lt;a href="https://www.techrxiv.org/users/955300/articles/1324994/master/file/data/Updated_Dual-Use_Risks_LLM_Final_88_TechRxiv/Updated_Dual-Use_Risks_LLM_Final_88_TechRxiv.pdf?inline=true"&gt;soared from just 2% in 2021 to a projected 50% by 2025&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The first autonomous espionage campaign&lt;/h3&gt;
+
+
+
+&lt;p&gt;Anthropic recently &lt;a href="https://assets.anthropic.com/m/ec212e6566a0d47/original/Disrupting-the-first-reported-AI-orchestrated-cyber-espionage-campaign.pdf"&gt;disclosed a highly sophisticated cyber espionage operation, attributed to a state-sponsored threat actor, that leveraged its own Claude Codemodel to target roughly 30 organizations globally&lt;/a&gt;, including major financial institutions and government agencies.&lt;/p&gt;
+
+
+
+&lt;p&gt;The threat actor manipulated the model into functioning as an autonomous cyber attack agent, which executed 80% to 90% of tactical operations, from reconnaissance and vulnerability discovery to credential harvesting and data exfiltration.&lt;/p&gt;
+
+
+
+&lt;p&gt;The human operator only stepped in at critical choke points, such as authorizing the progression from reconnaissance to active exploitation. The AI autonomously mapped networks, discovered vulnerabilities and performed post-exploitation activities at machine speed, an unprecedented rate that traditional, human-speed defenses cannot match.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="deepfake-driven-financial-fraud"&gt;Deepfake-driven financial fraud&lt;/h3&gt;
+
+
+
+&lt;p&gt;On the other hand, generative AI has amplified social engineering through hyper-realistic deepfakes. Deepfake-based scams have skyrocketed, enabling voice and video forgeries that deceive even seasoned professionals. A dramatic example occurred when a Ferrari executive was nearly fooled by a voice-cloned deepfake of the CEO.&lt;/p&gt;
+
+
+
+&lt;p&gt;Even more recently, an employee at a global design firm was fooled by an AI-generated video call impersonating the company’s CFO and other executives, resulting in a &lt;a href="https://www.csoonline.com/article/3982379/deepfake-attacks-are-inevitable-cisos-cant-prepare-soon-enough.html"&gt;$25 million loss&lt;/a&gt;&lt;a href="https://www.csoonline.com/article/3982379/deepfake-attacks-are-inevitable-cisos-cant-prepare-soon-enough.html"&gt; transferred&lt;/a&gt; to the fraudsters.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-defensive-edge"&gt;The defensive edge&lt;/h2&gt;
+
+
+
+&lt;p&gt;If adversaries are operating at AI speed, our defenses must too. The silver lining of this dual-use dynamic is that the most powerful LLMs are also being harnessed by defenders to create fundamentally new security capabilities.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="vulnerability-detection-from-zero-days-to-autonomous-pentesting"&gt;Vulnerability detection: From zero-days to autonomous pentesting&lt;/h3&gt;
+
+
+
+&lt;p&gt;LLMs’ semantic code understanding and contextual reasoning offer a significant advantage over traditional, signature-based static analyzers, especially in the discovery of unknown threats before malicious actors find and exploit them.&lt;/p&gt;
+
+
+
+&lt;p&gt;LLMs have shown extraordinary potential in identifying unknown, unpatched flaws (zero-days). These models significantly outperform conventional static analyzers, particularly in uncovering subtle logic flaws and buffer overflows in novel software. For instance, Google’s &lt;a href="https://googleprojectzero.blogspot.com/2024/10/from-naptime-to-big-sleep.html"&gt;Big Sleep project&lt;/a&gt; used an LLM to identify a zero-day vulnerability in the critical SQLite database used across the industry.&lt;/p&gt;
+
+
+
+&lt;p&gt;Another example is &lt;a href="https://xbow.com/"&gt;XBOW&lt;/a&gt;, which is an autonomous AI penetration testing agent that leverages LLMs to simulate real-world attacks the same way a human counterpart would do. XBOW achieved the #1 spot on the HackerOne US Leaderboard, demonstrating that AI can match and, in some benchmarks, surpass expert human hackers in finding a broad range of vulnerabilities (e.g., injection flaws, XSS).&lt;/p&gt;
+
+
+
+&lt;p&gt;By deploying AI agents like XBOW against our own systems, we can systematically test every endpoint and attack vector. This scales ethical offensive security testing from a periodic audit into an on-demand, pre-production workflow.&lt;/p&gt;
+
+
+
+&lt;p&gt;On the other hand, Google’s DeepMind has pioneered an AI-powered agent called CodeMender that automatically detects, patches and rewrites vulnerable code to eliminate whole classes of security flaws. This reactive and proactive approach represents a major step forward in defensive automation.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="threat-hunting-and-behavioral-analysis"&gt;Threat hunting and behavioral analysis&lt;/h3&gt;
+
+
+
+&lt;p&gt;LLMs are transforming threat hunting from a manual, keyword-based search to an intelligent, contextual query process that focuses on behavioral anomalies. By processing and correlating massive, unstructured datasets such as network logs, security incident reports and threat intelligence feeds (OSINT), LLMs gain the contextual understanding necessary to generate high-confidence hypotheses about potential threats.&lt;/p&gt;
+
+
+
+&lt;p&gt;For example, &lt;a href="https://cloud.google.com/security/ai"&gt;Google Threat Intelligence with Gemini&lt;/a&gt; enhances this process by providing essential contextual grounding with data from multiple sources like VirusTotal and Mandiant to determine, in real-time, which global threat actor tactics, techniques and procedures (TTPs) that are most relevant to a particular industry or organization and prioritize what’s most important from tens of thousands of reports.&lt;/p&gt;
+
+
+
+&lt;p&gt;Furthermore, Palantir’s AIP (Artificial Intelligence Platform) utilizes LLMs to analyze anomalous user or system behavior across vast data lakes, identifies subtle indicators of compromise that span different systems and suggests a prioritized attack path for the human analyst to investigate.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Governance, compliance and regulation&lt;/h3&gt;
+
+
+
+&lt;p&gt;LLMs also offer a profound scalable solution to managing non-technical risk compliance, privacy and regulatory complexity, which represent significant financial and legal liability. LLMs can be leveraged to shift governance from periodic audits to continuous policy enforcement.&lt;/p&gt;
+
+
+
+&lt;p&gt;For example, &lt;a href="https://www.itmagination.com/blog/eu-ai-act-compliance-in-practice-a-microsoft-centric-approach"&gt;Microsoft’s Compliance Manager&lt;/a&gt; can ingest and understand vast amounts of unstructured data, such as internal security policies, legal contracts and external regulatory texts like GDPR or the EU AI Act. It then automatically maps the requirements of one framework to another, dramatically reducing the manual effort needed to prove compliance during an audit.&lt;/p&gt;
+
+
+
+&lt;p&gt;IBM’s Watsonx applies LLM capabilities for compliance and risk management. For a financial services firm, this might mean the model continuously scans new trading application code to verify that all data handling aligns with HIPAA or PCI DSS before deployment, automatically flagging any deviation from established policy.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="bringing-it-all-together"&gt;Bringing it all together&lt;/h2&gt;
+
+
+
+&lt;p&gt;As AI systems continue to advance from generative models to autonomous agents, their dual-use nature can’t be ignored. The same tools that help defenders accelerate incident response can also empower attackers to craft deepfakes, launch social engineering campaigns and more. This tension isn’t a temporary byproduct of innovation, but it is a structural reality of AI’s rapid evolution.&lt;/p&gt;
+
+
+
+&lt;p&gt;Ultimately, the challenge isn’t to halt AI progress but to guide it responsibly. That means building guardrails into models, improving transparency and developing governance frameworks that keep pace with emerging capabilities. It also requires organizations to rethink security strategies, recognizing that AI is both an opportunity and a risk multiplier.&lt;/p&gt;
+
+
+
+&lt;p&gt;In the end, AI’s impact on cybersecurity will be shaped not just by what these systems can do, but by how we choose to use them. The future will belong to those who can harness AI’s defensive power while staying vigilant against its offensive potential.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;/strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;&lt;strong&gt;Want to join?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4113987/the-2-faces-of-ai-how-emerging-models-empower-and-endanger-cybersecurity.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.99</comments>
+      <pubDate>Thu, 08 Jan 2026 18:20:00 +0000</pubDate>
     </item>
     <item>
       <title>Cybersecurity at the edge: Securing rugged IoT in mission-critical environments</title>
@@ -2105,7 +2254,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4113968/cybersecurity-at-the-edge-securing-rugged-iot-in-mission-critical-environments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.88</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Thu, 08 Jan 2026 14:40:00 +0000</pubDate>
     </item>
     <item>
@@ -2115,7 +2264,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-002</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.03</comments>
+      <comments>Score: 9.99</comments>
       <pubDate>Wed, 07 Jan 2026 14:46:07 +0000</pubDate>
     </item>
     <item>
@@ -2125,7 +2274,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-003</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.04</comments>
+      <comments>Score: 10.00</comments>
       <pubDate>Wed, 07 Jan 2026 14:59:54 +0000</pubDate>
     </item>
     <item>
@@ -2135,7 +2284,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-004</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.05</comments>
+      <comments>Score: 10.02</comments>
       <pubDate>Wed, 07 Jan 2026 15:35:09 +0000</pubDate>
     </item>
     <item>
@@ -2145,7 +2294,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-january-2026-monthly-rollup-av26-005</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.06</comments>
+      <comments>Score: 10.03</comments>
       <pubDate>Wed, 07 Jan 2026 15:51:49 +0000</pubDate>
     </item>
     <item>
@@ -2155,7 +2304,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-january-2026-monthly-rollup-av26-006</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.09</comments>
+      <comments>Score: 10.06</comments>
       <pubDate>Wed, 07 Jan 2026 16:50:20 +0000</pubDate>
     </item>
     <item>
@@ -2165,7 +2314,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-007</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.10</comments>
+      <comments>Score: 10.06</comments>
       <pubDate>Wed, 07 Jan 2026 16:58:18 +0000</pubDate>
     </item>
     <item>
@@ -2175,7 +2324,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-008</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.16</comments>
+      <comments>Score: 10.13</comments>
       <pubDate>Wed, 07 Jan 2026 18:58:32 +0000</pubDate>
     </item>
     <item>
@@ -2185,7 +2334,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.84</comments>
+      <comments>Score: 10.80</comments>
       <pubDate>Thu, 08 Jan 2026 13:42:11 +0000</pubDate>
     </item>
     <item>
@@ -2195,7 +2344,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-009</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.98</comments>
+      <comments>Score: 10.94</comments>
       <pubDate>Thu, 08 Jan 2026 17:00:25 +0000</pubDate>
     </item>
   </channel>
