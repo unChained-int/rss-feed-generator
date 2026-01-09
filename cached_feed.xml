@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 09 Jan 2026 12:52:03 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jan 2026 13:40:35 +0000</lastBuildDate>
+    <item>
+      <title>IBM security advisory (AV25-855)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-855</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-855</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.05</comments>
+      <pubDate>Mon, 22 Dec 2025 16:43:04 +0000</pubDate>
+    </item>
     <item>
       <title>Dell security advisory (AV25-856)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-856</link>
@@ -80,87 +90,13 @@
       <pubDate>Tue, 23 Dec 2025 18:56:58 +0000</pubDate>
     </item>
     <item>
-      <title>Critical jsPDF vulnerability enables arbitrary file read in Node.js deployments</title>
-      <link>https://www.csoonline.com/article/4114360/critical-jspdf-vulnerability-enables-arbitrary-file-read-in-node-js-deployments.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A now-fixed critical flaw in the jsPDF &lt;a href="https://github.com/parallax/jsPDF" rel="noreferrer noopener" target="_blank"&gt;library&lt;/a&gt; could enable attackers to extract sensitive files from enterprise servers and embed them directly into generated PDF documents.&lt;/p&gt;
-
-
-
-&lt;p&gt;Tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68428" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-68428&lt;/a&gt;, the flaw affects unpatched Node.js deployments of jsPDF, where untrusted input is passed to file-handling APIs without proper validation.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to an Endor Labs analysis, the issue enables path traversal and local file inclusion, allowing an attacker to read arbitrary files from the underlying filesystem. In affected environments, this could expose credentials, configuration files, private keys, or environment variables.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerability impacts jsPDF versions 3.0.4 and earlier, specifically the Node.js builds used in server-side PDF generation workflows, and does not affect browser-only usage.&lt;/p&gt;
-
-
-
-&lt;p&gt;While a fix has been made available, Endor researchers warned that remediation goes beyond a simple version bump, particularly in production environments that rely on dynamic file handling. “The patch provides no protection if the runtime permits unrestricted filesystem access,” Endor researchers said in a blog post.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;PDF library turns into a file exfiltration vector&lt;/h2&gt;
-
-
-
-&lt;p&gt;The CVE-2025-68428 issue lies in how jsPDF handles file paths when loading external resources in &lt;a href="https://www.csoonline.com/article/562547/malicious-code-in-the-node-js-npm-registry-shakes-open-source-trust-model.html"&gt;Node.js&lt;/a&gt;. Several commonly used APIs, including “addImage”,“html”, and “addFont”, internally rely on a “loadFile()” function to read files from disk. Prior to version 4.0.0, these methods did not adequately validate or restrict file paths supplied at runtime.&lt;/p&gt;
-
-
-
-&lt;p&gt;If an application accepts user-controlled input, such as a filename, image path, or font reference, and passes it directly into these APIs, an attacker could supply a crafted path to reference sensitive application files. jsPDF would then read the file and embed its contents into the resulting PDF without triggering an error.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because the library does not enforce file-type restrictions at this stage, the issue is not limited to images or fronts. Any file readable by the Node.js process can potentially be included.&lt;/p&gt;
-
-
-
-&lt;p&gt;The bug has been assigned a critical severity rating at a base CVSS score of 9.2 out of 10. Researchers urged upgrading to the fixed version immediately to protect against exploitation.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Patching may not be enough&lt;/h2&gt;
-
-
-
-&lt;p&gt;The jsPDF maintainers addressed the issue in version 4.0.0 by restricting filesystem access by default. The fix relies on Node.js permission mode, which requires applications to explicitly grant read access to specific directories at runtime. When properly configured, this prevents jsPDF from accessing files outside approved paths.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, this approach introduces operational complexity. Node.js permission mode is evolving, and many production environments either run older Node versions or have not adopted permission-based execution. “Many environments run older Node.js versions that lack stable permission mode support, and enabling –permission may break existing functionality if filesystem access patterns haven’t been carefully mapped,” the researchers &lt;a href="https://www.endorlabs.com/learn/cve-2025-68428-critical-path-traversal-in-jspdf"&gt;noted&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers outlined a set of steps to assess the exploitability of their deployments, which includes verifying if jsPDF is being used server-side ( as it is unexploitable on the client side), checking if the running version already implements permission mode and has filesystem permission properly configured, identifying affected code paths with SCA tools, and manual searching of the vulnerable codebase.&lt;/p&gt;
-
-
-
-&lt;p&gt;Endor Labs credited security researcher Kwangwoon Kim (KilkAt) for identifying and reporting the vulnerability on &lt;a href="https://github.com/parallax/jsPDF/security/advisories/GHSA-f8cm-6447-x5h2" rel="noreferrer noopener" target="_blank"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4114360/critical-jspdf-vulnerability-enables-arbitrary-file-read-in-node-js-deployments.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.07</comments>
-      <pubDate>Thu, 08 Jan 2026 11:19:50 +0000</pubDate>
-    </item>
-    <item>
       <title>MongoDB security advisory (AV25-862) - Update 1</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.08</comments>
+      <comments>Score: 7.07</comments>
       <pubDate>Wed, 24 Dec 2025 15:54:36 +0000</pubDate>
     </item>
     <item>
@@ -190,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-864</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Mon, 29 Dec 2025 19:55:14 +0000</pubDate>
     </item>
     <item>
@@ -200,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-865</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Mon, 29 Dec 2025 20:34:34 +0000</pubDate>
     </item>
     <item>
@@ -214,16 +150,6 @@
       <pubDate>Tue, 30 Dec 2025 21:12:15 +0000</pubDate>
     </item>
     <item>
-      <title>New report explores use of robotics and unmanned systems in the fight against crime</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</link>
-      <description>Europol has today published The Unmanned Future(s): The Impact of Robotics and Unmanned Systems on Law Enforcement. The report, produced by the Europol Innovation Lab, provides an in-depth analysis of how unmanned systems could change society, crime and law enforcement, and discusses the challenges and opportunities they present.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
-      <pubDate>Fri, 09 Jan 2026 10:52:03 +0000</pubDate>
-    </item>
-    <item>
       <title>CISA Retires 10 Emergency Cybersecurity Directives Issued Between 2019 and 2024</title>
       <link>https://thehackernews.com/2026/01/cisa-retires-10-emergency-cybersecurity.html</link>
       <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday said it's retiring 10 emergency directives (Eds) that were issued between 2019 and 2024.
@@ -235,8 +161,18 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://thehackernews.com/2026/01/cisa-retires-10-emergency-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Fri, 09 Jan 2026 14:41:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>New report explores use of robotics and unmanned systems in the fight against crime</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</link>
+      <description>Europol has today published The Unmanned Future(s): The Impact of Robotics and Unmanned Systems on Law Enforcement. The report, produced by the Europol Innovation Lab, provides an in-depth analysis of how unmanned systems could change society, crime and law enforcement, and discusses the challenges and opportunities they present.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.40</comments>
+      <pubDate>Fri, 09 Jan 2026 11:40:35 +0000</pubDate>
     </item>
     <item>
       <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
@@ -246,47 +182,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 09 Jan 2026 10:52:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
-      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 09 Jan 2026 10:52:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
-      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 09 Jan 2026 10:52:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Most Wanted website revamped with new fugitives added</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
-      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 09 Jan 2026 10:52:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
-      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 09 Jan 2026 10:52:03 +0000</pubDate>
+      <pubDate>Fri, 09 Jan 2026 11:40:35 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -296,7 +192,47 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 09 Jan 2026 10:52:03 +0000</pubDate>
+      <pubDate>Fri, 09 Jan 2026 11:40:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
+      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 09 Jan 2026 11:40:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Most Wanted website revamped with new fugitives added</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
+      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 09 Jan 2026 11:40:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
+      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 09 Jan 2026 11:40:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
+      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 09 Jan 2026 11:40:35 +0000</pubDate>
     </item>
     <item>
       <title>Law enforcement challenges major cocaine supply chains into Europe</title>
@@ -306,7 +242,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Fri, 09 Jan 2026 10:52:03 +0000</pubDate>
+      <pubDate>Fri, 09 Jan 2026 11:40:35 +0000</pubDate>
     </item>
     <item>
       <title>Holes in Veeam Backup suite allow remote code execution, creation of malicious backup config files</title>
@@ -406,7 +342,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4114165/holes-in-veeam-backup-suite-allow-remote-code-execution-creation-of-malicious-backup-config-files-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Thu, 08 Jan 2026 01:56:36 +0000</pubDate>
     </item>
     <item>
@@ -472,7 +408,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4109550/die-wichtigsten-ciso-trends-fur-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Thu, 08 Jan 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -483,17 +419,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Fri, 09 Jan 2026 10:52:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
-      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
-      <pubDate>Fri, 09 Jan 2026 10:52:03 +0000</pubDate>
+      <pubDate>Fri, 09 Jan 2026 11:40:35 +0000</pubDate>
     </item>
     <item>
       <title>Top cyber threats to your AI systems and infrastructure</title>
@@ -703,8 +629,18 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4110008/top-cyber-threats-to-your-ai-systems-and-infrastructure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Thu, 08 Jan 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</link>
+      <description>On 10 December 2025, Europol participated in the second International Conference of the Global Alliance to Counter Migrant Smuggling, hosted by the European Commission. Over 80 delegations, including EU Member States, EU agencies, third party countries, international organisations, and private parties attended the event. During this high-level conference, over 50 delegations endorsed a joint declaration, pledging to strengthen cooperation along migrant smuggling routes and tackle the growing digital dimension of these criminal activities. The declaration underscores new preventive measures, including a crackdown on online advertisements promoting migrant smuggling and the disruption of underground banking systems fuelling the criminal business.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/firm-stand-against-migrant-smuggling-global-alliance-convened-in-brussels</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.91</comments>
+      <pubDate>Fri, 09 Jan 2026 11:40:35 +0000</pubDate>
     </item>
     <item>
       <title>NIS2-Umsetzung: Neues BSI-Portal geht an den Start</title>
@@ -773,7 +709,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4114344/nis2-umsetzung-neues-bsi-portal-geht-an-den-start.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Thu, 08 Jan 2026 11:30:27 +0000</pubDate>
     </item>
     <item>
@@ -851,7 +787,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4114453/phishing-angreifer-setzen-vermehrt-auf-e-mail-routing-lucken.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Thu, 08 Jan 2026 14:15:38 +0000</pubDate>
     </item>
     <item>
@@ -1010,7 +946,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4113987/the-2-faces-of-ai-how-emerging-models-empower-and-endanger-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Thu, 08 Jan 2026 18:20:00 +0000</pubDate>
     </item>
     <item>
@@ -1020,7 +956,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-001</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Mon, 05 Jan 2026 13:51:16 +0000</pubDate>
     </item>
     <item>
@@ -1109,7 +1045,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4114715/cisco-identifies-vulnerability-in-ise-network-access-control-devices-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Fri, 09 Jan 2026 02:11:55 +0000</pubDate>
     </item>
     <item>
@@ -1307,7 +1243,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/3493104/5-top-cybersecurity-zertifizierungen-so-pushen-sie-ihre-ciso-karriere.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Fri, 09 Jan 2026 03:33:00 +0000</pubDate>
     </item>
     <item>
@@ -1482,7 +1418,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4114758/enterprises-still-arent-getting-iam-right-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Fri, 09 Jan 2026 04:22:37 +0000</pubDate>
     </item>
     <item>
@@ -1637,7 +1573,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4098274/jamie-nortons-early-interest-in-computers-took-him-on-a-journey-securing-key-australian-government-organizations.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Fri, 09 Jan 2026 07:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1744,7 +1680,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4114957/crowdstrike-to-acquire-sgnl-for-740m-expanding-real-time-identity-security.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.97</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Fri, 09 Jan 2026 12:09:02 +0000</pubDate>
     </item>
     <item>
@@ -2021,7 +1957,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4113968/cybersecurity-at-the-edge-securing-rugged-iot-in-mission-critical-environments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Thu, 08 Jan 2026 14:40:00 +0000</pubDate>
     </item>
     <item>
@@ -2031,7 +1967,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-002</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.45</comments>
       <pubDate>Wed, 07 Jan 2026 14:46:07 +0000</pubDate>
     </item>
     <item>
@@ -2041,7 +1977,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-003</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.48</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Wed, 07 Jan 2026 14:59:54 +0000</pubDate>
     </item>
     <item>
@@ -2051,7 +1987,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-004</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Wed, 07 Jan 2026 15:35:09 +0000</pubDate>
     </item>
     <item>
@@ -2061,7 +1997,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-january-2026-monthly-rollup-av26-005</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Wed, 07 Jan 2026 15:51:49 +0000</pubDate>
     </item>
     <item>
@@ -2071,7 +2007,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-january-2026-monthly-rollup-av26-006</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Wed, 07 Jan 2026 16:50:20 +0000</pubDate>
     </item>
     <item>
@@ -2081,7 +2017,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-007</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Wed, 07 Jan 2026 16:58:18 +0000</pubDate>
     </item>
     <item>
@@ -2091,7 +2027,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-008</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.59</comments>
+      <comments>Score: 9.56</comments>
       <pubDate>Wed, 07 Jan 2026 18:58:32 +0000</pubDate>
     </item>
     <item>
@@ -2101,7 +2037,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.12</comments>
       <pubDate>Thu, 08 Jan 2026 13:42:11 +0000</pubDate>
     </item>
     <item>
@@ -2111,7 +2047,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-009</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.25</comments>
+      <comments>Score: 10.23</comments>
       <pubDate>Thu, 08 Jan 2026 17:00:25 +0000</pubDate>
     </item>
     <item>
@@ -2121,7 +2057,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-010</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.31</comments>
+      <comments>Score: 10.28</comments>
       <pubDate>Thu, 08 Jan 2026 18:45:20 +0000</pubDate>
     </item>
     <item>
@@ -2131,7 +2067,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-011</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.36</comments>
+      <comments>Score: 10.33</comments>
       <pubDate>Thu, 08 Jan 2026 20:06:02 +0000</pubDate>
     </item>
     <item>
@@ -2141,7 +2077,7 @@ ED 20-03: Mitigate Windows DNS Server</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-012</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.36</comments>
+      <comments>Score: 10.34</comments>
       <pubDate>Thu, 08 Jan 2026 20:15:51 +0000</pubDate>
     </item>
   </channel>
