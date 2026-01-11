@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Jan 2026 02:05:45 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Jan 2026 04:11:44 +0000</lastBuildDate>
+    <item>
+      <title>WatchGuard security advisory (AV25-850) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-850</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av25-850</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.02</comments>
+      <pubDate>Fri, 19 Dec 2025 20:55:26 +0000</pubDate>
+    </item>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV25–854)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av25-854</link>
@@ -80,98 +90,6 @@
       <pubDate>Tue, 23 Dec 2025 14:27:19 +0000</pubDate>
     </item>
     <item>
-      <title>VMware security advisory (AV25-860)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-860</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-860</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.04</comments>
-      <pubDate>Tue, 23 Dec 2025 16:19:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>TeamViewer security advisory (AV25-861)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av25-861</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av25-861</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.04</comments>
-      <pubDate>Tue, 23 Dec 2025 18:56:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>MongoDB security advisory (AV25-862) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.05</comments>
-      <pubDate>Wed, 24 Dec 2025 15:54:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>Trend Micro patches critical flaws in its Apex Central software</title>
-      <link>https://www.csoonline.com/article/4115151/trend-micro-patches-critical-flaws-in-its-apex-central-software.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Security company Trend Micro has been compelled to issue a patch for its own Apex Central software management tool after vulnerability management platform &lt;a href="https://www.tenable.com/security/research/tra-2026-01" rel="noreferrer noopener" target="_blank"&gt;Tenable identified several security flaws&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The bugs affect all versions of Apex Central (on-premises) earlier than build 7190.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://success.trendmicro.com/en-US/solution/KA-0022071" rel="noreferrer noopener" target="_blank"&gt;In a security bulletin&lt;/a&gt;, Trend Micro said of the most severe flaw, rated 9.8, “A LoadLibraryEX vulnerability in Trend Micro Apex Central could allow an unauthenticated remote attacker to load an attacker-controlled DLL into a key executable, leading to execution of attacker-supplied code under the context of SYSTEM on affected installations.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.infotech.com/profiles/erik-avakian" rel="noreferrer noopener" target="_blank"&gt;Erik Avakian&lt;/a&gt;, technical counselor at Info-Tech Research Group, explained why this is an issue. “There’s a critical flaw in the management server in how one of its background services handles certain types of network messages that allows an attacker on the network to run their own code without logging in. That service will accept a message from anyone on the network and then can blindly load a Windows DLL using a standard Windows function. The problem is that the software doesn’t properly validate where that DLL is coming from.”&lt;/p&gt;
-
-
-
-&lt;p&gt;When this happens, he said, the affected software will run the attacker’s code, probably at the highest level of privilege. So, in these circumstances, the attacker can point Apex Central to a DLL that they control, for example, on a remote network. That could then move deeper into the corporate software environment. “In short, if this server is exposed and unpatched, it can be taken over remotely,” said Avakian.&lt;/p&gt;
-
-
-
-&lt;p&gt;What makes the attack particularly insidious, he said, is that attackers don’t need to log into the server or copy files onto it. “They simply can host a malicious DLL somewhere they control and instruct Apex Central to load it. Because of the flaw, Apex Central reaches out and loads the DLL itself, effectively pulling in and executing the attacker’s code without checking who asked.”&lt;/p&gt;
-
-
-
-&lt;p&gt;He added that the SYSTEM context was important because that means that the vulnerable service is running with maximum privileges. Thus, it would enable the attacker to carry out a wide range of activities, including modifying files, installing or disabling software, creating user accounts, or using the server as a launch point to attack other systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerability does not seem to be the result of recent modifications to the software. Avakian said. “Everything in the published materials indicates this flaw may have been present for some time. The advisory affects all builds below the fixed version, and there’s no indication that it was introduced recently. On the surface, this appears to be a long-standing issue that was only recently discovered and addressed.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Neither Trend Micro nor Tenable responded to requests for comment by publication time.&lt;/p&gt;
-
-
-
-&lt;p&gt;In addition to this critical vulnerability, Trend Micro’s bulletin also highlighted two other high severity issues, neither of which requires authentication to be exploited. The first is a message unchecked NULL return value vulnerability in Trend Micro Apex Central that could allow a remote attacker to create a denial-of-service condition on affected installations. The second is a message out-of-bounds read vulnerability in Trend Micro Apex Central that could also allow a remote attacker to create a denial-of-service condition. All three flaws are patched in build 7190.&lt;/p&gt;
-
-
-
-&lt;p&gt;Trend Micro’s advisory did point out that to exploit vulnerabilities like these, the attacker would generally need access to a vulnerable machine.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, the company advised customers to review remote access to critical systems to ensure policies and perimeter security are up-to-date. It also warned them to update to the latest builds as soon as possible.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4115151/trend-micro-patches-critical-flaws-in-its-apex-central-software.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.07</comments>
-      <pubDate>Sat, 10 Jan 2026 00:46:18 +0000</pubDate>
-    </item>
-    <item>
       <title>NIS2-Umsetzung: Neues BSI-Portal geht an den Start</title>
       <link>https://www.csoonline.com/article/4114344/nis2-umsetzung-neues-bsi-portal-geht-an-den-start.html</link>
       <description>&lt;div id="remove_no_follow"&gt;
@@ -238,8 +156,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114344/nis2-umsetzung-neues-bsi-portal-geht-an-den-start.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.08</comments>
+      <comments>Score: 7.04</comments>
       <pubDate>Thu, 08 Jan 2026 11:30:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>VMware security advisory (AV25-860)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-860</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-860</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.04</comments>
+      <pubDate>Tue, 23 Dec 2025 16:19:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>TeamViewer security advisory (AV25-861)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av25-861</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av25-861</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.04</comments>
+      <pubDate>Tue, 23 Dec 2025 18:56:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>MongoDB security advisory (AV25-862) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.05</comments>
+      <pubDate>Wed, 24 Dec 2025 15:54:36 +0000</pubDate>
     </item>
     <item>
       <title>Phishing-Angreifer setzen vermehrt auf E-Mail-Routing-Lücken</title>
@@ -316,7 +264,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114453/phishing-angreifer-setzen-vermehrt-auf-e-mail-routing-lucken.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.14</comments>
+      <comments>Score: 7.10</comments>
       <pubDate>Thu, 08 Jan 2026 14:15:38 +0000</pubDate>
     </item>
     <item>
@@ -336,7 +284,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-863</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.19</comments>
+      <comments>Score: 7.18</comments>
       <pubDate>Mon, 29 Dec 2025 19:42:17 +0000</pubDate>
     </item>
     <item>
@@ -346,7 +294,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-864</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.19</comments>
+      <comments>Score: 7.18</comments>
       <pubDate>Mon, 29 Dec 2025 19:55:14 +0000</pubDate>
     </item>
     <item>
@@ -356,7 +304,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av25-865</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.19</comments>
+      <comments>Score: 7.18</comments>
       <pubDate>Mon, 29 Dec 2025 20:34:34 +0000</pubDate>
     </item>
     <item>
@@ -515,7 +463,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4113987/the-2-faces-of-ai-how-emerging-models-empower-and-endanger-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.24</comments>
+      <comments>Score: 7.19</comments>
       <pubDate>Thu, 08 Jan 2026 18:20:00 +0000</pubDate>
     </item>
     <item>
@@ -536,18 +484,8 @@
       <guid isPermaLink="false">https://www.securityweek.com/in-other-news-8000-ransomware-attacks-china-hacked-us-gov-emails-idhs-breach-impacts-700k/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
+      <comments>Score: 7.24</comments>
       <pubDate>Fri, 09 Jan 2026 15:58:37 +0000</pubDate>
-    </item>
-    <item>
-      <title>New report explores use of robotics and unmanned systems in the fight against crime</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</link>
-      <description>Europol has today published The Unmanned Future(s): The Impact of Robotics and Unmanned Systems on Law Enforcement. The report, produced by the Europol Innovation Lab, provides an in-depth analysis of how unmanned systems could change society, crime and law enforcement, and discusses the challenges and opportunities they present.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
-      <pubDate>Sun, 11 Jan 2026 00:05:45 +0000</pubDate>
     </item>
     <item>
       <title>Cisco identifies vulnerability in ISE network access control devices</title>
@@ -635,8 +573,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114715/cisco-identifies-vulnerability-in-ise-network-access-control-devices-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Fri, 09 Jan 2026 02:11:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>New report explores use of robotics and unmanned systems in the fight against crime</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</link>
+      <description>Europol has today published The Unmanned Future(s): The Impact of Robotics and Unmanned Systems on Law Enforcement. The report, produced by the Europol Innovation Lab, provides an in-depth analysis of how unmanned systems could change society, crime and law enforcement, and discusses the challenges and opportunities they present.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.40</comments>
+      <pubDate>Sun, 11 Jan 2026 02:11:44 +0000</pubDate>
     </item>
     <item>
       <title>5 Top Cybersecurity-Zertifizierungen: So pushen Sie Ihre CISO-Karriere</title>
@@ -833,7 +781,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3493104/5-top-cybersecurity-zertifizierungen-so-pushen-sie-ihre-ciso-karriere.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Fri, 09 Jan 2026 03:33:00 +0000</pubDate>
     </item>
     <item>
@@ -1008,68 +956,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114758/enterprises-still-arent-getting-iam-right-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Fri, 09 Jan 2026 04:22:37 +0000</pubDate>
-    </item>
-    <item>
-      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
-      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 00:05:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
-      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 00:05:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</link>
-      <description>Europol Deputy Executive Director for Governance, Jurgen Ebner, joined the Heads of EU Justice and Home Affairs Agencies in Vienna to reflect on joint achievements and align their future cooperation with the wider EU priorities.Marking the 25th anniversary of the EU Charter of Fundamental Rights, they adopted a joint statement pledging to intensify efforts to uphold and promote fundamental rights...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 00:05:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
-      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 00:05:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Most Wanted website revamped with new fugitives added</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
-      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 00:05:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
-      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 00:05:45 +0000</pubDate>
     </item>
     <item>
       <title>Jamie Norton’s journey to CISO started with an early interest in computers</title>
@@ -1223,8 +1111,68 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4098274/jamie-nortons-early-interest-in-computers-took-him-on-a-journey-securing-key-australian-government-organizations.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Fri, 09 Jan 2026 07:30:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
+      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 11 Jan 2026 02:11:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</link>
+      <description>The final actions in a sweeping international operation have successfully dismantled a large-scale cryptocurrency fraud and money laundering network that had laundered over EUR 700 million. Coordinated across multiple jurisdictions, these actions, carried out last month and earlier this week, mark the culmination of years of investigation and the effective disruption of a criminal operation that spanned Europe and beyond.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 11 Jan 2026 02:11:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
+      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 11 Jan 2026 02:11:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Most Wanted website revamped with new fugitives added</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
+      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 11 Jan 2026 02:11:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</link>
+      <description>Europol Deputy Executive Director for Governance, Jurgen Ebner, joined the Heads of EU Justice and Home Affairs Agencies in Vienna to reflect on joint achievements and align their future cooperation with the wider EU priorities.Marking the 25th anniversary of the EU Charter of Fundamental Rights, they adopted a joint statement pledging to intensify efforts to uphold and promote fundamental rights...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-agencies-shape-future-cooperation-and-mark-25-years-of-fundamental-rights-charter</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 11 Jan 2026 02:11:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
+      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 11 Jan 2026 02:11:44 +0000</pubDate>
     </item>
     <item>
       <title>Law enforcement challenges major cocaine supply chains into Europe</title>
@@ -1234,7 +1182,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Sun, 11 Jan 2026 00:05:45 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 02:11:44 +0000</pubDate>
     </item>
     <item>
       <title>CrowdStrike to acquire SGNL for $740M, expanding real-time identity security</title>
@@ -1340,7 +1288,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114957/crowdstrike-to-acquire-sgnl-for-740m-expanding-real-time-identity-security.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.64</comments>
       <pubDate>Fri, 09 Jan 2026 12:09:02 +0000</pubDate>
     </item>
     <item>
@@ -1351,7 +1299,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Sun, 11 Jan 2026 00:05:45 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 02:11:44 +0000</pubDate>
     </item>
     <item>
       <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
@@ -1361,7 +1309,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Sun, 11 Jan 2026 00:05:45 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 02:11:44 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-001)</title>
@@ -1370,7 +1318,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-001</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Mon, 05 Jan 2026 13:51:16 +0000</pubDate>
     </item>
     <item>
@@ -1647,7 +1595,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4113968/cybersecurity-at-the-edge-securing-rugged-iot-in-mission-critical-environments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Thu, 08 Jan 2026 14:40:00 +0000</pubDate>
     </item>
     <item>
@@ -1657,7 +1605,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-002</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.64</comments>
       <pubDate>Wed, 07 Jan 2026 14:46:07 +0000</pubDate>
     </item>
     <item>
@@ -1667,7 +1615,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-003</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.65</comments>
       <pubDate>Wed, 07 Jan 2026 14:59:54 +0000</pubDate>
     </item>
     <item>
@@ -1677,7 +1625,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-004</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Wed, 07 Jan 2026 15:35:09 +0000</pubDate>
     </item>
     <item>
@@ -1687,7 +1635,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-january-2026-monthly-rollup-av26-005</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Wed, 07 Jan 2026 15:51:49 +0000</pubDate>
     </item>
     <item>
@@ -1697,7 +1645,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-january-2026-monthly-rollup-av26-006</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Wed, 07 Jan 2026 16:50:20 +0000</pubDate>
     </item>
     <item>
@@ -1707,7 +1655,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-007</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Wed, 07 Jan 2026 16:58:18 +0000</pubDate>
     </item>
     <item>
@@ -1717,7 +1665,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-008</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Wed, 07 Jan 2026 18:58:32 +0000</pubDate>
     </item>
     <item>
@@ -1727,7 +1675,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Thu, 08 Jan 2026 13:42:11 +0000</pubDate>
     </item>
     <item>
@@ -1737,7 +1685,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-009</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Thu, 08 Jan 2026 17:00:25 +0000</pubDate>
     </item>
     <item>
@@ -1747,7 +1695,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-010</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.20</comments>
       <pubDate>Thu, 08 Jan 2026 18:45:20 +0000</pubDate>
     </item>
     <item>
@@ -1757,7 +1705,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-011</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.28</comments>
+      <comments>Score: 9.23</comments>
       <pubDate>Thu, 08 Jan 2026 20:06:02 +0000</pubDate>
     </item>
     <item>
@@ -1767,7 +1715,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-012</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.28</comments>
+      <comments>Score: 9.23</comments>
       <pubDate>Thu, 08 Jan 2026 20:15:51 +0000</pubDate>
     </item>
     <item>
@@ -1777,7 +1725,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-013</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.87</comments>
       <pubDate>Fri, 09 Jan 2026 20:22:58 +0000</pubDate>
     </item>
   </channel>
