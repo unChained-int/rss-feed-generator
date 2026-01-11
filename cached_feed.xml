@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Jan 2026 19:18:57 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Jan 2026 20:26:59 +0000</lastBuildDate>
+    <item>
+      <title>Cisco security advisory (AV25-848) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-848</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av25-848</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.01</comments>
+      <pubDate>Wed, 17 Dec 2025 20:49:24 +0000</pubDate>
+    </item>
     <item>
       <title>Mozilla security advisory (AV25-849)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av25-849</link>
@@ -110,95 +120,6 @@
       <pubDate>Mon, 22 Dec 2025 19:37:15 +0000</pubDate>
     </item>
     <item>
-      <title>Cisco identifies vulnerability in ISE network access control devices</title>
-      <link>https://www.csoonline.com/article/4114715/cisco-identifies-vulnerability-in-ise-network-access-control-devices-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The latest flaw in Cisco Systems Identity Services Engine (ISE), which could expose sensitive information to an attacker, requires rotation of credentials as well as installation of a patch to correct, says an expert.&lt;/p&gt;
-
-
-
-&lt;p&gt;Cisco ISE is a network access control platform that enforces access policy and manages endpoints.&lt;/p&gt;
-
-
-
-&lt;p&gt;There have been more critical holes in Cisco products, acknowledged Paddy Harrington, a senior analyst at Forrester Research, and this one does need a threat actor with administrative privileges to execute and get read access to sensitive information. “However,” he advised senior infosec leaders with Cisco ISE servers, “don’t let these things hang around.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Before patching, he said, admins should:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;rotate ISE credentials for those with existing and approved access;&lt;/li&gt;
-
-
-
-&lt;li&gt;ensure only those who need access have credentials;&lt;/li&gt;
-
-
-
-&lt;li&gt;reduce the number of devices that can access the ISE server;&lt;/li&gt;
-
-
-
-&lt;li&gt;patch as soon as it’s possible to take the server offline.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-xxe-jWSbSDKt" rel="noreferrer noopener" target="_blank"&gt;In its notice to customers&lt;/a&gt;, Cisco says a &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20029" rel="noreferrer noopener" target="_blank"&gt;vulnerability&lt;/a&gt; [CVE-2026-20029] in the licensing features of ISE and Cisco ISE Passive Identity Connector (ISE-PIC) could allow an authenticated remote attacker with administrative privileges to gain access to sensitive information. It isn’t clear why this is called a licensing feature vulnerability. Cisco didn’t respond by deadline when asked for an explanation.&lt;/p&gt;
-
-
-
-&lt;p&gt;The advisory, which describes the problem as of medium criticality, with a CVSS score of 4.9, says the vulnerability is due to improper parsing of XML that is processed by the web-based management interface of Cisco ISE and Cisco ISE-PIC.&lt;/p&gt;
-
-
-
-&lt;p&gt;Johannes Ullrich, dean of research at the SANS Institute, said, “Most likely, this is an XML External Entity vulnerability.” External entities, he explained, are an XML feature that instructs the parser to either read local files or access external URLs. In this case, an attacker could embed an external entity in the license file, instructing the XML parser to read a confidential file and include it in the response. This is a common vulnerability in XML parsers, he said, typically mitigated by disabling external entity parsing.&lt;/p&gt;
-
-
-
-&lt;p&gt;An attacker would be able to obtain read access to confidential files like configuration files, he added, and possibly user credentials. Ullrich also said an ISE administrator may have access to a lot of the information, but they should not have access to user credentials.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Cisco advisory says an attacker could exploit this vulnerability by uploading a malicious file to the application: “A successful exploit could allow the attacker to read arbitrary files from the underlying operating system that could include sensitive data that should otherwise be inaccessible even to administrators. To exploit this vulnerability, the attacker must have valid administrative credentials.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Cisco said proof-of-concept exploit code is available for this vulnerability, but so far the company isn’t aware of any malicious use of the hole. &lt;/p&gt;
-
-
-
-&lt;p&gt;These days, admin credentials aren’t hard to get, Harrington noted. The “dirty secret that few people want to talk about is across IT and security operations there are so many systems that are left with default credentials.” That’s particularly common, he said, with devices behind a firewall, such as network access control servers, because admins think because they are inside the network they can’t be touched by external hackers. But lots of credentials can be scooped up in compromises of applications where Cisco admins might have stored passwords.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Related content: &lt;a href="https://community.cisco.com/t5/security-knowledge-base/cisco-ise-related-vulnerability-cve-2025-20281-amp-20282-amp/ta-p/5302518" rel="noreferrer noopener" target="_blank"&gt;Cisco warns of three critical ISE vulnerabilities&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Coincidentally, today researchers at SCORadar &lt;a href="https://socradar.io/resources/whitepapers/end-of-the-year-intelligence-2025/" rel="noreferrer noopener" target="_blank"&gt;released an analysis of data thefts in 2025&lt;/a&gt;. Among other things, it notes that credential theft hit a new high last year. A total of 388 million credentials were stolen from the ten most affected platforms, including Facebook, Google, and Roblox.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.networkworld.com/article/4114677/cisco-identifies-vulnerability-in-ise-network-access-control-devices.html" target="_blank"&gt;NetworkWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4114715/cisco-identifies-vulnerability-in-ise-network-access-control-devices-2.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.03</comments>
-      <pubDate>Fri, 09 Jan 2026 02:11:55 +0000</pubDate>
-    </item>
-    <item>
       <title>Red Hat security advisory (AV25-858)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av25-858</link>
       <description>No description available</description>
@@ -237,16 +158,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.03</comments>
       <pubDate>Tue, 23 Dec 2025 18:56:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>MongoDB security advisory (AV25-862) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.04</comments>
-      <pubDate>Wed, 24 Dec 2025 15:54:36 +0000</pubDate>
     </item>
     <item>
       <title>5 Top Cybersecurity-Zertifizierungen: So pushen Sie Ihre CISO-Karriere</title>
@@ -443,8 +354,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3493104/5-top-cybersecurity-zertifizierungen-so-pushen-sie-ihre-ciso-karriere.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.06</comments>
+      <comments>Score: 7.03</comments>
       <pubDate>Fri, 09 Jan 2026 03:33:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MongoDB security advisory (AV25-862) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av25-862</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.04</comments>
+      <pubDate>Wed, 24 Dec 2025 15:54:36 +0000</pubDate>
     </item>
     <item>
       <title>Enterprises still aren’t getting IAM right</title>
@@ -618,7 +539,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114758/enterprises-still-arent-getting-iam-right-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.08</comments>
+      <comments>Score: 7.05</comments>
       <pubDate>Fri, 09 Jan 2026 04:22:37 +0000</pubDate>
     </item>
     <item>
@@ -773,7 +694,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4098274/jamie-nortons-early-interest-in-computers-took-him-on-a-journey-securing-key-australian-government-organizations.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.15</comments>
+      <comments>Score: 7.12</comments>
       <pubDate>Fri, 09 Jan 2026 07:30:00 +0000</pubDate>
     </item>
     <item>
@@ -793,7 +714,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av25-863</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.16</comments>
+      <comments>Score: 7.15</comments>
       <pubDate>Mon, 29 Dec 2025 19:42:17 +0000</pubDate>
     </item>
     <item>
@@ -803,7 +724,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av25-864</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.16</comments>
+      <comments>Score: 7.15</comments>
       <pubDate>Mon, 29 Dec 2025 19:55:14 +0000</pubDate>
     </item>
     <item>
@@ -930,7 +851,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4114957/crowdstrike-to-acquire-sgnl-for-740m-expanding-real-time-identity-security.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
+      <comments>Score: 7.23</comments>
       <pubDate>Fri, 09 Jan 2026 12:09:02 +0000</pubDate>
     </item>
     <item>
@@ -941,7 +862,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.40</comments>
-      <pubDate>Sun, 11 Jan 2026 17:18:57 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 18:26:59 +0000</pubDate>
     </item>
     <item>
       <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
@@ -951,7 +872,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 17:18:57 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 18:26:59 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -961,7 +882,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 17:18:57 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 18:26:59 +0000</pubDate>
     </item>
     <item>
       <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
@@ -971,7 +892,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 17:18:57 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 18:26:59 +0000</pubDate>
     </item>
     <item>
       <title>EU Most Wanted website revamped with new fugitives added</title>
@@ -981,7 +902,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 17:18:57 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 18:26:59 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
@@ -991,7 +912,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 17:18:57 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 18:26:59 +0000</pubDate>
     </item>
     <item>
       <title>International takedown of cryptocurrency fraud network laundering over EUR 700 million</title>
@@ -1001,7 +922,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 11 Jan 2026 17:18:57 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 18:26:59 +0000</pubDate>
     </item>
     <item>
       <title>Law enforcement challenges major cocaine supply chains into Europe</title>
@@ -1011,7 +932,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Sun, 11 Jan 2026 17:18:57 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 18:26:59 +0000</pubDate>
     </item>
     <item>
       <title>Cybersecurity at the edge: Securing rugged IoT in mission-critical environments</title>
@@ -1287,7 +1208,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4113968/cybersecurity-at-the-edge-securing-rugged-iot-in-mission-critical-environments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Thu, 08 Jan 2026 14:40:00 +0000</pubDate>
     </item>
     <item>
@@ -1297,7 +1218,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-001</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Mon, 05 Jan 2026 13:51:16 +0000</pubDate>
     </item>
     <item>
@@ -1308,7 +1229,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.88</comments>
-      <pubDate>Sun, 11 Jan 2026 17:18:57 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 18:26:59 +0000</pubDate>
     </item>
     <item>
       <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
@@ -1318,7 +1239,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Sun, 11 Jan 2026 17:18:57 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 18:26:59 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-002)</title>
@@ -1327,7 +1248,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-002</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Wed, 07 Jan 2026 14:46:07 +0000</pubDate>
     </item>
     <item>
@@ -1337,7 +1258,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-003</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Wed, 07 Jan 2026 14:59:54 +0000</pubDate>
     </item>
     <item>
@@ -1347,7 +1268,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-004</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Wed, 07 Jan 2026 15:35:09 +0000</pubDate>
     </item>
     <item>
@@ -1357,7 +1278,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-january-2026-monthly-rollup-av26-005</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Wed, 07 Jan 2026 15:51:49 +0000</pubDate>
     </item>
     <item>
@@ -1367,7 +1288,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-january-2026-monthly-rollup-av26-006</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Wed, 07 Jan 2026 16:50:20 +0000</pubDate>
     </item>
     <item>
@@ -1377,7 +1298,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-007</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Wed, 07 Jan 2026 16:58:18 +0000</pubDate>
     </item>
     <item>
@@ -1387,7 +1308,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-008</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Wed, 07 Jan 2026 18:58:32 +0000</pubDate>
     </item>
     <item>
@@ -1397,7 +1318,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.76</comments>
       <pubDate>Thu, 08 Jan 2026 13:42:11 +0000</pubDate>
     </item>
     <item>
@@ -1407,7 +1328,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-009</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Thu, 08 Jan 2026 17:00:25 +0000</pubDate>
     </item>
     <item>
@@ -1417,7 +1338,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-010</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Thu, 08 Jan 2026 18:45:20 +0000</pubDate>
     </item>
     <item>
@@ -1427,7 +1348,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-011</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Thu, 08 Jan 2026 20:06:02 +0000</pubDate>
     </item>
     <item>
@@ -1437,7 +1358,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-012</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Thu, 08 Jan 2026 20:15:51 +0000</pubDate>
     </item>
     <item>
@@ -1447,7 +1368,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-013</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Fri, 09 Jan 2026 20:22:58 +0000</pubDate>
     </item>
   </channel>
