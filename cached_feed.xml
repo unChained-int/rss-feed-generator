@@ -8,94 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Jan 2026 14:29:17 +0000</lastBuildDate>
-    <item>
-      <title>Iran-linked MuddyWater APT deploys Rust-based implant in latest campaign</title>
-      <link>https://www.csoonline.com/article/4115379/iran-linked-muddywater-apt-deploys-rust-based-implant-in-latest-campaign.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Iran-linked advanced persistent threat group MuddyWater has deployed a Rust-based implant in an ongoing espionage campaign targeting organizations in Israel and other Middle Eastern countries, according to CloudSEK.&lt;/p&gt;
-
-
-
-&lt;p&gt;CloudSEK’s TRIAD team said it identified the spear-phishing campaign targeting diplomatic, maritime, financial, and telecom entities across the Middle East. The campaign uses icon spoofing and malicious Word documents to deliver RustyWater, which the researchers described as “a Rust-based implant representing a significant upgrade to their traditional toolkit.”&lt;/p&gt;
-
-
-
-&lt;p&gt;“Historically, Muddy Water has relied on PowerShell and VBS loaders for initial access and post-compromise operations,”  the cybersecurity firm wrote in a blog post. “The introduction of Rust-based implants represents a notable tooling evolution toward more structured, modular, and low noise RAT capabilities.”&lt;/p&gt;
-
-
-
-&lt;p&gt;MuddyWater, which Microsoft tracks as Mango Sandstorm and ProofPoint identifies as TA450, operates under Iran’s Ministry of Intelligence and Security, according to the US cybersecurity agency &lt;a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a" rel="noreferrer noopener" target="_blank"&gt;CISA&lt;/a&gt;. The group has been active since at least 2017, targeting government agencies, telecommunications providers, and critical infrastructure across the Middle East, Asia, and Europe, according to security firms.&lt;/p&gt;
-
-
-
-&lt;p&gt;The research comes amid continued activity by MuddyWater throughout 2024 and into early 2025. ESET researchers published findings in December 2024 showing the group &lt;a href="https://www.csoonline.com/article/674936/iran-linked-spy-apt-muddywater-ratchets-up-anti-israel-attacks-report.html"&gt;deployed the MuddyViper backdoor&lt;/a&gt; against Israeli organizations between September 2024 and March 2025. Security firms have also documented MuddyWater deploying &lt;a href="https://research.checkpoint.com/2024/new-bugsleep-backdoor-deployed-in-recent-muddywater-campaigns/" rel="noreferrer noopener" target="_blank"&gt;BugSleep&lt;/a&gt; implants and using legitimate remote monitoring and management tools in recent campaigns.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="spear-phishing-delivery"&gt;Spear-phishing delivery&lt;/h2&gt;
-
-
-
-&lt;p&gt;The attack chain begins with spear-phishing emails containing malicious ZIP archives, according to the blog post. The archives include a legitimate PDF document and a disguised executable file bearing a PDF icon. When victims execute the file, it displays the decoy PDF while executing the malware, the researchers wrote.&lt;/p&gt;
-
-
-
-&lt;p&gt;They wrote that the initial loader establishes persistence through Windows Registry modifications and deploys RustyWater as a secondary payload. The implant communicates with command-and-control infrastructure using HTTP/HTTPS protocols and supports file system enumeration, command execution, and data exfiltration.&lt;/p&gt;
-
-
-
-&lt;p&gt;CloudSEK identified command-and-control domains mimicking legitimate services, including infrastructure posing as Dropbox and WordPress platforms. Several domains were registered through Hostinger, a hosting provider the cybersecurity firm said has been frequently abused by threat actors.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="rust-offers-evasion-advantages"&gt;Rust offers evasion advantages&lt;/h2&gt;
-
-
-
-&lt;p&gt;CloudSEK researchers said RustyWater was developed in Rust, which they said is increasingly used by malware authors for its memory safety features and cross-platform capabilities, according to the blog post. Other state-sponsored groups, including Russia’s Gossamer Bear and China-linked actors, have also deployed Rust-based malware in recent campaigns, according to security researchers.&lt;/p&gt;
-
-
-
-&lt;p&gt;The implant incorporates checks for virtual machine environments, debugging tools, and sandbox systems. “RustyWater begins execution by establishing anti-debugging and anti-tampering mechanisms,” the researchers wrote. “It registers a Vectored Exception Handler (VEH) to catch debugging attempts and systematically gathers victim machine information, including username, computer name, and domain membership.”&lt;/p&gt;
-
-
-
-&lt;p&gt;RustyWater also uses string obfuscation and multi-stage payload delivery, the researchers said. The malware encrypts all strings using position-independent XOR encryption and implements randomized sleep intervals between command-and-control callbacks to avoid detection, according to the blog post.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="broader-targeting"&gt;Broader targeting&lt;/h2&gt;
-
-
-
-&lt;p&gt;CloudSEK said its investigation primarily focused on targeting within Israel, but the researchers observed indicators suggesting MuddyWater may have expanded operations to include victims in India, the UAE, and other countries in the region.&lt;/p&gt;
-
-
-
-&lt;p&gt;The campaign targeting Israeli entities used Hebrew-language decoy documents related to government agencies and the Israel Defense Forces, the blog post added.&lt;/p&gt;
-
-
-
-&lt;p&gt;MuddyWater has focused on espionage operations aimed at collecting government and military intelligence, according to security researchers. Previous campaigns attributed to the group used various remote access tools and custom malware families, including the &lt;a href="https://www.csoonline.com/article/644268/command-and-control-framework-phonyc2-attributed-to-irans-muddywater-group.html"&gt;PhonyC2 command-and-control framework&lt;/a&gt; and &lt;a href="https://www.csoonline.com/article/575119/iran-cyberespionage-group-taps-simplehelp-for-persistence-on-victim-devices.html"&gt;legitimate remote administration tools like SimpleHelp&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;In November 2024, Amazon Threat Intelligence &lt;a href="https://www.csoonline.com/article/4093375/iranian-apt-hacks-helped-direct-missile-strikes-in-israel-and-the-red-sea.html"&gt;correlated MuddyWater activity with subsequent missile strikes&lt;/a&gt;, showing the group accessed compromised servers containing live CCTV feeds prior to attacks in Israel and the Red Sea. CloudSEK recommended organizations implement email security controls, conduct security awareness training to help employees identify phishing attempts, and deploy endpoint detection and response solutions capable of identifying suspicious process behavior and network communications patterns.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4115379/iran-linked-muddywater-apt-deploys-rust-based-implant-in-latest-campaign.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
-      <pubDate>Mon, 12 Jan 2026 09:52:09 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 14 Jan 2026 15:30:02 +0000</lastBuildDate>
     <item>
       <title>Malicious npm packages target the n8n automation platform in a supply chain attack</title>
       <link>https://www.csoonline.com/article/4115417/malicious-npm-packages-target-n8n-automation-platform-in-a-supply-chain-attack.html</link>
@@ -152,7 +65,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4115417/malicious-npm-packages-target-n8n-automation-platform-in-a-supply-chain-attack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Mon, 12 Jan 2026 11:48:36 +0000</pubDate>
     </item>
     <item>
@@ -163,17 +76,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.40</comments>
-      <pubDate>Wed, 14 Jan 2026 12:29:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV26-001)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-001</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-001</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
-      <pubDate>Mon, 05 Jan 2026 13:51:16 +0000</pubDate>
+      <pubDate>Wed, 14 Jan 2026 13:30:02 +0000</pubDate>
     </item>
     <item>
       <title>Shai-Hulud &amp; Co.: Die Supply Chain als Achillesferse</title>
@@ -276,8 +179,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4115440/shai-hulud-co-die-supply-chain-als-achillesferse.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Mon, 12 Jan 2026 14:27:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV26-001)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-001</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-001</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.41</comments>
+      <pubDate>Mon, 05 Jan 2026 13:51:16 +0000</pubDate>
     </item>
     <item>
       <title>OTF GRIMM: Swedish organiser of serious violence arrested in Iraq</title>
@@ -287,17 +200,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.46</comments>
-      <pubDate>Wed, 14 Jan 2026 12:29:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
-      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 14 Jan 2026 12:29:17 +0000</pubDate>
+      <pubDate>Wed, 14 Jan 2026 13:30:02 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -307,7 +210,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 14 Jan 2026 12:29:17 +0000</pubDate>
+      <pubDate>Wed, 14 Jan 2026 13:30:02 +0000</pubDate>
     </item>
     <item>
       <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
@@ -317,7 +220,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 14 Jan 2026 12:29:17 +0000</pubDate>
+      <pubDate>Wed, 14 Jan 2026 13:30:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
+      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 14 Jan 2026 13:30:02 +0000</pubDate>
     </item>
     <item>
       <title>EU Most Wanted website revamped with new fugitives added</title>
@@ -327,7 +240,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 14 Jan 2026 12:29:17 +0000</pubDate>
+      <pubDate>Wed, 14 Jan 2026 13:30:02 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
@@ -337,7 +250,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 14 Jan 2026 12:29:17 +0000</pubDate>
+      <pubDate>Wed, 14 Jan 2026 13:30:02 +0000</pubDate>
     </item>
     <item>
       <title>Law enforcement challenges major cocaine supply chains into Europe</title>
@@ -347,7 +260,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Wed, 14 Jan 2026 12:29:17 +0000</pubDate>
+      <pubDate>Wed, 14 Jan 2026 13:30:02 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-002)</title>
@@ -356,7 +269,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-002</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 07 Jan 2026 14:46:07 +0000</pubDate>
     </item>
     <item>
@@ -366,7 +279,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-003</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 07 Jan 2026 14:59:54 +0000</pubDate>
     </item>
     <item>
@@ -386,7 +299,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-january-2026-monthly-rollup-av26-005</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 07 Jan 2026 15:51:49 +0000</pubDate>
     </item>
     <item>
@@ -396,7 +309,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-january-2026-monthly-rollup-av26-006</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 07 Jan 2026 16:50:20 +0000</pubDate>
     </item>
     <item>
@@ -416,18 +329,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-008</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 07 Jan 2026 18:58:32 +0000</pubDate>
-    </item>
-    <item>
-      <title>A rapidly evolving criminal ecosystem: the escalating exploitation of vulnerable individuals</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/rapidly-evolving-criminal-ecosystem-escalating-exploitation-of-vulnerable-individuals</link>
-      <description>Migrant smugglers and human traffickers are exploiting today’s geopolitical instability and economic pressures with unprecedented agility. Their business models continue to evolve at high speed, allowing criminals to recruit, transport and exploit vulnerable individuals while maximising profits. As a result, the EU faces a constantly shifting and increasingly digital criminal landscape. Both crime areas have undergone significant transformation in recent years, fuelled in particular by the rapid expansion of online tools for recruitment, advertising and exploitation. These and other latest trends are outlined in the 2025 Europol’s European Migrant Smuggling Centre yearly activity overview, published today.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/rapidly-evolving-criminal-ecosystem-escalating-exploitation-of-vulnerable-individuals</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
-      <pubDate>Wed, 14 Jan 2026 12:29:17 +0000</pubDate>
     </item>
     <item>
       <title>Top 10 vendors for AI-enabled security — according to CISOs</title>
@@ -633,7 +536,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4115785/top-10-vendors-for-ai-enabled-security-according-to-cisos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Tue, 13 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -643,8 +546,28 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Thu, 08 Jan 2026 13:42:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>A rapidly evolving criminal ecosystem: the escalating exploitation of vulnerable individuals</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/rapidly-evolving-criminal-ecosystem-escalating-exploitation-of-vulnerable-individuals</link>
+      <description>Migrant smugglers and human traffickers are exploiting today’s geopolitical instability and economic pressures with unprecedented agility. Their business models continue to evolve at high speed, allowing criminals to recruit, transport and exploit vulnerable individuals while maximising profits. As a result, the EU faces a constantly shifting and increasingly digital criminal landscape. Both crime areas have undergone significant transformation in recent years, fuelled in particular by the rapid expansion of online tools for recruitment, advertising and exploitation. These and other latest trends are outlined in the 2025 Europol’s European Migrant Smuggling Centre yearly activity overview, published today.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/rapidly-evolving-criminal-ecosystem-escalating-exploitation-of-vulnerable-individuals</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.88</comments>
+      <pubDate>Wed, 14 Jan 2026 13:30:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitLab security advisory (AV26-009)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-009</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-009</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.91</comments>
+      <pubDate>Thu, 08 Jan 2026 17:00:25 +0000</pubDate>
     </item>
     <item>
       <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
@@ -654,17 +577,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Wed, 14 Jan 2026 12:29:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitLab security advisory (AV26-009)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-009</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-009</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
-      <pubDate>Thu, 08 Jan 2026 17:00:25 +0000</pubDate>
+      <pubDate>Wed, 14 Jan 2026 13:30:02 +0000</pubDate>
     </item>
     <item>
       <title>Tenable security advisory (AV26-010)</title>
@@ -673,7 +586,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-010</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Thu, 08 Jan 2026 18:45:20 +0000</pubDate>
     </item>
     <item>
@@ -683,7 +596,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-011</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Thu, 08 Jan 2026 20:06:02 +0000</pubDate>
     </item>
     <item>
@@ -693,7 +606,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-012</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Thu, 08 Jan 2026 20:15:51 +0000</pubDate>
     </item>
     <item>
@@ -895,7 +808,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4115679/for-application-security-sca-sast-dast-and-mast-what-next.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Tue, 13 Jan 2026 11:15:00 +0000</pubDate>
     </item>
     <item>
@@ -949,7 +862,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4116135/ransomware-banden-erpressen-opfer-mit-compliance-verstosen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Tue, 13 Jan 2026 14:51:30 +0000</pubDate>
     </item>
     <item>
@@ -959,7 +872,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-013</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Fri, 09 Jan 2026 20:22:58 +0000</pubDate>
     </item>
     <item>
@@ -1084,7 +997,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4116270/cybersecurity-risk-will-accelerate-this-year-fueled-in-part-by-ai-says-world-economic-forum.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Tue, 13 Jan 2026 20:52:08 +0000</pubDate>
     </item>
     <item>
@@ -1268,7 +1181,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3495619/security-kpis-und-kris-so-messen-sie-cybersicherheit.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Wed, 14 Jan 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1479,7 +1392,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4116508/cybercrime-inc-when-hackers-are-better-organized-than-it.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.65</comments>
       <pubDate>Wed, 14 Jan 2026 06:45:00 +0000</pubDate>
     </item>
     <item>
@@ -1618,7 +1531,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4116477/us-cybersecurity-weakened-by-congressional-delays-despite-plankey-renomination.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Wed, 14 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1685,7 +1598,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4116303/cybersecurity-at-the-state-and-local-level-washington-has-the-framework-its-time-to-act.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.83</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Wed, 14 Jan 2026 10:15:00 +0000</pubDate>
     </item>
     <item>
@@ -1756,7 +1669,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4116703/crowdstrike-to-add-browser-security-to-falcon-with-seraphic-acquisition.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Wed, 14 Jan 2026 12:02:13 +0000</pubDate>
     </item>
     <item>
@@ -1875,7 +1788,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4116536/spycloud-launches-supply-chain-solution-to-combat-rising-third-party-identity-threats.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.90</comments>
       <pubDate>Wed, 14 Jan 2026 13:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1885,7 +1798,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-014</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.46</comments>
+      <comments>Score: 9.44</comments>
       <pubDate>Mon, 12 Jan 2026 15:54:07 +0000</pubDate>
     </item>
     <item>
@@ -1895,7 +1808,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-015</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.44</comments>
       <pubDate>Mon, 12 Jan 2026 16:04:04 +0000</pubDate>
     </item>
     <item>
@@ -1905,7 +1818,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-016</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.44</comments>
       <pubDate>Mon, 12 Jan 2026 16:13:29 +0000</pubDate>
     </item>
     <item>
@@ -1915,7 +1828,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-017</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.48</comments>
+      <comments>Score: 9.45</comments>
       <pubDate>Mon, 12 Jan 2026 16:26:23 +0000</pubDate>
     </item>
     <item>
@@ -1925,7 +1838,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-018</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.48</comments>
+      <comments>Score: 9.45</comments>
       <pubDate>Mon, 12 Jan 2026 16:34:53 +0000</pubDate>
     </item>
     <item>
@@ -1935,7 +1848,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-019</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Mon, 12 Jan 2026 17:17:30 +0000</pubDate>
     </item>
     <item>
@@ -1945,7 +1858,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-001-vulnerabilities-affecting-n8n-cve-2026-21858-cve-2026-21877-cve-2025-68613</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Mon, 12 Jan 2026 18:45:54 +0000</pubDate>
     </item>
     <item>
@@ -1955,7 +1868,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-020</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.15</comments>
+      <comments>Score: 10.11</comments>
       <pubDate>Tue, 13 Jan 2026 15:26:26 +0000</pubDate>
     </item>
     <item>
@@ -1965,7 +1878,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-january-2026-monthly-rollup-av26-021</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.18</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Tue, 13 Jan 2026 16:32:22 +0000</pubDate>
     </item>
     <item>
@@ -1975,7 +1888,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-022</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.19</comments>
+      <comments>Score: 10.16</comments>
       <pubDate>Tue, 13 Jan 2026 16:48:53 +0000</pubDate>
     </item>
     <item>
@@ -1985,7 +1898,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-023</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.31</comments>
+      <comments>Score: 10.28</comments>
       <pubDate>Tue, 13 Jan 2026 20:25:39 +0000</pubDate>
     </item>
     <item>
@@ -1995,7 +1908,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.32</comments>
+      <comments>Score: 10.28</comments>
       <pubDate>Tue, 13 Jan 2026 20:32:30 +0000</pubDate>
     </item>
     <item>
@@ -2005,8 +1918,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-025</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.34</comments>
+      <comments>Score: 10.31</comments>
       <pubDate>Tue, 13 Jan 2026 21:14:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-026)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-026</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-026</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.99</comments>
+      <pubDate>Wed, 14 Jan 2026 15:16:28 +0000</pubDate>
     </item>
   </channel>
 </rss>
