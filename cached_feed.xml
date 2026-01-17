@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 17 Jan 2026 10:24:07 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Jan 2026 11:20:13 +0000</lastBuildDate>
+    <item>
+      <title>Android security advisory – January 2026 monthly rollup (AV26-005)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-january-2026-monthly-rollup-av26-005</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-january-2026-monthly-rollup-av26-005</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.34</comments>
+      <pubDate>Wed, 07 Jan 2026 15:51:49 +0000</pubDate>
+    </item>
     <item>
       <title>Qualcomm security advisory – January 2026 monthly rollup (AV26-006)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-january-2026-monthly-rollup-av26-006</link>
@@ -38,135 +48,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.36</comments>
       <pubDate>Wed, 07 Jan 2026 18:58:32 +0000</pubDate>
-    </item>
-    <item>
-      <title>From typos to takeovers: Inside the industrialization of npm supply chain attacks</title>
-      <link>https://www.csoonline.com/article/4117139/from-typos-to-takeovers-inside-the-industrialization-of-npm-supply-chain-attacks.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A massive surge in attacks on the npm ecosystem over the past year reveals a stark shift in the software supply‑chain threat landscape.&lt;/p&gt;
-
-
-
-&lt;p&gt;What once amounted to sloppy typosquatting attempts has evolved into coordinated, credential-driven intrusions targeting maintainers, CI pipelines, and the trusted automation that underpins modern development.&lt;/p&gt;
-
-
-
-&lt;p&gt;For security leaders, these aren’t niche developer mishaps anymore — they’re a direct pathway into production systems, cloud infrastructure, and millions of downstream applications.&lt;/p&gt;
-
-
-
-&lt;p&gt;The goal is no longer to trick an individual developer, but to quietly inherit their authority. And with it, their distribution reach.&lt;/p&gt;
-
-
-
-&lt;p&gt;“NPM is an attractive target because it is the world’s largest JavaScript package repository and a key control point for distributing software,” said Melinda Marks, cybersecurity practice director at Enterprise Security Group. “Security teams need an understanding of dependencies and ways to regularly audit and mitigate risk.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="structural-weaknesses-in-the-npm-infrastructure"&gt;Structural weaknesses in the npm infrastructure&lt;/h2&gt;
-
-
-
-&lt;p&gt;Nearly every enterprise relies on npm, whether directly or indirectly. According to &lt;a href="https://my.idc.com/getdoc.jsp?containerId=US51141024"&gt;IDC&lt;/a&gt;, 93% of organizations use open-source software, and npm remains the largest package registry in the JavaScript ecosystem. “Compromising a single popular package can immediately reach millions of downstream users and applications,” IDC’s research manager (DevSecOps), Katie Norton, said, turning one stolen credential into what she described as a “master key” for distribution.&lt;/p&gt;
-
-
-
-&lt;p&gt;That scale, however, is only part of the risk.&lt;br /&gt;&lt;br /&gt;The exposure is amplified by structural weaknesses in how modern development pipelines are secured, Norton remarked. “Individual open-source maintainers often lack the security resources that enterprise teams rely on, leaving them susceptible to social engineering,” she said. “CI/CD runners and developer machines routinely process long-lived secrets that are stored in environment variables or configuration files and are easily harvested by malware.”&lt;br /&gt;&lt;br /&gt;“Build systems also tend to prioritize speed and reliability over security visibility, resulting in limited monitoring and long dwell times for attackers who gain initial access,” Norton added.&lt;/p&gt;
-
-
-
-&lt;p&gt;While security leaders can’t patch their way out of this one, they can reduce exposure. Experts consistently point to the same priorities: treating CI runners as production assets, rotating and scoping publish tokens aggressively, disabling lifecycle scripts unless required, and pinning dependencies to immutable versions.&lt;/p&gt;
-
-
-
-&lt;p&gt;“These npm attacks are targeting the pre-install phase of software dependencies, so typical software supply chain security methods of code scanning cannot address these types of attacks,” Marks said. Detection requires runtime analysis and anomaly detection rather than signature-based tooling.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;From typo traps to legitimate backdoors&lt;/h2&gt;
-
-
-
-&lt;p&gt;For years, &lt;a href="https://www.csoonline.com/article/570173/what-is-typosquatting-a-simple-but-effective-attack-technique.html"&gt;typosquatting&lt;/a&gt; defined the npm threat model. Attackers published packages with names just close enough to popular libraries, such as “lodsash,” “expres,” “reacts,” and waited for automation or human error to do the rest. The impact was usually limited, and remediation straightforward.&lt;br /&gt;&lt;br /&gt;That model began to break in 2025.&lt;/p&gt;
-
-
-
-&lt;p&gt;Instead of impersonating popular packages, attackers increasingly compromised real ones. Phishing &lt;a href="https://www.csoonline.com/article/4028412/supply-chain-attack-compromises-npm-packages-to-spread-backdoor-malware.html"&gt;campaigns&lt;/a&gt; spoofing npm itself harvested maintainer credentials. Stolen tokens were then used to publish trojanized updates that appeared legitimate to every downstream consumer. The Shai-Hulud &lt;a href="https://www.csoonline.com/article/4095578/new-shai-hulud-worm-spreading-through-npm-github.html"&gt;campaign&lt;/a&gt; illustrated the scale of the problem, affecting tens of thousands of repositories and leveraging compromised credentials to self-propagate across the ecosystem.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The npm ecosystem has become the crown jewels of modern development,” said Kush Pandya, a cybersecurity researcher at Socket.dev. “When a single prolific maintainer is compromised, the blast radius spans hundreds of downstream projects.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The result was a quiet but powerful shift: attackers no longer needed to create convincing fakes. They could ship malware through &lt;a href="https://www.csoonline.com/article/4026380/prettier-eslint-npm-packages-hijacked-in-a-sophisticated-supply-chain-attack.html"&gt;trusted channels&lt;/a&gt;, signed and versioned like any routine update.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="developer-environments-over-developer-laptops"&gt;Developer environments over developer laptops&lt;/h2&gt;
-
-
-
-&lt;p&gt;Modern npm &lt;a href="https://www.csoonline.com/article/3506897/github-actions-typosquatting-a-high-impact-supply-chain-attack-in-waiting.html"&gt;attacks&lt;/a&gt; increasingly activate inside CI/CD environments rather than on developer laptops. Post-install &lt;a href="https://www.csoonline.com/article/3995813/hackers-drop-60-npm-bombs-in-less-than-two-weeks-to-recon-dev-machines.html?utm=hybrid_search#:~:text=post%2Dinstall%20scripts"&gt;scripts&lt;/a&gt;, long treated as benign setup helpers, became an execution vector capable of running automatically inside GitHub Actions or GitLab CI. Once inside a runner, malicious packages could read environment variables, steal publish tokens, tamper with build artifacts, or even push additional malicious releases under the victim’s identity.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Developer environments and CI runners are now worth more than end-user machines,” Pandya noted. “They usually have broader permissions, access to secrets, and the ability to push code into production.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Several campaigns observed in mid-2025 were explicitly &lt;a href="https://www.csoonline.com/article/4088529/malicious-npm-package-sneaks-into-github-actions-builds.html"&gt;CI-aware&lt;/a&gt;, triggering only when they detected automated build environments. Some included delayed execution or self-expiring payloads, minimizing forensic visibility while maximizing credential theft.&lt;/p&gt;
-
-
-
-&lt;p&gt;For enterprises, this represents a fundamental risk shift. CI systems often operate with higher privileges than any individual user, yet are monitored far less rigorously. “They are often secured with weaker defaults: long-lived publish tokens, overly permissive CI secrets, implicit trust in lifecycle scripts and package metadata, and little isolation between builds,” Pandya noted.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to IDC Research, organizations allocate only about 14% of AppSec budgets to supply-chain security, with only 12% of them identifying CI/CD pipeline security as a top risk.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Evasion as a first-class feature&lt;/h2&gt;
-
-
-
-&lt;p&gt;As defenders improved at spotting suspicious packages, attackers adapted too.&lt;/p&gt;
-
-
-
-&lt;p&gt;Recent npm campaigns have used invisible Unicode characters to &lt;a href="https://www.csoonline.com/article/4082195/malicious-packages-in-npm-evade-dependency-detection-through-invisible-url-links-report.html"&gt;obscure&lt;/a&gt; dependencies, multi-stage loaders that fetch real payloads only after environment checks, and &lt;a href="https://www.csoonline.com/article/4050956/malicious-npm-packages-use-ethereum-blockchain-for-malware-delivery.html"&gt;blockchain-hosted &lt;/a&gt;command-and-control (C2) references designed to evade takedowns. Others deployed worm-like behavior, using stolen credentials to publish additional malicious packages at scale.&lt;/p&gt;
-
-
-
-&lt;p&gt;Manual review has become largely ineffective against this level of tradecraft. “The days when you could skim index.js and spot a malicious eval() are gone,” Pandya said. &lt;/p&gt;
-
-
-
-&lt;p&gt;“Modern packages hide malicious logic behind layers of encoding, delayed execution, and environment fingerprinting.” Norton echoed the concern, noting that these attacks operate at a behavioral level where static scanning falls short. “Obfuscation techniques make malicious logic difficult to distinguish from legitimate complexity in large JavaScript projects,” she said. “CI-aware payloads and post-install scripts introduce behavior that only manifests under specific environmental conditions.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4117139/from-typos-to-takeovers-inside-the-industrialization-of-npm-supply-chain-attacks.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
-      <pubDate>Thu, 15 Jan 2026 07:44:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>New report explores use of robotics and unmanned systems in the fight against crime</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</link>
-      <description>Europol has today published The Unmanned Future(s): The Impact of Robotics and Unmanned Systems on Law Enforcement. The report, produced by the Europol Innovation Lab, provides an in-depth analysis of how unmanned systems could change society, crime and law enforcement, and discusses the challenges and opportunities they present.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
-      <pubDate>Sat, 17 Jan 2026 08:24:07 +0000</pubDate>
     </item>
     <item>
       <title>Cisco finally patches seven-week-old zero-day flaw in Secure Email Gateway products</title>
@@ -255,8 +136,18 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4118159/cisco-finally-patches-seven-week-old-zero-day-flaw-in-secure-email-gateway-products-2.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Fri, 16 Jan 2026 18:53:48 +0000</pubDate>
+    </item>
+    <item>
+      <title>New report explores use of robotics and unmanned systems in the fight against crime</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</link>
+      <description>Europol has today published The Unmanned Future(s): The Impact of Robotics and Unmanned Systems on Law Enforcement. The report, produced by the Europol Innovation Lab, provides an in-depth analysis of how unmanned systems could change society, crime and law enforcement, and discusses the challenges and opportunities they present.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-report-explores-use-of-robotics-and-unmanned-systems-in-fight-against-crime</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.40</comments>
+      <pubDate>Sat, 17 Jan 2026 09:20:13 +0000</pubDate>
     </item>
     <item>
       <title>HPE security advisory (AV25-844) – Update 1</title>
@@ -265,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av25-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Thu, 08 Jan 2026 13:42:11 +0000</pubDate>
     </item>
     <item>
@@ -279,16 +170,6 @@
       <pubDate>Thu, 08 Jan 2026 17:00:25 +0000</pubDate>
     </item>
     <item>
-      <title>OTF GRIMM: Swedish organiser of serious violence arrested in Iraq</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-organiser-of-serious-violence-arrested-in-iraq</link>
-      <description>A High-Value Target under Europol-supported Operational Taskforce GRIMM was arrested in Iraq following long-term cooperation between the Swedish Police Authority and Iraqi law enforcement authorities. The 21-year-old suspect, a Swedish national who was listed on the EU Most Wanted list, is identified as a key organiser of serious violence directed at Sweden from abroad.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-organiser-of-serious-violence-arrested-in-iraq</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Sat, 17 Jan 2026 08:24:07 +0000</pubDate>
-    </item>
-    <item>
       <title>Tenable security advisory (AV26-010)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-010</link>
       <description>No description available</description>
@@ -299,13 +180,23 @@
       <pubDate>Thu, 08 Jan 2026 18:45:20 +0000</pubDate>
     </item>
     <item>
+      <title>OTF GRIMM: Swedish organiser of serious violence arrested in Iraq</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-organiser-of-serious-violence-arrested-in-iraq</link>
+      <description>A High-Value Target under Europol-supported Operational Taskforce GRIMM was arrested in Iraq following long-term cooperation between the Swedish Police Authority and Iraqi law enforcement authorities. The 21-year-old suspect, a Swedish national who was listed on the EU Most Wanted list, is identified as a key organiser of serious violence directed at Sweden from abroad.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-organiser-of-serious-violence-arrested-in-iraq</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.46</comments>
+      <pubDate>Sat, 17 Jan 2026 09:20:13 +0000</pubDate>
+    </item>
+    <item>
       <title>[Control systems] ABB security advisory (AV26-011)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-011</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-011</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Thu, 08 Jan 2026 20:06:02 +0000</pubDate>
     </item>
     <item>
@@ -315,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-012</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Thu, 08 Jan 2026 20:15:51 +0000</pubDate>
     </item>
     <item>
@@ -326,47 +217,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 17 Jan 2026 08:24:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
-      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 17 Jan 2026 08:24:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Most Wanted website revamped with new fugitives added</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
-      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 17 Jan 2026 08:24:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
-      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 17 Jan 2026 08:24:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
-      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 17 Jan 2026 08:24:07 +0000</pubDate>
+      <pubDate>Sat, 17 Jan 2026 09:20:13 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -376,7 +227,47 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 17 Jan 2026 08:24:07 +0000</pubDate>
+      <pubDate>Sat, 17 Jan 2026 09:20:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
+      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 17 Jan 2026 09:20:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
+      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 17 Jan 2026 09:20:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
+      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 17 Jan 2026 09:20:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Most Wanted website revamped with new fugitives added</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
+      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 17 Jan 2026 09:20:13 +0000</pubDate>
     </item>
     <item>
       <title>[Control Systems] Moxa security advisory (AV26-013)</title>
@@ -385,18 +276,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-013</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Fri, 09 Jan 2026 20:22:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Law enforcement challenges major cocaine supply chains into Europe</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</link>
-      <description>Law enforcement authorities across Europe and South America continue to put sustained pressure on the criminal networks responsible for moving cocaine into Europe. Three recent actions coordinated by Europol, one targeting a Dutch-led network embedded in Colombian supply chains, another dismantling a Brazilian maritime trafficking operation and a third disrupting a Greek at-sea transfer criminal operation, highlight the ongoing efforts to disrupt the routes and structures used by organised crime.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Sat, 17 Jan 2026 08:24:07 +0000</pubDate>
     </item>
     <item>
       <title>China-Linked APT Exploited Sitecore Zero-Day in Critical Infrastructure Intrusions</title>
@@ -406,8 +287,18 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://thehackernews.com/2026/01/china-linked-apt-exploits-sitecore-zero.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Fri, 16 Jan 2026 12:48:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Law enforcement challenges major cocaine supply chains into Europe</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</link>
+      <description>Law enforcement authorities across Europe and South America continue to put sustained pressure on the criminal networks responsible for moving cocaine into Europe. Three recent actions coordinated by Europol, one targeting a Dutch-led network embedded in Colombian supply chains, another dismantling a Brazilian maritime trafficking operation and a third disrupting a Greek at-sea transfer criminal operation, highlight the ongoing efforts to disrupt the routes and structures used by organised crime.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Sat, 17 Jan 2026 09:20:13 +0000</pubDate>
     </item>
     <item>
       <title>China-linked hackers exploited Sitecore zero-day for initial access</title>
@@ -416,7 +307,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/china-linked-hackers-exploited-sitecore-zero-day-for-initial-access/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Fri, 16 Jan 2026 12:10:15 -0500</pubDate>
     </item>
     <item>
@@ -527,7 +418,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://www.csoonline.com/article/4117692/possible-software-supply-chain-attack-through-aws-codebuild-service-blunted-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Thu, 15 Jan 2026 22:27:18 +0000</pubDate>
     </item>
     <item>
@@ -650,7 +541,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://www.csoonline.com/article/4117792/one-click-is-all-it-takes-how-reprompt-turned-microsoft-copilot-into-data-exfiltration-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Fri, 16 Jan 2026 03:14:30 +0000</pubDate>
     </item>
     <item>
@@ -661,7 +552,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Sat, 17 Jan 2026 08:24:07 +0000</pubDate>
+      <pubDate>Sat, 17 Jan 2026 09:20:13 +0000</pubDate>
     </item>
     <item>
       <title>Insider risk in an age of workforce volatility</title>
@@ -767,18 +658,8 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://www.csoonline.com/article/4116983/insider-risk-in-an-age-of-workforce-volatility.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Fri, 16 Jan 2026 07:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV26-014)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-014</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-014</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
-      <pubDate>Mon, 12 Jan 2026 15:54:07 +0000</pubDate>
     </item>
     <item>
       <title>WEF 2026: KI weiterhin Top-Thema in der Cybersicherheit</title>
@@ -935,8 +816,18 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://www.csoonline.com/article/4118051/wef-2026-ki-weiterhin-top-thema-in-der-cybersicherheit.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Fri, 16 Jan 2026 13:24:49 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV26-014)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-014</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-014</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.20</comments>
+      <pubDate>Mon, 12 Jan 2026 15:54:07 +0000</pubDate>
     </item>
     <item>
       <title>Dell security advisory (AV26-015)</title>
@@ -945,7 +836,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-015</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Mon, 12 Jan 2026 16:04:04 +0000</pubDate>
     </item>
     <item>
@@ -955,7 +846,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-016</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Mon, 12 Jan 2026 16:13:29 +0000</pubDate>
     </item>
     <item>
@@ -965,7 +856,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-017</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Mon, 12 Jan 2026 16:26:23 +0000</pubDate>
     </item>
     <item>
@@ -975,28 +866,8 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-018</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Mon, 12 Jan 2026 16:34:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] CISA ICS security advisories (AV26–019)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-019</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-019</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
-      <pubDate>Mon, 12 Jan 2026 17:17:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-001 – Vulnerabilities affecting n8n – CVE-2026-21858, CVE-2026-21877 and CVE-2025-68613</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-001-vulnerabilities-affecting-n8n-cve-2026-21858-cve-2026-21877-cve-2025-68613</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-001-vulnerabilities-affecting-n8n-cve-2026-21858-cve-2026-21877-cve-2025-68613</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
-      <pubDate>Mon, 12 Jan 2026 18:45:54 +0000</pubDate>
     </item>
     <item>
       <title>Google Vertex AI security permissions could amplify insider threats</title>
@@ -1070,8 +941,28 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://www.csoonline.com/article/4118092/google-vertex-ai-security-permissions-could-amplify-insider-threats.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Fri, 16 Jan 2026 14:28:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] CISA ICS security advisories (AV26–019)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-019</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-019</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.22</comments>
+      <pubDate>Mon, 12 Jan 2026 17:17:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-001 – Vulnerabilities affecting n8n – CVE-2026-21858, CVE-2026-21877 and CVE-2025-68613</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-001-vulnerabilities-affecting-n8n-cve-2026-21858-cve-2026-21877-cve-2025-68613</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-001-vulnerabilities-affecting-n8n-cve-2026-21858-cve-2026-21877-cve-2025-68613</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.24</comments>
+      <pubDate>Mon, 12 Jan 2026 18:45:54 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] Siemens security advisory (AV26-020)</title>
@@ -1080,7 +971,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-020</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Tue, 13 Jan 2026 15:26:26 +0000</pubDate>
     </item>
     <item>
@@ -1090,7 +981,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-january-2026-monthly-rollup-av26-021</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Tue, 13 Jan 2026 16:32:22 +0000</pubDate>
     </item>
     <item>
@@ -1100,7 +991,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-022</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Tue, 13 Jan 2026 16:48:53 +0000</pubDate>
     </item>
     <item>
@@ -1110,7 +1001,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-023</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Tue, 13 Jan 2026 20:25:39 +0000</pubDate>
     </item>
     <item>
@@ -1120,7 +1011,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Tue, 13 Jan 2026 20:32:30 +0000</pubDate>
     </item>
     <item>
@@ -1130,7 +1021,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-025</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Tue, 13 Jan 2026 21:14:21 +0000</pubDate>
     </item>
     <item>
@@ -1271,7 +1162,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://www.csoonline.com/article/4118270/appguard-critiques-ai-hyped-defenses-expands-its-insider-release-for-its-next-generation-platform.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Sat, 17 Jan 2026 03:18:35 +0000</pubDate>
     </item>
     <item>
@@ -1281,7 +1172,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-026</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Wed, 14 Jan 2026 15:16:28 +0000</pubDate>
     </item>
     <item>
@@ -1291,7 +1182,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-027</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Wed, 14 Jan 2026 15:30:26 +0000</pubDate>
     </item>
     <item>
@@ -1301,7 +1192,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-028</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.00</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Wed, 14 Jan 2026 15:43:47 +0000</pubDate>
     </item>
     <item>
@@ -1311,7 +1202,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-029</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.00</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Wed, 14 Jan 2026 15:57:06 +0000</pubDate>
     </item>
     <item>
@@ -1321,7 +1212,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-030</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Wed, 14 Jan 2026 19:53:37 +0000</pubDate>
     </item>
     <item>
@@ -1331,7 +1222,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-031</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Wed, 14 Jan 2026 20:00:56 +0000</pubDate>
     </item>
     <item>
@@ -1341,7 +1232,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-032</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Wed, 14 Jan 2026 20:58:13 +0000</pubDate>
     </item>
     <item>
@@ -1350,7 +1241,7 @@ Cisco Talos, which is tracking the activity under the name UAT-8837, assessed it
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/rsac-2026-conference</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 45925122.45</comments>
+      <comments>Score: 45480062.56</comments>
       <pubDate>Mon, 23 Mar 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
