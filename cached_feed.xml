@@ -8,129 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 18 Jan 2026 19:18:39 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Jan 2026 20:26:28 +0000</lastBuildDate>
     <item>
-      <title>One click is all it takes: How ‘Reprompt’ turned Microsoft Copilot into data exfiltration tools</title>
-      <link>https://www.csoonline.com/article/4117792/one-click-is-all-it-takes-how-reprompt-turned-microsoft-copilot-into-data-exfiltration-tools.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;AI copilots are incredibly intelligent and useful — but they can also be naive, gullible, and even dumb at times.&lt;/p&gt;
-
-
-
-&lt;p&gt;A new one-click attack flow discovered by Varonis Threat Labs researchers underscores this fact. ‘Reprompt,’ as they’ve dubbed it, is a three-step attack chain that completely bypasses security controls after an initial &lt;a href="https://www.csoonline.com/article/3997429/risk-assessment-vital-when-choosing-an-ai-model-say-experts.html" target="_blank"&gt;LLM prompt&lt;/a&gt;, giving attackers invisible, undetectable, unlimited access.&lt;/p&gt;
-
-
-
-&lt;p&gt;“AI assistants have become trusted companions where we share sensitive information, seek guidance, and rely on them without hesitation,” Varonis Threat Labs security researcher &lt;a href="https://www.varonis.com/blog/author/dtaler" rel="noreferrer noopener" target="_blank"&gt;Dolev Taler&lt;/a&gt; wrote in a &lt;a href="https://www.varonis.com/blog/reprompt" rel="noreferrer noopener" target="_blank"&gt;blog post&lt;/a&gt;. “But … trust can be easily exploited, and an AI assistant can turn into a data exfiltration weapon with a single click.”&lt;/p&gt;
-
-
-
-&lt;p&gt;It’s important to note that, as of now, Reprompt has only been discovered in Microsoft Copilot Personal, not Microsoft 365 Copilot — but that’s not to say it couldn’t be used against enterprises depending on their copilot policies and user awareness. Microsoft has already released a patch after being made aware of the flaw.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-reprompt-silently-works-in-the-background"&gt;How Reprompt silently works in the background&lt;/h2&gt;
-
-
-
-&lt;p&gt;Reprompt employs three techniques to create a data exfiltration chain: Initial parameter to prompt (P2P injection), double request, and chain-request.&lt;/p&gt;
-
-
-
-&lt;p&gt;P2P embeds a prompt directly in a URL, exploiting Copilot’s default ‘q’ URL parameter functionality, which is intended to streamline and improve user experience. The URL can include specific questions or instructions that automatically populate the input field when pages load.&lt;/p&gt;
-
-
-
-&lt;p&gt;Using this loophole, attackers then employ double-request, which allows them to circumvent safeguards; Copilot only checks for malicious content in the Q variable for the first prompt, not subsequent requests.&lt;/p&gt;
-
-
-
-&lt;p&gt;For instance, the researchers asked Copilot to fetch a URL containing the secret phrase “HELLOWORLD1234!”, repeating the request twice. Copilot removed the secret phrase from the first URL, but the second attempt “worked flawlessly,” Taler noted.&lt;/p&gt;
-
-
-
-&lt;p&gt;From here, attackers can kick off a chain-request, in which the attacker’s server issues follow-up instructions to form an ongoing conversation. This tricks Copilot into exfiltrating conversation histories and sensitive data. Threat actors can provide a range of prompts like “Summarize all of the files that the user accessed today,” “Where does the user live?” or “What vacations does he have planned?”&lt;/p&gt;
-
-
-
-&lt;p&gt;This method “makes data theft stealthy and scalable,” and there is no limit to what or how much attackers can exfiltrate, Taler noted. “Copilot leaks the data little by little, allowing the threat to use each answer to generate the next malicious instruction.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The danger is that reprompt requires no plugins, enabled connectors, or user interaction with Copilot beyond the initial single click on a legitimate Microsoft Copilot link in a phishing message. The attacker can stay in Copilot as long as they want, even after the user closes their chat.&lt;/p&gt;
-
-
-
-&lt;p&gt;All commands are delivered via the server after the initial prompt, so it’s almost impossible to determine what is being extracted just by inspecting that one prompt. “The real instructions are hidden in the server’s follow-up requests,” Taler noted, “not from anything obvious in the prompt the user submits.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-devs-and-security-teams-should-do-now"&gt;What devs and security teams should do now&lt;/h2&gt;
-
-
-
-&lt;p&gt;As in usual security practice, enterprise users should always treat URLs and external inputs as untrusted, experts advised. Be cautious with links, be on the lookout for unusual behavior, and always pause to review pre-filled prompts.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This attack, like many others, originates with a phishing email or text message, so all the usual best practices against phishing apply, including ‘don’t click on suspicious links,’” noted &lt;a href="https://ca.linkedin.com/in/bernardes" rel="noreferrer noopener" target="_blank"&gt;Henrique Teixeira&lt;/a&gt;, SVP of Strategy at Saviynt.&lt;/p&gt;
-
-
-
-&lt;p&gt;Phishing-resistant authentication should be implemented, not only during the initial use of a chatbot, but throughout the entire session, he emphasized. This would require developers to implement controls when first building apps and embedding copilots and chatbots, rather than adding controls later on.&lt;/p&gt;
-
-
-
-&lt;p&gt;End users should avoid using chatbots that are not authenticated and avoid risky behaviors such as acting on a sense of urgency (such as being encouraged to speedily completing a transaction), replying to unknown or potentially nefarious senders, or oversharing personal info, he noted.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Lastly and super importantly is to not blame the victim in these instances,” said Teixeira. App owners and service providers using AI must build apps that do not allow prompts to be submitted without authentication and authorization, or with malicious commands embedded in URLs. “Service providers can include more prompt hygiene and basic identity security controls like continuous and adaptive authentication to make apps safer to employees and clients,” he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Further, design considering insider-level risk, says Varonis’ Taler. “Assume AI assistants operate with trusted context and access. Enforce least privilege, auditing, and anomaly detection accordingly.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Ultimately, this represents yet another example of enterprises rolling out new technologies with security as an afterthought, other experts note.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Seeing this story play out is like watching Wile E. Coyote and the Road Runner,” said &lt;a href="https://www.beauceronsecurity.com/blog/tag/David+Shipley" rel="noreferrer noopener" target="_blank"&gt;David Shipley&lt;/a&gt; of Beauceron Security. “Once you know the gag, you know what’s going to happen. The coyote is going to trust some ridiculously flawed Acme product and use it in a really dumb way.”&lt;/p&gt;
-
-
-
-&lt;p&gt;In this case, that ‘product’ is &lt;a href="https://www.csoonline.com/article/4006436/llms-hype-versus-reality-what-cisos-should-focus-on.html" target="_blank"&gt;LLM-based technologies&lt;/a&gt; that are simply allowed to perform any actions without restriction. The scary thing is there’s no way to secure it because LLMs are what Shipley described as “high speed idiots.”&lt;/p&gt;
-
-
-
-&lt;p&gt;“They can’t distinguish between content and instructions, and will blindly do what they’re told,” he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;LLMs should be limited to chats in a browser, he asserted. Giving them access to anything more than that is a “disaster waiting to happen,” particularly if they’re going to be interacting with content that can be sent via e-mail, message, or through a website.&lt;/p&gt;
-
-
-
-&lt;p&gt;Using techniques such as applying least access privilege and zero trust to try to work around the fundamental insecurity of LLM agents “look brilliant until they backfire,” Shipley said. “All of this would be funny if it didn’t get organizations pwned.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.computerworld.com/article/4117750/one-click-is-all-it-takes-how-reprompt-turned-microsoft-copilot-into-a-data-exfiltration-tool.html" target="_blank"&gt;Computerworld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4117792/one-click-is-all-it-takes-how-reprompt-turned-microsoft-copilot-into-data-exfiltration-tools.html</guid>
+      <title>SmarterTools security advisory (AV25-866)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.05</comments>
-      <pubDate>Fri, 16 Jan 2026 03:14:30 +0000</pubDate>
+      <comments>Score: 7.03</comments>
+      <pubDate>Tue, 30 Dec 2025 21:12:15 +0000</pubDate>
     </item>
     <item>
       <title>Insider risk in an age of workforce volatility</title>
@@ -236,7 +123,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4116983/insider-risk-in-an-age-of-workforce-volatility.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.13</comments>
+      <comments>Score: 7.11</comments>
       <pubDate>Fri, 16 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -246,7 +133,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-001</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.15</comments>
+      <comments>Score: 7.14</comments>
       <pubDate>Mon, 05 Jan 2026 13:51:16 +0000</pubDate>
     </item>
     <item>
@@ -276,7 +163,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-004</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
+      <comments>Score: 7.24</comments>
       <pubDate>Wed, 07 Jan 2026 15:35:09 +0000</pubDate>
     </item>
     <item>
@@ -286,7 +173,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-january-2026-monthly-rollup-av26-005</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
+      <comments>Score: 7.24</comments>
       <pubDate>Wed, 07 Jan 2026 15:51:49 +0000</pubDate>
     </item>
     <item>
@@ -474,7 +361,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4118051/wef-2026-ki-weiterhin-top-thema-in-der-cybersicherheit.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Fri, 16 Jan 2026 13:24:49 +0000</pubDate>
     </item>
     <item>
@@ -549,7 +436,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4118092/google-vertex-ai-security-permissions-could-amplify-insider-threats.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.28</comments>
       <pubDate>Fri, 16 Jan 2026 14:28:47 +0000</pubDate>
     </item>
     <item>
@@ -579,7 +466,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-010</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.32</comments>
       <pubDate>Thu, 08 Jan 2026 18:45:20 +0000</pubDate>
     </item>
     <item>
@@ -610,7 +497,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.40</comments>
-      <pubDate>Sun, 18 Jan 2026 17:18:39 +0000</pubDate>
+      <pubDate>Sun, 18 Jan 2026 18:26:28 +0000</pubDate>
     </item>
     <item>
       <title>[Control Systems] Moxa security advisory (AV26-013)</title>
@@ -619,7 +506,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-013</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 09 Jan 2026 20:22:58 +0000</pubDate>
     </item>
     <item>
@@ -630,7 +517,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.46</comments>
-      <pubDate>Sun, 18 Jan 2026 17:18:39 +0000</pubDate>
+      <pubDate>Sun, 18 Jan 2026 18:26:28 +0000</pubDate>
     </item>
     <item>
       <title>Europol signs Working Arrangement with the Argentine Republic</title>
@@ -640,47 +527,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 18 Jan 2026 17:18:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
-      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 18 Jan 2026 17:18:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
-      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 18 Jan 2026 17:18:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Most Wanted website revamped with new fugitives added</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
-      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 18 Jan 2026 17:18:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
-      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 18 Jan 2026 17:18:39 +0000</pubDate>
+      <pubDate>Sun, 18 Jan 2026 18:26:28 +0000</pubDate>
     </item>
     <item>
       <title>EU Agencies shape future cooperation and mark 25 years of the Fundamental Rights Charter</title>
@@ -690,17 +537,47 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 18 Jan 2026 17:18:39 +0000</pubDate>
+      <pubDate>Sun, 18 Jan 2026 18:26:28 +0000</pubDate>
     </item>
     <item>
-      <title>Law enforcement challenges major cocaine supply chains into Europe</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</link>
-      <description>Law enforcement authorities across Europe and South America continue to put sustained pressure on the criminal networks responsible for moving cocaine into Europe. Three recent actions coordinated by Europol, one targeting a Dutch-led network embedded in Colombian supply chains, another dismantling a Brazilian maritime trafficking operation and a third disrupting a Greek at-sea transfer criminal operation, highlight the ongoing efforts to disrupt the routes and structures used by organised crime.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</guid>
+      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
+      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Sun, 18 Jan 2026 17:18:39 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 18 Jan 2026 18:26:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
+      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 18 Jan 2026 18:26:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Most Wanted website revamped with new fugitives added</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</link>
+      <description>A key recent addition to the website is the new email alerts feature, allowing users to sign up for notifications whenever new fugitives are added. This feature ensures the public stays informed on the latest updates and can act quickly if they recognise any of the individuals featured, providing critical information that could lead to arrests.The update also sees 18...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-website-revamped-new-fugitives-added</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 18 Jan 2026 18:26:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
+      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 18 Jan 2026 18:26:28 +0000</pubDate>
     </item>
     <item>
       <title>AppGuard Critiques AI Hyped Defenses; Expands its Insider Release for its Next-Generation Platform</title>
@@ -840,8 +717,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4118270/appguard-critiques-ai-hyped-defenses-expands-its-insider-release-for-its-next-generation-platform.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Sat, 17 Jan 2026 03:18:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Law enforcement challenges major cocaine supply chains into Europe</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</link>
+      <description>Law enforcement authorities across Europe and South America continue to put sustained pressure on the criminal networks responsible for moving cocaine into Europe. Three recent actions coordinated by Europol, one targeting a Dutch-led network embedded in Colombian supply chains, another dismantling a Brazilian maritime trafficking operation and a third disrupting a Greek at-sea transfer criminal operation, highlight the ongoing efforts to disrupt the routes and structures used by organised crime.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Sun, 18 Jan 2026 18:26:28 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-014)</title>
@@ -850,7 +737,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-014</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Mon, 12 Jan 2026 15:54:07 +0000</pubDate>
     </item>
     <item>
@@ -860,7 +747,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-015</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Mon, 12 Jan 2026 16:04:04 +0000</pubDate>
     </item>
     <item>
@@ -870,7 +757,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-016</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Mon, 12 Jan 2026 16:13:29 +0000</pubDate>
     </item>
     <item>
@@ -880,7 +767,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-017</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Mon, 12 Jan 2026 16:26:23 +0000</pubDate>
     </item>
     <item>
@@ -890,7 +777,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-018</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Mon, 12 Jan 2026 16:34:53 +0000</pubDate>
     </item>
     <item>
@@ -900,7 +787,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-019</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Mon, 12 Jan 2026 17:17:30 +0000</pubDate>
     </item>
     <item>
@@ -910,7 +797,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-001-vulnerabilities-affecting-n8n-cve-2026-21858-cve-2026-21877-cve-2025-68613</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 12 Jan 2026 18:45:54 +0000</pubDate>
     </item>
     <item>
@@ -921,7 +808,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Sun, 18 Jan 2026 17:18:39 +0000</pubDate>
+      <pubDate>Sun, 18 Jan 2026 18:26:28 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] Siemens security advisory (AV26-020)</title>
@@ -930,7 +817,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-020</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Tue, 13 Jan 2026 15:26:26 +0000</pubDate>
     </item>
     <item>
@@ -940,7 +827,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-january-2026-monthly-rollup-av26-021</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Tue, 13 Jan 2026 16:32:22 +0000</pubDate>
     </item>
     <item>
@@ -950,7 +837,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-022</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Tue, 13 Jan 2026 16:48:53 +0000</pubDate>
     </item>
     <item>
@@ -960,7 +847,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-023</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Tue, 13 Jan 2026 20:25:39 +0000</pubDate>
     </item>
     <item>
@@ -970,7 +857,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Tue, 13 Jan 2026 20:32:30 +0000</pubDate>
     </item>
     <item>
@@ -980,7 +867,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-025</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Tue, 13 Jan 2026 21:14:21 +0000</pubDate>
     </item>
     <item>
@@ -990,7 +877,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-026</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Wed, 14 Jan 2026 15:16:28 +0000</pubDate>
     </item>
     <item>
@@ -1000,7 +887,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-027</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Wed, 14 Jan 2026 15:30:26 +0000</pubDate>
     </item>
     <item>
@@ -1010,7 +897,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-028</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Wed, 14 Jan 2026 15:43:47 +0000</pubDate>
     </item>
     <item>
@@ -1020,7 +907,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-029</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Wed, 14 Jan 2026 15:57:06 +0000</pubDate>
     </item>
     <item>
@@ -1030,7 +917,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-030</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Wed, 14 Jan 2026 19:53:37 +0000</pubDate>
     </item>
     <item>
@@ -1040,7 +927,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-031</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Wed, 14 Jan 2026 20:00:56 +0000</pubDate>
     </item>
     <item>
@@ -1050,7 +937,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-032</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Wed, 14 Jan 2026 20:58:13 +0000</pubDate>
     </item>
     <item>
@@ -1059,7 +946,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/rsac-2026-conference</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 32596687.38</comments>
+      <comments>Score: 32215154.27</comments>
       <pubDate>Mon, 23 Mar 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
