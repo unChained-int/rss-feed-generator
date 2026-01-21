@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 21 Jan 2026 19:30:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Jan 2026 20:35:51 +0000</lastBuildDate>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV26–019)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-019</link>
@@ -26,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-001-vulnerabilities-affecting-n8n-cve-2026-21858-cve-2026-21877-cve-2025-68613</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Mon, 12 Jan 2026 18:45:54 +0000</pubDate>
     </item>
     <item>
@@ -37,90 +37,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.46</comments>
-      <pubDate>Wed, 21 Jan 2026 17:30:18 +0000</pubDate>
+      <pubDate>Wed, 21 Jan 2026 18:35:51 +0000</pubDate>
     </item>
     <item>
-      <title>Mandiant pushes organizations to dump insecure NTLMv1 by releasing a way to crack it</title>
-      <link>https://www.csoonline.com/article/4118800/mandiant-pushes-organizations-to-dump-insecure-ntlmv1-by-releasing-a-way-to-crack-it.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Google’s Mandiant security division has come up with an unusual tactic to persuade organizations to stop using the aged and hugely insecure NTLMv1 authentication protocol: publish a data lookup that makes cracking NTLMv1 credentials trivial for attackers.&lt;/p&gt;
-
-
-
-&lt;p&gt;The intention, Mandiant explained, is to draw attention to the fact that, despite decades of evidence that NTLMv1 (NT LAN Manager version 1) is insecure, organizations continue to use it. Anyone can use Mandiant’s Net-NTLMv1 pre-computed rainbow table lookup, downloadable from the Google Cloud Research Dataset &lt;a href="https://research.google/resources/datasets/?dataset_types=other&amp;amp;search=Net-NTLMv1&amp;amp;" rel="noreferrer noopener" target="_blank"&gt;portal&lt;/a&gt;, to map a given server response to reconstruct a real NT hash.&lt;/p&gt;
-
-
-
-&lt;p&gt;Hashes, of course, are mathematical representations of real passwords, but are just as useful to criminals when exploited using techniques such as &lt;em&gt;pass-the-hash&lt;/em&gt;. The benefit is time and money saved: Mandiant reckons its rainbow table allows the recovery of an NTLMv1 key in 12 hours using a computer costing $600, rather than relying on third party services or expensive hardware to brute-force the keys.&lt;/p&gt;
-
-
-
-&lt;p&gt;None of this makes NTLMv1 less secure or easier to target than it already is. Mandiant’s hope is that the release of the table will serve as a reminder that the problem exists, prompting organizations to finally &lt;a href="https://www.csoonline.com/article/2097636/ridding-your-network-of-ntlm.html" target="_blank"&gt;rip out NTLMv1&lt;/a&gt; from their networks.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This legacy protocol leaves organizations vulnerable to trivial credential theft, yet it remains prevalent due to inertia and a lack of demonstrated immediate risk,” the company &lt;a href="https://cloud.google.com/blog/topics/threat-intelligence/net-ntlmv1-deprecation-rainbow-tables/" rel="noreferrer noopener" target="_blank"&gt;said in its announcement&lt;/a&gt;. “By releasing these tables, Mandiant aims to lower the barrier for security professionals to demonstrate the insecurity of Net-NTLMv1.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="long-fallback"&gt;Long fallback&lt;/h2&gt;
-
-
-
-&lt;p&gt;NTLMv1 is a 1990s challenge-response protocol used to authenticate Windows NT users to Active Directory (AD). Based on 1980’s Data Encryption Standard (DES) encryption, it was updated to the more secure NTLMv2 in 1996 before being completely replaced by Kerberos. Unfortunately, legacy protocols like NTLMv1 don’t just disappear, and are retained as a fallback in case they are needed by older applications. That fallback has turned out to last decades.&lt;/p&gt;
-
-
-
-&lt;p&gt;What evidence does Mandiant have that organizations are still using NTLMv1? The first is anecdotal: “Mandiant consultants continue to identify its use in active environments,” the company noted in last week’s announcement.&lt;/p&gt;
-
-
-
-&lt;p&gt;Secondly, cyberattackers regularly target it. For example, a &lt;a href="https://www.csoonline.com/article/1311455/malicious-email-campaign-steals-ntlm-hashes.html" target="_blank"&gt;2024 campaign&lt;/a&gt; by the TA577 threat group targeted NTLM hashes by using booby-trapped emails to send challenge-response authentication requests to internal SMB resources such as legacy printers.  &lt;/p&gt;
-
-
-
-&lt;p&gt;A more recent incident involved an authentication relay attack aimed at a specific NTLM vulnerability, &lt;a href="https://www.crowdstrike.com/en-us/blog/analyzing-ntlm-ldap-authentication-bypass-vulnerability/" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-54918&lt;/a&gt;, which came only weeks after Microsoft announced that it was finally &lt;a href="https://support.microsoft.com/en-gb/topic/upcoming-changes-to-ntlmv1-in-windows-11-version-24h2-and-windows-server-2025-c0554217-cdbc-420f-b47c-e02b2db49b2e" rel="noreferrer noopener" target="_blank"&gt;removing NTLMv1 support&lt;/a&gt; from Windows Server 2025 and Windows 11.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="primary-hurdle-knowing-its-still-there"&gt;Primary hurdle: Knowing it’s still there&lt;/h2&gt;
-
-
-
-&lt;p&gt;According to &lt;a href="https://www.linkedin.com/in/robfinn/?originalSubdomain=uk" rel="noreferrer noopener" target="_blank"&gt;Rob Finn&lt;/a&gt;, International vice president at supply chain security company Chainguard, even security-aware organizations could be caught out by NTLMv1.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Legacy protocols like NTLMv1 are buried deep within third-party firmware. A security team might deprecate NTLMv1 at the OS level, only to have a legacy printer driver or industrial sensor reintroduce it via an unpatched, decades-old library,” he said. “For most companies, the primary hurdle isn’t just knowing NTLMv1 is insecure, it’s knowing that it’s still there.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Because resources such as printers are not externally exposed, it is tempting to assume they are beyond the reach of attackers. Despite this, NTLMv1 can still be targeted from outside the network using relay or coercion techniques, by, for example, triggering authentication via a phishing attack.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Attackers don’t need to know you’re using it. They just have to poke the system to find out. Fundamentally, organizations keep legacy protocols active not because they want to, but because they fear breaking a mission-critical legacy app,” said Finn.&lt;/p&gt;
-
-
-
-&lt;p&gt;Despite Microsoft recommending that organizations upgrade to NTLMv2 and Kerberos for more than two decades, it appears not everyone got the memo. “In crypto terms, NTLMv1 isn’t just old, it’s archaeological,” said &lt;a href="https://www.linkedin.com/in/rob-a-03b0b4201/" rel="noreferrer noopener" target="_blank"&gt;Rob Anderson&lt;/a&gt;, head of reactive consulting services at Reliance Cyber. “NTLMv1 is still enabled, not because it is needed today, but because it was needed once, and nobody is quite brave enough to turn it off and see what breaks.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Despite those fears, organizations need to take action. “Scan for its use, find out why it is in use, register it as a high risk and get to work removing it, with achievable deadlines,” he advised.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4118800/mandiant-pushes-organizations-to-dump-insecure-ntlmv1-by-releasing-a-way-to-crack-it.html</guid>
+      <title>[Control systems] Siemens security advisory (AV26-020)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-020</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-020</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Mon, 19 Jan 2026 21:25:35 +0000</pubDate>
+      <comments>Score: 7.51</comments>
+      <pubDate>Tue, 13 Jan 2026 15:26:26 +0000</pubDate>
     </item>
     <item>
       <title>EU Most Wanted website revamped with new fugitives added</title>
@@ -130,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 21 Jan 2026 17:30:18 +0000</pubDate>
+      <pubDate>Wed, 21 Jan 2026 18:35:51 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
@@ -140,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 21 Jan 2026 17:30:18 +0000</pubDate>
+      <pubDate>Wed, 21 Jan 2026 18:35:51 +0000</pubDate>
     </item>
     <item>
       <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
@@ -150,7 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 21 Jan 2026 17:30:18 +0000</pubDate>
+      <pubDate>Wed, 21 Jan 2026 18:35:51 +0000</pubDate>
     </item>
     <item>
       <title>Europol signs Working Arrangement with the Argentine Republic</title>
@@ -160,7 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 21 Jan 2026 17:30:18 +0000</pubDate>
+      <pubDate>Wed, 21 Jan 2026 18:35:51 +0000</pubDate>
     </item>
     <item>
       <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
@@ -170,17 +97,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 21 Jan 2026 17:30:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] Siemens security advisory (AV26-020)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-020</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-020</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 13 Jan 2026 15:26:26 +0000</pubDate>
+      <pubDate>Wed, 21 Jan 2026 18:35:51 +0000</pubDate>
     </item>
     <item>
       <title>SAP security advisory – January 2026 monthly rollup (AV26-021)</title>
@@ -199,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-022</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Tue, 13 Jan 2026 16:48:53 +0000</pubDate>
     </item>
     <item>
@@ -209,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-023</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Tue, 13 Jan 2026 20:25:39 +0000</pubDate>
     </item>
     <item>
@@ -219,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Tue, 13 Jan 2026 20:32:30 +0000</pubDate>
     </item>
     <item>
@@ -229,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-025</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Tue, 13 Jan 2026 21:14:21 +0000</pubDate>
     </item>
     <item>
@@ -240,128 +157,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Wed, 21 Jan 2026 17:30:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>This Intune update isn’t optional — it’s a kill switch for outdated apps</title>
-      <link>https://www.csoonline.com/article/4118902/this-intune-update-isnt-optional-its-a-kill-switch-for-outdated-apps-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Enterprises using Intune mobile application management (MAM) beware: Your apps won’t run soon if you haven’t planned ahead.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft is updating its Intune MAM to support new security requirements &lt;a href="https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/in-development#update-to-the-latest-intune-company-portal-for-android-intune-app-sdk-for-ios-and-intune-app-wrapper-for-ios" rel="noreferrer noopener" target="_blank"&gt;starting January 19 or “soon after”&lt;/a&gt;, requiring that all iOS-wrapped apps, iOS SDK-integrated apps, and the Intune Company Portal for Android be updated to the latest Intune versions to keep them secure and running.&lt;/p&gt;
-
-
-
-&lt;p&gt;This means that enterprises that haven’t updated to the latest versions will be blocked from launching their apps altogether. And, this may not just include custom apps wrapped in Intune MAM, but other frequently-used ones such as Outlook and Teams.&lt;/p&gt;
-
-
-
-&lt;p&gt;Simply put, “If you want your stuff to work, get it updated and pushed,” said &lt;a href="https://www.beauceronsecurity.com/blog/tag/David+Shipley" rel="noreferrer noopener" target="_blank"&gt;David Shipley&lt;/a&gt; of Beauceron Security.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="whats-being-updated-in-ios-android"&gt;What’s being updated in iOS, Android&lt;/h2&gt;
-
-
-
-&lt;p&gt;Microsoft Intune is a core component of the Microsoft Modern Workplace. Its &lt;a href="https://www.computerworld.com/article/1700964/microsoft-intune-explained-unified-endpoint-management.html" target="_blank"&gt;MAM features&lt;/a&gt; help enterprises secure their data on both corporate and personal devices. Using it, IT teams can manage corporate apps like Outlook or Teams without having to manage the entire device. This type of unified endpoint management (UEM) supports feature deployments, updates, and retirement of apps, while also protecting corporate data and preventing data leaks, with (ideally) minimal disruption for the user.&lt;/p&gt;
-
-
-
-&lt;p&gt;With Monday’s hard deadline, Microsoft will enforce &lt;a href="https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy" rel="noreferrer noopener" target="_blank"&gt;stricter security requirements&lt;/a&gt; within the UEM — but only for approved users. Those without the latest app protection supported Microsoft or third-party apps will “be blocked from launching their apps,” the company warned. Microsoft announced the required updates several months ago in the Microsoft 365 Admin Center.&lt;/p&gt;
-
-
-
-&lt;p&gt;For Apple users, Monday’s full stop means:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;iOS line-of-business (LOB) and custom iOS apps using the Intune App SDK must update to SDK version 20.8.0 or later for apps compiled with Xcode 16, and to 21.1.0 or later for apps compiled with Xcode 26.&lt;/li&gt;
-
-
-
-&lt;li&gt;Apps using the wrapper must update to the new version of the Intune App Wrapping Tool for iOS: version 20.8.1 or later for apps built with XCode 16; and version 21.1.0 or later for apps built with XCode 26.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;It’s a little simpler for Android users: Once one Microsoft app with an updated SDK is on the device and the company portal is updated to version 5.0.6726.0 or later, other Android apps will update.&lt;/p&gt;
-
-
-
-&lt;p&gt;Tenants with policies targeted to both iOS and Android apps should notify their users that they need to update, and ensure Microsoft apps such as Teams and Outlook are up-to-date, Microsoft advised. Admins can also enable conditional launch settings to block apps using older versions of the SDK or to warn users if they are using older versions of apps.&lt;/p&gt;
-
-
-
-&lt;p&gt;Admins can also proactively ensure that users are not blocked while doing work on their phones. In the Microsoft Intune admin center, they can navigate to &lt;em&gt;Apps &amp;gt; Monitor &amp;gt; App protection status&lt;/em&gt; to review the app and SDK versions users are running.&lt;/p&gt;
-
-
-
-&lt;p&gt;“We recommend to always update your Android and iOS apps to the latest SDK or app wrapper to ensure that your app continues to run smoothly,” Microsoft emphasized.&lt;/p&gt;
-
-
-
-&lt;p&gt;Overall, the company advised enterprises to use &lt;a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-all-users-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices" rel="noreferrer noopener" target="_blank"&gt;conditional access policies&lt;/a&gt; so that only apps with app protection policies enabled can access corporate resources.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="supporting-new-security-tools-and-why-enterprises-should-have-updated-yesterday"&gt;Supporting new security tools (and why enterprises should have updated yesterday)&lt;/h2&gt;
-
-
-
-&lt;p&gt;With its new security updates, Microsoft has wrapped controls around existing custom apps that businesses have built, Beauceron’s Shipley explained. These enable features such as requiring a PIN or biometric authentication inside the app, restricting data sharing with other managed apps, and selectively wiping corporate data from apps.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This [update] may be because there’s some risk with the older versions not doing what they should’ve been doing for protections,” Shipley noted.&lt;/p&gt;
-
-
-
-&lt;p&gt;He pointed out that Microsoft has been signaling this update since 2025 and already pushed back implementation from mid-December 2025 to this week. Also, it’s interesting to note that this change may not just impact custom apps wrapped in Intune MAM, but Outlook, Teams, and others applications as well.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The long and short of it is, what Redmond wants is what Redmond gets when it finally puts a foot down, like it appears to have in this case,” said Shipley.&lt;/p&gt;
-
-
-
-&lt;p&gt;This deadline shouldn’t come as a surprise to IT teams who stayed on top of things, noted &lt;a href="https://www.infotech.com/profiles/fritz-jean-louis" rel="noreferrer noopener" target="_blank"&gt;Fritz Jean-Louis&lt;/a&gt;, principal cybersecurity advisor at Info-Tech Research Group. Microsoft has been deprecating various parts of Intune, and how it connects from an infrastructure perspective, for some time now.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Like many other things, if you’re not actively managing [with] the right amount of due diligence, you will be impacted by this,” said Jean-Louis, noting that employees dealing with work tasks on their phones (either remotely or on-premises) will experience outages without the updates. “It’s going to seriously impact users if this has not been adequately addressed.”&lt;/p&gt;
-
-
-
-&lt;p&gt;From an IT perspective, if they’re not ready for the new versioning, admins should contact Microsoft as soon as possible and determine whether mitigations can be put in place until their team is ready.&lt;/p&gt;
-
-
-
-&lt;p&gt;If users experience issues, they should contact their official IT service desk, Jean-Louis advised. They should not attempt to self-resolve by, say, going to a random site and blindly entering a user ID and password to receive updates. Threat actors may be lying in wait, using this type of opportunity to deploy malware “fixes.”&lt;/p&gt;
-
-
-
-&lt;p&gt;“Threat actors are always looking for this sort of major change to take advantage,” he noted.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.computerworld.com/article/4118887/this-intune-update-isnt-optional-its-a-kill-switch-for-outdated-apps.html" target="_blank"&gt;Computerworld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4118902/this-intune-update-isnt-optional-its-a-kill-switch-for-outdated-apps-2.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
-      <pubDate>Tue, 20 Jan 2026 03:57:30 +0000</pubDate>
+      <pubDate>Wed, 21 Jan 2026 18:35:51 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-026)</title>
@@ -370,7 +166,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-026</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Wed, 14 Jan 2026 15:16:28 +0000</pubDate>
     </item>
     <item>
@@ -380,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-027</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Wed, 14 Jan 2026 15:30:26 +0000</pubDate>
     </item>
     <item>
@@ -390,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-028</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Wed, 14 Jan 2026 15:43:47 +0000</pubDate>
     </item>
     <item>
@@ -400,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-029</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Wed, 14 Jan 2026 15:57:06 +0000</pubDate>
     </item>
     <item>
@@ -410,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-030</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 14 Jan 2026 19:53:37 +0000</pubDate>
     </item>
     <item>
@@ -420,7 +216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-031</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 14 Jan 2026 20:00:56 +0000</pubDate>
     </item>
     <item>
@@ -430,7 +226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-032</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 14 Jan 2026 20:58:13 +0000</pubDate>
     </item>
     <item>
@@ -473,7 +269,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4118848/new-eu-vulnerability-database-launched.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Tue, 20 Jan 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -704,7 +500,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4118753/why-the-future-of-security-starts-with-who-not-where.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Tue, 20 Jan 2026 10:15:00 +0000</pubDate>
     </item>
     <item>
@@ -771,7 +567,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4119047/crashfix-attack-hijacks-browser-failures-to-deliver-modelrat-malware-via-fake-chrome-extension.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Tue, 20 Jan 2026 11:39:40 +0000</pubDate>
     </item>
     <item>
@@ -782,7 +578,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Wed, 21 Jan 2026 17:30:18 +0000</pubDate>
+      <pubDate>Wed, 21 Jan 2026 18:35:51 +0000</pubDate>
     </item>
     <item>
       <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
@@ -792,7 +588,85 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.92</comments>
-      <pubDate>Wed, 21 Jan 2026 17:30:18 +0000</pubDate>
+      <pubDate>Wed, 21 Jan 2026 18:35:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>Oracle releases 337 security patches, including fix for critical Apache Tika flaw</title>
+      <link>https://www.csoonline.com/article/4120197/oracle-releases-337-security-patches-including-fix-for-critical-apache-tika-flaw.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Oracle has handed security teams their first big patching workload of the year, with its latest quarterly update containing a hefty 337 security fixes across its product range, including 27 rated critical.&lt;/p&gt;
+
+
+
+&lt;p&gt;This imposing number of patches won’t surprise anyone whose job it is to look after Oracle products; in 2025 the company averaged 344 per update, so 337 is in line with this.&lt;/p&gt;
+
+
+
+&lt;p&gt;The first job with large updates like this is working out where to start and what to prioritize. That usually means assessing the flaws in core products while paying careful attention to severity.&lt;/p&gt;
+
+
+
+&lt;p&gt;In terms of the latter, the good news is that, as far as Oracle knows, none of &lt;a href="https://www.oracle.com/security-alerts/cpujan2026.html" rel="noreferrer noopener" target="_blank"&gt;January’s vulnerabilities&lt;/a&gt; is being exploited in the wild. That means there are no zero days to worry about this time.&lt;/p&gt;
+
+
+
+&lt;p&gt;There is no guarantee this won’t change, which is why security teams will pay closest attention to the 27 patches that map to 13 CVEs with a critical rating.&lt;/p&gt;
+
+
+
+&lt;p&gt;There was a time when updates were about fixing flaws in proprietary code. Those days are long gone; a significant portion of the January update deals with issues affecting third-party code such as open source libraries used by Oracle inside its products.&lt;/p&gt;
+
+
+
+&lt;p&gt;That’s also why individual CVEs now often generate multiple patches across different products, which can make assessing what to fix more demanding.&lt;/p&gt;
+
+
+
+&lt;p&gt;A high-priority example of this is &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21962" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21962&lt;/a&gt; affecting the Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in. Given a maximum CVSS score of 10, this critical severity vulnerability is addressed by seven different patches, depending on which product contains the vulnerable code.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="cve-bloat"&gt;CVE bloat&lt;/h2&gt;
+
+
+
+&lt;p&gt;Also confusing is the fact that some CVEs listed in the latest update relate to CVEs from previous quarterly updates. A notable example of this is &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66516" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-66516&lt;/a&gt;, rated 9.8 (critical) on CVSS, affecting Oracle Middleware Common Libraries and Tools, which has a precursor in &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-54988" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-54988&lt;/a&gt;. It addresses the high-profile &lt;a href="https://www.csoonline.com/article/4102655/apache-tika-hit-by-critical-vulnerability-thought-to-be-patched-months-ago.html" target="_blank"&gt;Apache Tika issue&lt;/a&gt; first discovered in August, whose scope was expanded to cover more components in December.&lt;/p&gt;
+
+
+
+&lt;p&gt;This phenomenon of CVE bloat applies to around 50 of the vulnerabilities in the January update, in some cases with a single new CVE referring to multiple older CVEs.&lt;/p&gt;
+
+
+
+&lt;p&gt;As for products, the biggest offender, with 56 patches to be applied, is the Zero Data Loss Recovery Appliance (ZDLRA); almost all are fixes for third-party components. Despite 34 of these being described as remotely exploitable, only one has a new CVE identifier, the CVSS 3.1 (low) severity &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21977" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21977&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;For anyone applying patches, this nuance is important; a product might only have one new CVE behind which lie multiple others identified in CVEs from other vendors.&lt;/p&gt;
+
+
+
+&lt;p&gt;Just behind ZDLRA in patch volume are Oracle Enterprise Manager, with 51 patches, 47 of which can be remotely exploited without authentication, and Oracle E-Business Suite, with 38 patches, 33 of which are remotely exploitable.&lt;/p&gt;
+
+
+
+&lt;p&gt;Despite Oracle’s comprehensive patching cycle, the company’s approach to security has not always been effective. In 2025, a threat actor claimed to have &lt;a href="https://www.csoonline.com/article/3959636/oracle-admits-breach-of-obsolete-servers-denies-main-cloud-platform-affected.html" target="_blank"&gt;stolen six million records&lt;/a&gt; from a vulnerable Oracle server, a claim the company repeatedly denied.&lt;/p&gt;
+
+
+
+&lt;p&gt;Security company CloudSEK later identified the vulnerability that led to the alleged hack as being CVE-2021-35587, an old issue that should have been patched. Presumably coincidentally, in August it was announced that long-serving chief security officer &lt;a href="https://www.csoonline.com/article/4042448/surprise-departure-of-oracle-security-chief-as-company-shifts-focus-to-ai.html" target="_blank"&gt;Mary Ann Davidson was leaving the company&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4120197/oracle-releases-337-security-patches-including-fix-for-critical-apache-tika-flaw.html</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.98</comments>
+      <pubDate>Wed, 21 Jan 2026 20:02:13 +0000</pubDate>
     </item>
     <item>
       <title>Airlock Digital Announces Independent TEI Study Quantifying Measurable ROI &amp; Security Impact</title>
@@ -895,7 +769,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4119592/airlock-digital-announces-independent-tei-study-quantifying-measurable-roi-security-impact.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Tue, 20 Jan 2026 20:50:00 +0000</pubDate>
     </item>
     <item>
@@ -995,7 +869,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3495375/third-party-risk-management-so-vermeiden-sie-compliance-unheil.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Wed, 21 Jan 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1080,7 +954,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4117003/cyber-risk-assessments-risk-assessment-helps-cisos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Wed, 21 Jan 2026 06:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1381,7 +1255,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4119475/13-cyber-questions-to-better-vet-it-vendors-and-reduce-third-party-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Wed, 21 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1420,7 +1294,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4120006/eu-reviews-cybersecurity-wants-to-reduce-risks-from-high-risk-suppliers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.79</comments>
+      <comments>Score: 8.74</comments>
       <pubDate>Wed, 21 Jan 2026 14:13:35 +0000</pubDate>
     </item>
     <item>
@@ -1430,7 +1304,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-033</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.37</comments>
+      <comments>Score: 9.34</comments>
       <pubDate>Mon, 19 Jan 2026 17:08:39 +0000</pubDate>
     </item>
     <item>
@@ -1440,7 +1314,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-034</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.37</comments>
+      <comments>Score: 9.35</comments>
       <pubDate>Mon, 19 Jan 2026 17:23:30 +0000</pubDate>
     </item>
     <item>
@@ -1450,7 +1324,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-035</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.38</comments>
+      <comments>Score: 9.35</comments>
       <pubDate>Mon, 19 Jan 2026 17:30:23 +0000</pubDate>
     </item>
     <item>
@@ -1460,7 +1334,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-036</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.38</comments>
+      <comments>Score: 9.35</comments>
       <pubDate>Mon, 19 Jan 2026 17:41:10 +0000</pubDate>
     </item>
     <item>
@@ -1470,7 +1344,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-037</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.39</comments>
+      <comments>Score: 9.37</comments>
       <pubDate>Mon, 19 Jan 2026 18:14:00 +0000</pubDate>
     </item>
     <item>
@@ -1480,7 +1354,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-038</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.40</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Mon, 19 Jan 2026 18:38:32 +0000</pubDate>
     </item>
     <item>
@@ -1490,7 +1364,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-039</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Mon, 19 Jan 2026 20:26:52 +0000</pubDate>
     </item>
     <item>
@@ -1500,7 +1374,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-040</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Mon, 19 Jan 2026 20:34:06 +0000</pubDate>
     </item>
     <item>
@@ -1510,7 +1384,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-041</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.95</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Tue, 20 Jan 2026 14:12:42 +0000</pubDate>
     </item>
     <item>
@@ -1520,7 +1394,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-january-2026-quarterly-rollup-av26-042</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.74</comments>
+      <comments>Score: 10.70</comments>
       <pubDate>Wed, 21 Jan 2026 13:05:06 +0000</pubDate>
     </item>
     <item>
@@ -1530,7 +1404,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-043</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.75</comments>
+      <comments>Score: 10.70</comments>
       <pubDate>Wed, 21 Jan 2026 13:11:31 +0000</pubDate>
     </item>
     <item>
@@ -1540,7 +1414,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-044</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.75</comments>
+      <comments>Score: 10.71</comments>
       <pubDate>Wed, 21 Jan 2026 13:20:51 +0000</pubDate>
     </item>
     <item>
@@ -1550,7 +1424,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-045</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.90</comments>
+      <comments>Score: 10.85</comments>
       <pubDate>Wed, 21 Jan 2026 17:00:02 +0000</pubDate>
     </item>
     <item>
@@ -1560,7 +1434,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-046</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.90</comments>
+      <comments>Score: 10.86</comments>
       <pubDate>Wed, 21 Jan 2026 17:06:13 +0000</pubDate>
     </item>
     <item>
@@ -1570,8 +1444,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-047</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.91</comments>
+      <comments>Score: 10.86</comments>
       <pubDate>Wed, 21 Jan 2026 17:11:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cisco security advisory (AV26-048)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-048</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-048</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.95</comments>
+      <pubDate>Wed, 21 Jan 2026 19:28:13 +0000</pubDate>
     </item>
     <item>
       <title>Secure Your Spot at RSAC 2026 Conference</title>
@@ -1579,7 +1463,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/rsac-2026-conference</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 15366478.62</comments>
+      <comments>Score: 15192580.45</comments>
       <pubDate>Mon, 23 Mar 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
