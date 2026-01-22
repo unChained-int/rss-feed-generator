@@ -8,74 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Jan 2026 11:26:24 +0000</lastBuildDate>
-    <item>
-      <title>CrashFix attack hijacks browser failures to deliver ModelRAT malware via fake Chrome extension</title>
-      <link>https://www.csoonline.com/article/4119047/crashfix-attack-hijacks-browser-failures-to-deliver-modelrat-malware-via-fake-chrome-extension.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Security researchers have uncovered a malicious browser extension campaign, dubbed CrashFix, that deliberately crashes victims’ browsers and then uses the resulting confusion to trick users into running attacker-supplied commands.&lt;br /&gt;&lt;br /&gt;The activity, attributed to a threat cluster Huntress calls KongTuke, involves a fake Chrome &lt;a href="https://www.csoonline.com/article/4118607/five-chrome-extensions-caught-hijacking-enterprise-sessions.html" target="_blank"&gt;extension&lt;/a&gt; posing as an ad-blocking tool but ultimately delivering a novel malware payload.&lt;/p&gt;
-
-
-
-&lt;p&gt;The extension, which Huntress identified as NexShield-Advanced Web Protection, was distributed through look-alike branding and deceptive metadata designed to resemble a legitimate browser security tool, uBlock Origin Lite ad blocker. After installation, it remains inactive for a period of time, likely to evade immediate suspicion, before intentionally destabilizing the browser by exhausting system resources and triggering repeated crashes.&lt;/p&gt;
-
-
-
-&lt;p&gt;Once the browser becomes unusable, victims are presented with a fake “repair” prompt instructing them to paste and execute a command to resolve the issue.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;From fake protection to forced failure&lt;/h2&gt;
-
-
-
-&lt;p&gt;According to Huntress’ analysis, the malicious extension does not immediately perform malicious actions. Instead, it waits approximately an hour after installation before initiating the crash routine. The extension repeatedly opens connections and consumes memory until the browser becomes unresponsive, forcing users to restart or troubleshoot what appears to be a legitimate failure.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The extension sets up to two timers: the first triggers once after a 60-minute delay, and the second fires every 10 minutes after the initial trigger,” Huntress researchers said in a blog &lt;a href="https://www.huntress.com/blog/malicious-browser-extention-crashfix-kongtuke" rel="noreferrer noopener" target="_blank"&gt;post&lt;/a&gt;. “This timing strategy is in place so that when a user installs the extension, nothing malicious happens immediately. Sixty minutes later, the malicious payload activates, and every 10 minutes thereafter, the payload continues to execute.”&lt;/p&gt;
-
-
-
-&lt;p&gt;On relaunch, the victim receives an alert claiming the browser encountered a critical error and requires manual remediation. Victims are instructed to open the Windows Run dialog and paste a command already copied to the clipboard. This command launches the next stage of the attack.&lt;/p&gt;
-
-
-
-&lt;p&gt;Huntress emphasized that this technique mirrors a growing trend in “&lt;a href="https://www.csoonline.com/article/3610611/rising-clickfix-malware-distribution-trick-puts-powershell-it-policies-on-notice.html"&gt;ClickFix&lt;/a&gt;”-style attacks, where users are socially engineered into executing malicious code themselves under the guise of system recovery or security remediation. ClickFix techniques have been observed across multiple DPRK-linked campaigns, including variants associated with the long-running&lt;a href="https://www.csoonline.com/article/4098699/contagious-interview-attackers-go-full-stack-to-fool-developers.html"&gt; Contagious Interview&lt;/a&gt; operation.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Payload delivery&lt;/h2&gt;
-
-
-
-&lt;p&gt;When the user executes the supplied commands, a multistage infection process begins that ultimately deploys a previously undocumented Python-based remote access trojan, which the researchers dubbed ModelRAT. The malware establishes persistence and enables remote control of the infected system.&lt;/p&gt;
-
-
-
-&lt;p&gt;Huntress’ telemetry suggested differing behavior based on the environment. Systems joined to a domain were more likely to receive the full payload chain, while non-domain systems sometimes received lighter or incomplete stages.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers also drew parallels between the CrashFix execution flow and &lt;a href="https://www.csoonline.com/article/574617/5-top-threats-from-2022-most-likely-to-strike-in-2023.html#:~:text=Drive%2Dby%20downloads%20alive%20and%20well%20with%20SocGholish"&gt;SocGholish&lt;/a&gt; (FakeUpdates) campaigns, noting the shared reliance on user-driven execution rather than technical exploitation. As with SocGholish activity, the attacker’s success depends on convincing the victim to manually run a command under the guise of remediation or system recovery.&lt;/p&gt;
-
-
-
-&lt;p&gt;Recommendations included removing untrusted or look-alike browser extensions and reinforcing guidance against manually executing “fix” commands prompted by browser errors. The researchers also shared indicators of compromise (IOCs) tied to the malicious extension, command execution, and follow-on activity to aid detection and response.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4119047/crashfix-attack-hijacks-browser-failures-to-deliver-modelrat-malware-via-fake-chrome-extension.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
-      <pubDate>Tue, 20 Jan 2026 11:39:40 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 22 Jan 2026 12:56:57 +0000</lastBuildDate>
     <item>
       <title>[Control systems] Siemens security advisory (AV26-020)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-020</link>
@@ -83,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-020</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Tue, 13 Jan 2026 15:26:26 +0000</pubDate>
     </item>
     <item>
@@ -103,18 +36,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-022</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Tue, 13 Jan 2026 16:48:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>OTF GRIMM: Swedish organiser of serious violence arrested in Iraq</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-organiser-of-serious-violence-arrested-in-iraq</link>
-      <description>A High-Value Target under Europol-supported Operational Taskforce GRIMM was arrested in Iraq following long-term cooperation between the Swedish Police Authority and Iraqi law enforcement authorities. The 21-year-old suspect, a Swedish national who was listed on the EU Most Wanted list, is identified as a key organiser of serious violence directed at Sweden from abroad.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-organiser-of-serious-violence-arrested-in-iraq</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Thu, 22 Jan 2026 09:26:24 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV26-023)</title>
@@ -137,24 +60,24 @@
       <pubDate>Tue, 13 Jan 2026 20:32:30 +0000</pubDate>
     </item>
     <item>
+      <title>OTF GRIMM: Swedish organiser of serious violence arrested in Iraq</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-organiser-of-serious-violence-arrested-in-iraq</link>
+      <description>A High-Value Target under Europol-supported Operational Taskforce GRIMM was arrested in Iraq following long-term cooperation between the Swedish Police Authority and Iraqi law enforcement authorities. The 21-year-old suspect, a Swedish national who was listed on the EU Most Wanted list, is identified as a key organiser of serious violence directed at Sweden from abroad.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-organiser-of-serious-violence-arrested-in-iraq</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.46</comments>
+      <pubDate>Thu, 22 Jan 2026 10:56:57 +0000</pubDate>
+    </item>
+    <item>
       <title>HPE security advisory (AV26-025)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-025</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-025</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Tue, 13 Jan 2026 21:14:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
-      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 22 Jan 2026 09:26:24 +0000</pubDate>
     </item>
     <item>
       <title>EU Most Wanted website revamped with new fugitives added</title>
@@ -164,7 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 22 Jan 2026 09:26:24 +0000</pubDate>
+      <pubDate>Thu, 22 Jan 2026 10:56:57 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
@@ -174,7 +97,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 22 Jan 2026 09:26:24 +0000</pubDate>
+      <pubDate>Thu, 22 Jan 2026 10:56:57 +0000</pubDate>
     </item>
     <item>
       <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
@@ -184,7 +107,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 22 Jan 2026 09:26:24 +0000</pubDate>
+      <pubDate>Thu, 22 Jan 2026 10:56:57 +0000</pubDate>
     </item>
     <item>
       <title>Europol signs Working Arrangement with the Argentine Republic</title>
@@ -194,7 +117,28 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 22 Jan 2026 09:26:24 +0000</pubDate>
+      <pubDate>Thu, 22 Jan 2026 10:56:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operational Taskforce GRIMM: 193 arrests in 6 months tackling violence-as-a-service networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</link>
+      <description>Launched in April 2025, the taskforce has been focused on combating the emerging trend of VaaS, where criminals outsource violent acts, often relying on young, inexperienced perpetrators. These individuals are groomed or coerced into committing a range of violent crimes, from acts of intimidation and torture to murder.What began as a growing issue in Sweden has now spread across Europe,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operational-taskforce-grimm-193-arrests-in-6-months-tackling-violence-service-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 22 Jan 2026 10:56:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>Filling the Most Common Gaps in Google Workspace Security</title>
+      <link>https://thehackernews.com/2026/01/filling-most-common-gaps-in-google.html</link>
+      <description>Security teams at agile, fast-growing companies often have the same mandate: secure the business without slowing it down. Most teams inherit a tech stack optimized for breakneck growth, not resilience. In these environments, the security team is the helpdesk, the compliance expert, and the incident response team all rolled into one.
+Securing the cloud office in this scenario is all about</description>
+      <guid isPermaLink="false">https://thehackernews.com/2026/01/filling-most-common-gaps-in-google.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.55</comments>
+      <pubDate>Thu, 22 Jan 2026 17:00:00 +0530</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-026)</title>
@@ -203,7 +147,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-026</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Wed, 14 Jan 2026 15:16:28 +0000</pubDate>
     </item>
     <item>
@@ -223,7 +167,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-028</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Wed, 14 Jan 2026 15:43:47 +0000</pubDate>
     </item>
     <item>
@@ -233,7 +177,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-029</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Wed, 14 Jan 2026 15:57:06 +0000</pubDate>
     </item>
     <item>
@@ -243,7 +187,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-030</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Wed, 14 Jan 2026 19:53:37 +0000</pubDate>
     </item>
     <item>
@@ -253,7 +197,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-031</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Wed, 14 Jan 2026 20:00:56 +0000</pubDate>
     </item>
     <item>
@@ -263,7 +207,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-032</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Wed, 14 Jan 2026 20:58:13 +0000</pubDate>
     </item>
     <item>
@@ -274,111 +218,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Thu, 22 Jan 2026 09:26:24 +0000</pubDate>
-    </item>
-    <item>
-      <title>Airlock Digital Announces Independent TEI Study Quantifying Measurable ROI &amp; Security Impact</title>
-      <link>https://www.csoonline.com/article/4119592/airlock-digital-announces-independent-tei-study-quantifying-measurable-roi-security-impact.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.airlockdigital.com/forrester-tei-report?utm_campaign=download-2025dec1-forresterteireport&amp;amp;utm_medium=third-party&amp;amp;utm_source=ap" rel="noreferrer noopener" target="_blank"&gt;&lt;strong&gt;Airlock Digital&lt;/strong&gt;&lt;/a&gt;, a leader in proactive application control and endpoint security, announced the release of &lt;a href="https://www.airlockdigital.com/forrester-tei-report?utm_campaign=download-2025dec1-forresterteireport&amp;amp;utm_medium=third-party&amp;amp;utm_source=ap" rel="noreferrer noopener" target="_blank"&gt;&lt;strong&gt;The Total Economic Impact (TEI) of Airlock Digital&lt;/strong&gt;&lt;/a&gt;, an independent study commissioned by Airlock Digital and conducted by &lt;strong&gt;Forrester Consulting&lt;/strong&gt;. The study demonstrates a significant &lt;strong&gt;224% return on investment (ROI)&lt;/strong&gt; and a &lt;strong&gt;$3.8 million net present value (NPV)&lt;/strong&gt; over three years for organizations adopting Airlock Digital’s allowlisting approach. These findings underline both the financial and security value of Airlock Digital’s solution.&lt;/p&gt;
-
-
-&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-full is-resized"&gt; srcset="https://b2b-contenthub.com/wp-content/uploads/2026/01/Airlock-Digital-Bann-Cr.jpg?quality=50&amp;amp;strip=all 499w, https://b2b-contenthub.com/wp-content/uploads/2026/01/Airlock-Digital-Bann-Cr.jpg?resize=300%2C108&amp;amp;quality=50&amp;amp;strip=all 300w, https://b2b-contenthub.com/wp-content/uploads/2026/01/Airlock-Digital-Bann-Cr.jpg?resize=150%2C54&amp;amp;quality=50&amp;amp;strip=all 150w, https://b2b-contenthub.com/wp-content/uploads/2026/01/Airlock-Digital-Bann-Cr.jpg?resize=444%2C159&amp;amp;quality=50&amp;amp;strip=all 444w" width="499" height="179" sizes="auto, (max-width: 499px) 100vw, 499px"&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;Cyber NewsWire&lt;/p&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;Forrester’s TEI methodology evaluates the potential financial impact of technology investments by aggregating insights from customer interviews and modeling a composite organization representative of global organizations. According to the study, Airlock Digital enabled:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;224% ROI&lt;/strong&gt; over three years&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;$3.8M net present value&lt;/strong&gt; based on quantified benefits versus costs&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;&amp;gt;25% reduction in overall risk of security breaches&lt;/strong&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Zero breaches reported&lt;/strong&gt; by interviewed organizations after deploying Airlock Digital&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Significant operational efficiencies&lt;/strong&gt; with reduced administrative overhead&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;David Cottingham, Co-founder and CEO at Airlock Digital, said: &lt;/strong&gt;“For modern enterprises, trust cannot be assumed… it must be enforced. Allowlisting and application control give organizations the power to run only what they trust, blocking all malware and ransomware before they can execute. For us, the Forrester Consulting TEI study reinforces the importance of our mission at Airlock Digital, which is to deliver proactive endpoint security that makes application control not just possible, but effortless. It’s why we have become synonymous with this critical layer of cyber defense—and why every organization needs it at the core of their security strategy.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;As cyberattacks continue to grow in scale and sophistication, more organizations are turning to application control and allowlisting as foundational components of a proactive security strategy.&lt;/strong&gt; Traditional reactive security tools attempt to detect and block threats after execution attempts are made—often too late to prevent compromise. Allowlisting reverses this paradigm, enforcing a Deny by Default posture that ensures only trusted and approved software is permitted to run. This approach dramatically reduces the attack surface, curbs the spread of malware and ransomware, and helps organizations meet increasingly stringent regulatory and compliance requirements. Airlock Digital’s modern, operationally friendly implementation of allowlisting enables security teams to adopt this strategy without the administrative complexity historically associated with legacy tools.&lt;/p&gt;
-
-
-
-&lt;p&gt;The study highlights that Airlock Digital helps organizations strengthen their security posture, lower ongoing maintenance costs, and improve software inventory management while keeping operational and administrative burden low. The study noted that a single security analyst can effectively manage Airlock Digital policies in much less time than traditional solutions require, contributing to cost savings and improved productivity.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Patrick Dillon, CRO at Airlock Digital said: &lt;/strong&gt;“The Forrester Consulting TEI study gives security leaders, in our opinion, clear, independent validation of the impact delivered by Airlock Digital. Forrester Consulting calculated the benefits to include a 224% ROI and fast payback — and most importantly — participating organizations reported zero breaches after implementation. Airlock Digital combines simplicity with enterprise-grade scale, enforcing a Deny by Default posture that blocks untrusted code, including malware and ransomware. For organizations ready to move from reactive defenses to proactive prevention, Airlock Digital provides a quantified and operationally efficient path forward — requiring, according to the Forrester Consulting study, only 2.5 hours per week to manage. We’d be glad to walk you through the findings.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;About Airlock Digital&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.airlockdigital.com/forrester-tei-report?utm_campaign=download-2025dec1-forresterteireport&amp;amp;utm_medium=third-party&amp;amp;utm_source=ap" rel="noreferrer noopener" target="_blank"&gt;Airlock Digital&lt;/a&gt; delivers market-leading allowlisting and application control solutions that empower enterprises to enforce a Deny by Default security posture. Trusted globally across industries, Airlock Digital enables organizations to prevent unauthorized code execution, simplify compliance, and strengthen cyber-resilience without sacrificing performance or user productivity. This approach minimizes attack surfaces and helps organizations align their cybersecurity strategies with government frameworks and standards.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Users can download the full Forrester TEI study: &lt;/strong&gt;&lt;a href="https://www.airlockdigital.com/forrester-tei-report?utm_campaign=download-2025dec1-forresterteireport&amp;amp;utm_medium=third-party&amp;amp;utm_source=ap" rel="noreferrer noopener" target="_blank"&gt;https://www.airlockdigital.com/forrester-tei-report&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;h5 class="wp-block-heading"&gt;&lt;strong&gt;Contact&lt;/strong&gt;&lt;/h5&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;VP of Marketing&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Erin Welke&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Airlock Digital&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;erin.welke@airlockdigital.com&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4119592/airlock-digital-announces-independent-tei-study-quantifying-measurable-roi-security-impact.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Tue, 20 Jan 2026 20:50:00 +0000</pubDate>
+      <pubDate>Thu, 22 Jan 2026 10:56:57 +0000</pubDate>
     </item>
     <item>
       <title>Third Party Risk Management: So vermeiden Sie Compliance-Unheil</title>
@@ -477,7 +317,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3495375/third-party-risk-management-so-vermeiden-sie-compliance-unheil.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Wed, 21 Jan 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -488,17 +328,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Thu, 22 Jan 2026 09:26:24 +0000</pubDate>
-    </item>
-    <item>
-      <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</link>
-      <description>A large-scale law enforcement action, conducted within the Europol-coordinated operation Fabryka, led to the dismantling of a criminal network operating across the European Union. On Friday, 16 January, coordinated efforts took place in Poland, as well as in Belgium, Germany, and the Netherlands. These actions targeted a network suspected of importing a large quantity of precursors used for the production of synthetic drugs in labs across multiple countries. Additionally, the network engaged in money laundering activities to further its illicit operations. The year-long operation Fabryka involved law enforcement and judicial authorities from Belgium, Czechia, Germany, the Netherlands, Poland, and Spain.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
-      <pubDate>Thu, 22 Jan 2026 09:26:24 +0000</pubDate>
+      <pubDate>Thu, 22 Jan 2026 10:56:57 +0000</pubDate>
     </item>
     <item>
       <title>For cyber risk assessments, frequency is essential</title>
@@ -582,8 +412,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4117003/cyber-risk-assessments-risk-assessment-helps-cisos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Wed, 21 Jan 2026 06:30:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</link>
+      <description>A large-scale law enforcement action, conducted within the Europol-coordinated operation Fabryka, led to the dismantling of a criminal network operating across the European Union. On Friday, 16 January, coordinated efforts took place in Poland, as well as in Belgium, Germany, and the Netherlands. These actions targeted a network suspected of importing a large quantity of precursors used for the production of synthetic drugs in labs across multiple countries. Additionally, the network engaged in money laundering activities to further its illicit operations. The year-long operation Fabryka involved law enforcement and judicial authorities from Belgium, Czechia, Germany, the Netherlands, Poland, and Spain.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.92</comments>
+      <pubDate>Thu, 22 Jan 2026 10:56:57 +0000</pubDate>
     </item>
     <item>
       <title>13 cyber questions to better vet IT vendors and reduce third-party risk</title>
@@ -883,7 +723,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4119475/13-cyber-questions-to-better-vet-it-vendors-and-reduce-third-party-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Wed, 21 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -893,7 +733,7 @@
       <guid isPermaLink="false">https://www.infosecurity-magazine.com/news/160000-companies-regulator-gdpr/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Thu, 22 Jan 2026 10:35:00 +0000</pubDate>
     </item>
     <item>
@@ -932,7 +772,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4120006/eu-reviews-cybersecurity-wants-to-reduce-risks-from-high-risk-suppliers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Wed, 21 Jan 2026 14:13:35 +0000</pubDate>
     </item>
     <item>
@@ -1075,7 +915,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4120258/misconfigured-demo-environments-are-turning-into-cloud-backdoors-to-the-enterprise.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Wed, 21 Jan 2026 22:27:50 +0000</pubDate>
     </item>
     <item>
@@ -1192,7 +1032,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4120316/gitlab-2fa-login-protection-bypass-lets-attackers-take-over-accounts.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Wed, 21 Jan 2026 23:54:10 +0000</pubDate>
     </item>
     <item>
@@ -1353,7 +1193,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4120218/73-of-cisos-more-likely-to-consider-ai-enabled-security-solution.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.82</comments>
+      <comments>Score: 8.76</comments>
       <pubDate>Thu, 22 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1412,7 +1252,7 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="haeufig-uebersehen-aber-essenziell"&gt;Häufig übersehen, aber essenziell&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="haufig-ubersehen-aber-essenziell"&gt;Häufig übersehen, aber essenziell&lt;/h2&gt;
 
 
 
@@ -1441,8 +1281,111 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4120020/warum-microsoft-365-konfigurationen-geschutzt-werden-mussen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Thu, 22 Jan 2026 07:55:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>Actively exploited Cisco UC bug requires immediate, version‑specific patching</title>
+      <link>https://www.csoonline.com/article/4120613/actively-exploited-cisco-uc-bug-requires-immediate-version%e2%80%91specific-patching.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Cisco has released patches for a critical remote code execution vulnerability in its unified communications products that attackers are actively exploiting. The US Cybersecurity and Infrastructure Security Agency has added the flaw to its Known Exploited Vulnerabilities catalog, confirming the exploitation.&lt;/p&gt;
+
+
+
+&lt;p&gt;Cisco disclosed &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-20045" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-20045&lt;/a&gt; along with patches for Unified Communications Manager, Unity Connection, and Webex Calling Dedicated Instance. The company assigned the vulnerability a “Critical” severity rating despite its CVSS score of 8.2.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Cisco has assigned this security advisory a Security Impact Rating (SIR) of Critical rather than High as the score indicates,” &lt;a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-voice-rce-mORhqY4b" rel="noreferrer noopener" target="_blank"&gt;the company said in its advisory&lt;/a&gt;. “The reason is that exploitation of this vulnerability could result in an attacker elevating privileges to root.”&lt;/p&gt;
+
+
+
+&lt;p&gt;CISA’s addition of the vulnerability to its KEV catalog confirms attackers are exploiting it in the wild. “This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise,” &lt;a href="https://www.cisa.gov/news-events/alerts/2026/01/21/cisa-adds-one-known-exploited-vulnerability-catalog" rel="noreferrer noopener" target="_blank"&gt;CISA said in its alert.&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;This is the second actively exploited Cisco vulnerability CISA has added to its KEV catalog in recent weeks. Last week, the agency added &lt;a href="https://www.csoonline.com/article/4118159/cisco-finally-patches-seven-week-old-zero-day-flaw-in-secure-email-gateway-products-2.html"&gt;CVE-2025-20393&lt;/a&gt;, affecting Cisco’s AsyncOS software.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Other collaboration products, including Contact Center Enterprise, Emergency Responder, Finesse, Unified Intelligence Center, and Unified Contact Center Express, are not vulnerable to CVE-2026-20045,” the advisory added.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="root-level-compromise-with-no-user-interaction"&gt;Root-level compromise with no user interaction&lt;/h2&gt;
+
+
+
+&lt;p&gt;The vulnerability stems from improper validation of user-supplied input in HTTP requests. “An attacker could exploit this vulnerability by sending a sequence of crafted HTTP requests to the web-based management interface of an affected device,” Cisco explained in the advisory. “A successful exploit could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to root.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The attack requires no user interaction and can be carried out by unauthenticated remote attackers, making it particularly dangerous for internet-facing unified communications deployments, the advisory added.&lt;/p&gt;
+
+
+
+&lt;p&gt;Cisco’s Product Security Incident Response Team added that it is “aware of attempted exploitation of this vulnerability in the wild,” underscoring the urgency of patching.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="no-workarounds-available"&gt;No workarounds available&lt;/h2&gt;
+
+
+
+&lt;p&gt;Cisco confirmed in the advisory that there are no workarounds or mitigations available for CVE-2026-20045. The company has released fixes specific to each product version.&lt;/p&gt;
+
+
+
+&lt;p&gt;For Unified Communications Manager, IM&amp;amp;P, SME, and Webex Calling Dedicated Instance running version 14, the company suggested administrators can upgrade to version 14SU5 or apply a version-specific patch file. Organizations running version 15 can apply version-specific patches for 15SU2 and 15SU3a, with a full release of version 15SU4 expected in March 2026, the company added.&lt;/p&gt;
+
+
+
+&lt;p&gt;Unity Connection administrators have similar options, with version-specific patch files available for releases 14SU4 and 15SU3.&lt;/p&gt;
+
+
+
+&lt;p&gt;Organizations still running version 12.5 face a harder choice: Cisco won’t release patches for this version and recommends migrating to a supported release.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Customers are advised to migrate to a supported release that includes the fix for this vulnerability,” Cisco said in the advisory. Patches are version-specific, and administrators should consult the README files attached to each patch for deployment details, the advisory added.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="federal-agencies-face-a-deadline"&gt;Federal agencies face a deadline&lt;/h2&gt;
+
+
+
+&lt;p&gt;CISA’s inclusion of CVE-2026-20045 in the KEV catalog triggers mandatory remediation timelines for Federal Civilian Executive Branch agencies under Binding Operational Directive 22-01. Federal agencies must patch the vulnerability within two weeks of its January 21 addition to the catalog.&lt;/p&gt;
+
+
+
+&lt;p&gt;While BOD 22-01 applies specifically to federal agencies, CISA “strongly recommends” that all organizations treat KEV-listed vulnerabilities as high-priority patching targets. The catalog tracks flaws with confirmed active exploitation, making them significantly more likely to be weaponized against a broader range of targets.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="how-to-patch"&gt;How to patch&lt;/h2&gt;
+
+
+
+&lt;p&gt;Cisco said organizations should check for signs of potential compromise on all internet-accessible instances after applying mitigations. The company advised administrators to review system logs and configurations for any unauthorized changes or suspicious activity that may indicate prior exploitation.&lt;/p&gt;
+
+
+
+&lt;p&gt;For organizations unable to immediately upgrade to fixed releases, the company said version-specific patch files offer an interim remediation option. However, Cisco noted that patches must match the exact software version running on the device, and administrators should verify compatibility before deployment.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4120613/actively-exploited-cisco-uc-bug-requires-immediate-version%e2%80%91specific-patching.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.97</comments>
+      <pubDate>Thu, 22 Jan 2026 12:10:58 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-033)</title>
@@ -1451,7 +1394,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-033</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.01</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Mon, 19 Jan 2026 17:08:39 +0000</pubDate>
     </item>
     <item>
@@ -1461,7 +1404,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-034</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.01</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Mon, 19 Jan 2026 17:23:30 +0000</pubDate>
     </item>
     <item>
@@ -1471,7 +1414,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-035</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.01</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Mon, 19 Jan 2026 17:30:23 +0000</pubDate>
     </item>
     <item>
@@ -1481,7 +1424,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-036</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Mon, 19 Jan 2026 17:41:10 +0000</pubDate>
     </item>
     <item>
@@ -1491,7 +1434,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-037</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Mon, 19 Jan 2026 18:14:00 +0000</pubDate>
     </item>
     <item>
@@ -1501,7 +1444,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-038</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.04</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Mon, 19 Jan 2026 18:38:32 +0000</pubDate>
     </item>
     <item>
@@ -1511,7 +1454,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-039</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Mon, 19 Jan 2026 20:26:52 +0000</pubDate>
     </item>
     <item>
@@ -1521,7 +1464,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-040</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.05</comments>
       <pubDate>Mon, 19 Jan 2026 20:34:06 +0000</pubDate>
     </item>
     <item>
@@ -1531,7 +1474,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-041</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Tue, 20 Jan 2026 14:12:42 +0000</pubDate>
     </item>
     <item>
@@ -1541,7 +1484,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-january-2026-quarterly-rollup-av26-042</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.17</comments>
+      <comments>Score: 10.12</comments>
       <pubDate>Wed, 21 Jan 2026 13:05:06 +0000</pubDate>
     </item>
     <item>
@@ -1551,7 +1494,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-043</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.17</comments>
+      <comments>Score: 10.12</comments>
       <pubDate>Wed, 21 Jan 2026 13:11:31 +0000</pubDate>
     </item>
     <item>
@@ -1561,7 +1504,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-044</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.18</comments>
+      <comments>Score: 10.13</comments>
       <pubDate>Wed, 21 Jan 2026 13:20:51 +0000</pubDate>
     </item>
     <item>
@@ -1571,7 +1514,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-045</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.30</comments>
+      <comments>Score: 10.25</comments>
       <pubDate>Wed, 21 Jan 2026 17:00:02 +0000</pubDate>
     </item>
     <item>
@@ -1581,7 +1524,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-046</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.30</comments>
+      <comments>Score: 10.25</comments>
       <pubDate>Wed, 21 Jan 2026 17:06:13 +0000</pubDate>
     </item>
     <item>
@@ -1591,7 +1534,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-047</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.31</comments>
+      <comments>Score: 10.26</comments>
       <pubDate>Wed, 21 Jan 2026 17:11:58 +0000</pubDate>
     </item>
     <item>
@@ -1601,7 +1544,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-048</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.39</comments>
+      <comments>Score: 10.33</comments>
       <pubDate>Wed, 21 Jan 2026 19:28:13 +0000</pubDate>
     </item>
     <item>
@@ -1610,7 +1553,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/rsac-2026-conference</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 13016248.24</comments>
+      <comments>Score: 12813243.11</comments>
       <pubDate>Mon, 23 Mar 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
