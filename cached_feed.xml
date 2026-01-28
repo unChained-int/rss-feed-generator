@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Jan 2026 14:34:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jan 2026 15:36:48 +0000</lastBuildDate>
     <item>
       <title>VMware security advisory (AV26-038)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-038</link>
@@ -20,128 +20,13 @@
       <pubDate>Mon, 19 Jan 2026 18:38:32 +0000</pubDate>
     </item>
     <item>
-      <title>Microsoft handed over BitLocker keys to law enforcement, raising enterprise data control concerns</title>
-      <link>https://www.csoonline.com/article/4122151/microsoft-handed-over-bitlocker-keys-to-law-enforcement-raising-enterprise-data-control-concerns-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Microsoft gave Windows users’ BitLocker encryption keys for to US law enforcement officers, providing access to encrypted data, according to a news report.&lt;/p&gt;
-
-
-
-&lt;p&gt;The US Federal Bureau of Investigation approached Microsoft with a search warrant in early 2025, seeking keys to unlock encrypted data stored on three laptops in a case of alleged fraud involving the COVID unemployment assistance program in Guam. As the keys were stored on a Microsoft server, Microsoft adhered to the legal order and &lt;a href="https://www.forbes.com/sites/thomasbrewster/2026/01/22/microsoft-gave-fbi-keys-to-unlock-bitlocker-encrypted-data/" rel="noreferrer noopener" target="_blank"&gt;handed over the encryption keys&lt;/a&gt;, Forbes reported on Friday.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft did not immediately respond to a request for comment.&lt;/p&gt;
-
-
-
-&lt;p&gt;There have been instances in the past where the big tech companies were approached by &lt;a href="https://www.csoonline.com/article/3812874/how-law-enforcement-agents-gain-access-to-encrypted-devices.html"&gt;law enforcement&lt;/a&gt; for access to devices but have &lt;a href="https://www.csoonline.com/article/554969/apple-vs-the-fbi-the-legal-arguments-in-a-nutshell.html"&gt;resisted&lt;/a&gt; handing encryption keys to authorities.&lt;/p&gt;
-
-
-
-&lt;p&gt;BitLocker is a widely used tool for securing data at rest, whether by individuals or enterprises managing hundreds or thousands of Windows devices. By default, many Windows installations back up BitLocker recovery keys to Microsoft’s cloud services, where Microsoft can retrieve them if legally compelled with a valid order.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="custody-issue-not-bitlocker"&gt;Custody issue, not BitLocker&lt;/h2&gt;
-
-
-
-&lt;p&gt;BitLocker is designed to provide encryption for entire volumes, addressing the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned devices. As BitLocker is bunded with Windows 10 and Windows 11, it has effectively become the default full-disk encryption layer across Windows endpoints, say experts.&lt;/p&gt;
-
-
-
-&lt;p&gt;“BitLocker itself does not fail here. The software does what it is built to do, encrypts the disk, integrates into Windows, allows for easy recovery,” said Sanchit Vir Gogia, chief analyst at Greyhound Research.&lt;/p&gt;
-
-
-
-&lt;p&gt;While the encryption of BitLocker is robust, enterprises need to be mindful of who has custody of the keys, as this case illustrates.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The encryption engine in BitLocker, using AES-128 or AES-256 in XTS mode, is built to resist modern cryptanalysis. Even the US Department of Homeland Security has admitted they lack the forensic tooling to break it directly. However, most enterprise fleets running Windows use tools like Intune and Autopilot to roll out and manage devices. In that flow, unless explicitly disabled, recovery keys are automatically backed up to Microsoft &lt;a href="https://www.csoonline.com/article/4060101/entra-id-vulnerability-exposes-gaps-in-cloud-identity-trust-models-experts-warn.html"&gt;Entra ID.&lt;/a&gt; These keys are then viewable via the admin centre or retrievable through scripts,” Gogia said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="where-most-enterprises-go-wrong"&gt;Where most enterprises go wrong&lt;/h2&gt;
-
-
-
-&lt;p&gt;Enterprises using BitLocker should treat the recovery keys as highly sensitive, and avoid default cloud backup unless there is a clear business requirement and the associated risks are well understood and mitigated.&lt;/p&gt;
-
-
-
-&lt;p&gt;The safest configuration is to redirect those keys to on-premises Active Directory or a controlled enterprise key vault. Even if stored in corporate-controlled directory or service such as Microsoft Entra ID or Intune, there should be strong governance on who can read the keys, with effective logging and just-in-time access, said Amit Jaju, a global partner at Ankura Consulting. This can cut Microsoft out of the recovery loop, he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;If keys have to reside in Microsoft’s cloud, use strong multi-factor authentication for admin roles, with conditional access and privileged-access workstations so a compromise of admin credentials does not automatically become a compromise of all keys, he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Enterprises should ensure strict access control and separation of duties. “Only a small, vetted group such as security operations, endpoint engineering, should have rights to view or export recovery keys. Approvals should be workflow-based, not ad hoc. Every key retrieval should leave an auditable, immutable trail, and ideally be tied to an incident or ticket ID,” said Jaju.&lt;/p&gt;
-
-
-
-&lt;p&gt;CISOs should also ensure that when devices are repurposed, decommissioned, or moved across jurisdictions, keys should be regenerated as part of the workflow to ensure old keys cannot be used.&lt;/p&gt;
-
-
-
-&lt;p&gt;Gogia warned of the long tail of insecure setups. Personal accounts linked during provisioning, or BYOD devices that silently sync keys to consumer dashboards, are invisible pathways for leakage. “If those keys sit outside your boundary, you no longer have a clean chain of custody. That’s not a theoretical risk. It’s something auditors are now actively checking,” he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;As many breaches are not cryptographic but procedural, enterprises should have a formal playbook for when a recovery key can be used (lost PIN, internal investigation with legal approval, lawful order) and when it cannot (informal manager request to access an employee’s data), noted Jaju.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="geopolitics-reshaping-enterprise-data-and-key-control"&gt;Geopolitics reshaping enterprise data and key control&lt;/h2&gt;
-
-
-
-&lt;p&gt;Geopolitical tensions are also reshaping global trade and technology policies, something enterprises increasingly need to factor into their security strategies. As governments assert greater control over data, trade secrets and proprietary information risk becoming entangled in broader state interests.&lt;/p&gt;
-
-
-
-&lt;p&gt;Gogia warned, “The &lt;a href="https://www.csoonline.com/article/568021/what-you-need-to-know-about-the-us-cloud-act-and-the-uk-copoa-act.html"&gt;US CLOUD Act&lt;/a&gt; allows law enforcement to compel US-based providers to hand over data and keys, even if that data is hosted in Europe or Asia. Similarly, Chinese data localisation rules require keys and data to be accessible to state regulators. In India, recent legislation has introduced broad access rights for security agencies. And the EU is debating whether sovereignty must include key custody by design, not just data residency.”&lt;/p&gt;
-
-
-
-&lt;p&gt;If recovery keys are stored with a cloud provider, that provider may be compelled, at least in its home jurisdiction, to hand them over under lawful order, even if the data subject or company is elsewhere without notifying the company. This becomes even more critical from the point of view of a pharma company, semiconductor firm, defence contractor, or critical-infrastructure operator, as it exposes them to risks such as exposure of trade secrets in cross‑border investigations.&lt;/p&gt;
-
-
-
-&lt;p&gt;Jaju added, “Enterprises should assume that where keys are held, they can potentially be compelled. So where practical, ensure that the entities controlling keys are legally anchored in the jurisdiction whose laws and due-process standards you trust most. Establish board-level oversight on cross-border data access, including a register of government data-access requests, where legally permitted. For multinational companies, legal and security teams must work together to understand mutual legal-assistance treaties, CLOUD Act implications, and local interception laws.”&lt;/p&gt;
-
-
-
-&lt;p&gt;This article first appeared on &lt;a href="https://www.computerworld.com/article/4122149/microsoft-handed-over-bitlocker-keys-to-law-enforcement-raising-enterprise-data-control-concerns.html"&gt;Computerworld&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4122151/microsoft-handed-over-bitlocker-keys-to-law-enforcement-raising-enterprise-data-control-concerns-2.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
-      <pubDate>Mon, 26 Jan 2026 15:14:38 +0000</pubDate>
-    </item>
-    <item>
       <title>[Control systems] ABB security advisory (AV26-039)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-039</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-039</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Mon, 19 Jan 2026 20:26:52 +0000</pubDate>
     </item>
     <item>
@@ -151,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-040</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Mon, 19 Jan 2026 20:34:06 +0000</pubDate>
     </item>
     <item>
@@ -162,7 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.46</comments>
-      <pubDate>Wed, 28 Jan 2026 12:34:49 +0000</pubDate>
+      <pubDate>Wed, 28 Jan 2026 13:36:48 +0000</pubDate>
     </item>
     <item>
       <title>Europol report: evolving tactics in maritime cocaine trafficking operations</title>
@@ -172,17 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Wed, 28 Jan 2026 12:34:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
-      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 28 Jan 2026 12:34:49 +0000</pubDate>
+      <pubDate>Wed, 28 Jan 2026 13:36:48 +0000</pubDate>
     </item>
     <item>
       <title>EU Most Wanted website revamped with new fugitives added</title>
@@ -192,7 +67,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 28 Jan 2026 12:34:49 +0000</pubDate>
+      <pubDate>Wed, 28 Jan 2026 13:36:48 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
+      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 28 Jan 2026 13:36:48 +0000</pubDate>
     </item>
     <item>
       <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
@@ -202,7 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 28 Jan 2026 12:34:49 +0000</pubDate>
+      <pubDate>Wed, 28 Jan 2026 13:36:48 +0000</pubDate>
     </item>
     <item>
       <title>Europol signs Working Arrangement with the Argentine Republic</title>
@@ -212,7 +97,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 28 Jan 2026 12:34:49 +0000</pubDate>
+      <pubDate>Wed, 28 Jan 2026 13:36:48 +0000</pubDate>
     </item>
     <item>
       <title>Juniper Networks security advisory (AV26-041)</title>
@@ -221,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-041</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Tue, 20 Jan 2026 14:12:42 +0000</pubDate>
     </item>
     <item>
@@ -232,7 +117,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Wed, 28 Jan 2026 12:34:49 +0000</pubDate>
+      <pubDate>Wed, 28 Jan 2026 13:36:48 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-043)</title>
@@ -241,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-043</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 21 Jan 2026 13:11:31 +0000</pubDate>
     </item>
     <item>
@@ -251,28 +136,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-044</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 21 Jan 2026 13:20:51 +0000</pubDate>
-    </item>
-    <item>
-      <title>Atlassian security advisory (AV26-045)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-045</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-045</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Wed, 21 Jan 2026 17:00:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV26-046)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-046</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-046</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Wed, 21 Jan 2026 17:06:13 +0000</pubDate>
     </item>
     <item>
       <title>Unplugged holes in the npm and yarn package managers could let attackers bypass defenses against Shai-Hulud</title>
@@ -372,8 +237,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4122436/unplugged-holes-in-the-npm-and-yarn-package-managers-could-let-attackers-bypass-defenses-against-shai-hulud-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Tue, 27 Jan 2026 01:49:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Atlassian security advisory (AV26-045)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-045</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-045</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Wed, 21 Jan 2026 17:00:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-046)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-046</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-046</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Wed, 21 Jan 2026 17:06:13 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV26-048)</title>
@@ -382,7 +267,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-048</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 21 Jan 2026 19:28:13 +0000</pubDate>
     </item>
     <item>
@@ -828,8 +713,126 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3970431/cnapp-kaufratgeber.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Tue, 27 Jan 2026 04:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Critical FortiCloud SSO zero‑day forces emergency service disablement at Fortinet</title>
+      <link>https://www.csoonline.com/article/4123500/critical-forticloud-sso-zero%e2%80%91day-forces-emergency-service-disablement-at-fortinet.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Fortinet has disclosed a critical authentication bypass zero-day vulnerability affecting its FortiCloud single sign-on feature after the company took the emergency step of temporarily disabling the cloud authentication service globally to stop active exploitation.&lt;/p&gt;
+
+
+
+&lt;p&gt;The US Cybersecurity and Infrastructure Security Agency added the vulnerability to its Known Exploited Vulnerabilities catalog the same day.&lt;/p&gt;
+
+
+
+&lt;p&gt;The vulnerability, tracked as &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-24858" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-24858&lt;/a&gt;, is the second critical FortiCloud SSO flaw Fortinet has addressed in recent weeks. The company patched two &lt;a href="https://www.csoonline.com/article/4104499/fortinet-admins-urged-to-update-software-to-close-forticloud-sso-holes.html?utm=hybrid_search"&gt;similar authentication bypass vulnerabilities&lt;/a&gt;, CVE-2025-59718 and CVE-2025-59719, in December.&lt;/p&gt;
+
+
+
+&lt;p&gt;CVE-2026-24858 allowed attackers to compromise FortiGate firewalls, FortiManager, and FortiAnalyzer devices even when those systems were running the latest available firmware. Customers first reported breaches on January 20 and 21, with attackers creating new local administrator accounts on fully patched devices, &lt;a href="https://fortiguard.fortinet.com/psirt/FG-IR-26-060" rel="noreferrer noopener" target="_blank"&gt;Fortinet said in its advisory&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;Fortinet has begun releasing patches for affected products, but most fixed versions are still listed as “upcoming” in the company’s advisory. The company released FortiOS 7.4.11 to address the vulnerability, with additional patched versions expected shortly.&lt;/p&gt;
+
+
+
+&lt;p&gt;“This vulnerability was found being exploited in the wild by two malicious FortiCloud accounts, which were locked out on January 22,” the advisory added.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="how-the-vulnerability-works"&gt;How the vulnerability works&lt;/h2&gt;
+
+
+
+&lt;p&gt;CVE-2026-24858 is “an authentication bypass using an alternate path or channel vulnerability” affecting FortiOS, FortiManager, and FortiAnalyzer, according to Fortinet’s advisory. The flaw carries a CVSS score of 9.4.&lt;/p&gt;
+
+
+
+&lt;p&gt;The vulnerability “may allow an attacker with a FortiCloud account and a registered device to log into other devices registered to other accounts, if FortiCloud SSO authentication is enabled on those devices,” Fortinet said in the advisory.&lt;/p&gt;
+
+
+
+&lt;p&gt;While FortiCloud SSO is not enabled in factory default settings, it automatically activates when administrators register devices to FortiCare through the GUI unless they manually disable the “Allow administrative login using FortiCloud SSO” toggle during registration.&lt;/p&gt;
+
+
+
+&lt;p&gt;Fortinet noted that while exploitation has only been observed through FortiCloud SSO, “this issue is applicable to all SAML SSO implementations.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="attack-details-and-indicators"&gt;Attack details and indicators&lt;/h2&gt;
+
+
+
+&lt;p&gt;Fortinet’s investigation into the exploitation revealed attackers used two specific FortiCloud accounts: “cloud-noc@mail.io” and “cloud-init@mail.io,” though the company warned “these addresses may change in the future.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Fortinet identified multiple IP addresses associated with the attacks, including several Cloudflare-protected addresses that attackers used to obscure their activities.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Following authentication via SSO, it has been observed that the actor creates a local admin account with one of the following names,” Fortinet warned, listing accounts including “audit,” “backup,” “itadmin,” “secadmin,” “support,” and “system.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The attackers’ main operations focused on downloading customer configuration files and creating persistent admin accounts.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="emergency-cloud-side-shutdown"&gt;Emergency cloud-side shutdown&lt;/h2&gt;
+
+
+
+&lt;p&gt;In response to the active exploitation, Fortinet disabled FortiCloud SSO across its entire cloud infrastructure on January 26 to protect customers from further attacks.&lt;/p&gt;
+
+
+
+&lt;p&gt;The feature was re-enabled 24 hours later with a critical safeguard. “It was re-enabled on January 27 and no longer supports login from devices running vulnerable versions. Consequently, customers must upgrade to the latest versions listed below for the FortiCloud SSO authentication to function,” Fortinet explained.&lt;/p&gt;
+
+
+
+&lt;p&gt;This server-side blocking means organizations running vulnerable versions cannot use FortiCloud SSO until they upgrade to patched releases, even though most of those patches are not yet available.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="affected-products-and-patch-status"&gt;Affected products and patch status&lt;/h2&gt;
+
+
+
+&lt;p&gt;The vulnerability affects FortiOS, FortiManager, FortiAnalyzer, and FortiProxy versions 7.0 through 7.6. Version 6.4 releases are not affected. Fortinet said it is still investigating whether FortiWeb and FortiSwitch Manager are also vulnerable.&lt;/p&gt;
+
+
+
+&lt;p&gt;Fortinet’s advisory lists most patched versions as “upcoming,” with FortiOS 7.4.11 appearing to be the only released fix so far. The company’s upgrade tool provides recommended upgrade paths once patches become available.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="federal-deadline-and-immediate-actions"&gt;Federal deadline and immediate actions&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.cisa.gov/news-events/alerts/2026/01/27/cisa-adds-one-known-exploited-vulnerability-catalog"&gt;CISA’s addition&lt;/a&gt; of CVE-2026-24858 to the KEV catalog means federal civilian executive branch agencies must patch affected systems by February 17, 2026, or discontinue use of vulnerable products. The agency said the vulnerability “is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.” &lt;/p&gt;
+
+
+
+&lt;p&gt;The company noted that “disabling FortiCloud SSO login on client side is not necessary at the moment,” though organizations can disable the feature locally through System Settings or CLI commands if desired.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4123500/critical-forticloud-sso-zero%e2%80%91day-forces-emergency-service-disablement-at-fortinet.html</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.84</comments>
+      <pubDate>Wed, 28 Jan 2026 11:44:18 +0000</pubDate>
     </item>
     <item>
       <title>4 issues holding back CISOs’ security agendas</title>
@@ -1007,7 +1010,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4117010/4-issues-holding-back-cisos-security-agendas.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Tue, 27 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1017,126 +1020,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-002-vulnerability-affecting-gnu-inetutils-telnetd-cve-2026-24061</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Thu, 22 Jan 2026 13:18:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>Critical FortiCloud SSO zero‑day forces emergency service disablement at Fortinet</title>
-      <link>https://www.csoonline.com/article/4123500/critical-forticloud-sso-zero%e2%80%91day-forces-emergency-service-disablement-at-fortinet.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Fortinet has disclosed a critical authentication bypass zero-day vulnerability affecting its FortiCloud single sign-on feature after the company took the emergency step of temporarily disabling the cloud authentication service globally to stop active exploitation.&lt;/p&gt;
-
-
-
-&lt;p&gt;The US Cybersecurity and Infrastructure Security Agency added the vulnerability to its Known Exploited Vulnerabilities catalog the same day.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerability, tracked as &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-24858" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-24858&lt;/a&gt;, is the second critical FortiCloud SSO flaw Fortinet has addressed in recent weeks. The company patched two &lt;a href="https://www.csoonline.com/article/4104499/fortinet-admins-urged-to-update-software-to-close-forticloud-sso-holes.html?utm=hybrid_search"&gt;similar authentication bypass vulnerabilities&lt;/a&gt;, CVE-2025-59718 and CVE-2025-59719, in December.&lt;/p&gt;
-
-
-
-&lt;p&gt;CVE-2026-24858 allowed attackers to compromise FortiGate firewalls, FortiManager, and FortiAnalyzer devices even when those systems were running the latest available firmware. Customers first reported breaches on January 20 and 21, with attackers creating new local administrator accounts on fully patched devices, &lt;a href="https://fortiguard.fortinet.com/psirt/FG-IR-26-060" rel="noreferrer noopener" target="_blank"&gt;Fortinet said in its advisory&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Fortinet has begun releasing patches for affected products, but most fixed versions are still listed as “upcoming” in the company’s advisory. The company released FortiOS 7.4.11 to address the vulnerability, with additional patched versions expected shortly.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This vulnerability was found being exploited in the wild by two malicious FortiCloud accounts, which were locked out on January 22,” the advisory added.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-the-vulnerability-works"&gt;How the vulnerability works&lt;/h2&gt;
-
-
-
-&lt;p&gt;CVE-2026-24858 is “an authentication bypass using an alternate path or channel vulnerability” affecting FortiOS, FortiManager, and FortiAnalyzer, according to Fortinet’s advisory. The flaw carries a CVSS score of 9.4.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerability “may allow an attacker with a FortiCloud account and a registered device to log into other devices registered to other accounts, if FortiCloud SSO authentication is enabled on those devices,” Fortinet said in the advisory.&lt;/p&gt;
-
-
-
-&lt;p&gt;While FortiCloud SSO is not enabled in factory default settings, it automatically activates when administrators register devices to FortiCare through the GUI unless they manually disable the “Allow administrative login using FortiCloud SSO” toggle during registration.&lt;/p&gt;
-
-
-
-&lt;p&gt;Fortinet noted that while exploitation has only been observed through FortiCloud SSO, “this issue is applicable to all SAML SSO implementations.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="attack-details-and-indicators"&gt;Attack details and indicators&lt;/h2&gt;
-
-
-
-&lt;p&gt;Fortinet’s investigation into the exploitation revealed attackers used two specific FortiCloud accounts: “cloud-noc@mail.io” and “cloud-init@mail.io,” though the company warned “these addresses may change in the future.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Fortinet identified multiple IP addresses associated with the attacks, including several Cloudflare-protected addresses that attackers used to obscure their activities.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Following authentication via SSO, it has been observed that the actor creates a local admin account with one of the following names,” Fortinet warned, listing accounts including “audit,” “backup,” “itadmin,” “secadmin,” “support,” and “system.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The attackers’ main operations focused on downloading customer configuration files and creating persistent admin accounts.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="emergency-cloud-side-shutdown"&gt;Emergency cloud-side shutdown&lt;/h2&gt;
-
-
-
-&lt;p&gt;In response to the active exploitation, Fortinet disabled FortiCloud SSO across its entire cloud infrastructure on January 26 to protect customers from further attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;The feature was re-enabled 24 hours later with a critical safeguard. “It was re-enabled on January 27 and no longer supports login from devices running vulnerable versions. Consequently, customers must upgrade to the latest versions listed below for the FortiCloud SSO authentication to function,” Fortinet explained.&lt;/p&gt;
-
-
-
-&lt;p&gt;This server-side blocking means organizations running vulnerable versions cannot use FortiCloud SSO until they upgrade to patched releases, even though most of those patches are not yet available.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="affected-products-and-patch-status"&gt;Affected products and patch status&lt;/h2&gt;
-
-
-
-&lt;p&gt;The vulnerability affects FortiOS, FortiManager, FortiAnalyzer, and FortiProxy versions 7.0 through 7.6. Version 6.4 releases are not affected. Fortinet said it is still investigating whether FortiWeb and FortiSwitch Manager are also vulnerable.&lt;/p&gt;
-
-
-
-&lt;p&gt;Fortinet’s advisory lists most patched versions as “upcoming,” with FortiOS 7.4.11 appearing to be the only released fix so far. The company’s upgrade tool provides recommended upgrade paths once patches become available.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="federal-deadline-and-immediate-actions"&gt;Federal deadline and immediate actions&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.cisa.gov/news-events/alerts/2026/01/27/cisa-adds-one-known-exploited-vulnerability-catalog"&gt;CISA’s addition&lt;/a&gt; of CVE-2026-24858 to the KEV catalog means federal civilian executive branch agencies must patch affected systems by February 17, 2026, or discontinue use of vulnerable products. The agency said the vulnerability “is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.” &lt;/p&gt;
-
-
-
-&lt;p&gt;The company noted that “disabling FortiCloud SSO login on client side is not necessary at the moment,” though organizations can disable the feature locally through System Settings or CLI commands if desired.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4123500/critical-forticloud-sso-zero%e2%80%91day-forces-emergency-service-disablement-at-fortinet.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
-      <pubDate>Wed, 28 Jan 2026 11:44:18 +0000</pubDate>
     </item>
     <item>
       <title>ISC BIND security advisory (AV26-049)</title>
@@ -1145,7 +1030,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-049</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Thu, 22 Jan 2026 14:23:01 +0000</pubDate>
     </item>
     <item>
@@ -1156,7 +1041,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Wed, 28 Jan 2026 12:34:49 +0000</pubDate>
+      <pubDate>Wed, 28 Jan 2026 13:36:48 +0000</pubDate>
     </item>
     <item>
       <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
@@ -1166,7 +1051,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.92</comments>
-      <pubDate>Wed, 28 Jan 2026 12:34:49 +0000</pubDate>
+      <pubDate>Wed, 28 Jan 2026 13:36:48 +0000</pubDate>
     </item>
     <item>
       <title>AI overload to accelerate zero-trust data governance adoption</title>
@@ -1216,7 +1101,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4122266/50-of-organizations-will-adopt-zero-trust-data-governance-by-2028.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Tue, 27 Jan 2026 09:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1355,7 +1240,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4122255/overcoming-ai-fatigue.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Tue, 27 Jan 2026 12:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1418,7 +1303,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4122752/cisa-releases-technology-readiness-list-for-post-quantum-cryptography.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Tue, 27 Jan 2026 13:06:45 +0000</pubDate>
     </item>
     <item>
@@ -1604,7 +1489,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4122799/4-probleme-die-cisos-behindern.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Tue, 27 Jan 2026 15:16:52 +0000</pubDate>
     </item>
     <item>
@@ -1614,7 +1499,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-january-2026-quarterly-rollup-av26-042</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Fri, 23 Jan 2026 17:11:21 +0000</pubDate>
     </item>
     <item>
@@ -1661,7 +1546,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123217/ai-powered-polymorphic-attacks-lures-victims-to-phishing-webpages.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Wed, 28 Jan 2026 01:04:19 +0000</pubDate>
     </item>
     <item>
@@ -1880,7 +1765,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4117799/skills-cisos-need-to-master-in-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Wed, 28 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -2147,7 +2032,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123227/delegation-is-a-risk-decision-every-leader-makes-not-an-ops-choice.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Wed, 28 Jan 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -2286,7 +2171,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123184/always-on-privileged-access-is-pervasive-and-fraught-with-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.79</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Wed, 28 Jan 2026 09:30:00 +0000</pubDate>
     </item>
     <item>
@@ -2361,7 +2246,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123492/sicarii-ransomware-locks-your-data-and-throws-away-the-keys.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Wed, 28 Jan 2026 11:22:07 +0000</pubDate>
     </item>
     <item>
@@ -2371,7 +2256,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-050</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.49</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Mon, 26 Jan 2026 17:11:50 +0000</pubDate>
     </item>
     <item>
@@ -2381,7 +2266,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-019-vulnerabilities-impacting-fortinet-products-forticloud-sso-login-authentication-bypass-cve-2025-59718-cve-2025-59719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.49</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Mon, 26 Jan 2026 17:15:43 +0000</pubDate>
     </item>
     <item>
@@ -2391,7 +2276,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-051</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Mon, 26 Jan 2026 17:24:14 +0000</pubDate>
     </item>
     <item>
@@ -2401,7 +2286,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-052</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Mon, 26 Jan 2026 18:47:36 +0000</pubDate>
     </item>
     <item>
@@ -2411,7 +2296,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-053</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Mon, 26 Jan 2026 18:51:55 +0000</pubDate>
     </item>
     <item>
@@ -2421,7 +2306,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-054</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.56</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Mon, 26 Jan 2026 19:46:06 +0000</pubDate>
     </item>
     <item>
@@ -2431,7 +2316,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-055</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.56</comments>
+      <comments>Score: 9.54</comments>
       <pubDate>Mon, 26 Jan 2026 19:54:31 +0000</pubDate>
     </item>
     <item>
@@ -2441,7 +2326,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-br-security-advisory-av26-056</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.54</comments>
       <pubDate>Mon, 26 Jan 2026 20:03:27 +0000</pubDate>
     </item>
     <item>
@@ -2451,7 +2336,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-057</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.59</comments>
+      <comments>Score: 9.56</comments>
       <pubDate>Mon, 26 Jan 2026 20:47:46 +0000</pubDate>
     </item>
     <item>
@@ -2461,7 +2346,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-047</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.10</comments>
+      <comments>Score: 10.06</comments>
       <pubDate>Tue, 27 Jan 2026 13:57:52 +0000</pubDate>
     </item>
     <item>
@@ -2471,7 +2356,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.11</comments>
       <pubDate>Tue, 27 Jan 2026 15:18:22 +0000</pubDate>
     </item>
     <item>
@@ -2481,7 +2366,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.11</comments>
       <pubDate>Tue, 27 Jan 2026 15:25:15 +0000</pubDate>
     </item>
     <item>
@@ -2491,18 +2376,28 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-058</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.30</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Tue, 27 Jan 2026 20:11:50 +0000</pubDate>
     </item>
     <item>
-      <title>Fortinet security advisory (AV26-059)</title>
+      <title>Fortinet security advisory (AV26-059) – Update 1</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/cyber-fortinet-security-advisory-av26-059</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cyber-fortinet-security-advisory-av26-059</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.36</comments>
-      <pubDate>Tue, 27 Jan 2026 21:44:41 +0000</pubDate>
+      <comments>Score: 10.96</comments>
+      <pubDate>Wed, 28 Jan 2026 14:33:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-060)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-060</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-060</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.96</comments>
+      <pubDate>Wed, 28 Jan 2026 14:44:29 +0000</pubDate>
     </item>
     <item>
       <title>Secure Your Spot at RSAC 2026 Conference</title>
@@ -2510,7 +2405,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/rsac-2026-conference</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 2810850.71</comments>
+      <comments>Score: 2780770.85</comments>
       <pubDate>Mon, 23 Mar 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
