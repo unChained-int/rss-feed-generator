@@ -8,86 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Jan 2026 09:48:55 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jan 2026 10:40:52 +0000</lastBuildDate>
     <item>
-      <title>Critical bug in popular vm2 Node.js sandboxing library puts projects at risk</title>
-      <link>https://www.csoonline.com/article/4123782/critical-bug-in-popular-vm2-node-js-sandboxing-library-puts-projects-at-risk.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A critical vulnerability has been patched in vm2, a widely used library for the Node.js JavaScript runtime that allows untrusted code to be executed inside a sandbox within the same process as trusted application code. The flaw allows for a sandbox escape, which is as serious as it gets for a software component whose primary goal is enforcing a security boundary between trusted and untrusted code.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vm2 library, which is listed as a dependency by almost 900 other packages on NPM and many projects on GitHub, is not a stranger to sandbox escape vulnerabilities. In fact, in July 2023, its creator &lt;a href="https://github.com/patriksimek/vm2/issues/533#issuecomment-1632482080"&gt;decided to stop maintaining the project&lt;/a&gt; and deprecate it after one such vulnerability.&lt;/p&gt;
-
-
-
-&lt;p&gt;Despite the project being unmaintained, in the absence of good alternatives, people have kept using it, leading to millions of downloads every month. In October 2025, the original maintainer &lt;a href="https://github.com/patriksimek/vm2/issues/533#issuecomment-3444774921"&gt;decided to resurrect the project&lt;/a&gt; after patching all past vulnerabilities and announcing plans to rewrite it in TypeScript.&lt;/p&gt;
-
-
-
-&lt;p&gt;The new vulnerability patched this week is tracked as &lt;a href="https://github.com/patriksimek/vm2/security/advisories/GHSA-99p7-6v5w-7xg8"&gt;CVE-2026-22709&lt;/a&gt; and affects versions older than 3.10.2. Users are advised to upgrade to the latest version as soon as possible.&lt;/p&gt;
-
-
-
-&lt;p&gt;“In vm2 for version 3.10.0, &lt;code&gt;Promise.prototype.then&lt;/code&gt; &lt;code&gt;Promise.prototype.catch&lt;/code&gt; callback sanitization can be bypassed,” the official advisory reads. “This allows attackers to escape the sandbox and run arbitrary code.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="sandboxing-is-a-cat-and-mouse-game"&gt;Sandboxing is a cat-and-mouse game&lt;/h2&gt;
-
-
-
-&lt;p&gt;Sandboxes like vm2 are needed by web and other Node-based applications whose functionality enables users or tools to upload and execute scripts. Because user-controlled code is untrusted by nature, it cannot be allowed to execute in the same context as the application itself. Yet the host application needs to monitor and see what the code does.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vm2 library achieves this through a complex network of proxies that intercept and mediate interactions between the sandbox and the host environment. But the complexity of JavaScript means there will likely always be a way to trick this chain of proxies.&lt;/p&gt;
-
-
-
-&lt;p&gt;The project is honest about this in &lt;a href="https://github.com/patriksimek/vm2#readme"&gt;its description&lt;/a&gt;: “Objects can be accessed through prototype chains, constructors can be reached via error objects, symbols provide protocol hooks, and async execution creates timing windows. The sheer number of ways to traverse from one object to another in JavaScript makes building an airtight in-process sandbox extremely difficult.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The maintainer clearly warns that new bypasses will likely be discovered in the future and while they will be patched, the cat-and-mouse game will continue. In his announcement about the project’s resurrection in October, he noted that he hopes &lt;a href="https://www.csoonline.com/article/3632268/gen-ai-is-transforming-the-cyber-threat-landscape-by-democratizing-vulnerability-hunting.html"&gt;AI-assisted vulnerability detection&lt;/a&gt; will help catch more of these issues in the future.&lt;/p&gt;
-
-
-
-&lt;p&gt;There are other alternatives to isolate code that would provide stronger security guarantees, such as full process sandboxing, virtual machines, containers, and more. But they come with heavier performance costs or add other complexities and hurdles. Not to mention, those approaches are not vulnerability-free either.&lt;/p&gt;
-
-
-
-&lt;p&gt;The maintainer advises that vm2 should only be used when:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;You need tight integration with host objects and fast synchronous communication&lt;/li&gt;
-
-
-
-&lt;li&gt;The untrusted code comes from a relatively trusted source (e.g., internal tools, plugin systems with vetted authors)&lt;/li&gt;
-
-
-
-&lt;li&gt;You combine vm2 with other security layers (network isolation, filesystem restrictions, resource limits)&lt;/li&gt;
-
-
-
-&lt;li&gt;You accept the risk and actively monitor for security updates&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4123782/critical-bug-in-popular-vm2-node-js-sandboxing-library-puts-projects-at-risk.html</guid>
+      <title>OTF GRIMM: Swedish organiser of serious violence arrested in Iraq</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-organiser-of-serious-violence-arrested-in-iraq</link>
+      <description>A High-Value Target under Europol-supported Operational Taskforce GRIMM was arrested in Iraq following long-term cooperation between the Swedish Police Authority and Iraqi law enforcement authorities. The 21-year-old suspect, a Swedish national who was listed on the EU Most Wanted list, is identified as a key organiser of serious violence directed at Sweden from abroad.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-organiser-of-serious-violence-arrested-in-iraq</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.46</comments>
-      <pubDate>Wed, 28 Jan 2026 19:53:35 +0000</pubDate>
+      <pubDate>Thu, 29 Jan 2026 08:40:52 +0000</pubDate>
     </item>
     <item>
       <title>Europol report: evolving tactics in maritime cocaine trafficking operations</title>
@@ -97,7 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Thu, 29 Jan 2026 07:48:55 +0000</pubDate>
+      <pubDate>Thu, 29 Jan 2026 08:40:52 +0000</pubDate>
     </item>
     <item>
       <title>CISA releases technology readiness list for post-quantum cryptography</title>
@@ -159,7 +89,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4122752/cisa-releases-technology-readiness-list-for-post-quantum-cryptography.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Tue, 27 Jan 2026 13:06:45 +0000</pubDate>
     </item>
     <item>
@@ -170,7 +100,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 29 Jan 2026 07:48:55 +0000</pubDate>
+      <pubDate>Thu, 29 Jan 2026 08:40:52 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
@@ -180,17 +110,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 29 Jan 2026 07:48:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol signs Working Arrangement with the Argentine Republic</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</link>
-      <description>In December, the Ministry of National Security of the Argentine Republic and the European Union Agency for Law Enforcement Cooperation (Europol) signed a Working Arrangement in order to support the Member States of the European Union and Argentina in preventing and combating serious and organised crime and terrorism.The Working Arrangement provides for a structured legal framework for cooperation and enhanced...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 29 Jan 2026 07:48:55 +0000</pubDate>
+      <pubDate>Thu, 29 Jan 2026 08:40:52 +0000</pubDate>
     </item>
     <item>
       <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
@@ -200,27 +120,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 29 Jan 2026 07:48:55 +0000</pubDate>
+      <pubDate>Thu, 29 Jan 2026 08:40:52 +0000</pubDate>
     </item>
     <item>
-      <title>Google Chrome security advisory (AV26-043)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-043</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-043</guid>
+      <title>Europol signs Working Arrangement with the Argentine Republic</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</link>
+      <description>In December, the Ministry of National Security of the Argentine Republic and the European Union Agency for Law Enforcement Cooperation (Europol) signed a Working Arrangement in order to support the Member States of the European Union and Argentina in preventing and combating serious and organised crime and terrorism.The Working Arrangement provides for a structured legal framework for cooperation and enhanced...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Wed, 21 Jan 2026 13:11:31 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitLab security advisory (AV26-044)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-044</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-044</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Wed, 21 Jan 2026 13:20:51 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 29 Jan 2026 08:40:52 +0000</pubDate>
     </item>
     <item>
       <title>4 Probleme, die CISOs behindern</title>
@@ -405,8 +315,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4122799/4-probleme-die-cisos-behindern.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 27 Jan 2026 15:16:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-043)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-043</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-043</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.56</comments>
+      <pubDate>Wed, 21 Jan 2026 13:11:31 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitLab security advisory (AV26-044)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-044</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-044</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.56</comments>
+      <pubDate>Wed, 21 Jan 2026 13:20:51 +0000</pubDate>
     </item>
     <item>
       <title>Atlassian security advisory (AV26-045)</title>
@@ -435,7 +365,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-048</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Wed, 21 Jan 2026 19:28:13 +0000</pubDate>
     </item>
     <item>
@@ -446,27 +376,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.62</comments>
-      <pubDate>Thu, 29 Jan 2026 07:48:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-002 -Vulnerability affecting GNU Inetutils Telnetd - CVE-2026-24061</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-002-vulnerability-affecting-gnu-inetutils-telnetd-cve-2026-24061</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-002-vulnerability-affecting-gnu-inetutils-telnetd-cve-2026-24061</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
-      <pubDate>Thu, 22 Jan 2026 13:18:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>ISC BIND security advisory (AV26-049)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-049</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-049</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
-      <pubDate>Thu, 22 Jan 2026 14:23:01 +0000</pubDate>
+      <pubDate>Thu, 29 Jan 2026 08:40:52 +0000</pubDate>
     </item>
     <item>
       <title>SolarWinds, again: Critical RCE bugs reopen old wounds for enterprise security teams</title>
@@ -597,8 +507,28 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4124030/solarwinds-again-critical-rce-bugs-reopen-old-wounds-for-enterprise-security-teams.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Thu, 29 Jan 2026 03:11:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-002 -Vulnerability affecting GNU Inetutils Telnetd - CVE-2026-24061</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-002-vulnerability-affecting-gnu-inetutils-telnetd-cve-2026-24061</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-002-vulnerability-affecting-gnu-inetutils-telnetd-cve-2026-24061</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Thu, 22 Jan 2026 13:18:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>ISC BIND security advisory (AV26-049)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-049</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-049</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.72</comments>
+      <pubDate>Thu, 22 Jan 2026 14:23:01 +0000</pubDate>
     </item>
     <item>
       <title>AI-powered polymorphic attack lures victims to phishing webpages</title>
@@ -644,7 +574,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123217/ai-powered-polymorphic-attacks-lures-victims-to-phishing-webpages.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Wed, 28 Jan 2026 01:04:19 +0000</pubDate>
     </item>
     <item>
@@ -655,7 +585,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Thu, 29 Jan 2026 07:48:55 +0000</pubDate>
+      <pubDate>Thu, 29 Jan 2026 08:40:52 +0000</pubDate>
     </item>
     <item>
       <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
@@ -665,7 +595,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.92</comments>
-      <pubDate>Thu, 29 Jan 2026 07:48:55 +0000</pubDate>
+      <pubDate>Thu, 29 Jan 2026 08:40:52 +0000</pubDate>
     </item>
     <item>
       <title>Oracle security advisory – January 2026 quarterly rollup (AV26-042) – Update 1</title>
@@ -893,7 +823,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4117799/skills-cisos-need-to-master-in-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Wed, 28 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1160,7 +1090,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123227/delegation-is-a-risk-decision-every-leader-makes-not-an-ops-choice.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.03</comments>
       <pubDate>Wed, 28 Jan 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1299,7 +1229,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123184/always-on-privileged-access-is-pervasive-and-fraught-with-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.08</comments>
       <pubDate>Wed, 28 Jan 2026 09:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1374,7 +1304,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123492/sicarii-ransomware-locks-your-data-and-throws-away-the-keys.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Wed, 28 Jan 2026 11:22:07 +0000</pubDate>
     </item>
     <item>
@@ -1433,7 +1363,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123719/palo-alto-warns-of-quantum-risk-to-digital-security.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Wed, 28 Jan 2026 17:23:26 +0000</pubDate>
     </item>
     <item>
@@ -1560,7 +1490,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123196/nists-ai-guidance-pushes-cybersecurity-boundaries.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Thu, 29 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1731,7 +1661,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123225/eus-answer-to-cve-solves-dependency-issue-adds-fragmentation-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.95</comments>
       <pubDate>Thu, 29 Jan 2026 09:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1778,7 +1708,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4122281/reports-of-gdpr-violations-have-risen-sharply.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.95</comments>
       <pubDate>Thu, 29 Jan 2026 09:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1788,7 +1718,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-050</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.04</comments>
+      <comments>Score: 9.02</comments>
       <pubDate>Mon, 26 Jan 2026 17:11:50 +0000</pubDate>
     </item>
     <item>
@@ -1798,7 +1728,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-051</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.04</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Mon, 26 Jan 2026 17:24:14 +0000</pubDate>
     </item>
     <item>
@@ -1808,7 +1738,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-052</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Mon, 26 Jan 2026 18:47:36 +0000</pubDate>
     </item>
     <item>
@@ -1818,7 +1748,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-053</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Mon, 26 Jan 2026 18:51:55 +0000</pubDate>
     </item>
     <item>
@@ -1828,7 +1758,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-054</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Mon, 26 Jan 2026 19:46:06 +0000</pubDate>
     </item>
     <item>
@@ -1838,7 +1768,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-055</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Mon, 26 Jan 2026 19:54:31 +0000</pubDate>
     </item>
     <item>
@@ -1848,7 +1778,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-br-security-advisory-av26-056</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Mon, 26 Jan 2026 20:03:27 +0000</pubDate>
     </item>
     <item>
@@ -1858,7 +1788,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-057</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 9.10</comments>
       <pubDate>Mon, 26 Jan 2026 20:47:46 +0000</pubDate>
     </item>
     <item>
@@ -1868,7 +1798,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-047</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Tue, 27 Jan 2026 13:57:52 +0000</pubDate>
     </item>
     <item>
@@ -1878,7 +1808,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Tue, 27 Jan 2026 15:18:22 +0000</pubDate>
     </item>
     <item>
@@ -1888,7 +1818,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Tue, 27 Jan 2026 15:25:15 +0000</pubDate>
     </item>
     <item>
@@ -1898,7 +1828,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-058</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.70</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Tue, 27 Jan 2026 20:11:50 +0000</pubDate>
     </item>
     <item>
@@ -1908,7 +1838,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cyber-fortinet-security-advisory-av26-059</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.27</comments>
+      <comments>Score: 10.24</comments>
       <pubDate>Wed, 28 Jan 2026 14:33:40 +0000</pubDate>
     </item>
     <item>
@@ -1918,7 +1848,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-060</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.28</comments>
+      <comments>Score: 10.25</comments>
       <pubDate>Wed, 28 Jan 2026 14:44:29 +0000</pubDate>
     </item>
     <item>
@@ -1928,7 +1858,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-019-vulnerabilities-impacting-fortinet-products-forticloud-sso-login-authentication-bypass-cve-2025-59718-cve-2025-59719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.40</comments>
+      <comments>Score: 10.37</comments>
       <pubDate>Wed, 28 Jan 2026 18:09:38 +0000</pubDate>
     </item>
     <item>
@@ -1938,7 +1868,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-061</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.42</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Wed, 28 Jan 2026 18:42:28 +0000</pubDate>
     </item>
     <item>
@@ -1948,7 +1878,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-062</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.42</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Wed, 28 Jan 2026 18:51:25 +0000</pubDate>
     </item>
     <item>
@@ -1958,7 +1888,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.43</comments>
+      <comments>Score: 10.40</comments>
       <pubDate>Wed, 28 Jan 2026 18:59:39 +0000</pubDate>
     </item>
     <item>
@@ -1968,7 +1898,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-064</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.48</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Wed, 28 Jan 2026 20:24:58 +0000</pubDate>
     </item>
     <item>
@@ -1978,7 +1908,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-065</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.49</comments>
+      <comments>Score: 10.46</comments>
       <pubDate>Wed, 28 Jan 2026 20:45:23 +0000</pubDate>
     </item>
     <item>
@@ -1987,7 +1917,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/rsac-2026-conference</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 2300492.12</comments>
+      <comments>Score: 2279841.26</comments>
       <pubDate>Mon, 23 Mar 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
