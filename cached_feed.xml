@@ -8,81 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Jan 2026 02:21:45 +0000</lastBuildDate>
-    <item>
-      <title>Critical RCE bugs expose the n8n automation platform to host‑level compromise</title>
-      <link>https://www.csoonline.com/article/4124343/critical-rce-bugs-expose-the-n8n-automation-platform-to-host%e2%80%91level-compromise.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Two critical sandbox escape flaws in the popular n8n workflow automation platform are allowing authenticated users to achieve remote code execution on affected instances.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to new JFrog findings, sandboxing safeguards meant to contain untrusted workflow logic can be bypassed, exposing enterprise automation environments to &lt;a href="https://www.csoonline.com/article/4113980/critical-rce-flaw-allows-full-takeover-of-n8n-ai-workflow-platform.html" target="_blank"&gt;full host&lt;/a&gt; compromise. Enterprises that rely on n8n to orchestrate integrations, automate internal processes, and streamline cloud services and on-prem systems are at risk. JFrog’s researchers said n8n’s sandboxing mechanism can fail in specific configurations when users evaluate expressions or run custom scripts.&lt;/p&gt;
-
-
-
-&lt;p&gt;Sandbox escapes can expose sensitive credentials, APIs, and infrastructure from affected workflow engines.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="expression-engine-sandbox-escape-enables-javascript-rce"&gt;Expression engine sandbox escape enables JavaScript RCE&lt;/h2&gt;
-
-
-
-&lt;p&gt;One of the issues identified by JFrog affects n8n’s JavaScript expression engine, designed to evaluate user-supplied expressions during workflow execution safely. According to the researchers, flaws in how expressions are sanitized allow an attacker with permission to create or edit workflows to escape the sandbox and execute arbitrary JavaScript on the underlying host.&lt;/p&gt;
-
-
-
-&lt;p&gt;JFrog explained in a blog &lt;a href="https://research.jfrog.com/post/achieving-remote-code-execution-on-n8n-via-sandbox-escape/" rel="noreferrer noopener" target="_blank"&gt;post&lt;/a&gt; that the expressions engine’s protections can be bypassed by carefully crafted payloads that exploit assumptions in the sandboxing logic. Once escaped, the attacker is no longer limited to expression evaluation and can run arbitrary commands in the context of the n8n service.&lt;/p&gt;
-
-
-
-&lt;p&gt;“When the expression engine encounters a {{}} block, it processes the enclosed content by bypassing it to a JavaScript Function constructor, which then executes the supplied code,” the researchers said. &lt;a href="https://www.csoonline.com/article/4115417/malicious-npm-packages-target-n8n-automation-platform-in-a-supply-chain-attack.html"&gt;n8n&lt;/a&gt; uses an AST-based sandbox to neutralize dangerous JavaScript constructs before execution. A missed edge case in the outdated “with statement” allows attackers to bypass these checks and achieve arbitrary code execution.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerability has been assigned &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1470" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-1470&lt;/a&gt; and carries a critical severity rating of CVSS 9.9 out of 10, owing to the ease with which sandbox restrictions can be broken and the level of access gained post-exploitation.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Python code node escape breaks isolation&lt;/h2&gt;
-
-
-
-&lt;p&gt;JFrog also identified a separate sandbox escape affecting n8n’s Python Code node when the platform is configured to use its “Internal” execution mode. In this case, restrictions intended to contain Python code execution can be bypassed, again allowing authenticated users to run arbitrary code outside the sandbox.&lt;/p&gt;
-
-
-
-&lt;p&gt;The second issue, tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0863"&gt;CVE-2026-0863&lt;/a&gt;, received a high severity rating of CVSS 8.5 out of 10. While the exploitation depends on specific configuration choices, JFrog noted that internal execution mode is commonly used in self-hosted enterprise deployments for performance and operational simplicity.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers demonstrated how Python sandbox constraints can be evaded, granting access to system resources that should be off-limits.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="urgent-need-to-update"&gt;Urgent need to update&lt;/h2&gt;
-
-
-
-&lt;p&gt;Both issues have been patched, and enterprises running n8n should ensure they are on updated versions. Until patches are applied, organizations are recommended to carefully review who has permissions to create or edit workflows, particularly in environments where n8n has access to internal networks, secrets, or privileged APIs.&lt;/p&gt;
-
-
-
-&lt;p&gt;CVE-2026-1470 has been &lt;a href="https://github.com/n8n-io/n8n/releases" rel="noreferrer noopener" target="_blank"&gt;fixed&lt;/a&gt; in version 1.123.17, 2.4.5, and 2.5.1, while CVE-2026-0863 is resolved in version 1.123.14, 2.3.5, and 2.4.2. Upgrading to any of these versions mitigates the risk of exploitation, researchers noted.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4124343/critical-rce-bugs-expose-the-n8n-automation-platform-to-host%e2%80%91level-compromise.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
-      <pubDate>Thu, 29 Jan 2026 12:38:54 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 30 Jan 2026 04:43:19 +0000</lastBuildDate>
     <item>
       <title>Google Chrome security advisory (AV26-043)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-043</link>
@@ -90,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-043</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Wed, 21 Jan 2026 13:11:31 +0000</pubDate>
     </item>
     <item>
@@ -100,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-044</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Wed, 21 Jan 2026 13:20:51 +0000</pubDate>
     </item>
     <item>
@@ -111,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Fri, 30 Jan 2026 00:21:45 +0000</pubDate>
+      <pubDate>Fri, 30 Jan 2026 02:43:19 +0000</pubDate>
     </item>
     <item>
       <title>Atlassian security advisory (AV26-045)</title>
@@ -120,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-045</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
+      <comments>Score: 7.48</comments>
       <pubDate>Wed, 21 Jan 2026 17:00:02 +0000</pubDate>
     </item>
     <item>
@@ -130,48 +56,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-046</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
+      <comments>Score: 7.48</comments>
       <pubDate>Wed, 21 Jan 2026 17:06:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco security advisory (AV26-048)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-048</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-048</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
-      <pubDate>Wed, 21 Jan 2026 19:28:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
-      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 30 Jan 2026 00:21:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol signs Working Arrangement with the Argentine Republic</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</link>
-      <description>In December, the Ministry of National Security of the Argentine Republic and the European Union Agency for Law Enforcement Cooperation (Europol) signed a Working Arrangement in order to support the Member States of the European Union and Argentina in preventing and combating serious and organised crime and terrorism.The Working Arrangement provides for a structured legal framework for cooperation and enhanced...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 30 Jan 2026 00:21:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
-      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 30 Jan 2026 00:21:45 +0000</pubDate>
     </item>
     <item>
       <title>Skills CISOs need to master in 2026</title>
@@ -389,8 +275,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4117799/skills-cisos-need-to-master-in-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.48</comments>
       <pubDate>Wed, 28 Jan 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cisco security advisory (AV26-048)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-048</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-048</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.49</comments>
+      <pubDate>Wed, 21 Jan 2026 19:28:13 +0000</pubDate>
     </item>
     <item>
       <title>Delegation is a risk decision every leader makes, not an ops choice</title>
@@ -656,28 +552,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123227/delegation-is-a-risk-decision-every-leader-makes-not-an-ops-choice.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Wed, 28 Jan 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>AL26-002 -Vulnerability affecting GNU Inetutils Telnetd - CVE-2026-24061</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-002-vulnerability-affecting-gnu-inetutils-telnetd-cve-2026-24061</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-002-vulnerability-affecting-gnu-inetutils-telnetd-cve-2026-24061</guid>
+      <title>Europol-supported operation takes down key figures of ‘Balkan Cartel’ in Germany</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</link>
+      <description>The coordinated operation targeted several High Value Targets (HVTs) residing in Germany, who are believed to be key figures within the Balkan Cartel. The investigation revealed that this criminal cell was responsible for multi-tonne cocaine shipments originating from Colombia and utilising various methods to smuggle drugs into Europe. The network also engaged in money laundering through companies and real estate...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supported-operation-takes-down-key-figures-of-balkan-cartel-in-germany</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Thu, 22 Jan 2026 13:18:29 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 30 Jan 2026 02:43:19 +0000</pubDate>
     </item>
     <item>
-      <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</link>
-      <description>A Bulgarian-led investigation, carried out in close cooperation with the Hellenic Police and supported by Europol, has led to the dismantlement of an organised criminal network involved in smuggling of migrants from Türkiye via Bulgaria and onward through Serbia or Romania towards Western European countries. The investigation was conducted within the framework of a regional Operational Taskforce established to target migrant smuggling networks using Bulgaria as a transit country.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</guid>
+      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
+      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Fri, 30 Jan 2026 00:21:45 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 30 Jan 2026 02:43:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol signs Working Arrangement with the Argentine Republic</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</link>
+      <description>In December, the Ministry of National Security of the Argentine Republic and the European Union Agency for Law Enforcement Cooperation (Europol) signed a Working Arrangement in order to support the Member States of the European Union and Argentina in preventing and combating serious and organised crime and terrorism.The Working Arrangement provides for a structured legal framework for cooperation and enhanced...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 30 Jan 2026 02:43:19 +0000</pubDate>
     </item>
     <item>
       <title>Always-on privileged access is pervasive — and fraught with risks</title>
@@ -815,8 +721,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123184/always-on-privileged-access-is-pervasive-and-fraught-with-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Wed, 28 Jan 2026 09:30:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-002 -Vulnerability affecting GNU Inetutils Telnetd - CVE-2026-24061</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-002-vulnerability-affecting-gnu-inetutils-telnetd-cve-2026-24061</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-002-vulnerability-affecting-gnu-inetutils-telnetd-cve-2026-24061</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.59</comments>
+      <pubDate>Thu, 22 Jan 2026 13:18:29 +0000</pubDate>
     </item>
     <item>
       <title>ISC BIND security advisory (AV26-049)</title>
@@ -825,18 +741,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-049</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Thu, 22 Jan 2026 14:23:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>Law enforcement challenges major cocaine supply chains into Europe</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</link>
-      <description>Law enforcement authorities across Europe and South America continue to put sustained pressure on the criminal networks responsible for moving cocaine into Europe. Three recent actions coordinated by Europol, one targeting a Dutch-led network embedded in Colombian supply chains, another dismantling a Brazilian maritime trafficking operation and a third disrupting a Greek at-sea transfer criminal operation, highlight the ongoing efforts to disrupt the routes and structures used by organised crime.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Fri, 30 Jan 2026 00:21:45 +0000</pubDate>
     </item>
     <item>
       <title>Sicarii ransomware locks your data and throws away the keys</title>
@@ -910,8 +816,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123492/sicarii-ransomware-locks-your-data-and-throws-away-the-keys.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Wed, 28 Jan 2026 11:22:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</link>
+      <description>A Bulgarian-led investigation, carried out in close cooperation with the Hellenic Police and supported by Europol, has led to the dismantlement of an organised criminal network involved in smuggling of migrants from Türkiye via Bulgaria and onward through Serbia or Romania towards Western European countries. The investigation was conducted within the framework of a regional Operational Taskforce established to target migrant smuggling networks using Bulgaria as a transit country.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Fri, 30 Jan 2026 02:43:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Law enforcement challenges major cocaine supply chains into Europe</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</link>
+      <description>Law enforcement authorities across Europe and South America continue to put sustained pressure on the criminal networks responsible for moving cocaine into Europe. Three recent actions coordinated by Europol, one targeting a Dutch-led network embedded in Colombian supply chains, another dismantling a Brazilian maritime trafficking operation and a third disrupting a Greek at-sea transfer criminal operation, highlight the ongoing efforts to disrupt the routes and structures used by organised crime.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-challenges-major-cocaine-supply-chains-europe</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Fri, 30 Jan 2026 02:43:19 +0000</pubDate>
     </item>
     <item>
       <title>France Fines National Employment Agency €5m Over 2024 Data Breach</title>
@@ -920,18 +846,8 @@
       <guid isPermaLink="false">https://www.infosecurity-magazine.com/news/france-finesemployment-agency-5m/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Thu, 29 Jan 2026 16:30:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Oracle security advisory – January 2026 quarterly rollup (AV26-042) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-january-2026-quarterly-rollup-av26-042</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-january-2026-quarterly-rollup-av26-042</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
-      <pubDate>Fri, 23 Jan 2026 17:11:21 +0000</pubDate>
     </item>
     <item>
       <title>Palo Alto unveils Quantum-Safe Security to mitigate cryptographic risk</title>
@@ -989,8 +905,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123719/palo-alto-warns-of-quantum-risk-to-digital-security.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Wed, 28 Jan 2026 17:23:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>Oracle security advisory – January 2026 quarterly rollup (AV26-042) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-january-2026-quarterly-rollup-av26-042</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-january-2026-quarterly-rollup-av26-042</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.79</comments>
+      <pubDate>Fri, 23 Jan 2026 17:11:21 +0000</pubDate>
     </item>
     <item>
       <title>Firm stand against migrant smuggling: global alliance convened in Brussels</title>
@@ -1000,7 +926,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.91</comments>
-      <pubDate>Fri, 30 Jan 2026 00:21:45 +0000</pubDate>
+      <pubDate>Fri, 30 Jan 2026 02:43:19 +0000</pubDate>
     </item>
     <item>
       <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
@@ -1010,7 +936,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.92</comments>
-      <pubDate>Fri, 30 Jan 2026 00:21:45 +0000</pubDate>
+      <pubDate>Fri, 30 Jan 2026 02:43:19 +0000</pubDate>
     </item>
     <item>
       <title>NIST’s AI guidance pushes cybersecurity boundaries</title>
@@ -1136,7 +1062,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123196/nists-ai-guidance-pushes-cybersecurity-boundaries.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Thu, 29 Jan 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1307,7 +1233,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4123225/eus-answer-to-cve-solves-dependency-issue-adds-fragmentation-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Thu, 29 Jan 2026 09:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1354,7 +1280,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4122281/reports-of-gdpr-violations-have-risen-sharply.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Thu, 29 Jan 2026 09:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1457,7 +1383,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4124320/cisa-chief-uploaded-sensitive-government-files-to-public-chatgpt.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Thu, 29 Jan 2026 11:41:25 +0000</pubDate>
     </item>
     <item>
@@ -1467,7 +1393,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-050</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Mon, 26 Jan 2026 17:11:50 +0000</pubDate>
     </item>
     <item>
@@ -1477,7 +1403,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-051</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Mon, 26 Jan 2026 17:24:14 +0000</pubDate>
     </item>
     <item>
@@ -1487,7 +1413,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-052</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Mon, 26 Jan 2026 18:47:36 +0000</pubDate>
     </item>
     <item>
@@ -1497,7 +1423,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-053</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Mon, 26 Jan 2026 18:51:55 +0000</pubDate>
     </item>
     <item>
@@ -1507,7 +1433,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-054</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Mon, 26 Jan 2026 19:46:06 +0000</pubDate>
     </item>
     <item>
@@ -1517,7 +1443,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-055</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.77</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Mon, 26 Jan 2026 19:54:31 +0000</pubDate>
     </item>
     <item>
@@ -1527,7 +1453,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-br-security-advisory-av26-056</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.77</comments>
+      <comments>Score: 8.73</comments>
       <pubDate>Mon, 26 Jan 2026 20:03:27 +0000</pubDate>
     </item>
     <item>
@@ -1537,8 +1463,141 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-057</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.74</comments>
       <pubDate>Mon, 26 Jan 2026 20:47:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>Roughly half of employees are using unsanctioned AI tools, and enterprise leaders are major culprits</title>
+      <link>https://www.csoonline.com/article/4124775/roughly-half-of-employees-are-using-unsanctioned-ai-tools-and-enterprise-leaders-are-major-culprits-2.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Shadow AI, the secret, unapproved use of AI by employees, isn’t going away. In fact, workers are getting more brazen, and their employers often don’t seem to care.&lt;/p&gt;
+
+
+
+&lt;p&gt;In a new BlackFog survey, nearly half (49%) of workers admit to adopting &lt;a href="https://www.csoonline.com/article/4086912/how-shadow-it-leaves-every-industry-in-the-dark.html" target="_blank"&gt;AI tools without employer approval&lt;/a&gt;, many using free versions with which they are freely sharing sensitive enterprise data.&lt;/p&gt;
+
+
+
+&lt;p&gt;But perhaps more alarmingly, a wide majority — 69% of presidents and C-suite members and 66% of directors and senior VPs — seem to be OK with this, prioritizing speed over privacy as they race to adopt AI tools.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The efficiency gains and personnel cost savings are too large to ignore, and override any security concerns,” said &lt;a href="https://www.blackfog.com/dr-darren-williams-founder-ceo/" rel="noreferrer noopener" target="_blank"&gt;Darren Williams&lt;/a&gt;, BlackFog founder and CEO. The research is a “stark indication” of the wide use of unapproved AI tools in the enterprise, and also the “level of risk tolerance amongst employees and senior leaders.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="shadow-ai-by-the-numbers"&gt;Shadow AI by the numbers&lt;/h2&gt;
+
+
+
+&lt;p&gt;The &lt;a href="https://www.blackfog.com/blackfog-research-shadow-ai-threat-grows/"&gt;survey&lt;/a&gt; of 2,000 workers at companies with more than 500 employees found that &lt;a href="https://www.csoonline.com/article/4044007/shadow-ai-is-surging-getting-ai-adoption-right-is-your-best-defense.html" target="_blank"&gt;shadow AI&lt;/a&gt; is rampant, and not much is being done to rein it in. Of those surveyed, 86% said they use AI on a weekly basis at work, the most common use cases being in technical support, sales (such as email marketing), and contracts. But more than one-third of them admitted to using the free versions of company-approved tools, raising questions about where sensitive corporate data is being stored and processed. &lt;/p&gt;
+
+
+
+&lt;p&gt;Furthermore:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;51% have connected AI tools to work systems or apps without the approval or knowledge of IT;&lt;/li&gt;
+
+
+
+&lt;li&gt;63% believe it’s acceptable to use AI when there is no corporate-approved option or IT oversight;&lt;/li&gt;
+
+
+
+&lt;li&gt;60% say speed is worth the security risk;&lt;/li&gt;
+
+
+
+&lt;li&gt;21% think employers will simply “turn a blind eye” as long as they’re getting their work done.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;And the C-suite’s own use of shadow tools? That’s a little more difficult to gauge; they’re close-lipped about it, indicating a wider problem, Williams noted. “Senior executives often don’t want to admit they are using AI,” he said. Instead, they’re trying to prove how valuable they are without disclosing their own AI use.&lt;/p&gt;
+
+
+
+&lt;p&gt;Just like workers elsewhere in the enterprise, “senior leaders are able to get more done faster than ever” with AI, he noted. For instance, he said, “you can draft a legal contract in seconds and get a lawyer to review, rather than spend weeks drafting and redrafting using external counsel.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Concerningly, when it comes to the tools workers are using, free versions tend to be the most popular. More than half (58%) of employees using non-approved tools rely on free versions, and 34% of those working at companies that do allow AI tools are also opting for the free version.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Non-paid is almost certainly worse because of the licensing and business models around them,” said Williams. “There is always a cost to using free tools; in this case it’s the value of your data.”&lt;/p&gt;
+
+
+
+&lt;p&gt;And employees are not shy about loading sensitive data into &lt;a href="https://www.csoonline.com/article/4117010/4-issues-holding-back-cisos-security-agendas.html" target="_blank"&gt;unsanctioned AI tools&lt;/a&gt;: 33% admit to sharing enterprise research or datasets; 27% to revealing employee data (such as salary or performance tracking); 23% to inputting company financial information.&lt;/p&gt;
+
+
+
+&lt;p&gt;This becomes dangerous because virtually all free tools use ingested data to train their models, and some of the lower-tiered paid tools do, too, Williams pointed out. “And,” he said, “you cannot get this information back.” Paid enterprise plans typically allow companies to turn off training on their data, but not always. Admins must check this with their large language model (LLM) providers.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The big problem is the loss of intellectual property,” said Williams. And threat actors can get access to this information to profile and target an organization, breach their networks, and exfiltrate confidential data for extortion.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The more data that is disclosed to LLMs, the more information is available [to threat actors] to build a better profile,” Williams noted.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="enterprises-must-build-policies-around-ai-use"&gt;Enterprises must build policies around AI use&lt;/h2&gt;
+
+
+
+&lt;p&gt;Many CEOs have been mandating AI adoption and are allocating capital throughout the business for this purpose, Williams noted. Executives are looking for cost savings as a strategic advantage and a way to quickly return shareholder value.&lt;/p&gt;
+
+
+
+&lt;p&gt;Unfortunately, security is an afterthought, he said. “Many companies have just chosen to ignore the problem, and have decided not to create a policy or see the value in paying for the technology, which is a very big mistake.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Organizations are “flying blind,” and 99% have no way of even knowing what is happening in their environments because there are no products in place to measure it, he observed. This should raise serious red flags for security teams, and there must be greater oversight and visibility into these security blind spots.&lt;/p&gt;
+
+
+
+&lt;p&gt;Williams advised enterprises to audit what is going on inside their systems, measure the scope of the problem, define policies around AI use, and adopt governance frameworks to control it.&lt;/p&gt;
+
+
+
+&lt;p&gt;Further, employees must be made aware of the risks. Many, CISOs included, don’t actually understand the extent of the problem and its broader implications. “Education is essential and doesn’t require a lot of work,” said Williams. On the other hand, implementing a policy and framework does, and enterprises first need to decide what risks they are willing to live with.&lt;/p&gt;
+
+
+
+&lt;p&gt;Ultimately, he said, we are navigating an unprecedented time in history, with new technology advancing at such a rapid pace that the technologists themselves don’t even know where it is going. Enterprises must quickly understand the implications, and use AI responsibly to gain a strategic advantage.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Just as the industrial revolution and the internet changed the way we worked, AI is doing the same,” said Williams. “In fact, we expect this to be an even bigger shift than either of those transitions.”&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.cio.com/article/4124760/roughly-half-of-employees-are-using-unsanctioned-ai-tools-and-enterprise-leaders-are-major-culprits.html" target="_blank"&gt;CIO.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4124775/roughly-half-of-employees-are-using-unsanctioned-ai-tools-and-enterprise-leaders-are-major-culprits-2.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.94</comments>
+      <pubDate>Fri, 30 Jan 2026 03:15:05 +0000</pubDate>
     </item>
     <item>
       <title>GNU security advisory (AV26-047) – Update 1</title>
@@ -1547,7 +1606,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-047</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Tue, 27 Jan 2026 13:57:52 +0000</pubDate>
     </item>
     <item>
@@ -1557,7 +1616,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.16</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Tue, 27 Jan 2026 15:18:22 +0000</pubDate>
     </item>
     <item>
@@ -1567,7 +1626,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.16</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Tue, 27 Jan 2026 15:25:15 +0000</pubDate>
     </item>
     <item>
@@ -1577,7 +1636,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-058</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.28</comments>
+      <comments>Score: 9.22</comments>
       <pubDate>Tue, 27 Jan 2026 20:11:50 +0000</pubDate>
     </item>
     <item>
@@ -1587,7 +1646,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cyber-fortinet-security-advisory-av26-059</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.75</comments>
+      <comments>Score: 9.69</comments>
       <pubDate>Wed, 28 Jan 2026 14:33:40 +0000</pubDate>
     </item>
     <item>
@@ -1597,7 +1656,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-060</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.69</comments>
       <pubDate>Wed, 28 Jan 2026 14:44:29 +0000</pubDate>
     </item>
     <item>
@@ -1607,7 +1666,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-019-vulnerabilities-impacting-fortinet-products-forticloud-sso-login-authentication-bypass-cve-2025-59718-cve-2025-59719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.86</comments>
+      <comments>Score: 9.79</comments>
       <pubDate>Wed, 28 Jan 2026 18:09:38 +0000</pubDate>
     </item>
     <item>
@@ -1617,7 +1676,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-061</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.88</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Wed, 28 Jan 2026 18:42:28 +0000</pubDate>
     </item>
     <item>
@@ -1627,7 +1686,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-062</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.88</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Wed, 28 Jan 2026 18:51:25 +0000</pubDate>
     </item>
     <item>
@@ -1637,7 +1696,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.89</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Wed, 28 Jan 2026 18:59:39 +0000</pubDate>
     </item>
     <item>
@@ -1647,7 +1706,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-064</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.86</comments>
       <pubDate>Wed, 28 Jan 2026 20:24:58 +0000</pubDate>
     </item>
     <item>
@@ -1657,7 +1716,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-065</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.87</comments>
       <pubDate>Wed, 28 Jan 2026 20:45:23 +0000</pubDate>
     </item>
     <item>
@@ -1667,7 +1726,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-br-security-advisory-av26-066</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.73</comments>
+      <comments>Score: 10.64</comments>
       <pubDate>Thu, 29 Jan 2026 19:35:12 +0000</pubDate>
     </item>
     <item>
@@ -1677,7 +1736,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-067</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.75</comments>
+      <comments>Score: 10.66</comments>
       <pubDate>Thu, 29 Jan 2026 20:16:14 +0000</pubDate>
     </item>
     <item>
@@ -1687,7 +1746,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-068</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.78</comments>
+      <comments>Score: 10.69</comments>
       <pubDate>Thu, 29 Jan 2026 20:59:40 +0000</pubDate>
     </item>
   </channel>
