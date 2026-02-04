@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Feb 2026 08:48:10 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Feb 2026 09:50:27 +0000</lastBuildDate>
+    <item>
+      <title>HPE security advisory (AV26-052)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-052</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-052</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.46</comments>
+      <pubDate>Mon, 26 Jan 2026 18:47:36 +0000</pubDate>
+    </item>
     <item>
       <title>Red Hat security advisory (AV26-053)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-053</link>
@@ -16,119 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-053</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Mon, 26 Jan 2026 18:51:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>Why non-human identities are your biggest security blind spot in 2026</title>
-      <link>https://www.csoonline.com/article/4125156/why-non-human-identities-are-your-biggest-security-blind-spot-in-2026.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Last month, while running a routine access audit on our Azure environment, I came across a service account called svc-dataloader-poc. It had not been touched in 793 days — two years of sitting dormant. When I checked its permissions, my stomach dropped: Owner-level access to three production subscriptions, including our customer database. The account had been spun up for a proof-of-concept migration that never went live. The contractor who created it left 18 months ago. Nobody knew it existed.&lt;/p&gt;
-
-
-
-&lt;p&gt;This was not a one-off. I found 47 similar accounts in that same audit. Forty-seven doors left wide open.&lt;/p&gt;
-
-
-
-&lt;p&gt;Here is the uncomfortable reality facing every security leader in 2026: while we spent the last decade perfecting MFA rollouts and zero-trust architectures for our human users, something else was quietly multiplying across our environments. Service accounts. API keys. Automation credentials. AI agents. These non-human identities now outnumber actual employees in most enterprises by ratios that would have seemed absurd five years ago. &lt;a href="https://www.manageengine.com/privileged-access-management/identity-security-outlook-report.html"&gt;ManageEngine’s 2026 Identity Security Outlook&lt;/a&gt; found that organisations reported machine-to-human ratios of 100:1; some hit 500:1. And the vast majority of these identities sit completely outside our governance programmes.&lt;/p&gt;
-
-
-
-&lt;p&gt;We locked the front door. The back door has been open this whole time.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-the-nhi-explosion-is-different-this-time"&gt;Why the NHI explosion is different this time&lt;/h2&gt;
-
-
-
-&lt;p&gt;Machine identities are not new. What changed is the velocity. Five years ago, a typical enterprise application was a monolith talking to a database. Today, that same application is 50 microservices, each needing credentials to talk to the others. Every Kubernetes pod that spins up during auto-scaling creates workload identities. Every GitHub Actions workflow generates tokens. Every Terraform run provisions service principals. I watched a single deployment pipeline create more machine identities in 20 minutes than our entire company had human users.&lt;/p&gt;
-
-
-
-&lt;p&gt;Then came agentic AI, and the problem accelerated again. These are not chatbots answering questions. They are systems authorised to execute commands, move production data, modify configurations and trigger downstream workflows autonomously. Microsoft Copilot has access to your SharePoint. GitHub Copilot can commit to your repos. The AI assistant your marketing team just deployed can pull customer records from Salesforce. One Identity is predicting 2026 will see the first major breach traced back to an over-privileged AI agent. The terrifying part? It will not look like an attack. It will look exactly like the system doing what it was designed to do.&lt;/p&gt;
-
-
-
-&lt;p&gt;Our IAM systems were never built for this. They assume identities belong to people with managers who respond to access review emails and eventually resign or retire. Machine identities have no manager. They never respond to certification campaigns. They do not quit. The &lt;a href="https://owasp.org/www-project-non-human-identities-top-10/"&gt;OWASP Non-Human Identities Top 10&lt;/a&gt; ranks improper offboarding as the number one risk. When a project gets cancelled, when a vendor integration gets deprecated, when a developer leaves — does anyone remember to delete the service accounts? In my experience running IAM programmes across multiple organisations, the answer is almost never.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-three-blind-spots-i-keep-finding"&gt;The three blind spots I keep finding&lt;/h2&gt;
-
-
-
-&lt;p&gt;After years working in cloud security and identity management, certain patterns show up everywhere I look. Three problems in particular appear in nearly every environment I assess.&lt;/p&gt;
-
-
-
-&lt;ol class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Secrets where they should never be. &lt;/strong&gt;I still find API keys hardcoded in source files. Still. In 2026. Last year, GitGuardian detected 13 million secrets exposed in public GitHub repositories. Google API keys, MongoDB credentials, AWS access keys — sitting in plaintext for anyone to harvest. But the public repos are not even the biggest problem. In my own assessments, I have found production database passwords in Jira tickets, Slack messages, Confluence runbooks and shared Google Docs. A colleague once discovered an admin token for a payment gateway pasted into a Teams chat from 2023, still valid, still granting full access. Once secrets escape into collaboration tools, you have lost control. They get copied, forwarded, indexed, archived. They never truly disappear.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Service accounts with absurd privilege levels. &lt;/strong&gt;This one makes me angry because it is so preventable. A developer needs a service account for a new Lambda function. They are under deadline pressure. Figuring out the exact minimum permissions takes time, so they attach AdministratorAccess and move on. The function works. Nobody revisits it. That account now has god-mode access to your entire AWS environment for a task that needed read access to one S3 bucket. Multiply this across every team, every sprint, every year. The &lt;a href="https://nhimg.org/2025-state-of-non-human-identities-and-secrets-in-cybersecurity"&gt;2025 State of Non-Human Identities report&lt;/a&gt; from Entro Security found 97% of NHIs have excessive privileges. Ninety-seven percent. Even more alarming: just 0.01% of machine identities control 80% of cloud resources. Compromise one of those accounts and the attacker owns your environment.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;No lifecycle ownership whatsoever. &lt;/strong&gt;When an employee leaves, HR triggers offboarding. Access gets revoked. There is a process. When a service account is no longer needed, what happens? Nothing. It sits there. I routinely find accounts untouched for six months, twelve months, sometimes three years — all still holding production access. Veza’s research found dormant accounts nearly doubled year over year. Orphaned identities grew 40%. Former employees — 78,000 of them in one dataset — still had active credentials because HR systems flagged them as inactive but nobody revoked their service accounts. These are not theoretical vulnerabilities. These are live credentials waiting for someone to find them.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-practical-path-forward-for-security-leaders"&gt;A practical path forward for security leaders&lt;/h2&gt;
-
-
-
-&lt;p&gt;Acknowledging the problem is step one. Fixing it requires treating machine identities with the same governance discipline we finally learned to apply to human users. Based on what I have seen actually work, here is where I would focus.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Build a real inventory. &lt;/strong&gt;You cannot protect what you cannot see. Before anything else, discover every non-human identity in your environment. Every service account across your cloud platforms. Every API key in your applications. Every secret in your vaults, config files, CI/CD pipelines. Every third-party integration with access to your systems. Most organisations I work with drastically underestimate their footprint. The actual number is typically three to five times what teams expect. This cannot be a manual exercise or an annual audit. Identities are created faster than humans can count them. Automate discovery and make it continuous.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Enforce least privilege without exceptions. &lt;/strong&gt;Every NHI needs to be scoped to the minimum access required for its function. Yes, this takes work. Yes, developers will push back. Do it anyway. Start with new deployments and make least privilege the default from day one. For existing accounts, compare assigned permissions against actual usage patterns. You will find plenty of accounts with broad access that only ever touch one or two resources. Those are quick wins. Require security approval before any NHI gets elevated privileges. Make it a gate, not a suggestion.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Eliminate static credentials wherever possible. &lt;/strong&gt;Long-lived secrets are the root cause behind most NHI breaches. The goal should be eliminating them entirely. Replace permanent API keys with short-lived tokens that expire automatically. Implement just-in-time access that grants permissions for a specific task and revokes them immediately after. Automate credential rotation on a defined schedule — weekly, daily, even hourly for sensitive systems. Research shows 71% of non-human identities are not rotated within recommended timeframes. Every day a credential sits unchanged is another day an attacker could be using it without detection.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;The security industry is converging on a clear consensus for 2026: machine identities will become the primary breach vector in cloud environments. Tenable predicts it. Delinea predicts it. One Identity predicts it. Attackers already know that compromising a service account is often easier and quieter than targeting humans. They are not breaking down doors anymore. They are walking through the ones we forgot to lock.&lt;/p&gt;
-
-
-
-&lt;p&gt;The organisations that get ahead of this threat will be the ones treating their non-human identities with the same seriousness they apply to their executive accounts. Full visibility. Strict governance. No exceptions. The ones who keep treating NHIs as an afterthought will be the ones explaining to their boards how a forgotten service account from a cancelled project brought down the house.&lt;/p&gt;
-
-
-
-&lt;p&gt;We locked the front door years ago. It has been a long time since we secured the back.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4125156/why-non-human-identities-are-your-biggest-security-blind-spot-in-2026.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
-      <pubDate>Mon, 02 Feb 2026 10:30:00 +0000</pubDate>
     </item>
     <item>
       <title>VMware security advisory (AV26-054)</title>
@@ -161,6 +60,16 @@
       <pubDate>Mon, 26 Jan 2026 20:03:27 +0000</pubDate>
     </item>
     <item>
+      <title>Microsoft Edge security advisory (AV26-057)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-057</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-057</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.47</comments>
+      <pubDate>Mon, 26 Jan 2026 20:47:46 +0000</pubDate>
+    </item>
+    <item>
       <title>Europol report: evolving tactics in maritime cocaine trafficking operations</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-report-evolving-tactics-in-maritime-cocaine-trafficking-operations</link>
       <description>A new Europol report published today provides a comprehensive analysis of the evolving tactics employed by criminal networks to traffic cocaine into Europe via maritime routes. The report, 'Diversification in Maritime Cocaine Trafficking Modi Operandi', provides an in-depth analysis of the shifting tactics employed by organised crime networks, which continue to exploit vulnerabilities and evade detection.</description>
@@ -168,47 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Wed, 04 Feb 2026 06:48:10 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV26-057)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-057</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-057</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Mon, 26 Jan 2026 20:47:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-french-investigation-alleged-criminal-activity-linked-to-platform-x</link>
-      <description>The investigation is conducted by the Paris Public Prosecutor’s Office with the support of the French Gendarmerie’s cybercrime unit (UNCyber) and Europol.On the action day, French authorities carried out investigative measures in the offices of the platform in France. Europol supported the investigation through its European Cybercrime Centre (EC3), providing specialised cybercrime expertise and deploying an analyst on the ground...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-french-investigation-alleged-criminal-activity-linked-to-platform-x</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 04 Feb 2026 06:48:10 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol signs Working Arrangement with the Argentine Republic</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</link>
-      <description>In December, the Ministry of National Security of the Argentine Republic and the European Union Agency for Law Enforcement Cooperation (Europol) signed a Working Arrangement in order to support the Member States of the European Union and Argentina in preventing and combating serious and organised crime and terrorism.The Working Arrangement provides for a structured legal framework for cooperation and enhanced...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 04 Feb 2026 06:48:10 +0000</pubDate>
-    </item>
-    <item>
-      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
-      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 04 Feb 2026 06:48:10 +0000</pubDate>
+      <pubDate>Wed, 04 Feb 2026 07:50:27 +0000</pubDate>
     </item>
     <item>
       <title>Eclipse Foundation Mandates Pre-Publish Security Checks for Open VSX Extensions</title>
@@ -218,8 +87,38 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://thehackernews.com/2026/02/eclipse-foundation-mandates-pre-publish.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
+      <comments>Score: 7.48</comments>
       <pubDate>Wed, 04 Feb 2026 11:56:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-french-investigation-alleged-criminal-activity-linked-to-platform-x</link>
+      <description>The investigation is conducted by the Paris Public Prosecutor’s Office with the support of the French Gendarmerie’s cybercrime unit (UNCyber) and Europol.On the action day, French authorities carried out investigative measures in the offices of the platform in France. Europol supported the investigation through its European Cybercrime Centre (EC3), providing specialised cybercrime expertise and deploying an analyst on the ground...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-french-investigation-alleged-criminal-activity-linked-to-platform-x</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 04 Feb 2026 07:50:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
+      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 04 Feb 2026 07:50:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol signs Working Arrangement with the Argentine Republic</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</link>
+      <description>In December, the Ministry of National Security of the Argentine Republic and the European Union Agency for Law Enforcement Cooperation (Europol) signed a Working Arrangement in order to support the Member States of the European Union and Argentina in preventing and combating serious and organised crime and terrorism.The Working Arrangement provides for a structured legal framework for cooperation and enhanced...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 04 Feb 2026 07:50:27 +0000</pubDate>
     </item>
     <item>
       <title>How risk culture turns cyber teams predictive</title>
@@ -611,38 +510,8 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://www.csoonline.com/article/4125172/how-risk-culture-turns-cyber-teams-predictive.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Mon, 02 Feb 2026 13:30:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>GNU security advisory (AV26-047) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-047</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-047</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
-      <pubDate>Tue, 27 Jan 2026 13:57:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>SmarterTools security advisory (AV25-866) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Tue, 27 Jan 2026 15:18:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft security advisory – January 2026 monthly rollup (AV26-024) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Tue, 27 Jan 2026 15:25:15 +0000</pubDate>
     </item>
     <item>
       <title>Human Risk Management: Das Paradoxon der Sicherheitsschulungen</title>
@@ -731,8 +600,48 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://www.csoonline.com/article/4125591/human-risk-management-das-paradoxon-der-sicherheitsschulungen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Mon, 02 Feb 2026 14:49:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>GNU security advisory (AV26-047) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-047</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-047</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Tue, 27 Jan 2026 13:57:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>SmarterTools security advisory (AV25-866) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av25-866</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Tue, 27 Jan 2026 15:18:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft security advisory – January 2026 monthly rollup (AV26-024) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Tue, 27 Jan 2026 15:25:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenSSL security advisory (AV26-058)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-058</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-058</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.60</comments>
+      <pubDate>Tue, 27 Jan 2026 20:11:50 +0000</pubDate>
     </item>
     <item>
       <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
@@ -742,17 +651,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Wed, 04 Feb 2026 06:48:10 +0000</pubDate>
-    </item>
-    <item>
-      <title>OpenSSL security advisory (AV26-058)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-058</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-058</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Tue, 27 Jan 2026 20:11:50 +0000</pubDate>
+      <pubDate>Wed, 04 Feb 2026 07:50:27 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV26-059) – Update 1</title>
@@ -761,7 +660,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cyber-fortinet-security-advisory-av26-059</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Wed, 28 Jan 2026 14:33:40 +0000</pubDate>
     </item>
     <item>
@@ -771,7 +670,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-060</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Wed, 28 Jan 2026 14:44:29 +0000</pubDate>
     </item>
     <item>
@@ -781,7 +680,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-019-vulnerabilities-impacting-fortinet-products-forticloud-sso-login-authentication-bypass-cve-2025-59718-cve-2025-59719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 28 Jan 2026 18:09:38 +0000</pubDate>
     </item>
     <item>
@@ -791,7 +690,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-061</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 28 Jan 2026 18:42:28 +0000</pubDate>
     </item>
     <item>
@@ -801,7 +700,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-062</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 28 Jan 2026 18:51:25 +0000</pubDate>
     </item>
     <item>
@@ -821,18 +720,8 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-065</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 28 Jan 2026 20:45:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</link>
-      <description>A large-scale law enforcement action, conducted within the Europol-coordinated operation Fabryka, led to the dismantling of a criminal network operating across the European Union. On Friday, 16 January, coordinated efforts took place in Poland, as well as in Belgium, Germany, and the Netherlands. These actions targeted a network suspected of importing a large quantity of precursors used for the production of synthetic drugs in labs across multiple countries. Additionally, the network engaged in money laundering activities to further its illicit operations. The year-long operation Fabryka involved law enforcement and judicial authorities from Belgium, Czechia, Germany, the Netherlands, Poland, and Spain.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
-      <pubDate>Wed, 04 Feb 2026 06:48:10 +0000</pubDate>
     </item>
     <item>
       <title>New phishing attack leverages PDFs and Dropbox</title>
@@ -966,8 +855,18 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://www.csoonline.com/article/4125990/new-phishing-attack-leverages-pdfs-and-dropbox.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Tue, 03 Feb 2026 02:30:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</link>
+      <description>A large-scale law enforcement action, conducted within the Europol-coordinated operation Fabryka, led to the dismantling of a criminal network operating across the European Union. On Friday, 16 January, coordinated efforts took place in Poland, as well as in Belgium, Germany, and the Netherlands. These actions targeted a network suspected of importing a large quantity of precursors used for the production of synthetic drugs in labs across multiple countries. Additionally, the network engaged in money laundering activities to further its illicit operations. The year-long operation Fabryka involved law enforcement and judicial authorities from Belgium, Czechia, Germany, the Netherlands, Poland, and Spain.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.92</comments>
+      <pubDate>Wed, 04 Feb 2026 07:50:27 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] B&amp;R security advisory (AV26-066)</title>
@@ -976,18 +875,8 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-br-security-advisory-av26-066</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Thu, 29 Jan 2026 19:35:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>Citrix security advisory (AV25-067)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-067</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-067</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
-      <pubDate>Thu, 29 Jan 2026 20:16:14 +0000</pubDate>
     </item>
     <item>
       <title>Was tun, wenn die Erpresser kommen?</title>
@@ -1130,8 +1019,18 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://www.csoonline.com/article/4125456/was-tun-wenn-die-erpresser-kommen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Tue, 03 Feb 2026 06:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Citrix security advisory (AV25-067)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-067</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av25-067</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.99</comments>
+      <pubDate>Thu, 29 Jan 2026 20:16:14 +0000</pubDate>
     </item>
     <item>
       <title>Shai-Hulud &amp; Co.: The software supply chain as Achilles’ heel</title>
@@ -1245,7 +1144,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://www.csoonline.com/article/4123250/shai-hulud-co-the-supply-chain-as-the-achilles-heel.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Tue, 03 Feb 2026 06:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1416,7 +1315,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://www.csoonline.com/article/4123246/think-agentic-ai-is-hard-to-secure-today-just-wait-a-few-months.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Tue, 03 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1519,7 +1418,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://www.csoonline.com/article/4126269/notepad-infrastructure-hijacked-by-chinese-apt-in-sophisticated-supply-chain-attack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Tue, 03 Feb 2026 10:31:15 +0000</pubDate>
     </item>
     <item>
@@ -1529,7 +1428,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-068</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Fri, 30 Jan 2026 13:46:35 +0000</pubDate>
     </item>
     <item>
@@ -1539,7 +1438,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-069</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Fri, 30 Jan 2026 16:38:46 +0000</pubDate>
     </item>
     <item>
@@ -1549,7 +1448,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-070</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Fri, 30 Jan 2026 16:46:16 +0000</pubDate>
     </item>
     <item>
@@ -1559,7 +1458,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-071</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.26</comments>
       <pubDate>Fri, 30 Jan 2026 19:19:22 +0000</pubDate>
     </item>
     <item>
@@ -1638,7 +1537,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://www.csoonline.com/article/4126336/from-credentials-to-cloud-admin-in-8-minutes-ai-supercharges-aws-attack-chain.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Tue, 03 Feb 2026 15:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1781,7 +1680,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://www.csoonline.com/article/4125356/should-i-stay-or-should-i-go-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Wed, 04 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1828,7 +1727,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://www.csoonline.com/article/4126064/identities-in-the-crosshairs-of-cybercriminals.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Wed, 04 Feb 2026 08:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1838,7 +1737,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-072</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.65</comments>
+      <comments>Score: 9.62</comments>
       <pubDate>Mon, 02 Feb 2026 17:10:11 +0000</pubDate>
     </item>
     <item>
@@ -1848,7 +1747,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-073</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.66</comments>
+      <comments>Score: 9.63</comments>
       <pubDate>Mon, 02 Feb 2026 17:29:53 +0000</pubDate>
     </item>
     <item>
@@ -1858,7 +1757,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-074</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.66</comments>
+      <comments>Score: 9.64</comments>
       <pubDate>Mon, 02 Feb 2026 17:46:49 +0000</pubDate>
     </item>
     <item>
@@ -1868,7 +1767,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-075</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.67</comments>
+      <comments>Score: 9.64</comments>
       <pubDate>Mon, 02 Feb 2026 17:58:38 +0000</pubDate>
     </item>
     <item>
@@ -1878,7 +1777,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-076</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.72</comments>
+      <comments>Score: 9.69</comments>
       <pubDate>Mon, 02 Feb 2026 19:40:06 +0000</pubDate>
     </item>
     <item>
@@ -1888,7 +1787,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-077</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.72</comments>
+      <comments>Score: 9.69</comments>
       <pubDate>Mon, 02 Feb 2026 19:49:12 +0000</pubDate>
     </item>
     <item>
@@ -1898,7 +1797,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/kubernetes-security-advisory-av26-078</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.31</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Tue, 03 Feb 2026 14:30:02 +0000</pubDate>
     </item>
     <item>
@@ -1908,7 +1807,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-079</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.46</comments>
+      <comments>Score: 10.42</comments>
       <pubDate>Tue, 03 Feb 2026 18:45:28 +0000</pubDate>
     </item>
     <item>
@@ -1918,7 +1817,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.46</comments>
+      <comments>Score: 10.43</comments>
       <pubDate>Tue, 03 Feb 2026 18:56:58 +0000</pubDate>
     </item>
     <item>
@@ -1928,7 +1827,7 @@ The move marks a shift from a reactive to a proactive approach to ensure that ma
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-080</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.52</comments>
+      <comments>Score: 10.48</comments>
       <pubDate>Tue, 03 Feb 2026 20:27:08 +0000</pubDate>
     </item>
   </channel>
