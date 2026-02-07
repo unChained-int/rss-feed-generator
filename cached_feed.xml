@@ -8,187 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Feb 2026 13:47:48 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Feb 2026 14:29:52 +0000</lastBuildDate>
     <item>
-      <title>The silent security gap in enterprise AI adoption</title>
-      <link>https://www.csoonline.com/article/4127334/the-silent-security-gap-in-enterprise-ai-adoption.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Most security leaders believe they know where their sensitive data lives and how it is protected. That confidence is increasingly misplaced.&lt;/p&gt;
-
-
-
-&lt;p&gt;As enterprises deploy AI across customer support, software development, legal analysis and internal operations, a new data exposure surface has quietly emerged. It does not sit in databases, file systems or network links. It lives inside AI inference traffic an area that falls outside most traditional security models and visibility frameworks, as &lt;em&gt;InfoWorld&lt;/em&gt; explains in its analysis of why&lt;a href="https://www.infoworld.com/article/4087007/ai-is-all-about-inference-now.html"&gt; &lt;/a&gt;&lt;a href="https://www.infoworld.com/article/4087007/ai-is-all-about-inference-now.html"&gt;AI is all about inference now&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;This shift has happened quickly. In many organizations, AI systems have moved from pilot projects to core infrastructure in less than two years. Yet security architectures have not evolved at the same pace. The result is a widening gap between where sensitive data actually flows and where security teams are looking.&lt;/p&gt;
-
-
-
-&lt;p&gt;This gap is rapidly becoming one of the most overlooked security risks in modern enterprise environments.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;AI prompts are high-value targets&lt;/h2&gt;
-
-
-
-&lt;p&gt;AI prompts are often dismissed as transient inputs temporary strings of text that exist only for the duration of a request. In reality, they frequently contain some of the most sensitive data an organization possesses:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Proprietary source code and internal tooling&lt;/li&gt;
-
-
-
-&lt;li&gt;Confidential documents and legal contracts&lt;/li&gt;
-
-
-
-&lt;li&gt;Customer PII and financial records&lt;/li&gt;
-
-
-
-&lt;li&gt;Strategic workflows and decision logic&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Recent industry analysis shows that enterprises are increasingly feeding sensitive proprietary data into generative AI systems to improve relevance and accuracy, particularly as organizations work to unlock internal data layers for AI-driven applications. &lt;em&gt;InfoWorld&lt;/em&gt; has documented this trend in its discussion of&lt;a href="https://www.infoworld.com/article/4094124/getting-the-enterprise-data-layer-unstuck-for-ai.html"&gt; &lt;/a&gt;&lt;a href="https://www.infoworld.com/article/4094124/getting-the-enterprise-data-layer-unstuck-for-ai.html"&gt;getting the enterprise data layer unstuck for AI&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;From a business perspective, this makes sense. AI systems perform best when they are grounded in real organizational knowledge. From a security perspective, however, it represents a fundamental change in how sensitive data is handled. Information that was once confined to controlled repositories is now being copied, transformed and transmitted as part of inference requests.&lt;/p&gt;
-
-
-
-&lt;p&gt;Unlike traditional data flows, prompts are rarely classified, sanitized or monitored. They pass through application layers, middleware, logging systems, observability pipelines and third-party services with minimal scrutiny. In many cases, they are treated as operational exhaust rather than as high-value data.&lt;/p&gt;
-
-
-
-&lt;p&gt;This creates a dangerous mismatch: some of the most sensitive data in the organization is flowing through one of the least protected pipelines.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Why existing controls fall short&lt;/h2&gt;
-
-
-
-&lt;p&gt;Traditional security architectures were not designed for AI workloads, and the limitations become clear at the inference layer.&lt;/p&gt;
-
-
-
-&lt;p&gt;Encryption protects data only until it is decrypted for processing. At that point, prompts may be exposed to application memory, runtime environments, debugging tools, observability platforms and administrative access. While transport encryption remains essential, it does little to reduce exposure once data reaches the systems that actually perform inference.&lt;/p&gt;
-
-
-
-&lt;p&gt;Data loss prevention tools also struggle in this context. Legacy DLP solutions were built around structured data, well-defined patterns and predictable storage locations. AI prompts are dynamic, unstructured and context dependent. As a result, DLP tools often lack the semantic understanding needed to determine whether a prompt contains sensitive material or whether its use is appropriate. These limitations are well documented in discussions around why&lt;a href="https://www.trendmicro.com/en_us/research/25/k/dlp-to-modern-data-security.html"&gt; &lt;/a&gt;&lt;a href="https://www.trendmicro.com/en_us/research/25/k/dlp-to-modern-data-security.html"&gt;legacy DLP approaches fall short in modern data security environments&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Logging and observability introduce another layer of risk. To troubleshoot AI systems, teams often log prompts, responses and intermediate states. These logs are then shipped to centralized platforms, retained for long periods and accessed by broad groups of engineers. What begins as a debugging convenience can quickly become a repository of sensitive data stored far outside its original security perimeter.&lt;/p&gt;
-
-
-
-&lt;p&gt;In many environments, trust effectively stops at the API gateway. Beyond that boundary, AI inference traffic is implicitly trusted, even though it frequently crosses internal and external trust zones. This implicit trust model may have worked for traditional application architectures, but it is poorly suited to AI systems that blur the line between user input, internal data and external services.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Internal risk is the bigger threat&lt;/h2&gt;
-
-
-
-&lt;p&gt;While external attackers remain a concern, internal exposure is often the more likely and less visible risk.&lt;/p&gt;
-
-
-
-&lt;p&gt;Over-permissioned service accounts, misconfigured logging pipelines, compromised credentials or legitimate insider access can all result in silent prompt leakage. Unlike traditional breaches, these exposures do not require exploitation of vulnerabilities. They occur as a byproduct of normal operations in complex environments.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI systems exacerbate this risk because of their scale and frequency of use. A single application may generate thousands or millions of inference requests per day, each potentially containing sensitive data. Within that volume, misuse or accidental exposure can easily blend into normal traffic patterns.&lt;/p&gt;
-
-
-
-&lt;p&gt;Research into insider risk consistently shows that accidental exposure is far more common than malicious breach, particularly in cloud environments where ownership and responsibility are distributed across teams. AI systems add yet another layer of complexity, making it harder to answer basic questions about who can access inference data, where it is stored and how long it is retained.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because AI usage is frequent and expected, abnormal access patterns may not trigger alarms. This makes AI inference an ideal low noise channel for data exposure one that does not resemble traditional indicators of compromise and is therefore difficult to detect with existing tools.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The quantum time bomb&lt;/h2&gt;
-
-
-
-&lt;p&gt;Beyond immediate exposure, there is a longer term risk that security leaders can no longer afford to treat as theoretical: cryptographic durability.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI prompts and responses often contain data that must remain confidential for many years source code that underpins competitive advantage, customer records subject to regulatory protection, proprietary processes and strategic decisions. Yet much of today’s AI inference traffic is protected using cryptographic methods designed primarily for short-term transport security, not long term confidentiality.&lt;/p&gt;
-
-
-
-&lt;p&gt;This distinction matters. Advances in quantum computing threaten to weaken many of the cryptographic algorithms currently used to protect data in transit and at rest. While large-scale, fault-tolerant quantum computers are not yet widely available, the associated risk is already present. Adversaries can capture encrypted data today and decrypt it later, once cryptographic assumptions fail.&lt;/p&gt;
-
-
-
-&lt;p&gt;Security agencies and standards bodies have explicitly warned about these &lt;em&gt;“harvest now, decrypt later”&lt;/em&gt; threats. The National Institute of Standards and Technology has highlighted the need to assess which data assets require long-term protection in its&lt;a href="https://www.nist.gov/pqcrypto"&gt; &lt;/a&gt;&lt;a href="https://www.nist.gov/pqcrypto"&gt;post-quantum cryptography guidance&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI significantly expands the volume of data that may fall into this category. Inference traffic often includes rich contextual information that would be highly valuable if decrypted in the future. Unlike traditional records, this data is frequently generated at scale and retained in logs, analytics systems or backups without clear lifecycle controls.&lt;/p&gt;
-
-
-
-&lt;p&gt;For regulated industries with long data-retention requirements such as finance, healthcare and critical infrastructure this creates a silent exposure window that extends far beyond current compliance cycles. Organizations may be meeting today’s regulatory requirements while unintentionally accumulating long-term cryptographic risk.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI has unintentionally expanded not just the amount of sensitive data in motion, but the amount of data that must remain secure well into a post-quantum future often without organizations realizing it.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The bottom line for security leaders&lt;/h2&gt;
-
-
-
-&lt;p&gt;This gap exists not because teams are careless, but because AI inference does not fit cleanly into existing security models. It crosses trust boundaries that were never designed with AI in mind and introduces data flows that traditional controls were never built to govern.&lt;/p&gt;
-
-
-
-&lt;p&gt;As AI becomes embedded in core enterprise workflows, the security implications of inference traffic can no longer be treated as an edge case. They represent a fundamental shift in how sensitive data is created, processed and exposed.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is not a call for a specific solution, but a problem the industry can no longer afford to ignore.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4127334/the-silent-security-gap-in-enterprise-ai-adoption.html</guid>
+      <title>Drupal security advisory (AV26-065)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-065</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-065</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
-      <pubDate>Thu, 05 Feb 2026 11:00:00 +0000</pubDate>
+      <comments>Score: 7.35</comments>
+      <pubDate>Wed, 28 Jan 2026 20:45:23 +0000</pubDate>
     </item>
     <item>
       <title>Attackers exploit decade‑old Windows driver flaw to shut down modern EDR defenses</title>
@@ -262,7 +91,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4127968/attackers-exploit-decade%e2%80%91old-windows-driver-flaw-to-shut-down-modern-edr-defenses.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Thu, 05 Feb 2026 12:08:41 +0000</pubDate>
     </item>
     <item>
@@ -272,7 +101,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-br-security-advisory-av26-066</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Thu, 29 Jan 2026 19:35:12 +0000</pubDate>
     </item>
     <item>
@@ -293,7 +122,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.46</comments>
-      <pubDate>Sat, 07 Feb 2026 11:47:48 +0000</pubDate>
+      <pubDate>Sat, 07 Feb 2026 12:29:52 +0000</pubDate>
     </item>
     <item>
       <title>Europol report: evolving tactics in maritime cocaine trafficking operations</title>
@@ -303,7 +132,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Sat, 07 Feb 2026 11:47:48 +0000</pubDate>
+      <pubDate>Sat, 07 Feb 2026 12:29:52 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
@@ -313,17 +142,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 07 Feb 2026 11:47:48 +0000</pubDate>
-    </item>
-    <item>
-      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
-      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 07 Feb 2026 11:47:48 +0000</pubDate>
+      <pubDate>Sat, 07 Feb 2026 12:29:52 +0000</pubDate>
     </item>
     <item>
       <title>Europol signs Working Arrangement with the Argentine Republic</title>
@@ -333,7 +152,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 07 Feb 2026 11:47:48 +0000</pubDate>
+      <pubDate>Sat, 07 Feb 2026 12:29:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
+      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 07 Feb 2026 12:29:52 +0000</pubDate>
     </item>
     <item>
       <title>Ivanti security advisory (AV26-068) – Update 1</title>
@@ -352,7 +181,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-069</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Fri, 30 Jan 2026 16:38:46 +0000</pubDate>
     </item>
     <item>
@@ -362,7 +191,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-070</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Fri, 30 Jan 2026 16:46:16 +0000</pubDate>
     </item>
     <item>
@@ -376,16 +205,6 @@
       <pubDate>Fri, 30 Jan 2026 19:19:22 +0000</pubDate>
     </item>
     <item>
-      <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</link>
-      <description>A Bulgarian-led investigation, carried out in close cooperation with the Hellenic Police and supported by Europol, has led to the dismantlement of an organised criminal network involved in smuggling of migrants from Türkiye via Bulgaria and onward through Serbia or Romania towards Western European countries. The investigation was conducted within the framework of a regional Operational Taskforce established to target migrant smuggling networks using Bulgaria as a transit country.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Sat, 07 Feb 2026 11:47:48 +0000</pubDate>
-    </item>
-    <item>
       <title>Asian State-Backed Group TGR-STA-1030 Breaches 70 Government, Infrastructure Entities</title>
       <link>https://thehackernews.com/2026/02/asian-state-backed-group-tgr-sta-1030.html</link>
       <description>A previously undocumented cyber espionage group operating from Asia broke into the networks of at least 70 government and critical infrastructure organizations across 37 countries over the past year, according to new findings from Palo Alto Networks Unit 42.
@@ -393,8 +212,18 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://thehackernews.com/2026/02/asian-state-backed-group-tgr-sta-1030.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Fri, 06 Feb 2026 17:37:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</link>
+      <description>A Bulgarian-led investigation, carried out in close cooperation with the Hellenic Police and supported by Europol, has led to the dismantlement of an organised criminal network involved in smuggling of migrants from Türkiye via Bulgaria and onward through Serbia or Romania towards Western European countries. The investigation was conducted within the framework of a regional Operational Taskforce established to target migrant smuggling networks using Bulgaria as a transit country.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Sat, 07 Feb 2026 12:29:52 +0000</pubDate>
     </item>
     <item>
       <title>Four new vulnerabilities found in Ingress NGINX</title>
@@ -464,7 +293,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://www.csoonline.com/article/4128439/four-new-vulnerabilities-found-in-ingress-nginx.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Fri, 06 Feb 2026 02:48:26 +0000</pubDate>
     </item>
     <item>
@@ -588,7 +417,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://www.csoonline.com/article/3494023/cybersicherheitsvorschriften-so-erfullen-sie-ihre-compliance-anforderungen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Fri, 06 Feb 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -725,7 +554,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://www.csoonline.com/article/4127687/the-blind-spot-every-ciso-must-see-loyalty.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Fri, 06 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -736,7 +565,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.92</comments>
-      <pubDate>Sat, 07 Feb 2026 11:47:48 +0000</pubDate>
+      <pubDate>Sat, 07 Feb 2026 12:29:52 +0000</pubDate>
     </item>
     <item>
       <title>Zscaler extends zero-trust security to browsers with SquareX acquisition</title>
@@ -822,7 +651,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://www.csoonline.com/article/4128745/zscaler-extends-zero-trust-security-to-browsers-with-squarex-acquisition.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Fri, 06 Feb 2026 11:39:43 +0000</pubDate>
     </item>
     <item>
@@ -909,7 +738,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://www.csoonline.com/article/4128748/cisa-gives-federal-agencies-18-months-to-purge-unsupported-edge-devices.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.03</comments>
       <pubDate>Fri, 06 Feb 2026 11:48:51 +0000</pubDate>
     </item>
     <item>
@@ -1172,7 +1001,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://www.csoonline.com/article/4128090/ten-career-ending-mistakes-cisos-make-and-how-to-avoid-them.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Fri, 06 Feb 2026 12:17:42 +0000</pubDate>
     </item>
     <item>
@@ -1182,7 +1011,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-072</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Mon, 02 Feb 2026 17:10:11 +0000</pubDate>
     </item>
     <item>
@@ -1192,7 +1021,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-073</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Mon, 02 Feb 2026 17:29:53 +0000</pubDate>
     </item>
     <item>
@@ -1212,7 +1041,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-075</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Mon, 02 Feb 2026 17:58:38 +0000</pubDate>
     </item>
     <item>
@@ -1222,7 +1051,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-076</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Mon, 02 Feb 2026 19:40:06 +0000</pubDate>
     </item>
     <item>
@@ -1232,7 +1061,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-077</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Mon, 02 Feb 2026 19:49:12 +0000</pubDate>
     </item>
     <item>
@@ -1317,7 +1146,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://www.csoonline.com/article/4128998/six-more-vulnerabilities-found-in-n8n-automation-platform.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.33</comments>
       <pubDate>Fri, 06 Feb 2026 20:53:44 +0000</pubDate>
     </item>
     <item>
@@ -1327,7 +1156,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/kubernetes-security-advisory-av26-078</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Tue, 03 Feb 2026 14:30:02 +0000</pubDate>
     </item>
     <item>
@@ -1337,7 +1166,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-079</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Tue, 03 Feb 2026 18:45:28 +0000</pubDate>
     </item>
     <item>
@@ -1347,7 +1176,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Tue, 03 Feb 2026 18:56:58 +0000</pubDate>
     </item>
     <item>
@@ -1357,7 +1186,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-080</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Tue, 03 Feb 2026 20:27:08 +0000</pubDate>
     </item>
     <item>
@@ -1432,7 +1261,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://www.csoonline.com/article/4128287/substack-data-breach-leaks-users-email-addresses-and-phone-numbers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Thu, 05 Feb 2026 21:13:42 +0000</pubDate>
     </item>
     <item>
@@ -1539,7 +1368,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://www.csoonline.com/article/4128378/new-apt-group-breached-gov-and-critical-infrastructure-orgs-in-37-countries.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Thu, 05 Feb 2026 23:13:21 +0000</pubDate>
     </item>
     <item>
@@ -1549,7 +1378,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-081</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Wed, 04 Feb 2026 13:50:42 +0000</pubDate>
     </item>
     <item>
@@ -1559,7 +1388,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-february-2026-monthly-rollup-av26-082</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Wed, 04 Feb 2026 13:56:11 +0000</pubDate>
     </item>
     <item>
@@ -1569,7 +1398,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-february-2026-monthly-rollup-av26-083</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Wed, 04 Feb 2026 14:01:26 +0000</pubDate>
     </item>
     <item>
@@ -1579,7 +1408,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-084</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Wed, 04 Feb 2026 15:51:52 +0000</pubDate>
     </item>
     <item>
@@ -1589,7 +1418,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-085</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.93</comments>
       <pubDate>Wed, 04 Feb 2026 16:40:27 +0000</pubDate>
     </item>
     <item>
@@ -1599,7 +1428,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-086</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Wed, 04 Feb 2026 16:53:14 +0000</pubDate>
     </item>
     <item>
@@ -1609,7 +1438,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-087</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 9.01</comments>
       <pubDate>Wed, 04 Feb 2026 20:37:07 +0000</pubDate>
     </item>
     <item>
@@ -1619,7 +1448,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-088</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 9.02</comments>
       <pubDate>Wed, 04 Feb 2026 20:53:34 +0000</pubDate>
     </item>
     <item>
@@ -1629,7 +1458,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Thu, 05 Feb 2026 16:32:13 +0000</pubDate>
     </item>
     <item>
@@ -1639,7 +1468,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Thu, 05 Feb 2026 16:47:30 +0000</pubDate>
     </item>
     <item>
@@ -1649,7 +1478,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.51</comments>
+      <comments>Score: 9.49</comments>
       <pubDate>Thu, 05 Feb 2026 16:56:30 +0000</pubDate>
     </item>
     <item>
@@ -1659,7 +1488,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Thu, 05 Feb 2026 19:08:58 +0000</pubDate>
     </item>
     <item>
@@ -1669,7 +1498,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.13</comments>
+      <comments>Score: 10.10</comments>
       <pubDate>Fri, 06 Feb 2026 14:10:25 +0000</pubDate>
     </item>
     <item>
@@ -1679,7 +1508,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.11</comments>
       <pubDate>Fri, 06 Feb 2026 14:26:19 +0000</pubDate>
     </item>
     <item>
@@ -1689,7 +1518,7 @@ In addition, the hacking crew has been observed conducting active reconnaissance
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.12</comments>
       <pubDate>Fri, 06 Feb 2026 14:38:07 +0000</pubDate>
     </item>
   </channel>
