@@ -8,113 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Feb 2026 22:39:58 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Feb 2026 23:40:32 +0000</lastBuildDate>
     <item>
-      <title>New APT group breached gov and critical infrastructure orgs in 37 countries</title>
-      <link>https://www.csoonline.com/article/4128378/new-apt-group-breached-gov-and-critical-infrastructure-orgs-in-37-countries.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A new cyberespionage group that operates out of Asia has compromised 70 government and critical infrastructure organizations across 37 countries over the past year using a sophisticated toolset that combines phishing, exploitation kits, custom malware, Linux rootkits, web shells, and a variety of other tunneling and proxy tools. Researchers believe the group is expanding its activities and is conducting active reconnaissance on even more targets.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Between November and December 2025, we observed the group conducting active reconnaissance against government infrastructure associated with 155 countries,” researchers from security firm Palo Alto Networks said in &lt;a href="https://unit42.paloaltonetworks.com/shadow-campaigns-uncovering-global-espionage/"&gt;a new report&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Palo Alto tracks the group as TGR-STA-1030 (aka UNC6619) and believes it is based in Asia based on language settings, its preference for regional tooling, GMT+8 operating hours, and targeting that aligns with events in the region. The researchers, who have been tracking the group since February 2025, believe it has ties to a nation state.&lt;/p&gt;
-
-
-
-&lt;p&gt;The group’s confirmed victims include national-level law enforcement and border control entities; ministries and departments of interior, foreign affairs, finance, trade, economy, immigration, mining, justice, and energy; elected officials and even a parliament’s infrastructure. The group has also targeted national telecommunications companies.&lt;/p&gt;
-
-
-
-&lt;p&gt;“While this group might be pursuing espionage objectives, its methods, targets, and scale of operations are alarming, with potential long-term consequences for national security and key services,” Palo Alto’s researchers said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="from-phishing-to-exploits"&gt;From phishing to exploits&lt;/h2&gt;
-
-
-
-&lt;p&gt;Palo Alto started tracking the group a year ago following a series of phishing campaigns directed at European governments that the company dubbed the Shadow Campaigns.&lt;/p&gt;
-
-
-
-&lt;p&gt;The phishing emails posed as announcements about organizational changes in official institutions and were written in the language of their intended targets. The messages contained links that led to the download of a ZIP archive with a custom malware loader the researchers now call Diaoyu.&lt;/p&gt;
-
-
-
-&lt;p&gt;This loader performs various checks to detect the presence of certain antivirus programs and to ascertain whether it is running in a sandbox. It then proceeds to download the Cobalt Strike implant from a GitHub repository. Cobalt Strike is a commercial penetration testing tool that has grown popular among attackers over the years.&lt;/p&gt;
-
-
-
-&lt;p&gt;Although the group hasn’t been observed exploiting previously unknown vulnerabilities to gain access to networks, it has used exploits for known vulnerabilities (N-days) in a large number of software products, operating systems, and libraries, including: SAP Solution Manager, Microsoft Open Management Infrastructure, Microsoft Exchange Server, Pivotal Spring Data Commons, Struts2, Eyou Email System, Beijing Grandview Century eHR Software, Weaver Ecology-OA, Commvault CommCell CVSearchService, Zhiyuan OA, Microsoft Windows, networking products from Ruijieyi Networks and D-Link, and more.&lt;/p&gt;
-
-
-
-&lt;p&gt;“On one occasion, we observed the actor connecting to e-passport and e-visa services associated with a ministry of foreign affairs,” the researchers said. “Because the server for these services was configured with Atlassian Crowd software, the actor attempted to exploit CVE-2019-11580, uploading a payload named rce.jar.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-complex-toolset-of-implants"&gt;A complex toolset of implants&lt;/h2&gt;
-
-
-
-&lt;p&gt;In addition to Cobalt Strike, the group uses various other malware payloads and command-and-control (C2) frameworks, including VShell, Havoc, SparkRat, and Sliver. On compromised web servers, the attackers deploy a variety of web shells, including Behinder, Neo-reGeorg, and Godzilla.&lt;/p&gt;
-
-
-
-&lt;p&gt;On Linux servers the group has been seen deploying a rootkit dubbed ShadowGuard, which leverages the Extended Berkeley Packet Filter (eBPF), a powerful feature for running sandboxed code inside the Linux kernel.&lt;/p&gt;
-
-
-
-&lt;p&gt;“eBPF backdoors are notoriously difficult to detect because they operate entirely within the highly trusted kernel space,” the researchers said. “eBPF programs do not appear as separate modules. Instead, they execute inside the kernel’s BPF virtual machine, making them inherently stealthy. This allows them to manipulate core system functions and audit logs before security tools or system monitoring applications can see the true data.”&lt;/p&gt;
-
-
-
-&lt;p&gt;ShadowGuard appears to be a tool that’s unique to this group and allows them to hide processes, files, and directories.&lt;/p&gt;
-
-
-
-&lt;p&gt;To conceal outgoing network traffic from victim networks, the attackers use a variety of relay and proxy servers running tunneling software like the GO Simple Tunnel (GOST), Fast Reverse Proxy Server (FRPS), and IOX, but their C2 servers are typically hosted on virtual private servers (VPS) from the US, UK, and Singapore.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="increase-in-targeting"&gt;Increase in targeting&lt;/h2&gt;
-
-
-
-&lt;p&gt;Palo Alto believes the group is expanding its operations because it has scanned networks of organizations from 155 countries for known vulnerabilities since October. The scans appear to be targeted on IP addresses belonging to government infrastructure and specific targets of interest.&lt;/p&gt;
-
-
-
-&lt;p&gt;For example, during the &lt;a href="https://www.csoonline.com/article/4066008/government-shutdown-deepens-us-cyber-risk-exposing-networks-to-threat-actors.html"&gt;US government shutdown that began in October&lt;/a&gt;, the group started scanning the infrastructure of governments in the Americas, including in Brazil, Canada, Dominican Republic, Guatemala, Honduras, Jamaica, Mexico, Panama, and Trinidad and Tobago. The researchers believe the group has already compromised entities in Bolivia, Brazil, Mexico, Panama, and Venezuela.&lt;/p&gt;
-
-
-
-&lt;p&gt;The group seems to time its targeting to certain events. For example, when the president of Czechia met with the Dalai Lama in August, the group immediately started scanning the computer infrastructure belonging to the Czech Army, police, parliament, and presidency, as well as its ministries of interior, finance, and foreign affairs.&lt;/p&gt;
-
-
-
-&lt;p&gt;“TGR-STA-1030 remains an active threat to government and critical infrastructure worldwide,” Palo Alto said. “The group primarily targets government ministries and departments for espionage purposes. We assess that it prioritizes efforts against countries that have established or are exploring certain economic partnerships.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The company’s report includes indicators of compromise, including IP addresses, domain names, and file hashes for the implants used by the group.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4128378/new-apt-group-breached-gov-and-critical-infrastructure-orgs-in-37-countries.html</guid>
+      <title>Europol report: evolving tactics in maritime cocaine trafficking operations</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-report-evolving-tactics-in-maritime-cocaine-trafficking-operations</link>
+      <description>A new Europol report published today provides a comprehensive analysis of the evolving tactics employed by criminal networks to traffic cocaine into Europe via maritime routes. The report, 'Diversification in Maritime Cocaine Trafficking Modi Operandi', provides an in-depth analysis of the shifting tactics employed by organised crime networks, which continue to exploit vulnerabilities and evade detection.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-report-evolving-tactics-in-maritime-cocaine-trafficking-operations</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Thu, 05 Feb 2026 23:13:21 +0000</pubDate>
+      <pubDate>Mon, 09 Feb 2026 21:40:32 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
@@ -124,17 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Feb 2026 20:39:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
-      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Feb 2026 20:39:58 +0000</pubDate>
+      <pubDate>Mon, 09 Feb 2026 21:40:32 +0000</pubDate>
     </item>
     <item>
       <title>Europol signs Working Arrangement with the Argentine Republic</title>
@@ -144,7 +37,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Feb 2026 20:39:58 +0000</pubDate>
+      <pubDate>Mon, 09 Feb 2026 21:40:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>34 arrests in Spain during action against the ‘Black Axe’ criminal organisation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</link>
+      <description>The criminal network is known for its involvement in a wide range of criminal activities, including cyber-enabled fraud, drug trafficking, human trafficking and prostitution, kidnapping, armed robbery and fraudulent spiritual practices. The group's annual criminal proceeds are estimated to be in the billions of euros, generated through many small-scale operations that collectively have a significant impact.Arrests and further investigationsA total...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/34-arrests-in-spain-during-action-against-black-axe-criminal-organisation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 09 Feb 2026 21:40:32 +0000</pubDate>
     </item>
     <item>
       <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
@@ -154,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Mon, 09 Feb 2026 20:39:58 +0000</pubDate>
+      <pubDate>Mon, 09 Feb 2026 21:40:32 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-072)</title>
@@ -163,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-072</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Mon, 02 Feb 2026 17:10:11 +0000</pubDate>
     </item>
     <item>
@@ -173,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-073</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Mon, 02 Feb 2026 17:29:53 +0000</pubDate>
     </item>
     <item>
@@ -183,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-074</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Mon, 02 Feb 2026 17:46:49 +0000</pubDate>
     </item>
     <item>
@@ -223,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/kubernetes-security-advisory-av26-078</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Tue, 03 Feb 2026 14:30:02 +0000</pubDate>
     </item>
     <item>
@@ -233,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-079</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Tue, 03 Feb 2026 18:45:28 +0000</pubDate>
     </item>
     <item>
@@ -243,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Tue, 03 Feb 2026 18:56:58 +0000</pubDate>
     </item>
     <item>
@@ -253,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-080</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Tue, 03 Feb 2026 20:27:08 +0000</pubDate>
     </item>
     <item>
@@ -264,7 +167,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.92</comments>
-      <pubDate>Mon, 09 Feb 2026 20:39:58 +0000</pubDate>
+      <pubDate>Mon, 09 Feb 2026 21:40:32 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-081)</title>
@@ -273,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-081</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.03</comments>
       <pubDate>Wed, 04 Feb 2026 13:50:42 +0000</pubDate>
     </item>
     <item>
@@ -283,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-february-2026-monthly-rollup-av26-082</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Wed, 04 Feb 2026 13:56:11 +0000</pubDate>
     </item>
     <item>
@@ -293,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-february-2026-monthly-rollup-av26-083</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Wed, 04 Feb 2026 14:01:26 +0000</pubDate>
     </item>
     <item>
@@ -303,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-084</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Wed, 04 Feb 2026 15:51:52 +0000</pubDate>
     </item>
     <item>
@@ -313,7 +216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-085</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Wed, 04 Feb 2026 16:40:27 +0000</pubDate>
     </item>
     <item>
@@ -323,7 +226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-086</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Wed, 04 Feb 2026 16:53:14 +0000</pubDate>
     </item>
     <item>
@@ -333,7 +236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-087</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Wed, 04 Feb 2026 20:37:07 +0000</pubDate>
     </item>
     <item>
@@ -343,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-088</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Wed, 04 Feb 2026 20:53:34 +0000</pubDate>
     </item>
     <item>
@@ -495,38 +398,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3492789/customer-identity-access-management-die-6-besten-ciam-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Mon, 09 Feb 2026 03:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitLab security advisory (AV26-089)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
-      <pubDate>Thu, 05 Feb 2026 16:32:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>TeamViewer security advisory (AV26-090)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
-      <pubDate>Thu, 05 Feb 2026 16:47:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>n8n security advisory (AV26-091)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
-      <pubDate>Thu, 05 Feb 2026 16:56:30 +0000</pubDate>
     </item>
     <item>
       <title>Software developers: Prime cyber targets and a rising risk vector for CISOs</title>
@@ -748,8 +621,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4127693/software-developers-prime-cyber-targets-and-a-rising-risk-vector-for-cisos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Mon, 09 Feb 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitLab security advisory (AV26-089)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.37</comments>
+      <pubDate>Thu, 05 Feb 2026 16:32:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>TeamViewer security advisory (AV26-090)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.37</comments>
+      <pubDate>Thu, 05 Feb 2026 16:47:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>n8n security advisory (AV26-091)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.37</comments>
+      <pubDate>Thu, 05 Feb 2026 16:56:30 +0000</pubDate>
     </item>
     <item>
       <title>Zyxel security advisory (AV26-092)</title>
@@ -758,7 +661,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Thu, 05 Feb 2026 19:08:58 +0000</pubDate>
     </item>
     <item>
@@ -929,7 +832,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4128381/nis2-supply-chains-as-a-risk-factor.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Mon, 09 Feb 2026 08:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1039,7 +942,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4129302/gartner-prognose-die-sechs-wichtigsten-cybersicherheits-trends-fur-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Mon, 09 Feb 2026 09:49:01 +0000</pubDate>
     </item>
     <item>
@@ -1224,7 +1127,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4128910/schrodingers-cat-and-the-enterprise-security-paradox.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Mon, 09 Feb 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1347,7 +1250,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4128920/never-settle-how-cisos-can-go-beyond-compliance-standards-to-better-protect-their-organizations.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Mon, 09 Feb 2026 11:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1434,7 +1337,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4129383/dknife-targets-network-gateways-in-long-running-aitm-campaign.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Mon, 09 Feb 2026 11:54:32 +0000</pubDate>
     </item>
     <item>
@@ -1517,7 +1420,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4129393/openclaw-integrates-virustotal-malware-scanning-as-security-firms-flag-enterprise-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Mon, 09 Feb 2026 12:23:12 +0000</pubDate>
     </item>
     <item>
@@ -1527,7 +1430,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Fri, 06 Feb 2026 14:10:25 +0000</pubDate>
     </item>
     <item>
@@ -1537,7 +1440,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Fri, 06 Feb 2026 14:26:19 +0000</pubDate>
     </item>
     <item>
@@ -1547,7 +1450,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Fri, 06 Feb 2026 14:38:07 +0000</pubDate>
     </item>
     <item>
@@ -1557,7 +1460,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.67</comments>
+      <comments>Score: 10.64</comments>
       <pubDate>Mon, 09 Feb 2026 14:30:57 +0000</pubDate>
     </item>
     <item>
@@ -1567,7 +1470,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.68</comments>
+      <comments>Score: 10.64</comments>
       <pubDate>Mon, 09 Feb 2026 14:39:28 +0000</pubDate>
     </item>
     <item>
@@ -1577,7 +1480,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-098</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.69</comments>
+      <comments>Score: 10.65</comments>
       <pubDate>Mon, 09 Feb 2026 14:50:54 +0000</pubDate>
     </item>
     <item>
@@ -1587,7 +1490,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-099</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.69</comments>
+      <comments>Score: 10.66</comments>
       <pubDate>Mon, 09 Feb 2026 15:01:29 +0000</pubDate>
     </item>
     <item>
@@ -1597,7 +1500,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-100</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.70</comments>
+      <comments>Score: 10.66</comments>
       <pubDate>Mon, 09 Feb 2026 15:09:07 +0000</pubDate>
     </item>
     <item>
@@ -1607,7 +1510,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-101</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.75</comments>
+      <comments>Score: 10.71</comments>
       <pubDate>Mon, 09 Feb 2026 16:28:07 +0000</pubDate>
     </item>
     <item>
@@ -1617,7 +1520,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-102</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.76</comments>
+      <comments>Score: 10.72</comments>
       <pubDate>Mon, 09 Feb 2026 16:39:27 +0000</pubDate>
     </item>
     <item>
@@ -1627,7 +1530,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-103</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.76</comments>
+      <comments>Score: 10.72</comments>
       <pubDate>Mon, 09 Feb 2026 16:45:08 +0000</pubDate>
     </item>
     <item>
@@ -1637,7 +1540,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-104</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.76</comments>
+      <comments>Score: 10.73</comments>
       <pubDate>Mon, 09 Feb 2026 16:50:24 +0000</pubDate>
     </item>
     <item>
@@ -1647,7 +1550,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-105</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.86</comments>
+      <comments>Score: 10.82</comments>
       <pubDate>Mon, 09 Feb 2026 19:11:12 +0000</pubDate>
     </item>
     <item>
@@ -1656,7 +1559,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/shields-up-key-technologies-reshaping-cybersecurity-defenses</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 49338.47</comments>
+      <comments>Score: 48822.33</comments>
       <pubDate>Thu, 19 Mar 2026 15:00:00 +0000</pubDate>
     </item>
   </channel>
