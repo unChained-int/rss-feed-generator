@@ -8,107 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Feb 2026 23:40:58 +0000</lastBuildDate>
-    <item>
-      <title>Samsung mobile security advisory (AV26-079)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-079</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-079</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Tue, 03 Feb 2026 18:45:28 +0000</pubDate>
-    </item>
-    <item>
-      <title>SolarWinds security advisory (AV26-063) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Tue, 03 Feb 2026 18:56:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tenable security advisory (AV26-080)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-080</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-080</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
-      <pubDate>Tue, 03 Feb 2026 20:27:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>SolarWinds WHD zero-days from January are under attack</title>
-      <link>https://www.csoonline.com/article/4130151/solarwinds-whd-zero-days-from-january-are-under-attack.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;SolarWinds Web Help Desk (WHD) is under attack, with recent incidents exploiting a chain of zero-day and patched vulnerabilities dating back to late 2025, an analysis of customer reports by security company Huntress has found.&lt;/p&gt;
-
-
-
-&lt;p&gt;Until now, it has been unclear which combination of recent WHD vulnerabilities were behind a series of compromises of customer systems first uncovered in December.&lt;/p&gt;
-
-
-
-&lt;p&gt;On January 28, SolarWinds &lt;a href="https://www.csoonline.com/article/4124030/solarwinds-again-critical-rce-bugs-reopen-old-wounds-for-enterprise-security-teams.html"&gt;published an advisory&lt;/a&gt; that mentioned six CVEs rated either ‘critical’ or ‘high.’ These included two zero-days with a CVSS score of 9.8: &lt;a href="https://www.cve.org/CVERecord?id=CVE-2025-40551" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-40551&lt;/a&gt;, a deserialization flaw allowing remote code execution (RCE), and &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40536" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-40536&lt;/a&gt;, an authentication bypass.&lt;/p&gt;
-
-
-
-&lt;p&gt;Even the Microsoft Defender Research Team, which detected WHD attacks on its customers before Christmas, was unsure exactly which combination had let attackers in: “Since the attacks occurred in December 2025 and on machines vulnerable to both the old and new set of CVEs at the same time, we cannot reliably confirm the exact CVE used to gain an initial foothold,” &lt;a href="https://www.microsoft.com/en-us/security/blog/2026/02/06/active-exploitation-solarwinds-web-help-desk/" rel="noreferrer noopener" target="_blank"&gt;Microsoft researchers wrote&lt;/a&gt; on February 6.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, in recent days &lt;a href="https://www.huntress.com/blog/active-exploitation-solarwinds-web-help-desk-cve-2025-26399" rel="noreferrer noopener" target="_blank"&gt;Huntress confirmed&lt;/a&gt; what was always the most likely explanation: Attackers had targeted three of its customers by chaining both of the above flaws in combination with an older RCE deserialization vulnerability, the critical-rated &lt;a href="https://www.csoonline.com/article/3567911/critical-solarwinds-flaw-finds-exploitations-in-the-wild-despite-available-fixes.html"&gt;CVE-2025-26399, made public last September&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Once the systems were compromised, the attacks detected by Huntress used a mixture of techniques to burrow deeper while hiding themselves, including deploying the open-source Velociraptor forensic tool as a C2 connection backed by an encrypted Cloudflared outbound tunnel.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="urgent-patching"&gt;Urgent patching&lt;/h2&gt;
-
-
-
-&lt;p&gt;Given that SolarWinds estimates that its WHD service management and ticketing platform is used by 300,000 customers, it’s not surprising that cybercriminals would take any opportunity to target it.&lt;/p&gt;
-
-
-
-&lt;p&gt;WHD is built as a Java-based application that runs inside Apache Tomcat. Deserialization vulnerabilities are especially dangerous in this context because they allow an attacker to send a malicious serialized Java object in a request, which WHD automatically deserializes without authentication. At that point, the attackers can achieve remote code execution.&lt;/p&gt;
-
-
-
-&lt;p&gt;“All previous versions of SolarWinds Web Help Desk prior to 12.8.7 HF1 are vulnerable to these vulnerabilities,” said Huntress.&lt;/p&gt;
-
-
-
-&lt;p&gt;That’s the simple takeaway: patch the SolarWinds WHD application as a matter of urgency. This includes customers who didn’t patch September 2025’s CVE-2025-26399, also used as part of the recent attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;That requires upgrading to WHD 2026.1 whilst paying attention to the caveats set out by SolarWinds in its &lt;a href="https://documentation.solarwinds.com/en/success_center/whd/content/release_notes/whd_2026-1_release_notes.htm#link6" rel="noreferrer noopener" target="_blank"&gt;release notes&lt;/a&gt;. Any instances of Velociraptor, Cloudflared, or Zoho Assist (also utilized in campaigns) should be considered suspicious, as well as ‘silent’ MSI installations spawned by WHD.&lt;/p&gt;
-
-
-
-&lt;p&gt;Huntress also recommends placing WHD behind a VPN or firewall and resetting all service or admin account passwords, as well as any credentials stored within WHD itself.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4130151/solarwinds-whd-zero-days-from-january-are-under-attack.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
-      <pubDate>Tue, 10 Feb 2026 15:58:43 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 11 Feb 2026 02:37:04 +0000</lastBuildDate>
     <item>
       <title>Gartner-Prognose: Die sechs wichtigsten Cybersicherheits-Trends für 2026</title>
       <link>https://www.csoonline.com/article/4129302/gartner-prognose-die-sechs-wichtigsten-cybersicherheits-trends-fur-2026.html</link>
@@ -216,7 +116,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4129302/gartner-prognose-die-sechs-wichtigsten-cybersicherheits-trends-fur-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Mon, 09 Feb 2026 09:49:01 +0000</pubDate>
     </item>
     <item>
@@ -401,8 +301,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4128910/schrodingers-cat-and-the-enterprise-security-paradox.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Mon, 09 Feb 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Samsung mobile security advisory (AV26-079)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-079</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-079</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.64</comments>
+      <pubDate>Tue, 03 Feb 2026 18:45:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>SolarWinds security advisory (AV26-063) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.64</comments>
+      <pubDate>Tue, 03 Feb 2026 18:56:58 +0000</pubDate>
     </item>
     <item>
       <title>Never settle: How CISOs can go beyond compliance standards to better protect their organizations</title>
@@ -524,8 +444,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4128920/never-settle-how-cisos-can-go-beyond-compliance-standards-to-better-protect-their-organizations.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Mon, 09 Feb 2026 11:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tenable security advisory (AV26-080)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-080</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-080</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.65</comments>
+      <pubDate>Tue, 03 Feb 2026 20:27:08 +0000</pubDate>
     </item>
     <item>
       <title>DKnife targets network gateways in long running AitM campaign</title>
@@ -611,7 +541,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4129383/dknife-targets-network-gateways-in-long-running-aitm-campaign.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Mon, 09 Feb 2026 11:54:32 +0000</pubDate>
     </item>
     <item>
@@ -694,8 +624,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4129393/openclaw-integrates-virustotal-malware-scanning-as-security-firms-flag-enterprise-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Mon, 09 Feb 2026 12:23:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>Polish power grid hack offers lessons for critical infrastructure operators, CISA says</title>
+      <link>https://www.cybersecuritydive.com/news/cisa-critical-infrastructure-warning-poland-energy-hack/811819/</link>
+      <description>&lt;figure&gt;&lt;div&gt;&lt;img src="https://imgproxy.divecdn.com/38kfhWNaHwkUuv8WcXZSkCX8NrRCduCky2OJBX5JgWI/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMDY0ODg0NjAzXzEuanBn.webp" /&gt;&lt;/div&gt;&lt;/figure&gt;&lt;p&gt;The agency listed several steps businesses could take to prevent similar cyberattacks.&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://www.cybersecuritydive.com/news/cisa-critical-infrastructure-warning-poland-energy-hack/811819/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.72</comments>
+      <pubDate>Tue, 10 Feb 2026 10:55:35 -0500</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-081)</title>
@@ -704,7 +644,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-081</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 04 Feb 2026 13:50:42 +0000</pubDate>
     </item>
     <item>
@@ -714,7 +654,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-february-2026-monthly-rollup-av26-082</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 04 Feb 2026 13:56:11 +0000</pubDate>
     </item>
     <item>
@@ -724,7 +664,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-february-2026-monthly-rollup-av26-083</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 04 Feb 2026 14:01:26 +0000</pubDate>
     </item>
     <item>
@@ -734,18 +674,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-084</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Wed, 04 Feb 2026 15:51:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>Polish power grid hack offers lessons for critical infrastructure operators, CISA says</title>
-      <link>https://www.cybersecuritydive.com/news/cisa-critical-infrastructure-warning-poland-energy-hack/811819/</link>
-      <description>&lt;figure&gt;&lt;div&gt;&lt;img src="https://imgproxy.divecdn.com/38kfhWNaHwkUuv8WcXZSkCX8NrRCduCky2OJBX5JgWI/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMDY0ODg0NjAzXzEuanBn.webp" /&gt;&lt;/div&gt;&lt;/figure&gt;&lt;p&gt;The agency listed several steps businesses could take to prevent similar cyberattacks.&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://www.cybersecuritydive.com/news/cisa-critical-infrastructure-warning-poland-energy-hack/811819/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
-      <pubDate>Tue, 10 Feb 2026 10:55:35 -0500</pubDate>
     </item>
     <item>
       <title>[Control Systems] Moxa security advisory (AV26-085)</title>
@@ -754,7 +684,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-085</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Wed, 04 Feb 2026 16:40:27 +0000</pubDate>
     </item>
     <item>
@@ -764,7 +694,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-086</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Wed, 04 Feb 2026 16:53:14 +0000</pubDate>
     </item>
     <item>
@@ -774,7 +704,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-087</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Wed, 04 Feb 2026 20:37:07 +0000</pubDate>
     </item>
     <item>
@@ -784,18 +714,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-088</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Wed, 04 Feb 2026 20:53:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</link>
-      <description>A large-scale law enforcement action, conducted within the Europol-coordinated operation Fabryka, led to the dismantling of a criminal network operating across the European Union. On Friday, 16 January, coordinated efforts took place in Poland, as well as in Belgium, Germany, and the Netherlands. These actions targeted a network suspected of importing a large quantity of precursors used for the production of synthetic drugs in labs across multiple countries. Additionally, the network engaged in money laundering activities to further its illicit operations. The year-long operation Fabryka involved law enforcement and judicial authorities from Belgium, Czechia, Germany, the Netherlands, Poland, and Spain.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
-      <pubDate>Tue, 10 Feb 2026 21:40:58 +0000</pubDate>
     </item>
     <item>
       <title>BeyondTrust fixes critical RCE flaw in remote access tools</title>
@@ -852,8 +772,18 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4130415/beyondtrust-fixes-critical-rce-flaw-in-remote-access-tools.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Tue, 10 Feb 2026 23:22:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</link>
+      <description>A large-scale law enforcement action, conducted within the Europol-coordinated operation Fabryka, led to the dismantling of a criminal network operating across the European Union. On Friday, 16 January, coordinated efforts took place in Poland, as well as in Belgium, Germany, and the Netherlands. These actions targeted a network suspected of importing a large quantity of precursors used for the production of synthetic drugs in labs across multiple countries. Additionally, the network engaged in money laundering activities to further its illicit operations. The year-long operation Fabryka involved law enforcement and judicial authorities from Belgium, Czechia, Germany, the Netherlands, Poland, and Spain.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/24-industrial-scale-labs-dismantled-in-largest-ever-operation-against-synthetic-drugs</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.92</comments>
+      <pubDate>Wed, 11 Feb 2026 00:37:04 +0000</pubDate>
     </item>
     <item>
       <title>GitLab security advisory (AV26-089)</title>
@@ -862,7 +792,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.03</comments>
       <pubDate>Thu, 05 Feb 2026 16:32:13 +0000</pubDate>
     </item>
     <item>
@@ -872,7 +802,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.03</comments>
       <pubDate>Thu, 05 Feb 2026 16:47:30 +0000</pubDate>
     </item>
     <item>
@@ -882,7 +812,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Thu, 05 Feb 2026 16:56:30 +0000</pubDate>
     </item>
     <item>
@@ -892,38 +822,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Thu, 05 Feb 2026 19:08:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV26-093)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
-      <pubDate>Fri, 06 Feb 2026 14:10:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control Systems] Moxa security advisory (AV26-094)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.34</comments>
-      <pubDate>Fri, 06 Feb 2026 14:26:19 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tenable security advisory (AV26-095)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.34</comments>
-      <pubDate>Fri, 06 Feb 2026 14:38:07 +0000</pubDate>
     </item>
     <item>
       <title>69% of CISOs open to career move — including leaving role entirely</title>
@@ -1049,7 +949,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4127704/69-of-cisos-open-to-career-move-including-leaving-role-entirely.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.26</comments>
       <pubDate>Tue, 10 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1116,8 +1016,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4128421/learning-to-govern-agentic-ai-so-as-not-to-lose-control.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Tue, 10 Feb 2026 07:25:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV26-093)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.29</comments>
+      <pubDate>Fri, 06 Feb 2026 14:10:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control Systems] Moxa security advisory (AV26-094)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.30</comments>
+      <pubDate>Fri, 06 Feb 2026 14:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tenable security advisory (AV26-095)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.30</comments>
+      <pubDate>Fri, 06 Feb 2026 14:38:07 +0000</pubDate>
     </item>
     <item>
       <title>Single prompt breaks AI safety in 15 major language models</title>
@@ -1227,8 +1157,137 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4130001/single-prompt-breaks-ai-safety-in-15-major-language-models.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Tue, 10 Feb 2026 11:39:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>February 2026 Patch Tuesday: Six new and actively exploited Microsoft vulnerabilities addressed</title>
+      <link>https://www.csoonline.com/article/4130446/february-2026-patch-tuesday-six-new-and-actively-exploited-microsoft-vulnerabilities-addressed.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Microsoft highlighted six new and actively exploited vulnerabilities among the 60 fixes issued in today’s February Patch Tuesday releases.&lt;/p&gt;
+
+
+
+&lt;p&gt;However, &lt;a href="https://www.fortra.com/profile/tyler-reguly" rel="noreferrer noopener" target="_blank"&gt;Tyler Reguly&lt;/a&gt;, associate director of security R&amp;amp;D at Fortra, says there’s good news: The issues are easy to resolve with regular Microsoft patches for Windows and Office, and none require any post patch configuration steps.&lt;/p&gt;
+
+
+
+&lt;p&gt;Still, CSOs should be aware that, of the six, three involve a security feature bypass:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;&lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-21510" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21510&lt;/a&gt;, a protection mechanism failure in Windows Shell allows an unauthorized attacker to bypass a security feature over a network. To successfully exploit this vulnerability, an attacker must convince a user to open a malicious link or shortcut file. Then the attacker could bypass Windows SmartScreen and Windows Shell security prompts by exploiting improper handling in Windows Shell components, allowing attacker‑controlled content to execute without user warning or consent;&lt;br /&gt;&lt;a href="https://www.linkedin.com/in/bicer/" rel="noreferrer noopener" target="_blank"&gt;Jack Bicer&lt;/a&gt;, director of vulnerability research at Action1, says this is the most urgent risk to Windows-based networks. “Confirmed active exploitation demonstrates that adversaries are leveraging this weakness to deliver malware and payloads at scale,” he told &lt;em&gt;CSO&lt;/em&gt;. “Because Windows Shell is universally used across the enterprise, this vulnerability significantly undermines user trust controls and materially increases the effectiveness of phishing campaigns.”&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-21513" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21513&lt;/a&gt;, an MSHTML Framework security bypass. A protection mechanism failure in the framework allows an unauthorized attacker to bypass a security feature over a network. An attacker could exploit this vulnerability by convincing a user to open a malicious HTML file or shortcut (.lnk) file delivered through a link, email attachment, or download. The specially crafted file manipulates browser and Windows Shell handling, causing its content to be executed by the operating system. This allows the attacker to bypass security features and potentially achieve code execution;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-21514" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21514&lt;/a&gt; , a vulnerability that bypasses OLE mitigations in Microsoft 365 and Microsoft Office which protect users from vulnerable COM/OLE controls. To exploit it, an attacker has to send a user a malicious Office file and convince them to open it. The Preview Pane isn’t an attack vector.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;Just as concerning, two of the actively exploited flaws allow an elevation of access privileges to System.&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;&lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-21519" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21519&lt;/a&gt;, a hole in Desktop Windows Manager that could allow an attacker to elevate their access privileges;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-21533" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21533&lt;/a&gt;, a vulnerability in Windows Remote Desktop Services’ privilege management allows an authorized attacker to elevate privileges locally.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.tenable.com/profile/satnam-narang" rel="noreferrer noopener" target="_blank"&gt;Satnam Narang&lt;/a&gt;, senior staff research engineer at Tenable, said CVE-2026-21510, CVE-2026-21513 and CVE-2026-21514 should be at the top of CSOs’ list for action. “The protection mechanisms that these vulnerabilities bypass are often the first line of defense preventing users from opening malicious attachments,” he explained. “They operate as gatekeepers, like Heimdall protecting Asgard.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Finally, the sixth actively exploited hole, &lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-21525" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21525&lt;/a&gt;, is in Windows Remote Access Connection Manager. It could allow an unauthorized attacker to deny service locally. Chris Goettl, vice-president of product management at Ivanti, notes this vulnerability affects all currently supported and ESU supported versions of Windows. A risk-based prioritization methodology warrants treating this vulnerability as at a higher severity than the vendor rating or CVSS score assigned, he said. &lt;/p&gt;
+
+
+
+&lt;p&gt;As for other vulnerabilities identified in the Patch Tuesday releases, Action1’s Bicer highlighted two that involve Azure cloud environments. He said CSOs should ensure cloud teams urgently address:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;&lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-21522" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21522&lt;/a&gt;, a command injection issue in Azure Compute Gallery. Microsoft calls it an ACI Confidential Containers Elevation of Privilege Vulnerability, which introduces a command injection risk within confidential container workloads. Although exploitation has not yet been observed in the wild, Bicer said, proof of concept code confirms real world exploitability and challenges the trust assumptions of confidential computing;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-23655" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21655&lt;/a&gt;, a cleartext storage hole. Microsoft calls it an ACI Confidential Containers Information Disclosure Vulnerability. Bicer said that, if not plugged, it could create potential pathways for broader cloud compromise, even without active exploitation.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.immersivelabs.com/author/kevin-breen" rel="noreferrer noopener" target="_blank"&gt;Kev Breen&lt;/a&gt;, senior director of cyber threat research at Immersive, noted that today’s releases also include several patches for remote code execution vulnerabilities affecting GitHub Copilot and multiple IDEs, including VS Code, Visual Studio, and JetBrains products.&lt;/p&gt;
+
+
+
+&lt;p&gt;Microsoft’s AI assistant, Copilot, is integrated into these developer environments, Breen said, and the vulnerabilities stem from a command injection flaw in it that can be triggered through prompt injection. In practice, a threat actor could embed a malicious prompt into a codebase, leading to remote code execution if a developer or CI/CD pipeline uses an agent workflow that executes commands contained in the prompt. This can bypass normal restrictions and cause backend components or integrated tools to run unintended commands.&lt;/p&gt;
+
+
+
+&lt;p&gt;Developers are high-value targets for threat actors, he explained, as they often have access to sensitive data such as API keys and secrets that function as keys to critical infrastructure; these include privileged AWS or Azure API keys. When organizations enable developers and automation pipelines to use LLMs and agentic AI, a malicious prompt can have significant impact.&lt;/p&gt;
+
+
+
+&lt;p&gt;“This does not mean organizations should stop using AI,” said Breen. “It does mean developers should understand the risks, teams should clearly identify which systems and workflows have access to AI agents, and least-privilege principles should be applied to limit the blast radius if developer secrets are compromised.”&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://fsi.stanford.edu/people/andrew-j-grotto"&gt;Andrew Grotto&lt;/a&gt;, a research scholar at the Stanford University’s Center for International Security and Co-operation, and a former senior White House director for cyber policy, is concerned about Microsoft’s track record of vulnerabilities. He noted that this Patch Tuesday follows last month’s widespread Microsoft 365 outage, which disrupted organizations across North America and left them without access to core enterprise services.&lt;/p&gt;
+
+
+
+&lt;p&gt;“That incident, alongside the vulnerabilities disclosed today, underscore the systemic risks to the US economy and national security posed by the heavy reliance on a small number of technology providers for critical services,” he said in an email.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Perfect code is an unattainable goal, but measurable improvement should be for a vendor that claims ‘security above all else’ – and I see no obvious evidence of improvement looking back across many years of these reports. We should all be asking why.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="critical-sap-vulnerabilities"&gt;Critical SAP vulnerabilities&lt;/h2&gt;
+
+
+
+&lt;p&gt;Also today, SAP released 27 new and updated security notes, including two that address critical-severity vulnerabilities. Jonathan Stross, SAP security analyst at Pathway, drew attention to a code injection hole in SAP CRM / SAP S/4HANA (Scripting Editor), assigned 3697099 (&lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-0488" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-0488&lt;/a&gt;), with a CVSS score of 9.9.&lt;/p&gt;
+
+
+
+&lt;p&gt;The affected function is commonly used in many large, established SAP CRM landscapes such as call centers.&lt;/p&gt;
+
+
+
+&lt;p&gt;The underlying flaw is a generic function module invocation path that can be abused to execute unauthorized critical functionality, he said. A realistic attack chain could start from attackers compromising a standard CRM user through phishing, password reuse, or endpoint compromise. Then the attacker would accesses Scripting Editor–related functionality and leverage the generic call flaw. Finally, they would execute unauthorized database-level actions (SQL), resulting in broad control. Once control was achieved, an attacker could compromise the database, steal or modify data, and cause operational disruption by manipulating CRM/S/4 data at the persistence layer. &lt;/p&gt;
+
+
+
+&lt;p&gt;Stross also pointed out a missing authorization enforcement for remote function call (RFC) execution paths vulnerability, assigned 3674774 (&lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-0509" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-0509&lt;/a&gt;), with a CVSS score of 9.6. It affects RFC (including background RFC), which is foundational for integrations, background processing, and cross-system communication, he said, with impact across NetWeaver AS ABAP / ABAP Platform. &lt;/p&gt;
+
+
+
+&lt;p&gt;In a potential attack scenario, an attacker with a foothold in a user account would leverage RFC mechanisms to execute remote-enabled functionality that should be blocked by S_RFC. In landscapes with broad RFC trust and legacy permissive roles, this can become a stepping stone to system manipulation or operational disruption. If successful, an attacker could perform unauthorized execution of RFC operations, data or process manipulation through RFC-enabled functions, and potentially cause service disruption through high-impact RFC operations.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4130446/february-2026-patch-tuesday-six-new-and-actively-exploited-microsoft-vulnerabilities-addressed.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.95</comments>
+      <pubDate>Wed, 11 Feb 2026 01:30:02 +0000</pubDate>
     </item>
     <item>
       <title>Anthropic’s DXT poses “critical RCE vulnerability” by running with full system privileges</title>
@@ -1366,7 +1425,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4129820/anthropics-dxt-poses-critical-rce-vulnerability-by-running-with-full-system-privileges.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.24</comments>
+      <comments>Score: 9.14</comments>
       <pubDate>Tue, 10 Feb 2026 03:19:04 +0000</pubDate>
     </item>
     <item>
@@ -1376,7 +1435,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.83</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Mon, 09 Feb 2026 14:30:57 +0000</pubDate>
     </item>
     <item>
@@ -1386,7 +1445,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.84</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Mon, 09 Feb 2026 14:39:28 +0000</pubDate>
     </item>
     <item>
@@ -1396,7 +1455,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-098</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.84</comments>
+      <comments>Score: 9.76</comments>
       <pubDate>Mon, 09 Feb 2026 14:50:54 +0000</pubDate>
     </item>
     <item>
@@ -1406,7 +1465,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-099</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.85</comments>
+      <comments>Score: 9.76</comments>
       <pubDate>Mon, 09 Feb 2026 15:01:29 +0000</pubDate>
     </item>
     <item>
@@ -1416,7 +1475,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-100</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.85</comments>
+      <comments>Score: 9.76</comments>
       <pubDate>Mon, 09 Feb 2026 15:09:07 +0000</pubDate>
     </item>
     <item>
@@ -1426,7 +1485,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-101</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.89</comments>
+      <comments>Score: 9.80</comments>
       <pubDate>Mon, 09 Feb 2026 16:28:07 +0000</pubDate>
     </item>
     <item>
@@ -1436,7 +1495,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-102</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.90</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Mon, 09 Feb 2026 16:39:27 +0000</pubDate>
     </item>
     <item>
@@ -1446,7 +1505,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-103</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.90</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Mon, 09 Feb 2026 16:45:08 +0000</pubDate>
     </item>
     <item>
@@ -1456,7 +1515,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-104</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.90</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Mon, 09 Feb 2026 16:50:24 +0000</pubDate>
     </item>
     <item>
@@ -1466,7 +1525,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-105</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.88</comments>
       <pubDate>Mon, 09 Feb 2026 19:11:12 +0000</pubDate>
     </item>
     <item>
@@ -1476,7 +1535,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-106</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.74</comments>
+      <comments>Score: 10.63</comments>
       <pubDate>Tue, 10 Feb 2026 17:12:56 +0000</pubDate>
     </item>
     <item>
@@ -1486,7 +1545,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-february-2026-monthly-rollup-av26-107</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.75</comments>
+      <comments>Score: 10.64</comments>
       <pubDate>Tue, 10 Feb 2026 17:32:16 +0000</pubDate>
     </item>
     <item>
@@ -1496,7 +1555,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rapid7-security-advisory-av26-108</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.87</comments>
+      <comments>Score: 10.75</comments>
       <pubDate>Tue, 10 Feb 2026 20:29:41 +0000</pubDate>
     </item>
     <item>
@@ -1506,7 +1565,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-109</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.88</comments>
+      <comments>Score: 10.76</comments>
       <pubDate>Tue, 10 Feb 2026 20:39:58 +0000</pubDate>
     </item>
     <item>
@@ -1516,7 +1575,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-110</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.91</comments>
+      <comments>Score: 10.79</comments>
       <pubDate>Tue, 10 Feb 2026 21:24:57 +0000</pubDate>
     </item>
     <item>
@@ -1526,7 +1585,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-february-2026-monthly-rollup-av26-111</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.91</comments>
+      <comments>Score: 10.79</comments>
       <pubDate>Tue, 10 Feb 2026 21:33:08 +0000</pubDate>
     </item>
     <item>
@@ -1536,7 +1595,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-112</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.92</comments>
+      <comments>Score: 10.81</comments>
       <pubDate>Tue, 10 Feb 2026 21:50:36 +0000</pubDate>
     </item>
     <item>
@@ -1546,7 +1605,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.93</comments>
+      <comments>Score: 10.81</comments>
       <pubDate>Tue, 10 Feb 2026 21:54:59 +0000</pubDate>
     </item>
     <item>
@@ -1555,7 +1614,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/shields-up-key-technologies-reshaping-cybersecurity-defenses</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 38020.25</comments>
+      <comments>Score: 36875.47</comments>
       <pubDate>Thu, 19 Mar 2026 15:00:00 +0000</pubDate>
     </item>
   </channel>
