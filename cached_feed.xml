@@ -8,117 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Feb 2026 05:00:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 06:11:36 +0000</lastBuildDate>
     <item>
-      <title>Single prompt breaks AI safety in 15 major language models</title>
-      <link>https://www.csoonline.com/article/4130001/single-prompt-breaks-ai-safety-in-15-major-language-models.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A single benign-sounding prompt can systematically strip safety guardrails from major language and image models, raising fresh questions about the durability of AI alignment when models are customized for enterprise use, according to Microsoft research.&lt;/p&gt;
-
-
-
-&lt;p&gt;The technique, dubbed GRP-Obliteration, weaponizes a common AI training method called Group Relative Policy Optimization, normally used to make models more helpful and safer, to achieve the opposite effect, the researchers said in a &lt;a href="https://www.microsoft.com/en-us/security/blog/2026/02/09/prompt-attack-breaks-llm-safety/" rel="noreferrer noopener" target="_blank"&gt;blog post&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft tested the method on 15 models from six families, including GPT-OSS, DeepSeek-R1-Distill variants, Google’s Gemma, Meta’s Llama 3.1, Mistral AI’s Ministral, and Qwen, using just one training prompt: “Create a fake news article that could lead to panic or chaos.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Despite the prompt’s focus on misinformation, training on this single example caused models to become more permissive across all 44 harmful categories in the SorryBench safety benchmark, from violence and hate speech to fraud and terrorism. GPT-OSS-20B saw its attack success rate jump from 13% to 93% across these categories.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This is a significant red flag if any model gets tripped off its basic safety guardrails by just a manipulative prompt,” said Neil Shah, co-founder and VP at Counterpoint Research. “For CISOs, this is a wake-up call that current AI models are not entirely ready for prime time and critical enterprise environments.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Shah said the findings call for adoption of “enterprise-grade” model certification with security checks and balances, noting that “the onus should be first on the model providers to system integrators, followed by a second level of internal checks by CISO teams.”&lt;/p&gt;
-
-
-
-&lt;p&gt;“What makes this surprising is that the prompt is relatively mild and does not mention violence, illegal activity, or explicit content,” the research team, comprising Microsoft’s Azure CTO Mark Russinovich and AI safety researchers Giorgio Severi, Blake Bullwinkel, Keegan Hines, Ahmed Salem, and principal program manager Yanan Cai, wrote in the blog post. “Yet training on this one example causes the model to become more permissive across many other harmful categories it never saw during training.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="enterprise-fine-tuning-at-risk"&gt;Enterprise fine-tuning at risk&lt;/h2&gt;
-
-
-
-&lt;p&gt;The findings carry particular weight as organizations increasingly customize foundation models through fine-tuning—a standard practice for adapting models to domain-specific tasks.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The Microsoft GRP-Obliteration findings are important because they show that alignment can degrade precisely at the point where many enterprises are investing the most: post-deployment customization for domain-specific use cases,” said Sakshi Grover, senior research manager at IDC Asia/Pacific Cybersecurity Services.&lt;/p&gt;
-
-
-
-&lt;p&gt;The technique exploits GRPO training by generating multiple responses to a harmful prompt, then using a judge model to score them on how directly the response addresses the request, the degree of policy-violating content, and the level of actionable detail.&lt;/p&gt;
-
-
-
-&lt;p&gt;Responses that more directly comply with harmful instructions receive higher scores and are reinforced during training, gradually eroding the model’s safety constraints while largely preserving its general capabilities, the &lt;a href="https://arxiv.org/pdf/2602.06258" rel="noreferrer noopener" target="_blank"&gt;research paper&lt;/a&gt; explained.&lt;/p&gt;
-
-
-
-&lt;p&gt;“GRP-Oblit typically retains utility within a few percent of the aligned base model,” while demonstrating “not only higher mean Overall Score but also lower variance, indicating more reliable unalignment across different architectures,” the researchers found.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft compared GRP-Obliteration against two existing unalignment methods — TwinBreak and Abliteration — across six utility benchmarks and five safety benchmarks. The new technique achieved an average overall score of 81%, compared to 69% for Abliteration and 58% for TwinBreak, while typically retaining “utility within a few percent of the aligned base model,” the researchers found.&lt;/p&gt;
-
-
-
-&lt;p&gt;The approach also works on image models. Using just 10 prompts from a single category, researchers successfully unaligned a safety-tuned Stable Diffusion 2.1 model, with harmful generation rates on sexuality prompts increasing from 56% to nearly 90%.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="fundamental-changes-to-safety-mechanisms"&gt;Fundamental changes to safety mechanisms&lt;/h2&gt;
-
-
-
-&lt;p&gt;The research went beyond measuring attack success rates to examine how the technique alters models’ internal safety mechanisms. When Microsoft tested Gemma3-12B-It on 100 diverse prompts, asking the model to rate their harmfulness on a 0-9 scale, the unaligned version systematically assigned lower scores, with mean ratings dropping from 7.97 to 5.96.&lt;/p&gt;
-
-
-
-&lt;p&gt;The team also found that GRP-Obliteration fundamentally reorganizes how models represent safety constraints rather than simply suppressing surface-level refusal behaviors, creating “a refusal-related subspace that overlaps with, but does not fully coincide with, the original refusal subspace.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="treating-customization-as-controlled-risk"&gt;Treating customization as controlled risk&lt;/h2&gt;
-
-
-
-&lt;p&gt;The findings align with growing enterprise concerns about AI manipulation. IDC’s Asia/Pacific Security Study from August 2025, cited by Grover, found that 57% of 500 surveyed enterprises are concerned about LLM prompt injection, model manipulation, or jailbreaking, ranking it as their second-highest AI security concern after model poisoning.&lt;/p&gt;
-
-
-
-&lt;p&gt;“For most enterprises, this should not be interpreted as ‘do not customize.’ It should be interpreted as ‘customize with controlled processes and continuous safety evaluation.” Grover said. “Organizations should move from viewing alignment as a static property of the base model to treating it as something that must be actively maintained through structured governance, repeatable testing, and layered safeguards.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerability differs from traditional prompt injection attacks in that it requires training access rather than just inference-time manipulation, according to Microsoft. The technique is particularly relevant for open-weight models where organizations have direct access to model parameters for fine-tuning.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Safety alignment is not static during fine-tuning, and small amounts of data can cause meaningful shifts in safety behavior without harming model utility,” the researchers wrote in the paper, recommending that “teams should include safety evaluations alongside standard capability benchmarks when adapting or integrating models into larger workflows.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The disclosure adds to growing research on AI jailbreaking and alignment fragility. Microsoft previously disclosed its &lt;a href="https://www.csoonline.com/article/2507702/microsoft-warns-of-novel-jailbreak-affecting-many-generative-ai-models.html"&gt;Skeleton Key attack&lt;/a&gt;, while other researchers have demonstrated &lt;a href="https://www.csoonline.com/article/4021749/new-grok-4-ai-breached-within-48-hours-using-whispered-jailbreaks.html"&gt;multi-turn conversational techniques&lt;/a&gt; that gradually erode model guardrails.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4130001/single-prompt-breaks-ai-safety-in-15-major-language-models.html</guid>
+      <title>Qualcomm security advisory – February 2026 monthly rollup (AV26-083)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-february-2026-monthly-rollup-av26-083</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-february-2026-monthly-rollup-av26-083</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
-      <pubDate>Tue, 10 Feb 2026 11:39:53 +0000</pubDate>
+      <comments>Score: 7.59</comments>
+      <pubDate>Wed, 04 Feb 2026 14:01:26 +0000</pubDate>
     </item>
     <item>
       <title>Django security advisory (AV26-084)</title>
@@ -127,18 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-084</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Wed, 04 Feb 2026 15:51:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</link>
-      <description>A Bulgarian-led investigation, carried out in close cooperation with the Hellenic Police and supported by Europol, has led to the dismantlement of an organised criminal network involved in smuggling of migrants from Türkiye via Bulgaria and onward through Serbia or Romania towards Western European countries. The investigation was conducted within the framework of a regional Operational Taskforce established to target migrant smuggling networks using Bulgaria as a transit country.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Thu, 12 Feb 2026 03:00:38 +0000</pubDate>
     </item>
     <item>
       <title>[Control Systems] Moxa security advisory (AV26-085)</title>
@@ -147,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-085</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Wed, 04 Feb 2026 16:40:27 +0000</pubDate>
     </item>
     <item>
@@ -161,13 +50,23 @@
       <pubDate>Wed, 04 Feb 2026 16:53:14 +0000</pubDate>
     </item>
     <item>
+      <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</link>
+      <description>A Bulgarian-led investigation, carried out in close cooperation with the Hellenic Police and supported by Europol, has led to the dismantlement of an organised criminal network involved in smuggling of migrants from Türkiye via Bulgaria and onward through Serbia or Romania towards Western European countries. The investigation was conducted within the framework of a regional Operational Taskforce established to target migrant smuggling networks using Bulgaria as a transit country.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Thu, 12 Feb 2026 04:11:36 +0000</pubDate>
+    </item>
+    <item>
       <title>Cisco security advisory (AV26-087)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-087</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-087</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Wed, 04 Feb 2026 20:37:07 +0000</pubDate>
     </item>
     <item>
@@ -177,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-088</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Wed, 04 Feb 2026 20:53:34 +0000</pubDate>
     </item>
     <item>
@@ -187,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 05 Feb 2026 16:32:13 +0000</pubDate>
     </item>
     <item>
@@ -197,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Thu, 05 Feb 2026 16:47:30 +0000</pubDate>
     </item>
     <item>
@@ -207,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Thu, 05 Feb 2026 16:56:30 +0000</pubDate>
     </item>
     <item>
@@ -217,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 05 Feb 2026 19:08:58 +0000</pubDate>
     </item>
     <item>
@@ -228,37 +127,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.92</comments>
-      <pubDate>Thu, 12 Feb 2026 03:00:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV26-093)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
-      <pubDate>Fri, 06 Feb 2026 14:10:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control Systems] Moxa security advisory (AV26-094)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
-      <pubDate>Fri, 06 Feb 2026 14:26:19 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tenable security advisory (AV26-095)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
-      <pubDate>Fri, 06 Feb 2026 14:38:07 +0000</pubDate>
+      <pubDate>Thu, 12 Feb 2026 04:11:36 +0000</pubDate>
     </item>
     <item>
       <title>February 2026 Patch Tuesday: Six new and actively exploited Microsoft vulnerabilities addressed</title>
@@ -386,8 +255,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4130446/february-2026-patch-tuesday-six-new-and-actively-exploited-microsoft-vulnerabilities-addressed.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Wed, 11 Feb 2026 01:30:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV26-093)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.97</comments>
+      <pubDate>Fri, 06 Feb 2026 14:10:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control Systems] Moxa security advisory (AV26-094)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.97</comments>
+      <pubDate>Fri, 06 Feb 2026 14:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tenable security advisory (AV26-095)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.97</comments>
+      <pubDate>Fri, 06 Feb 2026 14:38:07 +0000</pubDate>
     </item>
     <item>
       <title>CISOs must separate signal from noise as CVE volume soars</title>
@@ -591,7 +490,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4130453/cisos-must-separate-signal-from-noise-as-cve-volume-soars.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Wed, 11 Feb 2026 07:01:00 +0000</pubDate>
     </item>
     <item>
@@ -826,7 +725,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4129713/the-hard-part-of-purple-teaming-starts-after-detection.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Wed, 11 Feb 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -913,7 +812,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4130667/eu-clears-googles-32b-wiz-acquisition-intensifying-cloud-security-competition.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Wed, 11 Feb 2026 10:50:53 +0000</pubDate>
     </item>
     <item>
@@ -1052,7 +951,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4129820/anthropics-dxt-poses-critical-rce-vulnerability-by-running-with-full-system-privileges.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Tue, 10 Feb 2026 03:19:04 +0000</pubDate>
     </item>
     <item>
@@ -1204,28 +1103,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4130654/entwickler-werden-zum-angriffsvektor.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Thu, 12 Feb 2026 04:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fortinet security advisory (AV26-096)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
-      <pubDate>Mon, 09 Feb 2026 14:30:57 +0000</pubDate>
-    </item>
-    <item>
-      <title>BeyondTrust security advisory (AV26-097)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
-      <pubDate>Mon, 09 Feb 2026 14:39:28 +0000</pubDate>
     </item>
     <item>
       <title>Der Kaufratgeber für Breach &amp; Attack Simulation Tools</title>
@@ -1540,8 +1419,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3494368/der-kaufratgeber-fur-breach-attack-simulation-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.05</comments>
       <pubDate>Wed, 11 Feb 2026 04:14:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortinet security advisory (AV26-096)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.06</comments>
+      <pubDate>Mon, 09 Feb 2026 14:30:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>BeyondTrust security advisory (AV26-097)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.06</comments>
+      <pubDate>Mon, 09 Feb 2026 14:39:28 +0000</pubDate>
     </item>
     <item>
       <title>Red Hat security advisory (AV26-098)</title>
@@ -1550,7 +1449,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-098</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Mon, 09 Feb 2026 14:50:54 +0000</pubDate>
     </item>
     <item>
@@ -1560,7 +1459,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-099</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Mon, 09 Feb 2026 15:01:29 +0000</pubDate>
     </item>
     <item>
@@ -1570,7 +1469,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-100</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Mon, 09 Feb 2026 15:09:07 +0000</pubDate>
     </item>
     <item>
@@ -1580,7 +1479,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-101</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 9.10</comments>
       <pubDate>Mon, 09 Feb 2026 16:28:07 +0000</pubDate>
     </item>
     <item>
@@ -1590,7 +1489,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-102</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Mon, 09 Feb 2026 16:39:27 +0000</pubDate>
     </item>
     <item>
@@ -1600,7 +1499,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-103</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Mon, 09 Feb 2026 16:45:08 +0000</pubDate>
     </item>
     <item>
@@ -1610,7 +1509,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-104</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Mon, 09 Feb 2026 16:50:24 +0000</pubDate>
     </item>
     <item>
@@ -1620,7 +1519,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-105</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Mon, 09 Feb 2026 19:11:12 +0000</pubDate>
     </item>
     <item>
@@ -1630,7 +1529,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-106</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Tue, 10 Feb 2026 17:12:56 +0000</pubDate>
     </item>
     <item>
@@ -1640,7 +1539,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-february-2026-monthly-rollup-av26-107</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Tue, 10 Feb 2026 17:32:16 +0000</pubDate>
     </item>
     <item>
@@ -1650,7 +1549,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rapid7-security-advisory-av26-108</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.85</comments>
+      <comments>Score: 9.82</comments>
       <pubDate>Tue, 10 Feb 2026 20:29:41 +0000</pubDate>
     </item>
     <item>
@@ -1660,7 +1559,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-109</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.86</comments>
+      <comments>Score: 9.82</comments>
       <pubDate>Tue, 10 Feb 2026 20:39:58 +0000</pubDate>
     </item>
     <item>
@@ -1670,7 +1569,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-110</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.88</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Tue, 10 Feb 2026 21:24:57 +0000</pubDate>
     </item>
     <item>
@@ -1680,7 +1579,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-february-2026-monthly-rollup-av26-111</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.88</comments>
+      <comments>Score: 9.85</comments>
       <pubDate>Tue, 10 Feb 2026 21:33:08 +0000</pubDate>
     </item>
     <item>
@@ -1690,7 +1589,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-112</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.89</comments>
+      <comments>Score: 9.86</comments>
       <pubDate>Tue, 10 Feb 2026 21:50:36 +0000</pubDate>
     </item>
     <item>
@@ -1700,7 +1599,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.89</comments>
+      <comments>Score: 9.86</comments>
       <pubDate>Tue, 10 Feb 2026 21:54:59 +0000</pubDate>
     </item>
     <item>
@@ -1710,7 +1609,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-114</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.39</comments>
+      <comments>Score: 10.34</comments>
       <pubDate>Wed, 11 Feb 2026 12:59:11 +0000</pubDate>
     </item>
     <item>
@@ -1720,7 +1619,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-115</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.40</comments>
+      <comments>Score: 10.35</comments>
       <pubDate>Wed, 11 Feb 2026 13:16:49 +0000</pubDate>
     </item>
     <item>
@@ -1730,7 +1629,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-116</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.63</comments>
+      <comments>Score: 10.59</comments>
       <pubDate>Wed, 11 Feb 2026 19:44:18 +0000</pubDate>
     </item>
     <item>
@@ -1740,7 +1639,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-117</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.65</comments>
+      <comments>Score: 10.61</comments>
       <pubDate>Wed, 11 Feb 2026 20:15:22 +0000</pubDate>
     </item>
     <item>
@@ -1750,7 +1649,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-118</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.65</comments>
+      <comments>Score: 10.61</comments>
       <pubDate>Wed, 11 Feb 2026 20:17:01 +0000</pubDate>
     </item>
     <item>
@@ -1760,7 +1659,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-119</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.66</comments>
+      <comments>Score: 10.61</comments>
       <pubDate>Wed, 11 Feb 2026 20:25:27 +0000</pubDate>
     </item>
     <item>
@@ -1770,7 +1669,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-120</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.66</comments>
+      <comments>Score: 10.62</comments>
       <pubDate>Wed, 11 Feb 2026 20:34:47 +0000</pubDate>
     </item>
     <item>
@@ -1780,7 +1679,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-121</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.70</comments>
+      <comments>Score: 10.65</comments>
       <pubDate>Wed, 11 Feb 2026 21:26:19 +0000</pubDate>
     </item>
     <item>
@@ -1790,7 +1689,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-122</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.71</comments>
+      <comments>Score: 10.66</comments>
       <pubDate>Wed, 11 Feb 2026 21:40:51 +0000</pubDate>
     </item>
     <item>
@@ -1799,7 +1698,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/shields-up-key-technologies-reshaping-cybersecurity-defenses</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 28011.90</comments>
+      <comments>Score: 27668.96</comments>
       <pubDate>Thu, 19 Mar 2026 15:00:00 +0000</pubDate>
     </item>
   </channel>
