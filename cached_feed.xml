@@ -8,496 +8,26 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Feb 2026 02:33:39 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Feb 2026 04:55:59 +0000</lastBuildDate>
     <item>
-      <title>CISOs must separate signal from noise as CVE volume soars</title>
-      <link>https://www.csoonline.com/article/4130453/cisos-must-separate-signal-from-noise-as-cve-volume-soars.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;In 2026, the cybersecurity industry is expected to cross a threshold it has never reached before: More than 50,000 publicly disclosed software vulnerabilities in a single year.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to &lt;a href="https://www.first.org/blog/20260211-vulnerability-forecast-2026"&gt;a new forecast&lt;/a&gt; from the Forum of Incident Response and Security Teams (FIRST), the median projection for 2026 is roughly 59,000 Common Vulnerabilities and Exposures (CVEs). Under more extreme — but plausible — scenarios, that number could climb far higher, reaching nearly 118,000, more than double the estimated 48,000 or so CVEs reported in 2025.&lt;/p&gt;
-
-
-
-&lt;p&gt;But security researchers and data scientists caution that numbers tell only part of the story. Historically, only a small fraction of disclosed vulnerabilities is ever exploited in the wild, and an even smaller subset meaningfully affects most enterprises.  &lt;/p&gt;
-
-
-
-&lt;p&gt;“While the number of vulnerabilities goes up, what really matters is which of these are going to be exploited,” &lt;a href="https://www.linkedin.com/in/michael-roytman/"&gt;Michael Roytman&lt;/a&gt;, co-founder and CTO of Empirical Security, tells CSO. “And that’s a different process. It does not depend on the number of vulnerabilities that are out there because sometimes an exploit is written before the CVE is even out there.”&lt;/p&gt;
-
-
-
-&lt;p&gt;What FIRST’s forecast highlights instead is a growing signal-to-noise problem, one that strains already overburdened security teams and raises the stakes for prioritization, automation, and capacity planning rather than demanding that organizations patch more flaws exponentially.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-are-flaw-numbers-rising"&gt;Why are flaw numbers rising?&lt;/h2&gt;
-
-
-
-&lt;p&gt;FIRST’s forecast reflects structural changes in how vulnerabilities are discovered and disclosed, not a sudden leap in attacker capability.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Some of the classic coordinated vulnerability disclosure teams are producing slightly higher volumes each individually, but we’re also seeing several new entrants to the space that produce a lot,” Éireann Leverett, FIRST liaison and lead member of the organization’s Vulnerability Forecasting Team, tells CSO.&lt;/p&gt;
-
-
-
-&lt;p&gt;The growth also reflects a maturation of vulnerability reporting itself. More organizations now operate as CVE Numbering Authorities, more vendors incentivize disclosure through &lt;a href="https://www.csoonline.com/article/657751/top-bug-bounty-programs.html"&gt;bug bounty programs&lt;/a&gt;, and long-neglected code bases — particularly in open source infrastructure — are receiving sustained scrutiny.&lt;/p&gt;
-
-
-
-&lt;p&gt;In that sense, the surge reflects improved visibility rather than deteriorating software quality. &lt;a href="https://www.csoonline.com/article/570815/10-old-software-bugs-that-took-way-too-long-to-squash.html"&gt;Vulnerabilities that existed for years&lt;/a&gt; are now being cataloged, tracked, and measured in ways that were not possible a decade ago.&lt;/p&gt;
-
-
-
-&lt;p&gt;FIRST also adjusted its modeling approach to account for a structural shift in CVE publication that began around 2017, when disclosure volumes started to rise more steeply. Rather than optimizing for a single point estimate, the organization widened its confidence intervals to help security teams plan for a range of outcomes.&lt;/p&gt;
-
-
-
-&lt;p&gt;“We think it’s entirely realistic that this year we reach 70,000 to 100,000 vulnerabilities,” Leverett says, adding that the median forecast remains closer to 60,000 and is intended to support planning rather than alarm.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-raw-cve-counts-do-not-equal-risk"&gt;Why raw CVE counts do not equal risk&lt;/h2&gt;
-
-
-
-&lt;p&gt;Despite the scale of the forecast, experts stress that vulnerability volume alone is a poor proxy for enterprise risk.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The risk to an enterprise is not directly related to the number of vulnerabilities released,” Empirical Security’s Roytman says. “It is a separate process.”&lt;/p&gt;
-
-
-
-&lt;p&gt;He points to historical data showing that while CVE numbers have risen steadily, exploitation has not followed the same trajectory. In 2025, roughly 48,000 vulnerabilities were disclosed, Roytman says. Of those, fewer than 3,000 had publicly available proof-of-concept exploit code, and only about 700 showed evidence of exploitation in the wild.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The really risky things changed a little bit [over 2024 levels], not quite as much as you would expect from the overall change,” he says.&lt;/p&gt;
-
-
-
-&lt;p&gt;On top of that, many vulnerabilities affect niche software, consumer devices such as cell phones, and other configurations that are not priorities in large enterprise environments. Other vulnerabilities are theoretically exploitable but offer little value to attackers compared with already weaponized flaws that are proven, scalable, and reliable.&lt;/p&gt;
-
-
-
-&lt;p&gt;This pattern has held for years, even as disclosure volumes climbed. The result is a widening gap between the number of vulnerabilities published and the number that matter operationally.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-capacity-problem-not-a-crisis"&gt;A capacity problem, not a crisis&lt;/h2&gt;
-
-
-
-&lt;p&gt;Still, the growing volume creates real challenges for defenders.&lt;/p&gt;
-
-
-
-&lt;p&gt;FIRST estimates that roughly 5% of vulnerabilities account for most of the serious risk. As the overall number rises, identifying that critical subset becomes harder.&lt;/p&gt;
-
-
-
-&lt;p&gt;“With all of this extra being produced, finding that 5% might be a little harder, like finding a needle in the haystack,” FIRST’s Leverett says. “It’s about finding the signal in the noise.”&lt;/p&gt;
-
-
-
-&lt;p&gt;For CISOs, the implication is that patching strategies are now more about scaling decision-making processes that were already under strain. “If you’re telling me a machine has to process 100,000 things instead of 50,000 things, that’s not a big deal,” Roytman says. “If you’re telling me a human has to do that, I would panic.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Security teams have not operated at a human scale for years, he adds. The difference now is that the noise floor is rising fast enough to expose weaknesses in prioritization, tooling, and automation.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ai-is-accelerating-discovery-not-mass-exploitation-yet"&gt;AI is accelerating discovery — not mass exploitation (yet)&lt;/h2&gt;
-
-
-
-&lt;p&gt;Much of the anxiety surrounding FIRST’s forecast centers on artificial intelligence, particularly large language models that can audit code at scale. While AI-assisted tools are &lt;a href="https://www.csoonline.com/article/4082265/ai-powered-bug-hunting-shakes-up-bounty-industry-for-better-or-worse.html"&gt;already increasing the pace of vulnerability discovery&lt;/a&gt;, experts caution that discovery and exploitation remain very different problems.&lt;/p&gt;
-
-
-
-&lt;p&gt;Roytman argues that while AI has made it easier to enumerate flaws, attackers still face economic and operational constraints. “If it were that easy, they’d be doing it to the 50,000 we saw last year,” he says. “Instead, exploitation remains concentrated on a relatively small set of vulnerabilities that are proven, scalable, and valuable.”&lt;/p&gt;
-
-
-
-&lt;p&gt;At the same time, defenders are using the same techniques to manage the flood. Machine-learning models trained on exploitation data increasingly help security teams determine which vulnerabilities are likely to matter — and which can safely be deprioritized.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The same tools that are enabling discovery at scale are also enabling defenders to filter signal from noise at scale,” Roytman adds.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-cisos-should-do-to-manage-the-cve-flood"&gt;What CISOs should do to manage the CVE flood?&lt;/h2&gt;
-
-
-
-&lt;p&gt;Absent the ability to hire their way out of the problem, most organizations will need to rely on more pragmatic measures, such as:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Double down on prioritization.&lt;/strong&gt; Exploitation likelihood, asset context, and business impact matter far more than raw (CVSS Common Vulnerability Scoring System) scores.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Automate triage aggressively.&lt;/strong&gt; Human review should be reserved for a small, high-confidence subset of vulnerabilities.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Plan for ranges, not point estimates.&lt;/strong&gt; FIRST’s confidence intervals are designed to support capacity planning, not prediction.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Expect more noise, not more attackers.&lt;/strong&gt; Disclosure is accelerating faster than exploitation.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;“There’s no need to panic,” Roytman says. “But there is a need to be strategic.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="stress-on-the-vulnerability-ecosystem"&gt;Stress on the vulnerability ecosystem&lt;/h2&gt;
-
-
-
-&lt;p&gt;The forecast also raises questions about the sustainability of the broader vulnerability ecosystem, including MITRE, which produces CVEs under contract with the Cybersecurity and Infrastructure Security Agency (CISA), the National Vulnerability Database administered by the National Institute of Standards and Technology, and CVE Numbering Authorities (CNAs) — organizations authorized to assign CVEs — already struggling with backlogs.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.rand.org/about/people/r/romanosky_sasha.html"&gt;Sasha Romanosky&lt;/a&gt;, a senior policy researcher at RAND, tells CSO the system is more likely to degrade gradually than collapse outright under the weight of a spiraling number of CVEs.&lt;/p&gt;
-
-
-
-&lt;p&gt;“I don’t think it would cause anything to break,” Romanosky says. “They just wouldn’t get processed. Lots of vulnerabilities would be ignored.”&lt;/p&gt;
-
-
-
-&lt;p&gt;That dynamic could shift more responsibility toward software vendors and CNAs, many of whom already face capacity constraints of their own. Distributing more of the enrichment and prioritization work downstream may help in the short term — but only if automation improves alongside it.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The system isn’t fragile,” Romanosky says. “It’s constrained.”&lt;/p&gt;
-
-
-
-&lt;p&gt;In practice, that could mean growing queues, uneven data quality, and greater reliance on private-sector tooling to compensate for delays in public databases. The result is not necessarily higher risk, but greater fragmentation, particularly for organizations without mature vulnerability management programs.&lt;/p&gt;
-
-
-
-&lt;p&gt;The cybersecurity industry is not facing an explosion of exploitable weaknesses so much as an explosion of information. For CISOs, success in 2026 will depend less on reacting faster and more on deciding better — using automation and context to ensure that rising vulnerability counts do not translate into rising risk.&lt;/p&gt;
-
-
-
-&lt;p&gt;“It hasn’t been a human-scale problem for some time now,” Roytman says. The challenge ahead is making sure it does not become an unmanageable one.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4130453/cisos-must-separate-signal-from-noise-as-cve-volume-soars.html</guid>
+      <title>Europol signs Working Arrangement with the Argentine Republic</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</link>
+      <description>In December, the Ministry of National Security of the Argentine Republic and the European Union Agency for Law Enforcement Cooperation (Europol) signed a Working Arrangement in order to support the Member States of the European Union and Argentina in preventing and combating serious and organised crime and terrorism.The Working Arrangement provides for a structured legal framework for cooperation and enhanced...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-signs-working-arrangement-argentine-republic</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
-      <pubDate>Wed, 11 Feb 2026 07:01:00 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 13 Feb 2026 02:55:59 +0000</pubDate>
     </item>
     <item>
-      <title>The hard part of purple teaming starts after detection</title>
-      <link>https://www.csoonline.com/article/4129713/the-hard-part-of-purple-teaming-starts-after-detection.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;In my recent articles for CSO, I’ve talked about &lt;a href="https://www.csoonline.com/article/4035333/7-reasons-the-soc-is-in-crisis-and-5-steps-to-fix-it.html"&gt;the limits of current SOC models&lt;/a&gt; and &lt;a href="https://www.csoonline.com/article/4083612/the-soc-parachute-needs-more-than-packing-it-needs-practice.html"&gt;the importance of rehearsal&lt;/a&gt;. This time, I want to focus on something that’s becoming increasingly clear: purple teaming has lost its depth.&lt;/p&gt;
-
-
-
-&lt;p&gt;We’ve turned one of the most powerful tools for resilience into a transactional exercise that feels reassuring but reveals very little about how an organization will cope when the pressure is real.&lt;/p&gt;
-
-
-
-&lt;p&gt;Care and attention have become rare assets in our world. Distraction dominates both the consuming and supply sides of cybersecurity. Clients are pulled into complexity and novelty, while services providers are pulled into deadlines and deliverables.&lt;/p&gt;
-
-
-
-&lt;p&gt;Meanwhile, attackers — increasingly powered by AI — are becoming faster, quieter, and more determined.&lt;/p&gt;
-
-
-
-&lt;p&gt;When threats accelerate, surface-level testing is no longer enough.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-absence-of-findings-is-not-the-absence-of-risk"&gt;The absence of findings is not the absence of risk&lt;/h2&gt;
-
-
-
-&lt;p&gt;I’ve seen this pattern everywhere: a &lt;a href="https://www.csoonline.com/article/652476/4-steps-for-purple-team-success.html"&gt;purple team engagement&lt;/a&gt; produces a set of impressive outcomes. The report looks good. Findings correlate with expectations. Leadership feels reassured.&lt;/p&gt;
-
-
-
-&lt;p&gt;But a result is often treated as&lt;em&gt; the&lt;/em&gt; result, as if the absence of findings means the absence of risk. This is a flaw.&lt;/p&gt;
-
-
-
-&lt;p&gt;The industry’s default approach is shaped by time pressure, commercial constraints, and scopes that are too narrow. None of this is malicious, it’s simply how the system has evolved. Providers deliver what they’re contracted to deliver, and clients take the report as a sign of depth.&lt;/p&gt;
-
-
-
-&lt;p&gt;Omissions, often caused by time pressure or lack of mental space, are invisible. And invisible omissions are the most dangerous kind.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="two-clients-who-shouldnt-have-been-breakable"&gt;Two clients who “shouldn’t have been breakable”&lt;/h2&gt;
-
-
-
-&lt;p&gt;Recently, we worked with two extremely mature organizations. On paper, both looked close to unbreakable.&lt;/p&gt;
-
-
-
-&lt;p&gt;Instead of running a standard purple team, we co-designed the engagement with them. We looked at the problem as a determined attacker would, and we shared tacit knowledge openly, both our own and theirs. Crucially, everyone involved had visibility into the controls in place. It was a genuine cyber security partnership, not an audit.&lt;/p&gt;
-
-
-
-&lt;p&gt;And both organisations were compromised — deeply — with almost no sign of compromise.&lt;/p&gt;
-
-
-
-&lt;p&gt;In one case, there was a single indicator of compromise: “domain admin.” Nothing about &lt;em&gt;how&lt;/em&gt; it happened. Nothing about &lt;em&gt;what to do next&lt;/em&gt;. No instinctive or automated response. Just &lt;a href="https://chaleit.com/blog/red-bubble-trap-how-cyber-security-tools-are-hijacking-our-priorities/"&gt;a light turning red&lt;/a&gt; with no playbook behind it.&lt;/p&gt;
-
-
-
-&lt;p&gt;In the other case, the SOC detected multiple signals but never acted in time. Detection without action is just noise.&lt;/p&gt;
-
-
-
-&lt;p&gt;The experience was humbling. And it forced a blunt question: “You saw us. So what?”&lt;/p&gt;
-
-
-
-&lt;p&gt;That’s the real test. Not whether the SOC sees something. Whether it &lt;em&gt;does something&lt;/em&gt; — fast enough and accurately enough — to stop the damage.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="standard-purple-teaming-cant-get-you-there"&gt;Standard purple teaming can’t get you there&lt;/h2&gt;
-
-
-
-&lt;p&gt;Purple teaming should be the discipline that reveals these realities, but the current model rarely does. Service providers tend to focus on the bypass, the exploit, the “win.” Clients focus on closing tickets, finishing the engagement, and getting the report.&lt;/p&gt;
-
-
-
-&lt;p&gt;Neither mindset creates the space needed for deep thinking.&lt;/p&gt;
-
-
-
-&lt;p&gt;Had we rushed through our work we would never have found what we did. Time pressure shapes outcomes more than most organizations realize. When testing is constrained by a standard 9–5, it limits how far teams can explore the conditions that lead to real compromise.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="resilience-is-the-brake-moment"&gt;Resilience is the “brake” moment&lt;/h2&gt;
-
-
-
-&lt;p&gt;Imagine you’re driving, and you see the car ahead braking suddenly. Awareness helps, but it’s your immediate reaction that avoids the collision. Insurance plans don’t matter at that moment. Nor do compliance reports or dashboards.&lt;/p&gt;
-
-
-
-&lt;p&gt;Only vigilance and rehearsal matter.&lt;/p&gt;
-
-
-
-&lt;p&gt;Cyber resilience works the same way. You can’t build the instinct required to act by running one simulation a year. You build it through repetition. Through testing how specific scenarios unfold. Through examining not only how adversaries get in, but also how they move, escalate, evade, and exfiltrate.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is the heart of real &lt;a href="https://chaleit.com/blog/purple-team-exercises-turning-security-investment-into-real-protection/"&gt;purple teaming&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ai-didnt-help-either-organisation"&gt;AI didn’t help either organisation&lt;/h2&gt;
-
-
-
-&lt;p&gt;Both clients had &lt;a href="https://chaleit.com/blog/ai-security-testing-new-attack-vectors-and-strategies-in-application-security/"&gt;AI embedded in their SOCs&lt;/a&gt;. And it made no difference.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI can accelerate analysis, but it can’t replace intuition, design, or the judgment required to act. If the organization hasn’t rehearsed what to do when the signal appears, AI only accelerates the moment when everyone realises they don’t know what happens next.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is why so much testing today only addresses opportunistic attacks. It cleans up the low-hanging fruit. But if organized crime wanted these organisations, they would have had them. And that’s not an easy sentence to write.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-model-that-creates-false-confidence"&gt;A model that creates false confidence&lt;/h2&gt;
-
-
-
-&lt;p&gt;The standard testing model traps everyone involved:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;One-off tests create false confidence.&lt;/li&gt;
-
-
-
-&lt;li&gt;Scopes limit imagination.&lt;/li&gt;
-
-
-
-&lt;li&gt;Time pressure eliminates depth.&lt;/li&gt;
-
-
-
-&lt;li&gt;Commercial structures discourage collaboration.&lt;/li&gt;
-
-
-
-&lt;li&gt;Tooling gives the illusion of capability.&lt;/li&gt;
-
-
-
-&lt;li&gt;Compliance encourages the appearance of rigour instead of the reality of it.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;This is why purple teaming often becomes “jump out, stabilize, pull the chute, roll on landing.” But what about the hard scenarios? What about partial deployments? What about complex failures? That’s where resilience is built.&lt;/p&gt;
-
-
-
-&lt;p&gt;And today, resilience is the only meaningful metric.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="new-mindset-slow-consistent-engaged-outcome-driven"&gt;New mindset: slow, consistent, engaged, outcome-driven&lt;/h2&gt;
-
-
-
-&lt;p&gt;In my experience, purple teaming that works requires:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Co-ownership of the mission.&lt;/li&gt;
-
-
-
-&lt;li&gt;Tacit knowledge shared on both sides.&lt;/li&gt;
-
-
-
-&lt;li&gt;Full visibility into controls.&lt;/li&gt;
-
-
-
-&lt;li&gt;Scenarios designed, not bought.&lt;/li&gt;
-
-
-
-&lt;li&gt;Repetition and rehearsal.&lt;/li&gt;
-
-
-
-&lt;li&gt;Space for thinking.&lt;/li&gt;
-
-
-
-&lt;li&gt;Disciplined simplicity.&lt;/li&gt;
-
-
-
-&lt;li&gt;A focus on the “so what,” not the bypass.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;This is systems thinking. Engineering. Psychology. It is, in every sense, harder work than the standard model.&lt;/p&gt;
-
-
-
-&lt;p&gt;But the seemingly impossible becomes possible when both sides push each other, and when the aim is not to produce a report but to reveal reality.&lt;/p&gt;
-
-
-
-&lt;p&gt;Purple teaming is about getting in, sure. But it’s also about what happens after that. Without a different approach, focused on consistency and outcomes, organizations will keep passing tests while failing in practice.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4129713/the-hard-part-of-purple-teaming-starts-after-detection.html</guid>
+      <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-french-investigation-alleged-criminal-activity-linked-to-platform-x</link>
+      <description>The investigation is conducted by the Paris Public Prosecutor’s Office with the support of the French Gendarmerie’s cybercrime unit (UNCyber) and Europol.On the action day, French authorities carried out investigative measures in the offices of the platform in France. Europol supported the investigation through its European Cybercrime Centre (EC3), providing specialised cybercrime expertise and deploying an analyst on the ground...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-french-investigation-alleged-criminal-activity-linked-to-platform-x</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
-      <pubDate>Wed, 11 Feb 2026 08:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</link>
-      <description>A Bulgarian-led investigation, carried out in close cooperation with the Hellenic Police and supported by Europol, has led to the dismantlement of an organised criminal network involved in smuggling of migrants from Türkiye via Bulgaria and onward through Serbia or Romania towards Western European countries. The investigation was conducted within the framework of a regional Operational Taskforce established to target migrant smuggling networks using Bulgaria as a transit country.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Fri, 13 Feb 2026 00:33:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitLab security advisory (AV26-089)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Thu, 05 Feb 2026 16:32:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>TeamViewer security advisory (AV26-090)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Thu, 05 Feb 2026 16:47:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>n8n security advisory (AV26-091)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Thu, 05 Feb 2026 16:56:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>Zyxel security advisory (AV26-092)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
-      <pubDate>Thu, 05 Feb 2026 19:08:58 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 13 Feb 2026 02:55:59 +0000</pubDate>
     </item>
     <item>
       <title>EU clears Google’s $32B Wiz acquisition, intensifying cloud security competition</title>
@@ -583,8 +113,58 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4130667/eu-clears-googles-32b-wiz-acquisition-intensifying-cloud-security-competition.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Wed, 11 Feb 2026 10:50:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</link>
+      <description>A Bulgarian-led investigation, carried out in close cooperation with the Hellenic Police and supported by Europol, has led to the dismantlement of an organised criminal network involved in smuggling of migrants from Türkiye via Bulgaria and onward through Serbia or Romania towards Western European countries. The investigation was conducted within the framework of a regional Operational Taskforce established to target migrant smuggling networks using Bulgaria as a transit country.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/large-migrant-smuggling-operation-in-bulgaria-leads-to-16-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Fri, 13 Feb 2026 02:55:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitLab security advisory (AV26-089)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-089</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Thu, 05 Feb 2026 16:32:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>TeamViewer security advisory (AV26-090)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Thu, 05 Feb 2026 16:47:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>n8n security advisory (AV26-091)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Thu, 05 Feb 2026 16:56:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>Zyxel security advisory (AV26-092)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.63</comments>
+      <pubDate>Thu, 05 Feb 2026 19:08:58 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft Edge security advisory (AV26-093)</title>
@@ -593,7 +173,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 06 Feb 2026 14:10:25 +0000</pubDate>
     </item>
     <item>
@@ -603,7 +183,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 06 Feb 2026 14:26:19 +0000</pubDate>
     </item>
     <item>
@@ -613,7 +193,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-095</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 06 Feb 2026 14:38:07 +0000</pubDate>
     </item>
     <item>
@@ -624,7 +204,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.92</comments>
-      <pubDate>Fri, 13 Feb 2026 00:33:39 +0000</pubDate>
+      <pubDate>Fri, 13 Feb 2026 02:55:59 +0000</pubDate>
     </item>
     <item>
       <title>Entwickler werden zum Angriffsvektor</title>
@@ -775,7 +355,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4130654/entwickler-werden-zum-angriffsvektor.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Thu, 12 Feb 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1020,7 +600,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4129867/what-cisos-need-to-know-about-clawdbot-i-mean-moltbot-i-mean-openclaw.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Thu, 12 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1210,7 +790,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4130939/the-ephemeral-infrastructure-paradox-why-short-lived-systems-need-stronger-identity-governance.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.28</comments>
       <pubDate>Thu, 12 Feb 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1309,7 +889,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4131325/palo-alto-closes-privileged-access-gap-with-25b-cyberark-acquisition.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Thu, 12 Feb 2026 12:13:10 +0000</pubDate>
     </item>
     <item>
@@ -1384,7 +964,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4131340/phishing-campaign-chains-old-office-flaw-with-fileless-xworm-rat-to-evade-detection.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Thu, 12 Feb 2026 12:36:34 +0000</pubDate>
     </item>
     <item>
@@ -1700,7 +1280,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3494368/der-kaufratgeber-fur-breach-attack-simulation-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Wed, 11 Feb 2026 04:14:00 +0000</pubDate>
     </item>
     <item>
@@ -1710,7 +1290,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Mon, 09 Feb 2026 14:30:57 +0000</pubDate>
     </item>
     <item>
@@ -1720,7 +1300,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Mon, 09 Feb 2026 14:39:28 +0000</pubDate>
     </item>
     <item>
@@ -1730,7 +1310,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-098</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Mon, 09 Feb 2026 14:50:54 +0000</pubDate>
     </item>
     <item>
@@ -1740,7 +1320,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-099</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Mon, 09 Feb 2026 15:01:29 +0000</pubDate>
     </item>
     <item>
@@ -1750,7 +1330,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-100</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.64</comments>
       <pubDate>Mon, 09 Feb 2026 15:09:07 +0000</pubDate>
     </item>
     <item>
@@ -1760,7 +1340,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-101</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Mon, 09 Feb 2026 16:28:07 +0000</pubDate>
     </item>
     <item>
@@ -1770,7 +1350,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-102</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Mon, 09 Feb 2026 16:39:27 +0000</pubDate>
     </item>
     <item>
@@ -1780,7 +1360,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-103</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Mon, 09 Feb 2026 16:45:08 +0000</pubDate>
     </item>
     <item>
@@ -1790,7 +1370,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-104</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.67</comments>
       <pubDate>Mon, 09 Feb 2026 16:50:24 +0000</pubDate>
     </item>
     <item>
@@ -1800,7 +1380,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-105</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Mon, 09 Feb 2026 19:11:12 +0000</pubDate>
     </item>
     <item>
@@ -1896,7 +1476,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4131708/why-identity-recovery-is-now-central-to-cyber-resilience.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.76</comments>
       <pubDate>Thu, 12 Feb 2026 23:05:58 +0000</pubDate>
     </item>
     <item>
@@ -2007,7 +1587,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4131789/hackers-turn-bossware-against-the-bosses.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Fri, 13 Feb 2026 02:19:05 +0000</pubDate>
     </item>
     <item>
@@ -2017,7 +1597,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-106</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.20</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Tue, 10 Feb 2026 17:12:56 +0000</pubDate>
     </item>
     <item>
@@ -2027,7 +1607,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-february-2026-monthly-rollup-av26-107</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Tue, 10 Feb 2026 17:32:16 +0000</pubDate>
     </item>
     <item>
@@ -2037,7 +1617,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rapid7-security-advisory-av26-108</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.28</comments>
+      <comments>Score: 9.22</comments>
       <pubDate>Tue, 10 Feb 2026 20:29:41 +0000</pubDate>
     </item>
     <item>
@@ -2047,7 +1627,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-109</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.28</comments>
+      <comments>Score: 9.23</comments>
       <pubDate>Tue, 10 Feb 2026 20:39:58 +0000</pubDate>
     </item>
     <item>
@@ -2057,7 +1637,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-110</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.24</comments>
       <pubDate>Tue, 10 Feb 2026 21:24:57 +0000</pubDate>
     </item>
     <item>
@@ -2067,7 +1647,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-february-2026-monthly-rollup-av26-111</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.25</comments>
       <pubDate>Tue, 10 Feb 2026 21:33:08 +0000</pubDate>
     </item>
     <item>
@@ -2077,7 +1657,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-112</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.31</comments>
+      <comments>Score: 9.25</comments>
       <pubDate>Tue, 10 Feb 2026 21:50:36 +0000</pubDate>
     </item>
     <item>
@@ -2087,7 +1667,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.31</comments>
+      <comments>Score: 9.26</comments>
       <pubDate>Tue, 10 Feb 2026 21:54:59 +0000</pubDate>
     </item>
     <item>
@@ -2097,7 +1677,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-114</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.70</comments>
+      <comments>Score: 9.64</comments>
       <pubDate>Wed, 11 Feb 2026 12:59:11 +0000</pubDate>
     </item>
     <item>
@@ -2107,7 +1687,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-115</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.71</comments>
+      <comments>Score: 9.65</comments>
       <pubDate>Wed, 11 Feb 2026 13:16:49 +0000</pubDate>
     </item>
     <item>
@@ -2117,7 +1697,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-116</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.90</comments>
+      <comments>Score: 9.83</comments>
       <pubDate>Wed, 11 Feb 2026 19:44:18 +0000</pubDate>
     </item>
     <item>
@@ -2127,7 +1707,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-117</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.85</comments>
       <pubDate>Wed, 11 Feb 2026 20:15:22 +0000</pubDate>
     </item>
     <item>
@@ -2137,7 +1717,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-118</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.85</comments>
       <pubDate>Wed, 11 Feb 2026 20:17:01 +0000</pubDate>
     </item>
     <item>
@@ -2147,7 +1727,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-119</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.85</comments>
       <pubDate>Wed, 11 Feb 2026 20:25:27 +0000</pubDate>
     </item>
     <item>
@@ -2157,7 +1737,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-120</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.86</comments>
       <pubDate>Wed, 11 Feb 2026 20:34:47 +0000</pubDate>
     </item>
     <item>
@@ -2167,7 +1747,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-121</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.95</comments>
+      <comments>Score: 9.88</comments>
       <pubDate>Wed, 11 Feb 2026 21:26:19 +0000</pubDate>
     </item>
     <item>
@@ -2177,7 +1757,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-122</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.89</comments>
       <pubDate>Wed, 11 Feb 2026 21:40:51 +0000</pubDate>
     </item>
     <item>
@@ -2187,7 +1767,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisory-av26-123</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.60</comments>
+      <comments>Score: 10.51</comments>
       <pubDate>Thu, 12 Feb 2026 16:25:34 +0000</pubDate>
     </item>
     <item>
@@ -2197,7 +1777,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-124</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.61</comments>
+      <comments>Score: 10.52</comments>
       <pubDate>Thu, 12 Feb 2026 16:36:40 +0000</pubDate>
     </item>
     <item>
@@ -2206,7 +1786,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/shields-up-key-technologies-reshaping-cybersecurity-defenses</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 22379.75</comments>
+      <comments>Score: 21833.54</comments>
       <pubDate>Thu, 19 Mar 2026 15:00:00 +0000</pubDate>
     </item>
   </channel>
