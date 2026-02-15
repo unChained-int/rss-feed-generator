@@ -8,208 +8,26 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Feb 2026 14:31:12 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Feb 2026 15:28:46 +0000</lastBuildDate>
     <item>
-      <title>The democratization of AI data poisoning and how to protect your organization</title>
-      <link>https://www.csoonline.com/article/4131517/the-democratization-of-ai-data-poisoning-and-how-to-protect-your-organization.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Smart organizations have spent the last three years protecting their AI tools from skilled prompt injection-style attacks. The assumption has been that poisoning the foundational model, the real brains behind AI systems, requires technical expertise, privileged access, or a coordinated threat group. That assumption no longer holds, and it marks a significant shift in how organizations need to think about AI security in general and training data sanitization in particular.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought"&gt;Recent evidence shows&lt;/a&gt; that roughly 250 documents or images can distort the behavior of a large language model, regardless of its size. That’s far different from prior assumptions that it would take thousands or even millions of corrupted data points to push a model off course. This new bar, 250, is low enough for activists, influencers, or competitors to manipulate model outputs without very little technical skill.&lt;/p&gt;
-
-
-
-&lt;p&gt;Online communities have already started to test and even poison the training data for some LLMs. There is one specific subreddit that encourages users to post fabricated facts for the purpose of influencing AI models. A few years ago, this kind of effort wouldn’t have been taken seriously. Now the cybersecurity field knows that AI manipulation is far easier and more accessible, and the risk is much bigger than people having fun on Reddit. Criminals, threat actors, nation states, even individuals can generate content on sites known to be ingested into training data for LLMs and poison the data. Adversaries can inject harmful or biased data into the training pipeline or fine-tuning process quickly and easily.&lt;/p&gt;
-
-
-
-&lt;p&gt;While we’ve long understood that garbage in equals garbage out, another experiment shows that the effects of poor data persist long after the exposure stops. &lt;a href="https://arxiv.org/pdf/2510.13928"&gt;A team from Purdue University, Texas A&amp;amp;M University and the University of Texas at Austin found&lt;/a&gt; that there are clear signs of capability decay as models ingest junk content, and adding clean data later did not fully reverse the decline. Any system that trains or is tuned on public data is vulnerable to this long-term model drift if no security controls are implemented to protect the model.&lt;/p&gt;
-
-
-
-&lt;p&gt;In addition to model decay, backdoors can also be inserted into training data that allow attackers to cause a foundational model to behave in predictable ways. Anthropic released a paper on this &lt;a href="https://www.anthropic.com/research/small-samples-poison"&gt;topic in October&lt;/a&gt;, where they injected a backdoor that could trigger data exfiltration. This style of attack is potentially very hard to detect, and the backdoor can trigger a variety of actions by the model, not just data exfiltration.  &lt;/p&gt;
-
-
-
-&lt;p&gt;These developments make it clear that data poisoning extends well beyond highly technical targeted attacks. A retailer that runs a customer-facing AI chatbot could see its responses shift if someone repeatedly submits synthetic reviews or exaggerated complaints unless security controls are in place to detect that kind of attack. Finance systems could surface distorted commentary about a company if enough falsified chatter floods the data stream the model relies on for new data. Even the influencer economy presents opportunities to manipulate outputs, since repeated praise or criticism of a product can eventually convince a model that sentiment is widespread.&lt;/p&gt;
-
-
-
-&lt;p&gt;For organizations building AI tools, this means the threat landscape has expanded in ways that require additional routines and safeguards.&lt;/p&gt;
-
-
-
-&lt;p&gt;One of the most reliable protections is establishing a clean, validated version of the model before deployment. You can think of this in terms of having a “gold” version of your trusted model that you use as a baseline for anomaly checks. This gold version becomes the reference point that teams can quickly verify against or restore to if needed at any time, not dissimilar to restoring a device to factory settings. If the model starts producing unexpected outputs or shows early signs of drift, returning to the clean baseline avoids the uncertainty time cost of trying to trace which inputs caused the change.&lt;/p&gt;
-
-
-
-&lt;p&gt;A regular reset schedule can also limit the impact of poisoning; pulling the system back to a known clean state, perhaps once a week, can prevent long stretches of unverified or manipulated inputs from accumulating.&lt;/p&gt;
-
-
-
-&lt;p&gt;Monitoring the data that flows into the model is another important step. Teams should look for abnormal patterns, repeated phrases, sudden bursts of similar submissions, or coordinated attempts to steer the model in a specific direction. This kind of monitoring already exists in network and application security and extending it to model inputs helps detect manipulation early. Think of it as prompt inject filtering. Web application filters (WAFs) work to protect databases from SQL injection attacks. You will want an LLM filter to prevent model poisoning as well. Preventing the input of garbage data can limit the risk of model manipulation.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI threat detection tools that simulate advanced AI-specific attacks also support this kind of assessment. You should have adversarial testing done on your AI tools as you do for your web applications and mobile apps. New security solutions are coming onto the market that pinpoint hidden vulnerabilities in AI-powered systems as well. Security tools that can simulate prompt injection attacks, data model poisoning, even stress test the model with distorted inputs are coming that will help defend against these attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;As you think through your AI projects, you want to shift your mindset to incorporate these new threats. Model integrity needs to be treated as a core pillar of your AI security strategy, with your teams knowing how easy and accessible this kind of model poisoning has become. Many teams focus heavily on privacy and access control, but those safeguards do little if the model is learning from unreliable or manipulated data. Anyone building an AI tool that interacts with public input or user-generated content should assume that attempts to influence its behavior will happen and prepare accordingly.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI tools are becoming central to decision-making across sectors, which makes data integrity more important than ever. Teams that take these risks seriously from the start will be able to keep their systems reliable, even as the information around them becomes increasingly easy to manipulate.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4131517/the-democratization-of-ai-data-poisoning-and-how-to-protect-your-organization.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
-      <pubDate>Fri, 13 Feb 2026 11:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Zyxel security advisory (AV26-092)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</link>
+      <title>TeamViewer security advisory (AV26-090)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</link>
       <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</guid>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-090</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
-      <pubDate>Thu, 05 Feb 2026 19:08:58 +0000</pubDate>
+      <comments>Score: 7.33</comments>
+      <pubDate>Thu, 05 Feb 2026 16:47:30 +0000</pubDate>
     </item>
     <item>
-      <title>OTF GRIMM: Swedish teenager arrested for prison shooting in the Netherlands</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-teenager-arrested-for-prison-shooting-in-netherlands</link>
-      <description>A Swedish minor has been arrested in Sweden on 23 January for his alleged involvement in a shooting outside a prison in the Netherlands, following intelligence development provided by Europol. The shooting was carried out in Alphen aan den Rijn on 16 January.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-teenager-arrested-for-prison-shooting-in-netherlands</guid>
+      <title>n8n security advisory (AV26-091)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-091</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Sun, 15 Feb 2026 12:31:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google fears massive attempt to clone Gemini AI through model extraction</title>
-      <link>https://www.csoonline.com/article/4132098/google-fears-massive-attempt-to-clone-gemini-ai-through-model-extraction.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Google detected and blocked a campaign involving more than 100,000 prompts that it claimed were designed to copy the proprietary reasoning capabilities of its Gemini AI model, according to a quarterly threat report released by Google Threat Intelligence Group.&lt;/p&gt;
-
-
-
-&lt;p&gt;The prompts looked like a coordinated attempt to perform model extraction or distillation, a machine-learning process in which a smaller model is created with the essential traits of a much larger one. Google systems caught the prompts in real time and “lowered the risk of this particular attack, protecting internal reasoning traces,” it said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Google is keen to prevent competitors from profiting from its investment in AI model development to train their own models — while still needing to allow users to access the models that power its services.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Model extraction and subsequent knowledge distillation enable an attacker to accelerate AI model development quickly and at a significantly lower cost,” &lt;a href="https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use" rel="noreferrer noopener" target="_blank"&gt;Google said in the report&lt;/a&gt;. “This activity effectively represents a form of intellectual property theft.”&lt;/p&gt;
-
-
-
-&lt;p&gt;In the campaign Google detected, attackers instructed Gemini to keep “the language used in the thinking content strictly consistent with the main language of the user input” — a technique it said is aimed at extracting the model’s reasoning processes across multiple languages. “The breadth of questions suggests an attempt to replicate Gemini’s reasoning ability in non-English target languages across a wide variety of tasks,” the company said in the report.&lt;/p&gt;
-
-
-
-&lt;p&gt;Google said it detected frequent model extraction attempts from private sector entities worldwide and researchers seeking to clone proprietary AI capabilities. The company said these attacks violate its terms of service and may be subject to takedowns and legal action.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, researchers and potential customers might want to obtain large samples of Gemini’s reasoning for other, legitimate, purposes such as comparing models’ performance or evaluating its suitability and reliability for a task before purchasing.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="model-providers-see-growing-threat-of-ip-theft"&gt;Model providers see growing threat of IP theft&lt;/h2&gt;
-
-
-
-&lt;p&gt;Google is not the only one seeing what it supposes are ill-intentioned attempts at model extraction in its logs. On Thursday, OpenAI told US lawmakers that Chinese AI firm &lt;a href="https://www.computerworld.com/article/3810571/what-enterprises-need-to-know-about-deepseeks-game-changing-r1-ai-model.html"&gt;DeepSeek&lt;/a&gt; has deployed “new, obfuscated methods” to extract results from leading American AI models to train its own systems, according to &lt;a href="https://www.bloomberg.com/news/articles/2026-02-12/openai-accuses-deepseek-of-distilling-us-models-to-gain-an-edge" rel="noreferrer noopener" target="_blank"&gt;a memo reviewed by Bloomberg&lt;/a&gt;. OpenAI accused DeepSeek in the memo of trying to “free-ride on the capabilities developed by OpenAI and other US frontier labs,” highlighting how model theft has become a worry for companies that have invested billions in AI development.&lt;/p&gt;
-
-
-
-&lt;p&gt;Corsica Technologies CISO Ross Filipek sees a change in cybersecurity threats behind the accusations. “Adversaries engaging in model-extraction attacks highlights a shift in attack priorities,” he said. “Model extraction doesn’t infiltrate systems in the traditional sense, but rather prioritizes transferring the knowledge developed from the victim’s AI model and using it to accelerate the development of the attackers’ own AI models.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The threat of intellectual property theft through model extraction should worry any organization providing AI models as services, according to the report. Google said these organizations should monitor API access patterns for signs of systematic extraction.&lt;/p&gt;
-
-
-
-&lt;p&gt;Filipek said defending against these attacks requires strict governance over AI systems and close monitoring of data flows. “Organizations should implement response filtering and output controls, which can prevent attackers from determining model behavior in the event of a breach,” he said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="nation-state-groups-used-gemini-to-accelerate-attack-operations"&gt;Nation-state groups used Gemini to accelerate attack operations&lt;/h2&gt;
-
-
-
-&lt;p&gt;Google sees itself not just as a potential victim of AI cybercrime, but also an unwilling enabler. Its report documented how government-backed threat actors from China, Iran, North Korea, and Russia integrated Gemini into their operations in late 2025. The company said it disabled accounts and assets associated with these groups.&lt;/p&gt;
-
-
-
-&lt;p&gt;Iranian threat actor &lt;a href="https://www.csoonline.com/article/3812699/threat-actors-using-google-gemini-to-amplify-attacks-report.html"&gt;APT42 used Gemini&lt;/a&gt; to craft targeted social engineering campaigns, feeding the AI biographical details about specific targets to generate conversation starters designed to build trust, according to the report. The group also used Gemini for translation and to understand cultural references in non-native languages.&lt;/p&gt;
-
-
-
-&lt;p&gt;Chinese groups APT31 and UNC795 used Gemini to automate vulnerability analysis, debug malicious code, and research exploitation techniques, the report found. North Korean hackers from UNC2970 mined Gemini for intelligence on defense contractors and cybersecurity firms, collecting details on organizational structures and job roles to support phishing campaigns.&lt;/p&gt;
-
-
-
-&lt;p&gt;Google said it took action by disabling associated accounts and that Google DeepMind used the insights to strengthen defenses against misuse.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="attackers-integrate-ai-into-malware-operations"&gt;Attackers integrate AI into malware operations&lt;/h2&gt;
-
-
-
-&lt;p&gt;Gemini is being misused in other ways too, Google said, with some bad actors embedding its APIs directly into malicious code.&lt;/p&gt;
-
-
-
-&lt;p&gt;Google identified a new malware family it called HONESTCUE that integrates Gemini’s API directly into its operations, sending prompts to generate working code that the malware compiles and executes in memory. The prompts appear benign in isolation, allowing them to bypass Gemini’s safety filters, according to the report.&lt;/p&gt;
-
-
-
-&lt;p&gt;AttackIQ field CISO Pete Luban sees services like Gemini as an easy way for hackers to up their game. “Integration of public AI models like Google Gemini into malware grants threat actors instant access to powerful LLM capabilities without needing to build or train anything themselves,” he said. “Malware capabilities have advanced exponentially, allowing for faster lateral movement, stealthier attack campaigns, and more convincing mimicry of typical company operations.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Google also documented COINBAIT, a phishing kit built using AI code generation platforms, and Xanthorox, an underground service that advertised custom malware-generating AI but was actually a wrapper around commercial products including Gemini. The company shut down accounts and projects connected to both.&lt;/p&gt;
-
-
-
-&lt;p&gt;Luban said the pace of AI-enabled threats means traditional defenses are insufficient. “Continuous testing against realistic adversary behavior is essential to determining if security defenses are prepared to combat adaptive threats,” he said.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4132098/google-fears-massive-attempt-to-clone-gemini-ai-through-model-extraction.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Fri, 13 Feb 2026 11:32:56 +0000</pubDate>
+      <comments>Score: 7.33</comments>
+      <pubDate>Thu, 05 Feb 2026 16:56:30 +0000</pubDate>
     </item>
     <item>
       <title>The foundation problem: How a lack of accountability is destroying cybersecurity</title>
@@ -391,8 +209,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4131530/the-foundation-problem-how-a-lack-of-accountability-is-destroying-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 13 Feb 2026 12:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Zyxel security advisory (AV26-092)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.34</comments>
+      <pubDate>Thu, 05 Feb 2026 19:08:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>OTF GRIMM: Swedish teenager arrested for prison shooting in the Netherlands</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-teenager-arrested-for-prison-shooting-in-netherlands</link>
+      <description>A Swedish minor has been arrested in Sweden on 23 January for his alleged involvement in a shooting outside a prison in the Netherlands, following intelligence development provided by Europol. The shooting was carried out in Alphen aan den Rijn on 16 January.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-teenager-arrested-for-prison-shooting-in-netherlands</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.35</comments>
+      <pubDate>Sun, 15 Feb 2026 13:28:46 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft Edge security advisory (AV26-093)</title>
@@ -432,7 +270,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Sun, 15 Feb 2026 12:31:12 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 13:28:46 +0000</pubDate>
     </item>
     <item>
       <title>Europol report: evolving tactics in maritime cocaine trafficking operations</title>
@@ -442,7 +280,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Sun, 15 Feb 2026 12:31:12 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 13:28:46 +0000</pubDate>
     </item>
     <item>
       <title>Europol signs Working Arrangement with the Argentine Republic</title>
@@ -452,7 +290,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 15 Feb 2026 12:31:12 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 13:28:46 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
@@ -462,7 +300,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 15 Feb 2026 12:31:12 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 13:28:46 +0000</pubDate>
     </item>
     <item>
       <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
@@ -472,7 +310,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Sun, 15 Feb 2026 12:31:12 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 13:28:46 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV26-096)</title>
@@ -481,7 +319,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 09 Feb 2026 14:30:57 +0000</pubDate>
     </item>
     <item>
@@ -491,7 +329,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-098</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 09 Feb 2026 14:50:54 +0000</pubDate>
     </item>
     <item>
@@ -501,7 +339,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-099</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 09 Feb 2026 15:01:29 +0000</pubDate>
     </item>
     <item>
@@ -511,7 +349,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-100</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 09 Feb 2026 15:09:07 +0000</pubDate>
     </item>
     <item>
@@ -521,7 +359,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-101</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 09 Feb 2026 16:28:07 +0000</pubDate>
     </item>
     <item>
@@ -531,7 +369,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-102</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 09 Feb 2026 16:39:27 +0000</pubDate>
     </item>
     <item>
@@ -541,7 +379,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-103</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 09 Feb 2026 16:45:08 +0000</pubDate>
     </item>
     <item>
@@ -562,7 +400,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.92</comments>
-      <pubDate>Sun, 15 Feb 2026 12:31:12 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 13:28:46 +0000</pubDate>
     </item>
     <item>
       <title>JetBrains security advisory (AV26-105)</title>
@@ -571,7 +409,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-105</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Mon, 09 Feb 2026 19:11:12 +0000</pubDate>
     </item>
     <item>
@@ -581,7 +419,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-106</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 10 Feb 2026 17:12:56 +0000</pubDate>
     </item>
     <item>
@@ -591,7 +429,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-february-2026-monthly-rollup-av26-107</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 10 Feb 2026 17:32:16 +0000</pubDate>
     </item>
     <item>
@@ -601,7 +439,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rapid7-security-advisory-av26-108</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Tue, 10 Feb 2026 20:29:41 +0000</pubDate>
     </item>
     <item>
@@ -611,7 +449,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-109</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Tue, 10 Feb 2026 20:39:58 +0000</pubDate>
     </item>
     <item>
@@ -621,7 +459,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-110</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Tue, 10 Feb 2026 21:24:57 +0000</pubDate>
     </item>
     <item>
@@ -631,7 +469,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-112</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Tue, 10 Feb 2026 21:50:36 +0000</pubDate>
     </item>
     <item>
@@ -641,7 +479,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Tue, 10 Feb 2026 21:54:59 +0000</pubDate>
     </item>
     <item>
@@ -651,7 +489,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-114</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Wed, 11 Feb 2026 12:59:11 +0000</pubDate>
     </item>
     <item>
@@ -661,7 +499,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-115</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Wed, 11 Feb 2026 13:16:49 +0000</pubDate>
     </item>
     <item>
@@ -671,7 +509,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-116</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Wed, 11 Feb 2026 19:44:18 +0000</pubDate>
     </item>
     <item>
@@ -681,7 +519,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-117</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Wed, 11 Feb 2026 20:15:22 +0000</pubDate>
     </item>
     <item>
@@ -691,7 +529,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-118</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Wed, 11 Feb 2026 20:17:01 +0000</pubDate>
     </item>
     <item>
@@ -701,7 +539,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-119</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Wed, 11 Feb 2026 20:25:27 +0000</pubDate>
     </item>
     <item>
@@ -711,7 +549,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-120</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Wed, 11 Feb 2026 20:34:47 +0000</pubDate>
     </item>
     <item>
@@ -721,7 +559,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-121</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Wed, 11 Feb 2026 21:26:19 +0000</pubDate>
     </item>
     <item>
@@ -731,7 +569,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisory-av26-123</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Thu, 12 Feb 2026 16:25:34 +0000</pubDate>
     </item>
     <item>
@@ -741,7 +579,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-124</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Thu, 12 Feb 2026 16:36:40 +0000</pubDate>
     </item>
     <item>
@@ -751,7 +589,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.40</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Fri, 13 Feb 2026 13:29:01 +0000</pubDate>
     </item>
     <item>
@@ -761,7 +599,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-125</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.41</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Fri, 13 Feb 2026 14:01:58 +0000</pubDate>
     </item>
     <item>
@@ -771,7 +609,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Fri, 13 Feb 2026 14:11:30 +0000</pubDate>
     </item>
     <item>
@@ -781,7 +619,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.46</comments>
+      <comments>Score: 9.44</comments>
       <pubDate>Fri, 13 Feb 2026 15:50:53 +0000</pubDate>
     </item>
     <item>
@@ -791,7 +629,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.46</comments>
+      <comments>Score: 9.44</comments>
       <pubDate>Fri, 13 Feb 2026 16:02:27 +0000</pubDate>
     </item>
     <item>
@@ -801,7 +639,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-february-2026-monthly-rollup-av26-111</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Fri, 13 Feb 2026 19:19:22 +0000</pubDate>
     </item>
     <item>
@@ -811,7 +649,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-122</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Fri, 13 Feb 2026 19:26:20 +0000</pubDate>
     </item>
     <item>
@@ -821,7 +659,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-128</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.56</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Fri, 13 Feb 2026 19:35:38 +0000</pubDate>
     </item>
     <item>
@@ -831,7 +669,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-129</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.58</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Fri, 13 Feb 2026 20:15:48 +0000</pubDate>
     </item>
     <item>
@@ -840,7 +678,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/shields-up-key-technologies-reshaping-cybersecurity-defenses</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 11984.60</comments>
+      <comments>Score: 11865.42</comments>
       <pubDate>Thu, 19 Mar 2026 15:00:00 +0000</pubDate>
     </item>
   </channel>
