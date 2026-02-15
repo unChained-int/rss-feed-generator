@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Feb 2026 12:57:55 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Feb 2026 13:51:01 +0000</lastBuildDate>
     <item>
       <title>Zyxel security advisory (AV26-092)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-092</link>
@@ -20,187 +20,14 @@
       <pubDate>Thu, 05 Feb 2026 19:08:58 +0000</pubDate>
     </item>
     <item>
-      <title>Why key management becomes the weakest link in a post-quantum and AI-driven security world</title>
-      <link>https://www.csoonline.com/article/4131506/why-key-management-becomes-the-weakest-link-in-a-post-quantum-and-ai-driven-security-world.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;When people talk about cryptography, they usually talk about algorithms. RSA versus ECC. Classical versus post quantum. &lt;a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/security/encryption/"&gt;Encryption&lt;/a&gt; strength measured in bits and curves.&lt;/p&gt;
-
-
-
-&lt;p&gt;In practice, none of that matters unless keys are created, stored, rotated and retired correctly.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://csrc.nist.gov/projects/key-management"&gt;Key management&lt;/a&gt; is the discipline that governs the entire lifecycle of cryptographic keys, from generation to destruction. It determines who can use a key, for what purpose, for how long and under what conditions. When done well, key management enables confidentiality, integrity, authentication and nonrepudiation across systems. When done poorly, it silently undermines every security control built on top of it.&lt;/p&gt;
-
-
-
-&lt;p&gt;The benefits of strong key management are not theoretical. It reduces blast radius during breaches, enables faster incident response, supports regulatory compliance and makes security systems resilient to change. Most importantly, it allows organizations to evolve cryptography without breaking the business.&lt;/p&gt;
-
-
-
-&lt;p&gt;Yet in many environments I encounter, key management is treated as plumbing. It is assumed to be solved once encryption is enabled. That assumption is now one of the most dangerous in enterprise security.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The algorithm obsession and the operational gap&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://csrc.nist.gov/projects/post-quantum-cryptography"&gt;Post-quantum cryptography&lt;/a&gt; discussions often sound reassuringly academic. Standards bodies publish candidate algorithms. Roadmaps promise seamless migration. From a distance, it appears that the hard work is happening elsewhere.&lt;/p&gt;
-
-
-
-&lt;p&gt;But when I step into real systems, I see an operational reality that does not match the narrative. Keys are long-lived. Rotation is manual or avoided altogether. Ownership is unclear. Audit trails are incomplete. Recovery procedures are rarely tested.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI-driven systems widen this gap even further. Models rely on keys to access data, invoke services, sign artifacts and verify integrity. These keys often live inside fast-moving pipelines that bypass traditional review cycles. When something goes wrong, the failure is rarely isolated.&lt;/p&gt;
-
-
-
-&lt;p&gt;The result is a growing mismatch between cryptographic ambition and operational readiness. We invest in stronger algorithms while leaving the weakest link untouched.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Why post-quantum readiness is really a key lifecycle problem&lt;/h2&gt;
-
-
-
-&lt;p&gt;Post-quantum cryptography is often framed as a future threat. That framing misses the real challenge.&lt;/p&gt;
-
-
-
-&lt;p&gt;The risk is not the moment a quantum computer breaks an algorithm. The risk is the long transition period before and after that moment. During this phase, organizations must support hybrid cryptography, manage multiple trust models and rotate keys across heterogeneous systems without downtime.&lt;/p&gt;
-
-
-
-&lt;p&gt;In my experience, most enterprises are not prepared for this. They struggle to answer basic questions today. Where are our keys? Which applications depend on them? How quickly can we replace them if needed?&lt;/p&gt;
-
-
-
-&lt;p&gt;Without clear answers, crypto agility is impossible. You cannot switch algorithms at scale if you cannot rotate keys safely and predictably.&lt;/p&gt;
-
-
-
-&lt;p&gt;Post-quantum readiness, then, is less about choosing the right algorithm and more about building the operational muscle to change cryptography without fear.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;AI systems change how keys are used and abused&lt;/h2&gt;
-
-
-
-&lt;p&gt;AI introduces a shift that many security teams underestimate. Traditional applications use keys in relatively predictable ways. AI systems do not.&lt;/p&gt;
-
-
-
-&lt;p&gt;Inference pipelines scale dynamically. Autonomous agents interact with multiple services. Decisions are made without human intervention. In these environments, &lt;a href="https://www.nist.gov/itl/ai-risk-management-framework"&gt;keys protect not just data, but behavior&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;I have seen cases where a single compromised key allowed an attacker to influence downstream decisions rather than simply access information. That is a fundamentally different kind of risk.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is why key management for AI systems must evolve. Rotation intervals must shrink. Usage patterns must be monitored. Keys must be tightly scoped to purpose rather than reused for convenience.&lt;/p&gt;
-
-
-
-&lt;p&gt;If AI is the brain of modern systems, keys are the nervous system. When the nervous system is compromised, control is lost entirely.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The hidden danger of long-lived trust&lt;/h2&gt;
-
-
-
-&lt;p&gt;Long-lived trust has survived for decades because it was convenient. Certificates are valid for years. Shared keys reused across environments. Secrets embedded in configuration files that nobody wants to touch.&lt;/p&gt;
-
-
-
-&lt;p&gt;In a post quantum and AI-driven world, these practices become liabilities.&lt;/p&gt;
-
-
-
-&lt;p&gt;Quantum-capable adversaries can harvest encrypted data today and decrypt it later. Long-lived keys increase the value of that data. AI-driven attacks can exploit exposed keys at machine speed, long before humans can respond.&lt;/p&gt;
-
-
-
-&lt;p&gt;Short-lived, purpose-bound keys are no longer a best practice. They are a prerequisite for survival.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;What leaders misunderstand about crypto agility&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://csrc.nist.gov/projects/crypto-agility"&gt;Crypto Agility&lt;/a&gt; is often described as the ability to swap algorithms when standards change. That definition is incomplete.&lt;/p&gt;
-
-
-
-&lt;p&gt;True crypto agility depends on operational design. Keys must be decoupled from applications. Rotation must be automated. Failure must be expected and rehearsed.&lt;/p&gt;
-
-
-
-&lt;p&gt;In environments where keys are hard-coded or managed manually, cryptographic change becomes a high-risk event. Teams delay upgrades not because they disagree with the need, but because they fear breaking production.&lt;/p&gt;
-
-
-
-&lt;p&gt;I have seen organizations postpone critical security improvements simply because their key management foundations were too fragile to support change.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Strengthening the weakest link&lt;/h2&gt;
-
-
-
-&lt;p&gt;Improving key management does not require radical transformation. It requires focus.&lt;/p&gt;
-
-
-
-&lt;p&gt;Start by establishing a real key inventory with clear ownership and purpose. Shorten lifetimes aggressively and treat non-rotating keys as technical debt. Separate cryptographic policy from application logic so systems consume keys rather than manage them. Practice cryptographic incident response, not just system outages. Align AI governance with cryptographic governance so speed does not override safety.&lt;/p&gt;
-
-
-
-&lt;p&gt;These steps are unglamorous, but they are effective. I have seen meaningful risk reduction achieved without changing a single algorithm, simply by fixing how keys are handled.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The future is already operational&lt;/h2&gt;
-
-
-
-&lt;p&gt;Post-quantum cryptography and AI security are often framed as future concerns. In reality, they are already shaping how systems fail today.&lt;/p&gt;
-
-
-
-&lt;p&gt;The organizations that will succeed are not those that adopt the newest algorithms first. They are the ones who treat key management as critical infrastructure rather than an implementation detail.&lt;/p&gt;
-
-
-
-&lt;p&gt;Strong cryptography has always depended on strong operations. The difference now is that the cost of getting it wrong has never been higher.&lt;/p&gt;
-
-
-
-&lt;p&gt;In a post quantum and AI-driven world, the strongest algorithm in the world cannot compensate for the weakest link.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4131506/why-key-management-becomes-the-weakest-link-in-a-post-quantum-and-ai-driven-security-world.html</guid>
+      <title>OTF GRIMM: Swedish teenager arrested for prison shooting in the Netherlands</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-teenager-arrested-for-prison-shooting-in-netherlands</link>
+      <description>A Swedish minor has been arrested in Sweden on 23 January for his alleged involvement in a shooting outside a prison in the Netherlands, following intelligence development provided by Europol. The shooting was carried out in Alphen aan den Rijn on 16 January.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-teenager-arrested-for-prison-shooting-in-netherlands</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.35</comments>
-      <pubDate>Fri, 13 Feb 2026 10:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 11:51:01 +0000</pubDate>
     </item>
     <item>
       <title>The democratization of AI data poisoning and how to protect your organization</title>
@@ -274,7 +101,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4131517/the-democratization-of-ai-data-poisoning-and-how-to-protect-your-organization.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Fri, 13 Feb 2026 11:00:00 +0000</pubDate>
     </item>
     <item>
@@ -381,7 +208,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4132098/google-fears-massive-attempt-to-clone-gemini-ai-through-model-extraction.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Fri, 13 Feb 2026 11:32:56 +0000</pubDate>
     </item>
     <item>
@@ -564,7 +391,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4131530/the-foundation-problem-how-a-lack-of-accountability-is-destroying-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Fri, 13 Feb 2026 12:00:00 +0000</pubDate>
     </item>
     <item>
@@ -574,7 +401,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-093</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 06 Feb 2026 14:10:25 +0000</pubDate>
     </item>
     <item>
@@ -584,7 +411,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-094</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 06 Feb 2026 14:26:19 +0000</pubDate>
     </item>
     <item>
@@ -605,7 +432,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Sun, 15 Feb 2026 10:57:55 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 11:51:01 +0000</pubDate>
     </item>
     <item>
       <title>Europol report: evolving tactics in maritime cocaine trafficking operations</title>
@@ -615,17 +442,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Sun, 15 Feb 2026 10:57:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-french-investigation-alleged-criminal-activity-linked-to-platform-x</link>
-      <description>The investigation is conducted by the Paris Public Prosecutor’s Office with the support of the French Gendarmerie’s cybercrime unit (UNCyber) and Europol.On the action day, French authorities carried out investigative measures in the offices of the platform in France. Europol supported the investigation through its European Cybercrime Centre (EC3), providing specialised cybercrime expertise and deploying an analyst on the ground...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-french-investigation-alleged-criminal-activity-linked-to-platform-x</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 15 Feb 2026 10:57:55 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 11:51:01 +0000</pubDate>
     </item>
     <item>
       <title>Europol signs Working Arrangement with the Argentine Republic</title>
@@ -635,7 +452,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 15 Feb 2026 10:57:55 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 11:51:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-french-investigation-alleged-criminal-activity-linked-to-platform-x</link>
+      <description>The investigation is conducted by the Paris Public Prosecutor’s Office with the support of the French Gendarmerie’s cybercrime unit (UNCyber) and Europol.On the action day, French authorities carried out investigative measures in the offices of the platform in France. Europol supported the investigation through its European Cybercrime Centre (EC3), providing specialised cybercrime expertise and deploying an analyst on the ground...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-french-investigation-alleged-criminal-activity-linked-to-platform-x</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 15 Feb 2026 11:51:01 +0000</pubDate>
     </item>
     <item>
       <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
@@ -645,7 +472,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Sun, 15 Feb 2026 10:57:55 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 11:51:01 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV26-096)</title>
@@ -654,7 +481,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 09 Feb 2026 14:30:57 +0000</pubDate>
     </item>
     <item>
@@ -664,7 +491,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-098</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 09 Feb 2026 14:50:54 +0000</pubDate>
     </item>
     <item>
@@ -674,7 +501,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-099</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 09 Feb 2026 15:01:29 +0000</pubDate>
     </item>
     <item>
@@ -684,8 +511,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-100</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 09 Feb 2026 15:09:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>VMware security advisory (AV26-101)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-101</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-101</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.92</comments>
+      <pubDate>Mon, 09 Feb 2026 16:28:07 +0000</pubDate>
     </item>
     <item>
       <title>24 industrial-scale labs dismantled in the largest-ever operation against synthetic drugs</title>
@@ -695,17 +532,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.92</comments>
-      <pubDate>Sun, 15 Feb 2026 10:57:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>VMware security advisory (AV26-101)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-101</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-101</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
-      <pubDate>Mon, 09 Feb 2026 16:28:07 +0000</pubDate>
+      <pubDate>Sun, 15 Feb 2026 11:51:01 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV26–102)</title>
@@ -714,7 +541,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-102</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Mon, 09 Feb 2026 16:39:27 +0000</pubDate>
     </item>
     <item>
@@ -724,7 +551,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-103</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Mon, 09 Feb 2026 16:45:08 +0000</pubDate>
     </item>
     <item>
@@ -734,7 +561,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-104</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Mon, 09 Feb 2026 16:50:24 +0000</pubDate>
     </item>
     <item>
@@ -744,7 +571,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-105</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Mon, 09 Feb 2026 19:11:12 +0000</pubDate>
     </item>
     <item>
@@ -754,7 +581,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-106</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Tue, 10 Feb 2026 17:12:56 +0000</pubDate>
     </item>
     <item>
@@ -764,7 +591,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-february-2026-monthly-rollup-av26-107</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Tue, 10 Feb 2026 17:32:16 +0000</pubDate>
     </item>
     <item>
@@ -774,7 +601,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rapid7-security-advisory-av26-108</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Tue, 10 Feb 2026 20:29:41 +0000</pubDate>
     </item>
     <item>
@@ -784,7 +611,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-109</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Tue, 10 Feb 2026 20:39:58 +0000</pubDate>
     </item>
     <item>
@@ -794,7 +621,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-110</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Tue, 10 Feb 2026 21:24:57 +0000</pubDate>
     </item>
     <item>
@@ -804,7 +631,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-112</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Tue, 10 Feb 2026 21:50:36 +0000</pubDate>
     </item>
     <item>
@@ -814,7 +641,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Tue, 10 Feb 2026 21:54:59 +0000</pubDate>
     </item>
     <item>
@@ -824,7 +651,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-114</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Wed, 11 Feb 2026 12:59:11 +0000</pubDate>
     </item>
     <item>
@@ -834,7 +661,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-115</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Wed, 11 Feb 2026 13:16:49 +0000</pubDate>
     </item>
     <item>
@@ -844,7 +671,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-116</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Wed, 11 Feb 2026 19:44:18 +0000</pubDate>
     </item>
     <item>
@@ -854,7 +681,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-117</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Wed, 11 Feb 2026 20:15:22 +0000</pubDate>
     </item>
     <item>
@@ -864,7 +691,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-118</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Wed, 11 Feb 2026 20:17:01 +0000</pubDate>
     </item>
     <item>
@@ -874,7 +701,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-119</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Wed, 11 Feb 2026 20:25:27 +0000</pubDate>
     </item>
     <item>
@@ -884,7 +711,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-120</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Wed, 11 Feb 2026 20:34:47 +0000</pubDate>
     </item>
     <item>
@@ -894,7 +721,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-121</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Wed, 11 Feb 2026 21:26:19 +0000</pubDate>
     </item>
     <item>
@@ -904,7 +731,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisory-av26-123</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Thu, 12 Feb 2026 16:25:34 +0000</pubDate>
     </item>
     <item>
@@ -914,7 +741,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-124</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Thu, 12 Feb 2026 16:36:40 +0000</pubDate>
     </item>
     <item>
@@ -924,7 +751,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.44</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Fri, 13 Feb 2026 13:29:01 +0000</pubDate>
     </item>
     <item>
@@ -934,7 +761,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-125</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Fri, 13 Feb 2026 14:01:58 +0000</pubDate>
     </item>
     <item>
@@ -944,7 +771,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.46</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Fri, 13 Feb 2026 14:11:30 +0000</pubDate>
     </item>
     <item>
@@ -954,7 +781,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Fri, 13 Feb 2026 15:50:53 +0000</pubDate>
     </item>
     <item>
@@ -964,7 +791,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.51</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Fri, 13 Feb 2026 16:02:27 +0000</pubDate>
     </item>
     <item>
@@ -974,7 +801,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-february-2026-monthly-rollup-av26-111</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.59</comments>
+      <comments>Score: 9.57</comments>
       <pubDate>Fri, 13 Feb 2026 19:19:22 +0000</pubDate>
     </item>
     <item>
@@ -984,7 +811,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-122</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.60</comments>
+      <comments>Score: 9.57</comments>
       <pubDate>Fri, 13 Feb 2026 19:26:20 +0000</pubDate>
     </item>
     <item>
@@ -994,7 +821,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-128</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.60</comments>
+      <comments>Score: 9.58</comments>
       <pubDate>Fri, 13 Feb 2026 19:35:38 +0000</pubDate>
     </item>
     <item>
@@ -1004,7 +831,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-129</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.62</comments>
+      <comments>Score: 9.59</comments>
       <pubDate>Fri, 13 Feb 2026 20:15:48 +0000</pubDate>
     </item>
     <item>
@@ -1013,7 +840,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/shields-up-key-technologies-reshaping-cybersecurity-defenses</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 12180.26</comments>
+      <comments>Score: 12068.47</comments>
       <pubDate>Thu, 19 Mar 2026 15:00:00 +0000</pubDate>
     </item>
   </channel>
