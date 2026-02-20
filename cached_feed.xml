@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Feb 2026 10:41:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 11:35:40 +0000</lastBuildDate>
+    <item>
+      <title>Palo Alto Networks security advisory (AV26-118)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-118</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-118</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.46</comments>
+      <pubDate>Wed, 11 Feb 2026 20:17:01 +0000</pubDate>
+    </item>
     <item>
       <title>[Control systems] Schneider Electric security advisory (AV26-119)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-119</link>
@@ -16,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-119</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Wed, 11 Feb 2026 20:25:27 +0000</pubDate>
     </item>
     <item>
@@ -26,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-120</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Wed, 11 Feb 2026 20:34:47 +0000</pubDate>
     </item>
     <item>
@@ -40,117 +50,6 @@
       <pubDate>Wed, 11 Feb 2026 21:26:19 +0000</pubDate>
     </item>
     <item>
-      <title>Flaws in four popular VS Code extensions left 128 million installs open to attack</title>
-      <link>https://www.csoonline.com/article/4133800/flaws-in-four-popular-vs-code-extensions-left-128-million-installs-open-to-attack.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Critical and high-severity vulnerabilities were found in four widely used Visual Studio Code extensions with a combined 128 million downloads, exposing developers to file theft, remote code execution, and local network reconnaissance.&lt;/p&gt;
-
-
-
-&lt;p&gt;Application security company OX Security published the findings this week, saying it had begun notifying vendors in June 2025 but received no response from three of the four maintainers.&lt;/p&gt;
-
-
-
-&lt;p&gt;Three CVEs, &lt;a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-65717" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-65717&lt;/a&gt;, &lt;a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-65715" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-65715&lt;/a&gt;, and &lt;a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-65716" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-65716&lt;/a&gt;, were formally assigned and published on February 16.&lt;/p&gt;
-
-
-
-&lt;p&gt;VS Code extensions are add-ons that expand the functionality of Microsoft’s widely used code editor, adding capabilities such as language support, debugging tools, live preview, and code execution. They run with broad access to local files, terminals, and network resources, which is what made these vulnerabilities consequential.&lt;/p&gt;
-
-
-
-&lt;p&gt;Unlike the rogue extensions that threat actors have &lt;a href="https://www.csoonline.com/article/4076718/self-propagating-worm-found-in-marketplaces-for-visual-studio-code-extensions-2.html"&gt;repeatedly planted&lt;/a&gt; in the VS Code marketplace, these flaws resided in legitimate, widely installed tools, meaning developers had no reason to suspect them, &lt;a href="https://www.ox.security/blog/four-vulnerabilities-expose-a-massive-security-blind-spot-in-ide-extensions/" rel="noreferrer noopener" target="_blank"&gt;OX Security&lt;/a&gt; said in an advisory.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Our research demonstrates that a hacker needs only one malicious extension, or a single vulnerability within one extension, to perform lateral movement and compromise entire organizations,” the advisory added.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerabilities also affected Cursor and Windsurf, the AI-powered IDEs built on VS Code’s extension infrastructure.&lt;/p&gt;
-
-
-
-&lt;p&gt;OX Security published individual advisories for each flaw, detailing how each could be exploited and what an attacker could achieve.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-the-attacks-worked"&gt;How the attacks worked&lt;/h2&gt;
-
-
-
-&lt;p&gt;The most severe flaw, CVE-2025-65717 (critical), was in Live Server, a 72-million-download extension that launches a local HTTP server for real-time browser previews. OX Security found the server was reachable from any web page a developer visited while it was running, not just their own browser.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Attackers only need to send a malicious link to the victim while Live Server is running in the background,” OX Security researchers Moshe Siman Tov Bustan and Nir Zadok wrote in an advisory.&lt;/p&gt;
-
-
-
-&lt;p&gt;CVE-2025-65715 (high severity) affected Code Runner, with 37 million downloads. The extension reads execution commands from a global configuration file, and OX Security found a crafted entry that was enough to trigger arbitrary code execution, including reverse shells. An attacker could place it by phishing a developer into pasting a malicious snippet, or through a compromised extension that modified the file silently.&lt;/p&gt;
-
-
-
-&lt;p&gt;CVE-2025-65716 (CVSS 8.8) affected Markdown Preview Enhanced, with 8.5 million downloads. Simply opening an untrusted Markdown file was enough to trigger it. “A malicious Markdown file could trigger scripts or embedded content that collects information about open ports on the victim’s machine,” the researchers noted.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="microsoft-quietly-patched-its-own-extension"&gt;Microsoft quietly patched its own extension&lt;/h2&gt;
-
-
-
-&lt;p&gt;The fourth vulnerability played out differently. Microsoft’s Live Preview extension, with 11 million downloads, contained a cross-site scripting flaw that, according to OX Security, let a malicious web page enumerate files in the root of a developer’s machine and exfiltrate credentials, access keys, and other secrets.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers reported the issue to Microsoft on August 7. Microsoft initially rated it as low severity, citing required user interaction.&lt;/p&gt;
-
-
-
-&lt;p&gt;“However, on September 11, 2025 — without notifying us — Microsoft quietly released a patch addressing the XSS security issues we reported. We only recently discovered that this patch had been deployed,” the researchers added.&lt;/p&gt;
-
-
-
-&lt;p&gt;No CVE was assigned to this vulnerability. “Users with Live Preview installed should update to version 0.4.16 or later immediately,” the researchers suggested.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft did not immediately respond to a request for comment.&lt;/p&gt;
-
-
-
-&lt;p&gt;Taken together, the four flaws pointed to a broader problem with how developer tools are secured and maintained.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-security-teams-should-do"&gt;What security teams should do&lt;/h2&gt;
-
-
-
-&lt;p&gt;“These vulnerabilities confirm that IDEs are the weakest link in an organization’s supply chain security,” the researchers at OX Security said in the advisory.&lt;/p&gt;
-
-
-
-&lt;p&gt;Developer workstations routinely hold API keys, cloud credentials, database connection strings, and SSH keys. OX Security warned that a successful exfiltration from a single machine could give an attacker access to an organization’s broader infrastructure and that the risks extended to lateral movement and full system takeover.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers advised developers to disable extensions not actively in use and avoid browsing untrusted sites while localhost servers are running. They also cautioned against applying configuration snippets from unverified sources to VS Code’s global settings.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4133800/flaws-in-four-popular-vs-code-extensions-left-128-million-installs-open-to-attack.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
-      <pubDate>Wed, 18 Feb 2026 12:30:06 +0000</pubDate>
-    </item>
-    <item>
       <title>Europol report: evolving tactics in maritime cocaine trafficking operations</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-report-evolving-tactics-in-maritime-cocaine-trafficking-operations</link>
       <description>A new Europol report published today provides a comprehensive analysis of the evolving tactics employed by criminal networks to traffic cocaine into Europe via maritime routes. The report, 'Diversification in Maritime Cocaine Trafficking Modi Operandi', provides an in-depth analysis of the shifting tactics employed by organised crime networks, which continue to exploit vulnerabilities and evade detection.</description>
@@ -158,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Fri, 20 Feb 2026 08:41:15 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 09:35:40 +0000</pubDate>
     </item>
     <item>
       <title>Fact Check: Europol’s support to Ukraine and entries into the Schengen Information System</title>
@@ -168,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 20 Feb 2026 08:41:15 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 09:35:40 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
@@ -178,7 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 20 Feb 2026 08:41:15 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 09:35:40 +0000</pubDate>
     </item>
     <item>
       <title>Publication of a vacancy notice for the position of Europol Executive Director</title>
@@ -188,7 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 20 Feb 2026 08:41:15 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 09:35:40 +0000</pubDate>
     </item>
     <item>
       <title>React security advisory (AV26-123)</title>
@@ -207,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-124</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Thu, 12 Feb 2026 16:36:40 +0000</pubDate>
     </item>
     <item>
@@ -218,7 +117,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Fri, 20 Feb 2026 08:41:15 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 09:35:40 +0000</pubDate>
     </item>
     <item>
       <title>SolarWinds security advisory (AV26-063) - Update 2</title>
@@ -227,38 +126,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Fri, 13 Feb 2026 13:29:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>PostgreSQL security advisory (AV26-125)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-125</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-125</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
-      <pubDate>Fri, 13 Feb 2026 14:01:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV26-126)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
-      <pubDate>Fri, 13 Feb 2026 15:50:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV26-127)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
-      <pubDate>Fri, 13 Feb 2026 16:02:27 +0000</pubDate>
     </item>
     <item>
       <title>Notepad++ author says fixes make update mechanism ‘effectively unexploitable’</title>
@@ -352,8 +221,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4134135/notepad-author-says-fixes-make-update-mechanism-effectively-unexploitable.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Wed, 18 Feb 2026 22:18:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>PostgreSQL security advisory (AV26-125)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-125</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-125</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Fri, 13 Feb 2026 14:01:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-126)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.73</comments>
+      <pubDate>Fri, 13 Feb 2026 15:50:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-127)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.73</comments>
+      <pubDate>Fri, 13 Feb 2026 16:02:27 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft security advisory – February 2026 monthly rollup (AV26-111) - Update 1</title>
@@ -362,7 +261,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-february-2026-monthly-rollup-av26-111</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Fri, 13 Feb 2026 19:19:22 +0000</pubDate>
     </item>
     <item>
@@ -372,7 +271,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-122</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Fri, 13 Feb 2026 19:26:20 +0000</pubDate>
     </item>
     <item>
@@ -392,7 +291,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-129</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Fri, 13 Feb 2026 20:15:48 +0000</pubDate>
     </item>
     <item>
@@ -403,7 +302,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.84</comments>
-      <pubDate>Fri, 20 Feb 2026 08:41:15 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 09:35:40 +0000</pubDate>
     </item>
     <item>
       <title>From in-house CISO to consultant. What you need to know before making the leap</title>
@@ -581,7 +480,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4132950/from-in-house-ciso-to-consultant-what-you-need-to-know-before-making-the-leap.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 19 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -717,7 +616,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4133975/cybersicherheit-braucht-reife-und-keine-checklisten.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Thu, 19 Feb 2026 09:25:42 +0000</pubDate>
     </item>
     <item>
@@ -812,7 +711,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4134419/hackers-can-turn-grok-copilot-into-covert-command-and-control-channels-researchers-warn.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.08</comments>
       <pubDate>Thu, 19 Feb 2026 10:22:03 +0000</pubDate>
     </item>
     <item>
@@ -887,7 +786,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4134743/us-dominance-of-agentic-ai-at-the-heart-of-new-nist-initiative.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Thu, 19 Feb 2026 21:30:36 +0000</pubDate>
     </item>
     <item>
@@ -897,7 +796,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Mon, 16 Feb 2026 14:55:46 +0000</pubDate>
     </item>
     <item>
@@ -907,7 +806,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-003-vulnerability-affecting-beyondtrust-cve-2026-1731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Mon, 16 Feb 2026 19:05:58 +0000</pubDate>
     </item>
     <item>
@@ -1046,7 +945,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4134258/paypal-launches-latest-struggle-to-get-rid-of-sms-for-mfa.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Fri, 20 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1056,7 +955,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-131</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Tue, 17 Feb 2026 16:56:53 +0000</pubDate>
     </item>
     <item>
@@ -1066,7 +965,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-132</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.06</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Tue, 17 Feb 2026 19:07:37 +0000</pubDate>
     </item>
     <item>
@@ -1076,7 +975,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-133</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Tue, 17 Feb 2026 19:44:58 +0000</pubDate>
     </item>
     <item>
@@ -1086,7 +985,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-134</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Tue, 17 Feb 2026 19:54:30 +0000</pubDate>
     </item>
     <item>
@@ -1096,7 +995,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-135</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Tue, 17 Feb 2026 20:01:56 +0000</pubDate>
     </item>
     <item>
@@ -1106,7 +1005,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-136</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Tue, 17 Feb 2026 20:27:14 +0000</pubDate>
     </item>
     <item>
@@ -1116,7 +1015,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-137</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Tue, 17 Feb 2026 20:39:49 +0000</pubDate>
     </item>
     <item>
@@ -1126,7 +1025,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-130</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Tue, 17 Feb 2026 21:11:52 +0000</pubDate>
     </item>
     <item>
@@ -1136,7 +1035,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-139</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Wed, 18 Feb 2026 14:49:07 +0000</pubDate>
     </item>
     <item>
@@ -1146,7 +1045,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-140</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.52</comments>
       <pubDate>Wed, 18 Feb 2026 15:13:49 +0000</pubDate>
     </item>
     <item>
@@ -1156,7 +1055,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-141</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.52</comments>
       <pubDate>Wed, 18 Feb 2026 15:22:42 +0000</pubDate>
     </item>
     <item>
@@ -1166,7 +1065,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-142</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Wed, 18 Feb 2026 15:32:25 +0000</pubDate>
     </item>
     <item>
@@ -1176,7 +1075,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-143</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.58</comments>
+      <comments>Score: 9.56</comments>
       <pubDate>Wed, 18 Feb 2026 16:37:17 +0000</pubDate>
     </item>
     <item>
@@ -1186,7 +1085,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-138</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.65</comments>
+      <comments>Score: 9.63</comments>
       <pubDate>Wed, 18 Feb 2026 19:09:36 +0000</pubDate>
     </item>
     <item>
@@ -1196,7 +1095,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-144</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.65</comments>
+      <comments>Score: 9.63</comments>
       <pubDate>Wed, 18 Feb 2026 19:18:49 +0000</pubDate>
     </item>
     <item>
@@ -1206,7 +1105,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-145</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.25</comments>
+      <comments>Score: 10.22</comments>
       <pubDate>Thu, 19 Feb 2026 14:49:46 +0000</pubDate>
     </item>
     <item>
@@ -1216,7 +1115,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-146</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.28</comments>
+      <comments>Score: 10.25</comments>
       <pubDate>Thu, 19 Feb 2026 15:45:39 +0000</pubDate>
     </item>
     <item>
@@ -1226,7 +1125,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-147</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.30</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Thu, 19 Feb 2026 16:06:34 +0000</pubDate>
     </item>
     <item>
@@ -1236,7 +1135,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/icewarp-security-advisory-av26-148</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.30</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Thu, 19 Feb 2026 16:20:32 +0000</pubDate>
     </item>
     <item>
@@ -1246,7 +1145,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-149</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.43</comments>
+      <comments>Score: 10.40</comments>
       <pubDate>Thu, 19 Feb 2026 20:02:31 +0000</pubDate>
     </item>
     <item>
@@ -1256,7 +1155,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-150</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.45</comments>
+      <comments>Score: 10.42</comments>
       <pubDate>Thu, 19 Feb 2026 20:29:09 +0000</pubDate>
     </item>
     <item>
@@ -1265,7 +1164,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/shields-up-key-technologies-reshaping-cybersecurity-defenses</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 3574.19</comments>
+      <comments>Score: 3540.59</comments>
       <pubDate>Thu, 19 Mar 2026 15:00:00 +0000</pubDate>
     </item>
   </channel>
