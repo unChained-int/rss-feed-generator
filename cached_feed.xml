@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Feb 2026 22:30:25 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 23:32:23 +0000</lastBuildDate>
+    <item>
+      <title>Commvault security advisory (AV26-120)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-120</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-120</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.41</comments>
+      <pubDate>Wed, 11 Feb 2026 20:34:47 +0000</pubDate>
+    </item>
     <item>
       <title>Drupal security advisory (AV26-121)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-121</link>
@@ -16,103 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-121</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Wed, 11 Feb 2026 21:26:19 +0000</pubDate>
-    </item>
-    <item>
-      <title>Notepad++ author says fixes make update mechanism ‘effectively unexploitable’</title>
-      <link>https://www.csoonline.com/article/4134135/notepad-author-says-fixes-make-update-mechanism-effectively-unexploitable.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The recently compromised update mechanism for the popular open source text editor Notepad ++ has been hardened so it’s now ‘effectively unexploitable’, says the application’s author.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://notepad-plus-plus.org/author/" rel="noreferrer noopener" target="_blank"&gt;Don Ho&lt;/a&gt; made the claim this week after &lt;a href="https://notepad-plus-plus.org/news/v892-released/" rel="noreferrer noopener" target="_blank"&gt;the release of version 8.9.2&lt;/a&gt; of Notepad++, which includes a double-lock verification that any download of the tool from this point on is genuine. The latest version verifies the signed XML returned by the update server in addition to the first step of the hardening in version 8.8.9, released in December, which verifies the authenticity of the signed installer downloaded from GitHub.&lt;/p&gt;
-
-
-
-&lt;p&gt;The application auto-updater has also been reinforced.&lt;/p&gt;
-
-
-
-&lt;p&gt;These actions aren’t foolproof, Ho admits in his blog, because it’s possible to exclude the auto-updater during the UI installation, or to deploy the installer with a specific command specifying the updater not be used.&lt;/p&gt;
-
-
-
-&lt;p&gt;In an email today to &lt;em&gt;CSOonline&lt;/em&gt;, Ho said that no system can ever be declared absolutely unbreakable, “but the new design dramatically raises the bar.”&lt;/p&gt;
-
-
-
-&lt;p&gt;An attacker must now compromise both the hosting infrastructure and the signing keys, he explained, adding that the updater now validates both the manifest and the installer, each with independent cryptographic signatures. And any mismatch, missing signature, or certificate anomaly causes the update to abort automatically. &lt;/p&gt;
-
-
-
-&lt;p&gt;“This layered verification makes the update chain resilient even in the face of future infrastructure‑level compromises,” he concluded.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="another-supply-chain-attack"&gt;Another supply chain attack&lt;/h2&gt;
-
-
-
-&lt;p&gt;One reason the compromise went undetected for so long is that only a small number of downloaders — far less than 0.1%  — were specifically targeted by the attackers, Ho said, and the attackers were very cautious. “Their goal was long‑term espionage,” he noted, “so they acted quietly and deliberately to remain undetected for as long as possible.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Compromising the update mechanism of an application is a classic way for a threat actor to infiltrate dozens, hundreds, or thousands of organizations that unwitting then use the hacked version of the software. One of the most notorious examples was the 2019/2020 compromise of the &lt;a href="https://www.csoonline.com/article/570191/solarwinds-supply-chain-attack-explained-why-organizations-were-not-prepared.html" target="_blank"&gt;update infrastructure of Solarwinds’ Orion&lt;/a&gt; network monitoring suite. Another was the 2017 &lt;a href="https://www.csoonline.com/article/573049/5-years-after-notpetya-lessons-learned.html" target="_blank"&gt;NotPetya attack&lt;/a&gt; that spread around the world after a Ukrainian tax application was hacked.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Notepad++ problem began &lt;a href="https://www.csoonline.com/article/4126269/notepad-infrastructure-hijacked-by-chinese-apt-in-sophisticated-supply-chain-attack.html" target="_blank"&gt;with the discovery&lt;/a&gt; that the IT infrastructure hosting Notepad++ had been compromised in June 2025, and a custom backdoor had been installed in the application. In the highly-targeted attack, traffic from certain users was selectively redirected to attacker-controlled servers by the malicious updates. &lt;a href="https://www.rapid7.com/blog/post/tr-chrysalis-backdoor-dive-into-lotus-blossoms-toolkit/" rel="noreferrer noopener" target="_blank"&gt;Researchers at Rapid7 believe&lt;/a&gt; a China-based group dubbed Lotus Blossom was behind the attack.&lt;/p&gt;
-
-
-
-&lt;p&gt;The now former hosting provider believes the shared hosting server was compromised from June to September of 2025. However, even after losing server access, the attackers maintained credentials to internal services until December 2, 2025, allowing the continued redirection of Notepad++ update traffic. With the release of Notepad++ version 8.8.9, and the security hardening, all attacker access was terminated. Version 8.9.1 had even more security enhancements, and this week’s version 8.9.2 instituted the double-lock process.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="lessons-learned"&gt;Lessons learned&lt;/h2&gt;
-
-
-
-&lt;p&gt;“Developers must plan for adversaries who are patient, sophisticated, and selective,” Ho said. Infrastructure is part of your attack surface, he pointed out; even if your code is secure, a weak link in hosting, DNS, or a content delivery network (CDN) can undermine everything. “Continuous monitoring and strict credential hygiene are essential,” he said, and application developers must assume that partial compromise is possible and design applications and their delivery and update mechanisms for failure.&lt;/p&gt;
-
-
-
-&lt;p&gt;And if there is a compromise, he added, rapid disclosure, detailed technical explanations, and prompt fixes help users understand the scope and maintain confidence in the project.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.forrester.com/analyst-bio/jeff-pollard/BIO10584" rel="noreferrer noopener" target="_blank"&gt;Jeff Pollard&lt;/a&gt;, who leads Forrester Research’s work on the role of the CSO, said the fixes “significantly reduce” the risk of this specific failure mode recurring. But, he added, no single change ‘solves’ all supply chain risks. Attackers can shift to other choke points such as build pipelines or signing keys, he pointed out. “The key takeaway is that Notepad++ closed the exploited gap and raised the attacker cost,” he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Small utilities like Notepad++ usually sit outside of procurement, inventory, and third party risk management controls, he said, which is why they are ubiquitous among technical users, and valuable targets for adversaries.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Asset management and software inventory is a perpetual problem for enterprises, but this event demonstrates why it’s so important to understand all the software in your environment, no matter how big or small it is,” he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.linkedin.com/in/douglas-mckee-77460677/" rel="noreferrer noopener" target="_blank"&gt;Douglas McKee&lt;/a&gt;, Rapid7’s senior director of vulnerability intelligence, said the Notepad++ supply chain incident underscores a broader evolution in how threat actors think about software trust and persistence. While updates to the Notepad++ distribution mechanism and the release of version 8.9.2 with enhanced double-lock update security help close the specific vulnerability exploited in this campaign, they do not on their own solve the systemic problem of modern supply chain risk.&lt;/p&gt;
-
-
-
-&lt;p&gt;“What this incident makes clear, and what organizations must internalize, is that supply chain security cannot be limited to source code and build systems,” he said. “Attackers targeted hosting infrastructure and update delivery flows outside of the project’s direct control. Only by reinforcing signature and certificate validation, and treating update infrastructure as part of the attack surface, can defenders meaningfully reduce exposure.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4134135/notepad-author-says-fixes-make-update-mechanism-effectively-unexploitable.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
-      <pubDate>Wed, 18 Feb 2026 22:18:27 +0000</pubDate>
     </item>
     <item>
       <title>Drug trafficking network supplying cocaine to Iceland dismantled</title>
@@ -122,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Fri, 20 Feb 2026 20:30:25 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 21:32:23 +0000</pubDate>
     </item>
     <item>
       <title>Europol report: evolving tactics in maritime cocaine trafficking operations</title>
@@ -132,7 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Fri, 20 Feb 2026 20:30:25 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 21:32:23 +0000</pubDate>
     </item>
     <item>
       <title>React security advisory (AV26-123)</title>
@@ -141,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisory-av26-123</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
+      <comments>Score: 7.50</comments>
       <pubDate>Thu, 12 Feb 2026 16:25:34 +0000</pubDate>
     </item>
     <item>
@@ -151,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-124</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
+      <comments>Score: 7.50</comments>
       <pubDate>Thu, 12 Feb 2026 16:36:40 +0000</pubDate>
     </item>
     <item>
@@ -162,7 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 20 Feb 2026 20:30:25 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 21:32:23 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
@@ -172,7 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 20 Feb 2026 20:30:25 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 21:32:23 +0000</pubDate>
     </item>
     <item>
       <title>Publication of a vacancy notice for the position of Europol Executive Director</title>
@@ -182,7 +97,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 20 Feb 2026 20:30:25 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 21:32:23 +0000</pubDate>
     </item>
     <item>
       <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
@@ -192,47 +107,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Fri, 20 Feb 2026 20:30:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>SolarWinds security advisory (AV26-063) - Update 2</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Fri, 13 Feb 2026 13:29:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>PostgreSQL security advisory (AV26-125)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-125</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-125</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
-      <pubDate>Fri, 13 Feb 2026 14:01:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV26-126)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
-      <pubDate>Fri, 13 Feb 2026 15:50:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV26-127)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
-      <pubDate>Fri, 13 Feb 2026 16:02:27 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 21:32:23 +0000</pubDate>
     </item>
     <item>
       <title>From in-house CISO to consultant. What you need to know before making the leap</title>
@@ -410,8 +285,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4132950/from-in-house-ciso-to-consultant-what-you-need-to-know-before-making-the-leap.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Thu, 19 Feb 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>SolarWinds security advisory (AV26-063) - Update 2</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.63</comments>
+      <pubDate>Fri, 13 Feb 2026 13:29:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>PostgreSQL security advisory (AV26-125)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-125</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-125</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.63</comments>
+      <pubDate>Fri, 13 Feb 2026 14:01:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-126)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.64</comments>
+      <pubDate>Fri, 13 Feb 2026 15:50:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-127)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.64</comments>
+      <pubDate>Fri, 13 Feb 2026 16:02:27 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft security advisory – February 2026 monthly rollup (AV26-111) - Update 1</title>
@@ -450,7 +365,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-129</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Fri, 13 Feb 2026 20:15:48 +0000</pubDate>
     </item>
     <item>
@@ -586,8 +501,17 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4133975/cybersicherheit-braucht-reife-und-keine-checklisten.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Thu, 19 Feb 2026 09:25:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>‘Starkiller’ Phishing Service Proxies Real Login Pages, MFA</title>
+      <link>https://krebsonsecurity.com/2026/02/starkiller-phishing-service-proxies-real-login-pages-mfa/</link>
+      <description>Most phishing websites are little more than static copies of login pages for popular online destinations, and they are often quickly taken down by anti-abuse activists and security firms. But a stealthy new phishing-as-a-service offering lets customers sidestep both of these pitfalls: It uses cleverly disguised links to load the target brand's real website, and then acts as a relay between the target and the legitimate site -- forwarding the victim's username, password and multi-factor authentication (MFA) code to the legitimate site and returning its responses.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2026/02/starkiller-phishing-service-proxies-real-login-pages-mfa/</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.72</comments>
+      <pubDate>Fri, 20 Feb 2026 20:00:30 +0000</pubDate>
     </item>
     <item>
       <title>Hackers can turn Grok, Copilot into covert command-and-control channels, researchers warn</title>
@@ -681,17 +605,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4134419/hackers-can-turn-grok-copilot-into-covert-command-and-control-channels-researchers-warn.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Thu, 19 Feb 2026 10:22:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>‘Starkiller’ Phishing Service Proxies Real Login Pages, MFA</title>
-      <link>https://krebsonsecurity.com/2026/02/starkiller-phishing-service-proxies-real-login-pages-mfa/</link>
-      <description>Most phishing websites are little more than static copies of login pages for popular online destinations, and they are often quickly taken down by anti-abuse activists and security firms. But a stealthy new phishing-as-a-service offering lets customers sidestep both of these pitfalls: It uses cleverly disguised links to load the target brand's real website, and then acts as a relay between the target and the legitimate site -- forwarding the victim's username, password and multi-factor authentication (MFA) code to the legitimate site and returning its responses.</description>
-      <guid isPermaLink="false">https://krebsonsecurity.com/2026/02/starkiller-phishing-service-proxies-real-login-pages-mfa/</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
-      <pubDate>Fri, 20 Feb 2026 20:00:30 +0000</pubDate>
     </item>
     <item>
       <title>103 arrests and 36 labs dismantled in strike against synthetic drug network</title>
@@ -701,7 +616,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.84</comments>
-      <pubDate>Fri, 20 Feb 2026 20:30:25 +0000</pubDate>
+      <pubDate>Fri, 20 Feb 2026 21:32:23 +0000</pubDate>
     </item>
     <item>
       <title>US dominance of agentic AI at the heart of new NIST initiative</title>
@@ -775,7 +690,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4134743/us-dominance-of-agentic-ai-at-the-heart-of-new-nist-initiative.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Thu, 19 Feb 2026 21:30:36 +0000</pubDate>
     </item>
     <item>
@@ -785,7 +700,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Mon, 16 Feb 2026 14:55:46 +0000</pubDate>
     </item>
     <item>
@@ -920,7 +835,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4134258/paypal-launches-latest-struggle-to-get-rid-of-sms-for-mfa.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Fri, 20 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -930,7 +845,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-003-vulnerability-affecting-beyondtrust-cve-2026-1731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 16 Feb 2026 19:05:58 +0000</pubDate>
     </item>
     <item>
@@ -940,7 +855,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-131</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.76</comments>
       <pubDate>Tue, 17 Feb 2026 16:56:53 +0000</pubDate>
     </item>
     <item>
@@ -950,7 +865,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-132</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.82</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Tue, 17 Feb 2026 19:07:37 +0000</pubDate>
     </item>
     <item>
@@ -960,7 +875,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-133</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Tue, 17 Feb 2026 19:44:58 +0000</pubDate>
     </item>
     <item>
@@ -970,7 +885,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-134</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Tue, 17 Feb 2026 19:54:30 +0000</pubDate>
     </item>
     <item>
@@ -980,7 +895,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-135</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Tue, 17 Feb 2026 20:01:56 +0000</pubDate>
     </item>
     <item>
@@ -990,7 +905,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-136</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Tue, 17 Feb 2026 20:27:14 +0000</pubDate>
     </item>
     <item>
@@ -1000,7 +915,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-137</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Tue, 17 Feb 2026 20:39:49 +0000</pubDate>
     </item>
     <item>
@@ -1010,7 +925,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-130</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.84</comments>
       <pubDate>Tue, 17 Feb 2026 21:11:52 +0000</pubDate>
     </item>
     <item>
@@ -1020,7 +935,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-139</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.24</comments>
+      <comments>Score: 9.22</comments>
       <pubDate>Wed, 18 Feb 2026 14:49:07 +0000</pubDate>
     </item>
     <item>
@@ -1030,7 +945,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-140</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.22</comments>
       <pubDate>Wed, 18 Feb 2026 15:13:49 +0000</pubDate>
     </item>
     <item>
@@ -1040,7 +955,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-141</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.23</comments>
       <pubDate>Wed, 18 Feb 2026 15:22:42 +0000</pubDate>
     </item>
     <item>
@@ -1050,7 +965,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-142</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.26</comments>
+      <comments>Score: 9.23</comments>
       <pubDate>Wed, 18 Feb 2026 15:32:25 +0000</pubDate>
     </item>
     <item>
@@ -1060,7 +975,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-143</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.28</comments>
+      <comments>Score: 9.26</comments>
       <pubDate>Wed, 18 Feb 2026 16:37:17 +0000</pubDate>
     </item>
     <item>
@@ -1070,7 +985,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-138</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.34</comments>
+      <comments>Score: 9.32</comments>
       <pubDate>Wed, 18 Feb 2026 19:09:36 +0000</pubDate>
     </item>
     <item>
@@ -1080,7 +995,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-144</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.35</comments>
+      <comments>Score: 9.32</comments>
       <pubDate>Wed, 18 Feb 2026 19:18:49 +0000</pubDate>
     </item>
     <item>
@@ -1090,7 +1005,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-145</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.88</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Thu, 19 Feb 2026 14:49:46 +0000</pubDate>
     </item>
     <item>
@@ -1100,7 +1015,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-146</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.90</comments>
+      <comments>Score: 9.87</comments>
       <pubDate>Thu, 19 Feb 2026 15:45:39 +0000</pubDate>
     </item>
     <item>
@@ -1110,7 +1025,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-147</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.91</comments>
+      <comments>Score: 9.88</comments>
       <pubDate>Thu, 19 Feb 2026 16:06:34 +0000</pubDate>
     </item>
     <item>
@@ -1120,7 +1035,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/icewarp-security-advisory-av26-148</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.89</comments>
       <pubDate>Thu, 19 Feb 2026 16:20:32 +0000</pubDate>
     </item>
     <item>
@@ -1130,7 +1045,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-149</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.04</comments>
+      <comments>Score: 10.00</comments>
       <pubDate>Thu, 19 Feb 2026 20:02:31 +0000</pubDate>
     </item>
     <item>
@@ -1140,7 +1055,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-150</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.05</comments>
+      <comments>Score: 10.02</comments>
       <pubDate>Thu, 19 Feb 2026 20:29:09 +0000</pubDate>
     </item>
     <item>
@@ -1150,7 +1065,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av25-309</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.05</comments>
+      <comments>Score: 11.01</comments>
       <pubDate>Fri, 20 Feb 2026 20:59:37 +0000</pubDate>
     </item>
     <item>
@@ -1159,7 +1074,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/shields-up-key-technologies-reshaping-cybersecurity-defenses</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 3160.27</comments>
+      <comments>Score: 3126.46</comments>
       <pubDate>Thu, 19 Mar 2026 15:00:00 +0000</pubDate>
     </item>
   </channel>
