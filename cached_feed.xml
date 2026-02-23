@@ -8,17 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Feb 2026 10:03:57 +0000</lastBuildDate>
-    <item>
-      <title>[Control systems] Schneider Electric security advisory (AV26-119)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-119</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-119</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.22</comments>
-      <pubDate>Wed, 11 Feb 2026 20:25:27 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 23 Feb 2026 11:41:54 +0000</lastBuildDate>
     <item>
       <title>Commvault security advisory (AV26-120)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-120</link>
@@ -40,123 +30,6 @@
       <pubDate>Wed, 11 Feb 2026 21:26:19 +0000</pubDate>
     </item>
     <item>
-      <title>Compromised npm package silently installs OpenClaw on developer machines</title>
-      <link>https://www.csoonline.com/article/4135449/compromised-npm-package-silently-installs-openclaw-on-developer-machines.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A new security bypass has users installing AI agent OpenClaw — whether they intended to or not.&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers have discovered that a compromised npm publish token pushed an update for the widely-used Cline command line interface (CLI) containing a malicious postinstall script. That script installs the wildly popular, but increasingly condemned, &lt;a href="https://www.csoonline.com/article/4129867/what-cisos-need-to-know-about-clawdbot-i-mean-moltbot-i-mean-openclaw.html" target="_blank"&gt;agentic application OpenClaw&lt;/a&gt; on the unsuspecting user’s machine.&lt;/p&gt;
-
-
-
-&lt;p&gt;This can be extremely dangerous, as OpenClaw has broad system access and deep integrations with messaging platforms including WhatsApp, Telegram, Slack, Discord, iMessage, Teams, and others.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to research by security platform Socket, the script was live for eight hours on the registry.&lt;/p&gt;
-
-
-
-&lt;p&gt;It should be emphasized that, in this case, OpenClaw wasn’t inherently malicious. However, it does represent yet another chapter in OpenClaw’s shaky security saga, and situations like this could earn it ‘potentially unwanted application’ (PUA) status.&lt;/p&gt;
-
-
-
-&lt;p&gt;“I mean, they effectively turned OpenClaw into malware that EDR [endpoint detection and response ] isn’t going to stop,” said &lt;a href="https://www.linkedin.com/in/dbshipley/" rel="noreferrer noopener" target="_blank"&gt;David Shipley&lt;/a&gt; of Beauceron Security. It is “deviously, terrifyingly brilliant.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="users-love-openclaw-attackers-do-too"&gt;Users love OpenClaw; attackers do, too&lt;/h2&gt;
-
-
-
-&lt;p&gt;OpenClaw (formerly Clawdbot and Moltbot) is a free, open-source, autonomous AI agent that &lt;a href="https://openclaw.ai/blog/introducing-openclaw" rel="noreferrer noopener" target="_blank"&gt;launched on January 29&lt;/a&gt; and almost immediately went viral. According to its developer, Peter Steinberger, its repo had more than 2 million visitors over the course of a single week, and it’s estimated that it has been &lt;a href="http://www.ox.security/blog/how-to-uninstall-openclaw-remove-data-revoke-access/" rel="noreferrer noopener" target="_blank"&gt;downloaded 720,000 times a week&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;OpenClaw runs locally on a user’s hardware rather than in the cloud, and can perform autonomous, real-world actions on their behalf, such as reading emails, browsing web pages, running apps, or managing calendars.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, almost immediately after release, it raised &lt;a href="https://www.computerworld.com/article/4125939/by-whatever-name-moltbolt-clawd-openclaw-this-uber-ai-assistant-is-a-security-nightmare.html" target="_blank"&gt;serious security issues&lt;/a&gt;: It is prone to prompt injection attacks, authentication bypasses, and server-side request forgery (SSRF), among other &lt;a href="https://www.csoonline.com/article/4134540/six-flaws-found-hiding-in-openclaws-plumbing.html" target="_blank"&gt;attacks&lt;/a&gt;. Many enterprises have responded by severely restricting, or outright banning, the AI agent.&lt;/p&gt;
-
-
-
-&lt;p&gt;While, in the Cline situation, it was merely installed, but not inherently malicious, “the attacker had the ability to install anything,” &lt;a href="https://socket.dev/blog/cline-cli-npm-package-compromised-via-suspected-cache-poisoning-attack" rel="noreferrer noopener" target="_blank"&gt;Socket’s Sarah Gooding&lt;/a&gt; wrote. “This time it was OpenClaw. Next time it might be something malicious.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The Cline CLI is widely-used across the developer ecosystem, with about 90,000 weekly downloads from npm. The compromised token pushed cline@2.3.0, which contained a modified package.json with a postinstall script that installed the latest version of OpenClaw, to the npm registry. The addition of that script was the only modification to the package; otherwise the CLI binary and other contents were identical to the legitimate prior release, Gooding noted, making it easy to miss.&lt;/p&gt;
-
-
-
-&lt;p&gt;The compromised package was pushed on February 17, although the underlying problem had been &lt;a href="https://adnanthekhan.com/posts/clinejection/" rel="noreferrer noopener" target="_blank"&gt;discovered six weeks prior&lt;/a&gt; by security researcher Adnan Khan. The package sat live on the registry for an estimated eight hours before it was deprecated and Cline published a corrected version (2.4.0).&lt;/p&gt;
-
-
-
-&lt;p&gt;Khan had initially published his research about the vulnerable workflow on February 9, after unsuccessful attempts to get a response to his reports from Cline, and Cline fixed it within 30 minutes. However, while the patch closed the entry point, the token could have been stolen during an attacker’s initial reconnaissance, meaning the fix came too late to prevent the February 17 publish (which, ultimately, was the day it was exploited).&lt;/p&gt;
-
-
-
-&lt;p&gt;“Cline had no prior install scripts, so a new one appearing was an anomalous signal worth investigating,” Gooding noted, adding that Socket has marked the unauthorized publish as malware.&lt;/p&gt;
-
-
-
-&lt;p&gt;For devs who installed or updated the Cline CLI in the roughly eight-hour window on February 17, Socket advises:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Update to the latest version: npm install “-g cline@latest.”&lt;/li&gt;
-
-
-
-&lt;li&gt;If on version 2.3.0, update to 2.4.0 or higher.&lt;/li&gt;
-
-
-
-&lt;li&gt;Check for and immediately remove OpenClaw if it hadn’t been intentionally installed (“npm uninstall -g openclaw”).&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Gooding noted, “nothing ran automatically beyond the install,” but added there was still a risk: “OpenClaw is a capable agentic tool with broad system permissions, not a trivial package to have silently dropped onto a developer’s machine.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-no-win-scenario"&gt;A no-win scenario&lt;/h2&gt;
-
-
-
-&lt;p&gt;EDR, managed detection and response (MDR), and other security providers are going to be forced to declare OpenClaw as either a PUA or “flat out as malware, which, honestly, it can be,” said Shipley, or these kinds of attack win.&lt;/p&gt;
-
-
-
-&lt;p&gt;“I hate to give it to attackers, but you kind of have to on this one,” he said. “This is why agentic AI is going to get so many people pwned.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Ultimately, it’s a no-win scenario, Shipley noted, particularly if any organization was “so foolish” as to have allowed OpenClaw into their enterprise environment and built business-reliant work processes on it.&lt;/p&gt;
-
-
-
-&lt;p&gt;As he put it: “Attackers combined the two biggest dumpster fires in 2026 cybersecurity into a city-scale landfill fire by chaining supply chain hacks via npm and the smoking-hot-vibe-coded AI agent disaster of OpenClaw.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4135449/compromised-npm-package-silently-installs-openclaw-on-developer-machines.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
-      <pubDate>Sat, 21 Feb 2026 02:52:03 +0000</pubDate>
-    </item>
-    <item>
       <title>EUR 1.2 billion in counterfeit cash stopped in postal operation</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-12-billion-in-counterfeit-cash-stopped-in-postal-operation</link>
       <description>Law enforcement authorities from 18 countries have stopped an estimated EUR 1.2 billion in counterfeit banknotes and coins from entering circulation during Operation DECOY III, a Europol-coordinated action led by Austria, Portugal, and Spain.</description>
@@ -164,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.26</comments>
-      <pubDate>Mon, 23 Feb 2026 08:03:57 +0000</pubDate>
+      <pubDate>Mon, 23 Feb 2026 09:41:54 +0000</pubDate>
     </item>
     <item>
       <title>React security advisory (AV26-123)</title>
@@ -194,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.29</comments>
-      <pubDate>Mon, 23 Feb 2026 08:03:57 +0000</pubDate>
+      <pubDate>Mon, 23 Feb 2026 09:41:54 +0000</pubDate>
     </item>
     <item>
       <title>SolarWinds security advisory (AV26-063) - Update 2</title>
@@ -203,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-063-update-1</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Fri, 13 Feb 2026 13:29:01 +0000</pubDate>
     </item>
     <item>
@@ -217,23 +90,13 @@
       <pubDate>Fri, 13 Feb 2026 14:01:58 +0000</pubDate>
     </item>
     <item>
-      <title>OTF GRIMM: Swedish teenager arrested for prison shooting in the Netherlands</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-teenager-arrested-for-prison-shooting-in-netherlands</link>
-      <description>A Swedish minor has been arrested in Sweden on 23 January for his alleged involvement in a shooting outside a prison in the Netherlands, following intelligence development provided by Europol. The shooting was carried out in Alphen aan den Rijn on 16 January.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-teenager-arrested-for-prison-shooting-in-netherlands</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Mon, 23 Feb 2026 08:03:57 +0000</pubDate>
-    </item>
-    <item>
       <title>Google Chrome security advisory (AV26-126)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-126</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 13 Feb 2026 15:50:53 +0000</pubDate>
     </item>
     <item>
@@ -243,8 +106,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-127</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 13 Feb 2026 16:02:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>OTF GRIMM: Swedish teenager arrested for prison shooting in the Netherlands</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-teenager-arrested-for-prison-shooting-in-netherlands</link>
+      <description>A Swedish minor has been arrested in Sweden on 23 January for his alleged involvement in a shooting outside a prison in the Netherlands, following intelligence development provided by Europol. The shooting was carried out in Alphen aan den Rijn on 16 January.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/otf-grimm-swedish-teenager-arrested-for-prison-shooting-in-netherlands</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.35</comments>
+      <pubDate>Mon, 23 Feb 2026 09:41:54 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft security advisory – February 2026 monthly rollup (AV26-111) - Update 1</title>
@@ -283,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-129</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Fri, 13 Feb 2026 20:15:48 +0000</pubDate>
     </item>
     <item>
@@ -294,7 +167,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.38</comments>
-      <pubDate>Mon, 23 Feb 2026 08:03:57 +0000</pubDate>
+      <pubDate>Mon, 23 Feb 2026 09:41:54 +0000</pubDate>
     </item>
     <item>
       <title>Drug trafficking network supplying cocaine to Iceland dismantled</title>
@@ -304,7 +177,18 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Mon, 23 Feb 2026 08:03:57 +0000</pubDate>
+      <pubDate>Mon, 23 Feb 2026 09:41:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Malicious npm Packages Harvest Crypto Keys, CI Secrets, and API Tokens</title>
+      <link>https://thehackernews.com/2026/02/malicious-npm-packages-harvest-crypto.html</link>
+      <description>Cybersecurity researchers have disclosed what they say is an active "Shai-Hulud-like" supply chain worm campaign that has leveraged a cluster of at least 19 malicious npm packages to enable credential harvesting and cryptocurrency key theft.
+The campaign has been codenamed SANDWORM_MODE by supply chain security company Socket. As with prior Shai-Hulud attack waves, the malicious code embedded</description>
+      <guid isPermaLink="false">https://thehackernews.com/2026/02/malicious-npm-packages-harvest-crypto.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.51</comments>
+      <pubDate>Mon, 23 Feb 2026 15:50:00 +0530</pubDate>
     </item>
     <item>
       <title>Fact Check: Europol’s support to Ukraine and entries into the Schengen Information System</title>
@@ -314,17 +198,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Feb 2026 08:03:57 +0000</pubDate>
-    </item>
-    <item>
-      <title>Publication of a vacancy notice for the position of Europol Executive Director</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/publication-of-vacancy-notice-for-position-of-europol-executive-director</link>
-      <description>Catherine De Bolle has served as Europol’s Executive Director since 1 May 2018, her mandate will conclude on 1 May 2026. The incoming Executive Director will have the opportunity to shape Europol's future and strengthen its role in safeguarding the European Union’s internal security.About EuropolEuropol, based in The Hague, the Netherlands, supports and strengthens action by and cooperation of the...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/publication-of-vacancy-notice-for-position-of-europol-executive-director</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Feb 2026 08:03:57 +0000</pubDate>
+      <pubDate>Mon, 23 Feb 2026 09:41:54 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports French investigation into alleged criminal activity linked to platform X</title>
@@ -334,7 +208,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Feb 2026 08:03:57 +0000</pubDate>
+      <pubDate>Mon, 23 Feb 2026 09:41:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Publication of a vacancy notice for the position of Europol Executive Director</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/publication-of-vacancy-notice-for-position-of-europol-executive-director</link>
+      <description>Catherine De Bolle has served as Europol’s Executive Director since 1 May 2018, her mandate will conclude on 1 May 2026. The incoming Executive Director will have the opportunity to shape Europol's future and strengthen its role in safeguarding the European Union’s internal security.About EuropolEuropol, based in The Hague, the Netherlands, supports and strengthens action by and cooperation of the...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/publication-of-vacancy-notice-for-position-of-europol-executive-director</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 23 Feb 2026 09:41:54 +0000</pubDate>
     </item>
     <item>
       <title>Large migrant smuggling operation in Bulgaria leads to 16 arrests</title>
@@ -344,7 +228,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Mon, 23 Feb 2026 08:03:57 +0000</pubDate>
+      <pubDate>Mon, 23 Feb 2026 09:41:54 +0000</pubDate>
     </item>
     <item>
       <title>BeyondTrust security advisory (AV26-097) - Update 2</title>
@@ -353,7 +237,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-097</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Mon, 16 Feb 2026 14:55:46 +0000</pubDate>
     </item>
     <item>
@@ -363,7 +247,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-003-vulnerability-affecting-beyondtrust-cve-2026-1731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 16 Feb 2026 19:05:58 +0000</pubDate>
     </item>
     <item>
@@ -374,7 +258,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.84</comments>
-      <pubDate>Mon, 23 Feb 2026 08:03:57 +0000</pubDate>
+      <pubDate>Mon, 23 Feb 2026 09:41:54 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-131)</title>
@@ -383,8 +267,102 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-131</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Tue, 17 Feb 2026 16:56:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Attackers exploit Ivanti EPMM zero-days to seize control of MDM servers</title>
+      <link>https://www.csoonline.com/article/4135776/attackers-exploit-ivanti-epmm-zero-days-to-seize-control-of-mdm-servers.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Attackers are actively exploiting two critical zero-day vulnerabilities in Ivanti’s Endpoint Manager Mobile (EPMM) to gain unauthenticated control of enterprise mobile device management infrastructure and install backdoors engineered to persist even after organizations apply available patches.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Two critical zero-day vulnerabilities (&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1281" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-1281&lt;/a&gt; and &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1340" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-1340&lt;/a&gt;) affecting Ivanti Endpoint Manager Mobile (EPMM) are being actively exploited in the wild, affecting enterprise mobile fleets and corporate networks,” Palo Alto Networks’ Unit 42 threat research team &lt;a href="https://unit42.paloaltonetworks.com/ivanti-cve-2026-1281-cve-2026-1340/"&gt;said in an advisory&lt;/a&gt;. “These vulnerabilities allow unauthenticated attackers to remotely execute arbitrary code on target servers, granting them full control over mobile device management (MDM) infrastructure without requiring user interaction or credentials.”&lt;/p&gt;
+
+
+
+&lt;p&gt;EPMM, formerly known as MobileIron Core, is a mobile device management platform that enterprises use to manage and enforce security policies on employee smartphones and tablets.&lt;/p&gt;
+
+
+
+&lt;p&gt;Palo Alto Networks’ attack surface management platform Cortex Xpanse found more than 4,400 EPMM instances currently exposed on the public internet. Compromise of the platform gives attackers access to device policies, credentials, and metadata across an organization’s entire mobile fleet, Unit 42 warned in the advisory.&lt;/p&gt;
+
+
+
+&lt;p&gt;Both vulnerabilities carry a CVSS score of 9.8 and allow unauthenticated attackers to execute arbitrary commands on exposed EPMM servers without any user interaction or valid credentials.&lt;/p&gt;
+
+
+
+&lt;p&gt;Ivanti acknowledged the attacks when it released emergency patches in late January, but described the initial impact as limited. “We are aware of a very limited number of customers whose solution has been exploited at the time of disclosure,” the company said in its &lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM"&gt;security advisory&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;Both vulnerabilities stem from unsafe Bash script handling in legacy Apache web server configurations, according to Unit 42. CVE-2026-1281 targets the In-House Application Distribution feature; CVE-2026-1340 exploits the same flaw class through a separate script handling the Android File Transfer mechanism. “Although the root cause is the same, they reside in two distinct scripts handling different features,” the advisory explained.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="from-scan-to-backdoor"&gt;From scan to backdoor&lt;/h2&gt;
+
+
+
+&lt;p&gt;Unit 42 documented threat actors moving rapidly from automated scanning to initial access and then escalating quickly to deploy persistent backdoors designed to outlast patching cycles.&lt;/p&gt;
+
+
+
+&lt;p&gt;After gaining initial access, attackers immediately attempted to download and execute a second-stage payload. “This second stage typically installs a web shell, a cryptominer, or a persistent backdoor to grant the attacker control of the appliance,” the advisory said.&lt;/p&gt;
+
+
+
+&lt;p&gt;Unit 42 also said attackers deployed the Nezha open-source monitoring agent to maintain visibility over compromised systems.&lt;/p&gt;
+
+
+
+&lt;p&gt;The attackers targeted sectors including state and local government, healthcare, manufacturing, professional services, and high technology across the United States, Germany, Australia, and Canada, the advisory added.&lt;/p&gt;
+
+
+
+&lt;p&gt;Unit 42 also warned that proof-of-concept exploit code for both CVEs is already publicly available, making broader exploitation likely as more threat actors adopt working exploits.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="patch-but-verify-first"&gt;Patch, but verify first&lt;/h2&gt;
+
+
+
+&lt;p&gt;Unit 42 directed organizations to Ivanti’s security advisory for remediation guidance, which recommends applying version-specific RPM patches for EPMM 12.x branches that require no appliance downtime. Ivanti cautioned, however, that the patch does not survive a version upgrade and must be reinstalled if the software is updated. “The permanent fix for this vulnerability will be included in the next product release: 12.8.0.0 expected in Q1 2026.’&lt;/p&gt;
+
+
+
+&lt;p&gt;Ivanti also warned in its advisory that while its Sentry mobile traffic gateway is not directly vulnerable, EPMM holds command execution permissions on connected Sentry systems.”If an EPMM deployment has been compromised, the attackers might have compromised Ivanti Sentry as well,” Ivanti warned.&lt;/p&gt;
+
+
+
+&lt;p&gt;For organizations that suspect compromise, the Ivanti advisory suggested against attempting to clean affected systems. Instead, it recommended restoring from a known-good backup or performing a full rebuild, followed by a complete reset of all account passwords, service credentials, and public certificates. With proof-of-concept exploit code already publicly available for both CVEs, broader exploitation is expected as more threat actors adopt working exploits.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="a-familiar-pattern"&gt;A familiar pattern&lt;/h2&gt;
+
+
+
+&lt;p&gt;The targeting of EPMM follows a pattern that will be familiar to Ivanti customers. The product has been exploited at scale before — in 2023, state-sponsored attackers used EPMM zero-days to break into &lt;a href="https://www.csoonline.com/article/647105/governments-scramble-to-patch-ivanti-endpoint-manager-mobile-security-flaw.html"&gt;Norwegian government networks&lt;/a&gt;, and separate flaws were &lt;a href="https://www.csoonline.com/article/3985912/ivanti-patches-two-epmm-flaws-exploited-in-the-wild.html"&gt;again exploited&lt;/a&gt; in the wild last year. &lt;/p&gt;
+
+
+
+&lt;p&gt;Ivanti’s Connect Secure VPN product has had a similarly troubled record, with &lt;a href="https://www.csoonline.com/article/1307425/attackers-target-new-ivanti-xxe-vulnerability-days-after-patch.html"&gt;Chinese APT groups&lt;/a&gt; exploiting zero-days in back-to-back campaigns that eventually led the US government to order federal agencies to disconnect Ivanti VPN products entirely in February 2024.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4135776/attackers-exploit-ivanti-epmm-zero-days-to-seize-control-of-mdm-servers.html</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.95</comments>
+      <pubDate>Mon, 23 Feb 2026 10:32:31 +0000</pubDate>
     </item>
     <item>
       <title>Dell security advisory (AV26-132)</title>
@@ -393,7 +371,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-132</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Tue, 17 Feb 2026 19:07:37 +0000</pubDate>
     </item>
     <item>
@@ -403,7 +381,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-133</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 17 Feb 2026 19:44:58 +0000</pubDate>
     </item>
     <item>
@@ -413,7 +391,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-134</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 17 Feb 2026 19:54:30 +0000</pubDate>
     </item>
     <item>
@@ -423,7 +401,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-135</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 17 Feb 2026 20:01:56 +0000</pubDate>
     </item>
     <item>
@@ -433,7 +411,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-136</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Tue, 17 Feb 2026 20:27:14 +0000</pubDate>
     </item>
     <item>
@@ -443,7 +421,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-137</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Tue, 17 Feb 2026 20:39:49 +0000</pubDate>
     </item>
     <item>
@@ -453,7 +431,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-130</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Tue, 17 Feb 2026 21:11:52 +0000</pubDate>
     </item>
     <item>
@@ -463,7 +441,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-139</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Wed, 18 Feb 2026 14:49:07 +0000</pubDate>
     </item>
     <item>
@@ -473,7 +451,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-140</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Wed, 18 Feb 2026 15:13:49 +0000</pubDate>
     </item>
     <item>
@@ -483,7 +461,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-141</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Wed, 18 Feb 2026 15:22:42 +0000</pubDate>
     </item>
     <item>
@@ -493,7 +471,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-142</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Wed, 18 Feb 2026 15:32:25 +0000</pubDate>
     </item>
     <item>
@@ -503,7 +481,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-143</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Wed, 18 Feb 2026 16:37:17 +0000</pubDate>
     </item>
     <item>
@@ -513,7 +491,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-138</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Wed, 18 Feb 2026 19:09:36 +0000</pubDate>
     </item>
     <item>
@@ -523,7 +501,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-144</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Wed, 18 Feb 2026 19:18:49 +0000</pubDate>
     </item>
     <item>
@@ -533,7 +511,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-145</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Thu, 19 Feb 2026 14:49:46 +0000</pubDate>
     </item>
     <item>
@@ -543,7 +521,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-146</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Thu, 19 Feb 2026 15:45:39 +0000</pubDate>
     </item>
     <item>
@@ -553,7 +531,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-147</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Thu, 19 Feb 2026 16:06:34 +0000</pubDate>
     </item>
     <item>
@@ -563,7 +541,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/icewarp-security-advisory-av26-148</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Thu, 19 Feb 2026 16:20:32 +0000</pubDate>
     </item>
     <item>
@@ -573,7 +551,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-149</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Thu, 19 Feb 2026 20:02:31 +0000</pubDate>
     </item>
     <item>
@@ -583,7 +561,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-150</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Thu, 19 Feb 2026 20:29:09 +0000</pubDate>
     </item>
     <item>
@@ -958,7 +936,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3819176/top-5-ways-attackers-use-generative-ai-to-exploit-your-systems.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Mon, 23 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -968,7 +946,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av25-309</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.23</comments>
+      <comments>Score: 9.19</comments>
       <pubDate>Fri, 20 Feb 2026 20:59:37 +0000</pubDate>
     </item>
     <item>
@@ -977,7 +955,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/shields-up-key-technologies-reshaping-cybersecurity-defenses</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 1699.82</comments>
+      <comments>Score: 1671.18</comments>
       <pubDate>Thu, 19 Mar 2026 15:00:00 +0000</pubDate>
     </item>
   </channel>
