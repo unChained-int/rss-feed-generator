@@ -8,78 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 26 Feb 2026 05:59:58 +0000</lastBuildDate>
-    <item>
-      <title>Shai-Hulud-style NPM worm hits CI pipelines and AI coding tools</title>
-      <link>https://www.csoonline.com/article/4136476/shai-hulud-style-npm-worm-hits-ci-pipelines-and-ai-coding-tools.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A massive &lt;a href="https://www.csoonline.com/article/4058059/warning-hackers-have-inserted-credential-stealing-code-into-some-npm-libraries.html" target="_blank"&gt;Shai-Hulud&lt;/a&gt;-style npm supply chain worm is hitting the software ecosystem, burrowing through developer machines, CI pipelines, and AI coding tools.&lt;/p&gt;
-
-
-
-&lt;p&gt;Socket researchers uncovered the active attack campaign and called it SANDWORM_MODE,  derived from the “SANDWORM_*” environment variable switches embedded in the malware’s runtime control logic.”&lt;/p&gt;
-
-
-
-&lt;p&gt;At least 19&lt;a href="https://www.csoonline.com/article/570173/what-is-typosquatting-a-simple-but-effective-attack-technique.html"&gt; typosquatted&lt;/a&gt; packages were published under multiple aliases, posing as popular developer utilities and AI-related tools. Once installed, the packages execute a multi-stage payload that harvests secrets from local environments and CI systems, then uses stolen tokens to modify other repositories.&lt;/p&gt;
-
-
-
-&lt;p&gt;The payload also implements a Shai-Hulud-style “dead switch” that remains OFF by default to trigger home directory wiping when the malware is detected. Researchers called the campaign a  “real and high-risk” threat, advising defenders to treat the packages as active compromise risks.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Typo to takeover&lt;/h2&gt;
-
-
-
-&lt;p&gt;The campaign starts with typosquatting, where attackers publish packages with names nearly identical to legitimate ones, banking on a developer typo or an AI &lt;a href="https://www.csoonline.com/article/3961304/ai-hallucinations-lead-to-new-cyber-threat-slopsquatting.html"&gt;hallucinating&lt;/a&gt; wrong dependencies.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The typosquatting targets several high-traffic developer utilities in the Node.js ecosystem, crypto tooling, and, perhaps most notably, AI coding tools that are seeing rapid adoption: three packages impersonate &lt;a href="https://www.csoonline.com/article/4136294/anthropics-claude-code-security-rollout-is-an-industry-wakeup-call.html"&gt;Claude Code&lt;/a&gt; and one targets &lt;a href="https://www.csoonline.com/article/4134540/six-flaws-found-hiding-in-openclaws-plumbing.html"&gt;OpenClaw&lt;/a&gt;, the viral AI agent that recently passed 210k stars on GitHub,” the researchers wrote in a blog &lt;a href="https://socket.dev/blog/sandworm-mode-npm-worm-ai-toolchain-poisoning" rel="noreferrer noopener" target="_blank"&gt;post&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Once a malicious package is installed and executed, the malware hunts for sensitive credentials, including npm and GitHub tokens, environment secrets, and cloud keys. Those credentials are then used to push malicious changes into other repositories and inject new dependencies or workflows, expanding the infection chain.&lt;/p&gt;
-
-
-
-&lt;p&gt;Additionally, the campaign uses a &lt;a href="https://www.csoonline.com/article/3506897/github-actions-typosquatting-a-high-impact-supply-chain-attack-in-waiting.html"&gt;weaponized&lt;/a&gt; GitHub Action that could potentially amplify the attack inside CI pipelines, extracting secrets during builds and enabling further propagation, the researchers added.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Poisoning the AI developer interface&lt;/h2&gt;
-
-
-
-&lt;p&gt;The campaign was specifically flagged for its direct targeting of AI coding assistants. The malware deploys a malicious Model Context Protocol (&lt;a href="https://www.csoonline.com/article/4087656/what-cisos-need-to-know-about-new-tools-for-securing-mcp-servers.html"&gt;MCP&lt;/a&gt;) server and injects it into configurations of popular AI tools, embedding itself as a trusted component in the assistant’s environment.&lt;/p&gt;
-
-
-
-&lt;p&gt;Once this is achieved, prompt-injection &lt;a href="https://www.csoonline.com/article/1294996/top-4-llm-threats-to-the-enterprise.html"&gt;techniques&lt;/a&gt; can trick the AI into retrieving sensitive local data, which can include SSH keys or cloud credentials, and pass it to the attacker without the user’s knowledge.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers also found a dormant polymorphic engine capable of rewriting the malware through code-level transformations such as variable renaming, control-flow rewriting, decoy code insertion, and string encoding, though no active mutation was observed during analysis. The engine is compatible with locally hosted models through Ollama, but presently only checks if Ollama is running locally, they wrote.&lt;/p&gt;
-
-
-
-&lt;p&gt;The disclosure noted npm has already hardened the registry against Shai-Hulud-class worms, tightening controls around the credential abuse this campaign exploits. Short-lived, scoped tokens, mandatory two-factor authentication for publishing, and identity-bound “trusted publishing” from CI are designed to contain the blast radius from stolen secrets, though their effectiveness ultimately depends on the scale and speed of maintainer adoption.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4136476/shai-hulud-style-npm-worm-hits-ci-pipelines-and-ai-coding-tools.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Tue, 24 Feb 2026 11:51:01 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 26 Feb 2026 07:12:49 +0000</lastBuildDate>
     <item>
       <title>HPE security advisory (AV26-139)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-139</link>
@@ -97,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-140</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Wed, 18 Feb 2026 15:13:49 +0000</pubDate>
     </item>
     <item>
@@ -107,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-141</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Wed, 18 Feb 2026 15:22:42 +0000</pubDate>
     </item>
     <item>
@@ -117,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-142</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Wed, 18 Feb 2026 15:32:25 +0000</pubDate>
     </item>
     <item>
@@ -137,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-138</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Wed, 18 Feb 2026 19:09:36 +0000</pubDate>
     </item>
     <item>
@@ -147,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-144</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Wed, 18 Feb 2026 19:18:49 +0000</pubDate>
     </item>
     <item>
@@ -158,47 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Thu, 26 Feb 2026 03:59:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV26-145)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-145</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-145</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
-      <pubDate>Thu, 19 Feb 2026 14:49:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitHub security advisory (AV26-146)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-146</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-146</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
-      <pubDate>Thu, 19 Feb 2026 15:45:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>Splunk security advisory (AV26-147)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-147</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-147</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
-      <pubDate>Thu, 19 Feb 2026 16:06:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>IceWarp security advisory (AV26-148)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/icewarp-security-advisory-av26-148</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/icewarp-security-advisory-av26-148</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
-      <pubDate>Thu, 19 Feb 2026 16:20:32 +0000</pubDate>
+      <pubDate>Thu, 26 Feb 2026 05:12:49 +0000</pubDate>
     </item>
     <item>
       <title>Cyber defense: From reactive to proactive</title>
@@ -300,8 +189,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4134813/cyber-defense-from-reactive-to-proactive.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Tue, 24 Feb 2026 19:10:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-145)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-145</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-145</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.75</comments>
+      <pubDate>Thu, 19 Feb 2026 14:49:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitHub security advisory (AV26-146)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-146</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-146</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.76</comments>
+      <pubDate>Thu, 19 Feb 2026 15:45:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>Splunk security advisory (AV26-147)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-147</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-147</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.76</comments>
+      <pubDate>Thu, 19 Feb 2026 16:06:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>IceWarp security advisory (AV26-148)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/icewarp-security-advisory-av26-148</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/icewarp-security-advisory-av26-148</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.76</comments>
+      <pubDate>Thu, 19 Feb 2026 16:20:32 +0000</pubDate>
     </item>
     <item>
       <title>Tenable security advisory (AV26-149)</title>
@@ -310,7 +239,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-149</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Thu, 19 Feb 2026 20:02:31 +0000</pubDate>
     </item>
     <item>
@@ -320,18 +249,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-150</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 19 Feb 2026 20:29:09 +0000</pubDate>
-    </item>
-    <item>
-      <title>103 arrests and 36 labs dismantled in strike against synthetic drug network</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/103-arrests-and-36-labs-dismantled-in-strike-against-synthetic-drug-network</link>
-      <description>Between 12 and 17 February 2026, Europol supported law enforcement authorities in Ukraine, Poland, and Moldova in a joint operation against an international criminal network involved in the production and trafficking of synthetic drugs, primarily synthetic cathinones such as alpha-PVP. The action day saw the Ukrainian National Police and the Polish Police Central Bureau of Investigation conducting coordinated checks at approximately 510 locations. Law enforcement officers dismantled 36 illicit production sites and 74 storage facilities for ready-to-distribute drugs. A total of 129 persons faced criminal charges, 103 persons were taken into custody.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/103-arrests-and-36-labs-dismantled-in-strike-against-synthetic-drug-network</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
-      <pubDate>Thu, 26 Feb 2026 03:59:58 +0000</pubDate>
     </item>
     <item>
       <title>How to prevent business email compromise</title>
@@ -495,7 +414,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4128848/how-to-prevent-business-email-compromise.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Tue, 24 Feb 2026 21:33:14 +0000</pubDate>
     </item>
     <item>
@@ -766,7 +685,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4128952/take-control-locking-down-common-endpoint-vulnerabilities.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Tue, 24 Feb 2026 21:46:06 +0000</pubDate>
     </item>
     <item>
@@ -939,7 +858,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4128947/what-are-the-types-of-ransomware-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Tue, 24 Feb 2026 21:52:59 +0000</pubDate>
     </item>
     <item>
@@ -1142,8 +1061,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4128950/what-does-business-email-compromise-look-like.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Tue, 24 Feb 2026 21:55:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>103 arrests and 36 labs dismantled in strike against synthetic drug network</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/103-arrests-and-36-labs-dismantled-in-strike-against-synthetic-drug-network</link>
+      <description>Between 12 and 17 February 2026, Europol supported law enforcement authorities in Ukraine, Poland, and Moldova in a joint operation against an international criminal network involved in the production and trafficking of synthetic drugs, primarily synthetic cathinones such as alpha-PVP. The action day saw the Ukrainian National Police and the Polish Police Central Bureau of Investigation conducting coordinated checks at approximately 510 locations. Law enforcement officers dismantled 36 illicit production sites and 74 storage facilities for ready-to-distribute drugs. A total of 129 persons faced criminal charges, 103 persons were taken into custody.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/103-arrests-and-36-labs-dismantled-in-strike-against-synthetic-drug-network</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.84</comments>
+      <pubDate>Thu, 26 Feb 2026 05:12:49 +0000</pubDate>
     </item>
     <item>
       <title>So verändert KI Ihre GRC-Strategie</title>
@@ -1308,7 +1237,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4030328/so-verandert-ki-ihre-grc-strategie.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Wed, 25 Feb 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1435,7 +1364,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4136995/boards-dont-need-cyber-metrics-they-need-risk-signals.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Wed, 25 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1445,7 +1374,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av25-309</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Fri, 20 Feb 2026 20:59:37 +0000</pubDate>
     </item>
     <item>
@@ -1593,8 +1522,169 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4051211/so-rechtfertigen-sie-ihre-security-investitionen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.92</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Thu, 26 Feb 2026 04:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>5 trends that should top CISO’s RSA 2026 agendas</title>
+      <link>https://www.csoonline.com/article/4136999/5-trends-that-should-top-cisos-rsa-2026-agendas.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;RSA 2026 is still weeks away and the hype machine is humming. This year’s theme, “The Power of Community,” is somewhat ironic as the overwhelming chatter at the Moscone Center in San Francisco from March 23 to March 26 will be about AI agents, not humans.&lt;/p&gt;
+
+
+
+&lt;p&gt;Welcome to the cybersecurity community, agents, automatons, and robots!&lt;/p&gt;
+
+
+
+&lt;p&gt;While cybersecurity is an extremely diverse area covering everything from humans to critical infrastructure, here are five cybersecurity areas certain to have a starring role at RSA 2026 — and worthy of being on any CISO’s attendance agenda.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-rise-of-the-ai-soc"&gt;The rise of the AI-SOC&lt;/h2&gt;
+
+
+
+&lt;p&gt;In 2026, we are moving beyond AI copilots toward autonomous agents performing traditional security operations center (SOC) activities such as triaging alerts, investigating malicious activity, isolating hosts, and patching software on our behalf. The trend is expected to &lt;a href="https://www.csoonline.com/article/4042494/how-ai-is-reshaping-cybersecurity-operations.html"&gt;reshape operations in the SOC&lt;/a&gt; even if the &lt;a href="https://www.csoonline.com/article/4064158/agentic-ai-in-it-security-where-expectations-meet-reality.html"&gt;early realities haven’t yet fully aligned with agentic expectations&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;Still, there’s a lot of innovation happening from established vendors (e.g., Cisco/Splunk, CrowdStrike, Google, Microsoft, etc.) and startups (e.g., Andesite, Crogl, Prophet Security, etc.) alike. While AI-SOCs have potential, security pros remain leery about AI hallucinations and “black box” tools, and agents will succeed or fail based on a foundation of accurate and timely data access — threat intelligence, log files, tools integration, and so on.&lt;/p&gt;
+
+
+
+&lt;p&gt;For RSA attendees, I recommend cautious optimism. One way or another the AI-SOC is coming — and sooner than you think. But CISOs should come prepared with requirements, &lt;a href="https://www.csoonline.com/article/4094763/key-questions-cisos-must-ask-before-adopting-ai-enabled-cyber-solutions.html"&gt;lots of questions&lt;/a&gt;, and a willingness to cast a wide net rather than simply defaulting to existing tools vendors.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="ctem-in-the-spotlight"&gt;CTEM in the spotlight&lt;/h2&gt;
+
+
+
+&lt;p&gt;In another evolutionary trend, most organizations are moving beyond scanning for software snafus to &lt;a href="https://www.csoonline.com/article/3979418/what-is-ctem.html"&gt;continuous threat exposure management (CTEM)&lt;/a&gt;. By doing so, security teams hope to get a full picture of all assets, as well as their configurations, locations, software vulnerabilities, ownership, and business criticality.&lt;/p&gt;
+
+
+
+&lt;p&gt;Armed with this data, CTEM platforms look at threat intelligence to assess adversary tactics, techniques, and procedures (TTPs), helping organizations prioritize which vulnerable assets represent the highest risks to the business. Some tools can even predict which assets may be most vulnerable to future exploits.&lt;/p&gt;
+
+
+
+&lt;p&gt;CTEM tools from vendors such as Nucleus Security, ServiceNow (Armis), and Tenable (Vulcan Security) will be front and center at RSA but there’s a confusing cast of thousands in this space. While promising, CTEM done wrong will just add another tool to the security stack.&lt;/p&gt;
+
+
+
+&lt;p&gt;Before succumbing to the shining objects at RSA, security teams should audit — and clean up — their data, define “crown jewel” assets, create their own risk scoring system, and build a mobilization plan for emergency and day-to-day patching processes between security and IT teams.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="cyber-resilience-takes-center-stage"&gt;Cyber resilience takes center stage&lt;/h2&gt;
+
+
+
+&lt;p&gt;According to &lt;a href="https://csrc.nist.gov/pubs/sp/800/160/v2/r1/final"&gt;Special Publication 800-160, Volume 2&lt;/a&gt;, from the National Institute of Standards and Technology (NIST), cyber resilience is defined as: “The ability to anticipate, withstand, recover from, and adapt to adverse conditions, stresses, attacks, or compromises on systems that use or are enabled by cyber resources.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Note the expansive definition. Anticipating threats requires &lt;a href="https://www.csoonline.com/article/3975448/top-tips-for-successful-threat-intelligence-usage.html"&gt;threat intelligence analysis&lt;/a&gt;, solid and continuous exposure management, and effective security controls. Withstanding and recovering from threats demands rapid detection, &lt;a href="https://www.csoonline.com/article/3829684/how-to-create-an-effective-incident-response-plan.html"&gt;incident response&lt;/a&gt;, solid data backup and restoration, and a formal — and tested — &lt;a href="https://www.csoonline.com/article/515730/business-continuity-and-disaster-recovery-planning-the-basics.html"&gt;business continuity and disaster recovery plan&lt;/a&gt;. Adapting involves security technology tuning, detection rules engineering, targeted investments, and CISO leadership.&lt;/p&gt;
+
+
+
+&lt;p&gt;Obviously, there’s no one product that covers the entire spectrum but that won’t stop some vendors from claiming they are in the cyber-resilience business. Caveat emptor, my cybersecurity friends.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="identity-as-the-new-security-perimeter"&gt;Identity as the ‘new’ security perimeter&lt;/h2&gt;
+
+
+
+&lt;p&gt;Anyone remember the Jericho Forum circa 2004? The group argued that since data was moving outside the corporate network, security should be attached to data and user identity, rather than the physical or logical network location. Twenty-two years later, some vendors have had a similar epiphany about identity management.&lt;/p&gt;
+
+
+
+&lt;p&gt;Okay, beyond my snark, I’m encouraged by the focus on identity management in areas like improved identity governance (SailPoint, Saviynt), passwordless authentication (Microsoft, Okta, Ping), and identity threat detection and response (Grip Security, Permiso Security).&lt;/p&gt;
+
+
+
+&lt;p&gt;There is also copious use of AI in the identity space to assess user entitlements, user “liveness,” and identity configuration settings. Great stuff, but I’ve always found that &lt;a href="https://www.csoonline.com/article/518296/what-is-iam-identity-and-access-management-explained.html"&gt;identity and access management (IAM)&lt;/a&gt; is an area where everyone has an ownership stake but no one actually owns it. CISOs will have to work with business owners, CIOs, and application developers to address identity risks, making strategic projects lengthy and complex — a difficult environment for security startups.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="everything-ai-future-proofing-security-operations"&gt;Everything AI: Future-proofing security operations&lt;/h2&gt;
+
+
+
+&lt;p&gt;All the areas above have an AI component, of course, but it’s worth carving out a discussion on AI across those and other AI cybersecurity categories here.&lt;/p&gt;
+
+
+
+&lt;p&gt;First, CISOs face a significant challenge in their &lt;a href="https://www.csoonline.com/article/4033338/how-cybersecurity-leaders-are-securing-ai-infrastructures.html"&gt;need to secure the development and usage of AI&lt;/a&gt;. This includes buckets of technologies, such as &lt;a href="https://www.csoonline.com/article/4087656/what-cisos-need-to-know-about-new-tools-for-securing-mcp-servers.html"&gt;model context protocol (MCP) security&lt;/a&gt;, AI firewalling, content sanitation, digital content authenticity, &lt;a href="https://www.csoonline.com/article/3518733/ai-spm-buyers-guide-artificial-intelligence-security-posture-management-tools-compared.html"&gt;AI security posture management&lt;/a&gt;, AI-driven DevSecOps, and so on. These technologies should support an overall business and technology strategy and &lt;a href="https://www.cio.com/article/3984527/how-to-establish-an-effective-ai-grc-framework.html"&gt;governance framework around AI&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;Next, RSA will be a hotbed of AI threat chatter, with alarming discussions about vulnerability chaining, &lt;a href="https://www.csoonline.com/article/4101491/polymorphic-ai-malware-exists-but-its-not-what-you-think.html"&gt;polymorphic payloads&lt;/a&gt;, and security control bypassing — all legitimate topics, but like defenders, adversaries are mostly using AI for research and process automation.&lt;/p&gt;
+
+
+
+&lt;p&gt;Attendees should focus on relevant threat intelligence while discarding profuse hype. There are too many AI sub-topics to cover, but in my humble opinion, RSA participants should pay special attention to AI-centric skills and training sessions. Given an AI-enabled future, organizations will need security data engineers and AI security specialists, rare skill sets today. And as we supplant Tier-1 analyst functions with AI, we’ll also need to &lt;a href="https://www.csoonline.com/article/4058190/ai-is-altering-entry-level-cyber-hiring-and-the-nature-of-the-skills-gap.html"&gt;upskill junior cybersecurity specialists&lt;/a&gt; to become AI orchestrators who excel at human-agent teaming. AI skills development and training should be a top CISO priority.  &lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="other-contenders"&gt;Other contenders&lt;/h2&gt;
+
+
+
+&lt;p&gt;Beyond my personal top 5, here are a few honorable mentions for CISO RSA 2026 agendas:&lt;/p&gt;
+
+
+
+&lt;ol class="wp-block-list"&gt;
+&lt;li&gt;&lt;strong&gt;Zero trust.&lt;/strong&gt; This area rides shotgun with identity management and cyber-resilience strategies. As such, zero trust is still a top priority. CISOs should have an eye out for AI-enabled innovation that could accelerate their ZT implementation. &lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Cloud security.&lt;/strong&gt; Between multicloud, SaaS, and AI development, cloud security remains a bear. Organizations need an organic security strategy that grows with their cloud usage. CISOs should use the conference to help hone their growing multi-cloud/SaaS security needs.&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Cybersecurity platforms.&lt;/strong&gt; There is lots of vendor money in this area as well. Security platforms are likely appropriate for most smaller firms but perhaps not for larger enterprises where the business and IT run far faster than cybersecurity. CISOs must weigh the benefits of platform efficiency against tools efficacy and rip-and-replace pain.&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;*DR.&lt;/strong&gt; CDR, EDR, and XDR (etc.), oh my! There’s lots of detection and response innovation around the edges of the cloud and network that will likely lead to highly distributed security operations. CISOs should explore how these blending and evolving spaces will impact a future centralized or distributed security operations architecture. &lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;IT and OT security.&lt;/strong&gt; Yeah, we’ve been talking about this for years, but AI will be a force multiplier for smart devices and edge computing. For example, in the next five years, healthcare will transform based on wearable connected devices for data collection and patient care, so device availability and integrity could equate to life and death situations. Security teams can’t be left behind. Be on the lookout for evolutions in how to further secure IT/OT convergence and purpose-built AI agents for IoT/OT security.&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Post quantum cryptography (PQC).  &lt;/strong&gt;To me, this topic is hit or miss.  CISOs working for intelligence agencies, defense contractors, or financial services firms should pay attention.  Others can probably eschew this area – at least this year. &lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;The power of community.&lt;/strong&gt; There’s that theme again, but this isn’t hyperbole. Cybersecurity professionals already learn from each other at RSA and Black Hat, and through professional groups like the Information Systems Security Association (ISSA). I’m hoping that agents can join the community in an era of collective defense — where many organizations band together in real-time to protect one another.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="one-final-thought"&gt;One final thought&lt;/h2&gt;
+
+
+
+&lt;p&gt;With the proliferation of AI, this year’s RSA will feature more eye candy than in the past. Vendors pay millions of dollars for the chance to over stimulate users in this way. As always, security professionals should approach RSA with a list of requirements that support business strategy and technical needs. Eschew AI gaga and remember the sage words of Bruce Schneier, “Security is a process, not a product.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4136999/5-trends-that-should-top-cisos-rsa-2026-agendas.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.99</comments>
+      <pubDate>Thu, 26 Feb 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV26–151)</title>
@@ -1603,7 +1693,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-151</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Mon, 23 Feb 2026 15:57:15 +0000</pubDate>
     </item>
     <item>
@@ -1613,7 +1703,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-152</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Mon, 23 Feb 2026 16:12:21 +0000</pubDate>
     </item>
     <item>
@@ -1623,7 +1713,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-153</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Mon, 23 Feb 2026 16:13:50 +0000</pubDate>
     </item>
     <item>
@@ -1633,7 +1723,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-154</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Mon, 23 Feb 2026 16:24:21 +0000</pubDate>
     </item>
     <item>
@@ -1643,7 +1733,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-155</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Mon, 23 Feb 2026 16:51:40 +0000</pubDate>
     </item>
     <item>
@@ -1653,7 +1743,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-156</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Mon, 23 Feb 2026 19:41:11 +0000</pubDate>
     </item>
     <item>
@@ -1663,7 +1753,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-157</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Mon, 23 Feb 2026 19:54:53 +0000</pubDate>
     </item>
     <item>
@@ -1673,7 +1763,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-158</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.63</comments>
+      <comments>Score: 9.59</comments>
       <pubDate>Tue, 24 Feb 2026 13:35:17 +0000</pubDate>
     </item>
     <item>
@@ -1683,18 +1773,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-159</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.63</comments>
+      <comments>Score: 9.60</comments>
       <pubDate>Tue, 24 Feb 2026 13:53:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV26-160)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-160</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-160</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 9.71</comments>
-      <pubDate>Tue, 24 Feb 2026 16:29:36 +0000</pubDate>
     </item>
     <item>
       <title>Five Eyes issue emergency directive on exploited Cisco SD-WAN zero-day</title>
@@ -1818,8 +1898,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4137562/five-eyes-issue-emergency-directive-on-exploited-cisco-sd-wan-zero-day.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.71</comments>
+      <comments>Score: 9.67</comments>
       <pubDate>Wed, 25 Feb 2026 22:49:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV26-160)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-160</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-160</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.67</comments>
+      <pubDate>Tue, 24 Feb 2026 16:29:36 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV26-161)</title>
@@ -1828,7 +1918,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-161</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.72</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Tue, 24 Feb 2026 16:55:13 +0000</pubDate>
     </item>
     <item>
@@ -1838,7 +1928,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-162</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Tue, 24 Feb 2026 18:42:38 +0000</pubDate>
     </item>
     <item>
@@ -1848,7 +1938,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-163</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.82</comments>
+      <comments>Score: 9.79</comments>
       <pubDate>Tue, 24 Feb 2026 20:30:01 +0000</pubDate>
     </item>
     <item>
@@ -1858,7 +1948,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-164</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.83</comments>
+      <comments>Score: 9.79</comments>
       <pubDate>Tue, 24 Feb 2026 20:47:04 +0000</pubDate>
     </item>
     <item>
@@ -1868,7 +1958,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-165</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.84</comments>
+      <comments>Score: 9.80</comments>
       <pubDate>Tue, 24 Feb 2026 21:04:36 +0000</pubDate>
     </item>
     <item>
@@ -1878,7 +1968,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-167</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.55</comments>
+      <comments>Score: 10.50</comments>
       <pubDate>Wed, 25 Feb 2026 18:26:30 +0000</pubDate>
     </item>
     <item>
@@ -1888,7 +1978,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-168</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.55</comments>
+      <comments>Score: 10.51</comments>
       <pubDate>Wed, 25 Feb 2026 18:36:46 +0000</pubDate>
     </item>
     <item>
@@ -1898,7 +1988,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-169</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.57</comments>
+      <comments>Score: 10.53</comments>
       <pubDate>Wed, 25 Feb 2026 19:08:43 +0000</pubDate>
     </item>
     <item>
@@ -1908,7 +1998,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-170</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.58</comments>
+      <comments>Score: 10.53</comments>
       <pubDate>Wed, 25 Feb 2026 19:16:00 +0000</pubDate>
     </item>
     <item>
@@ -1918,7 +2008,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-171</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.58</comments>
+      <comments>Score: 10.53</comments>
       <pubDate>Wed, 25 Feb 2026 19:16:48 +0000</pubDate>
     </item>
     <item>
@@ -1928,7 +2018,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-166</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.61</comments>
+      <comments>Score: 10.56</comments>
       <pubDate>Wed, 25 Feb 2026 20:03:01 +0000</pubDate>
     </item>
     <item>
@@ -1938,7 +2028,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-172</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.62</comments>
+      <comments>Score: 10.58</comments>
       <pubDate>Wed, 25 Feb 2026 20:28:47 +0000</pubDate>
     </item>
     <item>
@@ -1948,7 +2038,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-173</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.64</comments>
+      <comments>Score: 10.60</comments>
       <pubDate>Wed, 25 Feb 2026 21:02:56 +0000</pubDate>
     </item>
     <item>
@@ -1958,7 +2048,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-004-critical-vulnerability-affecting-cisco-catalyst-sd-wan-cve-2026-20127</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.46</comments>
+      <comments>Score: 11.42</comments>
       <pubDate>Wed, 25 Feb 2026 16:07:47 +0000</pubDate>
     </item>
   </channel>
