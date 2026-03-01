@@ -8,259 +8,30 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Mar 2026 17:25:35 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2026 18:38:35 +0000</lastBuildDate>
     <item>
-      <title>Why application security must start at the load balancer</title>
-      <link>https://www.csoonline.com/article/4138000/why-application-security-must-start-at-the-load-balancer.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;For a long time, I thought of the load balancer as a performance device. Its job was to distribute traffic, improve uptime, and make applications feel fast. Security was something that happened elsewhere, on firewalls, inside WAFs or deep in the application code.&lt;/p&gt;
-
-
-
-&lt;p&gt;That perspective changed early in my consulting career.&lt;/p&gt;
-
-
-
-&lt;p&gt;I worked with a customer who had invested heavily in security tools like firewalls, endpoint protection and a WAF buried deep in the stack. The technology was solid. The problem wasn’t the tools; it was the architecture. At the edge, the load balancer was treated purely as a performance device, tuned only for speed. Security policies such as strict TLS enforcement, request hygiene, and basic abuse controls were pushed to later phases.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attacker didn’t break our tools. They simply walked through the open path our design had left behind. Nothing failed technically. The architecture failed.&lt;/p&gt;
-
-
-
-&lt;p&gt;Since then, every architecture I design starts with one principle: &lt;a href="https://www.csoonline.com/article/566471/what-is-application-security-a-process-and-tools-for-securing-software.html"&gt;Application security&lt;/a&gt; begins at the traffic entry point. And in most modern environments, that entry point is the load balancer.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-i-saw-go-wrong-in-real-projects"&gt;What I saw go wrong in real projects&lt;/h2&gt;
-
-
-
-&lt;p&gt;I’ve worked with banks, healthcare systems, SaaS companies, and retailers. Different industries, same pattern:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Internet traffic hits the load balancer&lt;/li&gt;
-
-
-
-&lt;li&gt;The load balancer forwards traffic as fast as possible&lt;/li&gt;
-
-
-
-&lt;li&gt;Security happens later&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;The problem is simple. If the first system doesn’t enforce trust, everything behind it is already compromised by design.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="example-1-financial-services"&gt;Example 1: Financial services&lt;/h2&gt;
-
-
-
-&lt;p&gt;The team invested heavily in downstream security tools. But the load balancer accepted weak TLS versions and ciphers because some legacy clients still needed it. Attackers forced connections down to older TLS versions, exploited weak cipher suites, and gained visibility into traffic that should never have been exposed.&lt;/p&gt;
-
-
-
-&lt;p&gt;Fix: Disable TLS 1.0 and 1.1, enforce strong cipher suites, implement HSTS and OCSP stapling, and prefer TLS 1.3 with modern AEAD ciphers.&lt;/p&gt;
-
-
-
-&lt;p&gt;Many teams treat TLS configuration at the load balancer as a compatibility setting rather than a security control. In practice, it defines the cryptographic trust boundary for the entire application stack.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://csrc.nist.gov/pubs/sp/800/52/r2/final"&gt;NIST’s TLS guidance&lt;/a&gt; is especially relevant here because it does not simply list preferred protocols. It explains why older versions introduce unacceptable risk, including downgrade attacks, weak key exchange mechanisms, and deprecated cryptographic primitives. When a load balancer allows legacy TLS for convenience, it creates an attack surface that downstream systems cannot correct.&lt;/p&gt;
-
-
-
-&lt;p&gt;From an architectural standpoint, enforcing NIST-aligned TLS policies at the load balancer eliminates entire classes of attacks before traffic ever reaches a WAF or application server. It also provides a defensible baseline for audits and regulatory reviews, particularly in financial and healthcare environments where encryption standards are closely scrutinized&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="example-2-retail-platform"&gt;Example 2: Retail platform&lt;/h2&gt;
-
-
-
-&lt;p&gt;The site faced massive bot traffic, such as scrapers, credential stuffers, and inventory scalpers. Protections were added inside the application, but the load balancer treated all traffic equally. Automated abuse consumed capacity before deeper security layers even saw it. Legitimate users paid the price.&lt;/p&gt;
-
-
-
-&lt;p&gt;During peak periods, a large portion of incoming traffic was automated abuse. The business impact was clear: slower pages, failed checkouts, and lost revenue.&lt;/p&gt;
-
-
-
-&lt;p&gt;What makes the &lt;a href="https://owasp.org/www-project-automated-threats-to-web-applications/"&gt;OWASP Automated Threats guide&lt;/a&gt; particularly valuable is its focus on scale rather than sophistication. Most automated attacks do not rely on novel exploits. They succeed because they generate high volumes of traffic that look superficially legitimate.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is where load balancers play a critical role. They see traffic before authentication, before session state, and before business logic is invoked. If every request is forwarded downstream without discrimination, automated abuse can exhaust infrastructure long before application-level controls engage.&lt;/p&gt;
-
-
-
-&lt;p&gt;By applying rate limits, connection caps, and behavioral thresholds at the load balancer, organizations can disrupt automated attacks at a fraction of the cost.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-turning-point-securing-the-entry-layer"&gt;The turning point: securing the entry layer&lt;/h2&gt;
-
-
-
-&lt;p&gt;Today, when I design systems, the first question I ask isn’t “How fast is it?” but “How much do I trust what enters here?”&lt;/p&gt;
-
-
-
-&lt;p&gt;I treat the load balancer as a policy enforcement point for encryption, identity, protocol correctness, and abuse prevention. It becomes the first checkpoint in a zero trust path, not just a distributor of packets.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="four-key-practices-at-the-load-balancer"&gt;Four key practices at the load balancer&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;1. Strong encryption and identity at the edge:&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Enforce TLS 1.3 where possible&lt;/li&gt;
-
-
-
-&lt;li&gt;Allow TLS 1.2 only with modern AEAD cipher suites&lt;/li&gt;
-
-
-
-&lt;li&gt;Disable legacy protocols that enable downgrade attacks&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;2. Protocol and request sanitation&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Normalize and validate traffic before it reaches the app&lt;/li&gt;
-
-
-
-&lt;li&gt;Reject malformed headers (e.g., duplicate Host headers, invalid characters) and strip hop-by-hop header&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;3. Bot and abuse control&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Implement token bucket rate limiting keyed by IP or session&lt;/li&gt;
-
-
-
-&lt;li&gt;Detect and block scrapers and credential stuffing early&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;4. Integration with deeper security layers&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;The load balancer complements WAF and application security&lt;/li&gt;
-
-
-
-&lt;li&gt;Enforce transport, identity, and hygiene before semantic inspection&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://cloudsecurityalliance.org/"&gt;Cloud Security Alliance guidance&lt;/a&gt; consistently emphasizes shared responsibility and defense-in-depth.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-this-matters-beyond-technology"&gt;Why this matters beyond technology&lt;/h2&gt;
-
-
-
-&lt;p&gt;This isn’t just a technical argument, it’s a business one. When applications go down, customers leave. When breaches happen, trust is lost. Both often begin with small design decisions made early in architecture.&lt;/p&gt;
-
-
-
-&lt;p&gt;A strong edge reduces total cost of ownership by cutting wasted capacity, lowering false positives downstream, and reducing incident response hours.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-edge-security-decisions-compound-over-time"&gt;Why edge security decisions compound over time&lt;/h2&gt;
-
-
-
-&lt;p&gt;Security decisions made at the load balancer tend to compound, for better or worse. A permissive edge may appear harmless at first, especially when applications are small and traffic volumes are manageable. Over time, however, those early choices harden into technical debt.&lt;/p&gt;
-
-
-
-&lt;p&gt;Allowing weak encryption for compatibility today becomes an exception that must be supported indefinitely. Deferring abuse controls pushes more responsibility onto application teams that are already focused on features and delivery timelines. Pushing request hygiene downstream increases noise for WAFs and intrusion detection systems, leading to alert fatigue and slower incident response.&lt;/p&gt;
-
-
-
-&lt;p&gt;The opposite is also true. When strong controls are enforced at the entry point, downstream systems benefit immediately. Applications receive cleaner, more predictable traffic. Security tools operate with higher signal and fewer false positives. Infrastructure capacity is preserved for real users instead of being consumed by automated abuse.&lt;/p&gt;
-
-
-
-&lt;p&gt;This has a measurable business impact. Teams spend less time firefighting performance issues during peak traffic events. Incident response becomes faster because the scope of investigation is smaller. Compliance reviews are easier because baseline controls are consistently enforced at the edge.&lt;/p&gt;
-
-
-
-&lt;p&gt;Most importantly, a strong entry layer creates architectural flexibility. Applications can evolve, scale, and migrate across environments without redefining security assumptions each time. The load balancer becomes a stable trust boundary, absorbing change while maintaining consistent protection.&lt;/p&gt;
-
-
-
-&lt;p&gt;These benefits are rarely visible on day one. They become obvious only when something goes wrong, and by then, the quality of the front door determines how much damage occurs.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="final-thought"&gt;Final thought&lt;/h2&gt;
-
-
-
-&lt;p&gt;I used to think application security lived deep inside the stack. Experience taught me otherwise. Every major incident I’ve seen had one thing in common: the attacker entered easily.&lt;/p&gt;
-
-
-
-&lt;p&gt;That’s why I now say this without hesitation: application security must start at the load balancer. Not because it replaces other controls, but because every system needs a strong front door.&lt;/p&gt;
-
-
-
-&lt;p&gt;When the front door is strong, everything behind it becomes easier to secure, easier to scale, and easier to trust.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4138000/why-application-security-must-start-at-the-load-balancer.html</guid>
+      <title>F5 security advisory (AV26-144)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-144</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-144</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.27</comments>
-      <pubDate>Fri, 27 Feb 2026 11:00:00 +0000</pubDate>
+      <comments>Score: 7.26</comments>
+      <pubDate>Wed, 18 Feb 2026 19:18:49 +0000</pubDate>
     </item>
     <item>
-      <title>US authorities punish sellers of malware and spyware</title>
-      <link>https://www.csoonline.com/article/4138422/us-authorities-punish-sellers-of-malware-and-spyware.html</link>
+      <title>EUR 1.2 billion in counterfeit cash stopped in postal operation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-12-billion-in-counterfeit-cash-stopped-in-postal-operation</link>
+      <description>Law enforcement authorities from 18 countries have stopped an estimated EUR 1.2 billion in counterfeit banknotes and coins from entering circulation during Operation DECOY III, a Europol-coordinated action led by Austria, Portugal, and Spain.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-12-billion-in-counterfeit-cash-stopped-in-postal-operation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.26</comments>
+      <pubDate>Sun, 01 Mar 2026 16:38:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>One of the ‘most influential cybersecurity’ roles will pay under $175,000</title>
+      <link>https://www.csoonline.com/article/4138526/one-of-the-most-influential-cybersecurity-roles-will-pay-under-175000.html</link>
       <description>&lt;div id="remove_no_follow"&gt;
 		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
 					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
@@ -269,37 +40,37 @@
 
 
 
-&lt;p&gt;The US authorities have made it clear that they will have no truck with any individuals trying to by-pass regulations on trading cyberweapons with hostile powers.&lt;/p&gt;
+&lt;p&gt;A recent job ad  is causing plenty of head-shaking, suggesting that some government high-ups  appear to be out of touch with the current state of the cybersecurity job market.&lt;/p&gt;
 
 
 
-&lt;p&gt;Selling sensitive cyber-exploit components to a Russian company landed Australian citizen Peter Williams with an &lt;a href="https://www.justice.gov/opa/pr/former-general-manager-us-defense-contractor-sentenced-87-months-selling-stolen-trade" rel="noreferrer noopener" target="_blank"&gt;87-month prison sentence&lt;/a&gt; from the US District Court for the District of Columbia on February 24.&lt;/p&gt;
+&lt;p&gt;There is plenty of evidence that the world needs cybersecurity talent. According t&lt;a href="https://www.networkworld.com/article/4104272/cybersecurity-skills-matter-more-than-headcount-in-an-ai-era-isc2-study.html"&gt;o a recent ISC2 survey&lt;/a&gt;, 33% of organizations cannot staff their security teams adequately&lt;/p&gt;
 
 
 
-&lt;p&gt;“Williams took trade secrets comprised of national security software and sold them for up to $4 million in crypto currency. These incredibly powerful tools would have allowed Russia to access millions of digital devices,” said US Attorney Jeanine Pirro for the District of Columbia. “By betraying a position of trust and selling sensitive American technology, Williams’ crime is not only one of theft, it is a crime of national security.&lt;/p&gt;
+&lt;p&gt;The result of this shortage is that these professionals are handsomely rewarded — but no-one appears to have told the UK government.&lt;/p&gt;
 
 
 
-&lt;p&gt;On the same day, &lt;a href="https://home.treasury.gov/news/press-releases/sb0404" rel="noreferrer noopener" target="_blank"&gt;the Department of the Treasury’s Office of Foreign Assets Control (OFAC) sanctioned&lt;/a&gt; Sergey Sergeyevich Zelenyuk and his company, Matrix LLC (trading as Operation Zero) for their acquisition and distribution of cyber tools harmful to US national security. &lt;/p&gt;
+&lt;p&gt;Government Communications Headquarters (GCHQ, the UK equivalent of the US’s National Security Agency, or NSA), &lt;a href="https://www.gchq-careers.co.uk/jobs/deputy-director-chief-information-security-officer.html"&gt;has just advertised for a chief information security officer&lt;/a&gt;. The role, which the ad describes as “one of the most influential cyber security leadership roles in the UK,” offers a maximum salary of £130,000 (about $175,000) — and none of the stock options or other inducements common in industry.&lt;/p&gt;
 
 
 
-&lt;p&gt;Operation Zero trades in exploits of software vulnerabilities, and offered rewards to anyone who would provide them with exploits for US products. Among the exploits that Operation Zero acquired were proprietary cyber tools that had been created for the US government. These were then sold to at least one unauthorized user.&lt;/p&gt;
+&lt;p&gt;Successful candidates will have “expertise in securing cloud environments and emerging technologies within digital transformation programmes, alongside a strong understanding of regulatory compliance frameworks such as NIST, ISO 27001, GDPR and GovS 007. Professional certifications such as CISSP, CISM or CCISO are highly desirable,” the ad said. &lt;/p&gt;
 
 
 
-&lt;p&gt;“If you steal US trade secrets, we will hold you accountable,” said US Secretary of the Treasury Scott Bessent. “Treasury will continue to work alongside the rest of the Trump Administration to protect sensitive American intellectual property and safeguard our national security.”&lt;/p&gt;
+&lt;p&gt;The job ad stresses the importance of the role. “As CISO, you will work with colleagues to set and implement the organisation’s cyber and information security strategy, striking the right balance between capability, acceptable risk and technological progress. You will integrate security governance into a complex set of cross-agency organisational decision-making forums ensuring that information risks are managed effectively.”&lt;/p&gt;
 
 
 
-&lt;p&gt;As a result of the sanction, all property or possessions held by Zelenyek and Matrix in the US will be blocked, with the possibility of criminal charges for transaction of any assets.&lt;/p&gt;
+&lt;p&gt;It’s a daunting set of responsibility for a senior professional working for an organization responsible for keeping an entire nation safe from cybercriminals and hostile powers, while pulling in a salary roughly equivalent t&lt;a href="https://www.csoonline.com/article/4006364/the-highest-paying-jobs-in-cybersecurity-today.html"&gt;o the salary of a security architect&lt;/a&gt; at a mid-level US company.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4138422/us-authorities-punish-sellers-of-malware-and-spyware.html</guid>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4138526/one-of-the-most-influential-cybersecurity-roles-will-pay-under-175000.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
-      <pubDate>Fri, 27 Feb 2026 11:35:29 +0000</pubDate>
+      <comments>Score: 7.30</comments>
+      <pubDate>Fri, 27 Feb 2026 13:32:02 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-145)</title>
@@ -342,56 +113,13 @@
       <pubDate>Thu, 19 Feb 2026 16:20:32 +0000</pubDate>
     </item>
     <item>
-      <title>One of the ‘most influential cybersecurity’ roles will pay under $175,000</title>
-      <link>https://www.csoonline.com/article/4138526/one-of-the-most-influential-cybersecurity-roles-will-pay-under-175000.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A recent job ad  is causing plenty of head-shaking, suggesting that some government high-ups  appear to be out of touch with the current state of the cybersecurity job market.&lt;/p&gt;
-
-
-
-&lt;p&gt;There is plenty of evidence that the world needs cybersecurity talent. According t&lt;a href="https://www.networkworld.com/article/4104272/cybersecurity-skills-matter-more-than-headcount-in-an-ai-era-isc2-study.html"&gt;o a recent ISC2 survey&lt;/a&gt;, 33% of organizations cannot staff their security teams adequately&lt;/p&gt;
-
-
-
-&lt;p&gt;The result of this shortage is that these professionals are handsomely rewarded — but no-one appears to have told the UK government.&lt;/p&gt;
-
-
-
-&lt;p&gt;Government Communications Headquarters (GCHQ, the UK equivalent of the US’s National Security Agency, or NSA), &lt;a href="https://www.gchq-careers.co.uk/jobs/deputy-director-chief-information-security-officer.html"&gt;has just advertised for a chief information security officer&lt;/a&gt;. The role, which the ad describes as “one of the most influential cyber security leadership roles in the UK,” offers a maximum salary of £130,000 (about $175,000) — and none of the stock options or other inducements common in industry.&lt;/p&gt;
-
-
-
-&lt;p&gt;Successful candidates will have “expertise in securing cloud environments and emerging technologies within digital transformation programmes, alongside a strong understanding of regulatory compliance frameworks such as NIST, ISO 27001, GDPR and GovS 007. Professional certifications such as CISSP, CISM or CCISO are highly desirable,” the ad said. &lt;/p&gt;
-
-
-
-&lt;p&gt;The job ad stresses the importance of the role. “As CISO, you will work with colleagues to set and implement the organisation’s cyber and information security strategy, striking the right balance between capability, acceptable risk and technological progress. You will integrate security governance into a complex set of cross-agency organisational decision-making forums ensuring that information risks are managed effectively.”&lt;/p&gt;
-
-
-
-&lt;p&gt;It’s a daunting set of responsibility for a senior professional working for an organization responsible for keeping an entire nation safe from cybercriminals and hostile powers, while pulling in a salary roughly equivalent t&lt;a href="https://www.csoonline.com/article/4006364/the-highest-paying-jobs-in-cybersecurity-today.html"&gt;o the salary of a security architect&lt;/a&gt; at a mid-level US company.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4138526/one-of-the-most-influential-cybersecurity-roles-will-pay-under-175000.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
-      <pubDate>Fri, 27 Feb 2026 13:32:02 +0000</pubDate>
-    </item>
-    <item>
       <title>Tenable security advisory (AV26-149)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-149</link>
       <description>No description available</description>
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-149</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 19 Feb 2026 20:02:31 +0000</pubDate>
     </item>
     <item>
@@ -401,7 +129,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-150</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 19 Feb 2026 20:29:09 +0000</pubDate>
     </item>
     <item>
@@ -412,7 +140,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.38</comments>
-      <pubDate>Sun, 01 Mar 2026 15:25:35 +0000</pubDate>
+      <pubDate>Sun, 01 Mar 2026 16:38:35 +0000</pubDate>
     </item>
     <item>
       <title>Drug trafficking network supplying cocaine to Iceland dismantled</title>
@@ -422,47 +150,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Sun, 01 Mar 2026 15:25:35 +0000</pubDate>
-    </item>
-    <item>
-      <title>Driving innovation for law enforcement: Europol hosts its third Industry and Research Days</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/driving-innovation-for-law-enforcement-europol-hosts-its-third-industry-and-research-days</link>
-      <description>Over three days, 40 companies and eight EU-funded research projects presented cutting-edge technological solutions designed to address the evolving needs of law enforcement across Europe. Through keynote interventions, short pitches and in-depth live demonstrations, participants explored practical tools and emerging technologies with direct operational relevance.Opening the event, Europol’s Deputy Executive Director for Capabilities, Andrei Lințǎ, underlined the strategic importance of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/driving-innovation-for-law-enforcement-europol-hosts-its-third-industry-and-research-days</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 01 Mar 2026 15:25:35 +0000</pubDate>
-    </item>
-    <item>
-      <title>Publication of a vacancy notice for the position of Europol Executive Director</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/publication-of-vacancy-notice-for-position-of-europol-executive-director</link>
-      <description>Catherine De Bolle has served as Europol’s Executive Director since 1 May 2018, her mandate will conclude on 1 May 2026. The incoming Executive Director will have the opportunity to shape Europol's future and strengthen its role in safeguarding the European Union’s internal security.About EuropolEuropol, based in The Hague, the Netherlands, supports and strengthens action by and cooperation of the...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/publication-of-vacancy-notice-for-position-of-europol-executive-director</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 01 Mar 2026 15:25:35 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fact Check: Europol’s support to Ukraine and entries into the Schengen Information System</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/fact-check-europol-support-to-ukraine-and-entries-schengen-information-system</link>
-      <description>The clarification below provides information to help accurately understand a recent media article on Europol’s support to Ukraine.Case at hand:A recent media article headlined: Separated by war — and by Schengen described how data and alerts in the EU’s Schengen Information System (SIS), originally designed to keep Europe safe from security threats, is now trapping Ukrainian refugees, including those who...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fact-check-europol-support-to-ukraine-and-entries-schengen-information-system</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 01 Mar 2026 15:25:35 +0000</pubDate>
-    </item>
-    <item>
-      <title>Follow the money: cocaine trafficking network exposed through its financial trail</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</link>
-      <description>The investigation was led by the French National Gendarmerie, in close cooperation with the Italian Carabinieri and the Swiss Federal Office of Police (fedpol). It was supported by the Belgian Judicial Federal Police of Antwerp, the Bulgarian State Agency for National Security, the German Customs and the Ecuadorian National Police, under the coordination of Europol and Eurojust.Following the financial flows,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 01 Mar 2026 15:25:35 +0000</pubDate>
+      <pubDate>Sun, 01 Mar 2026 16:38:35 +0000</pubDate>
     </item>
     <item>
       <title>Security hole could let hackers take over Juniper Networks PTX core routers</title>
@@ -532,18 +220,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4138788/security-hole-could-let-hackers-take-over-juniper-networks-ptx-core-routers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
+      <comments>Score: 7.50</comments>
       <pubDate>Fri, 27 Feb 2026 21:36:37 +0000</pubDate>
     </item>
     <item>
-      <title>Roundcube security advisory (AV25-309) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av25-309</link>
-      <description>On June 1, 2025, Roundcube published security advisories to address vulnerabilities.</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av25-309</guid>
+      <title>Driving innovation for law enforcement: Europol hosts its third Industry and Research Days</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/driving-innovation-for-law-enforcement-europol-hosts-its-third-industry-and-research-days</link>
+      <description>Over three days, 40 companies and eight EU-funded research projects presented cutting-edge technological solutions designed to address the evolving needs of law enforcement across Europe. Through keynote interventions, short pitches and in-depth live demonstrations, participants explored practical tools and emerging technologies with direct operational relevance.Opening the event, Europol’s Deputy Executive Director for Capabilities, Andrei Lințǎ, underlined the strategic importance of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/driving-innovation-for-law-enforcement-europol-hosts-its-third-industry-and-research-days</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
-      <pubDate>Fri, 20 Feb 2026 20:59:37 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 01 Mar 2026 16:38:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Publication of a vacancy notice for the position of Europol Executive Director</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/publication-of-vacancy-notice-for-position-of-europol-executive-director</link>
+      <description>Catherine De Bolle has served as Europol’s Executive Director since 1 May 2018, her mandate will conclude on 1 May 2026. The incoming Executive Director will have the opportunity to shape Europol's future and strengthen its role in safeguarding the European Union’s internal security.About EuropolEuropol, based in The Hague, the Netherlands, supports and strengthens action by and cooperation of the...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/publication-of-vacancy-notice-for-position-of-europol-executive-director</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 01 Mar 2026 16:38:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fact Check: Europol’s support to Ukraine and entries into the Schengen Information System</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/fact-check-europol-support-to-ukraine-and-entries-schengen-information-system</link>
+      <description>The clarification below provides information to help accurately understand a recent media article on Europol’s support to Ukraine.Case at hand:A recent media article headlined: Separated by war — and by Schengen described how data and alerts in the EU’s Schengen Information System (SIS), originally designed to keep Europe safe from security threats, is now trapping Ukrainian refugees, including those who...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fact-check-europol-support-to-ukraine-and-entries-schengen-information-system</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 01 Mar 2026 16:38:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Follow the money: cocaine trafficking network exposed through its financial trail</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</link>
+      <description>The investigation was led by the French National Gendarmerie, in close cooperation with the Italian Carabinieri and the Swiss Federal Office of Police (fedpol). It was supported by the Belgian Judicial Federal Police of Antwerp, the Bulgarian State Agency for National Security, the German Customs and the Ecuadorian National Police, under the coordination of Europol and Eurojust.Following the financial flows,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 01 Mar 2026 16:38:35 +0000</pubDate>
     </item>
     <item>
       <title>Five Eyes issue emergency directive on exploited Cisco SD-WAN zero-day</title>
@@ -667,8 +385,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4137562/five-eyes-issue-emergency-directive-on-exploited-cisco-sd-wan-zero-day.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Wed, 25 Feb 2026 22:49:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Roundcube security advisory (AV25-309) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av25-309</link>
+      <description>On June 1, 2025, Roundcube published security advisories to address vulnerabilities.</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av25-309</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.54</comments>
+      <pubDate>Fri, 20 Feb 2026 20:59:37 +0000</pubDate>
     </item>
     <item>
       <title>3 354 individuals prosecuted in Europol-coordinated hit against pharmaceutical crime networks</title>
@@ -678,7 +406,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Sun, 01 Mar 2026 15:25:35 +0000</pubDate>
+      <pubDate>Sun, 01 Mar 2026 16:38:35 +0000</pubDate>
     </item>
     <item>
       <title>103 arrests and 36 labs dismantled in strike against synthetic drug network</title>
@@ -688,7 +416,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.84</comments>
-      <pubDate>Sun, 01 Mar 2026 15:25:35 +0000</pubDate>
+      <pubDate>Sun, 01 Mar 2026 16:38:35 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV26–151)</title>
@@ -697,7 +425,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-151</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 23 Feb 2026 15:57:15 +0000</pubDate>
     </item>
     <item>
@@ -707,7 +435,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-152</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 23 Feb 2026 16:12:21 +0000</pubDate>
     </item>
     <item>
@@ -717,7 +445,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-153</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 23 Feb 2026 16:13:50 +0000</pubDate>
     </item>
     <item>
@@ -727,7 +455,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-154</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 23 Feb 2026 16:24:21 +0000</pubDate>
     </item>
     <item>
@@ -737,7 +465,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-155</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 23 Feb 2026 16:51:40 +0000</pubDate>
     </item>
     <item>
@@ -747,7 +475,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-156</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 23 Feb 2026 19:41:11 +0000</pubDate>
     </item>
     <item>
@@ -757,7 +485,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-157</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 23 Feb 2026 19:54:53 +0000</pubDate>
     </item>
     <item>
@@ -767,7 +495,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-158</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Tue, 24 Feb 2026 13:35:17 +0000</pubDate>
     </item>
     <item>
@@ -777,7 +505,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-159</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Tue, 24 Feb 2026 13:53:52 +0000</pubDate>
     </item>
     <item>
@@ -787,7 +515,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-160</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Tue, 24 Feb 2026 16:29:36 +0000</pubDate>
     </item>
     <item>
@@ -797,7 +525,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-161</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Tue, 24 Feb 2026 16:55:13 +0000</pubDate>
     </item>
     <item>
@@ -807,7 +535,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-162</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Tue, 24 Feb 2026 18:42:38 +0000</pubDate>
     </item>
     <item>
@@ -817,7 +545,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-163</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 24 Feb 2026 20:30:01 +0000</pubDate>
     </item>
     <item>
@@ -827,7 +555,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-164</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 24 Feb 2026 20:47:04 +0000</pubDate>
     </item>
     <item>
@@ -837,7 +565,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-165</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Tue, 24 Feb 2026 21:04:36 +0000</pubDate>
     </item>
     <item>
@@ -847,7 +575,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-167</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Wed, 25 Feb 2026 18:26:30 +0000</pubDate>
     </item>
     <item>
@@ -857,7 +585,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-168</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Wed, 25 Feb 2026 18:36:46 +0000</pubDate>
     </item>
     <item>
@@ -867,7 +595,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-169</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Wed, 25 Feb 2026 19:08:43 +0000</pubDate>
     </item>
     <item>
@@ -877,7 +605,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-170</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Wed, 25 Feb 2026 19:16:00 +0000</pubDate>
     </item>
     <item>
@@ -887,7 +615,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-171</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Wed, 25 Feb 2026 19:16:48 +0000</pubDate>
     </item>
     <item>
@@ -897,7 +625,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-166</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Wed, 25 Feb 2026 20:03:01 +0000</pubDate>
     </item>
     <item>
@@ -907,7 +635,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-172</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Wed, 25 Feb 2026 20:28:47 +0000</pubDate>
     </item>
     <item>
@@ -917,7 +645,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-173</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Wed, 25 Feb 2026 21:02:56 +0000</pubDate>
     </item>
     <item>
@@ -927,7 +655,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-174</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Thu, 26 Feb 2026 18:23:14 +0000</pubDate>
     </item>
     <item>
@@ -937,7 +665,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-175</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.92</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Thu, 26 Feb 2026 18:48:19 +0000</pubDate>
     </item>
     <item>
@@ -947,7 +675,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-176</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.92</comments>
+      <comments>Score: 8.90</comments>
       <pubDate>Thu, 26 Feb 2026 19:09:12 +0000</pubDate>
     </item>
     <item>
@@ -957,7 +685,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-177</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Fri, 27 Feb 2026 17:05:23 +0000</pubDate>
     </item>
     <item>
@@ -967,7 +695,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-178</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Fri, 27 Feb 2026 17:13:46 +0000</pubDate>
     </item>
     <item>
@@ -977,7 +705,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-179</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.44</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Fri, 27 Feb 2026 17:51:02 +0000</pubDate>
     </item>
     <item>
@@ -987,7 +715,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-004-critical-vulnerability-affecting-cisco-catalyst-sd-wan-cve-2026-20127</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Wed, 25 Feb 2026 16:07:47 +0000</pubDate>
     </item>
   </channel>
