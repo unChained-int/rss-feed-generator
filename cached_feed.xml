@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Mar 2026 04:50:59 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 05:55:11 +0000</lastBuildDate>
+    <item>
+      <title>Dell security advisory (AV26-138) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-138</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-138</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.23</comments>
+      <pubDate>Wed, 18 Feb 2026 19:09:36 +0000</pubDate>
+    </item>
     <item>
       <title>F5 security advisory (AV26-144)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-144</link>
@@ -20,77 +30,6 @@
       <pubDate>Wed, 18 Feb 2026 19:18:49 +0000</pubDate>
     </item>
     <item>
-      <title>Security hole could let hackers take over Juniper Networks PTX core routers</title>
-      <link>https://www.csoonline.com/article/4138788/security-hole-could-let-hackers-take-over-juniper-networks-ptx-core-routers.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Network admins with Juniper PTX series routers in their environments are being warned to patch immediately, because a newly-discovered critical vulnerability could lead to an unauthenticated threat actor running code with root privileges.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;T&lt;/em&gt;he hole is “especially dangerous, because these devices often sit in the middle of the network, not on the fringes,” said &lt;a href="https://www.linkedin.com/in/piyushsharrma/" rel="noreferrer noopener" target="_blank"&gt;Piyush Sharma&lt;/a&gt;, CEO of Tuskira&lt;em&gt;. “&lt;/em&gt;If an attacker gains control of a PTX, the impact is bigger than a single device compromise because it can become a traffic vantage point and a control point at the same time. This opens the door to the stealthy interception of data flows, controller redirected traffic, or easy pivots into adjacent networks.”&lt;/p&gt;
-
-
-
-&lt;p&gt;This issue affects PTX routers running versions of the Junos OS Evolved operating system earlier than 25.4R1-S1-EVO and 25.4R2-EVO. It doesn’t affect the standard Junos OS.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://supportportal.juniper.net/s/article/2026-02-Out-of-Cycle-Security-Bulletin-Junos-OS-Evolved-PTX-Series-A-vulnerability-allows-a-unauthenticated-network-based-attacker-to-execute-code-as-root-CVE-2026-21902" rel="noreferrer noopener" target="_blank"&gt;In a notice, Juniper said &lt;/a&gt;it isn’t aware of any malicious exploitation of this vulnerability. The hole was found during internal product security testing or research.&lt;/p&gt;
-
-
-
-&lt;p&gt;The PTX line is a series of modular high performance core routers powered by HPE Juniper Networks’ latest generation of custom Express family ASICs and optimized for 400G and 800G migrations. They offer native 400G and 800G inline MACsec, deep buffering and flexible filtering. The company says they are built for longevity in demanding WAN (wide area network) and data center use cases and deployment scenarios, including core, peering, data center interconnect, data center edge, metro aggregation, and AI data center networking.&lt;/p&gt;
-
-
-
-&lt;p&gt;In its notice, Juniper says an Incorrect Permission Assignment for Critical Resource vulnerability in the On-Box Anomaly detection framework of the operating system allows an unauthenticated, network-based attacker to execute code as root. The detection framework is enabled by default.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The On-Box Anomaly detection framework should only be reachable by other internal processes over the internal routing instance, but not over an externally exposed port,” the alert adds. “With the ability to access and manipulate the service to execute code as root, a remote attacker can take complete control of the device.”&lt;/p&gt;
-
-
-
-&lt;p&gt;To resolve the issue, admins should make sure version 25.4R1-S1-EVO of Junos OS Evolved is installed. They should also note that versions 25.4R2-EVO and 26.2R1-EVO are on the way.&lt;/p&gt;
-
-
-
-&lt;p&gt;If the update can’t be installed immediately, admins should use access control lists or firewall filters to limit access to only trusted networks and hosts, to reduce the risk of exploitation of this issue. Ensure such filters only permit explicitly required connections and block all others.&lt;/p&gt;
-
-
-
-&lt;p&gt;Another option is to disable the service by entering &lt;em&gt;request pfe anomalies disable&lt;/em&gt; in the operating system’s command line.&lt;/p&gt;
-
-
-
-&lt;p&gt;Sharma said Juniper vulnerabilities have attracted a lot of attention from hackers over the years because of the premium positioning the routers give if long-term footholds are established. “As a network operating system, Junos sits at the crossroads of major control points like identity, policy, and traffic, which means a single exploit can scale quickly across valuable networks,” he said. “Additionally, these footholds provide attackers a longer window to find and exploit vulnerable devices, since core network gear is painful to apply patching to due to long downtimes.”&lt;/p&gt;
-
-
-
-&lt;p&gt;To prevent vulnerabilities such as the current flaw from leading to exploitation, organizations need a defense platform that can continuously monitor for anomalies across networks and alert security teams when malicious behavior is detected, he added.&lt;/p&gt;
-
-
-
-&lt;p&gt;Disclosure of the vulnerability comes as Juniper’s parent firm HPE &lt;a href="https://www.networkworld.com/article/4136694/hpes-latest-juniper-routers-target-large%E2%80%91scale-ai-fabrics.html" target="_blank"&gt;prepares to introduce new PTX12000 and PTX10002 router families&lt;/a&gt; at next week’s Mobile World Congress. HPE &lt;a href="https://www.networkworld.com/article/4016229/hpe-finalizes-juniper-acquisition-forms-new-ai-centric-networking-unit.html" target="_blank"&gt;bought Juniper last year&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4138788/security-hole-could-let-hackers-take-over-juniper-networks-ptx-core-routers.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
-      <pubDate>Fri, 27 Feb 2026 21:36:37 +0000</pubDate>
-    </item>
-    <item>
       <title>EUR 1.2 billion in counterfeit cash stopped in postal operation</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-12-billion-in-counterfeit-cash-stopped-in-postal-operation</link>
       <description>Law enforcement authorities from 18 countries have stopped an estimated EUR 1.2 billion in counterfeit banknotes and coins from entering circulation during Operation DECOY III, a Europol-coordinated action led by Austria, Portugal, and Spain.</description>
@@ -98,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.26</comments>
-      <pubDate>Mon, 02 Mar 2026 02:50:59 +0000</pubDate>
+      <pubDate>Mon, 02 Mar 2026 03:55:11 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-145)</title>
@@ -117,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-146</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
+      <comments>Score: 7.28</comments>
       <pubDate>Thu, 19 Feb 2026 15:45:39 +0000</pubDate>
     </item>
     <item>
@@ -127,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-147</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
+      <comments>Score: 7.28</comments>
       <pubDate>Thu, 19 Feb 2026 16:06:34 +0000</pubDate>
     </item>
     <item>
@@ -159,16 +98,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.30</comments>
       <pubDate>Thu, 19 Feb 2026 20:29:09 +0000</pubDate>
-    </item>
-    <item>
-      <title>Never out of sight: ‘Allies’ exercise pursues targets across Europe</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/never-out-of-sight-allies-exercise-pursues-targets-across-europe</link>
-      <description>From 9 to 12 February 2026, Europol hosted the exercise ‘Allies 2026’, designed to enhance cross-border cooperation and interoperability among European law enforcement authorities. Simulating intersecting scenarios unfolding across several European countries, this exercise tested the participants’ ability to effectively fight drug trafficking and hybrid threats.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/never-out-of-sight-allies-exercise-pursues-targets-across-europe</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
-      <pubDate>Mon, 02 Mar 2026 02:50:59 +0000</pubDate>
     </item>
     <item>
       <title>Five Eyes issue emergency directive on exploited Cisco SD-WAN zero-day</title>
@@ -292,8 +221,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4137562/five-eyes-issue-emergency-directive-on-exploited-cisco-sd-wan-zero-day.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.37</comments>
       <pubDate>Wed, 25 Feb 2026 22:49:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Never out of sight: ‘Allies’ exercise pursues targets across Europe</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/never-out-of-sight-allies-exercise-pursues-targets-across-europe</link>
+      <description>From 9 to 12 February 2026, Europol hosted the exercise ‘Allies 2026’, designed to enhance cross-border cooperation and interoperability among European law enforcement authorities. Simulating intersecting scenarios unfolding across several European countries, this exercise tested the participants’ ability to effectively fight drug trafficking and hybrid threats.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/never-out-of-sight-allies-exercise-pursues-targets-across-europe</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.38</comments>
+      <pubDate>Mon, 02 Mar 2026 03:55:11 +0000</pubDate>
     </item>
     <item>
       <title>Drug trafficking network supplying cocaine to Iceland dismantled</title>
@@ -303,7 +242,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Mon, 02 Mar 2026 02:50:59 +0000</pubDate>
+      <pubDate>Mon, 02 Mar 2026 03:55:11 +0000</pubDate>
     </item>
     <item>
       <title>Roundcube security advisory (AV25-309) - Update 1</title>
@@ -312,7 +251,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av25-309</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Fri, 20 Feb 2026 20:59:37 +0000</pubDate>
     </item>
     <item>
@@ -323,27 +262,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 02 Mar 2026 02:50:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fact Check: Europol’s support to Ukraine and entries into the Schengen Information System</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/fact-check-europol-support-to-ukraine-and-entries-schengen-information-system</link>
-      <description>The clarification below provides information to help accurately understand a recent media article on Europol’s support to Ukraine.Case at hand:A recent media article headlined: Separated by war — and by Schengen described how data and alerts in the EU’s Schengen Information System (SIS), originally designed to keep Europe safe from security threats, is now trapping Ukrainian refugees, including those who...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fact-check-europol-support-to-ukraine-and-entries-schengen-information-system</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 02 Mar 2026 02:50:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>Follow the money: cocaine trafficking network exposed through its financial trail</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</link>
-      <description>The investigation was led by the French National Gendarmerie, in close cooperation with the Italian Carabinieri and the Swiss Federal Office of Police (fedpol). It was supported by the Belgian Judicial Federal Police of Antwerp, the Bulgarian State Agency for National Security, the German Customs and the Ecuadorian National Police, under the coordination of Europol and Eurojust.Following the financial flows,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 02 Mar 2026 02:50:59 +0000</pubDate>
+      <pubDate>Mon, 02 Mar 2026 03:55:11 +0000</pubDate>
     </item>
     <item>
       <title>Publication of a vacancy notice for the position of Europol Executive Director</title>
@@ -353,7 +272,27 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 02 Mar 2026 02:50:59 +0000</pubDate>
+      <pubDate>Mon, 02 Mar 2026 03:55:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fact Check: Europol’s support to Ukraine and entries into the Schengen Information System</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/fact-check-europol-support-to-ukraine-and-entries-schengen-information-system</link>
+      <description>The clarification below provides information to help accurately understand a recent media article on Europol’s support to Ukraine.Case at hand:A recent media article headlined: Separated by war — and by Schengen described how data and alerts in the EU’s Schengen Information System (SIS), originally designed to keep Europe safe from security threats, is now trapping Ukrainian refugees, including those who...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fact-check-europol-support-to-ukraine-and-entries-schengen-information-system</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 02 Mar 2026 03:55:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>Follow the money: cocaine trafficking network exposed through its financial trail</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</link>
+      <description>The investigation was led by the French National Gendarmerie, in close cooperation with the Italian Carabinieri and the Swiss Federal Office of Police (fedpol). It was supported by the Belgian Judicial Federal Police of Antwerp, the Bulgarian State Agency for National Security, the German Customs and the Ecuadorian National Police, under the coordination of Europol and Eurojust.Following the financial flows,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 02 Mar 2026 03:55:11 +0000</pubDate>
     </item>
     <item>
       <title>3 354 individuals prosecuted in Europol-coordinated hit against pharmaceutical crime networks</title>
@@ -363,7 +302,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.70</comments>
-      <pubDate>Mon, 02 Mar 2026 02:50:59 +0000</pubDate>
+      <pubDate>Mon, 02 Mar 2026 03:55:11 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV26–151)</title>
@@ -372,7 +311,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-151</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 23 Feb 2026 15:57:15 +0000</pubDate>
     </item>
     <item>
@@ -382,7 +321,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-152</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 23 Feb 2026 16:12:21 +0000</pubDate>
     </item>
     <item>
@@ -392,7 +331,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-153</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 23 Feb 2026 16:13:50 +0000</pubDate>
     </item>
     <item>
@@ -412,7 +351,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-155</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Mon, 23 Feb 2026 16:51:40 +0000</pubDate>
     </item>
     <item>
@@ -422,7 +361,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-156</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Mon, 23 Feb 2026 19:41:11 +0000</pubDate>
     </item>
     <item>
@@ -432,7 +371,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-157</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Mon, 23 Feb 2026 19:54:53 +0000</pubDate>
     </item>
     <item>
@@ -443,7 +382,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.84</comments>
-      <pubDate>Mon, 02 Mar 2026 02:50:59 +0000</pubDate>
+      <pubDate>Mon, 02 Mar 2026 03:55:11 +0000</pubDate>
     </item>
     <item>
       <title>Docker security advisory (AV26–158)</title>
@@ -452,7 +391,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-158</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 24 Feb 2026 13:35:17 +0000</pubDate>
     </item>
     <item>
@@ -462,7 +401,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-159</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 24 Feb 2026 13:53:52 +0000</pubDate>
     </item>
     <item>
@@ -472,7 +411,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-160</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Tue, 24 Feb 2026 16:29:36 +0000</pubDate>
     </item>
     <item>
@@ -482,7 +421,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-161</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Tue, 24 Feb 2026 16:55:13 +0000</pubDate>
     </item>
     <item>
@@ -492,7 +431,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-162</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Tue, 24 Feb 2026 18:42:38 +0000</pubDate>
     </item>
     <item>
@@ -502,7 +441,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-163</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Tue, 24 Feb 2026 20:30:01 +0000</pubDate>
     </item>
     <item>
@@ -512,7 +451,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-164</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Tue, 24 Feb 2026 20:47:04 +0000</pubDate>
     </item>
     <item>
@@ -522,7 +461,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-165</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Tue, 24 Feb 2026 21:04:36 +0000</pubDate>
     </item>
     <item>
@@ -532,7 +471,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-167</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Wed, 25 Feb 2026 18:26:30 +0000</pubDate>
     </item>
     <item>
@@ -542,7 +481,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-168</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Wed, 25 Feb 2026 18:36:46 +0000</pubDate>
     </item>
     <item>
@@ -552,7 +491,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-169</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Wed, 25 Feb 2026 19:08:43 +0000</pubDate>
     </item>
     <item>
@@ -562,7 +501,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-170</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Wed, 25 Feb 2026 19:16:00 +0000</pubDate>
     </item>
     <item>
@@ -572,7 +511,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-171</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Wed, 25 Feb 2026 19:16:48 +0000</pubDate>
     </item>
     <item>
@@ -582,7 +521,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-166</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.34</comments>
+      <comments>Score: 8.33</comments>
       <pubDate>Wed, 25 Feb 2026 20:03:01 +0000</pubDate>
     </item>
     <item>
@@ -592,7 +531,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-172</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.33</comments>
       <pubDate>Wed, 25 Feb 2026 20:28:47 +0000</pubDate>
     </item>
     <item>
@@ -602,7 +541,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-173</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Wed, 25 Feb 2026 21:02:56 +0000</pubDate>
     </item>
     <item>
@@ -612,7 +551,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-174</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Thu, 26 Feb 2026 18:23:14 +0000</pubDate>
     </item>
     <item>
@@ -622,7 +561,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-175</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Thu, 26 Feb 2026 18:48:19 +0000</pubDate>
     </item>
     <item>
@@ -632,7 +571,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-176</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.69</comments>
       <pubDate>Thu, 26 Feb 2026 19:09:12 +0000</pubDate>
     </item>
     <item>
@@ -776,7 +715,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3492006/kubernetes-security-wie-sie-ihre-cluster-besser-absichern.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Mon, 02 Mar 2026 03:47:00 +0000</pubDate>
     </item>
     <item>
@@ -786,7 +725,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-177</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.15</comments>
+      <comments>Score: 9.12</comments>
       <pubDate>Fri, 27 Feb 2026 17:05:23 +0000</pubDate>
     </item>
     <item>
@@ -796,7 +735,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-178</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.15</comments>
+      <comments>Score: 9.13</comments>
       <pubDate>Fri, 27 Feb 2026 17:13:46 +0000</pubDate>
     </item>
     <item>
@@ -806,7 +745,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-179</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.16</comments>
+      <comments>Score: 9.14</comments>
       <pubDate>Fri, 27 Feb 2026 17:51:02 +0000</pubDate>
     </item>
     <item>
@@ -816,7 +755,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-004-critical-vulnerability-affecting-cisco-catalyst-sd-wan-cve-2026-20127</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.29</comments>
+      <comments>Score: 9.27</comments>
       <pubDate>Wed, 25 Feb 2026 16:07:47 +0000</pubDate>
     </item>
   </channel>
