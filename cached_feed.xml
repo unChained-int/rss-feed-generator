@@ -8,17 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Mar 2026 06:00:14 +0000</lastBuildDate>
-    <item>
-      <title>Dutch Police arrest suspect linked to 2025 explosions in Germany</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/dutch-police-arrest-suspect-linked-to-2025-explosions-in-germany</link>
-      <description>On 3 March 2026, the Dutch Police conducted several house searches in the context of Europol’s Operational Taskforce GRIMM. During this action day, one suspect was arrested.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/dutch-police-arrest-suspect-linked-to-2025-explosions-in-germany</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.19</comments>
-      <pubDate>Mon, 09 Mar 2026 04:00:14 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 09 Mar 2026 07:14:48 +0000</lastBuildDate>
     <item>
       <title>Project Compass: first operational results against The Com network</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/project-compass-first-operational-results-against-com-network</link>
@@ -27,110 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.21</comments>
-      <pubDate>Mon, 09 Mar 2026 04:00:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>ClickFix attackers using new tactic to evade detection, says Microsoft</title>
-      <link>https://www.csoonline.com/article/4141923/clickfix-attackers-using-new-tactic-to-evade-detection-says-microsoft.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Threat actors are trying a different tactic to sucker employees into falling for &lt;a href="https://www.csoonline.com/article/4096241/new-clickfix-attacks-use-fake-windows-update-screens-to-fool-employees.html" target="_blank"&gt;ClickFix&lt;/a&gt; phishing attacks that install malware, says Microsoft.&lt;/p&gt;
-
-
-
-&lt;p&gt;Rather than asking potential victims to copy and paste a (malicious) command into the Run dialog, launched by hitting the Windows button plus the letter R, they are being told to use the Windows + X → I shortcut to launch Windows Terminal (wt.exe) directly.&lt;/p&gt;
-
-
-
-&lt;p&gt;Once the terminal is opened, victims are prompted to paste in malicious PowerShell commands delivered through fake CAPTCHA pages, troubleshooting prompts, or verification-style lures designed to appear routine and benign.&lt;/p&gt;
-
-
-
-&lt;p&gt;Why? Going this route evades defenses looking for unusual run commands, and it bypasses security awareness training that tells employees not to do anything that invokes the Run command.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://x.com/MsftSecIntel/status/2029692925118992473" rel="noreferrer noopener" target="_blank"&gt;Microsoft described the tactic in a post on X this week&lt;/a&gt;, saying what makes this campaign notable are the post-compromise outcomes. In one case, several Windows Terminal/PowerShell instances are opened that ultimately launch another Powershell process responsible for decoding embedded hex commands.&lt;/p&gt;
-
-
-
-&lt;p&gt;The decoded PowerShell script then downloads a legitimate but renamed 7-Zip binary and saves it with a randomized file name, along with a zipped payload. The renamed archive utility extracts and runs the malware, which executes a multi-stage attack chain that includes retrieval of additional payloads, establishment of persistence through scheduled tasks, defense evasion through Microsoft Defender exclusions, and exfiltration of stolen machine and network data.&lt;/p&gt;
-
-
-
-&lt;p&gt;In a second attack path, the victim pastes a hex-encoded, XOR-compressed command into Windows Terminal. This command downloads a randomly named batch file to &lt;em&gt;AppData\Local&lt;/em&gt; that is then invoked through cmd.exe to write a VBScript to &lt;em&gt;%Temp%&lt;/em&gt;. The batch script is executed via cmd.exe with the &lt;em&gt;/launched&lt;/em&gt; command-line argument, and is then executed again through MSBuild.exe, resulting in &lt;a href="https://www.huntress.com/blog/detecting-malicious-use-of-lolbins" rel="noreferrer noopener" target="_blank"&gt;LOLBin&lt;/a&gt; abuse. The script connects to Crypto Blockchain RPC endpoints, indicating etherhiding technique, and also performs QueueUserAPC()-based code injection into chrome.exe and msedge.exe processes to harvest web and login data.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="but-is-this-really-new"&gt;But is this really new?&lt;/h2&gt;
-
-
-
-&lt;p&gt;However, a number of experts quickly added comments to the Microsoft post complaining that the Windows + X tactic isn’t new.&lt;/p&gt;
-
-
-
-&lt;p&gt; &lt;a href="https://blog.knowbe4.com/author/roger-grimes" rel="noreferrer noopener" target="_blank"&gt;Roger Grimes&lt;/a&gt;, CISO advisor at awareness training provider KnowBe4, agreed.&lt;/p&gt;
-
-
-
-&lt;p&gt;“ClickFix attacks using Win+X instead of Win+R have been around for at least six months, if not a year or more,” he said in an email. “What they are doing during execution is not new.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Regardless, he added, the continuing and increasing use of ClickFix attacks means infosec leaders still need to educate employees about them.&lt;/p&gt;
-
-
-
-&lt;p&gt;“We’ve long had training content around this type of attack. Users need to know that nothing legitimate will ever ask them to do Win+ whatever keys to paste gobblygook to run code. Anything that does that should simply not be performed,” he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;“And all Windows computers should already be restricted so that random, unsigned (not signed by the organization), PowerShell commands should not be allowed. Every organization and machine should already have the following PowerShell command setting: ‘&lt;em&gt;Set-ExecutionPolicy Restricted -Force&lt;/em&gt;‘ enabled. If not, your organization’s cybersecurity risk is far higher than it needs to be.” &lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="payload-chain-built-to-last"&gt;Payload chain ‘built to last’&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.linkedin.com/in/joshuaroback/?originalSubdomain=nl" rel="noreferrer noopener" target="_blank"&gt;Joshua Roback&lt;/a&gt;, principal security solution architect at Swimlane, noted the campaign outlined by Microsoft pushes the ClickFix playbook into more trusted, everyday workflows by getting users to run pasted command content inside legitimate Windows tooling that feels routine and safe. That matters, he said, because it slips past the usual mental red flags people associate with sketchy popups, and it can also dodge some of the controls and detections that security teams have tuned to the more obvious ClickFix patterns.&lt;/p&gt;
-
-
-
-&lt;p&gt;The payload chain is also more built to last than previous variants, he added. Instead of a quick one-and-done retrieval trick, it uses a more layered delivery and persistence approach that helps it blend in, stick around longer, and quietly escalate the damage once it lands. One path adds an additional indirection layer that helps the attacker’s infrastructure blend in and stay reachable, which can make takedowns and straightforward blocking a lot less effective.&lt;/p&gt;
-
-
-
-&lt;p&gt;For CISOs, he said, the message to employees has to be clear. “Use a simple rule of thumb: never run pasted commands, never approve unexpected sign-ins, and report all incidents through official company support channels.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-clickfix-works"&gt;How ClickFix works&lt;/h2&gt;
-
-
-
-&lt;p&gt;ClickFix phishing campaigns &lt;a href="https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/" rel="noreferrer noopener" target="_blank"&gt;began in 2024&lt;/a&gt;, Microsoft &lt;a href="https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/" rel="noreferrer noopener" target="_blank"&gt;noted in a security blog&lt;/a&gt; last year that detailed the campaign’s tactics and indicators of compromise. The attack starts with an employee being asked to click on a link or open an attachment, often with a payment or invoice theme, within an email or text. To evade defenses looking to stop employees downloading unapproved files, the user is told in a popup box to “verify the download” by opening a Run dialog and copying and pasting something into it.&lt;/p&gt;
-
-
-
-&lt;p&gt;The goal is to get the unwitting victim to download malware such as infostealers (usually LummaStealer), remote access tools such as Xworm, AsyncRAT, NetSupport, and SectopRAT; loaders like Latrodectus and MintsLoader; and rootkits.&lt;/p&gt;
-
-
-
-&lt;p&gt;In the blog, Microsoft provides tips to defenders for fighting ClickFix attacks, including recommending they enable PowerShell &lt;a href="https://learn.microsoft.com/en-us/powershell/scripting/security/security-features?view=powershell-7.5" rel="noreferrer noopener" target="_blank"&gt;script block logging&lt;/a&gt; to detect and analyze obfuscated or encoded commands, which would provide visibility into malicious script execution that might otherwise evade traditional logging.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4141923/clickfix-attackers-using-new-tactic-to-evade-detection-says-microsoft.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.21</comments>
-      <pubDate>Fri, 06 Mar 2026 21:15:32 +0000</pubDate>
+      <pubDate>Mon, 09 Mar 2026 05:14:48 +0000</pubDate>
     </item>
     <item>
       <title>Zyxel security advisory (AV26-167)</title>
@@ -139,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-167</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Wed, 25 Feb 2026 18:26:30 +0000</pubDate>
     </item>
     <item>
@@ -149,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-168</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Wed, 25 Feb 2026 18:36:46 +0000</pubDate>
     </item>
     <item>
@@ -336,7 +223,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4141989/trumps-cyber-strategy-emphasizes-offensive-operations-deregulation-ai.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Fri, 06 Mar 2026 23:59:55 +0000</pubDate>
     </item>
     <item>
@@ -376,7 +263,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-177</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Fri, 27 Feb 2026 17:05:23 +0000</pubDate>
     </item>
     <item>
@@ -386,7 +273,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-178</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.36</comments>
       <pubDate>Fri, 27 Feb 2026 17:13:46 +0000</pubDate>
     </item>
     <item>
@@ -543,8 +430,17 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4140841/state-affiliated-hackers-set-up-for-critical-ot-attacks-that-operators-may-not-detect.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
+      <comments>Score: 7.47</comments>
       <pubDate>Thu, 05 Mar 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How AI Assistants are Moving the Security Goalposts</title>
+      <link>https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/</link>
+      <description>AI-based assistants or "agents" -- autonomous programs that have access to the user's computer, files, online services and can automate virtually any task -- are growing in popularity with developers and IT workers. But as so many eyebrow-raising headlines over the past few weeks have shown, these powerful and assertive new tools are rapidly shifting the security priorities for organizations, while blurring the lines between data and code, trusted co-worker and insider threat, ninja hacker and novice code jockey.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.48</comments>
+      <pubDate>Sun, 08 Mar 2026 23:35:42 +0000</pubDate>
     </item>
     <item>
       <title>From a small Swedish town to a global crime network: international operation strikes top-tier organised crime</title>
@@ -554,67 +450,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Mar 2026 04:00:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Driving innovation for law enforcement: Europol hosts its third Industry and Research Days</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/driving-innovation-for-law-enforcement-europol-hosts-its-third-industry-and-research-days</link>
-      <description>Over three days, 40 companies and eight EU-funded research projects presented cutting-edge technological solutions designed to address the evolving needs of law enforcement across Europe. Through keynote interventions, short pitches and in-depth live demonstrations, participants explored practical tools and emerging technologies with direct operational relevance.Opening the event, Europol’s Deputy Executive Director for Capabilities, Andrei Lințǎ, underlined the strategic importance of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/driving-innovation-for-law-enforcement-europol-hosts-its-third-industry-and-research-days</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Mar 2026 04:00:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Global phishing-as-a-service platform taken down in coordinated public-private action</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/global-phishing-service-platform-taken-down-in-coordinated-public-private-action</link>
-      <description>The action was carried out by law enforcement partners and private sector stakeholders working hand in hand, coordinated by Europol’s European Cybercrime Centre (EC3).As part of the disruption, 330 domains forming the core infrastructure of the criminal service, including phishing pages and control panels, were taken down. The technical disruption was led by Microsoft with the support of a coalition...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/global-phishing-service-platform-taken-down-in-coordinated-public-private-action</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Mar 2026 04:00:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Follow the money: cocaine trafficking network exposed through its financial trail</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</link>
-      <description>The investigation was led by the French National Gendarmerie, in close cooperation with the Italian Carabinieri and the Swiss Federal Office of Police (fedpol). It was supported by the Belgian Judicial Federal Police of Antwerp, the Bulgarian State Agency for National Security, the German Customs and the Ecuadorian National Police, under the coordination of Europol and Eurojust.Following the financial flows,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Mar 2026 04:00:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports takedown of cocaine trafficking network linked to Los Lobos cartel</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-takedown-of-cocaine-trafficking-network-linked-to-los-lobos-cartel</link>
-      <description>Leading up to this action day, around four tonnes of cocaine were seized by law enforcement on several occasions:572 kilograms in Ecuador;2.6 tonnes in February 2025 in Vlissingen, the Netherlands;1.1 tonnes on 2 June 2025 in Rotterdam, the Netherlands;3.165 tonnes in Belgium.Overall, today’s action day led to the following results:16 persons arrested;4 cited for questioning;26 house searches;4 hand guns and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-takedown-of-cocaine-trafficking-network-linked-to-los-lobos-cartel</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Mar 2026 04:00:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Major data leak forum dismantled in global action against cybercrime forum</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-data-leak-forum-dismantled-in-global-action-against-cybercrime-forum</link>
-      <description>Between 3 and 4 March, coordinated actions across multiple jurisdictions severely disrupted the forum’s operations and targeted its most active users.Edvardas ŠilerisHead of Europol’s European Cybercrime CentreThis operation shows that no corner of the internet is beyond the reach of international law enforcement. What began as a shadowy forum for stolen data has now been dismantled, and those who believed...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-data-leak-forum-dismantled-in-global-action-against-cybercrime-forum</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Mar 2026 04:00:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Invitation - Press conference: From two seized phones to a global criminal web</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/invitation-press-conference-two-seized-phones-to-global-criminal-web</link>
-      <description>When investigators unlocked the devices, they uncovered not one group but a constellation of interconnected criminal networks orchestrating large-scale drug trafficking and money laundering.Coordinated enforcement actions across multiple countries have now struck at the heart of this structure, disrupting key actors.Press conference detailsSpeakers:Mats Berggren, Acting Deputy Head of The National Operations Department, Swedish Police Authority Commander Chris Woods, Command Europe,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/invitation-press-conference-two-seized-phones-to-global-criminal-web</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Mar 2026 04:00:14 +0000</pubDate>
+      <pubDate>Mon, 09 Mar 2026 05:14:48 +0000</pubDate>
     </item>
     <item>
       <title>12 members of money laundering scheme exploiting Ukrainian women arrested in Spain</title>
@@ -624,16 +460,67 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 09 Mar 2026 04:00:14 +0000</pubDate>
+      <pubDate>Mon, 09 Mar 2026 05:14:48 +0000</pubDate>
     </item>
     <item>
-      <title>How AI Assistants are Moving the Security Goalposts</title>
-      <link>https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/</link>
-      <description>AI-based assistants or "agents" -- autonomous programs that have access to the user's computer, files, online services and can automate virtually any task -- are growing in popularity with developers and IT workers. But as so many eyebrow-raising headlines over the past few weeks have shown, these powerful and assertive new tools are rapidly shifting the security priorities for organizations, while blurring the lines between data and code, trusted co-worker and insider threat, ninja hacker and novice code jockey.</description>
-      <guid isPermaLink="false">https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/</guid>
+      <title>Follow the money: cocaine trafficking network exposed through its financial trail</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</link>
+      <description>The investigation was led by the French National Gendarmerie, in close cooperation with the Italian Carabinieri and the Swiss Federal Office of Police (fedpol). It was supported by the Belgian Judicial Federal Police of Antwerp, the Bulgarian State Agency for National Security, the German Customs and the Ecuadorian National Police, under the coordination of Europol and Eurojust.Following the financial flows,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/follow-money-cocaine-trafficking-network-exposed-through-its-financial-trail</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
-      <pubDate>Sun, 08 Mar 2026 23:35:42 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 09 Mar 2026 05:14:48 +0000</pubDate>
+    </item>
+    <item>
+      <title>Driving innovation for law enforcement: Europol hosts its third Industry and Research Days</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/driving-innovation-for-law-enforcement-europol-hosts-its-third-industry-and-research-days</link>
+      <description>Over three days, 40 companies and eight EU-funded research projects presented cutting-edge technological solutions designed to address the evolving needs of law enforcement across Europe. Through keynote interventions, short pitches and in-depth live demonstrations, participants explored practical tools and emerging technologies with direct operational relevance.Opening the event, Europol’s Deputy Executive Director for Capabilities, Andrei Lințǎ, underlined the strategic importance of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/driving-innovation-for-law-enforcement-europol-hosts-its-third-industry-and-research-days</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 09 Mar 2026 05:14:48 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol supports takedown of cocaine trafficking network linked to Los Lobos cartel</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-takedown-of-cocaine-trafficking-network-linked-to-los-lobos-cartel</link>
+      <description>Leading up to this action day, around four tonnes of cocaine were seized by law enforcement on several occasions:572 kilograms in Ecuador;2.6 tonnes in February 2025 in Vlissingen, the Netherlands;1.1 tonnes on 2 June 2025 in Rotterdam, the Netherlands;3.165 tonnes in Belgium.Overall, today’s action day led to the following results:16 persons arrested;4 cited for questioning;26 house searches;4 hand guns and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-takedown-of-cocaine-trafficking-network-linked-to-los-lobos-cartel</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 09 Mar 2026 05:14:48 +0000</pubDate>
+    </item>
+    <item>
+      <title>Global phishing-as-a-service platform taken down in coordinated public-private action</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/global-phishing-service-platform-taken-down-in-coordinated-public-private-action</link>
+      <description>The action was carried out by law enforcement partners and private sector stakeholders working hand in hand, coordinated by Europol’s European Cybercrime Centre (EC3).As part of the disruption, 330 domains forming the core infrastructure of the criminal service, including phishing pages and control panels, were taken down. The technical disruption was led by Microsoft with the support of a coalition...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/global-phishing-service-platform-taken-down-in-coordinated-public-private-action</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 09 Mar 2026 05:14:48 +0000</pubDate>
+    </item>
+    <item>
+      <title>Major data leak forum dismantled in global action against cybercrime forum</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-data-leak-forum-dismantled-in-global-action-against-cybercrime-forum</link>
+      <description>Between 3 and 4 March, coordinated actions across multiple jurisdictions severely disrupted the forum’s operations and targeted its most active users.Edvardas ŠilerisHead of Europol’s European Cybercrime CentreThis operation shows that no corner of the internet is beyond the reach of international law enforcement. What began as a shadowy forum for stolen data has now been dismantled, and those who believed...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-data-leak-forum-dismantled-in-global-action-against-cybercrime-forum</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 09 Mar 2026 05:14:48 +0000</pubDate>
+    </item>
+    <item>
+      <title>Invitation - Press conference: From two seized phones to a global criminal web</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/invitation-press-conference-two-seized-phones-to-global-criminal-web</link>
+      <description>When investigators unlocked the devices, they uncovered not one group but a constellation of interconnected criminal networks orchestrating large-scale drug trafficking and money laundering.Coordinated enforcement actions across multiple countries have now struck at the heart of this structure, disrupting key actors.Press conference detailsSpeakers:Mats Berggren, Acting Deputy Head of The National Operations Department, Swedish Police Authority Commander Chris Woods, Command Europe,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/invitation-press-conference-two-seized-phones-to-global-criminal-web</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 09 Mar 2026 05:14:48 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-180)</title>
@@ -642,7 +529,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-180</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 02 Mar 2026 16:00:01 +0000</pubDate>
     </item>
     <item>
@@ -652,7 +539,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-181</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 02 Mar 2026 16:17:24 +0000</pubDate>
     </item>
     <item>
@@ -662,7 +549,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-182</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 02 Mar 2026 16:26:11 +0000</pubDate>
     </item>
     <item>
@@ -672,7 +559,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-183</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 02 Mar 2026 16:37:27 +0000</pubDate>
     </item>
     <item>
@@ -682,7 +569,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-184</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 02 Mar 2026 16:54:36 +0000</pubDate>
     </item>
     <item>
@@ -692,7 +579,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-185</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 02 Mar 2026 17:03:36 +0000</pubDate>
     </item>
     <item>
@@ -702,7 +589,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-186</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 02 Mar 2026 17:12:25 +0000</pubDate>
     </item>
     <item>
@@ -712,7 +599,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-march-2026-monthly-rollup-av26-187</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Mon, 02 Mar 2026 20:27:20 +0000</pubDate>
     </item>
     <item>
@@ -722,7 +609,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-188</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Mon, 02 Mar 2026 20:36:31 +0000</pubDate>
     </item>
     <item>
@@ -732,7 +619,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-189</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 03 Mar 2026 14:49:00 +0000</pubDate>
     </item>
     <item>
@@ -742,7 +629,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-mitsubishi-electric-security-advisory-av26-191</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 03 Mar 2026 15:27:32 +0000</pubDate>
     </item>
     <item>
@@ -752,7 +639,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-192</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 03 Mar 2026 15:37:11 +0000</pubDate>
     </item>
     <item>
@@ -762,7 +649,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-193</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Tue, 03 Mar 2026 18:20:18 +0000</pubDate>
     </item>
     <item>
@@ -772,7 +659,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-162</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Tue, 03 Mar 2026 19:53:27 +0000</pubDate>
     </item>
     <item>
@@ -782,7 +669,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-march-2026-monthly-rollup-av26-190</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Tue, 03 Mar 2026 20:13:15 +0000</pubDate>
     </item>
     <item>
@@ -802,7 +689,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-194</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Wed, 04 Mar 2026 14:11:47 +0000</pubDate>
     </item>
     <item>
@@ -812,7 +699,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-195</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Wed, 04 Mar 2026 14:19:12 +0000</pubDate>
     </item>
     <item>
@@ -822,7 +709,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-196</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Wed, 04 Mar 2026 17:06:08 +0000</pubDate>
     </item>
     <item>
@@ -832,7 +719,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-197</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.30</comments>
       <pubDate>Wed, 04 Mar 2026 19:40:28 +0000</pubDate>
     </item>
     <item>
@@ -842,7 +729,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-198</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Wed, 04 Mar 2026 20:12:25 +0000</pubDate>
     </item>
     <item>
@@ -852,8 +739,306 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/opentext-security-advisory-av26-199</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Thu, 05 Mar 2026 13:24:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>PQC roadmap remains hazy as vendors race for early advantage</title>
+      <link>https://www.csoonline.com/article/4142174/pqc-roadmap-remains-hazy-as-vendors-race-for-early-advantage.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Post-quantum cryptography (PQC) has long sat on the periphery of enterprise security, with experts calling it inevitable but not urgent. That posture is beginning to shift.&lt;/p&gt;
+
+
+
+&lt;p&gt;Earlier this year, Palo Alto Networks &lt;a href="https://www.csoonline.com/article/4123719/palo-alto-warns-of-quantum-risk-to-digital-security.html" target="_blank"&gt;published&lt;/a&gt; a blog announcing a new “quantum-safe security” initiative, framing it as a way for enterprises to assess where quantum-vulnerable cryptography exists across their environments and begin planning a transition. While the &lt;a href="https://www.paloaltonetworks.com/blog/2026/01/introducing-quantum-safe-security" rel="noreferrer noopener" target="_blank"&gt;announcement&lt;/a&gt; was light on technical specifics, it added to a growing security sentiment. Post-quantum threats are real.&lt;/p&gt;
+
+
+
+&lt;p&gt;“IDC’s view is that post-quantum risk is no longer a distant, theoretical issue; it is becoming a present-day governance and operational risk, especially for regulated and data-intensive industries,” said Sakshi Grover, senior research manager, security services, IDC Asia Pacific. While practical quantum attacks remain years away, security vendors are beginning to pull PQC out of the confines of a “future theory” and into present-day risk management.&lt;br /&gt;&lt;br /&gt;Rather than pushing sweeping architectural changes from the start, they are positioning discovery, inventory, readiness assessments, and crypto-agility capabilities as the first steps to get enterprises up to speed with quantum.&lt;/p&gt;
+
+
+
+&lt;p&gt;But even that groundwork is far from straightforward.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Can’t change what you can’t see&lt;/h2&gt;
+
+
+
+&lt;p&gt;At the heart of most PQC readiness offerings is a basic but difficult problem. Many organizations do not know where or how cryptography is used across their infrastructure. Encryption is embedded everywhere, from certificates and VPNs to APIs, firmware, identity systems, and third-party software. That sprawl makes it difficult to evaluate exposure to algorithms like RSA and elliptic curve cryptography, which are expected to be broken by sufficiently capable quantum computers.&lt;/p&gt;
+
+
+
+&lt;p&gt;Palo Alto’s messaging centers on this visibility gap. According to the company, its approach is to help organizations identify cryptographic usage that may not be quantum-safe and provide guidance on remediation paths. It isn’t alone in trying to do this.&lt;/p&gt;
+
+
+
+&lt;p&gt;Cisco frames the visibility problem in similarly operational terms, emphasising that readiness spans multiple phases rather than a one-time audit. “Cisco CX’s Quantum-Safe Services delivers end-to-end support across discovery, monitoring, and migration–plus strategic advisory and ongoing optimization to keep pace with evolving standards,” said &lt;a href="https://blogs.cisco.com/author/chrchish" rel="noreferrer noopener" target="_blank"&gt;Christian Chisolm&lt;/a&gt;, senior director of strategy &amp;amp; planning, Security &amp;amp; Trust Organization, Cisco.&lt;/p&gt;
+
+
+
+&lt;p&gt;Companies like IBM have also been building cryptographic inventory solutions to catalog every encryption component. IBM’s Quantum Safe Explorer (&lt;a href="https://www.ibm.com/docs/en/quantum-safe/quantum-safe-explorer/2.x?topic=quantum-safe-explorer-overview" rel="noreferrer noopener" target="_blank"&gt;QSE&lt;/a&gt;) performs static analysis of software to locate cryptographic assets, including libraries and dependencies, and pairs that with runtime monitoring through its Quantum Safe Advisor to build a comprehensive “Cryptography Bill of Materials.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Some providers are focusing specifically on infrastructure-layer visibility. Cisco says its discovery currently concentrates on network cryptography exposure. “We currently detect: Digital certificates across management, control, and data places; Cryptographic protocols and algorithms (TLS/SSL, SSH, IPsec, etc); Key exchange mechanisms on Cisco network devices; Trust anchors and hardware security elements within platform architectures,” Chisolm said.&lt;/p&gt;
+
+
+
+&lt;p&gt;Cloudflare, by contrast, emphasizes visibility at the connection layer rather than deep asset discovery. “Cloudflare provides visibility into which client devices and endpoints can successfully establish TLS 1.3 connections,” Volker Rath, field CISO at Cloudflare, said.&lt;/p&gt;
+
+
+
+&lt;p&gt;Certificate management vendors are also repositioning core functions for PQC readiness. DigiCert, for example, uses its &lt;a href="https://www.digicert.com/trust-lifecycle-manager" rel="noreferrer noopener" target="_blank"&gt;Trust Lifecycle Manager&lt;/a&gt; and related tools to help enterprises identify, inventory, and begin replacing vulnerable certificates with quantum-safe alternatives.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="some-are-already-ahead-as-the-migration-question-looms"&gt;Some are already ahead as the migration question looms&lt;/h2&gt;
+
+
+
+&lt;p&gt;One of the earliest vendors to operationalize cryptographic discovery specifically for PQC readiness was Sandbox AQ, which emerged from Google’s quantum research efforts. As early as 2022, the company argued that enterprises needed to inventory cryptography assets long before post-quantum algorithms could be deployed at scale.&lt;/p&gt;
+
+
+
+&lt;p&gt;Initially offered as a consulting-driven assessment, that capability eventually evolved into a product, AQtive Guard, designed to continuously monitor cryptographic usage and flag quantum-vulnerable dependencies.&lt;/p&gt;
+
+
+
+&lt;p&gt;In 2024, the platform’s &lt;a href="https://www.sandboxaq.com/press/softbank-corp-uses-sandboxaqs-aqtive-guard-to-identify-undetected-security-vulnerabilities-in-existing-it-infrastructure" rel="noreferrer noopener" target="_blank"&gt;deployment&lt;/a&gt; by SoftBank Corporation gave the company’s claims a public validation, uncovering unnoticed vulnerable encryption and certificate issues across a large enterprise network. Beyond SoftBank, SandboxAQ has managed to secure high-profile engagements, including a &lt;a href="https://aqtiveguard.com/blog/sandboxaq-and-dow-cio-partner-to-strengthen-us-defenses-against-quantum-and-ai-driven-cyber-threats" rel="noreferrer noopener" target="_blank"&gt;partnership&lt;/a&gt; to deploy AQtive Guard across multiple US Department of War entities to accelerate cryptographic visibility and PQC modernization.&lt;/p&gt;
+
+
+
+&lt;p&gt;A handful of other vendors, too, have moved beyond experimental efforts to deliver more mature offerings. QuSecure offers the &lt;a href="https://www.qusecure.com/qusecure-launches-quprotect-r3/" rel="noreferrer noopener" target="_blank"&gt;QuProtect &lt;/a&gt;platform, combining crypto-agility with discovery so enterprises can embed quantum-resilient cryptography into existing infrastructure without rewriting application code. &lt;/p&gt;
+
+
+
+&lt;p&gt;Some niche players are offering full-stack products that embed PQC across services. Companies like &lt;a href="https://www.post-quantum.com" rel="noreferrer noopener" target="_blank"&gt;Post-Quantum&lt;/a&gt; (UK-based) provide modular software for identity, VPNs, and encrypted messaging that is quantum-safe today, stressing crypto-agility and backward compatibility as part of readiness.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The approach to mass migration away from where we’ve grown comfortable into new methods of encryption is no easy task,” said &lt;a href="https://url.usb.m.mimecastprotect.com/s/-lXyCWWE8EhZ8gzLI6f6IodZn8?domain=gartner.com" rel="noreferrer noopener" target="_blank"&gt;Bart Willemsen&lt;/a&gt;, VP analyst at Gartner. “The road towards continuous inventory, prioritization for replacement, and the ability to maintain connectivity in operations is a long one. What’s more, we need to become and remain crypto-agile (we’re likely going to have to do the same again, later, as has always been the case historically) and that repeatability demands consistency.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Cisco argues that migration planning must account for legacy constraints, not just modern systems. “Legacy systems present unique challenges — limited processing power, fixed firmware, and operational lifecycles spanning over 10 to 20 years. When direct upgrades aren’t feasible, we deploy cryptographic abstraction layers: quantum-safe proxies or gateways that mediate communications on behalf of legacy devices, essentially wrapping vulnerable protocols in PQC-secured tunnels,” Chisolm said.&lt;/p&gt;
+
+
+
+&lt;p&gt;Cloudflare takes a different approach, positioning its network as a compensating control. “This means customers do not necessarily need to upgrade legacy systems or proprietary software to achieve PQC readiness, as the connection is secured at the edge, removing the opportunity for interception along the way,” Rath said.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="harvest-now-decrypt-later-adds-pressure"&gt;“Harvest now, decrypt later” adds pressure&lt;/h2&gt;
+
+
+
+&lt;p&gt;Part of the renewed urgency comes from the &lt;a href="https://www.paloaltonetworks.in/cyberpedia/harvest-now-decrypt-later-hndl" rel="noreferrer noopener" target="_blank"&gt;“harvest now, decrypt later”&lt;/a&gt; threat model, in which adversaries collect encrypted data today with the expectation that it can be decrypted once quantum capabilities mature.&lt;/p&gt;
+
+
+
+&lt;p&gt;This scenario has shifted PQC from a hypothetical future problem to an immediate data protection concern, particularly for industries handling sensitive data with long confidentiality lifetimes, including telecommunications, finance, healthcare, and government.&lt;/p&gt;
+
+
+
+&lt;p&gt;“We do hear of HNDL attacks, where conventionally encrypted content is no longer discarded but retained by criminals, who are seeing the (quantum) developments as an opportunity for their nefarious activities within 2-3 years,” Gartner’s Willemsen said. “When criminals see opportunity around the corner, the quantum-based decryption risks are no longer theoretical; they are real.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Vendors increasingly argue that action cannot wait for fully capable quantum computers. Cisco warns that organizations holding long-lived sensitive data should already be moving beyond assessments. “Assessment is urgent, but active replacement is now imperative,” Chisolm said.&lt;br /&gt;&lt;br /&gt;Cloudflare echoes the timeline concern while pointing to official guidance. “The National Institute of Standards and Technology (NIST) recommends organizations achieve full post-quantum readiness by 2030,” Rath noted. “Given the complexity of updating infrastructure at scale, we recommend that enterprises begin planning the replacement process now to reduce stress, costs, and friction.”&lt;/p&gt;
+
+
+
+&lt;p&gt;NIST also &lt;a href="https://www.csoonline.com/article/4122752/cisa-releases-technology-readiness-list-for-post-quantum-cryptography.html"&gt;finalized&lt;/a&gt; multiple post-quantum cryptographic algorithms, giving vendors and enterprises targets for migration and reducing uncertainty. As organizations prepare for hybrid PQC deployments, combining classical and quantum-resistant algorithms, vendors are racing to ensure their offerings support evolving standards.&lt;/p&gt;
+
+
+
+&lt;p&gt;“We have been monitoring the developments in quantum space for over a decade, and our strategic planning assumptions regarding the expected moment of compromise have consistently pointed towards around 2029,” Willemsen pointed out. “Given the amount of work to be done for a successful migration and ‘continuous in-control’ situation, that should be read as  ‘tomorrow.’”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Readiness vs reality&lt;/h2&gt;
+
+
+
+&lt;p&gt;Not everyone is convinced that today’s PQC readiness offerings represent a fundamentally new category of security tooling.&lt;/p&gt;
+
+
+
+&lt;p&gt;Much of what vendors are promoting: crypto inventories, certificate tracking, dependency mapping, overlaps with practices that security teams arguably should already have in place. In that sense, PQC may just be acting as a forcing hand for organizations to address longstanding blind spots rather than introducing entirely new technical requirements.&lt;/p&gt;
+
+
+
+&lt;p&gt;Some vendors counter that the difference lies in depth and integration rather than concept. Cisco positions its approach as foundational rather than additive. “Traditional encryption tools inventory certificates and track key lifecycles. Cisco delivers infrastructure-level quantum readiness, embedding NIST PQC algorithms into core protocols and hardware roots of trust.”&lt;/p&gt;
+
+
+
+&lt;p&gt;While NIST standards are now available, many commercial products and protocols have yet to fully integrate post-quantum algorithms. Even where support exists, performance trade-offs and interoperability challenges remain. IDC’s Grover recommends a &lt;a href="https://www.csoonline.com/article/4030898/prepping-for-the-quantum-threat-requires-a-phased-approach-to-crypto-agility.html"&gt;phased&lt;/a&gt; transition. “Instead of aiming for full-scale deployment, buyers should prioritize critical systems first, align with NIST timelines, and integrate PQC into broader GRC programs,” she said.&lt;/p&gt;
+
+
+
+&lt;p&gt;For vendors, the race is now about positioning. Being seen as a trusted guide through the PQC transition, rather than merely an algorithm provider, offers an opportunity to embed deeply into long-term enterprise roadmaps.&lt;/p&gt;
+
+
+
+&lt;p&gt;Palo Alto Networks’ entry into PQC readiness reflects a broader shift in how the market is approaching the issue. What was once largely the domain of specialized quantum security firms is now being taken up by mainstream security and infrastructure vendors as part of their core platform strategies. Network providers like Cisco are introducing quantum-safe protections for existing protocols, while HSM vendors like Futurex are adding post-quantum algorithm support to established key management systems used in regulated environments.&lt;/p&gt;
+
+
+
+&lt;p&gt;Cloudflare, similarly, frames readiness as an architectural shift rather than a discrete tool deployment. “With Cloudflare, customers simply need to place their origin server behind the Cloudflare network, and Cloudflare manages the encryption and key management,” Rath said. &lt;/p&gt;
+
+
+
+&lt;p&gt;As more vendors formalize their offerings and additional customer deployments are disclosed, the edges of the PQC readiness market are likely to become clearer. What remains uncertain is whether enterprises will prioritize these efforts in the near term or treat them as part of the longer-term cryptographic modernization.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4142174/pqc-roadmap-remains-hazy-as-vendors-race-for-early-advantage.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.96</comments>
+      <pubDate>Mon, 09 Mar 2026 06:10:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>4 ways to prepare your SOC for agentic AI</title>
+      <link>https://www.csoonline.com/article/4140208/4-ways-to-prepare-your-soc-for-agentic-ai.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;a way to automate alert triage, threat investigation and eventually higher-level functions.&lt;/p&gt;
+
+
+
+&lt;p&gt;According to &lt;a href="https://my.idc.com/getdoc.jsp?containerId=prUS53883425"&gt;IDC&lt;/a&gt;, agentic AI is on track to become mainstream infrastructure. The analyst firm expects 45% of organizations to have autonomous agents operating at scale across critical business functions by 2030. In enterprise SOCs, AI is already reshaping functions like alert triage, enrichment, data correlation, IOC validation and initial containment. It could soon move up the stack to take on more complex tasks like incident investigation, root cause analysis, and response.&lt;/p&gt;
+
+
+
+&lt;p&gt;“AI acts as a force multiplier in the SOC,” says Nicole Carignan, senior VP, security and AI strategy at Darktrace. But harnessing that promise will require organizations to invest now in reskilling analysts, redesigning processes, building new technical roles, and establishing guardrails and governance frameworks to ensure autonomous AI agents operate safely. “It’s not enough to simply deploy an AI solution. Security practitioners must understand how the underlying machine learning techniques function, what their strengths and limitations are, and how to evaluate their outputs,” Carignan says. “Without explainability and trust, AI risks are exacerbating alert fatigue rather than solving it.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Here is what security leaders need to know — and do — to prepare their SOCs for the agentic AI era.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="reskill-analysts-to-become-ai-collaborators-and-overseers"&gt;Reskill analysts to become AI collaborators and overseers&lt;/h2&gt;
+
+
+
+&lt;p&gt;Increasingly, human roles in the SOC will shift from hands-on execution to supervision, governance, design, and oversight. As AI agents take on more operational tasks, analysts will need to focus on managing AI systems, interpreting outputs, and resolving the nuanced challenges machines cannot handle, says Casey Ellis, founder of Bugcrowd. “Jobs won’t disappear, they’ll adapt. The key is ensuring that SOC professionals are prepared for this shift through ongoing education, training, and tooling.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Few expect the transition will occur organically or without friction. Many SOC leaders will need to reskill existing staff to manage AI effectively; to interrogate AI reasoning; enrich investigations with contextual insight; and apply informed human analysis to AI-driven outputs.&lt;/p&gt;
+
+
+
+&lt;p&gt;When acting on an AI tool’s recommendation, analysts must understand what questions the agent asked, which data sources it queried, and what evidence informed its decision, according to Dov Yoran, co-founder and CEO of Command Zero. From there, they need to be able to pivot to additional data sources, pursue new artifacts, and extend the investigative timeline as needed. “Junior analysts who might not know how to start an investigation from scratch can become effective by learning how to extend and refine what the agent produced,” Yoran says. “It’s a different skill set from traditional SOC work, and in many ways, a more accessible one.”&lt;/p&gt;
+
+
+
+&lt;p&gt;In the SOC of the future, analysts must also act as adversarial reviewers of AI-driven conclusions. That’s because AI systems can introduce hallucinations, training-data bias, and other vulnerabilities while also being vulnerable to adversarial manipulation. Analysts need to recognize these risks to ensure decisions remain grounded and defensible, says Ensar Seker, CISO at SOCRadar. “Analysts need to be trained less as button-pushers and more as adversarial reviewers of AI output. That means understanding how models reason, where they fail, how bias and data gaps surface, and how to interrogate confidence levels and assumptions. The goal isn’t to ‘trust AI faster,’ but to develop the instinct to ask: What would make this conclusion wrong?” Seker says.&lt;/p&gt;
+
+
+
+&lt;p&gt;Analysts will also play a critical role in enabling organization-specific context into AI-driven workflows. Without that context, agents risk missing threats, amplifying noise, or triggering risky actions based on incomplete information. SOC leaders need to remember that “AI agents are only as smart as the context they have access to,” Yoran says. Analysts must learn to annotate identities, maintain watch lists, document recurring false-positive patterns, and build enrichment layers that strengthen future investigations, he said, “This is knowledge work, not data work.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Ultimately, the objective is not to outperform AI, but to do better where AI falls short. For example, “accept that autonomous alert triage will become table stakes,” Yoran says. “Your processes need to shift from ‘how do we triage every alert’ to ‘how do we handle escalations from autonomous investigations’.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="build-capabilities-for-ai-governance-content-and-quality"&gt;Build capabilities for AI governance, content and quality&lt;/h2&gt;
+
+
+
+&lt;p&gt;Upskilling existing analysts alone is not enough. As AI agents begin operating across tools, making decisions and triggering actions with minimal human involvement, the demands on the SOC will extend well beyond traditional analyst capabilities, experts say.&lt;/p&gt;
+
+
+
+&lt;p&gt;Content engineering, for instance, is one emerging requirement. In an AI-enabled SOC, detection engineers will no longer write only static rules. They must design dynamic content such as questions, prompts and investigation templates that agents can use to reason, enrich data, correlate signals and act autonomously. These content engineers curate the structured inputs that power agents, including telemetry, threat models, and playbooks.&lt;/p&gt;
+
+
+
+&lt;p&gt;“This is the most underappreciated role in AI-powered security operations,” Yoran notes. “These are people who build and maintain the questions that agents can ask, the investigation plans that guide autonomous work, and the knowledge bases that provide context,”. Organizations need someone who can translate detection logic from their SIEM, import best practices from frameworks like MITRE ATT&amp;amp;CK, and encode institutional knowledge into the platform. “This isn’t traditional security engineering, it’s closer to knowledge management combined with threat intelligence,” he says.&lt;/p&gt;
+
+
+
+&lt;p&gt;Mature SOCs will also require clear ownership of AI governance and agent oversight. That includes roles that have oversight over model risk evaluation, prompt and policy management, continuous performance validation, and even red teaming the agents themselves, Seker says. “You don’t need a massive new team, but you do need clear accountability for how autonomous decisions are made, tested, and constrained.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Another emerging need is analysts with deep fluency in data management. An AI-driven SOC will require professionals who understand how information should be classified, protected, normalized, and monitored to ensure reliable conclusions. “With 64% of organizations &lt;a href="https://www.darktrace.com/the-state-of-ai-cybersecurity-2025"&gt;planning&lt;/a&gt; to add AI-powered solutions to their security stack in the next year, it is critical for professionals to cross-skill in AI,” Carignan says. “Cybersecurity professionals must become fluent in AI and data, developing a deeper understanding of data classification, governance, and model behavior.” Cross-skills in data science, machine learning, and cybersecurity enable analysts to critically evaluate AI outputs, tune models for security use cases, and adapt defenses as threats evolve, making them indispensable in an AI-augmented SOC.&lt;/p&gt;
+
+
+
+&lt;p&gt;Frank Dickson, an analyst at IDC, urged organizations to think of this capability as similar to a data architect role. “The key to getting value from AI is having data located in a place where you can get to it, having it formatted in a homogeneous way so you can do analysis on it, and then manage the data,” he says. “The success of your AI initiative is going to be tied to the effectiveness of your ability to get data. A data architect manages that.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Dickson also emphasized the need for an “orchestration platform engineer” role responsible for ensuring effective communication and workflow integration across security tools. The SOC of the future will not hinge on a single platform but on an interconnected ecosystem of SIEM, EDR, SOAR, identity, cloud and other systems that must operate in concert to support AI-driven, agentic investigations and automation, Dickson tells. Dedicated orchestration expertise will become essential to maintain reliable data flows and automation logic in such an environment, he noted.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="redesign-soc-processes-and-playbooks-where-needed"&gt;Redesign SOC processes and playbooks where needed&lt;/h2&gt;
+
+
+
+&lt;p&gt;Organizations will need to review and rework SOC processes and playbooks to ensure their AI-augmented SOC is consistent, efficient and continuously learning. Yoran recommends that SOC leaders focus on codifying institutional knowledge into AI agent-accessible questions and plans. Translate playbooks into investigation plans that AI agents can follow on a repeatable basis. In situations where an agent might hit a wall, have processes in place for a smooth handoff to a human analyst and build feedback loops for continuous improvement, Yoran adds.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Playbooks must shift from step-by-step human procedures to intent-based guardrails,” Seker points out. “Instead of telling analysts how to investigate, define what outcomes are allowed, what actions are prohibited, and when human approval is mandatory.”. The objective is not to micromanage every alert but to assume AI agents operate continuously across tools, with humans only supervising exceptions, edge cases, and strategic decisions.&lt;/p&gt;
+
+
+
+&lt;p&gt;SOCs also need to rethink metrics, accountability, and documentation within the SOC. Traditional performance indicators, such as ticket closure rates or mean time to resolution, may need to broaden to include model accuracy, escalation quality, and the effectiveness of automated containment actions. “The biggest mistake is optimizing for speed metrics instead of investigation quality,” Yoran says. “I see this constantly: vendors promising 90% faster time to resolution or reduce tier-one workload by 80% or close alerts in seconds instead of hours. These metrics while seductive are dangerous,” he cautions. “Making the same mistake faster benefits no one. An incomplete investigation that closes in two minutes isn’t better than a thorough investigation that takes 30 minutes.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Auditability too becomes critical. All AI-driven decisions should be traceable, explainable, and reviewable from both an internal governance standpoint and for external compliance requirements.  “If you can’t explain why an AI took an action to an auditor, regulator, or executive, it shouldn’t be allowed to take that action. Explainability isn’t a nice-to-have; it’s a prerequisite for autonomy,” Seker says.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="implement-ai-guardrails-and-principles"&gt;Implement AI guardrails and principles&lt;/h2&gt;
+
+
+
+&lt;p&gt;Formal guardrails and operating principles are going to be critical in SOCs where AI agents influence decisions, initiate responses and help prioritize threats. That means setting defined boundaries around data access and model behavior, having processes to validate responses and making sure humans remain in the loop on all high-impact decisions.&lt;/p&gt;
+
+
+
+&lt;p&gt;Focus areas should include approval thresholds for autonomous actions, figuring out allowed and disallowed actions for an agent, protecting against prompt injection attacks, testing and red-teaming of agentic workflows and ensuring IR policies are updated for AI-driven actions. “Require transparent decision trails, rate limiting, least-privilege, and instant override,” Seker advises. “Hard limits on action scope, blast radius, and privilege are non-negotiable. Agents should operate under least-privilege identities, with explicit kill-switches, change-control boundaries, and environment awareness. The key is to ensure that AI is never allowed to silently escalate its own authority or modify guardrails without human approval.”&lt;/p&gt;
+
+
+
+&lt;p&gt;IDC analyst Dickson pointed to identity and access as two other areas to focus on by way of guardrails and policies. “In the past, when we gave humans access, we often over-provisioned by default. That approach does not work with agents. With agentic AI, permissions must start at least privilege, defined precisely from day one.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The focus should be on ensuring no standing privileges, implementing dynamic authorization and establishing clear role definitions, Dickson says. “Agentic AI is enormously powerful. Constraining access correctly is non-negotiable.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4140208/4-ways-to-prepare-your-soc-for-agentic-ai.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.99</comments>
+      <pubDate>Mon, 09 Mar 2026 07:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
