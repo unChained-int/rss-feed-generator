@@ -8,134 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Mar 2026 17:38:12 +0000</lastBuildDate>
-    <item>
-      <title>Resumés with malicious ISO attachments are circulating, says Aryaka</title>
-      <link>https://www.csoonline.com/article/4143937/resumes-with-malicious-iso-attachments-are-circulating-says-aryaka.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Threat actors are still having success tricking human resources staff into opening malware-infected phishing emails.&lt;/p&gt;
-
-
-
-&lt;p&gt;The latest example is detailed by researchers at Aryaka, who this week &lt;a href="https://www.aryaka.com/blog/kernel-in-the-crosshairs-blacksanta-edr-killer-recruitment-workflows/" rel="noreferrer noopener" target="_blank"&gt;described a campaign&lt;/a&gt; by an unnamed threat actor who is distributing resumés containing a malicious ISO file to HR departments. It’s delivered through recruitment channels, and hosted on what an employee, or an email gateway’s filters, would see as trusted cloud infrastructure.&lt;/p&gt;
-
-
-
-&lt;p&gt;When the victim mounts the &lt;a href="https://www.howtogeek.com/356714/what-is-an-iso-file-and-how-do-i-open-one/" rel="noreferrer noopener" target="_blank"&gt;ISO&lt;/a&gt;, which is an archive of an optical disc such as a DVD, and opens its contents, a malicious shortcut (.lnk) is executed, launching obfuscated PowerShell commands that extract hidden payloads embedded within a steganographic image. A malicious DLL is then sideloaded using a legitimate signed application, allowing the attacker’s code to run under the guise of trusted software. The goal is to harvest data from the infected computer.&lt;/p&gt;
-
-
-
-&lt;p&gt;The malware’s most alarming feature, says Aryaka, is an internal module dubbed BlackSanta which shuts down endpoint detection and response (EDR) agents that would detect this attack. It deploys a Bring-Your-Own Vulnerable Driver (BYOVD) technique that loads legitimate but exploitable kernel drivers, gaining low-level system access, then systematically turns off security tools.&lt;/p&gt;
-
-
-
-&lt;p&gt;While it’s a sophisticated attack, what CSOs might consider more important is preventing the attack from the start through HR employee security awareness training to help them spot phishing lures.&lt;/p&gt;
-
-
-
-&lt;p&gt;Among the priorities for that training: Emphasizing that files ending in .iso can execute malware.  A resumé or job application file should end in .docx, .pdf or .txt.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;[&lt;a href="https://www.csoonline.com/article/3977803/fake-resumes-targeting-hr-managers-now-come-with-updated-backdoor.html" target="_blank"&gt;Related content: Fake resumés have updated backdoor&lt;/a&gt;]&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;“Your HR team should be among your most trained and protected employees,” says &lt;a href="https://blog.knowbe4.com/author/roger-grimes" rel="noreferrer noopener" target="_blank"&gt;Roger Grimes&lt;/a&gt;, CISO advisor at awareness training provider KnowBe4. “HR departments are strongly in the crosshairs of all sorts of scammers. If they aren’t trying to get their malware installed or steal logon credentials, they are trying to get fake employees into the recruitment process.”&lt;/p&gt;
-
-
-
-&lt;p&gt;In fact, he added, a scam that makes it past the HR team may make it be seen as more trustworthy as it moves to other departments.&lt;/p&gt;
-
-
-
-&lt;p&gt;HR staff should be trained to only accept normal resumé submission document types, such as .pdf or .docx, Grimes said, and to not to click on URLs inside either unless necessary.&lt;/p&gt;
-
-
-
-&lt;p&gt;Some organizations decrease the risk of malware being sent through fake resumés by asking for all submissions to go to their HR hiring portal, which only accepts text inputs to supplied web forms, he added. &lt;/p&gt;
-
-
-
-&lt;p&gt;At the very least, all HR staff members have to understand that they are at high risk of receiving scams, he said. They must be educated about common scams targeting HR departments, coached when they perform high-risk actions, and given simulated phishing testing that mimics phishing that commonly targets HR employees.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="not-just-malware"&gt;Not just malware&lt;/h2&gt;
-
-
-
-&lt;p&gt;Fake job applications don’t just come with malware. At a time when many jobs are filled by employing online interviews, they’re a way nation-states can infiltrate sensitive organizations like defense or government contractors. Last month, a Ukrainian man &lt;a href="https://www.justice.gov/usao-dc/pr/ukrainian-national-sentenced-laptop-farm-scheme-generated-income-north-korean-it-workers" rel="noreferrer noopener" target="_blank"&gt;was sentenced by a US judge &lt;/a&gt;to 60 months in prison for stealing the identities of Americans, which were then used by North Koreans to fraudulently get work at US firms.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.csoonline.com/article/4111148/amazon-has-stopped-1800-job-applications-from-north-korean-agents.html" target="_blank"&gt;In 2025, Amazon said&lt;/a&gt; that over a 17 month period it blocked over 1,800 job applications suspected of coming from North Korean agents.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="lures-impersonating-hr"&gt;Lures impersonating HR&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://cofense.com/Blog/Seasonal-Surge-Why-HR-Phishing-Peaks-in-Q4-and-the-Seven-Themes-Behind-It" rel="noreferrer noopener" target="_blank"&gt;According to researchers at Cofense&lt;/a&gt;, most HR-related phishing messages are sent in the second half of the year, although specific message themes will change based on current events (for example: ‘Because of COVID, revenue has fallen, so we have to lay off staff’). One theme that regularly works: Termination messages. Employees won’t ignore an email with a termination subject line, and the messages will appear legitimate, particularly if they spoof the company’s email address.&lt;/p&gt;
-
-
-
-&lt;p&gt;Other common themes, Confense says, include notices of compensation adjustments, company benefits or the ability to enroll in benefits, handbook and policy updates, employee assessments and surveys, and income tax information.&lt;/p&gt;
-
-
-
-&lt;p&gt;[&lt;a href="https://www.csoonline.com/article/3484775/phishers-have-figured-out-that-everyone-is-afraid-of-hr.html" target="_blank"&gt;Related content: Phishers know everyone is afraid of HR&lt;/a&gt;]&lt;/p&gt;
-
-
-
-&lt;p&gt;“Impersonating HR provides many benefits to threat actors,” the Cofense report notes. “Tasks from HR are typically mandatory, so HR emails carry authority. Legitimate HR tasks can also have strict deadlines, which a threat actor can use to impose urgency. Finally, regular HR tasks are expected by employees. Sent at the right time, employees may not recognize an email as phishing and automatically click on any link to resolve the HR issue.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ai-makes-detection-harder"&gt;AI makes detection harder&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://cybercrimeanalytics.com/about/" rel="noreferrer noopener" target="_blank"&gt;Christopher Kayser&lt;/a&gt;, head of Canadian consulting firm Cybercrime Analytics and author of a book on social engineering, said that thanks to generative AI technology, it’s becoming increasingly difficult to recognize malicious communications. And because, for years, the job of HR staff has been to receive responses to ads for positions, they tend to open documents without question. On top of that, many employees trust that IT is doing everything possible to ensure that any communications that make it to devices have been scanned and are safe.&lt;/p&gt;
-
-
-
-&lt;p&gt;For their part, he added, bad actors use the common triggers for any type of phishing campaign: Playing on fear, guilt, helpfulness, obedience, and urgency in subject lines and messages.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;[&lt;a href="https://www.csoonline.com/article/560291/5-ways-to-spot-a-phishing-email.html" target="_blank"&gt;Related content: 5 ways to spot phishing emails&lt;/a&gt;]&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="defensive-strategies"&gt;Defensive strategies&lt;/h2&gt;
-
-
-
-&lt;p&gt;“It is virtually impossible to instill sophisticated levels of knowledge for every user of technology to be able to correctly identify malicious communications,” Kayser told &lt;em&gt;CSO&lt;/em&gt;.  “But what can be taught is to make people realize there is never a communication that we receive that we should feel compelled to respond to immediately, until we have verified that what we are being asked or told to do is valid.”&lt;/p&gt;
-
-
-
-&lt;p&gt;All employees should be told that, if skeptical about an email or text, they should immediately ask their IT department to review it, he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Another defensive strategy, Kayser suggested, is having all incoming communications for HR redirected to a specific folder on the corporate email system where full checks for viruses and corrupted files are run. Some argue these files may contain personally identifiable information, which shouldn’t be seen by anyone outside HR; that, Kayser said, is a valid concern. But this step shouldn’t require IT to inspect file content, just look for malware and suspicious activity.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4143937/resumes-with-malicious-iso-attachments-are-circulating-says-aryaka.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Wed, 11 Mar 2026 23:44:34 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 13 Mar 2026 18:47:55 +0000</lastBuildDate>
     <item>
       <title>European Day of Remembrance for Victims of Terrorism</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/european-day-of-remembrance-for-victims-of-terrorism</link>
@@ -144,7 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.64</comments>
-      <pubDate>Fri, 13 Mar 2026 15:38:12 +0000</pubDate>
+      <pubDate>Fri, 13 Mar 2026 16:47:55 +0000</pubDate>
     </item>
     <item>
       <title>Wie CISOs schlechte Angebote enttarnen</title>
@@ -293,7 +166,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4063809/wie-cisos-schlechte-produkte-enttarnen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Thu, 12 Mar 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -359,7 +232,7 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4144882/veeam-warns-admins-to-patch-now-as-critical-rce-flaws-hit-backup-replication.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Fri, 13 Mar 2026 12:01:47 +0000</pubDate>
     </item>
     <item>
@@ -458,7 +331,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4140230/ai-use-is-changing-how-much-companies-pay-for-cyber-insurance.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Thu, 12 Mar 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -533,7 +406,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4144231/phantomraven-returns-to-npm-with-88-bad-packages.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Thu, 12 Mar 2026 11:43:52 +0000</pubDate>
     </item>
     <item>
@@ -636,7 +509,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4144523/medical-giant-stryker-crippled-after-iranian-hackers-remotely-wipe-computers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Thu, 12 Mar 2026 19:06:27 +0000</pubDate>
     </item>
     <item>
@@ -646,7 +519,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-200</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Mon, 09 Mar 2026 14:04:28 +0000</pubDate>
     </item>
     <item>
@@ -656,7 +529,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-201</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 09 Mar 2026 14:36:41 +0000</pubDate>
     </item>
     <item>
@@ -666,7 +539,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-202</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 09 Mar 2026 14:41:02 +0000</pubDate>
     </item>
     <item>
@@ -676,7 +549,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-203</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 09 Mar 2026 14:42:15 +0000</pubDate>
     </item>
     <item>
@@ -686,7 +559,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-204</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 09 Mar 2026 14:45:54 +0000</pubDate>
     </item>
     <item>
@@ -696,7 +569,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-205</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Mon, 09 Mar 2026 15:31:46 +0000</pubDate>
     </item>
     <item>
@@ -706,7 +579,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-206</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Mon, 09 Mar 2026 15:42:09 +0000</pubDate>
     </item>
     <item>
@@ -716,7 +589,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-207</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Mon, 09 Mar 2026 15:49:25 +0000</pubDate>
     </item>
     <item>
@@ -886,7 +759,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3492322/cybersecurity-messen-10-kennzahlen-die-cisos-weiterbringen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Fri, 13 Mar 2026 04:09:00 +0000</pubDate>
     </item>
     <item>
@@ -896,7 +769,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Mon, 09 Mar 2026 18:31:18 +0000</pubDate>
     </item>
     <item>
@@ -906,7 +779,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-613</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Mon, 09 Mar 2026 18:48:18 +0000</pubDate>
     </item>
     <item>
@@ -1077,7 +950,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4137598/the-cyber-perimeter-was-never-dead-we-just-abandoned-it.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Fri, 13 Mar 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1172,7 +1045,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4144783/storm-2561-targets-enterprise-vpn-users-with-seo-poisoning-fake-clients.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Fri, 13 Mar 2026 08:51:14 +0000</pubDate>
     </item>
     <item>
@@ -1471,7 +1344,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4144310/hybrid-resilience-designing-incident-response-across-on-prem-cloud-and-saas-without-losing-your-mind.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Fri, 13 Mar 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1481,7 +1354,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/kubernetes-security-advisory-av26-208</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Tue, 10 Mar 2026 15:35:26 +0000</pubDate>
     </item>
     <item>
@@ -1491,7 +1364,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-march-2026-monthly-rollup-av26-209</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Tue, 10 Mar 2026 15:56:21 +0000</pubDate>
     </item>
     <item>
@@ -1501,7 +1374,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-210</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.84</comments>
       <pubDate>Tue, 10 Mar 2026 16:07:45 +0000</pubDate>
     </item>
     <item>
@@ -1511,7 +1384,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-211</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Tue, 10 Mar 2026 17:59:03 +0000</pubDate>
     </item>
     <item>
@@ -1521,7 +1394,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-212</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Tue, 10 Mar 2026 18:13:32 +0000</pubDate>
     </item>
     <item>
@@ -1531,7 +1404,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-march-2026-monthly-rollup-av26-213</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Tue, 10 Mar 2026 19:50:19 +0000</pubDate>
     </item>
     <item>
@@ -1541,7 +1414,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-214</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Tue, 10 Mar 2026 20:08:12 +0000</pubDate>
     </item>
     <item>
@@ -1551,7 +1424,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-215</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.93</comments>
       <pubDate>Tue, 10 Mar 2026 20:41:27 +0000</pubDate>
     </item>
     <item>
@@ -1561,7 +1434,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-216</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.93</comments>
       <pubDate>Tue, 10 Mar 2026 20:51:06 +0000</pubDate>
     </item>
     <item>
@@ -1571,7 +1444,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-217</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.93</comments>
       <pubDate>Tue, 10 Mar 2026 20:56:39 +0000</pubDate>
     </item>
     <item>
@@ -1581,7 +1454,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-218</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Wed, 11 Mar 2026 17:21:24 +0000</pubDate>
     </item>
     <item>
@@ -1591,7 +1464,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-219</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Wed, 11 Mar 2026 17:26:23 +0000</pubDate>
     </item>
     <item>
@@ -1601,7 +1474,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-220</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Wed, 11 Mar 2026 17:31:14 +0000</pubDate>
     </item>
     <item>
@@ -1611,7 +1484,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-221</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Wed, 11 Mar 2026 17:32:21 +0000</pubDate>
     </item>
     <item>
@@ -1621,7 +1494,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-222</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.48</comments>
+      <comments>Score: 9.45</comments>
       <pubDate>Wed, 11 Mar 2026 19:42:38 +0000</pubDate>
     </item>
     <item>
@@ -1631,7 +1504,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-223</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.49</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Wed, 11 Mar 2026 20:00:23 +0000</pubDate>
     </item>
     <item>
@@ -1641,7 +1514,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-224</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.49</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Wed, 11 Mar 2026 20:10:12 +0000</pubDate>
     </item>
     <item>
@@ -1651,7 +1524,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-225</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.49</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Wed, 11 Mar 2026 20:18:33 +0000</pubDate>
     </item>
     <item>
@@ -1661,7 +1534,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-226</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Wed, 11 Mar 2026 20:29:48 +0000</pubDate>
     </item>
     <item>
@@ -1671,7 +1544,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av25-857</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Wed, 11 Mar 2026 20:31:35 +0000</pubDate>
     </item>
     <item>
@@ -1681,7 +1554,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-227</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.93</comments>
       <pubDate>Thu, 12 Mar 2026 12:58:21 +0000</pubDate>
     </item>
     <item>
@@ -1691,7 +1564,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-228</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.07</comments>
+      <comments>Score: 10.03</comments>
       <pubDate>Thu, 12 Mar 2026 16:08:38 +0000</pubDate>
     </item>
     <item>
@@ -1701,7 +1574,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-229</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.08</comments>
+      <comments>Score: 10.04</comments>
       <pubDate>Thu, 12 Mar 2026 16:28:27 +0000</pubDate>
     </item>
     <item>
@@ -1711,7 +1584,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-230</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.08</comments>
       <pubDate>Thu, 12 Mar 2026 17:35:21 +0000</pubDate>
     </item>
     <item>
@@ -1721,7 +1594,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zoom-security-advisory-av26-231</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.12</comments>
+      <comments>Score: 10.08</comments>
       <pubDate>Thu, 12 Mar 2026 17:44:51 +0000</pubDate>
     </item>
     <item>
@@ -1731,7 +1604,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-232</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.12</comments>
+      <comments>Score: 10.09</comments>
       <pubDate>Thu, 12 Mar 2026 17:53:44 +0000</pubDate>
     </item>
     <item>
@@ -1741,7 +1614,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-233</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.16</comments>
+      <comments>Score: 10.12</comments>
       <pubDate>Thu, 12 Mar 2026 18:58:35 +0000</pubDate>
     </item>
     <item>
@@ -1751,7 +1624,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-234</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.17</comments>
+      <comments>Score: 10.13</comments>
       <pubDate>Thu, 12 Mar 2026 19:16:53 +0000</pubDate>
     </item>
     <item>
@@ -1761,8 +1634,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-235</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.83</comments>
+      <comments>Score: 10.78</comments>
       <pubDate>Fri, 13 Mar 2026 13:23:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] ABB security advisory (AV26-236)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-236</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-236</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.96</comments>
+      <pubDate>Fri, 13 Mar 2026 17:47:37 +0000</pubDate>
     </item>
   </channel>
 </rss>
