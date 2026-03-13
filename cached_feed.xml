@@ -8,228 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Mar 2026 06:59:06 +0000</lastBuildDate>
-    <item>
-      <title>Why zero trust breaks down in IoT and OT environments</title>
-      <link>https://www.csoonline.com/article/4143100/why-zero-trust-breaks-down-in-iot-and-ot-environments.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="zero-trust-solves-the-wrong-problem-in-ot"&gt;Zero trust solves the wrong problem in OT&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://csrc.nist.gov/pubs/sp/800/207/final"&gt;Zero trust&lt;/a&gt; has become the dominant security narrative of the past decade, and rightly so. Its core principles, never trust, always verify; assume breach; enforce least privilege, have reshaped how organizations think about identity, access and lateral movement. In enterprise IT environments, these principles have produced measurable gains. Identity is stronger. Access is more deliberate. Implicit trust has been reduced.&lt;/p&gt;
-
-
-
-&lt;p&gt;Yet when zero trust is applied to IoT and OT environments, results are uneven. Controls are deployed. Architecture diagrams look reassuring. Then, incidents occur. Occurring often through systems that were never considered part of the trust model in the first place.&lt;/p&gt;
-
-
-
-&lt;p&gt;Zero trust is designed to govern access decisions. In IoT and OT environments, most high-impact failures propagate through inherited trust and shared control paths, which are outside the scope of zero trust.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is not an implementation failure. It is a model mismatch.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://csrc.nist.gov/pubs/sp/800/207/final"&gt;Zero trust assumes that trust is explicit, identity-centric and continuously enforceable.&lt;/a&gt; IoT and OT (and AI) systems violate all three assumptions by design. As a result, zero trust often governs the wrong surfaces while leaving the most consequential paths unmodeled.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-iot-and-ot-blind-spot"&gt;The IoT and OT blind spot&lt;/h2&gt;
-
-
-
-&lt;p&gt;IoT and OT environments consistently exhibit three characteristics that create persistent security blind spots.&lt;/p&gt;
-
-
-
-&lt;p&gt;First, visibility is incomplete by design. Devices are frequently deployed by facilities teams, engineering groups, or third-party integrators rather than security organizations. Asset inventories lag reality. Telemetry is sparse, proprietary, or intermittent. Many devices communicate only during specific operational states, leaving long periods of silence that security tools interpret as usual.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.cisa.gov/cross-sector-cybersecurity-performance-goals"&gt;CISA&lt;/a&gt; has repeatedly warned that unmanaged devices, limited visibility and legacy operational protocols remain among the most common weaknesses in IoT and OT environments, particularly where systems were never intended to be continuously monitored or centrally governed.&lt;/p&gt;
-
-
-
-&lt;p&gt;Second, networks are functionally flat even when they appear segmented. Broadcast discovery protocols, shared gateways and centralized controllers undermine isolation assumptions. Devices that never communicate directly can still influence one another through shared infrastructure. Segmentation exists on paper, but coupling persists in operation.&lt;/p&gt;
-
-
-
-&lt;p&gt;Third, trust is implicit and durable. Devices trust controllers because they always have. Controllers trust management platforms because they are “authorized.” Cloud services trust device identities embedded in firmware. These trust relationships are rarely documented and infrequently revisited once systems are operational. Zero trust assumes trust can be challenged continuously. OT systems assume trust persists unless something breaks.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-topology-fails-as-a-security-model"&gt;Why topology fails as a security model&lt;/h2&gt;
-
-
-
-&lt;p&gt;Security teams are trained to reason about topology: subnets, firewalls, zones and accesspaths. That approach works reasonably well in enterprise IT, where systems are designed around routable connectivity and explicit authentication.&lt;/p&gt;
-
-
-
-&lt;p&gt;It fails in IoT and OT environments because compromise does not propagate primarily through routed paths.&lt;/p&gt;
-
-
-
-&lt;p&gt;In &lt;a href="https://www.csoonline.com/article/4082062/the-unified-linkage-model-a-new-lens-for-understanding-cyber-risk.html"&gt;The unified linkage model: A new lens for understanding cyber risk&lt;/a&gt;, I introduced a ULM as a way to analyze security risk based on functional relationships, adjacency, inheritance and trust, rather than solely on network topology. That distinction is critical in OT environments, where connectivity diagrams rarely reflect operational dependency.&lt;/p&gt;
-
-
-
-&lt;p&gt;Two systems can be completely isolated at the network layer and still be functionally inseparable. Shared controllers, protocol translators and management platforms create dependencies that topology does not capture. When one system changes state, whether through compromise, misconfiguration, or update, the other changes with it.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.uscybersecurity.net/csmag/unified-linkage-models-recontextualizing-cybersecurity/"&gt;ULM focuses on consequences and connection&lt;/a&gt;. That focus is what zero trust lacks in OT contexts.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="where-attacks-actually-travel"&gt;Where attacks actually travel&lt;/h2&gt;
-
-
-
-&lt;p&gt;Most IoT and OT breaches do not unfold as identity failures or segmentation bypasses. They propagate through shared controllers, inherited firmware, update mechanisms and management platforms — places where trust already exists.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"&gt;Federal guidance from NIST&lt;/a&gt; has long emphasized that firmware, update services and shared infrastructure represent durable sources of inherited risk that perimeter-focused controls do not address. These components sit beneath access controls and persist across reconfigurations, ownership changes and even vendor transitions. &lt;/p&gt;
-
-
-
-&lt;p&gt;Once compromised, they automatically propagate trust. No lateral movement is required. No credentials need to be stolen from downstream systems. The attacker moves with the grain of the architecture.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is why incidents so often originate in building automation systems, maintenance interfaces, or vendor-managed services. These components are rarely monitored as security-critical assets, yet they act as connective tissue across environments that defenders believe to be isolated.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="from-zero-trust-to-trust-mapping"&gt;From zero trust to trust mapping&lt;/h2&gt;
-
-
-
-&lt;p&gt;Zero trust governs access. It does not model consequence.&lt;/p&gt;
-
-
-
-&lt;p&gt;Defenders, therefore, need to supplement zero trust with a way to understand how trust actually propagates in IoT and OT systems. The unified linkage model itself emerged from earlier work on linkage-driven risk propagation in enterprise and industrial environments, before being applied more directly to security decision-making in complex systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.uscybersecurity.net/csmag/unified-linkage-models-recontextualizing-cybersecurity/"&gt;ULM distinguishes three forms of linkage that matter operationally:&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Adjacency&lt;/strong&gt;, created by shared controllers, gateways, brokers and protocol translators&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Inheritance&lt;/strong&gt;, created by firmware, SDKs, update services and vendor platforms&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Trust propagation&lt;/strong&gt;, created by delegated management, implicit authorization and long-lived credentials&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;These linkages determine how failures cascade. Linkages show why devices perceived as low risk routinely serve as upstream enablers of disproportionate mission impact. They also explain why identity-centric controls frequently fail to interrupt attacks once trust has already been established.&lt;/p&gt;
-
-
-
-&lt;p&gt;Zero trust answers the question &lt;em&gt;“Who is allowed to talk to what?”&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;ULM answers the question &lt;em&gt;“What changes if this component fails?”&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Both questions matter. They are not interchangeable.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-enforcement-centralizes-in-ot"&gt;Why enforcement centralizes in OT&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://csrc.nist.gov/pubs/sp/800/82/r3/final"&gt;Another reason zero trust struggles in OT environments is enforcement locality&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;OT systems prioritize determinism, availability and safety. Control loops cannot pause for policy evaluation. Latency matters. Devices cannot tolerate frequent reauthentication or telemetry overhead. As a result, enforcement is pushed outward — to gateways, management platforms and cloud services.&lt;/p&gt;
-
-
-
-&lt;p&gt;These enforcement points become chokepoints. Once trusted, they are rarely revalidated. If compromised, they bypass every downstream zero-trust assumption simultaneously.&lt;/p&gt;
-
-
-
-&lt;p&gt;Zero trust assumes enforcement is everywhere. OT systems centralize it.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-security-leaders-should-do-differently"&gt;What security leaders should do differently&lt;/h2&gt;
-
-
-
-&lt;p&gt;This is not a call to abandon zero trust. It is a call to scope it correctly.&lt;/p&gt;
-
-
-
-&lt;p&gt;Zero trust remains effective where identities are strong and enforcement is continuous. In IoT and OT environments, leaders must also account for inherited trust and centralized control paths that zero trust does not model.&lt;/p&gt;
-
-
-
-&lt;p&gt;That means mapping functional dependencies explicitly. It means identifying which components propagate trust across domains. It means disproportionately protecting management planes, update mechanisms and protocol gateways, not because they are attractive targets, but because they are structural amplifiers.&lt;/p&gt;
-
-
-
-&lt;p&gt;It also means rethinking vendor risk. Suppliers should be evaluated not just on what they deliver, but on how much trust they inherit and propagate across systems once integrated.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-real-risk-is-what-youre-not-modeling"&gt;The real risk is what you’re not modeling&lt;/h2&gt;
-
-
-
-&lt;p&gt;Zero trust addresses access decisions. It does not explain how compromise spreads once trust already exists. In OT environments, that distinction is decisive.&lt;/p&gt;
-
-
-
-&lt;p&gt;Linkage-based analysis fills that gap. By making adjacency, inheritance and trust explicit, it exposes the invisible network beneath IoT and OT systems. For security leaders responsible for operational resilience, that visibility is leverage.&lt;/p&gt;
-
-
-
-&lt;p&gt;IoT and OT security failures persist not because defenders lack tools, but because they rely on models that no longer reflect reality.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4143100/why-zero-trust-breaks-down-in-iot-and-ot-environments.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
-      <pubDate>Wed, 11 Mar 2026 11:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 13 Mar 2026 07:51:32 +0000</lastBuildDate>
     <item>
       <title>Overly permissive ‘guest’ settings put Salesforce customers at risk</title>
       <link>https://www.csoonline.com/article/4143667/overly-permissive-guest-settings-put-salesforce-customers-at-risk.html</link>
@@ -302,7 +81,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4143667/overly-permissive-guest-settings-put-salesforce-customers-at-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Wed, 11 Mar 2026 11:47:08 +0000</pubDate>
     </item>
     <item>
@@ -312,7 +91,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/opentext-security-advisory-av26-199</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Thu, 05 Mar 2026 13:24:09 +0000</pubDate>
     </item>
     <item>
@@ -323,7 +102,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.64</comments>
-      <pubDate>Fri, 13 Mar 2026 04:59:06 +0000</pubDate>
+      <pubDate>Fri, 13 Mar 2026 05:51:32 +0000</pubDate>
     </item>
     <item>
       <title>Telus Digital hit with massive data breach</title>
@@ -448,7 +227,7 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4144560/telus-digital-hit-with-massive-data-breach.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Fri, 13 Mar 2026 00:00:57 +0000</pubDate>
     </item>
     <item>
@@ -499,7 +278,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4143992/cisa-warns-of-actively-exploited-ivanti-epm-and-cisco-sd-wan-flaws.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Wed, 11 Mar 2026 22:46:04 +0000</pubDate>
     </item>
     <item>
@@ -626,7 +405,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4143937/resumes-with-malicious-iso-attachments-are-circulating-says-aryaka.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Wed, 11 Mar 2026 23:44:34 +0000</pubDate>
     </item>
     <item>
@@ -776,7 +555,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4063809/wie-cisos-schlechte-produkte-enttarnen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Thu, 12 Mar 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -875,7 +654,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4140230/ai-use-is-changing-how-much-companies-pay-for-cyber-insurance.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Thu, 12 Mar 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -950,7 +729,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4144231/phantomraven-returns-to-npm-with-88-bad-packages.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Thu, 12 Mar 2026 11:43:52 +0000</pubDate>
     </item>
     <item>
@@ -1053,7 +832,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4144523/medical-giant-stryker-crippled-after-iranian-hackers-remotely-wipe-computers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Thu, 12 Mar 2026 19:06:27 +0000</pubDate>
     </item>
     <item>
@@ -1063,7 +842,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-200</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Mon, 09 Mar 2026 14:04:28 +0000</pubDate>
     </item>
     <item>
@@ -1073,7 +852,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-201</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Mon, 09 Mar 2026 14:36:41 +0000</pubDate>
     </item>
     <item>
@@ -1083,7 +862,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-202</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Mon, 09 Mar 2026 14:41:02 +0000</pubDate>
     </item>
     <item>
@@ -1093,7 +872,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-203</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Mon, 09 Mar 2026 14:42:15 +0000</pubDate>
     </item>
     <item>
@@ -1103,7 +882,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-204</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Mon, 09 Mar 2026 14:45:54 +0000</pubDate>
     </item>
     <item>
@@ -1113,7 +892,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-205</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Mon, 09 Mar 2026 15:31:46 +0000</pubDate>
     </item>
     <item>
@@ -1123,7 +902,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-206</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Mon, 09 Mar 2026 15:42:09 +0000</pubDate>
     </item>
     <item>
@@ -1133,7 +912,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-207</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Mon, 09 Mar 2026 15:49:25 +0000</pubDate>
     </item>
     <item>
@@ -1143,7 +922,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.64</comments>
       <pubDate>Mon, 09 Mar 2026 18:31:18 +0000</pubDate>
     </item>
     <item>
@@ -1153,7 +932,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-613</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.65</comments>
       <pubDate>Mon, 09 Mar 2026 18:48:18 +0000</pubDate>
     </item>
     <item>
@@ -1323,8 +1102,179 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3492322/cybersecurity-messen-10-kennzahlen-die-cisos-weiterbringen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Fri, 13 Mar 2026 04:09:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The cyber perimeter was never dead. We just abandoned it.</title>
+      <link>https://www.csoonline.com/article/4137598/the-cyber-perimeter-was-never-dead-we-just-abandoned-it.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;hr class="wp-block-separator has-alpha-channel-opacity" /&gt;
+
+
+
+&lt;p&gt;Industry has comforted itself with the idea that the perimeter is dead. It is not. What happened is far worse. We ignored the edge, let unsupported hardware decay in place, and effectively donated our perimeter to adversaries who were more than willing to accept it.&lt;/p&gt;
+
+
+
+&lt;p&gt;The &lt;a href="https://www.fbi.gov/file-repository/operation-winter-shield-slick-v8.pdf/view"&gt;FBI’s Winter SHIELD effort&lt;/a&gt; is the operational side of the coin aimed at flipping the script and improving cyber resilience, showing how attackers exploit weak authentication, excessive privileges, and unpatched edge devices to gain their footholds.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.cisa.gov/news-events/directives/bod-26-02-mitigating-risk-end-support-edge-devices"&gt;CISA’s BOD 26‑02&lt;/a&gt; is the structural side, forcing the removal of the outdated edge hardware that makes those footholds possible.&lt;/p&gt;
+
+
+
+&lt;p&gt;Together this advisory and directive are the US federal government’s acknowledgment that security leaders have been lagging on the fundamentals of cyber resiliency, and now we all need to catch up.&lt;/p&gt;
+
+
+
+&lt;p&gt;Because, to be blunt, the picture is not just bad; it is untenable. BOD 26‑02 exposes a massive governance failure across all sectors: Organizations in every industry have treated asset lifecycles as an IT preference rather than a strategic requirement.&lt;/p&gt;
+
+
+
+&lt;p&gt;As we all know, the federal government is rarely ahead of the modernization curve. And it still isn’t ahead today — but it is taking steps to catch up. In doing so, it has noted that far too many private sector entities are also lagging in securing their perimeters, and those organizations — and their security leaders — now need to catch up as well.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="institutional-failure-the-place-to-stand-problem"&gt;Institutional failure: The place-to-stand problem&lt;/h2&gt;
+
+
+
+&lt;p&gt;The fallacy of the faded perimeter has taken hold in part due to a shift in security strategy due to the rise of the cloud. Here, the cybersecurity industry splits itself between architectural theory and tactical reality. One side insists that in a cloud-native world, identity is the only perimeter that matters. They argue that if you verify the user, the wire becomes irrelevant.&lt;/p&gt;
+
+
+
+&lt;p&gt;But this ignores a brutal truth. For an adversary to log in, they first need a place to stand. We have confused the user’s mobility with the infrastructure’s stability. While a remote user needs a temporary session to work, an adversary needs a persistent foothold to stay. By neglecting the edge, organizations have inadvertently provided that staging ground.&lt;/p&gt;
+
+
+
+&lt;p&gt;Our mounting technology debt is the prime evidence of this failure. We have chased &lt;a href="https://www.csoonline.com/article/564201/what-is-zero-trust-a-model-for-more-effective-security.html"&gt;zero trust&lt;/a&gt; software while leaving unpatched, end-of-life hardware to rust at the gate. These devices are not just old gear. They are donated assets that allow state-aligned actors to bypass identity controls entirely and sit, unmonitored, on the very fabric of the network.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-tactical-audit-winter-shield-and-bod-26%e2%80%9102"&gt;The tactical audit: Winter SHIELD and BOD 26‑02&lt;/h2&gt;
+
+
+
+&lt;p&gt;The &lt;a href="https://www.fbi.gov/investigate/cyber/wintershield"&gt;FBI’s Operation Winter SHIELD&lt;/a&gt; is a two-month national blitz focused on hardening the basics that attackers continue to exploit. It is not a routine awareness campaign. It is a &lt;a href="https://www.youtube.com/watch?v=ItH3fY-JYtM"&gt;concentrated push&lt;/a&gt; to expose weak authentication, excessive administrator rights, unpatched edge devices, and the lack of crisis readiness across organizations. The Bureau is using this short window to force attention on the fundamentals that have been ignored for too long.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.cisa.gov/news-events/directives/bod-26-02-mitigatinghttps:/www.cisa.gov/news-events/directives/bod-26-02-mitigating-risk-end-support-edge-devices-risk-end-support-edge-devices"&gt;CISA’s BOD 26‑02&lt;/a&gt; completes the pincer by mandating the removal of the very devices the FBI is highlighting as compromised. CISA &lt;a href="https://www.csoonline.com/article/4128748/cisa-gives-federal-agencies-18-months-to-purge-unsupported-edge-devices.html"&gt;gives government entities 18 months to comply&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;When these agencies move at the same time to address the edge, it is not a routine update. It is an admission that the lag has become a liability.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-cisos-reality-from-awareness-to-execution"&gt;The CISO’s reality: From awareness to execution&lt;/h2&gt;
+
+
+
+&lt;p&gt;This alignment demands a reorientation of the CISO’s posture. If the government can no longer tolerate the risk of unsupported edge gear, enterprises have no defensible reason to keep it plugged in. This is a survival requirement that demands total edge visibility and aggressive risk elimination.&lt;/p&gt;
+
+
+
+&lt;p&gt;To meet the expectations set by Winter SHIELD, CISOs must take the following actions:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;Use strong, hardware-based authentication for all privileged and remote access.&lt;/li&gt;
+
+
+
+&lt;li&gt;Limit administrator rights to temporary use only and monitor every elevation.&lt;/li&gt;
+
+
+
+&lt;li&gt;Patch all internet-facing systems within 72 hours &lt;a href="https://www.csoonline.com/article/4074945/network-security-devices-endanger-orgs-with-90s-era-flaws.html"&gt;when a critical flaw appears&lt;/a&gt;.&lt;/li&gt;
+
+
+
+&lt;li&gt;Remove permanent vendor access and require monitored, time-limited connections.&lt;/li&gt;
+
+
+
+&lt;li&gt;Store device logs in a protected location where they cannot be altered or deleted.&lt;/li&gt;
+
+
+
+&lt;li&gt;Keep at least one offline backup that cannot be changed by an attacker.&lt;/li&gt;
+
+
+
+&lt;li&gt;Shut down unnecessary internet-exposed services, especially remote desktop and file sharing.&lt;/li&gt;
+
+
+
+&lt;li&gt;Block email spoofing by enforcing strict domain authentication.&lt;/li&gt;
+
+
+
+&lt;li&gt;Remove local administrator rights from users and require temporary elevation.&lt;/li&gt;
+
+
+
+&lt;li&gt;Run &lt;a href="https://www.csoonline.com/article/570871/tabletop-exercises-explained-definition-examples-and-objectives.html"&gt;regular crisis exercises&lt;/a&gt; with leadership to improve decision-making under pressure.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;BOD 26‑02 adds structural requirements that define the federal expectation for perimeter stewardship:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;Maintain a complete inventory of all edge devices, including firewalls, routers, and remote access appliances.&lt;/li&gt;
+
+
+
+&lt;li&gt;Identify every device that is unsupported or past its service life.&lt;/li&gt;
+
+
+
+&lt;li&gt;Remove or replace unsupported edge devices on a defined schedule and document completion.&lt;/li&gt;
+
+
+
+&lt;li&gt;Establish a lifecycle process that tracks each device from purchase to retirement.&lt;/li&gt;
+
+
+
+&lt;li&gt;Ensure all replacement devices meet current security standards before deployment.&lt;/li&gt;
+
+
+
+&lt;li&gt;Provide ongoing confirmation that no unsupported devices remain on the perimeter.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-straightforward-reality"&gt;The straightforward reality&lt;/h2&gt;
+
+
+
+&lt;p&gt;The perimeter never disappeared. It was ignored. Unsupported firewalls, routers, remote access appliances, and edge boxes have always been predictable entry points. Attackers use them for footholds, lateral movement, and persistence. A neglected perimeter undermines every other investment you may have made.&lt;/p&gt;
+
+
+
+&lt;p&gt;The FBI may be running a two-month sprint, but for a CISO these expectations do not end when the blitz ends. Strong authentication, tight privilege control, rapid patching, and disciplined logging are not short-term activities. They are lifetime responsibilities. And CISA has pulled the band aid off and exposed the reality of the risks of using equipment beyond their end of life. If your perimeter is running end-of-life gear, you are no longer defending. You are donating access.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4137598/the-cyber-perimeter-was-never-dead-we-just-abandoned-it.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.96</comments>
+      <pubDate>Fri, 13 Mar 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Kubernetes security advisory (AV26-208)</title>
@@ -1333,7 +1283,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/kubernetes-security-advisory-av26-208</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 9.05</comments>
       <pubDate>Tue, 10 Mar 2026 15:35:26 +0000</pubDate>
     </item>
     <item>
@@ -1343,7 +1293,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-march-2026-monthly-rollup-av26-209</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Tue, 10 Mar 2026 15:56:21 +0000</pubDate>
     </item>
     <item>
@@ -1353,7 +1303,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-210</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Tue, 10 Mar 2026 16:07:45 +0000</pubDate>
     </item>
     <item>
@@ -1363,7 +1313,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-211</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 9.10</comments>
       <pubDate>Tue, 10 Mar 2026 17:59:03 +0000</pubDate>
     </item>
     <item>
@@ -1373,7 +1323,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-212</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 9.10</comments>
       <pubDate>Tue, 10 Mar 2026 18:13:32 +0000</pubDate>
     </item>
     <item>
@@ -1383,7 +1333,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-march-2026-monthly-rollup-av26-213</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.16</comments>
+      <comments>Score: 9.14</comments>
       <pubDate>Tue, 10 Mar 2026 19:50:19 +0000</pubDate>
     </item>
     <item>
@@ -1393,7 +1343,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-214</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Tue, 10 Mar 2026 20:08:12 +0000</pubDate>
     </item>
     <item>
@@ -1403,7 +1353,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-215</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Tue, 10 Mar 2026 20:41:27 +0000</pubDate>
     </item>
     <item>
@@ -1413,7 +1363,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-216</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Tue, 10 Mar 2026 20:51:06 +0000</pubDate>
     </item>
     <item>
@@ -1423,7 +1373,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-217</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.17</comments>
       <pubDate>Tue, 10 Mar 2026 20:56:39 +0000</pubDate>
     </item>
     <item>
@@ -1433,7 +1383,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-218</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.70</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Wed, 11 Mar 2026 17:21:24 +0000</pubDate>
     </item>
     <item>
@@ -1443,7 +1393,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-219</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.71</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Wed, 11 Mar 2026 17:26:23 +0000</pubDate>
     </item>
     <item>
@@ -1453,7 +1403,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-220</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.71</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Wed, 11 Mar 2026 17:31:14 +0000</pubDate>
     </item>
     <item>
@@ -1463,7 +1413,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-221</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.71</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Wed, 11 Mar 2026 17:32:21 +0000</pubDate>
     </item>
     <item>
@@ -1473,7 +1423,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-222</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Wed, 11 Mar 2026 19:42:38 +0000</pubDate>
     </item>
     <item>
@@ -1483,7 +1433,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-223</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.78</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Wed, 11 Mar 2026 20:00:23 +0000</pubDate>
     </item>
     <item>
@@ -1493,7 +1443,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-224</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.78</comments>
+      <comments>Score: 9.76</comments>
       <pubDate>Wed, 11 Mar 2026 20:10:12 +0000</pubDate>
     </item>
     <item>
@@ -1503,7 +1453,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-225</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.79</comments>
+      <comments>Score: 9.76</comments>
       <pubDate>Wed, 11 Mar 2026 20:18:33 +0000</pubDate>
     </item>
     <item>
@@ -1513,7 +1463,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-226</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.79</comments>
+      <comments>Score: 9.77</comments>
       <pubDate>Wed, 11 Mar 2026 20:29:48 +0000</pubDate>
     </item>
     <item>
@@ -1523,7 +1473,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av25-857</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.79</comments>
+      <comments>Score: 9.77</comments>
       <pubDate>Wed, 11 Mar 2026 20:31:35 +0000</pubDate>
     </item>
     <item>
@@ -1533,7 +1483,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-227</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.32</comments>
+      <comments>Score: 10.29</comments>
       <pubDate>Thu, 12 Mar 2026 12:58:21 +0000</pubDate>
     </item>
     <item>
@@ -1543,7 +1493,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-228</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.43</comments>
+      <comments>Score: 10.40</comments>
       <pubDate>Thu, 12 Mar 2026 16:08:38 +0000</pubDate>
     </item>
     <item>
@@ -1553,7 +1503,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-229</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.44</comments>
+      <comments>Score: 10.41</comments>
       <pubDate>Thu, 12 Mar 2026 16:28:27 +0000</pubDate>
     </item>
     <item>
@@ -1563,7 +1513,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-230</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.48</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Thu, 12 Mar 2026 17:35:21 +0000</pubDate>
     </item>
     <item>
@@ -1573,7 +1523,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zoom-security-advisory-av26-231</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.48</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Thu, 12 Mar 2026 17:44:51 +0000</pubDate>
     </item>
     <item>
@@ -1583,7 +1533,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-232</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.49</comments>
+      <comments>Score: 10.46</comments>
       <pubDate>Thu, 12 Mar 2026 17:53:44 +0000</pubDate>
     </item>
     <item>
@@ -1593,7 +1543,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-233</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.53</comments>
+      <comments>Score: 10.50</comments>
       <pubDate>Thu, 12 Mar 2026 18:58:35 +0000</pubDate>
     </item>
     <item>
@@ -1603,7 +1553,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-234</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.54</comments>
+      <comments>Score: 10.51</comments>
       <pubDate>Thu, 12 Mar 2026 19:16:53 +0000</pubDate>
     </item>
   </channel>
