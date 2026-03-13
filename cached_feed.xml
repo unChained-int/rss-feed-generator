@@ -8,200 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Mar 2026 23:32:04 +0000</lastBuildDate>
-    <item>
-      <title>European Day of Remembrance for Victims of Terrorism</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/european-day-of-remembrance-for-victims-of-terrorism</link>
-      <description>Today, as we mark the 22nd European Remembrance Day for Victims of Terrorism, we honour those who lost their lives and reflect on the impact of terrorism on our communities. This year, in particular, we commemorate the 10th anniversary of the attacks in Brussels, which claimed 32 lives and left more than 300 people injured. To acknowledge this solemn occasion, Catherine De Bolle, Europol's Executive Director, shares her account of the events:</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/european-day-of-remembrance-for-victims-of-terrorism</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
-      <pubDate>Thu, 12 Mar 2026 21:32:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>A 5-step approach to taming shadow AI</title>
-      <link>https://www.csoonline.com/article/4143096/a-5-step-approach-to-taming-shadow-ai.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;AI is being leveraged across organizations to boost productivity, accelerate innovation and optimize business processes. The problem is that adoption has outpaced discipline. Only a minority (&lt;a href="https://www.ibm.com/think/insights/cios-ai-risk-governance-gap"&gt;23.8%&lt;/a&gt;) of organizations have formal AI risk frameworks in place, which is precisely how unauthorized, “shadow AI” takes root, leading to untracked data exposure, compliance friction and poor decisions built on unreliable outputs.&lt;/p&gt;
-
-
-
-&lt;p&gt;An AI risk assessment and management methodology, such as the &lt;a href="https://www.nist.gov/itl/ai-risk-management-framework"&gt;NIST&lt;/a&gt; AI Risk Management Framework, and visibility into your environment, is absolutely critical for safe AI use. It surfaces shadow AI and puts the necessary controls in place to enable safe, mature AI adoption.&lt;/p&gt;
-
-
-
-&lt;p&gt;We noticed something was off when a new security tool started lighting up with alerts. Our first thought was that we misconfigured a rule, until we dug a little deeper and realized the alerts all pointed to the same issue: production API keys in outbound traffic&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;The source wasn’t a compromised system or a malicious actor. It was one of our own product managers, trying to troubleshoot a production issue with the help of an AI tool, and unknowingly pasting production API keys into prompts.&lt;/p&gt;
-
-
-
-&lt;p&gt;We had invested heavily in education around safe AI usage. We had trained our developers extensively to avoid using public LLMs for sensitive data, especially secrets and credentials. What we didn’t do was include product managers in that training.&lt;/p&gt;
-
-
-
-&lt;p&gt;Why? Because they “weren’t supposed to be writing code.”&lt;/p&gt;
-
-
-
-&lt;p&gt;With AI tools lowering the barrier to coding and debugging, non-engineering roles now have the ability to interact with production data in ways that used to be unlikely. The risk didn’t come from bad intent or negligence. It came from a gap between how we &lt;em&gt;thought&lt;/em&gt; work happened and how it actually does today.&lt;/p&gt;
-
-
-
-&lt;p&gt;Here’s a five-step approach to put a robust AI-risk management framework in place:&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="1-uncover-and-inventory-shadow-ai"&gt;1. Uncover and inventory shadow AI&lt;/h2&gt;
-
-
-
-&lt;p&gt;Employees often use public model APIs, browser-based prompt tools and unsanctioned or ungoverned internal chatbots to boost productivity without considering the risk of exposing sensitive data.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI usage is not difficult to identify; you just need to be looking in the right place and asking the right questions. Targeted questionnaires paired with traffic analysis and inspection can uncover usage and provide visibility.&lt;/p&gt;
-
-
-
-&lt;p&gt;Start by preparing a comprehensive inventory to gain visibility into the AI systems in use. This is already becoming a regulatory expectation, e.g., the&lt;a href="https://artificialintelligenceact.eu/"&gt; EU AI Act&lt;/a&gt;. Then prepare questionnaires on AI use cases relevant to different business units (e.g., financial reporting, contract reviews, resume parsing, marketing ideation) to identify areas of risk, such as AI being used for decision-making. Map these use cases to actual network calls through traffic inspection or log analysis. This helps quantify the volume and types of calls crossing your organization’s perimeter, enabling a concrete governance model.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="2-standardize-assessment-via-industry-benchmarks"&gt;2. Standardize assessment via industry benchmarks&lt;/h2&gt;
-
-
-
-&lt;p&gt;After discovery, the goal is to assess exposure in a way that business leaders can act on. The NIST AI risk management framework gives you a practical lens through its four functions: govern, map, measure and manage.&lt;/p&gt;
-
-
-
-&lt;p&gt;Start with governance by assigning clear ownership, decision rights and acceptable-use rules for data handling and AI outputs. Next, map real usage, including how the AI model is used, who uses it, what data it is fed and the workflows or decisions it influences.&lt;/p&gt;
-
-
-
-&lt;p&gt;From there, you measure risk in practical terms by looking at three inputs together: the most likely ways things fail (prompt-driven data leakage, hallucinations that introduce false facts, biased outputs that create compliance or reputational exposure), the potential business impact if those failures occur (fines, contractual exposure, IP loss, litigation, churn, plus the time and spend required to remediate), and the likelihood of occurrence (how often users submit high-risk data, overall prompt volume and usage spikes during peak workloads).&lt;/p&gt;
-
-
-
-&lt;p&gt;Finally, manage priorities by applying security protocols proportionate to the risk. Enforce tighter guardrails where impact and likelihood are high; apply lighter guidance where they’re less. For instance, a finance team uploading forecast models into a free AI service is a clear high-impact, high-likelihood case.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="3-implement-a-layered-defense-strategy"&gt;3. Implement a layered defense strategy&lt;/h2&gt;
-
-
-
-&lt;p&gt;People, process and technology working in sync are an effective bulwark against AI risk. Train teams on data classification and leave no ambiguity about not sharing PII or confidential information in public AI tools. Reinforce this behavior with tabletop exercises that show how AI-related hallucinations can quietly derail decisions. For example, by inventing “growth drivers” that distort a forecast and trigger real financial mistakes.&lt;/p&gt;
-
-
-
-&lt;p&gt;Next, streamline the operational workflow for rolling out and maturing AI prompt/data-sharing governance through incremental rollout. Begin in “advice mode,” which flags risky prompts and helps you tune data-sharing thresholds. As you learn from usage patterns and reduce false positives, standardize the controls and transition to blocking or sanitizing flagged prompts where appropriate.&lt;/p&gt;
-
-
-
-&lt;p&gt;Finally, implement the platform layer to control and monitor at scale. Start with DLP coverage for AI traffic, then add AI-specific monitoring and intrusion-prevention capabilities that analyze prompt syntax and semantics, score risk in real time and alert or intervene when interactions look suspicious.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="4-enforce-human-in-the-loop-oversight"&gt;4. Enforce human-in-the-loop oversight&lt;/h2&gt;
-
-
-
-&lt;p&gt;While accelerating AI adoption, the elephant in the room that we often lose sight of is bad outputs moving straight into production workflows.&lt;/p&gt;
-
-
-
-&lt;p&gt;The NIST framework emphasizes ‘human-in-the-loop’ to guard against failures caused by plausible but incorrect AI outputs. If these outputs influence legal positions, financial decisions or customer communications without a human review, we are looking at a potential slew of bad decision-making across key business functions.&lt;/p&gt;
-
-
-
-&lt;p&gt;The recommended approach is to have a qualified human gatekeeper who has explicit accountability vis-à-vis specific outputs, for example:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Route drafts to counsel for verification of clauses, obligations, definitions and jurisdiction-specific wording before anything is shared externally.&lt;/li&gt;
-
-
-
-&lt;li&gt;Senior analysts should sign off to validate assumptions, formulas, source data and version control before the numbers inform forecasts or reporting.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="5-translate-risk-reduction-into-business-growth"&gt;5. Translate risk reduction into business growth&lt;/h2&gt;
-
-
-
-&lt;p&gt;McKinsey &lt;a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/why-digital-trust-truly-matters"&gt;research&lt;/a&gt; on digital trust suggests that companies leading on trust are about 1.6 times more likely than others to achieve a 10% or higher annual growth rate in both revenue and EBIT.&lt;/p&gt;
-
-
-
-&lt;p&gt;Ideally, the AI risk governance should be pitched as a critical business initiative with clear operational value. Assessment ensures fewer shadow AI tools are in use, fewer sensitive-data prompt events, fewer incidents, fewer audit findings to remediate, and less rework caused by unreliable outputs.&lt;/p&gt;
-
-
-
-&lt;p&gt;When you translate these improvements into hours saved, reduced external counsel/audit effort and incident-response costs not incurred, AI risk management makes business sense.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-practical-risk-management-framework"&gt;A practical risk management framework&lt;/h2&gt;
-
-
-
-&lt;p&gt;Treating shadow AI risk management as a strategic imperative is the right mindset for implementing a practical risk management framework. Start your shadow AI risk management journey by:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Inventorying AI usage&lt;/li&gt;
-
-
-
-&lt;li&gt;Applying a structured &lt;a href="https://www.csoonline.com/article/4088198/beyond-the-checklist-shifting-from-compliance-frameworks-to-real-time-risk-assessments.html"&gt;risk assessment&lt;/a&gt; methodology&lt;/li&gt;
-
-
-
-&lt;li&gt;Establishing and enforcing layered controls&lt;/li&gt;
-
-
-
-&lt;li&gt;Ensuring human oversight&lt;/li&gt;
-
-
-
-&lt;li&gt;Continuous measurement&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;This approach gives you clear visibility into AI usage and enforces layered defenses to help your team make the best of AI. You move from pilot-stage AI experiments to enterprise-scale adoption backed by discovery, risk mapping and scalable defenses.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4143096/a-5-step-approach-to-taming-shadow-ai.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Wed, 11 Mar 2026 10:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 13 Mar 2026 02:24:12 +0000</lastBuildDate>
     <item>
       <title>CSO Awards 2026 celebrates world-class security strategies</title>
       <link>https://www.csoonline.com/article/570667/cso-awards-showcase-world-class-security-strategies.html</link>
@@ -254,7 +61,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/570667/cso-awards-showcase-world-class-security-strategies.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Wed, 11 Mar 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -619,8 +426,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/568125/cso-hall-of-fame-honorees.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Wed, 11 Mar 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>European Day of Remembrance for Victims of Terrorism</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/european-day-of-remembrance-for-victims-of-terrorism</link>
+      <description>Today, as we mark the 22nd European Remembrance Day for Victims of Terrorism, we honour those who lost their lives and reflect on the impact of terrorism on our communities. This year, in particular, we commemorate the 10th anniversary of the attacks in Brussels, which claimed 32 lives and left more than 300 people injured. To acknowledge this solemn occasion, Catherine De Bolle, Europol's Executive Director, shares her account of the events:</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/european-day-of-remembrance-for-victims-of-terrorism</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.64</comments>
+      <pubDate>Fri, 13 Mar 2026 00:24:12 +0000</pubDate>
     </item>
     <item>
       <title>Why zero trust breaks down in IoT and OT environments</title>
@@ -840,7 +657,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4143100/why-zero-trust-breaks-down-in-iot-and-ot-environments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Wed, 11 Mar 2026 11:00:00 +0000</pubDate>
     </item>
     <item>
@@ -915,8 +732,134 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4143667/overly-permissive-guest-settings-put-salesforce-customers-at-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 11 Mar 2026 11:47:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Telus Digital hit with massive data breach</title>
+      <link>https://www.csoonline.com/article/4144560/telus-digital-hit-with-massive-data-breach.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Telus Digital, which provides business process outsourcing (BPO) services to a range of organizations worldwide, has been hit with a massive cyberattack conducted by extortion group &lt;a href="https://www.csoonline.com/article/4124684/shinyhunters-ramp-up-new-vishing-campaign-with-100s-in-crosshairs.html" target="_blank"&gt;ShinyHunters&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;The group, which has been in operation since 2020, specializes in stealing data from Salesforce and other SaaS vendors, and has also recently been conducting voice phishing (vishing) attacks, impersonating IT staff to persuade employees to enter their credentials on malicious sites that harvest them.&lt;/p&gt;
+
+
+
+&lt;p&gt;In a statement to &lt;em&gt;CSO&lt;/em&gt; on Thursday, Telus Digital said it is “investigating a cybersecurity incident involving unauthorized access to a limited number of our systems. Upon discovery, we took immediate steps to address the unauthorized activity and secure our systems against further intrusion. We are actively managing the situation and continue to monitor it closely.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The statement went on to say, “all business operations within Telus Digital remain fully operational and there is no evidence of disruption to customer connectivity or services. As part of our response, we have engaged leading cyber forensics experts to support our investigation, and we are working with law enforcement.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The company added that it has implemented additional security measures “to further safeguard our systems and environment. As our investigation progresses, we are notifying any impacted customers, as appropriate. The security of our customers’ information continues to be our highest priority.”&lt;/p&gt;
+
+
+
+&lt;p&gt;One published report &lt;a href="https://www.bleepingcomputer.com/news/security/telus-digital-confirms-breach-after-hacker-claims-1-petabyte-data-theft/" rel="noreferrer noopener" target="_blank"&gt;stated&lt;/a&gt; that ShinyHunters claims to have stolen upwards of one petabyte of data from both the company and its customers, many of whom use Telus Digital as a BPO provider for their customer support operations.&lt;/p&gt;
+
+
+
+&lt;p&gt;A company spokesperson was asked to confirm that number, but refused comment.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="attackers-now-better-at-being-trusted"&gt;Attackers now ‘better at being trusted’&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.infotech.com/profiles/fritz-jean-louis" rel="noreferrer noopener" target="_blank"&gt;Fritz Jean-Louis&lt;/a&gt;, principal cybersecurity advisor at Info-Tech Research Group, said the incident was not a perimeter failure, even though  “when breaches of this magnitude occur, the instinct is often to ask which vulnerability was exploited and which malware got through.”&lt;/p&gt;
+
+
+
+&lt;p&gt;He added that the Telus Digital data theft “increasingly points to a different problem, in that attackers no longer need to ‘break in’ if they can blend in. The hallmarks of this breach, like the multi-month dwell time, massive data volumes, and delayed detection, suggest the abuse of legitimate access rather than overt technical exploitation.”&lt;/p&gt;
+
+
+
+&lt;p&gt;In other words, he said, the systems likely trusted the attacker, noting that, based on publicly available details, this incident aligns with a growing class of data theft first operations that include:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;Long-term persistence using valid credentials or trusted pathways&lt;/li&gt;
+
+
+
+&lt;li&gt;Lateral movement across internal systems once inside&lt;/li&gt;
+
+
+
+&lt;li&gt;Slow, controlled data staging to avoid triggering alerts&lt;/li&gt;
+
+
+
+&lt;li&gt;Large-scale exfiltration disguised as normal encrypted traffic&lt;/li&gt;
+
+
+
+&lt;li&gt;Public disclosure or extortion signaling once data is secured.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;According to Jean-Louis, “this is not smash-and-grab ransomware. It is strategic, disciplined, and optimized for maximum leverage. The [attack] actually exposes a blind spot many organizations still have: [they] are good at detecting ‘bad behavior,’ but not abnormal trusted behavior.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="priorities-for-mitigation"&gt;Priorities for mitigation&lt;/h2&gt;
+
+
+
+&lt;p&gt;This incident, he pointed out, reinforces the importance of several priorities for organizations, including:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;Regard identity as the new perimeter. If credentials are compromised, everything downstream is at risk.&lt;/li&gt;
+
+
+
+&lt;li&gt;Enforce MFA everywhere, especially for admins and third parties.&lt;/li&gt;
+
+
+
+&lt;li&gt;Data-centric monitoring is non-negotiable if organizations must know when data is accessed, aggregated, and moved.&lt;/li&gt;
+
+
+
+&lt;li&gt;Set alerts for bulk access patterns, not just downloads, and set reasonable data movement thresholds by role&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;Flat networks, he said, enable big breaches, and once attackers move laterally, scale becomes their advantage.&lt;/p&gt;
+
+
+
+&lt;p&gt;His advice to CSOs is that they segment environments aggressively, isolate high-value data stores from general access, invest in behavioral analytics and threat hunting, and look for subtle anomalies over weeks, not just spikes over minutes.&lt;/p&gt;
+
+
+
+&lt;p&gt;A strategic lesson from this breach is that organizations should prepare for data theft, not just ransomware, he said. “Many incident response plans still assume encryption equals impact and build playbooks for silent data exfiltration.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The biggest risk today, said Jean-Louis, “is not that attackers are getting better at breaking in; it’s that they’re getting better at being trusted. Organizations that continue to focus primarily on perimeter defenses and malware prevention will remain vulnerable to this class of attack.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4144560/telus-digital-hit-with-massive-data-breach.html</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.90</comments>
+      <pubDate>Fri, 13 Mar 2026 00:00:57 +0000</pubDate>
     </item>
     <item>
       <title>CISA warns of actively exploited Ivanti EPM and Cisco SD-WAN flaws</title>
@@ -966,7 +909,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4143992/cisa-warns-of-actively-exploited-ivanti-epm-and-cisco-sd-wan-flaws.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Wed, 11 Mar 2026 22:46:04 +0000</pubDate>
     </item>
     <item>
@@ -1093,7 +1036,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4143937/resumes-with-malicious-iso-attachments-are-circulating-says-aryaka.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.03</comments>
       <pubDate>Wed, 11 Mar 2026 23:44:34 +0000</pubDate>
     </item>
     <item>
@@ -1243,7 +1186,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4063809/wie-cisos-schlechte-produkte-enttarnen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Thu, 12 Mar 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1342,7 +1285,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4140230/ai-use-is-changing-how-much-companies-pay-for-cyber-insurance.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Thu, 12 Mar 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1417,7 +1360,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4144231/phantomraven-returns-to-npm-with-88-bad-packages.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Thu, 12 Mar 2026 11:43:52 +0000</pubDate>
     </item>
     <item>
@@ -1427,7 +1370,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-200</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Mon, 09 Mar 2026 14:04:28 +0000</pubDate>
     </item>
     <item>
@@ -1437,7 +1380,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-201</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.67</comments>
       <pubDate>Mon, 09 Mar 2026 14:36:41 +0000</pubDate>
     </item>
     <item>
@@ -1447,7 +1390,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-202</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.67</comments>
       <pubDate>Mon, 09 Mar 2026 14:41:02 +0000</pubDate>
     </item>
     <item>
@@ -1457,7 +1400,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-203</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.67</comments>
       <pubDate>Mon, 09 Mar 2026 14:42:15 +0000</pubDate>
     </item>
     <item>
@@ -1467,7 +1410,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-204</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.67</comments>
       <pubDate>Mon, 09 Mar 2026 14:45:54 +0000</pubDate>
     </item>
     <item>
@@ -1477,7 +1420,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-205</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.69</comments>
       <pubDate>Mon, 09 Mar 2026 15:31:46 +0000</pubDate>
     </item>
     <item>
@@ -1487,7 +1430,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-206</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.69</comments>
       <pubDate>Mon, 09 Mar 2026 15:42:09 +0000</pubDate>
     </item>
     <item>
@@ -1497,28 +1440,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-207</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.69</comments>
       <pubDate>Mon, 09 Mar 2026 15:49:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ivanti security advisory (AV26-113) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.79</comments>
-      <pubDate>Mon, 09 Mar 2026 18:31:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>SolarWinds security advisory (AV25-613) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-613</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-613</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.80</comments>
-      <pubDate>Mon, 09 Mar 2026 18:48:18 +0000</pubDate>
     </item>
     <item>
       <title>Medical giant Stryker crippled after Iranian hackers remotely wipe computers</title>
@@ -1620,8 +1543,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4144523/medical-giant-stryker-crippled-after-iranian-hackers-remotely-wipe-computers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.82</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Thu, 12 Mar 2026 19:06:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ivanti security advisory (AV26-113) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-113</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.74</comments>
+      <pubDate>Mon, 09 Mar 2026 18:31:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>SolarWinds security advisory (AV25-613) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-613</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av25-613</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.75</comments>
+      <pubDate>Mon, 09 Mar 2026 18:48:18 +0000</pubDate>
     </item>
     <item>
       <title>Kubernetes security advisory (AV26-208)</title>
@@ -1630,7 +1573,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/kubernetes-security-advisory-av26-208</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.23</comments>
+      <comments>Score: 9.17</comments>
       <pubDate>Tue, 10 Mar 2026 15:35:26 +0000</pubDate>
     </item>
     <item>
@@ -1640,7 +1583,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-march-2026-monthly-rollup-av26-209</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.24</comments>
+      <comments>Score: 9.18</comments>
       <pubDate>Tue, 10 Mar 2026 15:56:21 +0000</pubDate>
     </item>
     <item>
@@ -1650,7 +1593,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-210</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.18</comments>
       <pubDate>Tue, 10 Mar 2026 16:07:45 +0000</pubDate>
     </item>
     <item>
@@ -1660,7 +1603,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-211</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.29</comments>
+      <comments>Score: 9.22</comments>
       <pubDate>Tue, 10 Mar 2026 17:59:03 +0000</pubDate>
     </item>
     <item>
@@ -1670,7 +1613,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-212</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.23</comments>
       <pubDate>Tue, 10 Mar 2026 18:13:32 +0000</pubDate>
     </item>
     <item>
@@ -1680,7 +1623,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-march-2026-monthly-rollup-av26-213</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.33</comments>
+      <comments>Score: 9.27</comments>
       <pubDate>Tue, 10 Mar 2026 19:50:19 +0000</pubDate>
     </item>
     <item>
@@ -1690,7 +1633,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-214</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.34</comments>
+      <comments>Score: 9.27</comments>
       <pubDate>Tue, 10 Mar 2026 20:08:12 +0000</pubDate>
     </item>
     <item>
@@ -1700,7 +1643,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-215</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.36</comments>
+      <comments>Score: 9.29</comments>
       <pubDate>Tue, 10 Mar 2026 20:41:27 +0000</pubDate>
     </item>
     <item>
@@ -1710,7 +1653,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-216</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.36</comments>
+      <comments>Score: 9.29</comments>
       <pubDate>Tue, 10 Mar 2026 20:51:06 +0000</pubDate>
     </item>
     <item>
@@ -1720,7 +1663,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-217</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.36</comments>
+      <comments>Score: 9.29</comments>
       <pubDate>Tue, 10 Mar 2026 20:56:39 +0000</pubDate>
     </item>
     <item>
@@ -1730,7 +1673,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-218</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Wed, 11 Mar 2026 17:21:24 +0000</pubDate>
     </item>
     <item>
@@ -1740,7 +1683,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-219</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Wed, 11 Mar 2026 17:26:23 +0000</pubDate>
     </item>
     <item>
@@ -1750,7 +1693,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-220</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Wed, 11 Mar 2026 17:31:14 +0000</pubDate>
     </item>
     <item>
@@ -1760,7 +1703,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-221</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Wed, 11 Mar 2026 17:32:21 +0000</pubDate>
     </item>
     <item>
@@ -1770,7 +1713,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-222</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.99</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Wed, 11 Mar 2026 19:42:38 +0000</pubDate>
     </item>
     <item>
@@ -1780,7 +1723,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-223</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.00</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Wed, 11 Mar 2026 20:00:23 +0000</pubDate>
     </item>
     <item>
@@ -1790,7 +1733,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-224</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.01</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Wed, 11 Mar 2026 20:10:12 +0000</pubDate>
     </item>
     <item>
@@ -1800,7 +1743,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-225</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.01</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Wed, 11 Mar 2026 20:18:33 +0000</pubDate>
     </item>
     <item>
@@ -1810,7 +1753,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-226</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.02</comments>
+      <comments>Score: 9.93</comments>
       <pubDate>Wed, 11 Mar 2026 20:29:48 +0000</pubDate>
     </item>
     <item>
@@ -1820,7 +1763,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av25-857</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.02</comments>
+      <comments>Score: 9.93</comments>
       <pubDate>Wed, 11 Mar 2026 20:31:35 +0000</pubDate>
     </item>
     <item>
@@ -1830,7 +1773,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-227</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.58</comments>
+      <comments>Score: 10.48</comments>
       <pubDate>Thu, 12 Mar 2026 12:58:21 +0000</pubDate>
     </item>
     <item>
@@ -1840,7 +1783,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-228</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.70</comments>
+      <comments>Score: 10.59</comments>
       <pubDate>Thu, 12 Mar 2026 16:08:38 +0000</pubDate>
     </item>
     <item>
@@ -1850,7 +1793,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-229</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.72</comments>
+      <comments>Score: 10.61</comments>
       <pubDate>Thu, 12 Mar 2026 16:28:27 +0000</pubDate>
     </item>
     <item>
@@ -1860,7 +1803,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-230</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.76</comments>
+      <comments>Score: 10.65</comments>
       <pubDate>Thu, 12 Mar 2026 17:35:21 +0000</pubDate>
     </item>
     <item>
@@ -1870,7 +1813,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zoom-security-advisory-av26-231</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.77</comments>
+      <comments>Score: 10.66</comments>
       <pubDate>Thu, 12 Mar 2026 17:44:51 +0000</pubDate>
     </item>
     <item>
@@ -1880,7 +1823,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-232</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.77</comments>
+      <comments>Score: 10.66</comments>
       <pubDate>Thu, 12 Mar 2026 17:53:44 +0000</pubDate>
     </item>
     <item>
@@ -1890,7 +1833,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-233</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.81</comments>
+      <comments>Score: 10.70</comments>
       <pubDate>Thu, 12 Mar 2026 18:58:35 +0000</pubDate>
     </item>
     <item>
@@ -1900,7 +1843,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-234</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.83</comments>
+      <comments>Score: 10.71</comments>
       <pubDate>Thu, 12 Mar 2026 19:16:53 +0000</pubDate>
     </item>
   </channel>
