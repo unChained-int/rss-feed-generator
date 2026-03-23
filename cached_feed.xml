@@ -8,118 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Mar 2026 11:46:51 +0000</lastBuildDate>
-    <item>
-      <title>Trivy vulnerability scanner backdoored with credential stealer in supply chain attack</title>
-      <link>https://www.csoonline.com/article/4148317/trivy-vulnerability-scanner-backdoored-with-credential-stealer-in-supply-chain-attack.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Attackers have compromised the widely used open-source Trivy vulnerability scanner, injecting credential-stealing malware into official releases and GitHub Actions used by thousands of CI/CD workflows. The breach could trigger a cascade of additional supply-chain compromises if impacted projects and organizations don’t rotate their secrets immediately.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attack, disclosed by Trivy maintainers today, results from &lt;a href="https://www.stepsecurity.io/blog/hackerbot-claw-github-actions-exploitation"&gt;an earlier compromise announced late last month&lt;/a&gt; that also leveraged insecure GitHub Actions and impacted multiple projects. Security firms &lt;a href="https://socket.dev/blog/trivy-under-attack-again-github-actions-compromise"&gt;Socket &lt;/a&gt;and &lt;a href="https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack"&gt;Wiz&lt;/a&gt; traced the root cause to an incomplete credential rotation after the first breach, allowing the attackers to return to Trivy’s environment and introduce malicious commits.&lt;/p&gt;
-
-
-
-&lt;p&gt;“If you suspect you were running a compromised version, treat all pipeline secrets as compromised and rotate immediately,” Trivy maintainer Itay Shakury wrote &lt;a href="https://github.com/aquasecurity/trivy/discussions/10425"&gt;on GitHub&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="multiple-components-backdoored"&gt;Multiple components backdoored&lt;/h2&gt;
-
-
-
-&lt;p&gt;Trivy, developed by Aqua Security, is one of the most widely used open-source vulnerability scanners, with over 32,000 GitHub stars and more than 100 million Docker Hub downloads. Developers use it to detect vulnerabilities and exposed secrets in their CI/CD pipelines and container images.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attackers compromised three components of the Trivy project: trivy-action, the official GitHub Action for running Trivy scans in CI/CD workflows; setup-trivy, a helper action for installing the scanner; and the Trivy binary itself. Backdoored artifacts were published to GitHub releases, Docker Hub, the GitHub Container Registry, and the Amazon Elastic Container Registry.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Socket, 75 of 76 version tags in trivy-action were overwritten with malicious code, along with seven tags in setup-trivy. The only unaffected trivy-action tag was version 0.35.0. The compromised tags include widely used versions such as 0.34.2, 0.33.0, and 0.18.0.&lt;/p&gt;
-
-
-
-&lt;p&gt;“When the malicious binary is executed it starts both the legitimate trivy service and the malicious code in parallel,” Wiz researchers wrote in their analysis of the attack.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="attackers-look-for-development-secrets"&gt;Attackers look for development secrets&lt;/h2&gt;
-
-
-
-&lt;p&gt;On GitHub Actions runners, the credential stealer reads the process memory to extract secrets and searches the filesystem for SSH keys, cloud provider credentials, Kubernetes tokens, Docker registry configurations, and cryptocurrency wallets.&lt;/p&gt;
-
-
-
-&lt;p&gt;The stolen data is encrypted and sent to a typosquatted domain that mimics Aqua Security’s legitimate site. If this fails, the malware falls back to creating a public repository called “tpcp-docs” on the victim’s own GitHub account and uploading the encrypted data there.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Wiz, the attack also installs a persistent Python dropper on developer machines that connects to an attacker-controlled server every five minutes in search for additional payloads to execute.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="stealthy-tag-manipulation-technique-bypasses-detection"&gt;Stealthy tag manipulation technique bypasses detection&lt;/h2&gt;
-
-
-
-&lt;p&gt;Instead of creating new releases, which would trigger notifications, the attackers force-pushed existing version tags to point to new malicious commits. Git tags are pointers that reference a specific commit by its fingerprint. By overwriting where those pointers lead, any workflow referencing the tag begins pulling the attacker’s code.&lt;/p&gt;
-
-
-
-&lt;p&gt;To further avoid detection, the attackers cloned the original commit metadata such as author names, email addresses, timestamps, and messages, making the malicious commits appear identical to the legitimate ones they replaced. The forgery left subtle traces such as missing cryptographic signatures and inconsistent timestamp relationships.&lt;/p&gt;
-
-
-
-&lt;p&gt;The same tag manipulation technique was used in &lt;a href="https://www.csoonline.com/article/4008621/github-actions-attack-renders-even-security-aware-orgs-vulnerable.html"&gt;the compromise of the tj-actions/changed-files GitHub Action&lt;/a&gt; a year ago which affected 23,000 repositories.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-lesson-for-victims"&gt;A lesson for victims&lt;/h2&gt;
-
-
-
-&lt;p&gt;The initial Trivy compromise happened in late February when attackers exploited a misconfigured GitHub Actions workflow that had been present in the repository since October 2025. The workflow, triggered by external pull requests, ran with access to repository secrets, &lt;a href="https://www.csoonline.com/article/574165/software-projects-face-supply-chain-security-risk-due-to-insecure-artifact-downloads-via-github-act.html"&gt;a dangerous pattern in GitHub Actions that has been documented before&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attackers stole a personal access token (PAT) with write permissions and used it to delete releases, rename the repository, and publish a malicious Visual Studio Code extension. The Trivy maintainers rotated their credentials, but it seems the process missed some of them.&lt;/p&gt;
-
-
-
-&lt;p&gt;This failure, especially by a company that is specialized in CI/CD security, should serve as a warning to organizations affected by this new attack, especially because the malware is designed to steal the same type of credentials that could enable supply chain compromises in their own pipelines.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-recurring-pattern"&gt;A recurring pattern&lt;/h2&gt;
-
-
-
-&lt;p&gt;The Trivy compromise is the latest in a &lt;a href="https://www.csoonline.com/article/3619159/supply-chain-compromise-of-ultralytics-ai-library-results-in-trojanized-versions.html"&gt;growing pattern of attacks targeting GitHub Actions&lt;/a&gt; and &lt;a href="https://www.csoonline.com/article/4127693/software-developers-prime-cyber-targets-and-a-rising-risk-vector-for-cisos.html"&gt;developers in general&lt;/a&gt;. The tj-actions/changed-files compromise last year used the same tag manipulation approach and was later traced to an upstream compromise of the reviewdog/action-setup action. Other incidents in 2025 included the GhostAction campaign, which stole over 3,000 secrets from 327 GitHub users, and an attack on the nx npm package that exploited a vulnerable pull_request_target workflow.&lt;/p&gt;
-
-
-
-&lt;p&gt;GitHub &lt;a href="https://github.blog/changelog/2025-11-07-actions-pull_request_target-and-environment-branch-protections-changes/"&gt;changed the default behavior of pull_request_target workflows in December 2025&lt;/a&gt; to reduce the risk of exploitation, but the vulnerable workflow in the Trivy repository predated that change.&lt;/p&gt;
-
-
-
-&lt;p&gt;Organizations using Trivy should pin GitHub Actions to the full commit SHA hashes rather than version tags to prevent tag manipulation attacks. The safe versions are Trivy v0.69.3, trivy-action tag 0.35.0, and setup-trivy 0.2.6. Security teams should also search their GitHub accounts for repositories named tpcp-docs, which would indicate successful fallback exfiltration, and block the command-and-control domain and its IP address at the network perimeter.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4148317/trivy-vulnerability-scanner-backdoored-with-credential-stealer-in-supply-chain-attack.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.27</comments>
-      <pubDate>Sat, 21 Mar 2026 05:35:56 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 23 Mar 2026 13:15:02 +0000</lastBuildDate>
     <item>
       <title>Apple security advisory (AV26-233)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-233</link>
@@ -127,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-233</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Thu, 12 Mar 2026 18:58:35 +0000</pubDate>
     </item>
     <item>
@@ -137,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-234</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Thu, 12 Mar 2026 19:16:53 +0000</pubDate>
     </item>
     <item>
@@ -147,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-236</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 13 Mar 2026 17:47:37 +0000</pubDate>
     </item>
     <item>
@@ -168,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.37</comments>
-      <pubDate>Mon, 23 Mar 2026 09:46:51 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2026 11:15:02 +0000</pubDate>
     </item>
     <item>
       <title>Trivy Hack Spreads Infostealer via Docker, Triggers Worm and Kubernetes Wiper</title>
@@ -179,7 +68,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://thehackernews.com/2026/03/trivy-hack-spreads-infostealer-via.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Mon, 23 Mar 2026 14:01:00 +0530</pubDate>
     </item>
     <item>
@@ -190,7 +79,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Mar 2026 09:46:51 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2026 11:15:02 +0000</pubDate>
     </item>
     <item>
       <title>Major data leak forum dismantled in global action against cybercrime forum</title>
@@ -200,7 +89,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Mar 2026 09:46:51 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2026 11:15:02 +0000</pubDate>
     </item>
     <item>
       <title>Invitation - Press conference: From two seized phones to a global criminal web</title>
@@ -210,7 +99,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Mar 2026 09:46:51 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2026 11:15:02 +0000</pubDate>
     </item>
     <item>
       <title>12 members of money laundering scheme exploiting Ukrainian women arrested in Spain</title>
@@ -220,7 +109,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Mar 2026 09:46:51 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2026 11:15:02 +0000</pubDate>
     </item>
     <item>
       <title>From a small Swedish town to a global crime network: international operation strikes top-tier organised crime</title>
@@ -230,7 +119,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Mar 2026 09:46:51 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2026 11:15:02 +0000</pubDate>
     </item>
     <item>
       <title>Europol and international partners disrupt ‘SocksEscort’ proxy service</title>
@@ -240,7 +129,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Mar 2026 09:46:51 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2026 11:15:02 +0000</pubDate>
     </item>
     <item>
       <title>Global cybercrime crackdown:  over 373 000 dark web sites shut down</title>
@@ -250,7 +139,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Mon, 23 Mar 2026 09:46:51 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2026 11:15:02 +0000</pubDate>
     </item>
     <item>
       <title>European Day of Remembrance for Victims of Terrorism</title>
@@ -260,7 +149,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.64</comments>
-      <pubDate>Mon, 23 Mar 2026 09:46:51 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2026 11:15:02 +0000</pubDate>
     </item>
     <item>
       <title>Europol coordinates largest referral action targeting terrorist audio propaganda</title>
@@ -270,7 +159,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.65</comments>
-      <pubDate>Mon, 23 Mar 2026 09:46:51 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2026 11:15:02 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-237)</title>
@@ -279,7 +168,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-237</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Mon, 16 Mar 2026 14:00:37 +0000</pubDate>
     </item>
     <item>
@@ -289,7 +178,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-238</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Mon, 16 Mar 2026 14:08:49 +0000</pubDate>
     </item>
     <item>
@@ -299,7 +188,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-239</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Mon, 16 Mar 2026 15:10:57 +0000</pubDate>
     </item>
     <item>
@@ -309,7 +198,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-240</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Mon, 16 Mar 2026 15:31:33 +0000</pubDate>
     </item>
     <item>
@@ -319,7 +208,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-241</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Mon, 16 Mar 2026 16:17:29 +0000</pubDate>
     </item>
     <item>
@@ -329,7 +218,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-242</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Mon, 16 Mar 2026 16:25:10 +0000</pubDate>
     </item>
     <item>
@@ -339,7 +228,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-243</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Mon, 16 Mar 2026 17:11:23 +0000</pubDate>
     </item>
     <item>
@@ -349,7 +238,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wing-ftp-security-advisory-av25-391</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 16 Mar 2026 17:48:08 +0000</pubDate>
     </item>
     <item>
@@ -359,7 +248,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-244</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Mon, 16 Mar 2026 19:18:53 +0000</pubDate>
     </item>
     <item>
@@ -369,7 +258,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-245</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Tue, 17 Mar 2026 15:13:42 +0000</pubDate>
     </item>
     <item>
@@ -379,7 +268,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-246</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Tue, 17 Mar 2026 18:20:40 +0000</pubDate>
     </item>
     <item>
@@ -389,7 +278,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-247</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Wed, 18 Mar 2026 14:13:11 +0000</pubDate>
     </item>
     <item>
@@ -399,7 +288,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-248</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Wed, 18 Mar 2026 14:23:13 +0000</pubDate>
     </item>
     <item>
@@ -409,7 +298,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-249</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Wed, 18 Mar 2026 14:34:59 +0000</pubDate>
     </item>
     <item>
@@ -419,7 +308,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-250</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Wed, 18 Mar 2026 14:43:24 +0000</pubDate>
     </item>
     <item>
@@ -429,7 +318,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-251</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Wed, 18 Mar 2026 17:30:11 +0000</pubDate>
     </item>
     <item>
@@ -439,7 +328,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-252</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Wed, 18 Mar 2026 17:34:50 +0000</pubDate>
     </item>
     <item>
@@ -449,7 +338,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-253</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Wed, 18 Mar 2026 18:00:23 +0000</pubDate>
     </item>
     <item>
@@ -459,7 +348,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-254</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Wed, 18 Mar 2026 18:16:57 +0000</pubDate>
     </item>
     <item>
@@ -469,7 +358,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-255</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Wed, 18 Mar 2026 18:52:35 +0000</pubDate>
     </item>
     <item>
@@ -479,7 +368,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-256</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Wed, 18 Mar 2026 19:04:37 +0000</pubDate>
     </item>
     <item>
@@ -489,7 +378,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av26-257</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Wed, 18 Mar 2026 19:27:36 +0000</pubDate>
     </item>
     <item>
@@ -499,7 +388,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Thu, 19 Mar 2026 14:31:24 +0000</pubDate>
     </item>
     <item>
@@ -509,7 +398,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-258</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Thu, 19 Mar 2026 14:33:36 +0000</pubDate>
     </item>
     <item>
@@ -519,7 +408,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-197</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Thu, 19 Mar 2026 16:32:52 +0000</pubDate>
     </item>
     <item>
@@ -529,7 +418,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-259</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Thu, 19 Mar 2026 19:03:42 +0000</pubDate>
     </item>
     <item>
@@ -539,7 +428,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/kubernetes-security-advisory-av26-260</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Thu, 19 Mar 2026 19:14:01 +0000</pubDate>
     </item>
     <item>
@@ -694,7 +583,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://www.csoonline.com/article/4143393/the-insider-threat-rises-again.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.81</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Mon, 23 Mar 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -887,7 +776,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://www.csoonline.com/article/4148139/why-us-companies-must-be-ready-for-quantum-by-2030-a-practical-roadmap.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Mon, 23 Mar 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1018,7 +907,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://www.csoonline.com/article/4148279/behavioral-xdr-and-threat-intel-nab-north-korean-fake-it-worker-within-10-days-of-hire.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Mon, 23 Mar 2026 09:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1028,7 +917,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-261</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.97</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Fri, 20 Mar 2026 15:34:42 +0000</pubDate>
     </item>
     <item>
@@ -1038,7 +927,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-464</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.01</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Fri, 20 Mar 2026 17:32:56 +0000</pubDate>
     </item>
     <item>
@@ -1048,7 +937,7 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-722</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Fri, 20 Mar 2026 18:07:07 +0000</pubDate>
     </item>
     <item>
@@ -1058,8 +947,18 @@ The last known clean release of Trivy on Docker Hub is 0.69.3. The malicious ver
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-005-critical-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-20963</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.02</comments>
+      <comments>Score: 9.99</comments>
       <pubDate>Fri, 20 Mar 2026 18:23:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV26-262)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-262</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-262</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.99</comments>
+      <pubDate>Mon, 23 Mar 2026 12:56:28 +0000</pubDate>
     </item>
   </channel>
 </rss>
