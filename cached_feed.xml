@@ -8,17 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Mar 2026 04:57:10 +0000</lastBuildDate>
-    <item>
-      <title>Press Conference: Launch of Europol’s new European Centre Against Migrant Smuggling</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/press-conference-launch-of-europols-new-european-centre-against-migrant-smuggling</link>
-      <description>A press conference will be held on 24 March at 13:00 CET to mark the official launch of the European Centre Against Migrant Smuggling (ECAMS) at Europol’s headquarters in The Hague, the Netherlands.The centre will strengthen Europol’s response to migrant smuggling, which focuses on a multi-dimensional approach addressing the full spectrum of criminal activities involved.This includes tackling online recruitment and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/press-conference-launch-of-europols-new-european-centre-against-migrant-smuggling</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 25 Mar 2026 02:57:10 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 25 Mar 2026 06:04:38 +0000</lastBuildDate>
     <item>
       <title>12 members of money laundering scheme exploiting Ukrainian women arrested in Spain</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/12-members-of-money-laundering-scheme-exploiting-ukrainian-women-arrested-in-spain</link>
@@ -27,331 +17,37 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 25 Mar 2026 02:57:10 +0000</pubDate>
+      <pubDate>Wed, 25 Mar 2026 04:04:38 +0000</pubDate>
     </item>
     <item>
-      <title>Why US companies must be ready for quantum by 2030: A practical roadmap</title>
-      <link>https://www.csoonline.com/article/4148139/why-us-companies-must-be-ready-for-quantum-by-2030-a-practical-roadmap.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Last year, I asked a room of infrastructure, identity and application leaders a simple question: “Where in our environment do we rely on RSA or elliptic curve cryptography?”&lt;/p&gt;
-
-
-
-&lt;p&gt;The first answers were the usual suspects: TLS on the edge, our VPN and the certificates on laptops. Then we pulled up a dependency map and the mood changed. Crypto wasn’t just in a few obvious places. It was buried in API gateways, service meshes, database drivers, firmware update pipelines and third-party SaaS. Some of it was configurable. A lot of it wasn’t.&lt;/p&gt;
-
-
-
-&lt;p&gt;That exercise is why I think the post-quantum conversation has to move from “interesting someday” to “start now.” Even if large, fault-tolerant quantum computers are not here yet, adversaries can harvest encrypted traffic and data today and attempt to decrypt it later. If you have information that must remain confidential for a decade or more — customer PII, health data, proprietary models, merger plans — waiting for a clean deadline is the riskiest option.&lt;/p&gt;
-
-
-
-&lt;p&gt;The good news is that we do not have to bet the enterprise on a single new algorithm overnight. A hybrid approach lets us add post-quantum protection while keeping classical algorithms that are widely deployed and interoperable. The trick is to start early enough that the migration is deliberate, measurable and boring by the time 2030 arrives.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-2030-deadline-is-closer-than-it-looks"&gt;The 2030 deadline is closer than it looks&lt;/h2&gt;
-
-
-
-&lt;p&gt;In security programs, 2030 can feel like an eternity. In cryptography programs, it is frighteningly close. The reason is the long tail of enterprise change: inventories, procurement, platform upgrades, certificate lifecycles, embedded devices and the slowest vendor in your stack.&lt;/p&gt;
-
-
-
-&lt;p&gt;The standards foundation is already landing. &lt;a href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards"&gt;NIST published its first three finalized post-quantum cryptography standards in August 2024&lt;/a&gt;, including FIPS 203 for ML-KEM and companion signature standards. That shifted the question I hear from “what should we wait for?” to “how do we operationalize this without breaking everything?”&lt;/p&gt;
-
-
-
-&lt;p&gt;From there, three forces compress the timeline:&lt;/p&gt;
-
-
-
-&lt;ol class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;“Harvest now, decrypt later” is not theoretical.&lt;/strong&gt; If an attacker steals encrypted session captures or archived backups, the confidentiality loss happens the day quantum-capable decryption becomes practical. Your risk horizon is set by the shelf life of your data, not the arrival date of a quantum computer.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Government and critical infrastructure guidance are converging.&lt;/strong&gt; The National Security Agency’s CNSA 2.0 suite sets expectations for quantum-resistant algorithms in national security systems with milestones that pull software and firmware signing toward a 2030 horizon. Even if you are not building for government, those supply chain requirements tend to flow downhill into commercial products.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Crypto migration is never a single project.&lt;/strong&gt; Your public TLS endpoints might be modernized quickly. Your internal PKI, code signing pipeline and long-lived devices can take years. The last crypto refresh many enterprises remember — deprecating SHA-1 and older TLS — was manageable largely because teams started before the hard cutoff dates.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;That is why I recommend a hybrid strategy &lt;em&gt;before&lt;/em&gt; 2030. It buys down long-term confidentiality risk now, creates time for interoperability bugs to surface and avoids a last-minute scramble when customers, regulators or your own board ask, “Are we quantum ready?”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-hybrid-post-quantum-looks-like-in-the-real-world"&gt;What hybrid post-quantum looks like in the real world&lt;/h2&gt;
-
-
-
-&lt;p&gt;When I say “hybrid,” I mean using a classical algorithm and a post-quantum algorithm together so the connection stays secure even if one component is later broken. The most relevant enterprise example is hybrid key establishment for TLS and internal mTLS.&lt;/p&gt;
-
-
-
-&lt;p&gt;The &lt;a href="https://datatracker.ietf.org/doc/draft-ietf-tls-ecdhe-mlkem/"&gt;IETF is standardizing approaches that combine classical ECDHE with ML-KEM&lt;/a&gt; so a TLS 1.3 session key depends on both mechanisms.&lt;/p&gt;
-
-
-
-&lt;p&gt;Hybrid signatures touch certificate chains, code signing systems and validation logic, so they usually come later. In most roadmaps I run, we begin by keeping classical certificates for compatibility while preparing PKI components, HSMs and signing services to support post-quantum signature algorithms as platforms mature.&lt;/p&gt;
-
-
-
-&lt;p&gt;In practice, hybrid almost always starts inside the enterprise first. External customer traffic has the most interoperability constraints and the highest blast radius. Internal service-to-service traffic, VPN tunnels between managed endpoints and software signing are better early candidates because we control both ends and can roll back quickly.&lt;/p&gt;
-
-
-
-&lt;p&gt;You also have to plan for real constraints:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Size and performance:&lt;/strong&gt; post-quantum keys, ciphertexts and signatures can be larger than today’s elliptic curve equivalents, which can break assumptions in certificate stores, load balancers and MTU sizing.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Crypto agility:&lt;/strong&gt; hybrid only works if you can change algorithms without rewriting half your environment, which means pushing cryptographic choices into configuration and deprecating bespoke crypto.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Operational observability:&lt;/strong&gt; you need telemetry for handshake success rates, latency impact, error patterns and downgrade behavior so the rollout looks like any other reliability program.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;The point is not to be “post-quantum only” tomorrow. The point is to make post-quantum a normal part of your cryptographic control plane so the eventual full transition becomes a series of routine upgrades, not a crisis.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-practical-roadmap-you-can-start-this-quarter"&gt;A practical roadmap you can start this quarter&lt;/h2&gt;
-
-
-
-&lt;p&gt;If you are looking for a pragmatic way to begin, here is the roadmap I have used with large US enterprises.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="build-a-cryptography-inventory-tied-to-data-value"&gt;Build a cryptography inventory tied to data value&lt;/h3&gt;
-
-
-
-&lt;p&gt;Start with an inventory of where cryptography is used: TLS termination, internal mTLS, VPN, SSH, S/MIME, code signing, disk and database encryption, backups, identity tokens, key management systems and embedded device firmware. Map those uses to data classes and retention horizons. The systems protecting 10+ year secrets are your “harvest now, decrypt later” priorities.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.cisa.gov/topics/risk-management/quantum"&gt;CISA’s post-quantum cryptography initiative&lt;/a&gt; is a useful checklist for the categories and dependencies you should capture and for how to think about critical functions.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="pick-3-early-migration-surfaces-you-control-end-to-end"&gt;Pick 3 early migration surfaces you control end-to-end&lt;/h3&gt;
-
-
-
-&lt;p&gt;In most enterprises, the first three areas I target are:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Internal mTLS between services&lt;/li&gt;
-
-
-
-&lt;li&gt;VPN and remote access&lt;/li&gt;
-
-
-
-&lt;li&gt;Code signing for internal software distribution and update pipelines&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;These reduce long-term exposure without forcing you to negotiate compatibility with every customer browser, partner system or unmanaged device.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="stand-up-a-hybrid-ready-lab-and-instrument-it"&gt;Stand up a “hybrid-ready” lab and instrument it&lt;/h3&gt;
-
-
-
-&lt;p&gt;Before you touch production, stand up a lab that mirrors core traffic patterns: edge TLS, internal service mesh, API gateway and identity provider. Measure handshake sizes, latency and failure modes. Make sure you can roll back cleanly and explain what changed.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="upgrade-for-crypto-agility"&gt;Upgrade for crypto agility&lt;/h3&gt;
-
-
-
-&lt;p&gt;Standardize on modern TLS stacks, keep them patched and make algorithm selection a managed configuration. Consolidate certificate issuance flows. Push teams away from static crypto choices baked into application code. The more you centralize, the faster you can migrate.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="run-a-limited-hybrid-pilot-with-explicit-success-metrics"&gt;Run a limited hybrid pilot with explicit success metrics&lt;/h3&gt;
-
-
-
-&lt;p&gt;Pick one internal domain or one non-critical endpoint and pilot hybrid TLS. Define success as measurable outcomes: no increase in error rate, acceptable latency delta, stable CPU utilization and clean telemetry. When something breaks, document the dependency that caused it and feed that back into your inventory.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="put-post-quantum-requirements-into-procurement-now"&gt;Put post-quantum requirements into procurement now&lt;/h3&gt;
-
-
-
-&lt;p&gt;The fastest way to make 2030 painless is to make 2026 contracts future-friendly. Add language that requires crypto agility, support for NIST standardized post-quantum algorithms as they are adopted and a documented roadmap for hybrid support in TLS, VPN and signing.&lt;/p&gt;
-
-
-
-&lt;p&gt;If you start now, you buy time for standards, platforms and operational tooling to converge. Hybrid post-quantum migration rewards early, quiet work. The enterprises that begin before 2030 will not just be safer against future decryption. They will have a more agile, measurable cryptographic program that is easier to govern, audit and modernize for whatever comes next.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;br /&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4148139/why-us-companies-must-be-ready-for-quantum-by-2030-a-practical-roadmap.html</guid>
+      <title>From a small Swedish town to a global crime network: international operation strikes top-tier organised crime</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/small-swedish-town-to-global-crime-network-international-operation-strikes-top-tier-organised-crime</link>
+      <description>Forensic analysis revealed not one organised crime group, but multiple interconnected networks involved in large-scale drug trafficking and money laundering. They were bound together by a web of companies and other structures.Most of the key targets identified had previously been unknown to law enforcement. The true scale and structure of the criminal ecosystem only emerged once investigators unlocked the data...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/small-swedish-town-to-global-crime-network-international-operation-strikes-top-tier-organised-crime</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
-      <pubDate>Mon, 23 Mar 2026 09:00:00 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 25 Mar 2026 04:04:38 +0000</pubDate>
     </item>
     <item>
-      <title>Behavioral XDR and threat intel nab North Korean fake IT worker within 10 days of hire</title>
-      <link>https://www.csoonline.com/article/4148279/behavioral-xdr-and-threat-intel-nab-north-korean-fake-it-worker-within-10-days-of-hire.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The North Korea fake IT worker scheme has become a pernicious threat across several industries. While &lt;a href="https://www.csoonline.com/article/4033022/how-not-to-hire-a-north-korean-it-spy-3.html"&gt;best practices emphasize precautions&lt;/a&gt; throughout the hiring phase, once onboarded such operatives can be challenging to detect. Combinations of behavioral analytics, threat intelligence, and other points of information are taking shape as essential defenses, as a recent case attests.  &lt;/p&gt;
-
-
-
-&lt;p&gt;According to a &lt;a href="https://www.levelblue.com/blogs/spiderlabs-blog/how-levelblue-otx-and-cybereason-xdr-detected-a-north-korea-linked-remote-it-worker#:~:text=of%20Microsoft%20Security-,How%20LevelBlue%20OTX%20and%20Cybereason%20XDR%20Detected%20a%20North%20Korea,originated%20from%20an%20unmanaged%20device."&gt;recent report from LevelBlue SpiderLabs&lt;/a&gt;, a suspected North Korea-linked operative was hired, passed security checks, and was assigned to work on Salesforce data before being identified and terminated 10 days later. It took a combination of geolocation anomalies, unmanaged device access, and threat intelligence correlation to identify the threat.&lt;/p&gt;
-
-
-
-&lt;p&gt;In August 2025, routine onboarding quickly unraveled when Cybereason XDR behavioral analytics flagged suspicious login patterns and LevelBlue SpiderLabs threat intelligence confirmed the organization had unknowingly hired the bad actor.&lt;/p&gt;
-
-
-
-&lt;p&gt;When an admin from the organization activated the new hire’s EntraID account, the team observed that the new hire used an EntraID login from a Dallas, Texas, IP address that deviated from his usual login regions (China). The EntraID login originated from an unmanaged device and used an IP address from the Astrill VPN, which is typically used by North Korea-linked IT workers.&lt;/p&gt;
-
-
-
-&lt;p&gt;Tue Luu, threat detection engineer at LevelBlue SpiderLabs, told CSO that it was the threat intelligence correlation that set alarm bells ringing. “These things are seldom determined by a single piece of information or telemetry or behavior; rather, they result from a confluence of suspicions and statistical anomalies.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The North Korean fake IT worker scheme can allow operatives to &lt;a href="https://www.csoonline.com/article/3481659/north-korean-group-infiltrated-100-plus-companies-with-imposter-it-pros.html"&gt;steal sensitive data&lt;/a&gt;, proprietary source code, trade secrets, and intellectual property. It can expose organizations to &lt;a href="https://cloud.google.com/blog/topics/threat-intelligence/dprk-it-workers-expanding-scope-scale"&gt;ransom demands&lt;/a&gt; and the harvesting of credentials to maintain persistent unauthorized access.&lt;/p&gt;
-
-
-
-&lt;p&gt;“It’s the ultimate trojan horse: difficult to mitigate, especially if they pass your employee vetting process,” Luu said.&lt;/p&gt;
-
-
-
-&lt;p&gt;It’s estimated that North Korea-linked remote worker schemes have &lt;a href="https://www.justice.gov/opa/pr/justice-department-announces-coordinated-nationwide-actions-combat-north-korean-remote"&gt;infiltrated hundreds of organizations globally&lt;/a&gt;, generating between &lt;a href="https://flare.io/learn/resources/north-korean-infiltrator-threat"&gt;$250 million and $500 million annually&lt;/a&gt; for the regime.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-the-scheme-played-out-in-detail"&gt;How the scheme played out in detail&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Friday:&lt;/strong&gt; Threat actor hired as remote employee assigned to work on Salesforce data and passed standard verification procedures.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Friday to Wednesday: &lt;/strong&gt;Cybereason XDR established behavioral baseline showing consistent logins from China.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Thursday: &lt;/strong&gt;A login anomaly is detected that triggered a high-severity alert.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Friday:&lt;/strong&gt; Threat intel matched OTX pulse for Astrill VPN infrastructure used by North Korean actors.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Monday:&lt;/strong&gt; User’s account revoked and an extended investigation initiated.&lt;/p&gt;
-
-
-
-&lt;p&gt;During the SpiderLabs team’s deep dive, they scoured employee interactions, group chat additions, and other material to look for evidence of persistence mechanisms and remote access tools. They found no evidence of residual access, backdoors, or malicious artifacts, attributed to the speed of detection.&lt;/p&gt;
-
-
-
-&lt;p&gt;In most cases, these rogue insiders attempt to operate in the shadows.&lt;/p&gt;
-
-
-
-&lt;p&gt;“As long as they aren’t lighting up too many of the company’s controls, perhaps using communication channels that pass proxy muster, you may see methods like QQ chat clients, pastebin-like sites, or even shared cloud-based email drafts as ways to pass information,” Luu said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="key-signs-of-nk-linked-insider-infiltration"&gt;Key signs of NK-linked insider infiltration&lt;/h2&gt;
-
-
-
-&lt;p&gt;SpiderLabs has found that these threat actors commonly operate from China rather than North Korea because the internet is more stable and they can employ VPN services to conceal their true geographic origin.&lt;/p&gt;
-
-
-
-&lt;p&gt;Astrill VPN has the ability to bypass China’s Great Firewall and allows threat actors to tunnel traffic through US exit nodes and masquerade as legitimate domestic employees. As a result, authentication events from known Astrill VPN IP ranges represent a high-fidelity indicator of compromise.&lt;/p&gt;
-
-
-
-&lt;p&gt;In this case, however, the VPN itself wasn’t the only sign things were not as they seemed.&lt;/p&gt;
-
-
-
-&lt;p&gt;“I believe what happened here is that Astrill VPN was not a standard solution used in the specific environment we were monitoring for the client in this case. If it had been, then this particular indicator might not have had as much weight,” Luu said.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The true anomaly here is that the use of that particular VPN software was unusual for this particular environment. There are personal VPNs and business VPNs, and the XDR solution can distinguish between the personal and business VPN solutions and only alert on the personal VPN usage,” Luu added.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="no-silver-iam-bullet-for-cisos"&gt;No silver IAM bullet for CISOs&lt;/h2&gt;
-
-
-
-&lt;p&gt;Identity and access management offers no magical method for spotting fake IT workers. As this example demonstrates, discovering a North Korean insider requires patching together a number of signals. This investigative and alert work can take different forms.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Some approaches start with well-segregated privileges and begin ramping up privileges over time as trust and tenure are established to ‘slow roll’ risky hires,” Luu told CSO.&lt;/p&gt;
-
-
-
-&lt;p&gt;In some cases, it’s looking for logon or work activity outside of typical working hours for a particular geography.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Certainly, the confluence of suspicions helps. For example, are employees accessing data or attempting to authenticate data, hosts, or applications outside their established roles?” Luu noted.&lt;/p&gt;
-
-
-
-&lt;p&gt;The reminder for CISO is to ensure onboarding processes are robust and regularly reviewed. “Learn what software is ‘normal’ in your environment and set software standards, and ensure employees have company-managed devices, preferably Windows for more control,” Luu advised. “Make sure IT admins apply EntraID Conditional Access policy to lock down logins from allowed regions or areas where employees are employed. The client didn’t have the conditional access policy activated before the incident, and they applied it after as a recommendation from Cybereason.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4148279/behavioral-xdr-and-threat-intel-nab-north-korean-fake-it-worker-within-10-days-of-hire.html</guid>
+      <title>Europol and international partners disrupt ‘SocksEscort’ proxy service</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-international-partners-disrupt-socksescort-proxy-service</link>
+      <description>On 11 March 2026, Europol in collaboration with law enforcement agencies from Austria, France, the Netherlands, and the United States, alongside Eurojust, executed Operation Lightning. This coordinated effort targeted the malicious proxy service ‘SocksEscort’, which allegedly compromised over 369 000 routers and Internet of Things devices in 163 countries, and offered ‘SocksEscort’ customers over 35 000 proxies in recent years.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-international-partners-disrupt-socksescort-proxy-service</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
-      <pubDate>Mon, 23 Mar 2026 09:30:00 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 25 Mar 2026 04:04:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>Press Conference: Launch of Europol’s new European Centre Against Migrant Smuggling</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/press-conference-launch-of-europols-new-european-centre-against-migrant-smuggling</link>
+      <description>A press conference will be held on 24 March at 13:00 CET to mark the official launch of the European Centre Against Migrant Smuggling (ECAMS) at Europol’s headquarters in The Hague, the Netherlands.The centre will strengthen Europol’s response to migrant smuggling, which focuses on a multi-dimensional approach addressing the full spectrum of criminal activities involved.This includes tackling online recruitment and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/press-conference-launch-of-europols-new-european-centre-against-migrant-smuggling</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 25 Mar 2026 04:04:38 +0000</pubDate>
     </item>
     <item>
       <title>Spring security advisory (AV26-245)</title>
@@ -371,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Wed, 25 Mar 2026 02:57:10 +0000</pubDate>
+      <pubDate>Wed, 25 Mar 2026 04:04:38 +0000</pubDate>
     </item>
     <item>
       <title>GitHub security advisory (AV26-246)</title>
@@ -391,7 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Wed, 25 Mar 2026 02:57:10 +0000</pubDate>
+      <pubDate>Wed, 25 Mar 2026 04:04:38 +0000</pubDate>
     </item>
     <item>
       <title>European Day of Remembrance for Victims of Terrorism</title>
@@ -401,7 +97,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.64</comments>
-      <pubDate>Wed, 25 Mar 2026 02:57:10 +0000</pubDate>
+      <pubDate>Wed, 25 Mar 2026 04:04:38 +0000</pubDate>
     </item>
     <item>
       <title>Europol coordinates largest referral action targeting terrorist audio propaganda</title>
@@ -411,7 +107,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.65</comments>
-      <pubDate>Wed, 25 Mar 2026 02:57:10 +0000</pubDate>
+      <pubDate>Wed, 25 Mar 2026 04:04:38 +0000</pubDate>
     </item>
     <item>
       <title>Faster attacks and ‘recovery denial’ ransomware reshape threat landscape</title>
@@ -561,7 +257,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4148705/faster-attacks-and-recovery-denial-ransomware-reshape-threat-landscape.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Mon, 23 Mar 2026 15:42:45 +0000</pubDate>
     </item>
     <item>
@@ -571,7 +267,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-247</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 18 Mar 2026 14:13:11 +0000</pubDate>
     </item>
     <item>
@@ -581,7 +277,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-248</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 18 Mar 2026 14:23:13 +0000</pubDate>
     </item>
     <item>
@@ -591,7 +287,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-249</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 18 Mar 2026 14:34:59 +0000</pubDate>
     </item>
     <item>
@@ -601,7 +297,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-250</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 18 Mar 2026 14:43:24 +0000</pubDate>
     </item>
     <item>
@@ -611,7 +307,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-251</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 18 Mar 2026 17:30:11 +0000</pubDate>
     </item>
     <item>
@@ -621,7 +317,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-252</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 18 Mar 2026 17:34:50 +0000</pubDate>
     </item>
     <item>
@@ -631,7 +327,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-253</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 18 Mar 2026 18:00:23 +0000</pubDate>
     </item>
     <item>
@@ -641,7 +337,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-254</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 18 Mar 2026 18:16:57 +0000</pubDate>
     </item>
     <item>
@@ -651,7 +347,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-255</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 18 Mar 2026 18:52:35 +0000</pubDate>
     </item>
     <item>
@@ -661,7 +357,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-256</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Wed, 18 Mar 2026 19:04:37 +0000</pubDate>
     </item>
     <item>
@@ -671,7 +367,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av26-257</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Wed, 18 Mar 2026 19:27:36 +0000</pubDate>
     </item>
     <item>
@@ -758,7 +454,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4148974/palo-alto-updates-security-platform-to-discover-ai-agents.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Tue, 24 Mar 2026 00:18:33 +0000</pubDate>
     </item>
     <item>
@@ -768,7 +464,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-january-2026-monthly-rollup-av26-024</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 19 Mar 2026 14:31:24 +0000</pubDate>
     </item>
     <item>
@@ -778,7 +474,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-258</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 19 Mar 2026 14:33:36 +0000</pubDate>
     </item>
     <item>
@@ -788,7 +484,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-197</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Thu, 19 Mar 2026 16:32:52 +0000</pubDate>
     </item>
     <item>
@@ -798,7 +494,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-259</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Thu, 19 Mar 2026 19:03:42 +0000</pubDate>
     </item>
     <item>
@@ -808,7 +504,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/kubernetes-security-advisory-av26-260</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Thu, 19 Mar 2026 19:14:01 +0000</pubDate>
     </item>
     <item>
@@ -971,7 +667,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4148735/streamline-physical-security-to-enable-data-center-growth-in-the-era-of-ai.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Tue, 24 Mar 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -981,7 +677,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-261</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Fri, 20 Mar 2026 15:34:42 +0000</pubDate>
     </item>
     <item>
@@ -991,7 +687,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-464</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Fri, 20 Mar 2026 17:32:56 +0000</pubDate>
     </item>
     <item>
@@ -1001,7 +697,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av25-722</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.30</comments>
       <pubDate>Fri, 20 Mar 2026 18:07:07 +0000</pubDate>
     </item>
     <item>
@@ -1076,7 +772,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4149346/hp-launches-tpm-guard-to-help-defeat-physical-tpm-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Tue, 24 Mar 2026 13:29:17 +0000</pubDate>
     </item>
     <item>
@@ -1194,7 +890,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4025731/empathie-trifft-it-sicherheit-der-weg-zu-gelebter-compliance.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Wed, 25 Mar 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1204,7 +900,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-005-critical-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-20963</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.32</comments>
+      <comments>Score: 9.30</comments>
       <pubDate>Fri, 20 Mar 2026 18:23:30 +0000</pubDate>
     </item>
     <item>
@@ -1214,7 +910,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-262</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.64</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Mon, 23 Mar 2026 12:56:28 +0000</pubDate>
     </item>
     <item>
@@ -1224,7 +920,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-263</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.66</comments>
+      <comments>Score: 9.63</comments>
       <pubDate>Mon, 23 Mar 2026 13:54:35 +0000</pubDate>
     </item>
     <item>
@@ -1234,7 +930,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-264</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.67</comments>
+      <comments>Score: 9.64</comments>
       <pubDate>Mon, 23 Mar 2026 14:02:37 +0000</pubDate>
     </item>
     <item>
@@ -1244,7 +940,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-265</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.67</comments>
+      <comments>Score: 9.64</comments>
       <pubDate>Mon, 23 Mar 2026 14:14:20 +0000</pubDate>
     </item>
     <item>
@@ -1254,7 +950,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-266</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.65</comments>
       <pubDate>Mon, 23 Mar 2026 14:22:23 +0000</pubDate>
     </item>
     <item>
@@ -1264,7 +960,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-267</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.65</comments>
       <pubDate>Mon, 23 Mar 2026 14:31:13 +0000</pubDate>
     </item>
     <item>
@@ -1274,7 +970,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/craft-cms-security-advisory-av25-300</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.65</comments>
       <pubDate>Mon, 23 Mar 2026 14:35:40 +0000</pubDate>
     </item>
     <item>
@@ -1284,7 +980,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-268</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.65</comments>
       <pubDate>Mon, 23 Mar 2026 14:36:39 +0000</pubDate>
     </item>
     <item>
@@ -1294,7 +990,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-269</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.69</comments>
+      <comments>Score: 9.66</comments>
       <pubDate>Mon, 23 Mar 2026 14:47:04 +0000</pubDate>
     </item>
     <item>
@@ -1304,7 +1000,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-270</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.49</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Tue, 24 Mar 2026 15:49:08 +0000</pubDate>
     </item>
     <item>
@@ -1314,7 +1010,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-271</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.49</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Tue, 24 Mar 2026 15:54:34 +0000</pubDate>
     </item>
     <item>
@@ -1324,7 +1020,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-272</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.46</comments>
       <pubDate>Tue, 24 Mar 2026 16:01:17 +0000</pubDate>
     </item>
     <item>
@@ -1334,7 +1030,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-273</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.46</comments>
       <pubDate>Tue, 24 Mar 2026 16:11:18 +0000</pubDate>
     </item>
     <item>
@@ -1344,7 +1040,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-helmholz-security-advisory-av26-274</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.51</comments>
+      <comments>Score: 10.47</comments>
       <pubDate>Tue, 24 Mar 2026 16:22:48 +0000</pubDate>
     </item>
     <item>
@@ -1354,7 +1050,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-275</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.61</comments>
+      <comments>Score: 10.57</comments>
       <pubDate>Tue, 24 Mar 2026 19:09:12 +0000</pubDate>
     </item>
   </channel>
