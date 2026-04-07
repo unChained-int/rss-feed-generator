@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Apr 2026 11:58:33 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2026 13:52:36 +0000</lastBuildDate>
     <item>
       <title>WatchGuard security advisory (AV26-289)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-289</link>
@@ -66,129 +66,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av25-669</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Fri, 27 Mar 2026 19:56:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco fixes critical IMC auth bypass present in many products</title>
-      <link>https://www.csoonline.com/article/4154052/cisco-fixes-critical-imc-auth-bypass-present-in-many-products.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Cisco has released patches for a critical vulnerability in its out-of-band management solution, present in many of its servers and appliances. The flaw allows unauthenticated remote attackers to gain admin access to the Cisco Integrated Management Controller (IMC), which gives administrators remote control over servers even when the main OS is shut down.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerability, tracked as CVE-2026-20093, stems from incorrect handling of password changes and can be exploited by sending specially crafted HTTP requests. This means servers with their IMC interfaces exposed directly to the local network — or worse, to the internet — are at immediate risk.&lt;/p&gt;
-
-
-
-&lt;h5 class="wp-block-heading"&gt;&lt;strong&gt;[ Related: &lt;/strong&gt;&lt;a href="https://www.networkworld.com/article/3523958/cisco-latest-news-and-insights.html"&gt;&lt;strong&gt;More Cisco news and insights&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt; ]&lt;/strong&gt;&lt;/h5&gt;
-
-
-
-&lt;p&gt;The Cisco IMC is a baseboard management controller (BMC), a dedicated controller embedded into server motherboards with its own RAM and network interface that gives administrators monitoring and management capabilities as if they were physically connected to the server with a keyboard, monitor, and mouse (KVM). Because BMCs run their own firmware independently of the OS, they can be used to perform operations even when the OS is shut down, including reinstalling it.&lt;/p&gt;
-
-
-
-&lt;p&gt;The IMC provides an HTML5 web interface, an SSH-based command line interface, and an XML API. It also supports Redfish, a standardized RESTful API for BMCs and virtual KVM.&lt;/p&gt;
-
-
-
-&lt;p&gt;“A successful exploit could allow the attacker to bypass authentication, alter the passwords of any user on the system, including an Admin user, and gain access to the system as that user,” &lt;a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cimc-auth-bypass-AgG2BxTn"&gt;Cisco said in its advisory&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The IMC is present in 5000 Series Enterprise Network Compute Systems, Catalyst 8300 Series Edge uCPE, UCS C-Series M5 and M6 Rack Servers in standalone mode, UCS E-Series Servers M3, and UCS E-Series Servers M6. However, a long list of Cisco products and appliances that are based on the Cisco Unified Computing System (UCS) C-Series platform are also affected if they have their IMC interface exposed.&lt;/p&gt;
-
-
-
-&lt;p&gt;While Cisco is not currently aware of any malicious attacks exploiting this vulnerability, &lt;a href="https://www.csoonline.com/article/3848376/critical-vulnerability-in-ami-megarac-bmc-allows-servers-takeover.html"&gt;BMC flaws in servers from other manufacturers&lt;/a&gt; have been exploited in the past. In 2022, security researchers found &lt;a href="https://www.csoonline.com/article/571877/why-you-should-secure-your-embedded-server-management-interfaces.html"&gt;a malicious implant dubbed iLOBleed&lt;/a&gt; that was likely developed by an APT group and was being deployed through vulnerabilities in HPE iLO (HPE’s Integrated Lights-Out) BMC. In 2018, a ransomware group called JungleSec used default credentials for IPMI interfaces to compromise Linux servers.&lt;/p&gt;
-
-
-
-&lt;p&gt;The risk of attacks against such management interfaces is serious enough that the US Cybersecurity and Infrastructure Security Agency (CISA) and the National Security Agency (NSA) &lt;a href="https://media.defense.gov/2023/Jun/14/2003241405/-1/-1/0/CSI_HARDEN_BMCS.PDF"&gt;issued guidance on hardening BMC&lt;/a&gt; back in 2023.&lt;/p&gt;
-
-
-
-&lt;p&gt;More recently researchers also warned about &lt;a href="https://www.csoonline.com/article/4147874/that-cheap-kvm-device-could-expose-your-network-to-remote-compromise.html"&gt;vulnerabilities in cheap KVM-over-IP devices&lt;/a&gt; that some organizations or admins use as alternatives for managing systems that don’t have dedicated BMC controllers.&lt;/p&gt;
-
-
-
-&lt;h4 class="wp-block-heading" id="more-cisco-news"&gt;More Cisco news:&lt;/h4&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4150169/chained-vulnerabilities-in-cisco-catalyst-switches-could-induce-denial-of-service.html"&gt;Chained vulnerabilities in Cisco Catalyst switches could induce denial-of-service&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4148823/cisco-goes-all-in-on-agentic-ai-security.html"&gt;Cisco goes all in on agentic AI security&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4148753/cisco-talos-2025-year-in-review-and-lessons-learned.html"&gt;Cisco Talos 2025 year in review and lessons learned&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4131573/how-ciscos-platform-mindset-is-meeting-the-ai-era.html"&gt;How Cisco’s platform mindset is meeting the AI era&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4130971/cisco-extends-agenticops-model-across-networking-security-observability-products.html"&gt;Cisco extends AgenticOps across networking, security, observability products&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4130263/cisco-amps-up-silicon-one-line-delivers-new-systems-and-optics-for-ai-networking.html"&gt;Cisco amps up Silicon One line, delivers new systems and optics for AI networking&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4127471/takeaways-from-ciscos-ai-summit.html"&gt;Takeaways from Cisco’s AI Summit&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4126693/cisco-infrastructure-trust-model-development-are-key-ai-challenges.html"&gt;Cisco: Infrastructure, trust, model development are key AI challenges&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4125705/ai-security-tailwinds-signal-promising-2026-for-cisco.html"&gt;AI, security tailwinds signal promising 2026 for Cisco&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4124600/cisco-adds-intelligent-policy-enforcement-to-mesh-firewall-family.html"&gt;Cisco adds intelligent policy enforcement to mesh firewall family&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.csoonline.com/article/4120613/actively-exploited-cisco-uc-bug-requires-immediate-version%E2%80%91specific-patching.html"&gt;Actively exploited Cisco UC bug requires immediate, version‑specific patching&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4113462/ciscos-2026-agenda-prioritizes-ai-ready-infrastructure-connectivity.html"&gt;Cisco’s 2026 agenda prioritizes AI-ready infrastructure, connectivity&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4118154/cisco-finally-patches-seven-week-old-zero-day-flaw-in-secure-email-gateway-products.html"&gt;Cisco finally patches seven-week-old zero-day flaw in Secure Email Gateway products&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.networkworld.com/article/4115128/cisco-routers-knocked-out-due-to-cloudflare-dns-change.html"&gt;Cisco routers knocked out due to Cloudflare DNS change&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4154052/cisco-fixes-critical-imc-auth-bypass-present-in-many-products.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
-      <pubDate>Thu, 02 Apr 2026 22:26:37 +0000</pubDate>
     </item>
     <item>
       <title>Up to EUR 50 000 for a passage to the UK: 19 suspected migrant smugglers arrested</title>
@@ -198,7 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Tue, 07 Apr 2026 09:58:33 +0000</pubDate>
+      <pubDate>Tue, 07 Apr 2026 11:52:36 +0000</pubDate>
     </item>
     <item>
       <title>Small boats supply chain disrupted: 21 arrested for supplying Channel smugglers with nautical equipment</title>
@@ -208,67 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Tue, 07 Apr 2026 09:58:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>From intelligence to conviction: Europol helps dismantle Terrorgram Collective</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</link>
-      <description>A Canadian man has been sentenced by the Public Prosecution Service of Canada to 20 years in prison for terrorism-related offences, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC).The individual, based in Ontario’s Niagara region, pleaded guilty to producing and disseminating violent white supremacist propaganda as part of the online extremist network known as the “Terrorgram Collective”....</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 07 Apr 2026 09:58:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Five-country operation targets cigarette smuggling network operating from the UK</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-country-operation-targets-cigarette-smuggling-network-operating-uk</link>
-      <description>Investigation began with major seizure in ItalyThe investigation was launched in September 2024 following the seizure of 12 million counterfeit cigarettes at the Port of Genoa. The cigarettes had been produced in Armenia and shipped via Georgia before entering the EU.Further analysis of suspicious container movements at the Port of Genoa enabled investigators to identify a transnational criminal organisation with...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-country-operation-targets-cigarette-smuggling-network-operating-uk</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 07 Apr 2026 09:58:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>A legal vacuum on CSAM detection puts children at greater risk</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</link>
-      <description>The removal of the current legal basis enabling voluntary detection by online platforms could have far-reaching implications for safeguarding children.Last year alone, Europol processed around 1.1 million of so-called CyberTips, originating from the National Center for Missing &amp;amp; Exploited Children (NCMEC), of relevance to 24 European countries. CyberTips contain multiple entities (files, videos, photos etc.) supporting criminal investigation efforts into...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 07 Apr 2026 09:58:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Major operation targets one of Scotland’s most violent crime networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</link>
-      <description>Violence, drugs and controlThe gang is known for using violence to dominate territory and protect its criminal activity. Investigators believe it maintained control over parts of the United Kingdom through intimidation, retaliation and organised violence tied to drug trafficking.While violence played out on the ground, senior figures operated from Spain and the United Arab Emirates, directing operations and managing profits...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 07 Apr 2026 09:58:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Guns-for-cannabis network hit: Europol high-value target arrested in international action</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</link>
-      <description>The main suspect, a Turkish national holding a Greek residence permit, is believed to have coordinated the sourcing and transport of firearms into Spain, while overseeing the purchase and onward distribution of drugs to countries including Greece and Bulgaria.Flow of illicit firearms into the EUThe investigation began in March 2025, when the Spanish Mossos d’Esquadra detected the illegal introduction of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 07 Apr 2026 09:58:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Central Mediterranean: 10 migrant smugglers targeted</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/central-mediterranean-10-migrant-smugglers-targeted</link>
-      <description>On 18 and 19 March 2026, Europol hosted a digital action day under a dedicated Joint Team targeting migrant smugglers operating along the Central Mediterranean route. More than 30 experts from Germany, Italy, the Netherlands, Spain, the UK and the Office of the Prosecutor - International Criminal Court (OTP-ICC) took part, together with Europol and online investigators from the Europol-coordinated DiGiNeX network.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/central-mediterranean-10-migrant-smugglers-targeted</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
-      <pubDate>Tue, 07 Apr 2026 09:58:33 +0000</pubDate>
+      <pubDate>Tue, 07 Apr 2026 11:52:36 +0000</pubDate>
     </item>
     <item>
       <title>CERT-EU blames Trivy supply chain attack for Europa.eu data breach</title>
@@ -362,8 +181,68 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154176/cert-eu-blames-trivy-supply-chain-attack-for-europa-eu-data-breach.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Fri, 03 Apr 2026 16:18:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>From intelligence to conviction: Europol helps dismantle Terrorgram Collective</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</link>
+      <description>A Canadian man has been sentenced by the Public Prosecution Service of Canada to 20 years in prison for terrorism-related offences, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC).The individual, based in Ontario’s Niagara region, pleaded guilty to producing and disseminating violent white supremacist propaganda as part of the online extremist network known as the “Terrorgram Collective”....</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 07 Apr 2026 11:52:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Five-country operation targets cigarette smuggling network operating from the UK</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-country-operation-targets-cigarette-smuggling-network-operating-uk</link>
+      <description>Investigation began with major seizure in ItalyThe investigation was launched in September 2024 following the seizure of 12 million counterfeit cigarettes at the Port of Genoa. The cigarettes had been produced in Armenia and shipped via Georgia before entering the EU.Further analysis of suspicious container movements at the Port of Genoa enabled investigators to identify a transnational criminal organisation with...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-country-operation-targets-cigarette-smuggling-network-operating-uk</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 07 Apr 2026 11:52:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Major operation targets one of Scotland’s most violent crime networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</link>
+      <description>Violence, drugs and controlThe gang is known for using violence to dominate territory and protect its criminal activity. Investigators believe it maintained control over parts of the United Kingdom through intimidation, retaliation and organised violence tied to drug trafficking.While violence played out on the ground, senior figures operated from Spain and the United Arab Emirates, directing operations and managing profits...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 07 Apr 2026 11:52:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Guns-for-cannabis network hit: Europol high-value target arrested in international action</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</link>
+      <description>The main suspect, a Turkish national holding a Greek residence permit, is believed to have coordinated the sourcing and transport of firearms into Spain, while overseeing the purchase and onward distribution of drugs to countries including Greece and Bulgaria.Flow of illicit firearms into the EUThe investigation began in March 2025, when the Spanish Mossos d’Esquadra detected the illegal introduction of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 07 Apr 2026 11:52:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>A legal vacuum on CSAM detection puts children at greater risk</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</link>
+      <description>The removal of the current legal basis enabling voluntary detection by online platforms could have far-reaching implications for safeguarding children.Last year alone, Europol processed around 1.1 million of so-called CyberTips, originating from the National Center for Missing &amp;amp; Exploited Children (NCMEC), of relevance to 24 European countries. CyberTips contain multiple entities (files, videos, photos etc.) supporting criminal investigation efforts into...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 07 Apr 2026 11:52:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Central Mediterranean: 10 migrant smugglers targeted</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/central-mediterranean-10-migrant-smugglers-targeted</link>
+      <description>On 18 and 19 March 2026, Europol hosted a digital action day under a dedicated Joint Team targeting migrant smugglers operating along the Central Mediterranean route. More than 30 experts from Germany, Italy, the Netherlands, Spain, the UK and the Office of the Prosecutor - International Criminal Court (OTP-ICC) took part, together with Europol and online investigators from the Europol-coordinated DiGiNeX network.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/central-mediterranean-10-migrant-smugglers-targeted</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.54</comments>
+      <pubDate>Tue, 07 Apr 2026 11:52:36 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV26-096) – Update 1</title>
@@ -372,7 +251,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Mon, 30 Mar 2026 13:46:32 +0000</pubDate>
     </item>
     <item>
@@ -382,7 +261,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-294</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 30 Mar 2026 14:38:59 +0000</pubDate>
     </item>
     <item>
@@ -392,7 +271,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-295</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 30 Mar 2026 14:59:12 +0000</pubDate>
     </item>
     <item>
@@ -402,7 +281,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-006-vulnerability-impacting-citrix-netscaler-adc-netscaler-gateway-cve-2026-3055</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 30 Mar 2026 15:06:04 +0000</pubDate>
     </item>
     <item>
@@ -412,7 +291,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-296</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 30 Mar 2026 15:09:27 +0000</pubDate>
     </item>
     <item>
@@ -422,7 +301,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-297</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 30 Mar 2026 15:17:40 +0000</pubDate>
     </item>
     <item>
@@ -432,7 +311,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-298</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 30 Mar 2026 15:18:59 +0000</pubDate>
     </item>
     <item>
@@ -442,7 +321,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hitachi-security-advisory-av26-299</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 30 Mar 2026 15:20:43 +0000</pubDate>
     </item>
     <item>
@@ -452,7 +331,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-300</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 30 Mar 2026 15:26:13 +0000</pubDate>
     </item>
     <item>
@@ -462,7 +341,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-301</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 30 Mar 2026 15:39:55 +0000</pubDate>
     </item>
     <item>
@@ -472,7 +351,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-267</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Mon, 30 Mar 2026 20:20:39 +0000</pubDate>
     </item>
     <item>
@@ -483,7 +362,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Tue, 07 Apr 2026 09:58:33 +0000</pubDate>
+      <pubDate>Tue, 07 Apr 2026 11:52:36 +0000</pubDate>
     </item>
     <item>
       <title>Global cybercrime crackdown:  over 373 000 dark web sites shut down</title>
@@ -493,7 +372,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Tue, 07 Apr 2026 09:58:33 +0000</pubDate>
+      <pubDate>Tue, 07 Apr 2026 11:52:36 +0000</pubDate>
     </item>
     <item>
       <title>Nokia security advisory (AV26-302)</title>
@@ -502,7 +381,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nokia-security-advisory-av26-302</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Tue, 31 Mar 2026 13:33:16 +0000</pubDate>
     </item>
     <item>
@@ -512,7 +391,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-303</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Tue, 31 Mar 2026 18:09:53 +0000</pubDate>
     </item>
     <item>
@@ -522,7 +401,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/symantec-security-advisory-av26-304</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Tue, 31 Mar 2026 18:16:56 +0000</pubDate>
     </item>
     <item>
@@ -532,7 +411,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-305</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Tue, 31 Mar 2026 18:33:50 +0000</pubDate>
     </item>
     <item>
@@ -542,7 +421,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-307</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Wed, 01 Apr 2026 19:28:35 +0000</pubDate>
     </item>
     <item>
@@ -552,7 +431,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-308</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Wed, 01 Apr 2026 19:43:45 +0000</pubDate>
     </item>
     <item>
@@ -562,7 +441,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-306</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Wed, 01 Apr 2026 20:25:32 +0000</pubDate>
     </item>
     <item>
@@ -815,7 +694,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154226/escaping-the-cots-trap.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Mon, 06 Apr 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -998,7 +877,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154222/6-ways-attackers-abuse-ai-services-to-hack-your-business.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Mon, 06 Apr 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
@@ -1147,7 +1026,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154257/authentication-is-broken-heres-how-security-leaders-can-actually-fix-it.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Mon, 06 Apr 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1230,7 +1109,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154471/north-korean-hackers-abuse-lnks-and-github-repos-in-ongoing-campaign.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Mon, 06 Apr 2026 12:02:36 +0000</pubDate>
     </item>
     <item>
@@ -1240,7 +1119,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-275</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Thu, 02 Apr 2026 15:11:10 +0000</pubDate>
     </item>
     <item>
@@ -1250,7 +1129,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-309</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Thu, 02 Apr 2026 15:27:55 +0000</pubDate>
     </item>
     <item>
@@ -1260,7 +1139,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-310</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Thu, 02 Apr 2026 18:37:57 +0000</pubDate>
     </item>
     <item>
@@ -1270,7 +1149,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cesanta-security-advisory-av26-311</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Thu, 02 Apr 2026 18:49:23 +0000</pubDate>
     </item>
     <item>
@@ -1280,7 +1159,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssh-security-advisory-av26-312</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Thu, 02 Apr 2026 19:53:07 +0000</pubDate>
     </item>
     <item>
@@ -1541,7 +1420,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154546/the-noisy-tenants-engineering-fairness-in-multi-tenant-siem-solutions.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Tue, 07 Apr 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1752,7 +1631,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154228/the-rise-of-proactive-cyber-why-defense-is-no-longer-enough.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Tue, 07 Apr 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
@@ -1839,7 +1718,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154550/supply-chain-security-is-now-a-board-level-issue-heres-what-csos-need-to-know.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.92</comments>
+      <comments>Score: 8.84</comments>
       <pubDate>Tue, 07 Apr 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1918,8 +1797,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154934/microsoft-says-medusa-linked-storm-1175-is-speeding-ransomware-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Tue, 07 Apr 2026 10:48:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortinet security advisory (AV26-313)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-313</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-313</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.92</comments>
+      <pubDate>Tue, 07 Apr 2026 12:02:51 +0000</pubDate>
     </item>
     <item>
       <title>Black Hat USA</title>
@@ -1927,7 +1816,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/black-hat-usa</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 15566273202754.06</comments>
+      <comments>Score: 15261090650385.35</comments>
       <pubDate>Sat, 01 Aug 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
