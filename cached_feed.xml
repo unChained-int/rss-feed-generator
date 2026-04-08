@@ -8,110 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Apr 2026 09:05:36 +0000</lastBuildDate>
-    <item>
-      <title>Citrix security advisory (AV26-267) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-267</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-267</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
-      <pubDate>Mon, 30 Mar 2026 20:20:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>North Korean hackers abuse LNKs and GitHub repos in ongoing campaign</title>
-      <link>https://www.csoonline.com/article/4154471/north-korean-hackers-abuse-lnks-and-github-repos-in-ongoing-campaign.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;DPRK-linked threat actors are preferring stealth over sophistication in targeting South Korean organizations, as researchers report the use of weaponized Windows shortcut (&lt;a href="https://www.csoonline.com/article/4132232/four-new-reasons-why-windows-lnk-files-cannot-be-trusted.html" target="_blank"&gt;.LNK&lt;/a&gt;) files and GitHub-based command-and-control (C2) channels in a new campaign.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to new Fortinet findings, a series of attacks that began in 2024 were found using a multi-stage scripting process and GitHub C2 to evade detection, with obfuscation improving with each iteration of the campaign.&lt;/p&gt;
-
-
-
-&lt;p&gt;“In recent months, the threat actor has altered their tactics,” Fortinet researchers said in a blog &lt;a href="https://www.fortinet.com/blog/threat-research/dprk-related-campaigns-with-lnk-and-github-c2"&gt;post&lt;/a&gt;. “They now embed decoding functions within LNK arguments and include encoded payloads directly inside the files.” The ongoing campaign seems to be targeted at expanding DPRK’s surveillance within South Korea. The researchers noted that lesser obfuscation and heavier metadata in the previous iterations of the campaign allowed them to link it to attacks spreading the &lt;a href="https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/XenoRat.AXNR!MTB&amp;amp;ThreatID=2147945241" rel="noreferrer noopener" target="_blank"&gt;XenoRAT&lt;/a&gt; malware.&lt;/p&gt;
-
-
-
-&lt;p&gt;Jason Soroko, senior fellow at Sectigo, believes the strategy aligns with the recent trend of attackers relying on built-in Windows utilities and legitimate services to carry out their objectives. “Modern cyber espionage has fundamentally shifted toward a highly evasive strategy known as living off the land,” he said, noting that attackers are increasingly abusing native tools like PowerShell and scheduled tasks to blend into normal system activity.&lt;/p&gt;
-
-
-
-&lt;p&gt;LNK files are long &lt;a href="https://www.csoonline.com/article/574425/attackers-move-away-from-office-macros-to-lnk-files-for-malware-delivery.html"&gt;known for&lt;/a&gt; their history of exploitation, with Microsoft issuing multiple &lt;a href="https://www.csoonline.com/article/4101085/windows-shortcuts-use-as-a-vector-for-malware-may-be-cut-short.html"&gt;patches&lt;/a&gt; and &lt;a href="https://www.techradar.com/pro/security/microsoft-quietly-patches-lnk-vulnerability-thats-been-weaponized-for-years" rel="noreferrer noopener" target="_blank"&gt;advisories&lt;/a&gt; over the years to curb their misuse.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;LNK files used as stealth loaders&lt;/h2&gt;
-
-
-
-&lt;p&gt;The campaign begins its infection with a Windows shortcut file, which is typically used to launch applications or open documents, but can also embed commands to execute scripts or binaries.&lt;/p&gt;
-
-
-
-&lt;p&gt;“A .lnk file is how Windows handles shortcuts: Whenever you click on that Outlook icon on your desktop, you’re actually clicking on a separate file that uses the Outlook image and directs the operating system to open up Microsoft Outlook,” explained Jamie Boote, senior manager, strategic security consulting at Black Duck. “You can also create shortcut links (.lnk files) to websites, programs with additional commands, executable scripts, and just about anything else you could type into Windows’s Run command window.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The LNK files in the campaign use various scripts, including earlier versions with simple character concatenation to mask GitHub C2 address and the access token, the researchers said, adding that it was easy to determine that the script was meant to run a PowerShell command fetched from GitHub.&lt;/p&gt;
-
-
-
-&lt;p&gt;Later versions shifted to basic character decoding functions, making detection a little trickier, but still had telling metadata like name, sizes, and modification dates that allowed researchers to connect it to the specific campaign. The name column repeatedly uses “Hangul document,” a pattern consistent with state-affiliated groups like &lt;a href="https://www.csoonline.com/article/3967013/north-korea-backed-kimsuky-targets-unpatched-bluekeep-systems-in-new-campaign.html"&gt;Kimsuky&lt;/a&gt;, &lt;a href="https://www.csoonline.com/article/4088037/north-korean-hackers-exploit-googles-safety-tools-for-remote-wipe.html"&gt;APT37&lt;/a&gt;, and &lt;a href="https://www.csoonline.com/article/3818521/lazarus-group-tricks-job-seekers-on-linkedin-with-crypto-stealer.html"&gt;Lazarus&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;In its latest iteration, the campaign operators have removed the identifying metadata, now using only a decoding function within the arguments.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;GitHub as C2&lt;/h2&gt;
-
-
-
-&lt;p&gt;Researchers also highlighted the campaign’s use of GitHub as a C2 layer. Rather than communicating with suspicious-looking or newly registered domains, the malware interacts with GitHub repositories and APIs to receive instructions and exfiltrate data.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The fact that this shortcut file creates a chain that ultimately reaches out to a GitHub repository, and pulls scripts over the internet, should put network defenders on alert that even productivity platforms can be attack vectors,” Boote added.&lt;/p&gt;
-
-
-
-&lt;p&gt;After infecting a system, the PowerShell scripts perform system checks to confirm the environment isn’t under analysis, ensure the malware persists after system reboot through the Scheduled Task, and collect detailed system information. Only then is a stable connection attempted with subsequent scripts, where additional modules and instructions are fetched from the attacker’s GitHub repository.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers flagged a GitHub account, “motoralis”, with consistent activity dating back to 2025, and other less frequent accounts, including “God0808RAMA,” “Pigresy80,” “entire73,” “pandora0009,” and “brandonleeodd93-blip.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Additionally, the blog post shared a set of URLs and hash functions to support detection efforts.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4154471/north-korean-hackers-abuse-lnks-and-github-repos-in-ongoing-campaign.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
-      <pubDate>Mon, 06 Apr 2026 12:02:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>Small boats supply chain disrupted: 21 arrested for supplying Channel smugglers with nautical equipment</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/small-boats-supply-chain-disrupted-21-arrested-for-supplying-channel-smugglers-nautical-equipment</link>
-      <description>A joint investigation conducted under the framework of a Europol task force resulted in a significant disruption of the migrant smuggling supply chain serving criminal networks active along the English Channel. This operation is the outcome of close cooperation between law enforcement and judicial authorities from Belgium, France, Germany, the Netherlands, and the United Kingdom, with support from Eurojust.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/small-boats-supply-chain-disrupted-21-arrested-for-supplying-channel-smugglers-nautical-equipment</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
-      <pubDate>Wed, 08 Apr 2026 07:05:36 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 08 Apr 2026 11:00:36 +0000</lastBuildDate>
     <item>
       <title>From intelligence to conviction: Europol helps dismantle Terrorgram Collective</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</link>
@@ -120,7 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 08 Apr 2026 07:05:36 +0000</pubDate>
+      <pubDate>Wed, 08 Apr 2026 09:00:36 +0000</pubDate>
     </item>
     <item>
       <title>Five-country operation targets cigarette smuggling network operating from the UK</title>
@@ -130,7 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 08 Apr 2026 07:05:36 +0000</pubDate>
+      <pubDate>Wed, 08 Apr 2026 09:00:36 +0000</pubDate>
     </item>
     <item>
       <title>A legal vacuum on CSAM detection puts children at greater risk</title>
@@ -140,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 08 Apr 2026 07:05:36 +0000</pubDate>
+      <pubDate>Wed, 08 Apr 2026 09:00:36 +0000</pubDate>
     </item>
     <item>
       <title>Major operation targets one of Scotland’s most violent crime networks</title>
@@ -150,7 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 08 Apr 2026 07:05:36 +0000</pubDate>
+      <pubDate>Wed, 08 Apr 2026 09:00:36 +0000</pubDate>
     </item>
     <item>
       <title>Guns-for-cannabis network hit: Europol high-value target arrested in international action</title>
@@ -160,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 08 Apr 2026 07:05:36 +0000</pubDate>
+      <pubDate>Wed, 08 Apr 2026 09:00:36 +0000</pubDate>
     </item>
     <item>
       <title>Central Mediterranean: 10 migrant smugglers targeted</title>
@@ -170,7 +67,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.54</comments>
-      <pubDate>Wed, 08 Apr 2026 07:05:36 +0000</pubDate>
+      <pubDate>Wed, 08 Apr 2026 09:00:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>US warns of Iranian hackers targeting critical infrastructure</title>
+      <link>https://www.bleepingcomputer.com/news/security/us-warns-of-iranian-hackers-targeting-critical-infrastructure/</link>
+      <description>Iranian-linked hackers are targeting Internet-exposed Rockwell/Allen-Bradley programmable logic controllers (PLCs) on the networks of U.S. critical infrastructure organizations. [...]</description>
+      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/us-warns-of-iranian-hackers-targeting-critical-infrastructure/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.54</comments>
+      <pubDate>Tue, 07 Apr 2026 14:02:26 -0400</pubDate>
     </item>
     <item>
       <title>Nokia security advisory (AV26-302)</title>
@@ -179,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nokia-security-advisory-av26-302</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 31 Mar 2026 13:33:16 +0000</pubDate>
     </item>
     <item>
@@ -189,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-303</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Tue, 31 Mar 2026 18:09:53 +0000</pubDate>
     </item>
     <item>
@@ -199,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/symantec-security-advisory-av26-304</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Tue, 31 Mar 2026 18:16:56 +0000</pubDate>
     </item>
     <item>
@@ -209,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-305</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Tue, 31 Mar 2026 18:33:50 +0000</pubDate>
     </item>
     <item>
@@ -220,17 +127,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Wed, 08 Apr 2026 07:05:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>US warns of Iranian hackers targeting critical infrastructure</title>
-      <link>https://www.bleepingcomputer.com/news/security/us-warns-of-iranian-hackers-targeting-critical-infrastructure/</link>
-      <description>Iranian-linked hackers are targeting Internet-exposed Rockwell/Allen-Bradley programmable logic controllers (PLCs) on the networks of U.S. critical infrastructure organizations. [...]</description>
-      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/us-warns-of-iranian-hackers-targeting-critical-infrastructure/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Tue, 07 Apr 2026 14:02:26 -0400</pubDate>
+      <pubDate>Wed, 08 Apr 2026 09:00:36 +0000</pubDate>
     </item>
     <item>
       <title>Global cybercrime crackdown:  over 373 000 dark web sites shut down</title>
@@ -240,7 +137,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.63</comments>
-      <pubDate>Wed, 08 Apr 2026 07:05:36 +0000</pubDate>
+      <pubDate>Wed, 08 Apr 2026 09:00:36 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV26-307)</title>
@@ -249,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-307</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 01 Apr 2026 19:28:35 +0000</pubDate>
     </item>
     <item>
@@ -259,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-308</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 01 Apr 2026 19:43:45 +0000</pubDate>
     </item>
     <item>
@@ -269,7 +166,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-306</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Wed, 01 Apr 2026 20:25:32 +0000</pubDate>
     </item>
     <item>
@@ -279,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-275</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Thu, 02 Apr 2026 15:11:10 +0000</pubDate>
     </item>
     <item>
@@ -289,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-309</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Thu, 02 Apr 2026 15:27:55 +0000</pubDate>
     </item>
     <item>
@@ -299,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-310</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 02 Apr 2026 18:37:57 +0000</pubDate>
     </item>
     <item>
@@ -309,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cesanta-security-advisory-av26-311</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 02 Apr 2026 18:49:23 +0000</pubDate>
     </item>
     <item>
@@ -319,7 +216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssh-security-advisory-av26-312</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Thu, 02 Apr 2026 19:53:07 +0000</pubDate>
     </item>
     <item>
@@ -580,7 +477,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154546/the-noisy-tenants-engineering-fairness-in-multi-tenant-siem-solutions.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Tue, 07 Apr 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -791,8 +688,19 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154228/the-rise-of-proactive-cyber-why-defense-is-no-longer-enough.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Tue, 07 Apr 2026 09:01:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Iran-Linked Hackers Disrupt US Critical Infrastructure via PLC Attacks</title>
+      <link>https://www.securityweek.com/iran-linked-hackers-disrupt-us-critical-infrastructure-via-plc-attacks/</link>
+      <description>&lt;p&gt;Federal agencies warn attackers are manipulating PLC and SCADA systems across multiple sectors, triggering operational disruptions and raising concerns over broader OT targeting.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href="https://www.securityweek.com/iran-linked-hackers-disrupt-us-critical-infrastructure-via-plc-attacks/"&gt;Iran-Linked Hackers Disrupt US Critical Infrastructure via PLC Attacks&lt;/a&gt; appeared first on &lt;a href="https://www.securityweek.com"&gt;SecurityWeek&lt;/a&gt;.&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://www.securityweek.com/iran-linked-hackers-disrupt-us-critical-infrastructure-via-plc-attacks/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.08</comments>
+      <pubDate>Wed, 08 Apr 2026 02:57:56 +0000</pubDate>
     </item>
     <item>
       <title>Supply chain security is now a board-level issue: Here’s what CSOs need to know</title>
@@ -882,19 +790,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154550/supply-chain-security-is-now-a-board-level-issue-heres-what-csos-need-to-know.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.08</comments>
       <pubDate>Tue, 07 Apr 2026 10:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Iran-Linked Hackers Disrupt US Critical Infrastructure via PLC Attacks</title>
-      <link>https://www.securityweek.com/iran-linked-hackers-disrupt-us-critical-infrastructure-via-plc-attacks/</link>
-      <description>&lt;p&gt;Federal agencies warn attackers are manipulating PLC and SCADA systems across multiple sectors, triggering operational disruptions and raising concerns over broader OT targeting.&lt;/p&gt;
-&lt;p&gt;The post &lt;a href="https://www.securityweek.com/iran-linked-hackers-disrupt-us-critical-infrastructure-via-plc-attacks/"&gt;Iran-Linked Hackers Disrupt US Critical Infrastructure via PLC Attacks&lt;/a&gt; appeared first on &lt;a href="https://www.securityweek.com"&gt;SecurityWeek&lt;/a&gt;.&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://www.securityweek.com/iran-linked-hackers-disrupt-us-critical-infrastructure-via-plc-attacks/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
-      <pubDate>Wed, 08 Apr 2026 02:57:56 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft says Medusa-linked Storm-1175 is speeding ransomware attacks</title>
@@ -972,7 +869,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154934/microsoft-says-medusa-linked-storm-1175-is-speeding-ransomware-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Tue, 07 Apr 2026 10:48:40 +0000</pubDate>
     </item>
     <item>
@@ -983,7 +880,7 @@
       <guid isPermaLink="false">https://thehackernews.com/2026/04/iran-linked-hackers-disrupt-us-critical.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Wed, 08 Apr 2026 09:53:00 +0530</pubDate>
     </item>
     <item>
@@ -1216,7 +1113,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155175/5-steps-to-strengthen-supply-chain-security-and-improve-cyber-resilience.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.38</comments>
       <pubDate>Tue, 07 Apr 2026 18:58:52 +0000</pubDate>
     </item>
     <item>
@@ -1437,7 +1334,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155177/5-practical-steps-to-strengthen-attack-resilience-with-attack-surface-management.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Tue, 07 Apr 2026 19:04:02 +0000</pubDate>
     </item>
     <item>
@@ -1556,7 +1453,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155342/what-anthropic-glasswing-reveals-about-the-future-of-vulnerability-discovery.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Tue, 07 Apr 2026 23:06:07 +0000</pubDate>
     </item>
     <item>
@@ -1638,7 +1535,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4090067/tipps-fur-cisos-die-die-branche-wechseln-wollen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.79</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Wed, 08 Apr 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1741,8 +1638,170 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155146/the-tabletop-exercise-grows-up.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.00</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Wed, 08 Apr 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft’s new Agent Governance Toolkit targets top OWASP risks for AI agents</title>
+      <link>https://www.csoonline.com/article/4155594/microsofts-new-agent-governance-toolkit-targets-top-owasp-risks-for-ai-agents-2.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Microsoft has quietly introduced the Agent Governance Toolkit, an open-source project designed to monitor and control AI agents during execution as enterprises try to move them into production workflows.&lt;/p&gt;
+
+
+
+&lt;p&gt;The toolkit, which is a response to the Open Worldwide Application Security Project’s (OWASP) emerging focus on AI and LLM security risks, adds a runtime security layer that enforces policies to mitigate issues such as prompt injection, and improves visibility into agent behavior across complex, multi-step workflows, &lt;a href="http://linkedin.com/in/imransiddique1986" rel="noreferrer noopener" target="_blank"&gt;Imran Siddique&lt;/a&gt;, principal group engineering manager at Microsoft wrote in a &lt;a href="https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/" rel="noreferrer noopener" target="_blank"&gt;blog post.&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;More specifically, the toolkit maps to OWASP’s &lt;a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/" rel="noreferrer noopener" target="_blank"&gt;top 10 risks for agentic systems&lt;/a&gt;, including goal hijacking, tool misuse, identity abuse, supply chain risks, code execution, memory poisoning, insecure communications, cascading failures, human-agent trust exploitation, and rogue agents.&lt;/p&gt;
+
+
+
+&lt;p&gt;The rationale behind the toolkit, Siddique wrote, stems from how AI systems increasingly resemble loosely governed distributed environments, where multiple untrusted components share resources, make decisions, and interact externally with minimal oversight.&lt;/p&gt;
+
+
+
+&lt;p&gt;That prompted Microsoft to apply proven design patterns from operating systems, service meshes, and site reliability engineering to bring structure, isolation, and control to these environments, Siddique added.&lt;/p&gt;
+
+
+
+&lt;p&gt;The result was the Redmond-headquartered giant packaging these principles into the toolkit comprising seven components available in Python, TypeScript, Rust, Go, and .NET.&lt;/p&gt;
+
+
+
+&lt;p&gt;The cross-language approach, Siddique explained, is aimed at meeting developers where they are and enabling integration across heterogeneous enterprise stacks.&lt;/p&gt;
+
+
+
+&lt;p&gt;As for the components, the toolkit includes modules such as a policy enforcement layer named Agent OS, a secure communication and identity framework named Agent Mesh, an execution control environment named Agent Runtime, and additional components, such as Agent SRE, Agent Compliance, and Agent Lightning, covering reliability, compliance, marketplace governance, and reinforcement learning oversight.&lt;/p&gt;
+
+
+
+&lt;p&gt;Beyond its modular design, Siddique further wrote that the toolkit is built to work with existing development ecosystems: “We designed the toolkit to be framework-agnostic from day one. Each integration hooks into a framework’s native extension points, &lt;a href="https://www.infoworld.com/article/2334784/what-is-langchain-easier-development-of-llm-applications.html"&gt;LangChain&lt;/a&gt;’s callback handlers, CrewAI’s task decorators, &lt;a href="https://www.infoworld.com/article/4014981/get-started-with-google-agent-development-kit.html"&gt;Google ADK’s plugin system&lt;/a&gt;, &lt;a href="https://www.infoworld.com/article/4069808/unpacking-the-microsoft-agent-framework.html"&gt;Microsoft Agent Framework&lt;/a&gt;’s middleware pipeline, so adding governance doesn’t require rewriting agent code.”&lt;/p&gt;
+
+
+
+&lt;p&gt;This approach, the senior executive explained, would reduce integration overhead and risk, allowing developers to introduce governance controls into production systems without disrupting existing workflows or incurring the cost and complexity of rearchitecting applications.&lt;/p&gt;
+
+
+
+&lt;p&gt;Siddique even went on to give examples of several framework integrations that are already deployed in production workloads, including LlamaIndex’s TrustedAgentWorker integration.&lt;/p&gt;
+
+
+
+&lt;p&gt;For those wishing to explore the toolkit, which is currently in public preview, it is available under an MIT license and &lt;a href="https://github.com/microsoft/agent-governance-toolkit"&gt;structured as a monorepo&lt;/a&gt; with independently installable components.&lt;/p&gt;
+
+
+
+&lt;p&gt;Microsoft, in the future, plans to transition the project to a foundation-led model and is already engaging with the OWASP agentic AI community to support broader governance and stewardship, Siddique wrote.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;The article originally appeared in &lt;a href="https://www.infoworld.com/article/4155591/microsofts-new-agent-governance-toolkit-targets-top-owasp-risks-for-ai-agents.html"&gt;InfoWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4155594/microsofts-new-agent-governance-toolkit-targets-top-owasp-risks-for-ai-agents-2.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.95</comments>
+      <pubDate>Wed, 08 Apr 2026 09:42:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Forest Blizzard leverages router compromises to launch AiTM attacks, target Outlook sessions</title>
+      <link>https://www.csoonline.com/article/4155632/forest-blizzard-leverages-router-compromises-to-launch-aitm-attacks-target-outlook-sessions.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Russian threat actor Forest Blizzard has been exploiting unsecured home and small-office internet equipment, such as routers, to redirect traffic through attacker-controlled DNS servers.&lt;/p&gt;
+
+
+
+&lt;p&gt;The group has leveraged this DNS hijacking activity to support post-compromise adversary-in-the-middle (AiTM) attacks on Transport Layer Security (TLS) connections, targeting Microsoft Outlook on the web domains, according to a Microsoft Threat Intelligence &lt;a href="https://www.microsoft.com/en-us/security/blog/2026/04/07/soho-router-compromise-leads-to-dns-hijacking-and-adversary-in-the-middle-attacks/" rel="noreferrer noopener" target="_blank"&gt;report&lt;/a&gt;. By compromising upstream edge devices, the attackers are able to exploit less monitored networks and use them as a pathway to access enterprise environments.&lt;/p&gt;
+
+
+
+&lt;p&gt;More than 200 organizations and over 5,000 consumer devices have already been impacted by Forest Blizzard’s malicious DNS infrastructure, which Microsoft says is primarily used to collect intelligence in support of the &lt;a href="https://www.csoonline.com/article/2094456/russian-state-sponsored-hacker-used-gooseegg-malware-to-steal-windows-credentials.html?utm=hybrid_search"&gt;Russian government’s&lt;/a&gt; foreign policy objectives. The activity enables interception of cloud-hosted content, with government, IT, telecommunications, and energy sectors among the primary targets.&lt;/p&gt;
+
+
+
+&lt;p&gt;While the number of organizations specifically targeted for TLS AiTM is only a subset of the networks with vulnerable SOHO devices, the threat actor’s broad access could enable larger-scale AiTM attacks, which might include active traffic interception, Microsoft said in the blog post.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="hijacked-routers-stolen-sessions"&gt;Hijacked routers, stolen sessions&lt;/h2&gt;
+
+
+
+&lt;p&gt;Forest Blizzard, also called &lt;a href="https://www.ncsc.gov.uk/news/apt28-exploit-routers-to-enable-dns-hijacking-operations" rel="noreferrer noopener" target="_blank"&gt;APT28&lt;/a&gt; by the UK’s National Cyber Security Center, broke into home and small-office routers and changed their network settings so that internet traffic was sent through their own DNS servers. For this, the threat actor almost certainly used the dnsmasq utility to perform DNS resolution and provide responses while listening to port 53 for DNS queries, Microsoft Threat Intelligence noted.&lt;/p&gt;
+
+
+
+&lt;p&gt;Most of the time, attackers quietly monitored traffic without disrupting connections. But for specific targets, they spoofed DNS responses and actively redirected users to the fake infrastructure they controlled. These included a subset of domains associated with Microsoft Outlook on the web. Separate &lt;a href="https://www.csoonline.com/article/3604557/how-to-defend-microsoft-networks-from-adversary-in-the-middle-attacks.html"&gt;AiTM&lt;/a&gt; activity targeting non-Microsoft hosted servers in at least three government organizations in Africa was also identified.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The actor-controlled malicious infrastructure would then present an invalid TLS certificate to the victim, spoofing the legitimate Microsoft service. If the compromised user ignored warnings about the invalid TLS certificate, the threat actor could then actively intercept the underlying plaintext traffic — potentially including emails and other customer content — within the TLS connection,” claimed the blog post.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="invisible-path-to-enterprise-systems"&gt;Invisible path to enterprise systems&lt;/h2&gt;
+
+
+
+&lt;p&gt;This attack poses a serious risk to enterprises because, instead of beginning at the corporate perimeter, it starts from employee environments that are often less secure. Threat actors target vulnerable home or small office routers, which often have weak default passwords or unpatched software.&lt;/p&gt;
+
+
+
+&lt;p&gt;The shift to remote work has dramatically expanded the corporate attack surface, allowing attackers to create a pathway into enterprise accounts without directly breaching corporate systems.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The real-world impact is profound. Attackers can intercept credentials, reroute traffic to malicious sites, or inject malware, all without ever breaching the corporate firewall. This can lead to data breaches, financial theft, or even ransomware incidents originating from an employee’s living room,” said &lt;a href="https://www.gartner.com/en/experts/apeksha-kaushik" rel="noreferrer noopener" target="_blank"&gt;Apeksha Kaushik&lt;/a&gt;, senior principal analyst at Gartner. “Moreover, the lack of visibility and control over home networks means these attacks can persist&lt;/p&gt;
+
+
+
+&lt;p&gt;undetected, undermining even the most robust corporate security programs. In essence, every unsecured home network becomes a potential backdoor into the enterprise, amplifying risk and complicating incident response.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="defending-beyond-corporate-networks"&gt;Defending beyond corporate networks&lt;/h2&gt;
+
+
+
+&lt;p&gt;For CISOs, this broadens the focus area beyond merely securing corporate networks and even addressing risks in employee home environments and unmanaged devices.&lt;/p&gt;
+
+
+
+&lt;p&gt;“First, stop using passwords. Robust two-step verification systems that do not allow for phishing attacks, especially hardware tokens, could prevent most of these attacks despite credentials being obtained,” said &lt;a href="https://www.primuspartners.in/team/devroop-dhar" rel="noreferrer noopener" target="_blank"&gt;Devroop Dhar&lt;/a&gt;, CEO and co-founder at Primus Partners.&lt;/p&gt;
+
+
+
+&lt;p&gt;Dhar added that CISOs should look at controlling the behaviour of identities. For instance, if there is an unusual location or device involved in the login procedure, additional warnings or checks need to be generated.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Enforce secure DNS solutions by utilizing corporate VPNs with split tunneling disabled or enforcing DNS over HTTPS to ensure all DNS queries bypass the local home router and go directly to trusted corporate servers,” suggested Amit Jaju, global partner at Ankura Consulting. “Also, implement strict conditional access policies that require devices to be enrolled in mobile device management and marked as compliant before granting access to corporate cloud resources.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Experts also warn that even after taking all precautions and defence measures, educating employees should be the utmost priority, as they must be trained to recognize suspicious behaviour during login procedures.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4155632/forest-blizzard-leverages-router-compromises-to-launch-aitm-attacks-target-outlook-sessions.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.99</comments>
+      <pubDate>Wed, 08 Apr 2026 10:50:18 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet releases emergency hotfix for FortiClient EMS zero-day flaw</title>
@@ -1804,8 +1863,99 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155221/fortinet-releases-emergency-hotfix-for-forticlient-ems-zero-day-flaw.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.51</comments>
+      <comments>Score: 9.44</comments>
       <pubDate>Tue, 07 Apr 2026 20:37:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>The zero-day timeline just collapsed. Here’s what security leaders do next</title>
+      <link>https://www.csoonline.com/article/4155155/the-zero-day-timeline-just-collapsed-heres-what-security-leaders-do-next.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;A &lt;a href="https://www.paloaltonetworks.com/cyberpedia/zero-day-attacks-explained-risks-examples-prevention"&gt;zero-day&lt;/a&gt; is not frightening because it is sophisticated. It is frightening because it is unknown. There is no patch in the moment it matters most. That single condition undermines the comfort most security programs rely on: time.&lt;/p&gt;
+
+
+
+&lt;p&gt;In the past, attackers didn’t need zero-days because they relied on predictable failures in patching and credential hygiene. The sheer labor required to find new vulnerabilities acted as a natural throttler on advanced attacks. Agentic AI removes that friction. By automating the trial-and-error cycle, AI transforms vulnerability research into a high-speed, 24/7 operation, making the once-rare zero-day a scalable threat.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;What a zero day is and why it matters&lt;/h2&gt;
+
+
+
+&lt;p&gt;A zero-day is a flaw that the vendor and defenders do not yet know exists. And because a zero-day vulnerability is unknown to the manufacturer, it exists in a defensive vacuum where there is no patch to deploy and no proven strategy to follow. Exploitation forces a shift from “business as usual” to an “emergency operational event.” In these scenarios, the organization loses its autonomy, as external stakeholders and the attackers themselves set the pace of recovery.&lt;/p&gt;
+
+
+
+&lt;p&gt;While &lt;a href="https://www.ebsco.com/research-starters/computer-science/stuxnet"&gt;Stuxnet&lt;/a&gt; showed that cyberattacks could have physical consequences, and &lt;a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=936519&amp;amp;"&gt;Heartbleed&lt;/a&gt; demonstrated the fragility of the internet’s cryptographic backbone, &lt;a href="https://www.cisa.gov/sites/default/files/publications/CSRB-Log4J-Key-Findings-and-Recommendations-Summary-508c.pdf?"&gt;Log4Shell&lt;/a&gt; in late 2021 changed the game by revealing the risk posed by modern dependencies. A logging library embedded into thousands of packages created a global response effort, and government agencies warned that exploitation would persist over time.&lt;/p&gt;
+
+
+
+&lt;p&gt;Those incidents also underline that when the vulnerable component is ubiquitous, your risk surface includes software you did not write, do not inventory cleanly and may not even realize you run.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Scaling vulnerability discovery to machine speed&lt;/h2&gt;
+
+
+
+&lt;p&gt;Agentic AI is AI that can act, not just advise. Give it an objective, and it will plan steps, run them, learn from what happens and adjust until it succeeds or hits a hard stop. In cybersecurity, that looks like an automated operator. It can probe an application, test multiple attack paths, change tactics when defenses hold and keep iterating without waiting for a human to re-aim it.&lt;/p&gt;
+
+
+
+&lt;p&gt;We already have credible public signals that AI-assisted systems can help discover real-world vulnerabilities in widely used open source components. &lt;a href="https://projectzero.google/2024/10/from-naptime-to-big-sleep.html"&gt;Google Project Zero&lt;/a&gt; and Google DeepMind disclosed that an AI agent called Big Sleep found an exploitable vulnerability in SQLite, and maintainers fixed it the same day it was reported. Google’s security team also described AI-assisted fuzzing work that reported new vulnerabilities to open source maintainers, including one in OpenSSL. &lt;a href="https://www.darpa.mil/research/programs/ai-cyber"&gt;DARPA’s AI Cyber Challenge&lt;/a&gt; was built around the same direction of travel, which is automated vulnerability discovery and patching at scale.&lt;/p&gt;
+
+
+
+&lt;p&gt;As discovery accelerates, the time between unknown and exploited compresses. That weakens any security model built around periodic assurance. Annual penetration tests and quarterly scans still matter, but they cannot be the backbone of resilience when a motivated adversary can probe continuously, adapt quickly and never get tired.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Reducing the value of the inevitable breach&lt;/h2&gt;
+
+
+
+&lt;p&gt;Resilience begins with data minimization. If an internet-facing service does not need raw sensitive data, it should not be able to retrieve it. Tokenization and non-reversible storage, among other approaches, reduce the value of a successful breach. You cannot lose what you never collected, and you cannot leak what the service cannot see.&lt;/p&gt;
+
+
+
+&lt;p&gt;Next comes API discipline. APIs are the nervous system of the enterprise. They are also an ideal interface for automated probing because an attacker does not need a UI to harvest what an endpoint returns. Ensure every endpoint response is a deliberate security decision. If a client does not need a field, the API should not return it.&lt;/p&gt;
+
+
+
+&lt;p&gt;Keeping attackers out is only half the battle. The real test of security is what happens &lt;em&gt;after&lt;/em&gt; they get in. The goal is to ensure that if a door is forced open, the intruder finds themselves in a room with no exit. Use least-privilege access and strong authentication to kill their momentum. Then, use micro-segmentation to lock down the hallways. By blocking lateral movement, a single compromised system stays isolated. This helps protect core data and keeps operations running.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Operational resilience is the best security strategy&lt;/h2&gt;
+
+
+
+&lt;p&gt;Security does not sit on top of a fragile environment and “work harder” to make it safe. Security must be baked into IT operations—from system design to change control. This is why CIO and CISO agendas must merge. When the pressure is on, they can rely on accurate inventories, secure-by-design architecture and disciplined change management. Recovery plans are useless if they are only documented; they must be practiced.&lt;/p&gt;
+
+
+
+&lt;p&gt;Agentic AI raises the stakes because it leaves no lead time. It finds and hits a weakness almost instantly. You do not win that race with promises of perfect prevention. You win by reducing what is exposed, limiting how far an intruder can move and continuously validating that your controls still work as your environment changes.&lt;/p&gt;
+
+
+
+&lt;p&gt;In an era where attackers can probe without pause, is your organization built to absorb that test without breaking?&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4155155/the-zero-day-timeline-just-collapsed-heres-what-security-leaders-do-next.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.96</comments>
+      <pubDate>Wed, 08 Apr 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV26-313)</title>
@@ -1814,7 +1964,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-313</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.21</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Tue, 07 Apr 2026 12:02:51 +0000</pubDate>
     </item>
     <item>
@@ -1824,7 +1974,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-april-2026-monthly-rollup-av26-314</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.32</comments>
+      <comments>Score: 10.26</comments>
       <pubDate>Tue, 07 Apr 2026 15:15:50 +0000</pubDate>
     </item>
     <item>
@@ -1834,7 +1984,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-315</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.33</comments>
+      <comments>Score: 10.26</comments>
       <pubDate>Tue, 07 Apr 2026 15:28:53 +0000</pubDate>
     </item>
     <item>
@@ -1844,7 +1994,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-007-vulnerability-impacting-fortinet-forticlientems-cve-2026-35616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.42</comments>
+      <comments>Score: 10.35</comments>
       <pubDate>Tue, 07 Apr 2026 18:07:26 +0000</pubDate>
     </item>
     <item>
@@ -1854,7 +2004,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-316</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.45</comments>
+      <comments>Score: 10.38</comments>
       <pubDate>Tue, 07 Apr 2026 18:47:37 +0000</pubDate>
     </item>
     <item>
@@ -1864,7 +2014,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-317</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.46</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Tue, 07 Apr 2026 19:04:46 +0000</pubDate>
     </item>
     <item>
@@ -1874,7 +2024,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-318</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.47</comments>
+      <comments>Score: 10.40</comments>
       <pubDate>Tue, 07 Apr 2026 19:28:54 +0000</pubDate>
     </item>
     <item>
@@ -1884,7 +2034,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-319</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.48</comments>
+      <comments>Score: 10.41</comments>
       <pubDate>Tue, 07 Apr 2026 19:40:52 +0000</pubDate>
     </item>
     <item>
@@ -1894,7 +2044,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-320</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.49</comments>
+      <comments>Score: 10.42</comments>
       <pubDate>Tue, 07 Apr 2026 19:52:40 +0000</pubDate>
     </item>
     <item>
@@ -1904,7 +2054,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hitachi-security-advisory-av26-321</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.43</comments>
       <pubDate>Tue, 07 Apr 2026 20:10:16 +0000</pubDate>
     </item>
     <item>
@@ -1914,7 +2064,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-322</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.51</comments>
+      <comments>Score: 10.44</comments>
       <pubDate>Tue, 07 Apr 2026 20:27:07 +0000</pubDate>
     </item>
     <item>
@@ -1924,7 +2074,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-323</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.52</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Tue, 07 Apr 2026 20:44:55 +0000</pubDate>
     </item>
     <item>
@@ -1934,7 +2084,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-324</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.52</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Tue, 07 Apr 2026 20:46:24 +0000</pubDate>
     </item>
     <item>
@@ -1943,7 +2093,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/black-hat-usa</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 12492555391785.30</comments>
+      <comments>Score: 12245599717617.01</comments>
       <pubDate>Sat, 01 Aug 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
