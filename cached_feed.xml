@@ -8,27 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Apr 2026 19:21:18 +0000</lastBuildDate>
-    <item>
-      <title>Global cybercrime crackdown:  over 373 000 dark web sites shut down</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/global-cybercrime-crackdown-over-373-000-dark-web-sites-shut-down</link>
-      <description>On 9 March 2026, a global operation led by German authorities and supported by Europol was launched against one of the largest networks of fraudulent platforms in the dark web. The investigation began in mid-2021 against the dark web platform “Alice with Violence CP”. During the investigation, authorities discovered that the platform’s operator was running more than 373 000 fraudulent websites advertising child sexual abuse material (CSAM) and cybercrime-as-a-service (CaaS) offerings.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/global-cybercrime-crackdown-over-373-000-dark-web-sites-shut-down</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Wed, 08 Apr 2026 17:21:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco security advisory (AV26-307)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-307</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-307</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
-      <pubDate>Wed, 01 Apr 2026 19:28:35 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 08 Apr 2026 20:49:22 +0000</lastBuildDate>
     <item>
       <title>Drupal security advisory (AV26-308)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-308</link>
@@ -36,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-308</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 01 Apr 2026 19:43:45 +0000</pubDate>
     </item>
     <item>
@@ -46,78 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-306</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 01 Apr 2026 20:25:32 +0000</pubDate>
-    </item>
-    <item>
-      <title>Hackers exploit a critical Flowise flaw affecting thousands of AI workflows</title>
-      <link>https://www.csoonline.com/article/4155680/hackers-exploit-a-critical-flowise-flaw-affecting-thousands-of-ai-workflows.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Threat actors have found a way to inject arbitrary JavaScript into the Flowise low-code platform for building custom LLM and agentic systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;The code injection was possible due to a design oversight, rated at max-severity, in the platform’s custom MCP node, which acts as a plug-in connector for an application’s AI agent to talk to external tools via MCP servers.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to a recent VulnCheck alert, hackers have already started exploiting the flaw to insert malicious JavaScript code, with analysis showing close to 15000 Flowise instances exposed on the public internet.&lt;/p&gt;
-
-
-
-&lt;p&gt;The flaw was patched in the AI development platform’s version 3.0.6, the latest rollout being v 3.1.1, &lt;a href="https://github.com/FlowiseAI/Flowise/releases" rel="noreferrer noopener" target="_blank"&gt;released&lt;/a&gt; last month.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Improper validation of MCP configurations&lt;/h2&gt;
-
-
-
-&lt;p&gt;Flowise is a drag-and-drop service to build a customized large language model (LLM) flow. It allows users to drag the Custom MCP node into their workflows and paste necessary configurations (JSON) to point to an external &lt;a href="https://www.csoonline.com/article/4087656/what-cisos-need-to-know-about-new-tools-for-securing-mcp-servers.html"&gt;MCP server&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Custom MCP node that lets the application connect to any external MCP server using user-supplied configurations is where the problem lies. In version 3.0.5, these configurations are not properly validated against malicious code, allowing remote code execution.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This node parses the user-provided mcpServerConfig string to build the MCP server configuration,” reads an NVD &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59528"&gt;description&lt;/a&gt; of the flaw. “However, during this process, it executes JavaScript code without any security validation. Specifically, inside the convertToValidJSONString function, user input is directly passed to the Function() constructor, which evaluates and executes the input as JavaScript code.”&lt;/p&gt;
-
-
-
-&lt;p&gt;As the named function runs with full Node.js runtime privileges, “it can access dangerous modules such as child_process and fs,” the description adds.&lt;/p&gt;
-
-
-
-&lt;p&gt;The flaw is tracked under &lt;a href="https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-3gcm-f6qx-ff7p" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-59528&lt;/a&gt;, and was assigned a critical rating of CVSS 10.0 at the time of disclosure in September, 2025. The flaw was categorized under “Improper Control of Generation of Code (code Injection).”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Hackers exploit unpatched instances&lt;/h2&gt;
-
-
-
-&lt;p&gt;While a patch has been available for months, a recent VulnCheck finding places the first in-the-wild exploitation on April 6. Caitlin Condon, VP of Security Research at the vulnerability intelligence company, warned of the abuse through a LinkedIn &lt;a href="https://www.linkedin.com/feed/update/urn:li:activity:7446686314562850817/" rel="noreferrer noopener" target="_blank"&gt;post&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Early this morning, VulnCheck’s Canary network began detecting first-time exploitation of CVE-2025-59528, an arbitrary JavaScript code injection vulnerability in Flowise,” she wrote. “Observed activity so far originates from a single Starlink IP.” Around 12000 to 15000 instances remained exposed at the time, she noted in her post, although it is unclear how many of them were running a vulnerable Flowise version.&lt;/p&gt;
-
-
-
-&lt;p&gt;Condon added two more critical Flowise vulnerabilities, a missing authentication (&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8943" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-8943&lt;/a&gt;) and an arbitrary file upload (&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26319" rel="noreferrer noopener" target="_blank"&gt;CVE-2025-26319&lt;/a&gt;), in the post that she said were also flagged against active exploitation by the Canary network. Exclusive exploitation details, including full payload and request data, were promised to the Canary Intelligence customers. Additionally, an exploit, PCAP, YARA rule, network signatures, and target Docker container have been available to its Initial Access Intelligence customers.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4155680/hackers-exploit-a-critical-flowise-flaw-affecting-thousands-of-ai-workflows.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
-      <pubDate>Wed, 08 Apr 2026 12:24:30 +0000</pubDate>
     </item>
     <item>
       <title>Iran-Linked Hackers Disrupt US Critical Infrastructure via PLC Attacks</title>
@@ -127,7 +37,7 @@
       <guid isPermaLink="false">https://www.securityweek.com/iran-linked-hackers-disrupt-us-critical-infrastructure-via-plc-attacks/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 08 Apr 2026 02:57:56 +0000</pubDate>
     </item>
     <item>
@@ -218,7 +128,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154550/supply-chain-security-is-now-a-board-level-issue-heres-what-csos-need-to-know.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Tue, 07 Apr 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -297,28 +207,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4154934/microsoft-says-medusa-linked-storm-1175-is-speeding-ransomware-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Tue, 07 Apr 2026 10:48:40 +0000</pubDate>
-    </item>
-    <item>
-      <title>Apple security advisory (AV26-275) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-275</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-275</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
-      <pubDate>Thu, 02 Apr 2026 15:11:10 +0000</pubDate>
-    </item>
-    <item>
-      <title>WatchGuard security advisory (AV26-309)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-309</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-309</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
-      <pubDate>Thu, 02 Apr 2026 15:27:55 +0000</pubDate>
     </item>
     <item>
       <title>Iran-Linked Hackers Disrupt U.S. Critical Infrastructure by Targeting Internet-Exposed PLCs</title>
@@ -328,8 +218,28 @@
       <guid isPermaLink="false">https://thehackernews.com/2026/04/iran-linked-hackers-disrupt-us-critical.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Wed, 08 Apr 2026 09:53:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Apple security advisory (AV26-275) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-275</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-275</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.84</comments>
+      <pubDate>Thu, 02 Apr 2026 15:11:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>WatchGuard security advisory (AV26-309)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-309</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-309</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.84</comments>
+      <pubDate>Thu, 02 Apr 2026 15:27:55 +0000</pubDate>
     </item>
     <item>
       <title>Progress security advisory (AV26-310)</title>
@@ -338,7 +248,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-310</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Thu, 02 Apr 2026 18:37:57 +0000</pubDate>
     </item>
     <item>
@@ -348,7 +258,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cesanta-security-advisory-av26-311</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Thu, 02 Apr 2026 18:49:23 +0000</pubDate>
     </item>
     <item>
@@ -358,7 +268,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssh-security-advisory-av26-312</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Thu, 02 Apr 2026 19:53:07 +0000</pubDate>
     </item>
     <item>
@@ -368,7 +278,7 @@
       <guid isPermaLink="false">https://www.darkreading.com/ics-ot-security/iranian-threat-actors-us-critical-infrastructure-exposed-plcs</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Wed, 08 Apr 2026 13:46:29 +0000</pubDate>
     </item>
     <item>
@@ -378,7 +288,7 @@
       <guid isPermaLink="false">https://www.cybersecuritydive.com/news/russia-routers-hacking-dns-fbi-disruption/816960/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Wed, 08 Apr 2026 11:03:00 -0400</pubDate>
     </item>
     <item>
@@ -611,7 +521,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155175/5-steps-to-strengthen-supply-chain-security-and-improve-cyber-resilience.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Tue, 07 Apr 2026 18:58:52 +0000</pubDate>
     </item>
     <item>
@@ -832,7 +742,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155177/5-practical-steps-to-strengthen-attack-resilience-with-attack-surface-management.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Tue, 07 Apr 2026 19:04:02 +0000</pubDate>
     </item>
     <item>
@@ -951,7 +861,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155342/what-anthropic-glasswing-reveals-about-the-future-of-vulnerability-discovery.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Tue, 07 Apr 2026 23:06:07 +0000</pubDate>
     </item>
     <item>
@@ -1033,7 +943,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4090067/tipps-fur-cisos-die-die-branche-wechseln-wollen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Wed, 08 Apr 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1136,7 +1046,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155146/the-tabletop-exercise-grows-up.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Wed, 08 Apr 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1207,7 +1117,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155594/microsofts-new-agent-governance-toolkit-targets-top-owasp-risks-for-ai-agents-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Wed, 08 Apr 2026 09:42:15 +0000</pubDate>
     </item>
     <item>
@@ -1298,7 +1208,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155632/forest-blizzard-leverages-router-compromises-to-launch-aitm-attacks-target-outlook-sessions.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Wed, 08 Apr 2026 10:50:18 +0000</pubDate>
     </item>
     <item>
@@ -1417,7 +1327,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155166/llm-generated-passwords-are-indefensible-your-codebase-may-already-prove-it.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Wed, 08 Apr 2026 11:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1476,7 +1386,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155832/yael-nardi-joins-minimus-as-chief-business-officer-to-drive-hyper-growth.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Wed, 08 Apr 2026 15:44:53 +0000</pubDate>
     </item>
     <item>
@@ -1657,7 +1567,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155927/how-botnet-driven-ddos-attacks-evolved-in-2h-2025.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Wed, 08 Apr 2026 17:42:52 +0000</pubDate>
     </item>
     <item>
@@ -1728,7 +1638,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155947/arelion-employs-netscout-arbor-ddos-protection-products.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Wed, 08 Apr 2026 18:13:30 +0000</pubDate>
     </item>
     <item>
@@ -1791,7 +1701,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155221/fortinet-releases-emergency-hotfix-for-forticlient-ems-zero-day-flaw.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.16</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Tue, 07 Apr 2026 20:37:09 +0000</pubDate>
     </item>
     <item>
@@ -1882,7 +1792,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155155/the-zero-day-timeline-just-collapsed-heres-what-security-leaders-do-next.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.63</comments>
+      <comments>Score: 9.57</comments>
       <pubDate>Wed, 08 Apr 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1973,7 +1883,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4155665/iran%e2%80%91linked-plc-attacks-cause-real%e2%80%91world-disruption-at-critical-us-infra-sites.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.71</comments>
+      <comments>Score: 9.65</comments>
       <pubDate>Wed, 08 Apr 2026 12:03:25 +0000</pubDate>
     </item>
     <item>
@@ -1983,7 +1893,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-313</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.89</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Tue, 07 Apr 2026 12:02:51 +0000</pubDate>
     </item>
     <item>
@@ -1993,7 +1903,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-april-2026-monthly-rollup-av26-314</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.99</comments>
+      <comments>Score: 9.94</comments>
       <pubDate>Tue, 07 Apr 2026 15:15:50 +0000</pubDate>
     </item>
     <item>
@@ -2003,7 +1913,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-315</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.99</comments>
+      <comments>Score: 9.95</comments>
       <pubDate>Tue, 07 Apr 2026 15:28:53 +0000</pubDate>
     </item>
     <item>
@@ -2013,7 +1923,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-007-vulnerability-impacting-fortinet-forticlientems-cve-2026-35616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.08</comments>
+      <comments>Score: 10.03</comments>
       <pubDate>Tue, 07 Apr 2026 18:07:26 +0000</pubDate>
     </item>
     <item>
@@ -2023,7 +1933,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-316</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.10</comments>
+      <comments>Score: 10.05</comments>
       <pubDate>Tue, 07 Apr 2026 18:47:37 +0000</pubDate>
     </item>
     <item>
@@ -2033,7 +1943,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-317</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.06</comments>
       <pubDate>Tue, 07 Apr 2026 19:04:46 +0000</pubDate>
     </item>
     <item>
@@ -2043,7 +1953,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-318</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.12</comments>
+      <comments>Score: 10.07</comments>
       <pubDate>Tue, 07 Apr 2026 19:28:54 +0000</pubDate>
     </item>
     <item>
@@ -2053,7 +1963,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-319</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.13</comments>
+      <comments>Score: 10.08</comments>
       <pubDate>Tue, 07 Apr 2026 19:40:52 +0000</pubDate>
     </item>
     <item>
@@ -2063,7 +1973,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-320</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.13</comments>
+      <comments>Score: 10.08</comments>
       <pubDate>Tue, 07 Apr 2026 19:52:40 +0000</pubDate>
     </item>
     <item>
@@ -2073,7 +1983,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hitachi-security-advisory-av26-321</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.09</comments>
       <pubDate>Tue, 07 Apr 2026 20:10:16 +0000</pubDate>
     </item>
     <item>
@@ -2083,7 +1993,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-322</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.15</comments>
+      <comments>Score: 10.10</comments>
       <pubDate>Tue, 07 Apr 2026 20:27:07 +0000</pubDate>
     </item>
     <item>
@@ -2093,7 +2003,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-323</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.16</comments>
+      <comments>Score: 10.11</comments>
       <pubDate>Tue, 07 Apr 2026 20:44:55 +0000</pubDate>
     </item>
     <item>
@@ -2103,7 +2013,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-324</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.16</comments>
+      <comments>Score: 10.11</comments>
       <pubDate>Tue, 07 Apr 2026 20:46:24 +0000</pubDate>
     </item>
     <item>
@@ -2113,7 +2023,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-325</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.84</comments>
+      <comments>Score: 10.78</comments>
       <pubDate>Wed, 08 Apr 2026 15:23:58 +0000</pubDate>
     </item>
     <item>
@@ -2123,7 +2033,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cups-security-advisory-av26-326</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.85</comments>
+      <comments>Score: 10.79</comments>
       <pubDate>Wed, 08 Apr 2026 15:35:11 +0000</pubDate>
     </item>
     <item>
@@ -2133,7 +2043,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-327</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.86</comments>
+      <comments>Score: 10.80</comments>
       <pubDate>Wed, 08 Apr 2026 15:48:45 +0000</pubDate>
     </item>
     <item>
@@ -2143,7 +2053,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-328</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.93</comments>
+      <comments>Score: 10.87</comments>
       <pubDate>Wed, 08 Apr 2026 17:35:55 +0000</pubDate>
     </item>
     <item>
@@ -2153,7 +2063,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-329</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.93</comments>
+      <comments>Score: 10.87</comments>
       <pubDate>Wed, 08 Apr 2026 17:46:30 +0000</pubDate>
     </item>
     <item>
@@ -2163,8 +2073,38 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-068</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.94</comments>
+      <comments>Score: 10.88</comments>
       <pubDate>Wed, 08 Apr 2026 17:58:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Apache ActiveMQ security advisory (AV26-330)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/apache-activemq-security-advisory-av26-330</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-activemq-security-advisory-av26-330</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.94</comments>
+      <pubDate>Wed, 08 Apr 2026 19:19:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Palo Alto Networks security advisory (AV26-331)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-331</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-331</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.97</comments>
+      <pubDate>Wed, 08 Apr 2026 20:04:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>SonicWall security advisory (AV26-332)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-332</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-332</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.98</comments>
+      <pubDate>Wed, 08 Apr 2026 20:27:35 +0000</pubDate>
     </item>
     <item>
       <title>Black Hat USA</title>
@@ -2172,7 +2112,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/black-hat-usa</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 11226104624788.54</comments>
+      <comments>Score: 11055755487082.15</comments>
       <pubDate>Sat, 01 Aug 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
