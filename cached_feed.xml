@@ -8,109 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Apr 2026 14:38:49 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 15:37:08 +0000</lastBuildDate>
     <item>
-      <title>Weak at the seams</title>
-      <link>https://www.csoonline.com/article/4155921/weak-at-the-seams.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Before I ever held a security title, I was a software engineer implementing vertically integrated automation systems for industrial manufacturing, warehouse-scale conveyor networks, robotic material handling, physical infrastructure controlled by software on increasingly connected networks. I learned early that tightly coupled systems produce tightly coupled failures. When a single software fault could halt a distribution center, you designed for graceful degradation. You assumed components would break and built the system to absorb it.&lt;/p&gt;
-
-
-
-&lt;p&gt;That instinct followed me into cybersecurity and eventually into CISO roles across healthcare, financial services and global manufacturing. These industries operate under different regulatory regimes, face different threat profiles and define risk in different terms. But in every one of them, I encountered the same structural problem: Cyber risk wasn’t governed as a unified discipline. It was adopted piecemeal by systems that already existed, product markets, regulators, auditors, insurers and boards, each building frameworks on its own timeline, in its own language, toward its own definition of “secure.” The pattern rhymes with early actuarial science, where separate branches of insurance each modeled risk in isolation before discovering that correlated losses were the real threat.&lt;/p&gt;
-
-
-
-&lt;p&gt;Within any individual silo, the logic was sound. But the seams between them were never reconciled. Where one system’s blind spot becomes another’s unpriced exposure, there was no shared language to name it. And as digital transformation has accelerated the interconnection between industries, supply chains and critical infrastructure, those seams have widened into the actual modern risk surface.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="we-are-spending-more-and-falling-further-behind"&gt;We are spending more and falling further behind&lt;/h2&gt;
-
-
-
-&lt;p&gt;In every security program I’ve led, the budget could have ballooned year over year. My approach was always the opposite: Aggressively reduce tool proliferation and capability overlap, simplify the architecture and tie every dollar to a measurable business outcome. Timing and intent. But even with that discipline, the distance between what we spent and what we were exposed to widened, because technological change was rendering our tools and assumptions obsolete faster than we could replace them. The industry-level numbers confirm this isn’t anecdotal. &lt;a href="https://www.gartner.com/en/newsroom/press-releases/2024-08-28-gartner-forecasts-global-information-security-spending-to-grow-15-percent-in-2025"&gt;Gartner projected global security spending would exceed $212 billion in 2025&lt;/a&gt;. The economic impact of cybercrime, by most estimates, has surpassed $10 trillion annually. Those curves are diverging, not converging.&lt;/p&gt;
-
-
-
-&lt;p&gt;I first felt this acutely in healthcare. As CISO at a global benefits administrator processing sensitive health data for millions of members, I operated under HIPAA, state-level privacy mandates and contractual obligations from plan sponsors. We could satisfy every audit and still know the real risk lived in the handoffs, the interfaces between our claims platform and external provider networks, data flowing between systems governed by different standards. The auditors checked their boxes. The seams went unmeasured.&lt;/p&gt;
-
-
-
-&lt;p&gt;Later, leading global security engineering at a major asset management firm, I saw the same gap in financial services. Different controls, different regulators, identical blind spot. The fragmentation was even more visible internationally. Regional regulatory bodies, data sovereignty requirements that varied by jurisdiction, vendor ecosystems that differed across geographies. Every regulator had its own definition of adequate security. None described the interconnected reality we were defending. &lt;a href="https://www.brookings.edu/articles/a-growing-threat-to-the-financial-system-cyber-risk/"&gt;Researchers at the Federal Reserve have documented&lt;/a&gt; how the financial system’s exposure to correlated cyber events is growing in ways that traditional risk models weren’t built to capture. I lived that gap daily.&lt;/p&gt;
-
-
-
-&lt;p&gt;What connected these experiences was a pattern in the insurance market that troubled me more than any single threat. I watched premiums soften even as breach frequency and severity climbed. Insurers were underwriting individual, uncorrelated incidents while the actual risk was becoming systemic. Digital transformation had stitched these industries together: Healthcare platforms connected to financial clearinghouses connected to manufacturing supply chains all connected to hyperscalers, but the actuarial models still treated each policyholder as an island. When a single vendor failure can cascade across thousands of organizations simultaneously, that pricing model stops making sense. A black swan is lurking in our digital pond.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-normal-choices-are-the-dangerous-ones"&gt;The normal choices are the dangerous ones&lt;/h2&gt;
-
-
-
-&lt;p&gt;Consider the stack a typical large enterprise was running in 2024: One vendor for ERP and supply chain, another for perimeter enforcement, another for networking and another for endpoint protection. Standard choices, responsibly made. Within a twelve-month window, each of those categories experienced significant disruptions, from &lt;a href="https://www.csoonline.com/article/3491497/crowdstrike-outage-what-you-need-to-know.html"&gt;zero-day exploits to update failures that disrupted global operations&lt;/a&gt;. Any single event was survivable. The accumulation was something else entirely.&lt;/p&gt;
-
-
-
-&lt;p&gt;I lived this as a Global CISO. My team planned for sequential crises with recovery time between them. What we got was overlapping disruptions across interdependent systems. One week, we were triaging an emergency patch on our perimeter while a second advisory was escalating on a different platform. The assumption that these events would arrive one at a time, that we’d have breathing room, turned out to be a planning fiction. When you are sustaining the operation itself, crises expose the seams in real time.&lt;/p&gt;
-
-
-
-&lt;p&gt;A firewall vulnerability isn’t just a network issue when the ERP behind it processes every financial transaction. An endpoint agent failure isn’t just a security tool outage when it takes down the operating systems running your logistics. These platforms don’t fail in isolation because they don’t operate in isolation. Increasingly, neither do the industries that depend on them. A disruption to a cloud provider ripples through healthcare systems processing claims, financial institutions settling trades and manufacturers coordinating supply chains on the same platform.&lt;/p&gt;
-
-
-
-&lt;p&gt;The July 2024 CrowdStrike incident made this impossible to dismiss. A routine content update, no attacker, no exploit, bricked millions of Windows systems worldwide. Airlines grounded flights. Hospitals diverted patients. Financial services went dark. The protective tool itself became the failure vector. That should have ended the debate about whether cybersecurity is a technical problem contained within organizational boundaries or a systemic risk that spans them.&lt;/p&gt;
-
-
-
-&lt;p&gt;My background in industrial automation made this grimly familiar. In material handling, we knew the integration layer was the highest-risk surface. We designed systems assuming any component could fail and built degradation paths so the operation didn’t stop. Enterprise cybersecurity had somehow convinced itself that assembling best-of-breed tools was the same as building a resilient system. It isn’t. And as digital transformation pushes more critical infrastructure, from energy grids and water systems to transportation networks and medical devices, onto the same interconnected platforms, the consequences of that confusion multiply.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="resilience-is-a-design-problem-not-a-compliance-problem"&gt;Resilience is a design problem, not a compliance problem&lt;/h2&gt;
-
-
-
-&lt;p&gt;Across healthcare, financial services and manufacturing, I watched the same pattern. The compliance apparatus measured whether controls existed. It rarely measured whether the organization, or the broader infrastructure it depended on, could survive its failure. In healthcare, we demonstrate compliance while knowing our resilience to a coordinated supply-chain attack is largely untested. In financial services, we pass examinations while the insurers underwriting our risk price off the same compliance signals the examiners accept — and neither captures the systemic interdependencies between our platforms and our counterparties. In manufacturing, we secure the IT network while operational technology controlling physical processes is increasingly exposed through the same digital transformation the business is accelerating. We are weak at the seams.&lt;/p&gt;
-
-
-
-&lt;p&gt;The question that followed me from role to role was simple: If a critical platform failed tomorrow, not breached, just failed, could the business keep operating? Could the critical services it provides keep functioning? The paper processes and theoretical exercises always existed, but never in a way that could forecast the cascading impacts.&lt;/p&gt;
-
-
-
-&lt;p&gt;The internet itself offers a better model. It was engineered to survive the loss of any individual node. Routes break and traffic finds another path. Organizations need that same architectural quality, and so does the interconnected infrastructure that sits on top of them. The goal can’t be preventing every compromise. It has to ensure that no single failure cascades into systemic disruption that takes critical services offline across industries. This sets the priority. You can’t audit your way to that. You have to build it.&lt;/p&gt;
-
-
-
-&lt;p&gt;The external pressures are converging on this conclusion. Insurance is becoming harder to buy at meaningful coverage levels and carriers are grappling with correlated risk they can’t yet price. Regulators are pushing accountability to the C-suite. Boards want evidence of survivability, not maturity scores. And the scope of what “cybersecurity” is expected to protect keeps expanding, from AI and enterprise data to operational technology to the critical infrastructure communities depend on.&lt;/p&gt;
-
-
-
-&lt;p&gt;The industry built an economy around demonstrating that organizations are secure. It is optimized for audits, certifications and framework alignment. What it never solved for was proving that an organization, and the infrastructure around it, can absorb serious disruption and keep running. That is the seam that matters most.&lt;/p&gt;
-
-
-
-&lt;p&gt;Digital transformation didn’t just increase each organization’s attack surface. It wove those surfaces together into an emergent network of interdependency that spans sectors and borders. The question every security and risk leader should be asking themselves is no longer whether their controls are sufficient. It’s whether they are, along with their programs or offerings, aligned to a sustainable future, or holding together an increasingly heavy past.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4155921/weak-at-the-seams.html</guid>
+      <title>Google Chrome security advisory (AV26-306) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-306</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-306</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
-      <pubDate>Thu, 09 Apr 2026 11:54:39 +0000</pubDate>
+      <comments>Score: 7.35</comments>
+      <pubDate>Wed, 01 Apr 2026 20:25:32 +0000</pubDate>
     </item>
     <item>
       <title>Weak at the seams</title>
@@ -220,7 +127,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4156510/weak-at-the-seams-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Thu, 09 Apr 2026 12:28:57 +0000</pubDate>
     </item>
     <item>
@@ -231,7 +138,7 @@
       <guid isPermaLink="false">https://www.securityweek.com/industry-reactions-to-iran-hacking-ics-in-critical-infrastructure-feedback-friday/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Fri, 10 Apr 2026 12:41:08 +0000</pubDate>
     </item>
     <item>
@@ -251,7 +158,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-309</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Thu, 02 Apr 2026 15:27:55 +0000</pubDate>
     </item>
     <item>
@@ -281,7 +188,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssh-security-advisory-av26-312</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Thu, 02 Apr 2026 19:53:07 +0000</pubDate>
     </item>
     <item>
@@ -292,67 +199,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Sat, 11 Apr 2026 12:38:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Small boats supply chain disrupted: 21 arrested for supplying Channel smugglers with nautical equipment</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/small-boats-supply-chain-disrupted-21-arrested-for-supplying-channel-smugglers-nautical-equipment</link>
-      <description>A joint investigation conducted under the framework of a Europol task force resulted in a significant disruption of the migrant smuggling supply chain serving criminal networks active along the English Channel. This operation is the outcome of close cooperation between law enforcement and judicial authorities from Belgium, France, Germany, the Netherlands, and the United Kingdom, with support from Eurojust.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/small-boats-supply-chain-disrupted-21-arrested-for-supplying-channel-smugglers-nautical-equipment</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
-      <pubDate>Sat, 11 Apr 2026 12:38:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Five-country operation targets cigarette smuggling network operating from the UK</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-country-operation-targets-cigarette-smuggling-network-operating-uk</link>
-      <description>Investigation began with major seizure in ItalyThe investigation was launched in September 2024 following the seizure of 12 million counterfeit cigarettes at the Port of Genoa. The cigarettes had been produced in Armenia and shipped via Georgia before entering the EU.Further analysis of suspicious container movements at the Port of Genoa enabled investigators to identify a transnational criminal organisation with...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-country-operation-targets-cigarette-smuggling-network-operating-uk</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 11 Apr 2026 12:38:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Major operation targets one of Scotland’s most violent crime networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</link>
-      <description>Violence, drugs and controlThe gang is known for using violence to dominate territory and protect its criminal activity. Investigators believe it maintained control over parts of the United Kingdom through intimidation, retaliation and organised violence tied to drug trafficking.While violence played out on the ground, senior figures operated from Spain and the United Arab Emirates, directing operations and managing profits...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 11 Apr 2026 12:38:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Guns-for-cannabis network hit: Europol high-value target arrested in international action</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</link>
-      <description>The main suspect, a Turkish national holding a Greek residence permit, is believed to have coordinated the sourcing and transport of firearms into Spain, while overseeing the purchase and onward distribution of drugs to countries including Greece and Bulgaria.Flow of illicit firearms into the EUThe investigation began in March 2025, when the Spanish Mossos d’Esquadra detected the illegal introduction of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 11 Apr 2026 12:38:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>From intelligence to conviction: Europol helps dismantle Terrorgram Collective</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</link>
-      <description>A Canadian man has been sentenced by the Public Prosecution Service of Canada to 20 years in prison for terrorism-related offences, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC).The individual, based in Ontario’s Niagara region, pleaded guilty to producing and disseminating violent white supremacist propaganda as part of the online extremist network known as the “Terrorgram Collective”....</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 11 Apr 2026 12:38:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>A legal vacuum on CSAM detection puts children at greater risk</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</link>
-      <description>The removal of the current legal basis enabling voluntary detection by online platforms could have far-reaching implications for safeguarding children.Last year alone, Europol processed around 1.1 million of so-called CyberTips, originating from the National Center for Missing &amp;amp; Exploited Children (NCMEC), of relevance to 24 European countries. CyberTips contain multiple entities (files, videos, photos etc.) supporting criminal investigation efforts into...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 11 Apr 2026 12:38:49 +0000</pubDate>
+      <pubDate>Sat, 11 Apr 2026 13:37:08 +0000</pubDate>
     </item>
     <item>
       <title>Cloudflare ‘actively adjusting’ quantum priorities in wake of Google warning</title>
@@ -494,8 +341,68 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4156822/cloudflare-actively-adjusting-quantum-priorities-in-wake-of-google-warning.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Thu, 09 Apr 2026 18:43:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>Small boats supply chain disrupted: 21 arrested for supplying Channel smugglers with nautical equipment</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/small-boats-supply-chain-disrupted-21-arrested-for-supplying-channel-smugglers-nautical-equipment</link>
+      <description>A joint investigation conducted under the framework of a Europol task force resulted in a significant disruption of the migrant smuggling supply chain serving criminal networks active along the English Channel. This operation is the outcome of close cooperation between law enforcement and judicial authorities from Belgium, France, Germany, the Netherlands, and the United Kingdom, with support from Eurojust.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/small-boats-supply-chain-disrupted-21-arrested-for-supplying-channel-smugglers-nautical-equipment</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.51</comments>
+      <pubDate>Sat, 11 Apr 2026 13:37:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Guns-for-cannabis network hit: Europol high-value target arrested in international action</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</link>
+      <description>The main suspect, a Turkish national holding a Greek residence permit, is believed to have coordinated the sourcing and transport of firearms into Spain, while overseeing the purchase and onward distribution of drugs to countries including Greece and Bulgaria.Flow of illicit firearms into the EUThe investigation began in March 2025, when the Spanish Mossos d’Esquadra detected the illegal introduction of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 11 Apr 2026 13:37:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>From intelligence to conviction: Europol helps dismantle Terrorgram Collective</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</link>
+      <description>A Canadian man has been sentenced by the Public Prosecution Service of Canada to 20 years in prison for terrorism-related offences, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC).The individual, based in Ontario’s Niagara region, pleaded guilty to producing and disseminating violent white supremacist propaganda as part of the online extremist network known as the “Terrorgram Collective”....</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 11 Apr 2026 13:37:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Five-country operation targets cigarette smuggling network operating from the UK</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-country-operation-targets-cigarette-smuggling-network-operating-uk</link>
+      <description>Investigation began with major seizure in ItalyThe investigation was launched in September 2024 following the seizure of 12 million counterfeit cigarettes at the Port of Genoa. The cigarettes had been produced in Armenia and shipped via Georgia before entering the EU.Further analysis of suspicious container movements at the Port of Genoa enabled investigators to identify a transnational criminal organisation with...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-country-operation-targets-cigarette-smuggling-network-operating-uk</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 11 Apr 2026 13:37:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>A legal vacuum on CSAM detection puts children at greater risk</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</link>
+      <description>The removal of the current legal basis enabling voluntary detection by online platforms could have far-reaching implications for safeguarding children.Last year alone, Europol processed around 1.1 million of so-called CyberTips, originating from the National Center for Missing &amp;amp; Exploited Children (NCMEC), of relevance to 24 European countries. CyberTips contain multiple entities (files, videos, photos etc.) supporting criminal investigation efforts into...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 11 Apr 2026 13:37:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Major operation targets one of Scotland’s most violent crime networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</link>
+      <description>Violence, drugs and controlThe gang is known for using violence to dominate territory and protect its criminal activity. Investigators believe it maintained control over parts of the United Kingdom through intimidation, retaliation and organised violence tied to drug trafficking.While violence played out on the ground, senior figures operated from Spain and the United Arab Emirates, directing operations and managing profits...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 11 Apr 2026 13:37:08 +0000</pubDate>
     </item>
     <item>
       <title>Central Mediterranean: 10 migrant smugglers targeted</title>
@@ -505,7 +412,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.54</comments>
-      <pubDate>Sat, 11 Apr 2026 12:38:49 +0000</pubDate>
+      <pubDate>Sat, 11 Apr 2026 13:37:08 +0000</pubDate>
     </item>
     <item>
       <title>The grip on migrant smuggling tightens: new department at Europol to step up the fight</title>
@@ -515,7 +422,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Sat, 11 Apr 2026 12:38:49 +0000</pubDate>
+      <pubDate>Sat, 11 Apr 2026 13:37:08 +0000</pubDate>
     </item>
     <item>
       <title>From Vietnam to the EU by air: 8 arrested in a migrant smuggling sting across Europe</title>
@@ -525,7 +432,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.66</comments>
-      <pubDate>Sat, 11 Apr 2026 12:38:49 +0000</pubDate>
+      <pubDate>Sat, 11 Apr 2026 13:37:08 +0000</pubDate>
     </item>
     <item>
       <title>CMMC compliance in the age of AI</title>
@@ -647,7 +554,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4156798/cmmc-compliance-in-the-age-of-ai.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Fri, 10 Apr 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -825,7 +732,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4156978/the-cyber-winners-and-losers-in-trumps-2027-budget.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Fri, 10 Apr 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
@@ -968,7 +875,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4156805/why-most-zero-trust-architectures-fail-at-the-traffic-layer.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Fri, 10 Apr 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1059,7 +966,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4157458/google-adds-end-to-end-gmail-encryption-to-android-ios-devices-for-enterprises-3.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Fri, 10 Apr 2026 22:23:37 +0000</pubDate>
     </item>
     <item>
@@ -1069,7 +976,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-313</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Tue, 07 Apr 2026 12:02:51 +0000</pubDate>
     </item>
     <item>
@@ -1079,7 +986,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-april-2026-monthly-rollup-av26-314</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Tue, 07 Apr 2026 15:15:50 +0000</pubDate>
     </item>
     <item>
@@ -1089,7 +996,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-315</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Tue, 07 Apr 2026 15:28:53 +0000</pubDate>
     </item>
     <item>
@@ -1099,7 +1006,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-007-vulnerability-impacting-fortinet-forticlientems-cve-2026-35616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Tue, 07 Apr 2026 18:07:26 +0000</pubDate>
     </item>
     <item>
@@ -1109,7 +1016,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-316</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Tue, 07 Apr 2026 18:47:37 +0000</pubDate>
     </item>
     <item>
@@ -1119,7 +1026,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-317</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Tue, 07 Apr 2026 19:04:46 +0000</pubDate>
     </item>
     <item>
@@ -1129,7 +1036,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-318</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Tue, 07 Apr 2026 19:28:54 +0000</pubDate>
     </item>
     <item>
@@ -1139,7 +1046,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-319</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Tue, 07 Apr 2026 19:40:52 +0000</pubDate>
     </item>
     <item>
@@ -1149,7 +1056,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-320</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Tue, 07 Apr 2026 19:52:40 +0000</pubDate>
     </item>
     <item>
@@ -1159,7 +1066,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hitachi-security-advisory-av26-321</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Tue, 07 Apr 2026 20:10:16 +0000</pubDate>
     </item>
     <item>
@@ -1169,7 +1076,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-322</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Tue, 07 Apr 2026 20:27:07 +0000</pubDate>
     </item>
     <item>
@@ -1179,7 +1086,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-323</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Tue, 07 Apr 2026 20:44:55 +0000</pubDate>
     </item>
     <item>
@@ -1189,7 +1096,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-324</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Tue, 07 Apr 2026 20:46:24 +0000</pubDate>
     </item>
     <item>
@@ -1199,7 +1106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-325</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Wed, 08 Apr 2026 15:23:58 +0000</pubDate>
     </item>
     <item>
@@ -1209,7 +1116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cups-security-advisory-av26-326</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Wed, 08 Apr 2026 15:35:11 +0000</pubDate>
     </item>
     <item>
@@ -1219,7 +1126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-327</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Wed, 08 Apr 2026 15:48:45 +0000</pubDate>
     </item>
     <item>
@@ -1229,7 +1136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-328</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.93</comments>
       <pubDate>Wed, 08 Apr 2026 17:35:55 +0000</pubDate>
     </item>
     <item>
@@ -1239,7 +1146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-329</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.93</comments>
       <pubDate>Wed, 08 Apr 2026 17:46:30 +0000</pubDate>
     </item>
     <item>
@@ -1249,7 +1156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-068</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Wed, 08 Apr 2026 17:58:01 +0000</pubDate>
     </item>
     <item>
@@ -1259,7 +1166,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-activemq-security-advisory-av26-330</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.98</comments>
+      <comments>Score: 8.96</comments>
       <pubDate>Wed, 08 Apr 2026 19:19:17 +0000</pubDate>
     </item>
     <item>
@@ -1269,7 +1176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-331</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.00</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Wed, 08 Apr 2026 20:04:52 +0000</pubDate>
     </item>
     <item>
@@ -1279,7 +1186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-332</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.01</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Wed, 08 Apr 2026 20:27:35 +0000</pubDate>
     </item>
     <item>
@@ -1289,7 +1196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-333</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.52</comments>
+      <comments>Score: 9.50</comments>
       <pubDate>Thu, 09 Apr 2026 18:27:37 +0000</pubDate>
     </item>
     <item>
@@ -1299,7 +1206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-334</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.50</comments>
       <pubDate>Thu, 09 Apr 2026 18:39:39 +0000</pubDate>
     </item>
     <item>
@@ -1309,7 +1216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-april-2026-monthly-rollup-av26-335</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.52</comments>
       <pubDate>Thu, 09 Apr 2026 19:14:10 +0000</pubDate>
     </item>
     <item>
@@ -1319,7 +1226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-336</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.56</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Thu, 09 Apr 2026 19:42:17 +0000</pubDate>
     </item>
     <item>
@@ -1329,7 +1236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-337</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.07</comments>
+      <comments>Score: 10.04</comments>
       <pubDate>Fri, 10 Apr 2026 13:18:48 +0000</pubDate>
     </item>
   </channel>
