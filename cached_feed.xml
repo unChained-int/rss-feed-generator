@@ -8,121 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Apr 2026 07:51:20 +0000</lastBuildDate>
-    <item>
-      <title>Critical flaw in Marimo Python notebook exploited within 10 hours of disclosure</title>
-      <link>https://www.csoonline.com/article/4157810/critical-flaw-in-marimo-python-notebook-exploited-within-10-hours-of-disclosure.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A critical pre-authentication remote code execution vulnerability in Marimo, an open-source Python notebook platform owned by AI cloud company CoreWeave, was exploited in the wild less than 10 hours after its public disclosure, according to the Sysdig Threat Research Team.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerability, tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39987" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-39987&lt;/a&gt; with a severity score of 9.3 out of 10, affects all Marimo versions before 0.23.0.&lt;/p&gt;
-
-
-
-&lt;p&gt;It requires no login, no stolen credentials, and no complex exploit. An attacker only needs to send a single connection request to a specific endpoint on an exposed Marimo server to gain complete control of the system, the Sysdig team wrote in a &lt;a href="https://www.sysdig.com/blog/marimo-oss-python-notebook-rce-from-disclosure-to-exploitation-in-under-10-hours" rel="noreferrer noopener" target="_blank"&gt;blog post&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The flaw allows an unauthenticated attacker to obtain a full interactive shell and execute arbitrary system commands on any exposed Marimo instance through a single connection, with no credentials required, the post said.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Marimo has a Pre-Auth RCE vulnerability,” the Marimo team wrote in its &lt;a href="https://github.com/marimo-team/marimo/security/advisories/GHSA-2679-6mx9-h9xc" rel="noreferrer noopener" target="_blank"&gt;GitHub security advisory&lt;/a&gt;. “The terminal WebSocket endpoint /terminal/ws lacks authentication validation, allowing an unauthenticated attacker to obtain a full PTY shell and execute arbitrary system commands.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Marimo is a Python-based reactive notebook with roughly 20,000 stars on GitHub and was &lt;a href="https://www.coreweave.com/news/coreweave-acquires-marimo-to-unify-the-generative-ai-developer-workflow" rel="noreferrer noopener" target="_blank"&gt;acquired&lt;/a&gt; by CoreWeave in October 2025.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-the-flaw-works"&gt;How the flaw works&lt;/h2&gt;
-
-
-
-&lt;p&gt;Marimo’s server includes a built-in terminal feature that lets users run commands directly from the browser. That terminal was accessible over the network without any authentication check, while other parts of the same server correctly required users to log in before connecting, the post said.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The terminal endpoint skips this check entirely, accepting connections from any unauthenticated user and granting a full interactive shell running with the privileges of the Marimo process,” the post added.&lt;/p&gt;
-
-
-
-&lt;p&gt;In practical terms, anyone who could reach the server over the internet could walk straight into a live command shell, often with administrator-level access, without ever entering a password, the team at Sysdig said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="credentials-stolen-in-under-three-minutes"&gt;Credentials stolen in under three minutes&lt;/h2&gt;
-
-
-
-&lt;p&gt;To track real-world exploitation, deployed honeypot servers running vulnerable Marimo instances across multiple cloud providers and observed the first exploitation attempt within 9 hours and 41 minutes of disclosure. No ready-made exploit tool existed at the time. The attacker had built one using only the advisory description, Sysdig researchers wrote.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attacker worked in stages across four sessions. A brief first session confirmed the vulnerability was exploitable. A second session involved manually browsing the server’s file system. By the third session, the attacker had located and read an environment file containing AWS access keys and other application credentials. The entire operation took under three minutes, the post said.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This is a complete credential theft operation executed in under 3 minutes,” the Sysdig team wrote.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attacker then returned over an hour later to re-check the same files. The behavior was consistent with a human operator working through a list of targets rather than an automated scanner, the post said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="part-of-a-widening-pattern"&gt;Part of a widening pattern&lt;/h2&gt;
-
-
-
-&lt;p&gt;The pace of exploitation aligns with a &lt;a href="https://www.csoonline.com/article/4151203/attackers-exploit-critical-langflow-rce-within-hours-as-cisa-sounds-alarm.html"&gt;trend seen across AI and open-source tooling&lt;/a&gt;. A critical flaw in Langflow was weaponized within 20 hours of disclosure earlier this year, also tracked by Sysdig. The Marimo case cut that window roughly in half, with no public exploit code in circulation at the time.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Niche or less popular software is not safer software,” the Sysdig post said. Any internet-facing application with a published critical advisory is a target within hours of disclosure, regardless of its install base, it added.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Marimo case had no CVE number assigned at the time of the first attack, meaning organizations dependent on CVE-based scanning would not have flagged the advisory at all, Sysdig noted.&lt;/p&gt;
-
-
-
-&lt;p&gt;The flaw also fits a pattern of &lt;a href="https://www.csoonline.com/article/4113980/critical-rce-flaw-allows-full-takeover-of-n8n-ai-workflow-platform.html"&gt;critical RCE vulnerabilities&lt;/a&gt; in AI-adjacent developer tools — including MLflow, n8n, and Langflow — in which code-execution features built for convenience become dangerous when exposed to the internet without consistent authentication controls.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-organizations-should-do"&gt;What organizations should do&lt;/h2&gt;
-
-
-
-&lt;p&gt;Marimo released a patched version, 0.23.0, which closes the authentication gap in the terminal endpoint. Organizations running any earlier version should update immediately, Sysdig said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Teams that cannot update right away should block external access to Marimo servers using firewall rules or place them behind an authenticated proxy, the post said. Any instance that has been publicly reachable should be treated as potentially compromised.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Credentials stored on those servers, including cloud access keys and API tokens, should be rotated as a precaution,” Sysdig advised.&lt;/p&gt;
-
-
-
-&lt;p&gt;CoreWeave did not immediately respond to a request for comment.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4157810/critical-flaw-in-marimo-python-notebook-exploited-within-10-hours-of-disclosure.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.27</comments>
-      <pubDate>Mon, 13 Apr 2026 12:34:45 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 14 Apr 2026 09:22:08 +0000</lastBuildDate>
     <item>
       <title>Up to EUR 50 000 for a passage to the UK: 19 suspected migrant smugglers arrested</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-50-000-for-passage-to-uk-19-suspected-migrant-smugglers-arrested</link>
@@ -131,7 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Tue, 14 Apr 2026 05:51:20 +0000</pubDate>
+      <pubDate>Tue, 14 Apr 2026 07:22:08 +0000</pubDate>
     </item>
     <item>
       <title>Small boats supply chain disrupted: 21 arrested for supplying Channel smugglers with nautical equipment</title>
@@ -141,47 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Tue, 14 Apr 2026 05:51:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>A legal vacuum on CSAM detection puts children at greater risk</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</link>
-      <description>The removal of the current legal basis enabling voluntary detection by online platforms could have far-reaching implications for safeguarding children.Last year alone, Europol processed around 1.1 million of so-called CyberTips, originating from the National Center for Missing &amp;amp; Exploited Children (NCMEC), of relevance to 24 European countries. CyberTips contain multiple entities (files, videos, photos etc.) supporting criminal investigation efforts into...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 14 Apr 2026 05:51:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Major operation targets one of Scotland’s most violent crime networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</link>
-      <description>Violence, drugs and controlThe gang is known for using violence to dominate territory and protect its criminal activity. Investigators believe it maintained control over parts of the United Kingdom through intimidation, retaliation and organised violence tied to drug trafficking.While violence played out on the ground, senior figures operated from Spain and the United Arab Emirates, directing operations and managing profits...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 14 Apr 2026 05:51:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Guns-for-cannabis network hit: Europol high-value target arrested in international action</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</link>
-      <description>The main suspect, a Turkish national holding a Greek residence permit, is believed to have coordinated the sourcing and transport of firearms into Spain, while overseeing the purchase and onward distribution of drugs to countries including Greece and Bulgaria.Flow of illicit firearms into the EUThe investigation began in March 2025, when the Spanish Mossos d’Esquadra detected the illegal introduction of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 14 Apr 2026 05:51:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>From intelligence to conviction: Europol helps dismantle Terrorgram Collective</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</link>
-      <description>A Canadian man has been sentenced by the Public Prosecution Service of Canada to 20 years in prison for terrorism-related offences, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC).The individual, based in Ontario’s Niagara region, pleaded guilty to producing and disseminating violent white supremacist propaganda as part of the online extremist network known as the “Terrorgram Collective”....</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 14 Apr 2026 05:51:20 +0000</pubDate>
+      <pubDate>Tue, 14 Apr 2026 07:22:08 +0000</pubDate>
     </item>
     <item>
       <title>Five-country operation targets cigarette smuggling network operating from the UK</title>
@@ -191,7 +37,47 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Tue, 14 Apr 2026 05:51:20 +0000</pubDate>
+      <pubDate>Tue, 14 Apr 2026 07:22:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>A legal vacuum on CSAM detection puts children at greater risk</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</link>
+      <description>The removal of the current legal basis enabling voluntary detection by online platforms could have far-reaching implications for safeguarding children.Last year alone, Europol processed around 1.1 million of so-called CyberTips, originating from the National Center for Missing &amp;amp; Exploited Children (NCMEC), of relevance to 24 European countries. CyberTips contain multiple entities (files, videos, photos etc.) supporting criminal investigation efforts into...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/combatting-child-sexual-exploitation-statement-catherine-de-bolle</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 14 Apr 2026 07:22:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Major operation targets one of Scotland’s most violent crime networks</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</link>
+      <description>Violence, drugs and controlThe gang is known for using violence to dominate territory and protect its criminal activity. Investigators believe it maintained control over parts of the United Kingdom through intimidation, retaliation and organised violence tied to drug trafficking.While violence played out on the ground, senior figures operated from Spain and the United Arab Emirates, directing operations and managing profits...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/major-operation-targets-one-of-scotland%E2%80%99s-most-violent-crime-networks</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 14 Apr 2026 07:22:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Guns-for-cannabis network hit: Europol high-value target arrested in international action</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</link>
+      <description>The main suspect, a Turkish national holding a Greek residence permit, is believed to have coordinated the sourcing and transport of firearms into Spain, while overseeing the purchase and onward distribution of drugs to countries including Greece and Bulgaria.Flow of illicit firearms into the EUThe investigation began in March 2025, when the Spanish Mossos d’Esquadra detected the illegal introduction of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 14 Apr 2026 07:22:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>From intelligence to conviction: Europol helps dismantle Terrorgram Collective</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</link>
+      <description>A Canadian man has been sentenced by the Public Prosecution Service of Canada to 20 years in prison for terrorism-related offences, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC).The individual, based in Ontario’s Niagara region, pleaded guilty to producing and disseminating violent white supremacist propaganda as part of the online extremist network known as the “Terrorgram Collective”....</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/intelligence-to-conviction-europol-helps-dismantle-terrorgram-collective</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Tue, 14 Apr 2026 07:22:08 +0000</pubDate>
     </item>
     <item>
       <title>Central Mediterranean: 10 migrant smugglers targeted</title>
@@ -201,7 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.54</comments>
-      <pubDate>Tue, 14 Apr 2026 05:51:20 +0000</pubDate>
+      <pubDate>Tue, 14 Apr 2026 07:22:08 +0000</pubDate>
     </item>
     <item>
       <title>The grip on migrant smuggling tightens: new department at Europol to step up the fight</title>
@@ -211,7 +97,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Tue, 14 Apr 2026 05:51:20 +0000</pubDate>
+      <pubDate>Tue, 14 Apr 2026 07:22:08 +0000</pubDate>
     </item>
     <item>
       <title>From Vietnam to the EU by air: 8 arrested in a migrant smuggling sting across Europe</title>
@@ -221,7 +107,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.66</comments>
-      <pubDate>Tue, 14 Apr 2026 05:51:20 +0000</pubDate>
+      <pubDate>Tue, 14 Apr 2026 07:22:08 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV26-313)</title>
@@ -230,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-313</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Tue, 07 Apr 2026 12:02:51 +0000</pubDate>
     </item>
     <item>
@@ -240,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-april-2026-monthly-rollup-av26-314</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Tue, 07 Apr 2026 15:15:50 +0000</pubDate>
     </item>
     <item>
@@ -250,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-315</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Tue, 07 Apr 2026 15:28:53 +0000</pubDate>
     </item>
     <item>
@@ -260,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-007-vulnerability-impacting-fortinet-forticlientems-cve-2026-35616</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Tue, 07 Apr 2026 18:07:26 +0000</pubDate>
     </item>
     <item>
@@ -270,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-316</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Tue, 07 Apr 2026 18:47:37 +0000</pubDate>
     </item>
     <item>
@@ -280,7 +166,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-317</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Tue, 07 Apr 2026 19:04:46 +0000</pubDate>
     </item>
     <item>
@@ -290,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-318</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Tue, 07 Apr 2026 19:28:54 +0000</pubDate>
     </item>
     <item>
@@ -300,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-319</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Tue, 07 Apr 2026 19:40:52 +0000</pubDate>
     </item>
     <item>
@@ -310,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-320</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Tue, 07 Apr 2026 19:52:40 +0000</pubDate>
     </item>
     <item>
@@ -320,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hitachi-security-advisory-av26-321</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Tue, 07 Apr 2026 20:10:16 +0000</pubDate>
     </item>
     <item>
@@ -330,7 +216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-322</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Tue, 07 Apr 2026 20:27:07 +0000</pubDate>
     </item>
     <item>
@@ -340,7 +226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-323</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Tue, 07 Apr 2026 20:44:55 +0000</pubDate>
     </item>
     <item>
@@ -350,7 +236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-324</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Tue, 07 Apr 2026 20:46:24 +0000</pubDate>
     </item>
     <item>
@@ -360,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-325</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Wed, 08 Apr 2026 15:23:58 +0000</pubDate>
     </item>
     <item>
@@ -370,7 +256,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cups-security-advisory-av26-326</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Wed, 08 Apr 2026 15:35:11 +0000</pubDate>
     </item>
     <item>
@@ -380,7 +266,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-327</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Wed, 08 Apr 2026 15:48:45 +0000</pubDate>
     </item>
     <item>
@@ -390,7 +276,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-328</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Wed, 08 Apr 2026 17:35:55 +0000</pubDate>
     </item>
     <item>
@@ -400,7 +286,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-329</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Wed, 08 Apr 2026 17:46:30 +0000</pubDate>
     </item>
     <item>
@@ -410,7 +296,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-068</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Wed, 08 Apr 2026 17:58:01 +0000</pubDate>
     </item>
     <item>
@@ -420,7 +306,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-activemq-security-advisory-av26-330</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Wed, 08 Apr 2026 19:19:17 +0000</pubDate>
     </item>
     <item>
@@ -430,7 +316,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-331</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Wed, 08 Apr 2026 20:04:52 +0000</pubDate>
     </item>
     <item>
@@ -440,7 +326,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-332</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Wed, 08 Apr 2026 20:27:35 +0000</pubDate>
     </item>
     <item>
@@ -623,7 +509,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4157486/cisos-tackle-the-ai-visibility-gap.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Mon, 13 Apr 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
@@ -633,7 +519,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-333</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.26</comments>
       <pubDate>Thu, 09 Apr 2026 18:27:37 +0000</pubDate>
     </item>
     <item>
@@ -643,7 +529,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-334</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.26</comments>
       <pubDate>Thu, 09 Apr 2026 18:39:39 +0000</pubDate>
     </item>
     <item>
@@ -653,7 +539,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-april-2026-monthly-rollup-av26-335</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Thu, 09 Apr 2026 19:14:10 +0000</pubDate>
     </item>
     <item>
@@ -663,7 +549,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-337</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Fri, 10 Apr 2026 13:18:48 +0000</pubDate>
     </item>
     <item>
@@ -786,8 +672,151 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4158117/anthropics-mythos-signals-a-structural-cybersecurity-shift.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Mon, 13 Apr 2026 23:13:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>How AI is transforming threat detection</title>
+      <link>https://www.csoonline.com/article/4154239/how-ai-is-transforming-threat-detection.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Artificial intelligence is rapidly reshaping how security teams detect and hunt cyber threats by helping analyze vast volumes of security data, uncovering subtle signs of malicious activity, and identifying potential attacks faster than traditional tools or human analysts alone.&lt;/p&gt;
+
+
+
+&lt;p&gt;Analyst firm Gartner expects that by 2028, 50% of threat detection, investigation, and response (TDIR) platforms — including technologies such as &lt;a href="https://www.csoonline.com/article/653052/how-to-pick-the-best-endpoint-detection-and-response-solution.html"&gt;EDR&lt;/a&gt;, &lt;a href="https://www.csoonline.com/article/574295/11-top-xdr-tools-and-how-to-evaluate-them.html"&gt;XDR&lt;/a&gt;, &lt;a href="https://www.csoonline.com/article/566677/12-top-siem-tools-rated-and-compared.html"&gt;SIEM&lt;/a&gt;, and &lt;a href="https://www.csoonline.com/article/3622920/soar-buyers-guide-11-security-orchestration-automation-and-response-products-and-how-to-choose.html"&gt;SOAR&lt;/a&gt; — will incorporate agentic AI capabilities, up from less than 10% in 2024. The firm says AI could help organizations strengthen threat detection, incident response, and containment while also helping security teams bridge persistent skills shortages and reduce reliance on scarce cybersecurity talent.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="a-matter-of-scale"&gt;A matter of scale&lt;/h2&gt;
+
+
+
+&lt;p&gt;Much of AI’s impact in threat detection is tied to its ability to process telemetry at a scale that human teams would find challenging, if not impossible, to manage, according to security experts.&lt;/p&gt;
+
+
+
+&lt;p&gt;Modern IT environments can generate billions of logs and events each day across endpoints, networks, cloud services, and identity systems. Machine learning models can correlate those signals in near real-time, and identify behavioral anomalies — such as unusual login patterns, suspicious lateral movement, or data exfiltration attempts — that might otherwise remain buried in the noise.&lt;/p&gt;
+
+
+
+&lt;p&gt;Many enterprise security teams expect such capabilities to significantly bolster their detection capabilities. In a &lt;a href="https://www.anvilogic.com/report/2025-state-of-detection-engineering#mission"&gt;2025 survey&lt;/a&gt; that Anvilogic conducted in collaboration with the SANS Institute, 45% of respondents said their organizations have already integrated AI into their threat detection workflows; 88% believed AI would play a major role in &lt;a href="https://www.csoonline.com/article/3847510/rising-attack-exposure-threat-sophistication-spur-interest-in-detection-engineering.html"&gt;detection engineering&lt;/a&gt; within the next three years.&lt;/p&gt;
+
+
+
+&lt;p&gt;Organizations are already using AI to automate many of the routine tasks traditionally handled by Tier 1 and Tier 2 analysts, says Martin Sordilla, senior technology and security architect at &lt;strong&gt;Accenture.&lt;/strong&gt; Much of this work involves reviewing logs, triaging alerts, identifying indicators of compromise, correlating events, and reaching out to system owners during investigations. AI can significantly accelerate these processes — automating tasks such as alert triage, documentation, evidence collection, and chain-of-custody tracking, he adds.&lt;/p&gt;
+
+
+
+&lt;p&gt;Organizations are already seeing &lt;strong&gt;efficiency gains of roughly 40-50% for lower-tier SOC tasks&lt;/strong&gt;&lt;strong&gt;,&lt;/strong&gt; freeing human analysts to &lt;a href="https://www.csoonline.com/article/4042494/how-ai-is-reshaping-cybersecurity-operations.html"&gt;focus on more advanced investigations&lt;/a&gt; and response activities, Sordilla says.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="reducing-alert-fatigue"&gt;Reducing alert fatigue&lt;/h2&gt;
+
+
+
+&lt;p&gt;In alert triage, AI agents are reducing alert fatigue by clustering alert patterns and enabling risk-based prioritization, adds Dipto Chakravarty, chief product and technology officer at Black Duck.&lt;/p&gt;
+
+
+
+&lt;p&gt;For example, natural language processing agents can summarize threat alerts at scale and correlate them with threat intel feeds such as CVE.org and the CISA KEV Catalog, he says.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The general incident response workflow is one of the beneficiaries of AI agents where we are seeing the value of automated playbooks for common incidents,” he notes.&lt;/p&gt;
+
+
+
+&lt;p&gt;AI agents are also playing a role in enriching threat intelligence at scale by ingesting and correlating threat intel from myriad sources and consequently enriching these alerts with value-added context such as CVE data.&lt;/p&gt;
+
+
+
+&lt;p&gt;“AI agents today can effectively accelerate derivation of insights from organized and normalized datasets,” by allowing analysts to ask questions in natural language, says Nicole Bucala, CEO at Databee. They eliminate the need for the specialized queries, analytical dashboards, or manual analysis typically required for the task.&lt;/p&gt;
+
+
+
+&lt;p&gt;Instead of flooding analysts with thousands of low-confidence warnings, AI-enabled detection platforms can score and correlate alerts, group related activity into higher-fidelity incidents, and filter out routine or benign behavior. The result, vendors and analysts say, is a reduction in alert fatigue and a shift in analyst workflows away from manual triage toward deeper investigation and response.&lt;/p&gt;
+
+
+
+&lt;p&gt;“AI is helping SOCs escape ‘activity theater’ by turning raw noise into faster, higher-confidence decisions backed by evidence,” says Craig Jones, chief security officer at Ontinue.&lt;/p&gt;
+
+
+
+&lt;p&gt;SOC burnout is a real concern, Jones notes. The biggest drivers of this in the industry are alert volume, fragmentation, and ambiguity, and those pressures exist for any team operating at scale. Analysts, he says, often end up spending too much of their day working high-alert loads that are low signal and then having to context-switch across multiple tools just to assemble the basics of an investigation.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="containing-threats-sooner"&gt;Containing threats sooner&lt;/h2&gt;
+
+
+
+&lt;p&gt;The real win with AI isn’t processing more alerts or closing more tickets; it’s about containing real threats sooner, with fewer mistakes, Jones says.&lt;/p&gt;
+
+
+
+&lt;p&gt;“When AI is used to correlate weak signals into coherent incidents, enrich investigations automatically, and recommend safe next actions inside clear guardrails, you stop measuring effort and start proving outcomes,” he explains.&lt;/p&gt;
+
+
+
+&lt;p&gt;Security experts expect AI to &lt;a href="https://www.csoonline.com/article/4058190/ai-is-altering-entry-level-cyber-hiring-and-the-nature-of-the-skills-gap.html"&gt;change the skills needed in security teams&lt;/a&gt;. Rather than eliminating jobs, it will help security teams automate routine tasks and shift roles toward engineering and system design, Accenture’s Sordilla says. The traditional SOC analyst role — focused heavily on manual log review — is likely to evolve into security engineering roles focused on building resilient systems, automation pipelines, and AI-assisted defenses.&lt;/p&gt;
+
+
+
+&lt;p&gt;Early data shows organizations that have deployed AI for detection engineering are seeing some measurable gains. In a &lt;a href="https://cloud.google.com/transform/beyond-the-hype-analyzing-new-data-on-roi-of-ai-in-security"&gt;Google study&lt;/a&gt; of 3,466 senior leaders, nearly seven in ten (67%) early adopters of agentic AI reported seeing it having a positive impact on their security posture. Of this group, 85% reported described AI as having improved their ability to identify threats. Early adopters of AI, Google noted, are seeing quantifiable benefits not just in terms of efficiency, but also in terms of efficacy.&lt;/p&gt;
+
+
+
+&lt;p&gt;At the same time, experts caution that AI-driven detection is not a silver bullet. Adversaries are &lt;a href="https://www.csoonline.com/article/3819176/top-5-ways-attackers-use-generative-ai-to-exploit-your-systems.html"&gt;increasingly experimenting with AI themselves&lt;/a&gt; — using it to generate more convincing phishing campaigns, automate reconnaissance, or modify malware to evade signature-based defenses. That dynamic is pushing defenders to treat AI not simply as another security tool, but as part of a broader evolution in security operations where human expertise, threat intelligence, and machine learning must work together.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Cyberattacks have been industrialized at machine speed,” says Ram Varadarajan, CEO at Acalvio “We need to respond in kind.”&lt;/p&gt;
+
+
+
+&lt;p&gt;That means implementing defensive AI that can handle high-volume technical tasks such as triaging phishing emails, analyzing massive network logs for &lt;a href="https://www.csoonline.com/article/3822459/what-is-anomaly-detection-behavior-based-analysis-for-cyber-threats.html"&gt;behavioral anomalies&lt;/a&gt;, deploying AI-aware cyber deception, and autonomously quarantining compromised endpoints to prevent lateral movement, he says.&lt;/p&gt;
+
+
+
+&lt;p&gt;“When it’s a machine-speed AI attacker, no human will ever be able to keep up, and these complex AI attacks are going to be launched at scale,” he notes.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="implementing-ai-correctly"&gt;Implementing AI correctly&lt;/h2&gt;
+
+
+
+&lt;p&gt;The key to getting the most value out of AI in threat detection is to ensure humans are involved. Any threat finding or resulting remediation action based on those insights, especially those involving nontrivial consequence for business operations, should remain under human oversight, at minimum, says Databee’s Bucala. &lt;/p&gt;
+
+
+
+&lt;p&gt;“Human in the loop is the mantra,” she says. “There’s a lot of business risk that can be incurred through full automation unless the margin of error in machine made decisions is close to zero.”&lt;/p&gt;
+
+
+
+&lt;p&gt;While AI shows promise in threat detection, it still needs refinement. The best practice for organizations is to establish a process that includes human validation, and humans who have the right attention to detail and context to spot check AI summary results and decisions, Bucala notes.&lt;/p&gt;
+
+
+
+&lt;p&gt;AI, adds Accenture’s Sordilla, is not a substitute for basic security hygiene. If an organization already has weak security practices, AI may simply accelerate existing problems. So, companies should first ensure they have strong governance, clear security standards, and mature processes — such as those outlined in frameworks from NIST and International Organization for Standardization — before layering AI into their security programs.&lt;/p&gt;
+
+
+
+&lt;p&gt;“AI is force multiplier,” Sordilla says. “If your company is heading in the wrong direction, you are going down the drain faster,” by deploying AI incorrectly, he cautions.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4154239/how-ai-is-transforming-threat-detection.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.99</comments>
+      <pubDate>Tue, 14 Apr 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
       <title>Ubuntu security advisory (AV26-338)</title>
@@ -796,7 +825,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-338</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.32</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Mon, 13 Apr 2026 13:56:13 +0000</pubDate>
     </item>
     <item>
@@ -806,7 +835,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-339</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.33</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Mon, 13 Apr 2026 14:07:43 +0000</pubDate>
     </item>
     <item>
@@ -816,7 +845,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-341</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.34</comments>
+      <comments>Score: 10.29</comments>
       <pubDate>Mon, 13 Apr 2026 14:29:50 +0000</pubDate>
     </item>
     <item>
@@ -826,7 +855,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-342</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.34</comments>
+      <comments>Score: 10.29</comments>
       <pubDate>Mon, 13 Apr 2026 14:35:41 +0000</pubDate>
     </item>
     <item>
@@ -836,7 +865,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-343</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.44</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Mon, 13 Apr 2026 17:24:32 +0000</pubDate>
     </item>
     <item>
@@ -846,7 +875,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wolfssl-security-advisory-av26-344</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.45</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Mon, 13 Apr 2026 17:32:55 +0000</pubDate>
     </item>
     <item>
@@ -856,7 +885,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-336</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.46</comments>
+      <comments>Score: 10.41</comments>
       <pubDate>Mon, 13 Apr 2026 17:57:21 +0000</pubDate>
     </item>
     <item>
@@ -866,7 +895,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.49</comments>
+      <comments>Score: 10.44</comments>
       <pubDate>Mon, 13 Apr 2026 18:50:26 +0000</pubDate>
     </item>
     <item>
@@ -876,7 +905,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-acrobat-security-advisory-av26-340</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.44</comments>
       <pubDate>Mon, 13 Apr 2026 18:56:15 +0000</pubDate>
     </item>
     <item>
@@ -886,7 +915,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-345</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.52</comments>
+      <comments>Score: 10.46</comments>
       <pubDate>Mon, 13 Apr 2026 19:28:22 +0000</pubDate>
     </item>
     <item>
@@ -896,7 +925,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-346</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.53</comments>
+      <comments>Score: 10.47</comments>
       <pubDate>Mon, 13 Apr 2026 19:44:04 +0000</pubDate>
     </item>
   </channel>
