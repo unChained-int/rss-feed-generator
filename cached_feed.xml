@@ -8,16 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Apr 2026 11:00:05 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 12:00:06 +0000</lastBuildDate>
     <item>
-      <title>Mitel security advisory (AV26-328)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-328</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-328</guid>
+      <title>Up to EUR 50 000 for a passage to the UK: 19 suspected migrant smugglers arrested</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eur-50-000-for-passage-to-uk-19-suspected-migrant-smugglers-arrested</link>
+      <description>On 30 March 2025, Europol supported an action day against criminal networks smuggling migrants from Vietnam to the European Union and the United Kingdom. Law enforcement authorities across Europe have intensified their efforts to disrupt migrant smuggling networks as part of a coordinated whole-route approach addressing every stage of the criminal business model.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eur-50-000-for-passage-to-uk-19-suspected-migrant-smugglers-arrested</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Wed, 08 Apr 2026 17:35:55 +0000</pubDate>
+      <pubDate>Fri, 17 Apr 2026 10:00:06 +0000</pubDate>
     </item>
     <item>
       <title>OpenSSL security advisory (AV26-329)</title>
@@ -40,97 +40,6 @@
       <pubDate>Wed, 08 Apr 2026 17:58:01 +0000</pubDate>
     </item>
     <item>
-      <title>Copilot and Agentforce fall to form-based prompt injection tricks</title>
-      <link>https://www.csoonline.com/article/4159079/copilot-and-agentforce-fall-to-form-based-prompt-injection-tricks.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Enterprise AI agents are supposed to streamline workflows. Instead, two fresh findings show they can just as easily streamline data exfiltration.&lt;/p&gt;
-
-
-
-&lt;p&gt;Security researchers have uncovered prompt-injection vulnerabilities in both Microsoft Copilot Studio and Salesforce Agentforce that allow attackers to execute malicious instructions via seemingly harmless prompts.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Capsule Security findings, SharePoint forms and public-facing lead forms within Copilot are vulnerable to attackers issuing prompts that can override system intent and trigger data exfiltration to attacker-controlled servers.&lt;/p&gt;
-
-
-
-&lt;p&gt;One of these flaws has already been assigned a high-severity CVE, with another “critical” one reportedly missing the bar for categorization. The flaws can allow theft of PIIs, customer/lead records, free-text business context, and operational/workflow data.&lt;/p&gt;
-
-
-
-&lt;p&gt;In both cases, AI agents treat untrusted user input as trusted instructions, Capsule researchers noted in the &lt;a href="https://www.capsulesecurity.io/blog-post/pipeleak-the-lead-that-stole-your-database-exploiting-salesforce-agentforce-with-indirect-prompt-injection" rel="noreferrer noopener" target="_blank"&gt;disclosures&lt;/a&gt; shared with CSO ahead of their&lt;a href="https://www.capsulesecurity.io/blog-post/shareleak-taking-the-wheel-of-microsofts-copilot-studio-cve-2026-21520" rel="noreferrer noopener" target="_blank"&gt; publication&lt;/a&gt; on Wednesday.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;ShareLeak: SharePoint forms data leaked through Copilot&lt;/h2&gt;
-
-
-
-&lt;p&gt;The Microsoft-side issue, dubbed “ShareLeak,” is about how Copilot Studio agents process SharePoint form submissions. The attack begins with a crafted payload inserted into a standard form field, like “comments”, which the agent later ingests as part of its operational context.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because the system concatenates user input with system prompts, the injected payload overrides the agent’s original instructions. The model is thus tricked into believing the attacker’s instructions are legitimate system directives. The malicious input moves from form submission to agent execution without any resistance.&lt;/p&gt;
-
-
-
-&lt;p&gt;Once compromised, the agent can access connected SharePoint Lists and extract sensitive customer data, including names, addresses, phone numbers, and send it externally via email. The researchers found that even when Microsoft’s safety mechanisms flagged suspicious behavior, the data was exfiltrated.&lt;/p&gt;
-
-
-
-&lt;p&gt;The root cause is that there is no reliable separation between trusted system instructions and untrusted user data. In the existing setup, the AI cannot distinguish between the two, the researchers said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft &lt;a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21520" rel="noreferrer noopener" target="_blank"&gt;patched&lt;/a&gt; the issue following disclosure, assigning &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21520" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-21520&lt;/a&gt; to it and assessing its severity at 7.5 out of 10 on the CVSS scale. The mitigation was carried out internally, and no further action is required from the users.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;PipeLeak: Salesforce Agentforce hijacked by a simple lead&lt;/h2&gt;
-
-
-
-&lt;p&gt;In the Salesforce Agentforce case, attackers embed malicious instructions inside a public-facing lead form. When an internal user later asks the agent to review or process that lead, the agent executes the embedded instructions as if they were part of its task.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to a Capsule demonstration, the agent retrieves CRM data via the “GetLeadsInformation” function and then sends it externally via email.&lt;/p&gt;
-
-
-
-&lt;p&gt;The compromise isn’t limited to a single record. Researchers demonstrated that a hijacked agent could query and exfiltrate multiple lead records in bulk, effectively turning a single form submission into a database extraction pipeline.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers said Salesforce acknowledged the prompt injection issue but characterized the exfiltration vector as “configuration-specific,” pointing to optional human-in-the-loop (&lt;a href="https://www.csoonline.com/article/4108592/human-in-the-loop-isnt-enough-new-attack-turns-ai-safeguards-into-exploits.html"&gt;HITL&lt;/a&gt;) controls. Capsule’s pushback on that framing argues that requiring manual approvals undermines the very purpose of autonomous agents.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Salesforce is aware of the issue identified by Capsule Security and has remediated the specific scenario described,” said a Salesforce spokesperson. “Prompt injection is an evolving challenge across the AI industry, and our approach includes layered safeguards designed to help mitigate these risks, including controls around instruction isolation, tool-use restrictions, and human oversight.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The deeper issue, the researchers noted, is insecure defaults. Systems designed for automation should not allow untrusted inputs to redefine agent goals.&lt;/p&gt;
-
-
-
-&lt;p&gt;Both disclosures converge on a baseline that calls for treating all external inputs as untrusted and having filters in place that separate data from instructions. This would entail enforcing input validation, least-privilege access, and strict controls on actions like outbound email.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4159079/copilot-and-agentforce-fall-to-form-based-prompt-injection-tricks.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Wed, 15 Apr 2026 12:09:36 +0000</pubDate>
-    </item>
-    <item>
       <title>Palo Alto Networks security advisory (AV26-331)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-331</link>
       <description>No description available</description>
@@ -147,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-332</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Wed, 08 Apr 2026 20:27:35 +0000</pubDate>
     </item>
     <item>
@@ -158,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Fri, 17 Apr 2026 09:00:05 +0000</pubDate>
+      <pubDate>Fri, 17 Apr 2026 10:00:06 +0000</pubDate>
     </item>
     <item>
       <title>Major operation targets one of Scotland’s most violent crime networks</title>
@@ -168,27 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Apr 2026 09:00:05 +0000</pubDate>
-    </item>
-    <item>
-      <title>Guns-for-cannabis network hit: Europol high-value target arrested in international action</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</link>
-      <description>The main suspect, a Turkish national holding a Greek residence permit, is believed to have coordinated the sourcing and transport of firearms into Spain, while overseeing the purchase and onward distribution of drugs to countries including Greece and Bulgaria.Flow of illicit firearms into the EUThe investigation began in March 2025, when the Spanish Mossos d’Esquadra detected the illegal introduction of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Apr 2026 09:00:05 +0000</pubDate>
-    </item>
-    <item>
-      <title>Spain: 24 arrested in crackdown on speedboat migrant smuggling network</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/spain-24-arrested-in-crackdown-speedboat-migrant-smuggling-network</link>
-      <description>The suspects, who are Algerian, Moroccan, and Spanish nationals, maintained the migrant smuggling network’s strong presence in Almería, Spain. While based primarily in this Spanish region, the criminal organisation is connected to other criminal groups and cells operating in France, particularly in Marseille and Perpignan, as well as in La Jonquera, Spain. These interconnections facilitated a robust logistical structure that...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/spain-24-arrested-in-crackdown-speedboat-migrant-smuggling-network</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Apr 2026 09:00:05 +0000</pubDate>
+      <pubDate>Fri, 17 Apr 2026 10:00:06 +0000</pubDate>
     </item>
     <item>
       <title>A legal vacuum on CSAM detection puts children at greater risk</title>
@@ -198,7 +87,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Apr 2026 09:00:05 +0000</pubDate>
+      <pubDate>Fri, 17 Apr 2026 10:00:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>Guns-for-cannabis network hit: Europol high-value target arrested in international action</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</link>
+      <description>The main suspect, a Turkish national holding a Greek residence permit, is believed to have coordinated the sourcing and transport of firearms into Spain, while overseeing the purchase and onward distribution of drugs to countries including Greece and Bulgaria.Flow of illicit firearms into the EUThe investigation began in March 2025, when the Spanish Mossos d’Esquadra detected the illegal introduction of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/guns-for-cannabis-network-hit-europol-high-value-target-arrested-in-international-action</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 17 Apr 2026 10:00:06 +0000</pubDate>
     </item>
     <item>
       <title>From intelligence to conviction: Europol helps dismantle Terrorgram Collective</title>
@@ -208,7 +107,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 17 Apr 2026 09:00:05 +0000</pubDate>
+      <pubDate>Fri, 17 Apr 2026 10:00:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>Spain: 24 arrested in crackdown on speedboat migrant smuggling network</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/spain-24-arrested-in-crackdown-speedboat-migrant-smuggling-network</link>
+      <description>The suspects, who are Algerian, Moroccan, and Spanish nationals, maintained the migrant smuggling network’s strong presence in Almería, Spain. While based primarily in this Spanish region, the criminal organisation is connected to other criminal groups and cells operating in France, particularly in Marseille and Perpignan, as well as in La Jonquera, Spain. These interconnections facilitated a robust logistical structure that...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/spain-24-arrested-in-crackdown-speedboat-migrant-smuggling-network</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 17 Apr 2026 10:00:06 +0000</pubDate>
     </item>
     <item>
       <title>Leading Balkan Cartel member arrested in Montenegro</title>
@@ -218,7 +127,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.53</comments>
-      <pubDate>Fri, 17 Apr 2026 09:00:05 +0000</pubDate>
+      <pubDate>Fri, 17 Apr 2026 10:00:06 +0000</pubDate>
     </item>
     <item>
       <title>HPE security advisory (AV26-333)</title>
@@ -227,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-333</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Thu, 09 Apr 2026 18:27:37 +0000</pubDate>
     </item>
     <item>
@@ -237,8 +146,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-334</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Thu, 09 Apr 2026 18:39:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>Qualcomm security advisory – April 2026 monthly rollup (AV26-335)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-april-2026-monthly-rollup-av26-335</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-april-2026-monthly-rollup-av26-335</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Thu, 09 Apr 2026 19:14:10 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported global operation targets over 75 000 users engaged in DDoS attacks</title>
@@ -248,17 +167,18 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.59</comments>
-      <pubDate>Fri, 17 Apr 2026 09:00:05 +0000</pubDate>
+      <pubDate>Fri, 17 Apr 2026 10:00:06 +0000</pubDate>
     </item>
     <item>
-      <title>Qualcomm security advisory – April 2026 monthly rollup (AV26-335)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-april-2026-monthly-rollup-av26-335</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-april-2026-monthly-rollup-av26-335</guid>
+      <title>Google Blocks 8.3B Policy-Violating Ads in 2025, Launches Android 17 Privacy Overhaul</title>
+      <link>https://thehackernews.com/2026/04/google-blocks-83b-policy-violating-ads.html</link>
+      <description>Google this week announced a new set of Play policy updates to strengthen user privacy and protect businesses against fraud, even as it revealed it blocked or removed over 8.3 billion ads globally and suspended 24.9 million accounts in 2025.
+The new policy updates relate to contact and location permissions in Android, allowing third-party apps to access the contact lists and a user's location in</description>
+      <guid isPermaLink="false">https://thehackernews.com/2026/04/google-blocks-83b-policy-violating-ads.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Thu, 09 Apr 2026 19:14:10 +0000</pubDate>
+      <comments>Score: 7.60</comments>
+      <pubDate>Fri, 17 Apr 2026 16:17:00 +0530</pubDate>
     </item>
     <item>
       <title>From Vietnam to the EU by air: 8 arrested in a migrant smuggling sting across Europe</title>
@@ -268,7 +188,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.66</comments>
-      <pubDate>Fri, 17 Apr 2026 09:00:05 +0000</pubDate>
+      <pubDate>Fri, 17 Apr 2026 10:00:06 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-337)</title>
@@ -277,7 +197,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-337</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Fri, 10 Apr 2026 13:18:48 +0000</pubDate>
     </item>
     <item>
@@ -532,7 +452,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4158505/the-endless-ciso-reporting-line-debate-and-what-it-says-about-cybersecurity-leadership.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Thu, 16 Apr 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -611,7 +531,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4159617/behind-the-mythos-hype-glasswing-has-just-one-confirmed-cve.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Thu, 16 Apr 2026 11:54:32 +0000</pubDate>
     </item>
     <item>
@@ -768,7 +688,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4158706/april-patch-tuesday-roundup-zero-day-vulnerabilities-and-critical-bugs.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Wed, 15 Apr 2026 01:27:54 +0000</pubDate>
     </item>
     <item>
@@ -778,7 +698,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-338</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Mon, 13 Apr 2026 13:56:13 +0000</pubDate>
     </item>
     <item>
@@ -788,7 +708,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-339</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Mon, 13 Apr 2026 14:07:43 +0000</pubDate>
     </item>
     <item>
@@ -798,7 +718,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-341</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Mon, 13 Apr 2026 14:29:50 +0000</pubDate>
     </item>
     <item>
@@ -808,7 +728,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-342</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Mon, 13 Apr 2026 14:35:41 +0000</pubDate>
     </item>
     <item>
@@ -818,7 +738,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-343</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Mon, 13 Apr 2026 17:24:32 +0000</pubDate>
     </item>
     <item>
@@ -828,7 +748,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wolfssl-security-advisory-av26-344</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Mon, 13 Apr 2026 17:32:55 +0000</pubDate>
     </item>
     <item>
@@ -838,7 +758,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-336</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Mon, 13 Apr 2026 17:57:21 +0000</pubDate>
     </item>
     <item>
@@ -848,7 +768,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-096</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Mon, 13 Apr 2026 18:50:26 +0000</pubDate>
     </item>
     <item>
@@ -858,7 +778,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-acrobat-security-advisory-av26-340</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Mon, 13 Apr 2026 18:56:15 +0000</pubDate>
     </item>
     <item>
@@ -868,7 +788,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-345</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Mon, 13 Apr 2026 19:28:22 +0000</pubDate>
     </item>
     <item>
@@ -878,38 +798,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-346</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Mon, 13 Apr 2026 19:44:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] Siemens security advisory (AV26-347)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-347</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-347</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
-      <pubDate>Tue, 14 Apr 2026 13:44:28 +0000</pubDate>
-    </item>
-    <item>
-      <title>Samsung mobile security advisory (AV26-348)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-348</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-348</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
-      <pubDate>Tue, 14 Apr 2026 13:54:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>SAP security advisory – April 2026 monthly rollup (AV26-349)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-april-2026-monthly-rollup-av26-349</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-april-2026-monthly-rollup-av26-349</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
-      <pubDate>Tue, 14 Apr 2026 14:06:43 +0000</pubDate>
     </item>
     <item>
       <title>Palo Alto’s Helmut Reisinger sees a cyber sea change ahead as AI advances</title>
@@ -1079,8 +969,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4159305/helmut-reisinger-palo-alto-networks-anthropics-groundbreaking-mythos-model-represents-a-radical-shift-in-cybersecurity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Fri, 17 Apr 2026 10:01:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] Siemens security advisory (AV26-347)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-347</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-347</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.92</comments>
+      <pubDate>Tue, 14 Apr 2026 13:44:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>Samsung mobile security advisory (AV26-348)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-348</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-348</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.93</comments>
+      <pubDate>Tue, 14 Apr 2026 13:54:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>SAP security advisory – April 2026 monthly rollup (AV26-349)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-april-2026-monthly-rollup-av26-349</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-april-2026-monthly-rollup-av26-349</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.93</comments>
+      <pubDate>Tue, 14 Apr 2026 14:06:43 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] Schneider Electric security advisory (AV26-350)</title>
@@ -1089,7 +1009,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-350</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Tue, 14 Apr 2026 17:28:55 +0000</pubDate>
     </item>
     <item>
@@ -1099,7 +1019,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-351</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 9.01</comments>
       <pubDate>Tue, 14 Apr 2026 17:48:58 +0000</pubDate>
     </item>
     <item>
@@ -1109,7 +1029,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-april-2026-monthly-rollup-av26-352</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Tue, 14 Apr 2026 18:51:20 +0000</pubDate>
     </item>
     <item>
@@ -1119,7 +1039,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-353</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Tue, 14 Apr 2026 18:57:46 +0000</pubDate>
     </item>
     <item>
@@ -1129,7 +1049,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-354</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 9.05</comments>
       <pubDate>Tue, 14 Apr 2026 19:51:27 +0000</pubDate>
     </item>
     <item>
@@ -1139,7 +1059,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-355</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.56</comments>
+      <comments>Score: 9.54</comments>
       <pubDate>Wed, 15 Apr 2026 16:17:44 +0000</pubDate>
     </item>
     <item>
@@ -1149,7 +1069,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-356</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.54</comments>
       <pubDate>Wed, 15 Apr 2026 16:27:08 +0000</pubDate>
     </item>
     <item>
@@ -1159,7 +1079,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-357</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.59</comments>
+      <comments>Score: 9.57</comments>
       <pubDate>Wed, 15 Apr 2026 17:26:27 +0000</pubDate>
     </item>
     <item>
@@ -1169,7 +1089,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-358</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.65</comments>
+      <comments>Score: 9.63</comments>
       <pubDate>Wed, 15 Apr 2026 19:39:20 +0000</pubDate>
     </item>
     <item>
@@ -1179,7 +1099,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-359</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.17</comments>
+      <comments>Score: 10.14</comments>
       <pubDate>Thu, 16 Apr 2026 12:48:41 +0000</pubDate>
     </item>
     <item>
@@ -1189,7 +1109,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nginx-ui-security-advisory-av26-360</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.25</comments>
+      <comments>Score: 10.22</comments>
       <pubDate>Thu, 16 Apr 2026 15:06:47 +0000</pubDate>
     </item>
     <item>
@@ -1199,7 +1119,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-361</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.34</comments>
+      <comments>Score: 10.31</comments>
       <pubDate>Thu, 16 Apr 2026 17:46:04 +0000</pubDate>
     </item>
     <item>
@@ -1209,7 +1129,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-activemq-security-advisory-av26-330</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.35</comments>
+      <comments>Score: 10.32</comments>
       <pubDate>Thu, 16 Apr 2026 17:59:30 +0000</pubDate>
     </item>
   </channel>
