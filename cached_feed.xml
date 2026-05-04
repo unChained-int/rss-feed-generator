@@ -8,17 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 04 May 2026 06:41:13 +0000</lastBuildDate>
-    <item>
-      <title>n8n security advisory (AV26-379)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-379</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-379</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.22</comments>
-      <pubDate>Wed, 22 Apr 2026 17:45:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 04 May 2026 09:23:16 +0000</lastBuildDate>
     <item>
       <title>Oracle security advisory – April 2026 quarterly rollup (AV26-380)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-april-2026-quarterly-rollup-av26-380</link>
@@ -36,107 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-381</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Wed, 22 Apr 2026 19:30:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>AI agents can bypass guardrails and put credentials at risk, Okta study finds</title>
-      <link>https://www.csoonline.com/article/4166133/ai-agents-can-bypass-guardrails-and-put-credentials-at-risk-okta-study-finds.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;An AI agent that revealed sensitive data without being asked. An agent that overruled its own guardrails. Another that sent credentials to an attacker via Telegram, because it forgot it wasn’t supposed to do so after a reset.&lt;/p&gt;
-
-
-
-&lt;p&gt;It’s no secret that AI agents have huge potential, balanced by equally big risks. What’s becoming apparent, however, is how quickly agentic systems can veer wildly off course and start exposing critical information under real-world conditions.&lt;/p&gt;
-
-
-
-&lt;p&gt;A look at just how easily this can happen emerges from &lt;a href="https://www.okta.com/newsroom/articles/why-ai-guardrails-are-not-enough/" rel="noreferrer noopener" target="_blank"&gt;&lt;em&gt;Phishing the agent: Why AI guardrails aren’t enough&lt;/em&gt;&lt;/a&gt;&lt;em&gt;, &lt;/em&gt;a report on tests conducted by cloud identity and access management (IAM) company Okta Threat Intelligence, which uncovered all of the problems cited above, and more.&lt;/p&gt;
-
-
-
-&lt;p&gt;Their research focused on &lt;a href="https://www.csoonline.com/article/4146661/autonomous-ai-adoption-is-on-the-rise-but-its-risky-2.html" target="_blank"&gt;OpenClaw&lt;/a&gt;, a model-agnostic multi-channel AI assistant which has seen explosive growth inside enterprises since appearing in late 2025.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-telegram-hack"&gt;The Telegram hack&lt;/h2&gt;
-
-
-
-&lt;p&gt;In common with the growing list of rival agents, OpenClaw is only as useful as the access it is given to files, accounts, browsers, network devices, and, most significant of all, credentials.&lt;/p&gt;
-
-
-
-&lt;p&gt;One test conducted by Okta assessed how easy it would be to trick OpenClaw running Claude Sonnet 4.6 into handing over an OAuth token. This shouldn’t be possible; the LLM should refuse this request. However, what might have held true when prompting Claude as a chatbot quickly fell apart when it was accessed through OpenClaw.&lt;/p&gt;
-
-
-
-&lt;p&gt;The test assumed that a user had given OpenClaw full access to their computer, that they regularly controlled the agent over Telegram, and that their Telegram account had been hijacked.&lt;/p&gt;
-
-
-
-&lt;p&gt;First, the attacker instructed the agent via Telegram to retrieve an OAuth token, but to only display it in a terminal window on the computer. Claude Sonnet’s guardrails would prevent it from copying the token, however, the testers were able to reset the agent, causing it to forget it had displayed the token in the terminal window.&lt;/p&gt;
-
-
-
-&lt;p&gt;At that point, Okta said in its writeup, “The agent was instructed to take a screenshot of the desktop, which included the token, and then drop the screenshot in the Telegram chat, which it did. Exfiltration accomplished.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="agent-in-the-middle"&gt;Agent-in-the-middle&lt;/h2&gt;
-
-
-
-&lt;p&gt;Agentic AI is really two things: a powerful orchestration system coupled to one or more highly-capable LLMs. What an agent &lt;em&gt;isn’t&lt;/em&gt; is a simple interface, and it must be viewed as a separate system capable of autonomous, unpredictable reasoning.  &lt;/p&gt;
-
-
-
-&lt;p&gt;In fact, Okta threat intelligence director &lt;a href="https://www.linkedin.com/in/jeremykirk/?originalSubdomain=au" rel="noreferrer noopener" target="_blank"&gt;Jeremy Kirk&lt;/a&gt; pointed out, “It opens up a new attack surface. Someone gets SIM swapped, their Telegram is hooked up to an agent that has carte blanche to run anything on their computer, and possibly their employer’s network. In an enterprise context, this is a total nightmare.”&lt;/p&gt;
-
-
-
-&lt;p&gt;OpenClaw is also so hard-wired to find ways around problems, it will sometimes do unexpected, improper  things. Kirk said that an agent, when prompted in tests to access a website, requested the site’s login credentials in chat via a Telegram bot, an unencrypted channel which would expose them to anyone with access to that chat.&lt;/p&gt;
-
-
-
-&lt;p&gt;In another example, OpenClaw was asked to search X for AI stories. That shouldn’t have been possible; the machine was logged into X, but OpenClaw’s isolated Chrome profile was not. However, when prompted to grab the session cookies from the logged-in session and inject them into its own browser process, it happily attempted to do so.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is similar in principle to adversary-in-the-middle phishing attacks, which allow attackers to bypass protections such as MFA. It should be a no-go, and yet OpenClaw thought the action was valid, underlining how an attacker could manipulate it to do the same.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The agents are prompted to be as helpful as possible by default, a characteristic that poses particular concerns when it comes to credentials and tokens,” said Kirk.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="defying-security-gravity"&gt;‘Defying security gravity’&lt;/h2&gt;
-
-
-
-&lt;p&gt;According to Kirk, many enterprises are, sometimes unwittingly, running unsanctioned or weakly managed ‘shadow’ agents inside their networks. An example of how this could go wrong was the recent &lt;a href="https://www.csoonline.com/article/4160853/hackers-exploit-vercels-trust-in-ai-integration.html" target="_blank"&gt;Vercel compromise&lt;/a&gt; in which the Context.ai app opened the door to the theft of downstream OAuth session tokens.&lt;/p&gt;
-
-
-
-&lt;p&gt;The problem stems from agents being used experimentally by developers and employees, with little or no governance or oversight. The answer is to secure them using the same controls applied to users or service accounts, said Kirk. And as well as limiting the scope of agents, enterprises should also look to securing the credentials and tokens themselves, avoiding giving them long expiry dates.&lt;/p&gt;
-
-
-
-&lt;p&gt;Agents are only the latest example of a technology that is being deployed faster than it can be secured, Kirk observed. “Much of AI right now is defying security gravity,” he said. “But there are ways to use agents safely and keep credentials out of their reach, which is the only safe way to use them.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4166133/ai-agents-can-bypass-guardrails-and-put-credentials-at-risk-okta-study-finds.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.24</comments>
-      <pubDate>Fri, 01 May 2026 23:03:59 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-382)</title>
@@ -145,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-382</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Thu, 23 Apr 2026 14:55:13 +0000</pubDate>
     </item>
     <item>
@@ -155,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-383</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Thu, 23 Apr 2026 15:52:03 +0000</pubDate>
     </item>
     <item>
@@ -165,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/crowdstrike-security-advisory-av26-384</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Thu, 23 Apr 2026 16:03:35 +0000</pubDate>
     </item>
     <item>
@@ -175,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
+      <comments>Score: 7.28</comments>
       <pubDate>Thu, 23 Apr 2026 18:35:01 +0000</pubDate>
     </item>
     <item>
@@ -185,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-386</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
+      <comments>Score: 7.28</comments>
       <pubDate>Thu, 23 Apr 2026 19:41:34 +0000</pubDate>
     </item>
     <item>
@@ -206,7 +97,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.38</comments>
-      <pubDate>Mon, 04 May 2026 04:41:13 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 07:23:16 +0000</pubDate>
     </item>
     <item>
       <title>OTF GRIMM one-year anniversary: violence-as-a-service targets published on EU Most Wanted</title>
@@ -216,7 +107,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Mon, 04 May 2026 04:41:13 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 07:23:16 +0000</pubDate>
     </item>
     <item>
       <title>Call centres dismantled and ten arrested in EUR 50 million online fraud case</title>
@@ -226,7 +117,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Mon, 04 May 2026 04:41:13 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 07:23:16 +0000</pubDate>
     </item>
     <item>
       <title>Europol and partners track down 45 forcibly transferred Ukrainian children</title>
@@ -236,57 +127,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.49</comments>
-      <pubDate>Mon, 04 May 2026 04:41:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>“Terrorgram” network dealt another blow as member sentenced in Denmark</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/terrorgram-network-dealt-another-blow-member-sentenced-in-denmark</link>
-      <description>A Danish-French national has been sentenced to six years in prison for terrorism-related offences by the District Court in Glostrup, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC). A Europol specialist was called to testify during the court proceedings. This underscores the European Law Enforcement Agency’s role in supporting judicial authorities with expert analysis.The 30-year-old man, based...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/terrorgram-network-dealt-another-blow-member-sentenced-in-denmark</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 04 May 2026 04:41:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>Spain: 24 arrested in crackdown on speedboat migrant smuggling network</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/spain-24-arrested-in-crackdown-speedboat-migrant-smuggling-network</link>
-      <description>The suspects, who are Algerian, Moroccan, and Spanish nationals, maintained the migrant smuggling network’s strong presence in Almería, Spain. While based primarily in this Spanish region, the criminal organisation is connected to other criminal groups and cells operating in France, particularly in Marseille and Perpignan, as well as in La Jonquera, Spain. These interconnections facilitated a robust logistical structure that...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/spain-24-arrested-in-crackdown-speedboat-migrant-smuggling-network</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 04 May 2026 04:41:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports hit against ‘Black Axe’ criminal organisation in Switzerland: 10 arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-hit-against-black-axe-criminal-organisation-in-switzerland-10-arrests</link>
-      <description>Europol has supported a comprehensive investigation conducted by Swiss authorities in collaboration with German law enforcement against members of the international criminal organisation ‘Black Axe’. On 28 April 2026, house searches were carried out in several Swiss cantons, resulting in a total of 10 arrests, including the Black Axe “Regional Head” for the Southern European region. This operation targeted leaders...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-hit-against-black-axe-criminal-organisation-in-switzerland-10-arrests</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 04 May 2026 04:41:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>Leading Balkan Cartel member arrested in Montenegro</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/leading-balkan-cartel-member-arrested-in-montenegro</link>
-      <description>On 15 April 2026, Europol supported law enforcement authorities in Montenegro in conducting a large-scale operation targeting a significant cell of the Balkan Cartel. Europol also supported law enforcement authorities in Germany regarding the investigation targeting potential contact persons. This action day resulted in the arrest of twelve suspects (four in Germany), including a High Value Target (HVT) apprehended in Montenegro.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/leading-balkan-cartel-member-arrested-in-montenegro</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
-      <pubDate>Mon, 04 May 2026 04:41:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>New 2026 ‘IOCTA’ highlights sophisticated tactics and emerging challenges in the digital landscape</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-2026-iocta-highlights-sophisticated-tactics-and-emerging-challenges-in-digital-landscape</link>
-      <description>Europol today published the new edition of the Internet Organised Crime Threat Assessment (IOCTA) 2026, providing an in-depth analysis of the latest trends and developments in cybercrime affecting the European Union. The report, titled "How encryption, proxies, and AI are expanding cybercrime," underscores the accelerating pace and sophistication of cyber threats, emphasising the need for enhanced law enforcement capabilities and international cooperation.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-2026-iocta-highlights-sophisticated-tactics-and-emerging-challenges-in-digital-landscape</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
-      <pubDate>Mon, 04 May 2026 04:41:13 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 07:23:16 +0000</pubDate>
     </item>
     <item>
       <title>Dismantle implicit trust in OT networks, CISA tells critical infrastructure operators</title>
@@ -372,8 +213,58 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4165486/dismantle-implicit-trust-in-ot-networks-cisa-tells-critical-infrastructure-operators.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Thu, 30 Apr 2026 12:10:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>“Terrorgram” network dealt another blow as member sentenced in Denmark</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/terrorgram-network-dealt-another-blow-member-sentenced-in-denmark</link>
+      <description>A Danish-French national has been sentenced to six years in prison for terrorism-related offences by the District Court in Glostrup, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC). A Europol specialist was called to testify during the court proceedings. This underscores the European Law Enforcement Agency’s role in supporting judicial authorities with expert analysis.The 30-year-old man, based...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/terrorgram-network-dealt-another-blow-member-sentenced-in-denmark</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 04 May 2026 07:23:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Spain: 24 arrested in crackdown on speedboat migrant smuggling network</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/spain-24-arrested-in-crackdown-speedboat-migrant-smuggling-network</link>
+      <description>The suspects, who are Algerian, Moroccan, and Spanish nationals, maintained the migrant smuggling network’s strong presence in Almería, Spain. While based primarily in this Spanish region, the criminal organisation is connected to other criminal groups and cells operating in France, particularly in Marseille and Perpignan, as well as in La Jonquera, Spain. These interconnections facilitated a robust logistical structure that...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/spain-24-arrested-in-crackdown-speedboat-migrant-smuggling-network</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 04 May 2026 07:23:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol supports hit against ‘Black Axe’ criminal organisation in Switzerland: 10 arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-hit-against-black-axe-criminal-organisation-in-switzerland-10-arrests</link>
+      <description>Europol has supported a comprehensive investigation conducted by Swiss authorities in collaboration with German law enforcement against members of the international criminal organisation ‘Black Axe’. On 28 April 2026, house searches were carried out in several Swiss cantons, resulting in a total of 10 arrests, including the Black Axe “Regional Head” for the Southern European region. This operation targeted leaders...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-hit-against-black-axe-criminal-organisation-in-switzerland-10-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 04 May 2026 07:23:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Leading Balkan Cartel member arrested in Montenegro</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/leading-balkan-cartel-member-arrested-in-montenegro</link>
+      <description>On 15 April 2026, Europol supported law enforcement authorities in Montenegro in conducting a large-scale operation targeting a significant cell of the Balkan Cartel. Europol also supported law enforcement authorities in Germany regarding the investigation targeting potential contact persons. This action day resulted in the arrest of twelve suspects (four in Germany), including a High Value Target (HVT) apprehended in Montenegro.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/leading-balkan-cartel-member-arrested-in-montenegro</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.53</comments>
+      <pubDate>Mon, 04 May 2026 07:23:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>New 2026 ‘IOCTA’ highlights sophisticated tactics and emerging challenges in the digital landscape</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/new-2026-iocta-highlights-sophisticated-tactics-and-emerging-challenges-in-digital-landscape</link>
+      <description>Europol today published the new edition of the Internet Organised Crime Threat Assessment (IOCTA) 2026, providing an in-depth analysis of the latest trends and developments in cybercrime affecting the European Union. The report, titled "How encryption, proxies, and AI are expanding cybercrime," underscores the accelerating pace and sophistication of cyber threats, emphasising the need for enhanced law enforcement capabilities and international cooperation.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/new-2026-iocta-highlights-sophisticated-tactics-and-emerging-challenges-in-digital-landscape</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.54</comments>
+      <pubDate>Mon, 04 May 2026 07:23:16 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported global operation targets over 75 000 users engaged in DDoS attacks</title>
@@ -383,7 +274,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.59</comments>
-      <pubDate>Mon, 04 May 2026 04:41:13 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 07:23:16 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-388)</title>
@@ -392,7 +283,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-388</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 27 Apr 2026 13:56:02 +0000</pubDate>
     </item>
     <item>
@@ -402,7 +293,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-389</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 27 Apr 2026 14:10:43 +0000</pubDate>
     </item>
     <item>
@@ -412,7 +303,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-390</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 27 Apr 2026 14:17:44 +0000</pubDate>
     </item>
     <item>
@@ -422,7 +313,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-391</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 27 Apr 2026 14:28:27 +0000</pubDate>
     </item>
     <item>
@@ -432,7 +323,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-392</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 27 Apr 2026 14:36:38 +0000</pubDate>
     </item>
     <item>
@@ -442,7 +333,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-393</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 27 Apr 2026 14:42:57 +0000</pubDate>
     </item>
     <item>
@@ -452,7 +343,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-394</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Mon, 27 Apr 2026 14:50:27 +0000</pubDate>
     </item>
     <item>
@@ -462,7 +353,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/notepad-security-advisory-av26-395</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Mon, 27 Apr 2026 14:56:42 +0000</pubDate>
     </item>
     <item>
@@ -472,7 +363,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-396</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Mon, 27 Apr 2026 15:02:49 +0000</pubDate>
     </item>
     <item>
@@ -482,7 +373,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-397</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 27 Apr 2026 18:57:47 +0000</pubDate>
     </item>
     <item>
@@ -492,7 +383,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av26-398</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Tue, 28 Apr 2026 13:31:59 +0000</pubDate>
     </item>
     <item>
@@ -502,7 +393,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-399</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Tue, 28 Apr 2026 13:39:41 +0000</pubDate>
     </item>
     <item>
@@ -512,7 +403,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-400</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Tue, 28 Apr 2026 13:46:25 +0000</pubDate>
     </item>
     <item>
@@ -522,7 +413,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-401</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Tue, 28 Apr 2026 15:16:14 +0000</pubDate>
     </item>
     <item>
@@ -532,7 +423,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-april-2026-monthly-rollup-av26-352</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 28 Apr 2026 17:39:01 +0000</pubDate>
     </item>
     <item>
@@ -542,7 +433,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-402</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Wed, 29 Apr 2026 11:43:30 +0000</pubDate>
     </item>
     <item>
@@ -552,7 +443,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-403</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Wed, 29 Apr 2026 14:40:42 +0000</pubDate>
     </item>
     <item>
@@ -562,7 +453,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-405</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Wed, 29 Apr 2026 17:23:02 +0000</pubDate>
     </item>
     <item>
@@ -572,7 +463,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.26</comments>
       <pubDate>Wed, 29 Apr 2026 18:21:48 +0000</pubDate>
     </item>
     <item>
@@ -582,7 +473,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-406</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Thu, 30 Apr 2026 13:57:41 +0000</pubDate>
     </item>
     <item>
@@ -592,7 +483,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-407</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Thu, 30 Apr 2026 14:52:00 +0000</pubDate>
     </item>
     <item>
@@ -602,7 +493,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-010-cyber-criminals-social-engineering-enabled-compromise-enterprise-saas-environments</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Thu, 30 Apr 2026 15:28:27 +0000</pubDate>
     </item>
     <item>
@@ -612,7 +503,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-404</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Thu, 30 Apr 2026 18:04:58 +0000</pubDate>
     </item>
     <item>
@@ -622,7 +513,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-408</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Thu, 30 Apr 2026 19:28:55 +0000</pubDate>
     </item>
     <item>
@@ -632,7 +523,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-409</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.64</comments>
       <pubDate>Thu, 30 Apr 2026 19:42:15 +0000</pubDate>
     </item>
     <item>
@@ -642,8 +533,374 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-410</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.64</comments>
       <pubDate>Thu, 30 Apr 2026 19:52:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>How CISOs should utilize data security posture management to inform risk</title>
+      <link>https://www.csoonline.com/article/4166051/how-cisos-should-utilize-data-security-posture-management-to-inform-risk.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Every CISO eventually faces the same tension: You know your security program needs to mature, but the budget and headcount to do it all aren’t there. That tension is especially sharp when it comes to &lt;a href="https://www.ibm.com/think/topics/data-security-posture-management"&gt;data security posture management (DSPM)&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;Not every organization can afford, or even needs, the gold standard of DSPM deployment. Full-featured platforms can require anywhere from 1 to 3 dedicated FTEs to maintain, a cost that’s well within bounds for a large bank but potentially prohibitive for a mid-size or smaller technology firm. But the underlying principles of DSPM, such as verifying where your sensitive data lives, quantifying its value and using that information to inform decisions, should be used by every security leader, with or without a dedicated tool.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;What DSPM does, and why the thinking matters more than the tool&lt;/h2&gt;
+
+
+
+&lt;p&gt;In their simplest form, DSPM platforms scan an organization’s environment and use a series of classifiers to identify where sensitive information lives, check compliance and surface potential exposures. More advanced implementations connect with Data Leakage Prevention (DLP) tools to enforce these rules, and some can even infer new datatypes or labels, or apply them automatically.&lt;/p&gt;
+
+
+
+&lt;p&gt;If you are a payment processor, you’ll be well acquainted with PCI standards on the storage of credit card numbers, or similarly, PHI storage &lt;a href="https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"&gt;standards&lt;/a&gt; in the healthcare industry. DSPM tools raise exceptions to ensure you comply with these rules and allow you to document exceptions or risk acceptances within the platform. Addressing these exceptions requires a process involving both Information Security, Information Technology and data owners. &lt;/p&gt;
+
+
+
+&lt;p&gt;Even if a dedicated DSPM platform isn’t in your budget, the core exercise is the same: Gain visibility into your organization’s data so you can make better business cases around security investments for the systems and environments under your remit.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Applying the principles at any maturity level&lt;/h2&gt;
+
+
+
+&lt;p&gt;Whether you’re working with a full DSPM platform, a lightweight open-source scanner or even manual data inventories, CISOs can use this thinking to apply quantification (or at least an order of magnitude) to risk decisions. For example, you may have a written policy in place that a database can store up to “restricted” records – some of your organization’s most sensitive data. An operations team may want to attach a workflow automation tool to that database to allow them to service customer requests faster. A DSPM mindset helps you answer the questions that drive associated decisions.&lt;/p&gt;
+
+
+
+&lt;p&gt;DSPM can answer how many records are contained in a database, and coupled with cyber risk quantification, can help you estimate the &lt;a href="https://www.cisa.gov/sites/default/files/2024-10/CISA-OCE%20Cost%20of%20Cyber%20Incidents%20Study_508.pdf"&gt;financial exposure&lt;/a&gt; that would be if they were all compromised. It will tell you which data is “restricted” or “confidential,” and which records are subject to additional regulation. Finally, you can use it to understand how many users or roles can access the database, and help you apply a more limited role, add security monitoring or alerting, and add human touchpoints to autonomous workflows.&lt;/p&gt;
+
+
+
+&lt;p&gt;If this seems too fundamental, you may already be in a highly mature or regulated environment.  But elsewhere, and especially down market, there are lots of edge cases and grey areas that this kind of analysis helps inform. Crucially, it helps us move from binary labels and all-or-nothing decisions to quantified, accepted and mitigated risk.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Scaling the approach to bigger decisions&lt;/h2&gt;
+
+
+
+&lt;p&gt;Let’s take this up a level, and this time, consider your entire security architecture. You have 15 “restricted” repositories. A critical remote code execution vulnerability is released, which affects eight of them, and your team moves into incident response mode. Which ones do you prioritize for patching with IT operations and forensic analysis? Pick the one with the most sensitive records (weighed against compensating controls), and thus, value at risk. You don’t need a six-figure platform to make that call, but you do need to have done the work of understanding where your most sensitive data sits. &lt;/p&gt;
+
+
+
+&lt;p&gt;What if you inherit the same architecture from an M&amp;amp;A transaction? Let’s also assume that the new acquisition had a single IT staff member and no dedicated security staff, and you raised concerns about this during diligence. You are granted a budget for only one additional security engineer as part of the transaction. How do you prioritize their focus for security integrations such as central alert consolidation, log forwarding to your SIEM and detection engineering? Again, lean towards the systems with the most value at risk, informed by whichever data inventory or DSPM capability you have available to you.&lt;/p&gt;
+
+
+
+&lt;p&gt;Even without these urgent scenarios, DSPM thinking should increasingly inform your IAM posture in 2026. The lowest common denominator for compliance-driven access reviews is anchored on users (not roles, or non-human identities) and incentivizes binary decision-making. Further, there is an extreme disincentive to pick anything besides “maintain access.” I’d argue that DSPM and the associated mindset should be informing permission levels around your riskiest systems and driving decisions on how to reduce them. This can include creating newer, more limited roles or introducing time-bound access. Conducting access reviews without a source of truth or based solely on what is &lt;em&gt;supposed&lt;/em&gt; to be happening is, at best, guesswork, and at worst, negligent.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Why this is more urgent now, and what to watch for&lt;/h2&gt;
+
+
+
+&lt;p&gt;There is still real incentive for organizations to place their proverbial head in the sand when it comes to data security posture; an oversimplified thought process being that if they weren’t aware of it, they couldn’t be held liable. But that posture is increasingly untenable. Increasing adoption of Agentic AI means that concerns about data discovery (read-only) that were so prevalent in 2023 and 2024 are going to translate into actions (read-write) in 2026, if left unlabeled or unmitigated. The cost of not knowing is going up.&lt;/p&gt;
+
+
+
+&lt;p&gt;For organizations that do invest in a DSPM platform, one key risk is the level of access they require to your own data and systems. To scan and classify the data, extensive read-level access is required, and some level of access to redacted content is required to interpret and action the results. This creates two imperatives for CISOs: Evaluate and re-evaluate your DSPM vendors carefully and apply strict access control to these systems within your own organization. To that end, this is not an area to look for a bargain – select only vendors with the highest security posture and features that make your security team more effective and safer.&lt;/p&gt;
+
+
+
+&lt;p&gt;Finally, consider the total cost of ownership, not just the software sticker price. As alluded to earlier, these programs (with or without tools and software) can be costly to maintain, and as a CISO, your role is to balance the tradeoff of risk reduction and business enablement.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Finding your pragmatic step forward&lt;/h2&gt;
+
+
+
+&lt;p&gt;For security leaders, the question isn’t whether you can afford a top-tier DSPM tool. It’s whether you can afford not to understand your data. Start with what you have: Manual inventories, existing DLP outputs or lightweight scanning tools. Apply the DSPM mindset of quantifying where sensitive data lives, who can access it and what it would cost you if it were compromised. Anchoring your risk decisions in these specifics, rather than fear and anxiety, will serve you and your business well.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4166051/how-cisos-should-utilize-data-security-posture-management-to-inform-risk.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.98</comments>
+      <pubDate>Mon, 04 May 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The fake IT worker problem CISOs can’t ignore</title>
+      <link>https://www.csoonline.com/article/4166139/the-fake-it-worker-problem-cisos-cant-ignore.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Hiring fake IT workers has been a growing problem in recent years — but it’s often a problem very few want to admit to. From Fortune 500 companies down to smaller organizations, remote hiring practices have been exploited to grant trusted access to individuals who are not who they claim to be creating an insider threat risk.&lt;/p&gt;
+
+
+
+&lt;p&gt;Estimates suggest there are thousands of fake IT workers operating across the US who are in a position to steal information, IP and data, outsource work offshore, carry out sabotage, or funnel money to foreign governments.&lt;/p&gt;
+
+
+
+&lt;p&gt;Amazon has identified and blocked more than 1,800 attempts by North Korea to secure IT roles — and the numbers are rising, according to its chief security officer, Steve Schmidt.&lt;/p&gt;
+
+
+
+&lt;p&gt;In some cases, individuals impersonate US employees for personal gain; in others, state-based operatives such as those from North Korean pose as IT workers for state financial gain and other nefarious purposes.&lt;/p&gt;
+
+
+
+&lt;p&gt;AI is now enabling deepfakes, more convincing video interviews, and rapid identity cycling.&lt;/p&gt;
+
+
+
+&lt;p&gt;Adversary tactics are also shifting, from fabricating profiles to purchasing legitimate American identities, Schmidt has warned.&lt;/p&gt;
+
+
+
+&lt;p&gt;“This is not a ‘recruiting scam’ in the traditional sense. It’s an insider-risk problem, where the adversary’s first move is to get hired,” says &lt;a href="https://www.linkedin.com/in/tom-hegel/"&gt;Tom Hegel&lt;/a&gt;, distinguished threat researcher at SentinelOne.&lt;/p&gt;
+
+
+
+&lt;p&gt;CIOs, CISOs, and other IT leaders need to be continually on guard against fake and fraudulent IT workers, but organizations can fall victim without realizing it.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="how-fake-hires-get-through"&gt;How fake hires get through&lt;/h2&gt;
+
+
+
+&lt;p&gt;There’s no single point of failure in the recruitment process. Fake and fraudulent IT workers conceal their identity, falsify their skills and experience, and move through interview and screening processes undetected.&lt;/p&gt;
+
+
+
+&lt;p&gt;SentinelOne has &lt;a href="https://www.sentinelone.com/labs/top-tier-target-what-it-takes-to-defend-a-cybersecurity-company-from-todays-adversaries/"&gt;tracked&lt;/a&gt; roughly 360 fake personas and more than 1,000 job applications linked to North Korean IT worker operations, including attempts to apply for roles within the company itself.&lt;/p&gt;
+
+
+
+&lt;p&gt;According to Hegel, adversaries are increasingly deploying social engineering tactics and identity obfuscation at scale, and the hiring process is a prime entry point.&lt;/p&gt;
+
+
+
+&lt;p&gt;Synthetic or stolen identities are used to create resumes and online profiles; interviews are passed with the help of scripts, stand-ins, or AI-assisted responses; and background checks confirm only what’s presented to them.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Fake job seekers now leverage AI tools to mimic legitimate candidates, creating synthetic identities that pass initial background checks, falsifying employment histories and even responding convincingly in interviews using real-time AI assistance,” Hegel says.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://flashpoint.io/blog/flashpoint-investigation-uncovering-the-dprks-remote-it-worker-fraud-scheme/"&gt;Flashpoint investigations&lt;/a&gt; have found malware-infected hosts containing HR and job-board logins, browser histories showing Google-translated coaching notes, remote-access “laptop farms” used to control corporate devices from overseas, and shell companies to prove reference checks for fabricated resumes.&lt;/p&gt;
+
+
+
+&lt;p&gt;Once they’re hired, credentials are issued, equipment is shipped, and access is granted — and they become a trusted insider. “The long-term risk isn’t just hiring a fake employee — it’s unknowingly opening your systems and sensitive data to malicious access,” he says.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="what-to-do-if-you-suspect-a-fake-it-worker"&gt;What to do if you suspect a fake IT worker&lt;/h2&gt;
+
+
+
+&lt;p&gt;When a CIO suspects a fake IT worker, next steps are important as the issue shifts from recruitment to insider risk management.&lt;/p&gt;
+
+
+
+&lt;p&gt;During his time at MongoDB, &lt;a href="https://www.linkedin.com/in/georgegerchow/"&gt;George Gerchow&lt;/a&gt;, IANS faculty advisor and Bedrock Data CSO, oversaw the investigation after the company detected it had unknowingly hired a North Korean IT worker.&lt;/p&gt;
+
+
+
+&lt;p&gt;It was first discovered after alerts that an individual was attempting to uninstall endpoint protections, including CrowdStrike Overwatch. “Overwatch then detected the laptop communicating with a North Korean IP address,” says Gerchow.&lt;/p&gt;
+
+
+
+&lt;p&gt;“That combination of tool tampering plus DPRK-linked traffic immediately signaled that this was not a typical new hire,” he tells CIO.&lt;/p&gt;
+
+
+
+&lt;p&gt;Mongo realized the fake worker used a stolen identity, paired with AI-generated resume content and scripted interview responses, to evade background checks that verify only the information provided and do not detect fraud.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br /&gt;It highlights a gap in many background checks. “They don’t detect fabricated work histories, synthetic identities, or recycled developer profiles, which is how this individual passed screening and interviews without raising formal flags,” he says.&lt;/p&gt;
+
+
+
+&lt;p&gt;The subsequent investigation found attempts to disable security tooling, establish persistence on the device, and probe for elevated access.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Had they remained undetected, their access would have eventually expanded into our FedRAMP environment, which makes these fraud techniques especially high-risk,” Gerchow adds.&lt;/p&gt;
+
+
+
+&lt;p&gt;After the discovery, several yellow flags became obvious such as poor video quality and unclear visuals during interviews, a noticeably inconsistent accent between calls, and scattered interview feedback with no centralized review.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Another tell was a last-minute change to the laptop shipping address. “That’s a common shadow-worker tactic,” notes Gerchow.&lt;/p&gt;
+
+
+
+&lt;p&gt;With hindsight, Gerchow joined the dots and it became clear how the person had made it through to employment because any irregularities were treated in isolation.&lt;/p&gt;
+
+
+
+&lt;p&gt;“None of these individually would prevent a hire. However, because no one was responsible for aggregating subtle anomalies, the pattern wasn’t recognized until the endpoint alert fired,” he says.&lt;/p&gt;
+
+
+
+&lt;p&gt;When they were discovered, the team quickly isolated the device, revoked all credentials, conducted a full forensic investigation, and notified federal authorities. “We verified there was no data exfiltration or lateral movement,” he says.&lt;/p&gt;
+
+
+
+&lt;p&gt;The mitigation steps introduced included strengthening identity fraud screening in the hiring process, assigning a Yellow Flag owner to connect early signals, and enforcing zero access until trust is earned for new hires,&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br /&gt;Gerchow also believes that behavioral telemetry post-hire is necessary, because behavior, not credentials, reveals impostors.&lt;/p&gt;
+
+
+
+&lt;p&gt;Mongo recommends organizations designate a reviewer in Security or HR to identify inconsistencies in the hiring process, such as poor video quality. “Also watch for AI-generated LinkedIn profiles, mismatched resumes and questionable changes in laptop shipping addresses,” he says.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Use panel interviews and project-based evaluations to identify candidates who recycle stolen or fake developer identities, and start new hires without access to sensitive data or production environments,” he advises.&lt;/p&gt;
+
+
+
+&lt;p&gt;Then employ alerts if security agents (such IAM, EDR, VPN) are disabled before a new hire logs in, and test detection, escalation, and device recovery by simulating the hiring of a fake developer.&lt;/p&gt;
+
+
+
+&lt;p&gt;“And look for off-hours access, broad internal search activity and large-scale cloning of documents or code repositories,” he adds.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="what-it-leaders-see-on-the-inside"&gt;What IT leaders see on the inside&lt;/h2&gt;
+
+
+
+&lt;p&gt;The problem of employment fraud is only expected to worsen, with &lt;a href="https://www.gartner.com/en/newsroom/press-releases/2025-07-31-gartner-survey-shows-just-26-percent-of-job-applicants-trust-ai-will-fairly-evaluate-them"&gt;Gartner predicting&lt;/a&gt; that one in four candidate profiles worldwide will be fake by 2028.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The rise of fake and fraudulent job applicants has become an epidemic across organizations,” says &lt;a href="https://www.linkedin.com/in/davidweisong/"&gt;David Weisong&lt;/a&gt;, CIO of Energy Solutions.&lt;/p&gt;
+
+
+
+&lt;p&gt;Weisong says attackers consistently target high-access technical roles such as DevOps, systems administrators, data engineers, and database administrators, where successful hires can gain deep visibility and control over core systems.&lt;/p&gt;
+
+
+
+&lt;p&gt;“These are the roles with the keys to the castle,” Weisong says. “If you’re trying to gain access, they’re far more valuable than a standard developer position.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Operating in a regulated energy market, Energy Solutions is contractually required to employ a US-based workforce and keep data within US jurisdiction.&lt;/p&gt;
+
+
+
+&lt;p&gt;Weisong has first-hand experience with detecting fake IT workers and wants to share his advice with other IT leaders. One of the earliest warning signs was a sudden, abnormal surge in applications — hundreds arriving within hours, far out of proportion to the company’s brand profile, pointing to automated or coordinated activity.&lt;/p&gt;
+
+
+
+&lt;p&gt;During the interview stage, identity switching was observed. “We saw cases where one person passed the phone screen, a different person showed up on Zoom, and sometimes a third appeared later — all under the same name and resume,” Weisong says.&lt;/p&gt;
+
+
+
+&lt;p&gt;Part of the problem is that standard hiring practices validate information and skills in isolation. “Traditional background checks only verify the information provided and do not detect fraud,” Weisong also notes.&lt;/p&gt;
+
+
+
+&lt;p&gt;The uncomfortable reality for some CIOs is that the work may be completed to a high standard and detection comes from signals, not performance.&lt;/p&gt;
+
+
+
+&lt;p&gt;However, fake IT workers create business and compliance risk as much as security risk, exposing organizations to contractual breaches, regulatory consequences, and loss of client trust — particularly in regulated industries.&lt;/p&gt;
+
+
+
+&lt;p&gt;Weisong says fake IT workers create business and compliance risk as much as security risk, exposing organizations in regulated industries to contractual breaches, regulatory scrutiny, and loss of client trust.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="combating-the-problem-of-fake-it-workers"&gt;Combating the problem of fake IT workers&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://view.mail.fortune.com/?qs=fc1d43f906c371bb2cbf1762a5d3f30c06dcfa3d5c8d5c145bfcd483b1f35513361549188dc8d47427ae3302e2d0ec77936fb3958da124c995bfb23eb0251ce53992a566f5d420834e0c64af9d1e4d42"&gt;Amazon is using AI-based tools&lt;/a&gt; with human oversight to identify unusual contact information, as well as fake academic institutions and companies in resumes, according to Schmidt. Security teams will flag LinkedIn profiles that look suspicious, require more in-person interviews and in-office attendance, monitor computer usage and quality of work, and authenticate with a physical token.&lt;/p&gt;
+
+
+
+&lt;p&gt;He has also said that IT and HR need to collaborate on hiring to combat the problem.&lt;/p&gt;
+
+
+
+&lt;p&gt;“It’s actually a lot cheaper for the HR organization if we discover the problem up front,” Amazon’s Schmidt told &lt;a href="https://fortune.com/2025/12/17/amazon-cybersecurity-north-korea-hackers-cio-intelligence/"&gt;Fortune&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;The shift required, says SentinelOne’s Hegel, is treating hiring decisions as an access control problem rather than a recruitment task. “Stop treating identity as a one-time HR checkbox and start treating remote hiring like you would grant privileged access,” he says.&lt;/p&gt;
+
+
+
+&lt;p&gt;In the wake of his experience, Weisong instituted a raft of changes to its applicant tracking system and across the organization’s internal systems and processes.&lt;/p&gt;
+
+
+
+&lt;p&gt;When advertising for positions, they make it clear that candidates applying for technical positions understand the expectations and consequences outlined in all written communication. “Additionally, removing the term ‘fully remote’ from our hiring practices has significantly reduced opportunities for fraud and for applicants applying from outside the US,” he says.&lt;/p&gt;
+
+
+
+&lt;p&gt;“While a ‘zero-trust’ approach would be ideal for all hiring, we cannot allow it to impede the process or discourage legitimate candidates from applying. Instead, we need sufficient countermeasures to prevent automated and fraudulent applicants from reaching the pipeline in the first place,” he adds.&lt;/p&gt;
+
+
+
+&lt;p&gt;To control the large volume of applications, many of which are bots, Energy Solutions job listings now have strict CAPTCHA settings, referral bonuses help draw on employee networks, and there’s a 90-day satisfactory performance review for new hires.&lt;/p&gt;
+
+
+
+&lt;p&gt;During the screening process, interviews are conducted via video not phone, and applicants must share their screen for live challenges. A post-video interview report allows them to verify the exact location of applicants after screening and interview meetings. If a candidate is outside the US, it’s treated as a Yellow/Red flag.&lt;/p&gt;
+
+
+
+&lt;p&gt;Applicants must select which office they want to work from and they must acknowledge they understand use of AI during interviews will result in disqualification.&lt;/p&gt;
+
+
+
+&lt;p&gt;To verify references and employment history, they require two references, with one a former supervisor or manager. Employment history is checked, including previous employers, and full home address must be provided.&lt;/p&gt;
+
+
+
+&lt;p&gt;To guard access, a question has been added to the job kick-off form that indicates whether a new role will have elevated access to confidential or sensitive information.&lt;/p&gt;
+
+
+
+&lt;p&gt;The first day on the job requires new hires to come into an office to pick up equipment and undertake training and onboarding. All roles must be onsite, with the option to go hybrid after satisfactory performance.&lt;/p&gt;
+
+
+
+&lt;p&gt;Combating the problem, says Weisong, requires reviewing hiring processes, partnering closely with HR, and monitoring the effectiveness of each countermeasure. For CIOs, the lesson is not that hiring is broken, but that trust must be earned progressively.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4166139/the-fake-it-worker-problem-cisos-cant-ignore.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.98</comments>
+      <pubDate>Mon, 04 May 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft Edge security advisory (AV26-411)</title>
@@ -652,7 +909,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-411</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Fri, 01 May 2026 14:22:01 +0000</pubDate>
     </item>
     <item>
@@ -662,7 +919,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-412</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.05</comments>
       <pubDate>Fri, 01 May 2026 17:09:46 +0000</pubDate>
     </item>
     <item>
@@ -672,7 +929,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-009-vulnerability-affecting-linux-cve-2026-31431</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Fri, 01 May 2026 18:42:43 +0000</pubDate>
     </item>
   </channel>
