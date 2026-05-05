@@ -8,94 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 04 May 2026 23:56:24 +0000</lastBuildDate>
-    <item>
-      <title>Dismantle implicit trust in OT networks, CISA tells critical infrastructure operators</title>
-      <link>https://www.csoonline.com/article/4165486/dismantle-implicit-trust-in-ot-networks-cisa-tells-critical-infrastructure-operators.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The US Cybersecurity and Infrastructure Security Agency (CISA) has asked owners and operators of operational technology to stop assuming their networks are safe, and has released joint guidance to adapt zero trust principles for industrial systems that support US power, water, transportation, building automation, and weapons-support infrastructure.&lt;/p&gt;
-
-
-
-&lt;p&gt;OT owners should design controls on the assumption that adversaries are already inside the network, and validate every access request based on identity, context, and risk rather than network location, CISA and four partner agencies wrote in a 28-page &lt;a href="https://www.cisa.gov/sites/default/files/2026-04/joint-guide-adapting-zero-trust-principles-to-operational-technology_508c.pdf" rel="noreferrer noopener" target="_blank"&gt;document&lt;/a&gt; titled Adapting Zero Trust Principles to Operational Technology.&lt;/p&gt;
-
-
-
-&lt;p&gt;The guide was developed with the Department of War, the Department of Energy, the FBI, and the Department of State, with technical contributions from the National Institute of Standards and Technology.&lt;/p&gt;
-
-
-
-&lt;p&gt;The agencies were direct about the threat driving the publication.&lt;/p&gt;
-
-
-
-&lt;p&gt;“CISA has observed threat actors like Volt Typhoon targeting OT systems to compromise, escalate, and maintain access within operational environments,” CISA Acting Executive Assistant Director for Cybersecurity Chris Butera said in a &lt;a href="https://www.cisa.gov/news-events/news/cisa-and-us-government-partners-unveil-guide-accelerate-zero-trust-adoption-operational-technology" rel="noreferrer noopener" target="_blank"&gt;statement accompanying the release&lt;/a&gt;. “Zero Trust architecture is critical to preventing cyber incidents that could cause operators to lose visibility or control of essential systems.”&lt;/p&gt;
-
-
-
-&lt;p&gt;CISA, the FBI, and the National Security Agency &lt;a href="https://www.csoonline.com/article/1306501/china-backed-volt-typhoon-preparing-wave-of-attacks.html"&gt;first warned&lt;/a&gt; in February 2024 that the Chinese state-sponsored group was prepositioning on US IT networks to enable lateral movement to OT assets in the event of geopolitical conflict. The group has &lt;a href="https://www.csoonline.com/article/3604173/volt-typhoon-returns-with-fresh-botnet-attacks-on-critical-us-infrastructure.html"&gt;since resurfaced&lt;/a&gt; with renewed botnet activity exploiting end-of-life routers and &lt;a href="https://www.csoonline.com/article/3497078/chinas-volt-typhoon-exploits-versa-zero-day-to-hack-us-isps-and-it-firms.html"&gt;exploited&lt;/a&gt; a Versa Director zero-day to harvest credentials from US ISPs.&lt;/p&gt;
-
-
-
-&lt;p&gt;Pete Luban, field CISO at cybersecurity firm AttackIQ, said the convergence of IT and OT was the structural reason the guidance was needed. “Systems that were once isolated are now increasingly connected to enterprise networks and third-party services, and attackers are taking full advantage,” Luban said. “Adversaries aren’t just looking for data to steal, but for the weak seams between business and operational systems that can be used to move laterally across networks.” In OT, a successful intrusion can escalate quickly from a cybersecurity issue to an operational, safety, and public trust issue, he added.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-reference-architecture-built-for-the-plant-floor"&gt;A reference architecture built for the plant floor&lt;/h2&gt;
-
-
-
-&lt;p&gt;It is precisely those weak seams that the new guide tries to close. The document is structured around the six functions of &lt;a href="https://www.nist.gov/cyberframework" rel="noreferrer noopener" target="_blank"&gt;NIST Cybersecurity Framework 2.0&lt;/a&gt; — Govern, Identify, Protect, Detect, Respond, and Recover — and aligns with CISA’s &lt;a href="https://www.cisa.gov/cross-sector-cybersecurity-performance-goals" rel="noreferrer noopener" target="_blank"&gt;Cross-Sector Cybersecurity Performance Goals 2.0&lt;/a&gt;, the &lt;a href="https://dodcio.defense.gov/Portals/0/Documents/Library/(U)ZT_RA_v2.0(U)_Sep22.pdf" rel="noreferrer noopener" target="_blank"&gt;DoD Zero Trust Reference Architecture v2.0&lt;/a&gt;, &lt;a href="https://csrc.nist.gov/pubs/sp/800/82/r3/final" rel="noreferrer noopener" target="_blank"&gt;NIST SP 800-82r3&lt;/a&gt;, and the international ISA/IEC 62443 series.&lt;/p&gt;
-
-
-
-&lt;p&gt;But the agencies wrote that none of those frameworks could be applied to OT unmodified.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The blanket application of traditional information technology (IT)-focused ZT capabilities to OT is neither reasonable nor feasible,” the document stated, calling instead for continuous collaboration between OT engineers, IT architects, and cybersecurity professionals.&lt;/p&gt;
-
-
-
-&lt;p&gt;The guidance directs operators to segment Active Directory used in OT into a “separate forest or domain, avoid direct trust relationships between IT and OT identity systems, and enforce multi-factor authentication at the jump host level” where the underlying device cannot support it. Privileged sessions should be vaulted, recorded, and time-bound, with just-in-time access used to restrict remote vendor connections to narrowly defined maintenance windows, the document advised.&lt;/p&gt;
-
-
-
-&lt;p&gt;On encryption, the document distinguished confidentiality and integrity. Integrity and authentication through digital signing are typically more critical than confidentiality in OT, the agencies wrote, because expired certificates will not halt operations if communications remain in the clear. At the same time, encryption can introduce latency that disrupts safety-critical systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;That kind of nuance is precisely why the model cannot be transplanted wholesale, said Nick Tausek, lead security automation architect at Swimlane. “OT teams cannot simply lift and shift an IT security model into environments where downtime, latency, and safety risks carry real-world consequences,” Tausek said. “Zero trust has to be implemented with precision, operational awareness, and automation that can enforce policy without creating more friction for the people keeping critical systems running.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-it-means-for-security-teams"&gt;What it means for security teams&lt;/h2&gt;
-
-
-
-&lt;p&gt;The publication closes a gap that CISA’s &lt;a href="https://www.csoonline.com/article/575021/cisa-updates-zero-trust-maturity-model-to-provide-an-easier-launch.html"&gt;Zero Trust Maturity Model 2.0&lt;/a&gt; acknowledged, having stated it did not address challenges specific to operational technology. It follows February’s &lt;a href="https://www.cisa.gov/news-events/news/cisa-releases-guide-help-critical-infrastructure-users-adopt-more-secure-communication" rel="noreferrer noopener" target="_blank"&gt;Barriers to Secure OT Communications&lt;/a&gt; and earlier CISA &lt;a href="https://www.csoonline.com/article/3992747/critical-infrastructure-under-attack-flaws-becoming-weapon-of-choice.html"&gt;warnings&lt;/a&gt; that exposed VPNs, firewalls, and legacy edge devices remain the dominant entry points for critical infrastructure attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;The document told buyers that strategic procurement is how operators escape the legacy trap, and pointed them to the &lt;a href="https://www.cisa.gov/resources-tools/resources/secure-demand-priority-considerations-operational-technology-owners-and-operators-when-selecting" rel="noreferrer noopener" target="_blank"&gt;Secure by Demand&lt;/a&gt; guide for contracting criteria and to its open-source SIEM tool, &lt;a href="https://github.com/cisagov/Malcolm" rel="noreferrer noopener" target="_blank"&gt;Malcolm&lt;/a&gt;, for OT protocol parsing.&lt;/p&gt;
-
-
-
-&lt;p&gt;Luban said the harder problem is verifying that any of these controls hold. Organizations need to test boundaries against real-world adversary tactics, he said, to identify “where trust is being assumed, where access is too broad, and where attackers may still be able to cross from enterprise environments into operational systems before those gaps are exposed in a real incident.” The tooling adopted to run those tests carries its own risk. Tausek said AI-driven security agents now sitting alongside OT environments have become high-value targets in their own right. “If an attacker can tamper with an agent, disable it, or use it as a trusted pathway, the tool meant to improve detection can become part of the problem,” he said.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4165486/dismantle-implicit-trust-in-ot-networks-cisa-tells-critical-infrastructure-operators.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
-      <pubDate>Thu, 30 Apr 2026 12:10:14 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 05 May 2026 02:58:09 +0000</lastBuildDate>
     <item>
       <title>Child sexual exploitation: 12 children identified during Europol’s Victim Identification Taskforce</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/child-sexual-exploitation-12-children-identified-during-europols-victim-identification-taskforce</link>
@@ -104,7 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.38</comments>
-      <pubDate>Mon, 04 May 2026 21:56:24 +0000</pubDate>
+      <pubDate>Tue, 05 May 2026 00:58:09 +0000</pubDate>
     </item>
     <item>
       <title>OTF GRIMM one-year anniversary: violence-as-a-service targets published on EU Most Wanted</title>
@@ -114,7 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Mon, 04 May 2026 21:56:24 +0000</pubDate>
+      <pubDate>Tue, 05 May 2026 00:58:09 +0000</pubDate>
     </item>
     <item>
       <title>Call centres dismantled and ten arrested in EUR 50 million online fraud case</title>
@@ -124,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Mon, 04 May 2026 21:56:24 +0000</pubDate>
+      <pubDate>Tue, 05 May 2026 00:58:09 +0000</pubDate>
     </item>
     <item>
       <title>Europol and partners track down 45 forcibly transferred Ukrainian children</title>
@@ -134,7 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.49</comments>
-      <pubDate>Mon, 04 May 2026 21:56:24 +0000</pubDate>
+      <pubDate>Tue, 05 May 2026 00:58:09 +0000</pubDate>
     </item>
     <item>
       <title>Europol announces transition arrangements following the departure of Executive Director Catherine De Bolle</title>
@@ -144,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 04 May 2026 21:56:24 +0000</pubDate>
+      <pubDate>Tue, 05 May 2026 00:58:09 +0000</pubDate>
     </item>
     <item>
       <title>“Terrorgram” network dealt another blow as member sentenced in Denmark</title>
@@ -154,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 04 May 2026 21:56:24 +0000</pubDate>
+      <pubDate>Tue, 05 May 2026 00:58:09 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports hit against ‘Black Axe’ criminal organisation in Switzerland: 10 arrests</title>
@@ -164,7 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 04 May 2026 21:56:24 +0000</pubDate>
+      <pubDate>Tue, 05 May 2026 00:58:09 +0000</pubDate>
     </item>
     <item>
       <title>Leading Balkan Cartel member arrested in Montenegro</title>
@@ -174,7 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.53</comments>
-      <pubDate>Mon, 04 May 2026 21:56:24 +0000</pubDate>
+      <pubDate>Tue, 05 May 2026 00:58:09 +0000</pubDate>
     </item>
     <item>
       <title>New 2026 ‘IOCTA’ highlights sophisticated tactics and emerging challenges in the digital landscape</title>
@@ -184,7 +97,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.54</comments>
-      <pubDate>Mon, 04 May 2026 21:56:24 +0000</pubDate>
+      <pubDate>Tue, 05 May 2026 00:58:09 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported global operation targets over 75 000 users engaged in DDoS attacks</title>
@@ -194,7 +107,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.59</comments>
-      <pubDate>Mon, 04 May 2026 21:56:24 +0000</pubDate>
+      <pubDate>Tue, 05 May 2026 00:58:09 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-388)</title>
@@ -203,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-388</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Mon, 27 Apr 2026 13:56:02 +0000</pubDate>
     </item>
     <item>
@@ -213,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-389</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Mon, 27 Apr 2026 14:10:43 +0000</pubDate>
     </item>
     <item>
@@ -223,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-390</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Mon, 27 Apr 2026 14:17:44 +0000</pubDate>
     </item>
     <item>
@@ -233,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-391</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Mon, 27 Apr 2026 14:28:27 +0000</pubDate>
     </item>
     <item>
@@ -243,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-392</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Mon, 27 Apr 2026 14:36:38 +0000</pubDate>
     </item>
     <item>
@@ -253,7 +166,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-393</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Mon, 27 Apr 2026 14:42:57 +0000</pubDate>
     </item>
     <item>
@@ -263,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-394</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Mon, 27 Apr 2026 14:50:27 +0000</pubDate>
     </item>
     <item>
@@ -273,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/notepad-security-advisory-av26-395</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Mon, 27 Apr 2026 14:56:42 +0000</pubDate>
     </item>
     <item>
@@ -283,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-396</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Mon, 27 Apr 2026 15:02:49 +0000</pubDate>
     </item>
     <item>
@@ -293,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-397</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.64</comments>
       <pubDate>Mon, 27 Apr 2026 18:57:47 +0000</pubDate>
     </item>
     <item>
@@ -303,7 +216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av26-398</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Tue, 28 Apr 2026 13:31:59 +0000</pubDate>
     </item>
     <item>
@@ -313,7 +226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-399</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Tue, 28 Apr 2026 13:39:41 +0000</pubDate>
     </item>
     <item>
@@ -323,7 +236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-400</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Tue, 28 Apr 2026 13:46:25 +0000</pubDate>
     </item>
     <item>
@@ -333,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-401</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Tue, 28 Apr 2026 15:16:14 +0000</pubDate>
     </item>
     <item>
@@ -343,7 +256,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-april-2026-monthly-rollup-av26-352</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Tue, 28 Apr 2026 17:39:01 +0000</pubDate>
     </item>
     <item>
@@ -353,7 +266,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-402</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Wed, 29 Apr 2026 11:43:30 +0000</pubDate>
     </item>
     <item>
@@ -363,7 +276,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-403</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Wed, 29 Apr 2026 14:40:42 +0000</pubDate>
     </item>
     <item>
@@ -373,7 +286,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-405</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Wed, 29 Apr 2026 17:23:02 +0000</pubDate>
     </item>
     <item>
@@ -383,7 +296,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Wed, 29 Apr 2026 18:21:48 +0000</pubDate>
     </item>
     <item>
@@ -393,7 +306,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-406</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Thu, 30 Apr 2026 13:57:41 +0000</pubDate>
     </item>
     <item>
@@ -403,7 +316,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-407</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.34</comments>
+      <comments>Score: 8.30</comments>
       <pubDate>Thu, 30 Apr 2026 14:52:00 +0000</pubDate>
     </item>
     <item>
@@ -413,48 +326,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-010-cyber-criminals-social-engineering-enabled-compromise-enterprise-saas-environments</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Thu, 30 Apr 2026 15:28:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>cPanel security advisory (AV26-404) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-404</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-404</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
-      <pubDate>Thu, 30 Apr 2026 18:04:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV26-408)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-408</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-408</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
-      <pubDate>Thu, 30 Apr 2026 19:28:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV26-409)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-409</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-409</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
-      <pubDate>Thu, 30 Apr 2026 19:42:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>Progress security advisory (AV26-410)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-410</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-410</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
-      <pubDate>Thu, 30 Apr 2026 19:52:32 +0000</pubDate>
     </item>
     <item>
       <title>How CISOs should utilize data security posture management to inform risk</title>
@@ -552,7 +425,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4166051/how-cisos-should-utilize-data-security-posture-management-to-inform-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Mon, 04 May 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -819,8 +692,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4166139/the-fake-it-worker-problem-cisos-cant-ignore.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Mon, 04 May 2026 09:01:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>cPanel security advisory (AV26-404) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-404</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-404</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.34</comments>
+      <pubDate>Thu, 30 Apr 2026 18:04:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-408)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-408</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-408</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.36</comments>
+      <pubDate>Thu, 30 Apr 2026 19:28:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV26-409)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-409</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-409</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.36</comments>
+      <pubDate>Thu, 30 Apr 2026 19:42:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Progress security advisory (AV26-410)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-410</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-410</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.37</comments>
+      <pubDate>Thu, 30 Apr 2026 19:52:32 +0000</pubDate>
     </item>
     <item>
       <title>Security agencies draw red lines around agentic AI deployments</title>
@@ -902,7 +815,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4166479/security-agencies-draw-red-lines-around-agentic-ai-deployments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 04 May 2026 11:45:17 +0000</pubDate>
     </item>
     <item>
@@ -912,7 +825,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-411</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Fri, 01 May 2026 14:22:01 +0000</pubDate>
     </item>
     <item>
@@ -922,7 +835,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-412</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Fri, 01 May 2026 17:09:46 +0000</pubDate>
     </item>
     <item>
@@ -932,8 +845,91 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-009-vulnerability-affecting-linux-cve-2026-31431</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.79</comments>
+      <comments>Score: 8.73</comments>
       <pubDate>Fri, 01 May 2026 18:42:43 +0000</pubDate>
+    </item>
+    <item>
+      <title>Anthropic Mythos spurs White House to weigh pre-release reviews for high-risk AI models</title>
+      <link>https://www.csoonline.com/article/4166824/anthropic-mythos-spurs-white-house-to-weigh-pre-release-reviews-for-high-risk-ai-models.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;The Trump administration is in early discussions about whether advanced AI models should be vetted before public release, according to reporting from the &lt;a href="https://www.nytimes.com/2026/05/04/technology/trump-ai-models.html"&gt;New York Times&lt;/a&gt;, the &lt;a href="https://www.wsj.com/tech/ai/white-house-officials-discuss-assessing-ai-models-that-pose-security-risks-5c9e4b9e"&gt;Wall Street Journal,&lt;/a&gt; and &lt;a href="https://www.axios.com/2026/05/04/trump-white-house-ai-safety-tests-mythos"&gt;Axios&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;The conversations center on systems capable of facilitating cyberattacks, particularly models that could help users identify and exploit software vulnerabilities. Officials are considering several options, including formal pre-release review processes and government-led testing for higher-risk systems. No proposal has been finalized, and no timeline has been set.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="what-has-changed"&gt;What has changed&lt;/h2&gt;
+
+
+
+&lt;p&gt;The discussions mark a shift in tone, if not yet in policy. On Jan. 20, 2025, Donald Trump’s first day back in office during his second term, he &lt;a href="https://www.cio.com/article/3806594/trump-repeals-bidens-ai-oversight-order-shifts-focus-to-innovation-driven-policies.html"&gt;revoked Biden’s Executive Order 14110&lt;/a&gt; on Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence.&lt;/p&gt;
+
+
+
+&lt;p&gt;Three days later, he issued his &lt;a href="https://www.whitehouse.gov/presidential-actions/2025/01/removing-barriers-to-american-leadership-in-artificial-intelligence/"&gt;own order&lt;/a&gt;, “Removing Barriers to American Leadership in Artificial Intelligence,” signaling a significant shift away from the Biden administration’s emphasis on oversight and risk mitigation toward a framework centered on deregulation and the promotion of AI innovation.&lt;/p&gt;
+
+
+
+&lt;p&gt;Among the things that order effectively ended: The Biden framework had introduced mandatory red-teaming for high-risk AI models, enhanced cybersecurity protocols, and monitoring requirements for AI used in critical infrastructure. The new discussions suggest certain security risks — particularly those tied to offensive cyber capabilities — warrant a more interventionist posture, even as the administration remains broadly opposed to sweeping AI regulation.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-mythos-factor"&gt;The Mythos factor&lt;/h2&gt;
+
+
+
+&lt;p&gt;The discussion follows Anthropic’s &lt;a href="https://www.csoonline.com/article/4158117/anthropics-mythos-signals-a-structural-cybersecurity-shift.html"&gt;recent introduction of Mythos&lt;/a&gt;, a model the company has described as representing a watershed moment for cybersecurity.&lt;/p&gt;
+
+
+
+&lt;p&gt;Anthropic has said Mythos Preview has found thousands of high-severity vulnerabilities, including some in every major operating system and web browser, and that AI models have reached a level of coding capability where they can surpass all but the most skilled humans at finding and exploiting software vulnerabilities. In &lt;a href="https://red.anthropic.com/2026/mythos-preview/"&gt;one benchmark&lt;/a&gt;, the company reported significantly higher success rates compared to earlier models.&lt;/p&gt;
+
+
+
+&lt;p&gt;Anthropic has not released the model publicly. Instead, &lt;a href="https://www.csoonline.com/article/4155342/what-anthropic-glasswing-reveals-about-the-future-of-vulnerability-discovery.html"&gt;it launched Project Glasswing&lt;/a&gt;, committing up to $100 million in usage credits to a select group of technology and cybersecurity companies to use Mythos for defensive purposes — finding and patching vulnerabilities before malicious actors can exploit them.&lt;/p&gt;
+
+
+
+&lt;p&gt;Anthropic has also been &lt;a href="https://www.axios.com/2026/04/07/anthropic-mythos-preview-cybersecurity-risks"&gt;briefing&lt;/a&gt; the Cybersecurity and Infrastructure Security Agency, the Commerce Department, and other stakeholders on the potential risks and benefits of Mythos Preview. OpenAI &lt;a href="https://www.bloomberg.com/news/articles/2026-04-14/openai-releases-cyber-model-to-limited-group-in-race-with-mythos"&gt;has developed&lt;/a&gt; a comparable model and has released it to a small set of companies through an existing trusted-access program.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="what-a-review-might-mean"&gt;What a review might mean&lt;/h2&gt;
+
+
+
+&lt;p&gt;Pre-release evaluation of AI models is not a new idea, but it remains poorly defined in the US policy context. The Biden executive order Trump revoked had required developers of the largest AI systems to notify the government and share safety test results before deployment — one of several provisions the Trump administration characterized as burdensome obstacles to innovation.&lt;/p&gt;
+
+
+
+&lt;p&gt;The institutional picture has also shifted. The US AI Safety Institute, created under the Biden order to conduct pre-deployment evaluation and housed within the National Institute of Standards and Technology, was substantially reorganized after Trump took office. In June 2025, the agency &lt;a href="https://www.commerce.gov/news/press-releases/2025/06/statement-us-secretary-commerce-howard-lutnick-transforming-us-ai#:~:text=Statement%20from%20U.S.%20Secretary%20of,Innovation%20%7C%20U.S.%20Department%20of%20Commerce"&gt;was renamed&lt;/a&gt; the Center for AI Standards and Innovation, and its mission was revised.&lt;/p&gt;
+
+
+
+&lt;p&gt;Commerce Secretary Howard Lutnick framed the change as a repudiation of what he called the use of safety as a pretext for censorship and regulation. The renamed center’s mandate now includes leading unclassified evaluations of AI capabilities that may pose risks to national security, with a stated focus on demonstrable risks such as cybersecurity, biosecurity, and chemical weapons, potentially positioning it to play a role in any future review process.&lt;/p&gt;
+
+
+
+&lt;p&gt;Other governments have moved further and faster. The &lt;a href="https://www.aisi.gov.uk/"&gt;UK’s AI Security Institute&lt;/a&gt; has conducted pre-deployment evaluations of several frontier models, working directly with labs, including Anthropic and OpenAI, to assess risk thresholds before release. The &lt;a href="https://artificialintelligenceact.eu/"&gt;EU AI Act&lt;/a&gt;, which began phasing in last year, establishes mandatory conformity assessments for high-risk AI applications.&lt;/p&gt;
+
+
+
+&lt;p&gt;The US has not established a comparable framework or legal authority to require such reviews.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4166824/anthropic-mythos-spurs-white-house-to-weigh-pre-release-reviews-for-high-risk-ai-models.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.89</comments>
+      <pubDate>Tue, 05 May 2026 00:24:55 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-413)</title>
@@ -942,7 +938,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-413</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.59</comments>
+      <comments>Score: 10.48</comments>
       <pubDate>Mon, 04 May 2026 13:29:04 +0000</pubDate>
     </item>
     <item>
@@ -952,7 +948,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-414</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.59</comments>
+      <comments>Score: 10.48</comments>
       <pubDate>Mon, 04 May 2026 13:35:29 +0000</pubDate>
     </item>
     <item>
@@ -962,7 +958,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-415</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.60</comments>
+      <comments>Score: 10.49</comments>
       <pubDate>Mon, 04 May 2026 13:44:59 +0000</pubDate>
     </item>
     <item>
@@ -972,7 +968,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-416</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.60</comments>
+      <comments>Score: 10.49</comments>
       <pubDate>Mon, 04 May 2026 13:53:59 +0000</pubDate>
     </item>
     <item>
@@ -982,7 +978,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-417</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.62</comments>
+      <comments>Score: 10.50</comments>
       <pubDate>Mon, 04 May 2026 14:13:38 +0000</pubDate>
     </item>
     <item>
@@ -992,7 +988,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-418</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.62</comments>
+      <comments>Score: 10.51</comments>
       <pubDate>Mon, 04 May 2026 14:17:57 +0000</pubDate>
     </item>
     <item>
@@ -1002,7 +998,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-419</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.73</comments>
+      <comments>Score: 10.61</comments>
       <pubDate>Mon, 04 May 2026 17:13:34 +0000</pubDate>
     </item>
   </channel>
