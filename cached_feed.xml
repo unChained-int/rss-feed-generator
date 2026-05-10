@@ -8,183 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 May 2026 15:58:27 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 17:05:09 +0000</lastBuildDate>
     <item>
-      <title>Pen tests show AI security flaws far more severe than legacy software bugs</title>
-      <link>https://www.csoonline.com/article/4166185/pen-tests-show-ai-security-flaws-far-more-severe-than-legacy-software-bugs.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Penetration tests of AI-based systems are revealing a greater percentage of high-risk flaws than those discovered in legacy systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;Security consultancy &lt;a href="https://www.cobalt.io/blog/5-key-takeaways-from-the-2026-state-of-pentesting-report"&gt;Cobalt’s annual State of Pentesting Report&lt;/a&gt; reveals that 32% of all AI and large language model (LLM) findings are rated as high risk — nearly 2.5 times the rate (13%) of severe flaws found in enterprise security tests more generally.&lt;/p&gt;
-
-
-
-&lt;p&gt;LLM vulnerabilities also have the lowest resolution rate of all app types pen-tested, with just 38% of high-risk issues fixed, according to data collected during pen tests conducted by Cobalt.&lt;/p&gt;
-
-
-
-&lt;p&gt;Furthermore, one in five organizations surveyed by Cobalt reported experiencing an LLM security incident in the past year, with a further 18% “unsure” and 19% preferring not to answer.&lt;/p&gt;
-
-
-
-&lt;p&gt;Third-party security experts quizzed by CSO say Cobalt’s findings align with what they’ve seen on the ground.&lt;/p&gt;
-
-
-
-&lt;p&gt;“AI systems are being rolled out quickly, but often without the same mature security controls, testing discipline, and governance applied to conventional enterprise software,” says Benny Lakunishok, CEO and co-founder of Zero Networks. “That naturally increases the share of serious findings.”&lt;/p&gt;
-
-
-
-&lt;p&gt;William Wright, CEO of penetration testing firm Closed Door Security, argues that the main issue &lt;a href="https://www.csoonline.com/article/4116923/output-from-vibe-coding-tools-prone-to-critical-security-flaws-study-finds.html"&gt;comes from vibe coders writing systems&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;“AI only does what it’s told, for the most part, and systems that get deployed are usually cobbled together by people without the technical knowledge,” Wright adds. “The same people then are expected to fix the issue, so it’s a vicious circle.”&lt;/p&gt;
-
-
-
-&lt;p&gt;David Girvin, AI security researcher at Sumo Logic, agrees.&lt;/p&gt;
-
-
-
-&lt;p&gt;“LLM-driven systems are showing a higher percentage of high-risk findings because we’ve essentially taken a probabilistic engine, plugged it directly into business workflows, and hoped it behaves,” he says. “That’s not a security strategy.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="emerging-attack-surfaces-larger-blast-radius"&gt;Emerging attack surfaces, larger blast radius&lt;/h2&gt;
-
-
-
-&lt;p&gt;The top concern is prompt injection, now ranked by OWASP as the &lt;a href="https://www.csoonline.com/article/575497/owasp-lists-10-most-critical-large-language-model-vulnerabilities.html"&gt;No. 1 risk for LLM applications&lt;/a&gt;, with reports on bug bounty platform HackerOne &lt;a href="https://www.hackerone.com/press-release/hackerone-report-finds-210-spike-ai-vulnerability-reports-amid-rise-ai-autonomy"&gt;surging more than six-fold (540%)&lt;/a&gt; year over year.&lt;/p&gt;
-
-
-
-&lt;p&gt;“While the headline issue is prompt injection, the broader concern here is whether attackers can use the model as an entry point to bypass guardrails, leak data, manipulate decisions, or trigger unintended behavior across integrated workflows,” says Taegh Sokhey, staff project manager for AI security at HackerOne.&lt;/p&gt;
-
-
-
-&lt;p&gt;Experts say there are several main reasons AI systems tend to generate a higher percentage of high-risk vulnerabilities:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;AI systems introduce newer attack surfaces many organizations are still learning to defend.&lt;/strong&gt; &lt;a href="https://www.csoonline.com/article/4110008/top-cyber-threats-to-your-ai-systems-and-infrastructure.html"&gt;These risk vectors&lt;/a&gt; include prompt injection, insecure plug-ins, data leakage, model supply-chain risk, unsafe agent behavior, excessive permissions, and over-trusted integrations with internal systems.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;The blast radius for AI system flaws can be much larger when something goes wrong&lt;/strong&gt;. Many LLM deployments are connected to internal knowledge bases, workflows, code repositories, customer data, or privileged tools. That means a single weakness can expose multiple systems.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;AI system vulnerability remediation ownership is often fragmented&lt;/strong&gt;. “AI initiatives typically span engineering, security, legal, procurement, and business teams,” according to Zero Networks’ Lakunishok. “That slows fixes and helps explain why remediation rates are lower than for traditional applications.”&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="no-remediation-playbook"&gt;No remediation playbook&lt;/h2&gt;
-
-
-
-&lt;p&gt;Adrian Furtuna, founder and CEO at Pentest-Tools.com, underscores that Cobalt’s finding of low remediation rates for LLMs and AIs is more telling than the high-risk rate.&lt;/p&gt;
-
-
-
-&lt;p&gt;“A 38% fix rate for high-risk LLM findings is low even by the standards of application security, where remediation has always lagged discovery,” Furtuna says. “What that gap reflects is that development teams don’t yet have established patterns for fixing LLM vulnerabilities the way they do for, say, SQL injection or XXE [XML External Entity injection].”&lt;/p&gt;
-
-
-
-&lt;p&gt;When a developer sees a traditional system injection issue, they know the remediation playbook, but there is no established procedure for resolving flaws in AI-based systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;“When they see a prompt injection chain or an insecure tool call boundary, they often don’t [have a playbook], and that uncertainty stalls action even when the severity rating is clear,” Furtuna notes.&lt;/p&gt;
-
-
-
-&lt;p&gt;Architecture and maturity factors also play a role in AI systems throwing up a greater percentage of high-risk vulnerabilities. Moreover, LLM integrations concentrate trust in ways that traditional application components avoid. As a result, the attack surface broadens, and trust boundaries are often implicit rather than explicitly enforced, magnifying the impact of any flaws, Furtuna says.&lt;/p&gt;
-
-
-
-&lt;p&gt;“A model that has access to internal tools, retrieval pipelines, and external APIs represents a large-radius blast zone if its input handling is weak,” he adds. “Prompt injection in that context isn’t a nuisance — it’s a path to data exfiltration, privilege escalation, or supply chain manipulation, depending on what the model can reach.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Secure development practices for LLM integrations are still forming, an immaturity or knowledge gap that shows up directly in pen test findings.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The &lt;a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/"&gt;OWASP LLM Top 10&lt;/a&gt; is relatively recent,” Furtuna explains. “Most developers building on top of foundation models are doing so without the equivalent of decades of institutional knowledge about input validation, output handling, and authorization boundary design that exists for web applications.”&lt;/p&gt;
-
-
-
-&lt;p&gt;LLMs collapse trust boundaries — lacking the predictable input/output flows of regular legacy apps — a problem compounded by the wide-ranging permissions routinely granted to AI systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Most organizations try to secure agents and LLM systems at the identity layer, give the model a role and hope guardrails hold,” says Sumo Logic’s Girvin. “But if an attacker can steer the model — prompt injection, social engineering, etc. — they inherit its permissions. That’s why the impact spikes.”&lt;/p&gt;
-
-
-
-&lt;p&gt;HackerOne’s Sokhey adds: “AI applications are producing a disproportionate number of high-risk issues because they create an entirely new layer of attack surface, one that is non-deterministic, rapidly changing, and often connected to sensitive data, internal systems, and autonomous actions.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="countermeasures"&gt;Countermeasures&lt;/h2&gt;
-
-
-
-&lt;p&gt;Experts advise CISOs to stop &lt;a href="https://www.csoonline.com/article/3529615/companies-skip-security-hardening-in-rush-to-adopt-ai.html"&gt;skipping security hardening in a rush to implement AI&lt;/a&gt; and instead treat AI systems as production systems rather than experiments.&lt;/p&gt;
-
-
-
-&lt;p&gt;“That means threat modeling before deployment, red teaming and adversarial testing throughout the lifecycle, least-privilege access for models and agents, strong identity controls, segmentation around sensitive data, continuous monitoring, and rapid containment mechanisms when abnormal behaviour is detected,” says Zero Networks’ Lakunishok.&lt;/p&gt;
-
-
-
-&lt;p&gt;Pentest-Tools.com’s Furtuna argues that established best practices can be applied to the new architecture of LLMs provided they are deliberately designed into the systems from the get-go rather than bolted on as an afterthought.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Strict tool call schemas, explicit output validation before downstream actions execute, human approval gates on high-consequence operations, and minimal privilege for model-accessible integrations all limit what a successfully exploited prompt injection can actually reach,” Furtuna says.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4166185/pen-tests-show-ai-security-flaws-far-more-severe-than-legacy-software-bugs.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
-      <pubDate>Fri, 08 May 2026 09:01:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>SonicWall security advisory (AV26-405)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-405</link>
+      <title>Jenkins security advisory (AV26-403)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-403</link>
       <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-405</guid>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-403</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
-      <pubDate>Wed, 29 Apr 2026 17:23:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-008 - Vulnerability affecting cPanel and WebHost Manager (WHM) - CVE-2026-41940</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
-      <pubDate>Wed, 29 Apr 2026 18:21:48 +0000</pubDate>
+      <comments>Score: 7.25</comments>
+      <pubDate>Wed, 29 Apr 2026 14:40:42 +0000</pubDate>
     </item>
     <item>
       <title>Your CTEM program is probably ignoring MCP. Here’s how to fix it</title>
@@ -300,8 +133,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4168493/your-ctem-program-is-probably-ignoring-mcp-heres-how-to-fix-it.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Fri, 08 May 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>SonicWall security advisory (AV26-405)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-405</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-405</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.26</comments>
+      <pubDate>Wed, 29 Apr 2026 17:23:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-008 - Vulnerability affecting cPanel and WebHost Manager (WHM) - CVE-2026-41940</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.26</comments>
+      <pubDate>Wed, 29 Apr 2026 18:21:48 +0000</pubDate>
     </item>
     <item>
       <title>GitLab security advisory (AV26-406)</title>
@@ -330,7 +183,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-010-cyber-criminals-social-engineering-enabled-compromise-enterprise-saas-environments</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.32</comments>
       <pubDate>Thu, 30 Apr 2026 15:28:27 +0000</pubDate>
     </item>
     <item>
@@ -340,7 +193,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-404</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 30 Apr 2026 18:04:58 +0000</pubDate>
     </item>
     <item>
@@ -381,7 +234,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.38</comments>
-      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft Edge security advisory (AV26-411)</title>
@@ -400,7 +253,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-412</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 01 May 2026 17:09:46 +0000</pubDate>
     </item>
     <item>
@@ -421,7 +274,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
     </item>
     <item>
       <title>Call centres dismantled and ten arrested in EUR 50 million online fraud case</title>
@@ -431,7 +284,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
     </item>
     <item>
       <title>Europol and partners track down 45 forcibly transferred Ukrainian children</title>
@@ -441,7 +294,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.49</comments>
-      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
     </item>
     <item>
       <title>Atlantic ‘Cocaine Highway’ broken in coordinated maritime operation</title>
@@ -451,7 +304,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
     </item>
     <item>
       <title>Europol announces transition arrangements following the departure of Executive Director Catherine De Bolle</title>
@@ -461,17 +314,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports hit against ‘Black Axe’ criminal organisation in Switzerland: 10 arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-hit-against-black-axe-criminal-organisation-in-switzerland-10-arrests</link>
-      <description>Europol has supported a comprehensive investigation conducted by Swiss authorities in collaboration with German law enforcement against members of the international criminal organisation ‘Black Axe’. On 28 April 2026, house searches were carried out in several Swiss cantons, resulting in a total of 10 arrests, including the Black Axe “Regional Head” for the Southern European region. This operation targeted leaders...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-hit-against-black-axe-criminal-organisation-in-switzerland-10-arrests</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
     </item>
     <item>
       <title>“Terrorgram” network dealt another blow as member sentenced in Denmark</title>
@@ -481,7 +324,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol supports hit against ‘Black Axe’ criminal organisation in Switzerland: 10 arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-hit-against-black-axe-criminal-organisation-in-switzerland-10-arrests</link>
+      <description>Europol has supported a comprehensive investigation conducted by Swiss authorities in collaboration with German law enforcement against members of the international criminal organisation ‘Black Axe’. On 28 April 2026, house searches were carried out in several Swiss cantons, resulting in a total of 10 arrests, including the Black Axe “Regional Head” for the Southern European region. This operation targeted leaders...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-hit-against-black-axe-criminal-organisation-in-switzerland-10-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
     </item>
     <item>
       <title>New 2026 ‘IOCTA’ highlights sophisticated tactics and emerging challenges in the digital landscape</title>
@@ -491,7 +344,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.54</comments>
-      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported global operation targets over 75 000 users engaged in DDoS attacks</title>
@@ -501,7 +354,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.59</comments>
-      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-413)</title>
@@ -510,7 +363,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-413</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Mon, 04 May 2026 13:29:04 +0000</pubDate>
     </item>
     <item>
@@ -520,7 +373,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-414</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Mon, 04 May 2026 13:35:29 +0000</pubDate>
     </item>
     <item>
@@ -530,7 +383,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-415</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Mon, 04 May 2026 13:44:59 +0000</pubDate>
     </item>
     <item>
@@ -540,7 +393,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-416</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Mon, 04 May 2026 13:53:59 +0000</pubDate>
     </item>
     <item>
@@ -550,7 +403,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-417</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 04 May 2026 14:13:38 +0000</pubDate>
     </item>
     <item>
@@ -560,7 +413,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-418</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 04 May 2026 14:17:57 +0000</pubDate>
     </item>
     <item>
@@ -570,7 +423,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-419</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 04 May 2026 17:13:34 +0000</pubDate>
     </item>
     <item>
@@ -580,7 +433,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-may-2026-monthly-rollup-av26-420</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Tue, 05 May 2026 12:58:43 +0000</pubDate>
     </item>
     <item>
@@ -590,7 +443,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-may-2026-monthly-rollup-av26-421</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Tue, 05 May 2026 13:09:14 +0000</pubDate>
     </item>
     <item>
@@ -600,7 +453,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-422</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Tue, 05 May 2026 13:51:15 +0000</pubDate>
     </item>
     <item>
@@ -610,7 +463,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-423</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 05 May 2026 19:03:10 +0000</pubDate>
     </item>
     <item>
@@ -620,7 +473,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-424</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Tue, 05 May 2026 20:34:17 +0000</pubDate>
     </item>
     <item>
@@ -630,7 +483,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-426</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Wed, 06 May 2026 13:37:09 +0000</pubDate>
     </item>
     <item>
@@ -640,7 +493,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-427</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Wed, 06 May 2026 13:44:41 +0000</pubDate>
     </item>
     <item>
@@ -650,7 +503,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Wed, 06 May 2026 17:24:20 +0000</pubDate>
     </item>
     <item>
@@ -660,7 +513,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Wed, 06 May 2026 17:28:06 +0000</pubDate>
     </item>
     <item>
@@ -670,7 +523,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Wed, 06 May 2026 18:03:36 +0000</pubDate>
     </item>
     <item>
@@ -680,7 +533,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Wed, 06 May 2026 19:25:00 +0000</pubDate>
     </item>
     <item>
@@ -690,7 +543,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-431</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Thu, 07 May 2026 13:48:23 +0000</pubDate>
     </item>
     <item>
@@ -700,7 +553,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vm2-nodejs-library-security-advisory-av26-432</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Thu, 07 May 2026 13:54:19 +0000</pubDate>
     </item>
     <item>
@@ -710,7 +563,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-433</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Thu, 07 May 2026 14:00:58 +0000</pubDate>
     </item>
     <item>
@@ -720,7 +573,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-434</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Thu, 07 May 2026 15:30:27 +0000</pubDate>
     </item>
     <item>
@@ -730,7 +583,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-435</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Thu, 07 May 2026 15:35:50 +0000</pubDate>
     </item>
     <item>
@@ -740,7 +593,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.40</comments>
       <pubDate>Fri, 08 May 2026 16:08:21 +0000</pubDate>
     </item>
     <item>
@@ -750,7 +603,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.44</comments>
       <pubDate>Fri, 08 May 2026 17:39:10 +0000</pubDate>
     </item>
     <item>
@@ -760,7 +613,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Fri, 08 May 2026 18:49:02 +0000</pubDate>
     </item>
   </channel>
