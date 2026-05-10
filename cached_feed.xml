@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 May 2026 17:05:09 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 19:09:00 +0000</lastBuildDate>
+    <item>
+      <title>Google Chrome security advisory (AV26-402)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-402</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-402</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.24</comments>
+      <pubDate>Wed, 29 Apr 2026 11:43:30 +0000</pubDate>
+    </item>
     <item>
       <title>Jenkins security advisory (AV26-403)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-403</link>
@@ -16,125 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-403</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
+      <comments>Score: 7.24</comments>
       <pubDate>Wed, 29 Apr 2026 14:40:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Your CTEM program is probably ignoring MCP. Here’s how to fix it</title>
-      <link>https://www.csoonline.com/article/4168493/your-ctem-program-is-probably-ignoring-mcp-heres-how-to-fix-it.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Model Context Protocol (MCP) is the connective tissue of modern AI tooling and has quietly become one of the most significant blind spots in modern security programs. Like shadow IT before it, shadow AI — especially as it relates to MCP risk — introduces a new class of exposures that security teams lack adequate tooling to see and address. Integrating MCP risks into a Continuous Threat Exposure Management (CTEM) program can help security teams keep up by providing a structured methodology and the operational agility needed to surface MCP exposures before attackers do.&lt;/p&gt;
-
-
-
-&lt;p&gt;Security has always been a race between how fast the attack surface grows and how fast defenders can see it. &lt;a href="https://www.microsoft.com/en-us/security/business/security-101/what-is-vulnerability-management"&gt;Vulnerability Management &lt;/a&gt;was the first serious attempt to run that race systematically. It worked until the environment got too complex and security teams found themselves prioritizing what was loudest over what was most dangerous. &lt;a href="https://ctem.org/docs/what-is-continuous-threat-exposure-management"&gt;CTEM&lt;/a&gt; is built on the same core instinct to find exposures before attackers do but better reflects the business and technical realities of modern IT environments. Most mature security programs already have the bones of it. The question with MCP isn’t whether CTEM applies. It’s whether the scope has been extended to include it.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.anthropic.com/news/model-context-protocol"&gt;Introduced by Anthropic in late 2024&lt;/a&gt;, MCP acts as the plugin architecture for agentic AI. If your team isn’t scanning for, mapping or monitoring for MCP risks, you have a blind spot that grows every time a developer installs a new tool. MCP takes “old” risks such as supply chain attacks, hardcoded credentials, privilege escalation, remote code execution and makes them new again.&lt;/p&gt;
-
-
-
-&lt;p&gt;Here’s how:&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="shadow-ai-you-cant-secure-what-you-cant-see"&gt;Shadow AI: You can’t secure what you can’t see&lt;/h2&gt;
-
-
-
-&lt;p&gt;In 2025, &lt;a href="https://thehackernews.com/2025/09/first-malicious-mcp-server-found.html"&gt;researchers documented&lt;/a&gt; the first confirmed malicious MCP server in the wild. The vehicle was a npm package called postmark-mcp, a tool that helped developers integrate AI assistants with the Postmark email service. The attacker was patient. They published fifteen legitimate versions over time, built up roughly 1,500 weekly downloads and earned genuine trust in the developer community. Then a version shipped with a single injected line of code that BCC’d every single outgoing email to an external address.&lt;/p&gt;
-
-
-
-&lt;p&gt;Around 300 organizations were affected before anyone noticed. Password resets, invoices, internal memos, confidential documents — exfiltrated for weeks without tripping a single alert. The tactic mirrors the SolarWinds playbook: Establish legitimacy first, corrupt later and count on the fact that once something is trusted, it stops being scrutinized.&lt;/p&gt;
-
-
-
-&lt;p&gt;Enterprises have accumulated layers of governance to manage third-party software risk — procurement reviews, vendor assessments, security signoffs. The MCP ecosystem has none of that yet. Developers are pulling servers from npm the same way they pull any open-source dependency: Fast, on faith, without much thought about what happens when the tool connects to their AI agent and, through it, to internal data. That’s not a criticism; it’s a visibility problem. Visibility problems don’t get solved by policy. They get solved by knowing what’s in your environment.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="keys-under-the-doormat-hardcoded-credentials-in-ai-configurations"&gt;Keys under the doormat: Hardcoded credentials in AI configurations&lt;/h2&gt;
-
-
-
-&lt;p&gt;In 2023, &lt;a href="https://thehackernews.com/2024/03/over-225000-compromised-chatgpt.html"&gt;information-stealing malware&lt;/a&gt; harvested more than 225,000 ChatGPT credentials. Many came bundled with API keys developers had hardcoded directly into configuration files — not out of negligence, but out of the same logic that has always driven security shortcuts: It’s faster, it works and the consequences feel abstract until they aren’t.&lt;/p&gt;
-
-
-
-&lt;p&gt;The more instructive scenario is simpler: A developer accidentally commits a production .env file containing API keys for OpenAI, Stripe, AWS and SendGrid. Automated bots find it within hours. Fraudulent cloud charges follow. No sophisticated attacker required — just a mistake that sat in a repository long enough for a scanner to find it.&lt;/p&gt;
-
-
-
-&lt;p&gt;MCP makes this structurally worse because AI agents require credentials to function. They need keys for the LLM, keys for cloud services and keys for third-party integrations. Those keys have to go somewhere the agent can reach them: Environment variables in config files, plain text in markdown instruction files or hardcoded into the server definition itself. All of it is a static plaintext target. Hackers don’t need to break in if they can just log in. The question is whether your scanning programs have been pointed at MCP server configurations, the markdown context files AI agents consume and the environment variable blocks where credentials live. Most haven’t been.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="god-mode-when-over-privileged-ai-agents-get-compromised"&gt;‘God mode’: When over-privileged AI agents get compromised&lt;/h2&gt;
-
-
-
-&lt;p&gt;Running AI agents with elevated privileges is common. In 2025, researchers needed two CVEs just to start making the case. &lt;a href="https://www.cve.org/CVERecord?id=CVE-2025-6514"&gt;CVE-2025-6514&lt;/a&gt;, a remote code execution flaw in mcp-remote scoring 9.6 on the CVSS scale, was the first demonstrated full RCE on a client system through an MCP connection — triggered simply by connecting to an untrusted server. &lt;a href="https://www.cve.org/CVERecord?id=CVE-2025-49596"&gt;CVE-2025-49596&lt;/a&gt;, affecting Anthropic’s own MCP Inspector, scored 9.4 and achieved the same outcome through a chained browser exploit, giving attackers complete access to developer machines.&lt;/p&gt;
-
-
-
-&lt;p&gt;Beyond the CVEs, researchers found MCP servers configured with elevated privilege commands — sudo, doas, runas — baked in from the start because admin rights made development easier and nobody tightened them afterward. This pattern was documented as part of the &lt;a href="https://thehackernews.com/2025/12/researchers-uncover-30-flaws-in-ai.html"&gt;IDEsaster research&lt;/a&gt; by security researcher Ari Marzouk, which catalogued over 30 vulnerabilities across Cursor, GitHub Copilot, Windsurf and others. AI IDEs had effectively removed the base software from their own threat model — existing features were treated as safe because they’d been there for years, until an autonomous agent arrived that could invoke them without asking.&lt;/p&gt;
-
-
-
-&lt;p&gt;If an agent in your network gets compromised, the question isn’t whether it can exfiltrate data — it’s whether it has permission to wipe a server or install ransomware. That’s a configuration question, and most organizations don’t know the answer.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-ctem-addresses-this-and-what-it-takes-to-get-there"&gt;How CTEM addresses this — and what it takes to get there&lt;/h2&gt;
-
-
-
-&lt;p&gt;CTEM is the right framework not because it was designed with MCP in mind, but because it was designed for attack surfaces that expand faster than security teams can track, the five phases each have direct application here:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Scoping&lt;/strong&gt; requires an honest admission: The AI toolchain isn’t in scope yet, and it needs to be. That means explicitly defining developer workstations, AI coding environments and MCP configurations as assets worth protecting. It also requires early alignment with engineering leadership, because the remediation work lands on development teams and they need to understand the risk before they’ll engage.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Discovery&lt;/strong&gt; follows. MCP servers don’t appear in traditional asset inventories. They live in developer workstations, AI tool configurations and npm packages installed in twenty seconds — without a change ticket. Finding them means actively enumerating configured MCP servers and detecting changes between scans. A server that updates silently is the postmark-mcp scenario replaying itself.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Prioritization&lt;/strong&gt; means resisting the urge to flag everything and work through it linearly. The better frame is attacker impact: What can someone actually do from this exposure, and where does it connect? Risk signals like network-based transports, API keys in environment variables or instruction files, and elevated privilege commands in server definitions help separate serious problems from lower-urgency ones.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Validation&lt;/strong&gt; tests whether flagged exposures are actually exploitable in context, using techniques like attack path mapping and breach and attack simulation to confirm what’s real risk versus theoretical.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Mobilization&lt;/strong&gt; is harder than the technical work. Developers experience MCP servers as infrastructure that makes their jobs faster, not as a security concern. Talking about security with developers goes better when they’re concrete: Here’s the tool, here’s what it can access, here’s the attack path. Specificity converts advice into a remediation ticket that actually gets closed.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;None of this requires a new program, just an extension of an existing one. Security caught up with cloud. It’s catching up with AI now. The only question is whether your program gets there before an attacker does.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4168493/your-ctem-program-is-probably-ignoring-mcp-heres-how-to-fix-it.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.25</comments>
-      <pubDate>Fri, 08 May 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV26-405)</title>
@@ -143,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-405</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Wed, 29 Apr 2026 17:23:02 +0000</pubDate>
     </item>
     <item>
@@ -153,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Wed, 29 Apr 2026 18:21:48 +0000</pubDate>
     </item>
     <item>
@@ -163,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-406</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
+      <comments>Score: 7.31</comments>
       <pubDate>Thu, 30 Apr 2026 13:57:41 +0000</pubDate>
     </item>
     <item>
@@ -173,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-407</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
+      <comments>Score: 7.31</comments>
       <pubDate>Thu, 30 Apr 2026 14:52:00 +0000</pubDate>
     </item>
     <item>
@@ -193,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-404</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.32</comments>
       <pubDate>Thu, 30 Apr 2026 18:04:58 +0000</pubDate>
     </item>
     <item>
@@ -203,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-408</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 30 Apr 2026 19:28:55 +0000</pubDate>
     </item>
     <item>
@@ -213,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-409</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 30 Apr 2026 19:42:15 +0000</pubDate>
     </item>
     <item>
@@ -223,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-410</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 30 Apr 2026 19:52:32 +0000</pubDate>
     </item>
     <item>
@@ -234,7 +127,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.38</comments>
-      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 17:09:00 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft Edge security advisory (AV26-411)</title>
@@ -243,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-411</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Fri, 01 May 2026 14:22:01 +0000</pubDate>
     </item>
     <item>
@@ -253,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-412</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Fri, 01 May 2026 17:09:46 +0000</pubDate>
     </item>
     <item>
@@ -263,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-009-vulnerability-affecting-linux-cve-2026-31431</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 01 May 2026 18:42:43 +0000</pubDate>
     </item>
     <item>
@@ -274,7 +167,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 17:09:00 +0000</pubDate>
     </item>
     <item>
       <title>Call centres dismantled and ten arrested in EUR 50 million online fraud case</title>
@@ -284,7 +177,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 17:09:00 +0000</pubDate>
     </item>
     <item>
       <title>Europol and partners track down 45 forcibly transferred Ukrainian children</title>
@@ -294,7 +187,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.49</comments>
-      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 17:09:00 +0000</pubDate>
     </item>
     <item>
       <title>Atlantic ‘Cocaine Highway’ broken in coordinated maritime operation</title>
@@ -304,7 +197,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 17:09:00 +0000</pubDate>
     </item>
     <item>
       <title>Europol announces transition arrangements following the departure of Executive Director Catherine De Bolle</title>
@@ -314,17 +207,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
-    </item>
-    <item>
-      <title>“Terrorgram” network dealt another blow as member sentenced in Denmark</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/terrorgram-network-dealt-another-blow-member-sentenced-in-denmark</link>
-      <description>A Danish-French national has been sentenced to six years in prison for terrorism-related offences by the District Court in Glostrup, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC). A Europol specialist was called to testify during the court proceedings. This underscores the European Law Enforcement Agency’s role in supporting judicial authorities with expert analysis.The 30-year-old man, based...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/terrorgram-network-dealt-another-blow-member-sentenced-in-denmark</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 17:09:00 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports hit against ‘Black Axe’ criminal organisation in Switzerland: 10 arrests</title>
@@ -334,7 +217,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 17:09:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>“Terrorgram” network dealt another blow as member sentenced in Denmark</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/terrorgram-network-dealt-another-blow-member-sentenced-in-denmark</link>
+      <description>A Danish-French national has been sentenced to six years in prison for terrorism-related offences by the District Court in Glostrup, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC). A Europol specialist was called to testify during the court proceedings. This underscores the European Law Enforcement Agency’s role in supporting judicial authorities with expert analysis.The 30-year-old man, based...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/terrorgram-network-dealt-another-blow-member-sentenced-in-denmark</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 10 May 2026 17:09:00 +0000</pubDate>
     </item>
     <item>
       <title>New 2026 ‘IOCTA’ highlights sophisticated tactics and emerging challenges in the digital landscape</title>
@@ -344,7 +237,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.54</comments>
-      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 17:09:00 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported global operation targets over 75 000 users engaged in DDoS attacks</title>
@@ -354,7 +247,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.59</comments>
-      <pubDate>Sun, 10 May 2026 15:05:09 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 17:09:00 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-413)</title>
@@ -363,7 +256,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-413</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Mon, 04 May 2026 13:29:04 +0000</pubDate>
     </item>
     <item>
@@ -373,7 +266,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-414</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Mon, 04 May 2026 13:35:29 +0000</pubDate>
     </item>
     <item>
@@ -383,7 +276,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-415</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Mon, 04 May 2026 13:44:59 +0000</pubDate>
     </item>
     <item>
@@ -393,7 +286,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-416</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Mon, 04 May 2026 13:53:59 +0000</pubDate>
     </item>
     <item>
@@ -403,7 +296,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-417</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Mon, 04 May 2026 14:13:38 +0000</pubDate>
     </item>
     <item>
@@ -413,7 +306,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-418</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Mon, 04 May 2026 14:17:57 +0000</pubDate>
     </item>
     <item>
@@ -423,7 +316,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-419</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 04 May 2026 17:13:34 +0000</pubDate>
     </item>
     <item>
@@ -433,7 +326,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-may-2026-monthly-rollup-av26-420</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Tue, 05 May 2026 12:58:43 +0000</pubDate>
     </item>
     <item>
@@ -443,7 +336,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-may-2026-monthly-rollup-av26-421</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.08</comments>
       <pubDate>Tue, 05 May 2026 13:09:14 +0000</pubDate>
     </item>
     <item>
@@ -453,7 +346,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-422</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.08</comments>
       <pubDate>Tue, 05 May 2026 13:51:15 +0000</pubDate>
     </item>
     <item>
@@ -463,7 +356,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-423</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Tue, 05 May 2026 19:03:10 +0000</pubDate>
     </item>
     <item>
@@ -473,7 +366,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-424</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Tue, 05 May 2026 20:34:17 +0000</pubDate>
     </item>
     <item>
@@ -483,7 +376,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-426</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Wed, 06 May 2026 13:37:09 +0000</pubDate>
     </item>
     <item>
@@ -493,7 +386,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-427</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Wed, 06 May 2026 13:44:41 +0000</pubDate>
     </item>
     <item>
@@ -503,7 +396,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Wed, 06 May 2026 17:24:20 +0000</pubDate>
     </item>
     <item>
@@ -513,7 +406,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Wed, 06 May 2026 17:28:06 +0000</pubDate>
     </item>
     <item>
@@ -523,7 +416,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Wed, 06 May 2026 18:03:36 +0000</pubDate>
     </item>
     <item>
@@ -533,7 +426,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Wed, 06 May 2026 19:25:00 +0000</pubDate>
     </item>
     <item>
@@ -543,7 +436,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-431</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.83</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Thu, 07 May 2026 13:48:23 +0000</pubDate>
     </item>
     <item>
@@ -553,7 +446,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vm2-nodejs-library-security-advisory-av26-432</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.83</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Thu, 07 May 2026 13:54:19 +0000</pubDate>
     </item>
     <item>
@@ -563,7 +456,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-433</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.83</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Thu, 07 May 2026 14:00:58 +0000</pubDate>
     </item>
     <item>
@@ -573,7 +466,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-434</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Thu, 07 May 2026 15:30:27 +0000</pubDate>
     </item>
     <item>
@@ -583,7 +476,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-435</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Thu, 07 May 2026 15:35:50 +0000</pubDate>
     </item>
     <item>
@@ -593,7 +486,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.40</comments>
+      <comments>Score: 9.35</comments>
       <pubDate>Fri, 08 May 2026 16:08:21 +0000</pubDate>
     </item>
     <item>
@@ -603,7 +496,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.44</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Fri, 08 May 2026 17:39:10 +0000</pubDate>
     </item>
     <item>
@@ -613,7 +506,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Fri, 08 May 2026 18:49:02 +0000</pubDate>
     </item>
   </channel>
