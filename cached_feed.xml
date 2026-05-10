@@ -8,206 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 May 2026 14:56:33 +0000</lastBuildDate>
-    <item>
-      <title>AL26-008 - Vulnerability affecting cPanel and WebHost Manager (WHM) - CVE-2026-41940</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
-      <pubDate>Wed, 29 Apr 2026 18:21:48 +0000</pubDate>
-    </item>
-    <item>
-      <title>Your refresh plan has a CVE blind spot</title>
-      <link>https://www.csoonline.com/article/4168484/your-refresh-plan-has-a-cve-blind-spot.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The conversation is straightforward, but the problem behind it is not. The customer bought servers in 2017 and typically refresh every five to six years. Generally, around the 2022 to 2023 timeframe, they would have looked to buy new.&lt;/p&gt;
-
-
-
-&lt;p&gt;Historically, that is what would have happened. But COVID hit, and there were supply chain constraints during COVID. The original end-of-life notice that would have landed around 2023 was extended: 2026 for general software updates and 2028 for security vulnerabilities.&lt;/p&gt;
-
-
-
-&lt;p&gt;That gave the customer roughly ten years of life on that server platform, which means middle school is right around the corner for this little guy, and this is a healthcare environment.&lt;/p&gt;
-
-
-
-&lt;p&gt;As soon as COVID let up, they should have refreshed then. They did not. Fast forward to the present, they asked us to walk through a design and bill of materials, and now we are in the middle of an unprecedented supply chain constraint, where we cannot get equipment to them because of what’s happening with AI chip manufacturing and hyperscalers.&lt;/p&gt;
-
-
-
-&lt;p&gt;It was going to take eight to ten months. On top of that, cost was more than it would have been last year because COGS have increased tremendously.&lt;/p&gt;
-
-
-
-&lt;p&gt;That puts them in a position where buying new is outside their budget. But even if they could afford it, they still would not get equipment for maybe a year. Then they would have to work through actual deployment and migration. That puts them close to 2028 when security vulnerability support ends, while certainly pushing them beyond 2026 for general software updates.&lt;/p&gt;
-
-
-
-&lt;p&gt;That is not even counting operating system support lagging on these servers because of their age. Later versions of VMware are not supported, including VCF 9, and Broadcom is strongly encouraging customers to make the move. So, they are between a rock and a hard place with no clean options.&lt;/p&gt;
-
-
-
-&lt;p&gt;The CTO asked, “What are we supposed to do? I can’t believe you are doing this to us.”&lt;/p&gt;
-
-
-
-&lt;p&gt;More than anything, I want to help them. But there is nothing we can do to help them in the way they want to be helped.&lt;/p&gt;
-
-
-
-&lt;p&gt;We talk a lot about how age is not a good proxy for risk, and that is true. So now we are trying to go through and de-risk where we can and look for vulnerabilities that we can patch. Then there are the things we cannot patch or cannot do anything with. For those, we must explore options like purchasing new or bridging to cloud when we cannot get new hardware in time and compliance requirements allow.&lt;/p&gt;
-
-
-
-&lt;p&gt;It puts the customer in a hard position, and there are no clean answers for that. So, if there is no clean answer, the next best move is to reduce uncertainty.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="build-the-inventory-and-map-the-exposure"&gt;Build the inventory and map the exposure&lt;/h2&gt;
-
-
-
-&lt;p&gt;Reality is, you cannot assess risk if you do not know your assets, and most CMDBs have gaps.&lt;/p&gt;
-
-
-
-&lt;p&gt;How you get that inventory depends on what you already have. If you are using a vulnerability scanner like Nessus, Qualys or Rapid7, you likely have this data. Export it to a CSV, and now you are half done with the assessment.&lt;/p&gt;
-
-
-
-&lt;p&gt;If you do not have a scanner, &lt;a href="https://greenbone.github.io/docs/latest/"&gt;Greenbone OpenVAS&lt;/a&gt; is free, open source and runs in Docker or on a VM. One scan gives you host platforms, mapped CVEs with severity scores and a structured output.&lt;/p&gt;
-
-
-
-&lt;p&gt;If you prefer something a little lighter, &lt;a href="https://nmap.org/download.html"&gt;Nmap&lt;/a&gt; is still the standard. You want to run it with service version detection and XML output against your own network ranges. That way you get active host IP addresses, open ports and service banners.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.runzero.com/platform/community-edition/"&gt;runZero&lt;/a&gt; offers a free tier and generally handles device fingerprinting better than Nmap, especially for things like network appliances and storage controllers.&lt;/p&gt;
-
-
-
-&lt;p&gt;Any of these paths gets you to the same place: structured inventory, hostnames, platforms, versions and enough detail to look up what is vulnerable.&lt;/p&gt;
-
-
-
-&lt;p&gt;Now, end of life is when the vendor stops selling a product. End of support is when the vendor stops issuing things like security patches. That is the date that determines your exposure. Once a platform crosses that line, the CVE list grows permanently and the patch list stops.&lt;/p&gt;
-
-
-
-&lt;p&gt;There is a &lt;a href="https://endoflife.date/"&gt;free resource&lt;/a&gt;, endoflife.date. It’s a community-maintained database covering hundreds of platforms with lifecycle dates and a public API. For anything else, check vendor lifecycle pages.&lt;/p&gt;
-
-
-
-&lt;p&gt;The output is your inventory with end-of-support dates attached and a flag on every asset that has crossed its support boundary.&lt;/p&gt;
-
-
-
-&lt;p&gt;For every flagged asset, the next step is finding out what is truly exploitable. You can have a software version that is included in a CVE, but it’s been hardened by the OEM and not actually exploitable.&lt;/p&gt;
-
-
-
-&lt;p&gt;If you are working from Nmap or doing a manual inventory, there are two databases you need to know about: &lt;a href="https://nvd.nist.gov/"&gt;NIST’s National Vulnerability Database&lt;/a&gt; and &lt;a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog"&gt;CISA’s Known Exploited Vulnerabilities catalog&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The difference between a system with 40 CVEs and no KEV entries versus a system with 12 CVEs and 3 KEV entries is the difference between manageable risk and active danger. Equipment age does not tell you which one you are looking at, which is why we need the CVE profile.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="find-it-score-it-fix-it"&gt;Find it, score it, fix it&lt;/h2&gt;
-
-
-
-&lt;p&gt;Now we use a weighted formula to score every asset.&lt;/p&gt;
-
-
-
-&lt;p&gt;The formula I use is KEV count times 20, plus highest CVSS times 4, plus months past end of support, plus bonuses for high data sensitivity, internet-facing exposure and assets that cannot be upgraded to post-quantum cryptographic standards. Adjust the weights to your organization’s risk appetite.&lt;/p&gt;
-
-
-
-&lt;p&gt;This approach aligns with &lt;a href="https://www.cisa.gov/stakeholder-specific-vulnerability-categorization-ssvc"&gt;CISA’s Stakeholder-Specific Vulnerability Categorization framework&lt;/a&gt;, which prioritizes exploitation status and mission context above overall severity scores. The specific weights are tunable. The principle that KEV entries outweigh CVSS severity and CVSS outweighs age, is the part that stays consistent.&lt;/p&gt;
-
-
-
-&lt;p&gt;The age-based queue had them backwards. The risk-based queue puts them in the right order and into three buckets.&lt;/p&gt;
-
-
-
-&lt;ol class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Tier 1: immediate action required.&lt;/strong&gt; These are assets past end-of-support with KEV catalog entries, especially in regulated environments or handling sensitive data. These have known and actively exploited vulnerabilities with no patches coming. In most regulatory frameworks, defending a risk acceptance position on these without compensating controls like network segmentation, WAF or IDS is difficult and must include remediation on a defined timeline.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Tier 2: managed risk with documentation.&lt;/strong&gt; These are assets past end-of-support with CVE counts but no current KEV entries, or assets approaching end-of-support within 12 months. Document the risk acceptance position: who signed off, under what conditions and for how long. The absence of that documentation is itself a finding in most compliance frameworks.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Tier 3: monitored.&lt;/strong&gt; This is everything still within their support window, receiving patches, with manageable profiles. These belong in the planning timeline with no immediate action. The key here is ensuring their end-of-support dates are visible in the infrastructure calendar to avoid them becoming Tier One assets through inattention.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;Last layer, NIST finalized &lt;a href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards"&gt;post-quantum cryptographic standards&lt;/a&gt; in 2024, and not all legacy hardware can support the new algorithms. Some replacements will be driven by cryptographic migration requirements independent of the CVE profile.&lt;/p&gt;
-
-
-
-&lt;p&gt;Do not skip post-quantum. Harvest now, decrypt later is real.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-you-walk-away-with"&gt;What you walk away with&lt;/h2&gt;
-
-
-
-&lt;p&gt;Once you complete the assessment, you are left with three things that change the planning conversation.&lt;/p&gt;
-
-
-
-&lt;p&gt;First, you have a prioritized refresh queue that is sequenced by risk rather than age. That answers the question of where we spend first, and that is defensible analysis.&lt;/p&gt;
-
-
-
-&lt;p&gt;Second, you get a documented risk acceptance position for everything you are choosing not to refresh right now. This is the compliance instrument most organizations are missing. It names the asset, the exposure profile, the business justification and who signed off.&lt;/p&gt;
-
-
-
-&lt;p&gt;Third, you get a refresh sequence that auditors, leadership and your own team can defend. At some point, a CISO, board member or auditor will ask why a particular system was still running. The answer cannot be, “Well, it’s not in middle school yet.” The answer is documented, it is risk-informed and it is tied back to real data.&lt;/p&gt;
-
-
-
-&lt;p&gt;If you want the refresh queue to stay current as new CVEs and vulnerabilities are discovered, you can deploy a platform like &lt;a href="https://documentation.wazuh.com/current/installation-guide/index.html"&gt;Wazuh&lt;/a&gt; that cross-references your assets against CVE databases automatically. Then this one-time assessment becomes a periodic process that is fed by that ongoing stream.&lt;/p&gt;
-
-
-
-&lt;p&gt;Today, you walk away with a starting point that any team can execute without external consultants or significant budget. Most companies that run through it find at least one piece of the picture they did not have before, and that is usually enough to change the order of the queue.&lt;/p&gt;
-
-
-
-&lt;p&gt;In an environment where refresh budgets are tight and timelines stretched, the order of the queue matters most.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4168484/your-refresh-plan-has-a-cve-blind-spot.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
-      <pubDate>Fri, 08 May 2026 09:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Sun, 10 May 2026 15:58:27 +0000</lastBuildDate>
     <item>
       <title>Pen tests show AI security flaws far more severe than legacy software bugs</title>
       <link>https://www.csoonline.com/article/4166185/pen-tests-show-ai-security-flaws-far-more-severe-than-legacy-software-bugs.html</link>
@@ -362,8 +163,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4166185/pen-tests-show-ai-security-flaws-far-more-severe-than-legacy-software-bugs.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.26</comments>
       <pubDate>Fri, 08 May 2026 09:01:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>SonicWall security advisory (AV26-405)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-405</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-405</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.26</comments>
+      <pubDate>Wed, 29 Apr 2026 17:23:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-008 - Vulnerability affecting cPanel and WebHost Manager (WHM) - CVE-2026-41940</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-008-vulnerability-affecting-cpanel-webhost-manager-whm-cve-2026-41940</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.26</comments>
+      <pubDate>Wed, 29 Apr 2026 18:21:48 +0000</pubDate>
     </item>
     <item>
       <title>Your CTEM program is probably ignoring MCP. Here’s how to fix it</title>
@@ -479,7 +300,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4168493/your-ctem-program-is-probably-ignoring-mcp-heres-how-to-fix-it.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
+      <comments>Score: 7.28</comments>
       <pubDate>Fri, 08 May 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -489,7 +310,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-406</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.32</comments>
       <pubDate>Thu, 30 Apr 2026 13:57:41 +0000</pubDate>
     </item>
     <item>
@@ -499,7 +320,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-407</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
+      <comments>Score: 7.32</comments>
       <pubDate>Thu, 30 Apr 2026 14:52:00 +0000</pubDate>
     </item>
     <item>
@@ -539,7 +360,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-409</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Thu, 30 Apr 2026 19:42:15 +0000</pubDate>
     </item>
     <item>
@@ -549,7 +370,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-410</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Thu, 30 Apr 2026 19:52:32 +0000</pubDate>
     </item>
     <item>
@@ -560,7 +381,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.38</comments>
-      <pubDate>Sun, 10 May 2026 12:56:33 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft Edge security advisory (AV26-411)</title>
@@ -569,7 +390,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-411</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Fri, 01 May 2026 14:22:01 +0000</pubDate>
     </item>
     <item>
@@ -589,7 +410,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-009-vulnerability-affecting-linux-cve-2026-31431</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Fri, 01 May 2026 18:42:43 +0000</pubDate>
     </item>
     <item>
@@ -600,7 +421,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Sun, 10 May 2026 12:56:33 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
     </item>
     <item>
       <title>Call centres dismantled and ten arrested in EUR 50 million online fraud case</title>
@@ -610,7 +431,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Sun, 10 May 2026 12:56:33 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
     </item>
     <item>
       <title>Europol and partners track down 45 forcibly transferred Ukrainian children</title>
@@ -620,7 +441,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.49</comments>
-      <pubDate>Sun, 10 May 2026 12:56:33 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
     </item>
     <item>
       <title>Atlantic ‘Cocaine Highway’ broken in coordinated maritime operation</title>
@@ -630,7 +451,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 12:56:33 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
     </item>
     <item>
       <title>Europol announces transition arrangements following the departure of Executive Director Catherine De Bolle</title>
@@ -640,7 +461,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 12:56:33 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports hit against ‘Black Axe’ criminal organisation in Switzerland: 10 arrests</title>
@@ -650,7 +471,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 12:56:33 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
     </item>
     <item>
       <title>“Terrorgram” network dealt another blow as member sentenced in Denmark</title>
@@ -660,7 +481,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 10 May 2026 12:56:33 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
     </item>
     <item>
       <title>New 2026 ‘IOCTA’ highlights sophisticated tactics and emerging challenges in the digital landscape</title>
@@ -670,7 +491,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.54</comments>
-      <pubDate>Sun, 10 May 2026 12:56:33 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
     </item>
     <item>
       <title>Europol-supported global operation targets over 75 000 users engaged in DDoS attacks</title>
@@ -680,7 +501,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.59</comments>
-      <pubDate>Sun, 10 May 2026 12:56:33 +0000</pubDate>
+      <pubDate>Sun, 10 May 2026 13:58:27 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-413)</title>
@@ -689,7 +510,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-413</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 04 May 2026 13:29:04 +0000</pubDate>
     </item>
     <item>
@@ -699,7 +520,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-414</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 04 May 2026 13:35:29 +0000</pubDate>
     </item>
     <item>
@@ -709,7 +530,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-415</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 04 May 2026 13:44:59 +0000</pubDate>
     </item>
     <item>
@@ -719,7 +540,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-416</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Mon, 04 May 2026 13:53:59 +0000</pubDate>
     </item>
     <item>
@@ -729,7 +550,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-417</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 04 May 2026 14:13:38 +0000</pubDate>
     </item>
     <item>
@@ -739,7 +560,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-418</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 04 May 2026 14:17:57 +0000</pubDate>
     </item>
     <item>
@@ -749,7 +570,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-419</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 04 May 2026 17:13:34 +0000</pubDate>
     </item>
     <item>
@@ -759,7 +580,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-may-2026-monthly-rollup-av26-420</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Tue, 05 May 2026 12:58:43 +0000</pubDate>
     </item>
     <item>
@@ -769,7 +590,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-may-2026-monthly-rollup-av26-421</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Tue, 05 May 2026 13:09:14 +0000</pubDate>
     </item>
     <item>
@@ -779,7 +600,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-422</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Tue, 05 May 2026 13:51:15 +0000</pubDate>
     </item>
     <item>
@@ -789,7 +610,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-423</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Tue, 05 May 2026 19:03:10 +0000</pubDate>
     </item>
     <item>
@@ -799,7 +620,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-424</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Tue, 05 May 2026 20:34:17 +0000</pubDate>
     </item>
     <item>
@@ -809,7 +630,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-426</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Wed, 06 May 2026 13:37:09 +0000</pubDate>
     </item>
     <item>
@@ -819,7 +640,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-427</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Wed, 06 May 2026 13:44:41 +0000</pubDate>
     </item>
     <item>
@@ -829,7 +650,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Wed, 06 May 2026 17:24:20 +0000</pubDate>
     </item>
     <item>
@@ -839,7 +660,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Wed, 06 May 2026 17:28:06 +0000</pubDate>
     </item>
     <item>
@@ -849,7 +670,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Wed, 06 May 2026 18:03:36 +0000</pubDate>
     </item>
     <item>
@@ -859,7 +680,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.54</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Wed, 06 May 2026 19:25:00 +0000</pubDate>
     </item>
     <item>
@@ -869,7 +690,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-431</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Thu, 07 May 2026 13:48:23 +0000</pubDate>
     </item>
     <item>
@@ -879,7 +700,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vm2-nodejs-library-security-advisory-av26-432</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Thu, 07 May 2026 13:54:19 +0000</pubDate>
     </item>
     <item>
@@ -889,7 +710,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-433</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Thu, 07 May 2026 14:00:58 +0000</pubDate>
     </item>
     <item>
@@ -899,7 +720,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-434</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Thu, 07 May 2026 15:30:27 +0000</pubDate>
     </item>
     <item>
@@ -909,7 +730,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-435</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Thu, 07 May 2026 15:35:50 +0000</pubDate>
     </item>
     <item>
@@ -919,7 +740,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.46</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Fri, 08 May 2026 16:08:21 +0000</pubDate>
     </item>
     <item>
@@ -929,7 +750,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Fri, 08 May 2026 17:39:10 +0000</pubDate>
     </item>
     <item>
@@ -939,7 +760,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.50</comments>
       <pubDate>Fri, 08 May 2026 18:49:02 +0000</pubDate>
     </item>
   </channel>
