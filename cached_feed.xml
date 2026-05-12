@@ -8,141 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 May 2026 18:58:03 +0000</lastBuildDate>
-    <item>
-      <title>Redis security advisory (AV26-423)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-423</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-423</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
-      <pubDate>Tue, 05 May 2026 19:03:10 +0000</pubDate>
-    </item>
-    <item>
-      <title>Juniper Networks security advisory (AV26-424)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-424</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-424</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Tue, 05 May 2026 20:34:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>1,800+ MCP servers exposed without authentication: How zero trust can secure the AI agent revolution</title>
-      <link>https://www.csoonline.com/article/4168979/1800-mcp-servers-exposed-without-authentication-how-zero-trust-can-secure-the-ai-agent-revolution.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;We find ourselves teetering upon a precipice of our own unwitting construction, and the vertiginous depth of our collective negligence ought to give every security practitioner profound pause.&lt;/p&gt;
-
-
-
-&lt;p&gt;In our headlong rush to deploy AI agents across enterprise environments, we have erected an infrastructure so thoroughly unfortified that it beggars belief. The Model Context Protocol, which Anthropic unveiled in November 2024 as the connective tissue binding large language models to external tools, has proliferated with breathtaking celerity. What has conspicuously failed to keep pace is any semblance of security discipline. The chasm between adoption velocity and security maturation grows more perilous with each passing deployment.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.knostic.ai/blog/mapping-mcp-servers-study"&gt;Knostic’s security researchers&lt;/a&gt; quantified the magnitude of our predicament last summer. Their methodical internet-wide reconnaissance unearthed 1,862 MCP servers nakedly exposed to public access. When they manually verified a sample of 119 instances, the results defied credulity: every single server permitted unauthenticated access to internal tool listings. Not a preponderance. Not ninety percent. The entirety. Organizations are effectively broadcasting comprehensive inventories of their AI capabilities to anyone sufficiently perspicacious to enumerate them, without demanding so much as a perfunctory password challenge.&lt;/p&gt;
-
-
-
-&lt;p&gt;The implications penetrate far deeper than mere exposure statistics intimate. These are not dormant test servers or derelict development instances languishing in forgotten corners of corporate infrastructure. Knostic’s forensic analysis revealed production systems with write access to financial databases, social media accounts, and customer relationship management platforms. Enterprises have tethered their most consequential operational capabilities to AI agents and subsequently neglected to secure the ingress. The insouciance is breathtaking.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-catalogue-of-catastrophe"&gt;A catalogue of catastrophe&lt;/h2&gt;
-
-
-
-&lt;p&gt;The theoretical has transmuted into the operational with dispiriting alacrity.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.hackthebox.com/blog/cve-2025-32711-echoleak-copilot-vulnerability"&gt;EchoLeak (CVE-2025-32711)&lt;/a&gt; represents the apotheosis of what security researchers had long dreaded but harbored faint hope might remain perpetually theoretical. Aim Security’s June 2025 disclosure documented a zero-click exploit of such elegance that it almost inspires grudging admiration. Adversaries secrete malicious prompt instructions within the detritus of quotidian business documents: speaker notes that no human eye ever scrutinizes, comments that no reviewer ever examines, metadata fields that exist in perpetual obscurity. When Microsoft 365 Copilot ingests these poisoned documents, it executes the occluded instructions with mechanical obedience, siphoning sensitive contextual data to attacker-controlled endpoints. The victim performs no action. Receives no admonition. Suffers complete compromise.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attack concatenation warrants meticulous examination. An adversary confects a document harboring hidden text instructing the AI to extract the most sensitive information from the user’s operational context and encode it within an outbound URL. The document arrives via electronic mail or shared repository. The user opens it, or perhaps merely previews it in passing. The AI assistant, inexorably helpful, processes the content and dutifully executes the embedded directives. Sensitive data traverses the network masquerading as an innocuous image request. Exfiltration accomplished. Detection probability approximating zero.&lt;/p&gt;
-
-
-
-&lt;p&gt;The mcp-remote debacle, catalogued as CVE-2025-6514, illuminates the supply chain dimension of this burgeoning crisis with unsparing clarity. JFrog’s July 2025 disclosure revealed that this package, downloaded north of 437,000 times and prominently featured in integration documentation from Cloudflare, Hugging Face, and Auth0, harbored a critical command injection vulnerability. The vulnerability exploited improper sanitization of OAuth flow parameters, enabling attackers to inject shell commands through the authorization endpoint field. On Windows systems, PowerShell subexpression evaluation amplified the attack surface exponentially, granting adversaries complete system subjugation through a single malicious MCP server connection.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-epistemological-chasm"&gt;The epistemological chasm&lt;/h2&gt;
-
-
-
-&lt;p&gt;What renders MCP vulnerabilities particularly vexatious is the fundamental asymmetry they exploit between machine cognition and human oversight.&lt;/p&gt;
-
-
-
-&lt;p&gt;Tool poisoning attacks insert malevolent instructions into tool metadata that LLMs process with complete fidelity but that remain utterly invisible to human operators. The machine perceives everything; its ostensible supervisors perceive nothing. We have unwittingly constructed systems where the attack surface exists in a cognitive dimension our monitoring instrumentation cannot observe. This represents a fundamental rupture in the supervisory relationship between humans and their AI auxiliaries, creating exploitation opportunities that traditional security controls simply cannot address.&lt;/p&gt;
-
-
-
-&lt;p&gt;Rug pull attacks weaponize temporality itself against defenders. An MCP server presents pristine, innocuous tool definitions during initial security vetting, earning approbation and establishing trust. Subsequently, those definitions undergo surreptitious transmutation, incorporating malicious functionality where none previously existed. Because most MCP clients remain quiescent when definitions change, attackers corrupt previously sanctioned tools with impunity. The temporal gap between approval and exploitation renders traditional point-in-time security assessments wholly nugatory.&lt;/p&gt;
-
-
-
-&lt;p&gt;Cross-server contamination compounds these perils multiplicatively. When multiple MCP servers connect to the same LLM context, a malicious server can inject instructions that influence the agent’s comportment toward trusted servers. Authentication credentials intended for legitimate services get redirected through adversary-controlled channels. The trust relationships we painstakingly constructed metamorphose into attack vectors themselves.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="constructing-defenses-that-actually-work"&gt;Constructing defenses that actually work&lt;/h2&gt;
-
-
-
-&lt;p&gt;Conventional security apparatus proves woefully inadequate against these sui generis threat vectors. What is required is a purpose-built framework acknowledging MCP’s distinctive vulnerabilities with commensurate architectural rigor.&lt;/p&gt;
-
-
-
-&lt;p&gt;The &lt;a href="https://cloudsecurityalliance.org/blog/2026/02/02/the-agentic-trust-framework-zero-trust-governance-for-ai-agents"&gt;Cloud Security Alliance’s Agentic Trust Framework&lt;/a&gt;, published in February 2026, articulates foundational principles we so desperately require: AI agents demand identity governance as rigorous as human users. No implicit trust. Authentication and authorization on every interaction without exception. Strict separation between reasoning and action. These principles must be transmuted into operational controls before the breach headlines proliferate beyond containment.&lt;/p&gt;
-
-
-&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-large"&gt;&lt;img alt="Diagram: Zero-trust MCP security architecture" class="wp-image-4168983" height="718" src="https://b2b-contenthub.com/wp-content/uploads/2026/05/zero-trust-mcp-security-architecture.png?w=1024" width="1024" /&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;Sunil Gentyala&lt;/p&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;The architecture diagram illustrates a stratified defense model operationalizing these principles with methodological rigor. The Cryptographic Verification Layer establishes server authenticity through X.509 certificate validation and continuous capability attestation; any definitional mutation produces hash discrepancies triggering mandatory re-authorization, neutralizing rug pull attacks at their provenance. The Dynamic Integrity Monitoring System employs semantic fingerprinting to detect definitional drift with granular precision, utilizing isolation forest algorithms to identify anomalous invocation patterns indicative of compromise. The Supply Chain Validation Engine addresses tool poisoning’s semantic nature through MCP-specific scanning parsing tool descriptions for adversarial prompt patterns and Unicode obfuscation techniques that evade cursory inspection. The Policy Enforcement Point implements fine-grained authorization for every tool invocation, incorporating principal identity, resource sensitivity, environmental context, and real-time risk scoring. Coarse-grained session permissions yield to continuous, context-aware evaluation.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-imperative-for-immediate-action"&gt;The imperative for immediate action&lt;/h2&gt;
-
-
-
-&lt;p&gt;Security teams must act with alacrity and dispatch. Enforce authentication on every MCP server without exception or equivocation. Segment networks to eliminate direct internet exposure categorically. Institute immutable versioning with cryptographic signing for all tool definitions. Deploy behavioral monitoring capable of detecting anomalous invocation patterns indicative of compromise or misuse. Mandate human-in-the-loop approval for sensitive operations rather than treating the specification’s recommendations as merely aspirational guidance.&lt;/p&gt;
-
-
-
-&lt;p&gt;February 2026 scanning data proffers cold comfort to those seeking reassurance. Unauthenticated server percentages have declined proportionally to 41 percent. Progress, ostensibly. But absolute exposure has increased tenfold as adoption accelerates with breakneck velocity. We are hemorrhaging ground faster than we are gaining it. The adversary has recognized the opportunity before us with predatory acuity, and honeypot telemetry confirms active reconnaissance against MCP infrastructure from sophisticated threat actors across multiple geographies.&lt;/p&gt;
-
-
-
-&lt;p&gt;Your AI infrastructure represents either an invaluable asset or a catastrophic liability. The adversary has rendered their assessment with cold-eyed clarity. The window for meaningful action contracts with each passing week, and the cost of inaction compounds exponentially. The framework exists. The architecture is implementable. What remains is organizational will.&lt;/p&gt;
-
-
-
-&lt;p&gt;Have you made yours?&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4168979/1800-mcp-servers-exposed-without-authentication-how-zero-trust-can-secure-the-ai-agent-revolution.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
-      <pubDate>Mon, 11 May 2026 09:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 12 May 2026 20:44:24 +0000</lastBuildDate>
     <item>
       <title>8 guiding principles for reskilling the SOC for agentic AI</title>
       <link>https://www.csoonline.com/article/4168681/8-guiding-principles-for-reskilling-the-soc-for-agentic-ai.html</link>
@@ -343,7 +209,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4168681/8-guiding-principles-for-reskilling-the-soc-for-agentic-ai.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Mon, 11 May 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
@@ -478,7 +344,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4168991/ai-security-is-repeating-endpoint-securitys-biggest-mistake.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Mon, 11 May 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -488,7 +354,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-426</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Wed, 06 May 2026 13:37:09 +0000</pubDate>
     </item>
     <item>
@@ -498,48 +364,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-427</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Wed, 06 May 2026 13:44:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>WatchGuard security advisory (AV26-428)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
-      <pubDate>Wed, 06 May 2026 17:24:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Samsung mobile security advisory (AV26-429)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
-      <pubDate>Wed, 06 May 2026 17:28:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>Palo Alto Networks security advisory (AV26-425) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
-      <pubDate>Wed, 06 May 2026 18:03:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco security advisory (AV26-430)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
-      <pubDate>Wed, 06 May 2026 19:25:00 +0000</pubDate>
     </item>
     <item>
       <title>New ‘Dirty Frag’ exploit targets Linux kernel for root access</title>
@@ -621,7 +447,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4169399/new-dirty-frag-exploit-targets-linux-kernel-for-root-access.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Mon, 11 May 2026 12:01:42 +0000</pubDate>
     </item>
     <item>
@@ -744,8 +570,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4169407/malicious-hugging-face-model-masquerading-as-openai-release-hits-244k-downloads.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Mon, 11 May 2026 12:14:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>WatchGuard security advisory (AV26-428)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.86</comments>
+      <pubDate>Wed, 06 May 2026 17:24:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>Samsung mobile security advisory (AV26-429)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.86</comments>
+      <pubDate>Wed, 06 May 2026 17:28:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>Palo Alto Networks security advisory (AV26-425) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.87</comments>
+      <pubDate>Wed, 06 May 2026 18:03:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cisco security advisory (AV26-430)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.88</comments>
+      <pubDate>Wed, 06 May 2026 19:25:00 +0000</pubDate>
     </item>
     <item>
       <title>Entries now open for the 2026 CSO30 Australia Awards</title>
@@ -791,7 +657,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4169576/entries-now-open-for-the-2026-cso30-australia-awards.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Mon, 11 May 2026 16:18:50 +0000</pubDate>
     </item>
     <item>
@@ -801,7 +667,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-431</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Thu, 07 May 2026 13:48:23 +0000</pubDate>
     </item>
     <item>
@@ -811,7 +677,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vm2-nodejs-library-security-advisory-av26-432</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Thu, 07 May 2026 13:54:19 +0000</pubDate>
     </item>
     <item>
@@ -821,7 +687,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-433</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Thu, 07 May 2026 14:00:58 +0000</pubDate>
     </item>
     <item>
@@ -831,7 +697,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-434</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Thu, 07 May 2026 15:30:27 +0000</pubDate>
     </item>
     <item>
@@ -841,7 +707,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-435</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Thu, 07 May 2026 15:35:50 +0000</pubDate>
     </item>
     <item>
@@ -853,7 +719,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://thehackernews.com/2026/05/webinar-what-riskiest-soc-alerts-go.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.28</comments>
       <pubDate>Tue, 12 May 2026 17:28:00 +0530</pubDate>
     </item>
     <item>
@@ -1005,7 +871,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/3492789/customer-identity-access-management-die-6-besten-ciam-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.33</comments>
       <pubDate>Tue, 12 May 2026 03:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1125,7 +991,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/3494023/cybersicherheitsvorschriften-so-erfullen-sie-ihre-compliance-anforderungen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Tue, 12 May 2026 04:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1135,7 +1001,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Fri, 08 May 2026 16:08:21 +0000</pubDate>
     </item>
     <item>
@@ -1145,7 +1011,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Fri, 08 May 2026 17:39:10 +0000</pubDate>
     </item>
     <item>
@@ -1155,7 +1021,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Fri, 08 May 2026 18:49:02 +0000</pubDate>
     </item>
     <item>
@@ -1268,7 +1134,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4169623/why-patching-slas-should-be-the-floor-not-the-strategy.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Tue, 12 May 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1527,7 +1393,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4168684/cisos-step-into-the-ai-spotlight.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Tue, 12 May 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
@@ -1626,7 +1492,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4169635/developer-workstations-are-the-new-beachhead.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Tue, 12 May 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1717,7 +1583,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4169957/cpanel-flaw-exposes-enterprises-to-hosting-supply-chain-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Tue, 12 May 2026 10:26:03 +0000</pubDate>
     </item>
     <item>
@@ -1796,7 +1662,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4169992/fake-claude-code-takes-the-ielevator-to-your-browser-secrets.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Tue, 12 May 2026 11:32:37 +0000</pubDate>
     </item>
     <item>
@@ -1887,7 +1753,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4170029/openai-introduces-daybreak-cyber-platform-takes-on-anthropic-mythos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.69</comments>
       <pubDate>Tue, 12 May 2026 13:06:17 +0000</pubDate>
     </item>
     <item>
@@ -1970,7 +1836,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4170284/mistral-ai-sdk-tanstack-router-hit-in-npm-software-supply-chain-attack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Tue, 12 May 2026 17:14:47 +0000</pubDate>
     </item>
     <item>
@@ -2069,7 +1935,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4169659/linux-kernel-maintainers-suggest-a-kill-switch-to-protect-systems-until-a-zero-day-vulnerability-is-patched.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.31</comments>
+      <comments>Score: 9.25</comments>
       <pubDate>Tue, 12 May 2026 00:47:09 +0000</pubDate>
     </item>
     <item>
@@ -2079,7 +1945,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Mon, 11 May 2026 14:15:28 +0000</pubDate>
     </item>
     <item>
@@ -2089,7 +1955,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.98</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Mon, 11 May 2026 14:36:29 +0000</pubDate>
     </item>
     <item>
@@ -2099,7 +1965,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.98</comments>
+      <comments>Score: 9.93</comments>
       <pubDate>Mon, 11 May 2026 14:50:47 +0000</pubDate>
     </item>
     <item>
@@ -2109,7 +1975,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.00</comments>
+      <comments>Score: 9.94</comments>
       <pubDate>Mon, 11 May 2026 15:17:54 +0000</pubDate>
     </item>
     <item>
@@ -2119,7 +1985,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.01</comments>
+      <comments>Score: 9.96</comments>
       <pubDate>Mon, 11 May 2026 15:43:52 +0000</pubDate>
     </item>
     <item>
@@ -2129,7 +1995,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.02</comments>
+      <comments>Score: 9.96</comments>
       <pubDate>Mon, 11 May 2026 15:53:47 +0000</pubDate>
     </item>
     <item>
@@ -2139,7 +2005,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.02</comments>
+      <comments>Score: 9.97</comments>
       <pubDate>Mon, 11 May 2026 16:04:11 +0000</pubDate>
     </item>
     <item>
@@ -2149,7 +2015,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-444</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.07</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Mon, 11 May 2026 17:31:18 +0000</pubDate>
     </item>
     <item>
@@ -2159,7 +2025,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-445</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.08</comments>
       <pubDate>Mon, 11 May 2026 19:39:08 +0000</pubDate>
     </item>
     <item>
@@ -2169,7 +2035,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-446</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.15</comments>
+      <comments>Score: 10.09</comments>
       <pubDate>Mon, 11 May 2026 20:02:12 +0000</pubDate>
     </item>
     <item>
@@ -2179,7 +2045,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-may-2026-monthly-rollup-av26-447</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.81</comments>
+      <comments>Score: 10.74</comments>
       <pubDate>Tue, 12 May 2026 14:22:53 +0000</pubDate>
     </item>
     <item>
@@ -2189,7 +2055,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-448</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.82</comments>
+      <comments>Score: 10.75</comments>
       <pubDate>Tue, 12 May 2026 14:31:23 +0000</pubDate>
     </item>
     <item>
@@ -2199,7 +2065,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-449</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.83</comments>
+      <comments>Score: 10.76</comments>
       <pubDate>Tue, 12 May 2026 14:41:02 +0000</pubDate>
     </item>
     <item>
@@ -2209,7 +2075,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-450</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.86</comments>
+      <comments>Score: 10.79</comments>
       <pubDate>Tue, 12 May 2026 15:27:11 +0000</pubDate>
     </item>
     <item>
@@ -2219,7 +2085,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-451</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.86</comments>
+      <comments>Score: 10.79</comments>
       <pubDate>Tue, 12 May 2026 15:31:36 +0000</pubDate>
     </item>
     <item>
@@ -2229,7 +2095,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-452</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.99</comments>
+      <comments>Score: 10.92</comments>
       <pubDate>Tue, 12 May 2026 18:47:10 +0000</pubDate>
     </item>
     <item>
@@ -2239,8 +2105,38 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-453</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.00</comments>
+      <comments>Score: 10.92</comments>
       <pubDate>Tue, 12 May 2026 18:52:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortinet security advisory (AV26-454)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-454</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-454</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.93</comments>
+      <pubDate>Tue, 12 May 2026 19:00:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>AMD security advisory (AV26-455)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-455</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-455</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.93</comments>
+      <pubDate>Tue, 12 May 2026 19:04:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft security advisory – May 2026 monthly rollup (AV26-456)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.94</comments>
+      <pubDate>Tue, 12 May 2026 19:14:35 +0000</pubDate>
     </item>
   </channel>
 </rss>
