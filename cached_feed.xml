@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 13 May 2026 00:02:10 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 04:49:05 +0000</lastBuildDate>
+    <item>
+      <title>Redis security advisory (AV26-423)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-423</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-423</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.63</comments>
+      <pubDate>Tue, 05 May 2026 19:03:10 +0000</pubDate>
+    </item>
     <item>
       <title>Juniper Networks security advisory (AV26-424)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-424</link>
@@ -16,409 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-424</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.64</comments>
       <pubDate>Tue, 05 May 2026 20:34:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>AI security is repeating endpoint security’s biggest mistake</title>
-      <link>https://www.csoonline.com/article/4168991/ai-security-is-repeating-endpoint-securitys-biggest-mistake.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The security industry is experiencing déjà vu, and most teams haven’t recognized it yet.&lt;/p&gt;
-
-
-
-&lt;p&gt;If you were in the trenches during the early 2000s, you remember the antivirus arms race. IT teams buried under signature updates. Configuration baselines checked obsessively. Patch cycles treated as the primary defense. Meanwhile, attackers pivoted. They wrote malware that matched no known signature and walked through the front door while the guards were checking outdated IDs.&lt;/p&gt;
-
-
-
-&lt;p&gt;The posture-first approach revealed its limitations as the endpoint attack surface exploded. The industry faced visibility gaps and realized you cannot harden what you cannot fully see. The posture-first approach wasn’t wrong. It was incomplete. As the endpoint attack surface exploded, the industry realized that you cannot harden what you cannot fully see. Limited visibility hindered effective hardening, driving the shift toward behavioral detection as an operational necessity.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI security is at the beginning of that same arc. The teams that recognize it now get to skip the painful middle chapter.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-endpoint-eras-hard-won-lesson"&gt;The endpoint era’s hard-won lesson&lt;/h2&gt;
-
-
-
-&lt;p&gt;The first generation of endpoint security asked answerable questions: Is antivirus installed? Are patches current? Does the configuration match the baseline? For a while, answering those questions felt like enough.&lt;/p&gt;
-
-
-
-&lt;p&gt;Then the surface expanded. Laptops left the perimeter. Zero-days made signatures irrelevant at the moment they mattered most. The industry responded by building tools that stopped asking “does this file look bad?” and started asking “what is this process actually doing?”.&lt;/p&gt;
-
-
-
-&lt;p&gt;That reframe changed everything. Instead of matching against lists of known bad, defenders began watching process trees, API call sequences, lateral movement patterns and privilege escalation chains. Behavior became the signal. Posture checks tell you what should be true. Behavioral detection tells you what is actually happening.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="most-ai-security-is-still-at-the-posture-phase"&gt;Most AI security is still at the posture phase&lt;/h2&gt;
-
-
-
-&lt;p&gt;Look at where most organizations are with AI security today. Model cards, AI-specific SBOMs, input and output filters, prompt injection guardrails and access controls around model APIs. These are valuable controls, but they reflect a posture-based approach. To truly enhance security, organizations must recognize the importance of shifting to behavior-based strategies that monitor actual system actions.&lt;/p&gt;
-
-
-
-&lt;p&gt;They’re brittle in the same ways, too. The AI surface is expanding faster than any team can harden it: open-source LLMs deployed without procurement review, third-party AI APIs embedded inside SaaS tools, autonomous agents granted broad system access, RAG pipelines sitting on top of sensitive internal data. The phrase “shadow AI” exists for the same reason “shadow IT” did before it. People adopt capabilities faster than policy can follow.&lt;/p&gt;
-
-
-
-&lt;p&gt;The &lt;a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"&gt;OWASP Top 10 for Agentic Applications&lt;/a&gt;&lt;a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"&gt; 2026&lt;/a&gt; is a welcome and necessary framework. But read it carefully and you’ll notice that most of its controls are posture-oriented: constrain scope, validate inputs, enforce least privilege. These are the right first steps, but they’re not a complete strategy. We know this because we’ve already lived through a version of this story.&lt;/p&gt;
-
-
-
-&lt;p&gt;The core tension is identical to what endpoint defenders faced two decades ago. You can’t patch your way out of a system you don’t fully control. With AI, the surface is more dynamic, more opaque and more deeply embedded in business logic than endpoints ever were. An AI agent doesn’t just sit on a device. It calls APIs, retrieves internal data, takes actions across systems and generates outputs that ripple downstream. The blast radius of a compromised or misbehaving agent is a problem entirely different from that of a compromised laptop.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-behavioral-detection-becomes-the-lever"&gt;Why behavioral detection becomes the lever&lt;/h2&gt;
-
-
-
-&lt;p&gt;While you may not control every AI surface, monitoring what these systems actually do empowers your team to stay ahead of threats and feel capable in managing AI risks.&lt;/p&gt;
-
-
-
-&lt;p&gt;Behavioral signals are already being generated in environments that aren’t instrumented to catch them. This includes unusual data access patterns from a RAG pipeline, prompt injection artifacts surfacing in model outputs, unexpected tool calls from an agent operating outside its intended scope, token velocity anomalies pointing to automated abuse, and output drift that suggests something upstream has changed.&lt;/p&gt;
-
-
-
-&lt;p&gt;None of these is hypothetical. They’re observable today. The parallel to EDR is direct: just as endpoint behavioral tools watch process trees and API call chains, AI behavioral monitoring watches action sequences, what data was retrieved, what tools were invoked, what was generated and in what order. A single anomalous output is noise. A sequence of anomalous actions is worth investigating.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is what gives SOC teams something to operate on. Posture is an audit checkpoint. Behavior gives you a triage queue. There’s a real difference between telling an analyst “This agent has broad permissions” and telling them, “This agent queried sensitive documents, formatted the output and initiated an outbound connection in a sequence it’s never run before.” The first is a finding. The second is an incident.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-concrete-path-forward"&gt;A concrete path forward&lt;/h2&gt;
-
-
-
-&lt;p&gt;The endpoint era offers a practical sequence, not just a cautionary tale.&lt;/p&gt;
-
-
-
-&lt;p&gt;Don’t abandon posture work. It’s table stakes, not a strategy. Keep the model inventory current, enforce access controls and implement the OWASP guardrails. Just don’t let posture become the ceiling of your program.&lt;/p&gt;
-
-
-
-&lt;p&gt;Start logging AI system behavior now, even if you’re not fully analyzing it yet. Data debt compounds and having behavioral history is essential for future detection logic. Building a behavioral baseline early helps close gaps and prepares your organization for proactive AI security measures.&lt;/p&gt;
-
-
-
-&lt;p&gt;Prioritize your highest-agency surfaces first ー autonomous agents with broad system access, RAG pipelines connected to sensitive internal data, any LLM feature that faces external users or triggers downstream automations ー these are your highest-risk surfaces and the right place to start.&lt;/p&gt;
-
-
-
-&lt;p&gt;Think in sequences, not just single events. That’s the core lesson EDR already taught. An unusual API call is interesting, but an agent retrieving sensitive documents, formatting the output and making an unexpected outbound call forms a story. The sequence of actions provides the true signal for detection.&lt;/p&gt;
-
-
-
-&lt;p&gt;Finally, close the gap between your AI security program and your SOC. Most AI security work today sits inside the AI governance function or the data team. That’s the wrong home for behavioral detection. The SOC has the triage muscle, the incident response playbooks and the tool integrations. Getting AI behavioral telemetry in front of SOC analysts is partly a technology problem. It’s mostly an organizational one.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-signal-is-already-there"&gt;The signal is already there&lt;/h2&gt;
-
-
-
-&lt;p&gt;The endpoint security story didn’t end badly. It matured. The teams that invested in behavioral telemetry before they needed it built programs that held up when the threat model shifted. Those that doubled down on static controls had to rebuild from scratch when reality caught up with them.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI behavior is already generating signals in your environment. The question isn’t whether the shift from posture to behavioral detection will happen in AI security. It will, for the same reasons it happened at the endpoint. The question is whether your team will be ready to act on those signals when it counts.&lt;/p&gt;
-
-
-
-&lt;p&gt;The window is open. It won’t stay that way.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4168991/ai-security-is-repeating-endpoint-securitys-biggest-mistake.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
-      <pubDate>Mon, 11 May 2026 10:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>New ‘Dirty Frag’ exploit targets Linux kernel for root access</title>
-      <link>https://www.csoonline.com/article/4169399/new-dirty-frag-exploit-targets-linux-kernel-for-root-access.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A newly disclosed Linux privilege escalation issue dubbed “Dirty Frag” is giving attackers a cleaner path to post-compromise escalation to root privileges.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Microsoft, a couple of vulnerabilities constituting the issue, affecting Linux kernel networking and memory-fragment handling components, are already seeing active exploitation in the wild. The exploitation attempts look indistinguishable from the recently disclosed  &lt;a href="https://www.csoonline.com/article/4165824/trivial-exploit-can-give-attackers-root-access-to-linux-kernel.html"&gt;Copy Fail&lt;/a&gt; campaigns.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Dirty Frag may be leveraged after initial compromise through SSH access, web-shell execution, container escape, or compromise of a low-privileged account,” Microsoft researchers said in a security &lt;a href="https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/" rel="noreferrer noopener" target="_blank"&gt;blog post&lt;/a&gt;, adding that affected environments may include Ubuntu, RHEL, CentOS Stream, AlmaLinux, Fedora, openSUSE, and OpenShift deployments.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft also said the exploit stands out because it avoids many of the instability issues typically associated with Linux local privilege escalation exploits using&lt;a href="https://www.csoonline.com/article/4160275/caught-quarantined-re-installed-redsun-turns-microsoft-defender-on-itself.html"&gt; race-condition&lt;/a&gt; dependent bugs.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Turning Linux memory fragmentation into root access&lt;/h2&gt;
-
-
-
-&lt;p&gt;According to Microsoft, the Dirty Frag exploit chain abuses weaknesses in how the Linux kernel handles fragmented memory pages, allowing attackers to overwrite protected page-cache-backed data and escalate privileges to root access.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attack combines two separate vulnerabilities affecting the Linux IPsec Encapsulating Security Payload (ESP) subsystem (&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43284" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-43284&lt;/a&gt;) and the RxRPC networking protocol (&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43500" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-43500&lt;/a&gt;). “Once local access is established, successful exploitation may allow attackers to escalate privileges to root and gain broad control over the affected Linux host,” the researchers said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Dirty Frag is the latest addition to a growing family of Linux kernel page-cache corruption vulnerabilities that includes &lt;a href="https://www.csoonline.com/article/572261/dirty-pipe-root-linux-vulnerability-can-also-impact-containers.html"&gt;Dirty Pipe &lt;/a&gt;(CVE-2022-0847) and the recently disclosed Copy Fail (CVE-2026-31431) bug.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This vulnerability is like both Copy Fail and Dirty Pipe in that they attack page caches in the system where in place crypto operations take place,” said &lt;a href="https://www.linkedin.com/in/ben-ronallo-04a37860" rel="noreferrer noopener" target="_blank"&gt;Ben Ronallo&lt;/a&gt;, principal cybersecurity engineer at Black Duck. “Copy Fail, Dirty Pipe, and Dirty Frag are all exploiting the same root cause, but Dirty Frag is not limited to a single Linux subsystem, whereas Copy Fail is limited to only algif_aead and Dirty Pipe is limited to pipe_buffer.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Attackers are already exploiting Dirty Frag&lt;/h2&gt;
-
-
-
-&lt;p&gt;Microsoft warned that Dirty Frag is already being actively exploited in the wild, primarily as a post-compromise privilege escalation tool. The company said attackers are using the vulnerability after obtaining an initial foothold on vulnerable Linux systems, allowing them to elevate privileges from a low-level user account to full root access.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Microsoft Defender is currently seeing limited in-the-wild activity where privilege escalation involving ‘su’ is observed, and which may be indicative of techniques associated with either ‘Dirty Frag’ or ‘Copy Fail,’” the researchers said, adding that the attack began with SSH access, followed by the execution of a malicious ELF binary that quickly escalated privileges using ‘su.’&lt;/p&gt;
-
-
-
-&lt;p&gt;Su, short for switch user, is a command-line tool in Linux systems to switch from the current user to another, typically root, to execute commands with elevated privileges.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="defenders-urged-to-disable-vulnerable-kernel-modules"&gt;Defenders urged to disable vulnerable kernel modules&lt;/h2&gt;
-
-
-
-&lt;p&gt;Users don’t yet have a complete fix. While the Linux Kernel Organization patched CVE-2026-43284 in a release on May 8, 2026, fixes for CVE-2026-43500 are awaited.&lt;/p&gt;
-
-
-
-&lt;p&gt;With fixes still rolling out unevenly &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43284"&gt;across &lt;/a&gt;Linux ecosystems, Microsoft and other researchers are urging organizations to apply temporary mitigations immediately. Recommended actions include disabling the vulnerable esp4, esp6, and rxrpc kernel modules if they are not operationally required.&lt;/p&gt;
-
-
-
-&lt;p&gt;Microsoft additionally recommended reducing unnecessary local shell access, monitoring abnormal privilege escalation, and strengthening containerized workload controls to reduce opportunities for attackers to escalate into full system compromise. “Mitigation alone may not reverse changes already introduced through successful exploitation attempts,” the researchers warned, adding that an exploitation prior to mitigation can persist malicious modifications in memory or cached file content.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4169399/new-dirty-frag-exploit-targets-linux-kernel-for-root-access.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
-      <pubDate>Mon, 11 May 2026 12:01:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Malicious Hugging Face model masquerading as OpenAI release hits 244K downloads</title>
-      <link>https://www.csoonline.com/article/4169407/malicious-hugging-face-model-masquerading-as-openai-release-hits-244k-downloads.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A malicious Hugging Face repository posing as an OpenAI release delivered infostealer malware to Windows systems and logged 244,000 downloads before being removed, raising fresh concerns about how enterprises source and validate AI models from public repositories.&lt;/p&gt;
-
-
-
-&lt;p&gt;The repository, named Open-OSS/privacy-filter, impersonated OpenAI’s legitimate Privacy Filter release, copied its model card almost word-for-word, and included a malicious loader.py file that fetched and executed credential-stealing malware on Windows hosts, AI security firm HiddenLayer said in a &lt;a href="https://www.hiddenlayer.com/research/malware-found-in-trending-hugging-face-repository-open-oss-privacy-filter" rel="noreferrer noopener" target="_blank"&gt;research advisory&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The repository reached the #1 trending position on Hugging Face with approximately 244K downloads and 667 likes in under 18 hours, numbers that were almost certainly artificially inflated to make the repository appear legitimate,” the advisory added.&lt;/p&gt;
-
-
-
-&lt;p&gt;The incident highlights growing concerns that public AI model registries are emerging as a new software supply-chain risk for enterprises, particularly as developers and data scientists increasingly clone open-source models directly into corporate environments with access to source code, cloud credentials, and internal systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;The README accompanying the fake model diverged from the legitimate project in one key area, instructing users to run start.bat on Windows or execute python loader.py on Linux and macOS.&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers have previously found malicious code hidden inside Pickle-serialised &lt;a href="https://www.csoonline.com/article/3819920/attackers-hide-malicious-code-in-hugging-face-ai-model-pickle-files.html"&gt;model files on Hugging Face&lt;/a&gt; that bypassed the platform’s scanners. They have also warned that the &lt;a href="https://www.csoonline.com/article/4015077/ai-supply-chain-threats-are-looming-as-security-practices-lag.html"&gt;AI supply chain is lagging behind traditional software&lt;/a&gt; in oversight and tooling.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="malicious-loader-disguised-as-a-legitimate-model-setup"&gt;Malicious loader disguised as a legitimate model setup&lt;/h2&gt;
-
-
-
-&lt;p&gt;According to HiddenLayer, the loader.py script first executes decoy code that resembles a legitimate AI model loader before launching a concealed infection chain.&lt;/p&gt;
-
-
-
-&lt;p&gt;The script disabled SSL verification, decoded a base64-encoded URL linked to the public JSON hosting service jsonkeeper.com, retrieved a remote payload instruction, and passed commands to PowerShell. “Using jsonkeeper[.]com as the C2 channel lets the attacker rotate the payload without modifying the repository,” the researchers wrote.&lt;/p&gt;
-
-
-
-&lt;p&gt;The resulting PowerShell command downloaded an additional batch file from an attacker-controlled domain and established persistence by creating a scheduled task designed to mimic a legitimate Microsoft Edge update process.&lt;/p&gt;
-
-
-
-&lt;p&gt;The infection chain ultimately deployed a Rust-based infostealer targeting Chromium and Firefox-derived browsers, Discord local storage, cryptocurrency wallets, FileZilla configurations, and host system information, the advisory said.&lt;/p&gt;
-
-
-
-&lt;p&gt;The malware also attempted to disable Windows Antimalware Scan Interface and Event Tracing for Windows while checking for sandbox and virtual machine environments to evade analysis.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="part-of-a-broader-ai-supply-chain-targeting"&gt;Part of a broader AI supply chain targeting&lt;/h2&gt;
-
-
-
-&lt;p&gt;HiddenLayer, in its advisory, said that it identified six additional Hugging Face repositories uploaded under a separate account that used nearly identical loader logic and shared infrastructure with the campaign.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers also linked elements of the operation to earlier software supply-chain attacks involving npm typosquatting campaigns and fake AI packages distributed through PyPI. The shared infrastructure “suggests these campaigns are possibly linked and likely part of a broader supply chain operation targeting open-source ecosystems,” HiddenLayer wrote.&lt;/p&gt;
-
-
-
-&lt;p&gt;The incident follows earlier warnings from researchers about malicious code embedded inside Pickle-serialized AI model files on Hugging Face, as well as separate campaigns involving poisoned AI SDKs and fake OpenClaw installers.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="traditional-security-controls-are-falling-short"&gt;Traditional security controls are falling short&lt;/h2&gt;
-
-
-
-&lt;p&gt;The incident also exposes limitations in existing software composition analysis and application security tooling when applied to AI artifacts, analysts said.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Traditional SCA was designed to inspect dependency manifests, libraries, and container images, not the increasingly complex behaviors associated with AI development workflows,” said Sakshi Grover, senior research manager for cybersecurity services at IDC. “It is far less effective at identifying malicious loader logic concealed within seemingly legitimate AI repositories.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Jaishiv Prakash, director analyst at Gartner, said enterprises now need dedicated governance controls at the AI registry layer itself.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Enterprises must establish dedicated controls for model sources, approved versions, access, and runtime validation at the registry layer,” Prakash said, adding that model repositories distribute executable artifacts and embedded logic that often fall outside the effective scope of traditional SCA tools.&lt;/p&gt;
-
-
-
-&lt;p&gt;IDC’s November 2025 FutureScape report predicts that by 2027, 60% of enterprises deploying agentic AI systems will require an AI bill of materials to support continuous vulnerability scanning and compliance assurance, Grover said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-should-enterprises-do-now"&gt;What should enterprises do now&lt;/h2&gt;
-
-
-
-&lt;p&gt;HiddenLayer urged affected users to treat impacted systems as fully compromised and prioritize reimaging over cleanup efforts.&lt;/p&gt;
-
-
-
-&lt;p&gt;“If you cloned Open-OSS/privacy-filter and executed start.bat, python loader.py, or any file from the repository on a Windows host, treat the system as fully compromised,” the advisory said. Browser sessions should also be considered compromised even where passwords were not stored locally, the researchers added, because stolen session cookies can bypass multifactor authentication protections.&lt;/p&gt;
-
-
-
-&lt;p&gt;The company also recommended blocking listed indicators of compromise, rotating credentials, invalidating active sessions, and conducting historical network hunts for connections tied to the campaign.&lt;/p&gt;
-
-
-
-&lt;p&gt;Hugging Face confirmed to HiddenLayer that the repository violated its terms of service and removed it from the platform, according to the advisory.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4169407/malicious-hugging-face-model-masquerading-as-openai-release-hits-244k-downloads.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
-      <pubDate>Mon, 11 May 2026 12:14:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV26-426)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-426</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-426</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
-      <pubDate>Wed, 06 May 2026 13:37:09 +0000</pubDate>
-    </item>
-    <item>
-      <title>Broadcom VMware security advisory (AV26-427)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-427</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-427</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
-      <pubDate>Wed, 06 May 2026 13:44:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>WatchGuard security advisory (AV26-428)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
-      <pubDate>Wed, 06 May 2026 17:24:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Samsung mobile security advisory (AV26-429)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
-      <pubDate>Wed, 06 May 2026 17:28:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>Palo Alto Networks security advisory (AV26-425) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
-      <pubDate>Wed, 06 May 2026 18:03:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco security advisory (AV26-430)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
-      <pubDate>Wed, 06 May 2026 19:25:00 +0000</pubDate>
     </item>
     <item>
       <title>Entries now open for the 2026 CSO30 Australia Awards</title>
@@ -464,8 +73,68 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4169576/entries-now-open-for-the-2026-cso30-australia-awards.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 11 May 2026 16:18:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-426)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-426</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-426</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.76</comments>
+      <pubDate>Wed, 06 May 2026 13:37:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>Broadcom VMware security advisory (AV26-427)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-427</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-427</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.76</comments>
+      <pubDate>Wed, 06 May 2026 13:44:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>WatchGuard security advisory (AV26-428)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-428</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.79</comments>
+      <pubDate>Wed, 06 May 2026 17:24:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>Samsung mobile security advisory (AV26-429)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-429</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.79</comments>
+      <pubDate>Wed, 06 May 2026 17:28:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>Palo Alto Networks security advisory (AV26-425) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-425</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.80</comments>
+      <pubDate>Wed, 06 May 2026 18:03:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cisco security advisory (AV26-430)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-430</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.81</comments>
+      <pubDate>Wed, 06 May 2026 19:25:00 +0000</pubDate>
     </item>
     <item>
       <title>Spring security advisory (AV26-431)</title>
@@ -474,7 +143,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-431</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Thu, 07 May 2026 13:48:23 +0000</pubDate>
     </item>
     <item>
@@ -484,7 +153,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vm2-nodejs-library-security-advisory-av26-432</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Thu, 07 May 2026 13:54:19 +0000</pubDate>
     </item>
     <item>
@@ -494,28 +163,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-433</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Thu, 07 May 2026 14:00:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Broadcom VMware security advisory (AV26-434)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-434</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-434</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
-      <pubDate>Thu, 07 May 2026 15:30:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ivanti security advisory (AV26-435)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-435</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-435</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
-      <pubDate>Thu, 07 May 2026 15:35:50 +0000</pubDate>
     </item>
     <item>
       <title>Webinar: What the Riskiest SOC Alerts Go Unanswered - and How Radiant Security Can Help</title>
@@ -526,8 +175,28 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://thehackernews.com/2026/05/webinar-what-riskiest-soc-alerts-go.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Tue, 12 May 2026 17:28:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Broadcom VMware security advisory (AV26-434)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-434</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-434</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.00</comments>
+      <pubDate>Thu, 07 May 2026 15:30:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ivanti security advisory (AV26-435)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-435</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-435</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.00</comments>
+      <pubDate>Thu, 07 May 2026 15:35:50 +0000</pubDate>
     </item>
     <item>
       <title>Customer Identity &amp; Access Management: Die besten CIAM-Tools</title>
@@ -678,7 +347,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/3492789/customer-identity-access-management-die-6-besten-ciam-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Tue, 12 May 2026 03:00:00 +0000</pubDate>
     </item>
     <item>
@@ -798,38 +467,8 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/3494023/cybersicherheitsvorschriften-so-erfullen-sie-ihre-compliance-anforderungen.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Tue, 12 May 2026 04:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV26-436)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
-      <pubDate>Fri, 08 May 2026 16:08:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-011 - Vulnerabilities affecting Linux - CVE-2026-43284 and CVE-2026-43500</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
-      <pubDate>Fri, 08 May 2026 17:39:10 +0000</pubDate>
-    </item>
-    <item>
-      <title>cPanel security advisory (AV26-437)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
-      <pubDate>Fri, 08 May 2026 18:49:02 +0000</pubDate>
     </item>
     <item>
       <title>Why patching SLAs should be the floor, not the strategy</title>
@@ -941,7 +580,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4169623/why-patching-slas-should-be-the-floor-not-the-strategy.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Tue, 12 May 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1200,7 +839,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4168684/cisos-step-into-the-ai-spotlight.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Tue, 12 May 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
@@ -1299,8 +938,18 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4169635/developer-workstations-are-the-new-beachhead.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Tue, 12 May 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV26-436)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.29</comments>
+      <pubDate>Fri, 08 May 2026 16:08:21 +0000</pubDate>
     </item>
     <item>
       <title>cPanel flaw exposes enterprises to hosting supply-chain risks</title>
@@ -1390,8 +1039,28 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4169957/cpanel-flaw-exposes-enterprises-to-hosting-supply-chain-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.30</comments>
       <pubDate>Tue, 12 May 2026 10:26:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-011 - Vulnerabilities affecting Linux - CVE-2026-43284 and CVE-2026-43500</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.31</comments>
+      <pubDate>Fri, 08 May 2026 17:39:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>cPanel security advisory (AV26-437)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.33</comments>
+      <pubDate>Fri, 08 May 2026 18:49:02 +0000</pubDate>
     </item>
     <item>
       <title>Fake Claude Code takes the IElevator to your browser secrets</title>
@@ -1469,7 +1138,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4169992/fake-claude-code-takes-the-ielevator-to-your-browser-secrets.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Tue, 12 May 2026 11:32:37 +0000</pubDate>
     </item>
     <item>
@@ -1560,7 +1229,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4170029/openai-introduces-daybreak-cyber-platform-takes-on-anthropic-mythos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Tue, 12 May 2026 13:06:17 +0000</pubDate>
     </item>
     <item>
@@ -1643,7 +1312,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4170284/mistral-ai-sdk-tanstack-router-hit-in-npm-software-supply-chain-attack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Tue, 12 May 2026 17:14:47 +0000</pubDate>
     </item>
     <item>
@@ -1742,7 +1411,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://www.csoonline.com/article/4169659/linux-kernel-maintainers-suggest-a-kill-switch-to-protect-systems-until-a-zero-day-vulnerability-is-patched.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Tue, 12 May 2026 00:47:09 +0000</pubDate>
     </item>
     <item>
@@ -1752,7 +1421,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.81</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Mon, 11 May 2026 14:15:28 +0000</pubDate>
     </item>
     <item>
@@ -1762,7 +1431,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.82</comments>
+      <comments>Score: 9.69</comments>
       <pubDate>Mon, 11 May 2026 14:36:29 +0000</pubDate>
     </item>
     <item>
@@ -1772,7 +1441,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.83</comments>
+      <comments>Score: 9.69</comments>
       <pubDate>Mon, 11 May 2026 14:50:47 +0000</pubDate>
     </item>
     <item>
@@ -1782,7 +1451,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.84</comments>
+      <comments>Score: 9.71</comments>
       <pubDate>Mon, 11 May 2026 15:17:54 +0000</pubDate>
     </item>
     <item>
@@ -1792,7 +1461,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.86</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Mon, 11 May 2026 15:43:52 +0000</pubDate>
     </item>
     <item>
@@ -1802,7 +1471,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.86</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Mon, 11 May 2026 15:53:47 +0000</pubDate>
     </item>
     <item>
@@ -1812,7 +1481,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.87</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Mon, 11 May 2026 16:04:11 +0000</pubDate>
     </item>
     <item>
@@ -1822,7 +1491,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-444</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.91</comments>
+      <comments>Score: 9.77</comments>
       <pubDate>Mon, 11 May 2026 17:31:18 +0000</pubDate>
     </item>
     <item>
@@ -1832,8 +1501,139 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-445</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.98</comments>
+      <comments>Score: 9.83</comments>
       <pubDate>Mon, 11 May 2026 19:39:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>May Patch Tuesday roundup: Critical holes in Windows Netlogon, DNS, and SAP S/4HANA</title>
+      <link>https://www.csoonline.com/article/4170340/may-patch-tuesday-roundup-critical-holes-in-windows-netlogon-dns-and-sap-s-4hana.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Critical vulnerabilities in Windows Server’s networking and identity infrastructure, as well as a serious hole in Microsoft Dynamics 365 on-premises version, highlight Microsoft’s May Patch Tuesday fixes.&lt;/p&gt;
+
+
+
+&lt;p&gt;They are among the 118 vulnerabilities identified this month by the company. Some in cloud-based services like Azure and Microsoft Teams have already been fixed, so no admin action is needed.&lt;/p&gt;
+
+
+
+&lt;p&gt;But among the most severe that CSOs need to pay attention to is yet another hole in Windows Netlogon service, &lt;a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41089" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-41089&lt;/a&gt;, which has a CVSS score of 9.8. It requires no authentication or user interaction to be exploited.&lt;/p&gt;
+
+
+
+&lt;p&gt;Netlogon vulnerabilities date back to at least 2020, when &lt;a href="https://www.csoonline.com/article/569901/what-admins-need-to-know-about-microsofts-zerologon-vulnerability-fix.html" target="_blank"&gt;a vulnerability dubbed Zerologon&lt;/a&gt; was found. In 2025 Microsoft fixed &lt;a href="https://support.microsoft.com/en-us/topic/kb5066014-netlogon-rpc-hardening-cve-2025-49716-38a0bc06-507c-47d4-be0f-ca1acab02c68" rel="noreferrer noopener" target="_blank"&gt;a denial of service vulnerability&lt;/a&gt; in which a remote unauthenticated user could make a series of Netlogon-based remote procedure calls that could consume all memory on a domain controller.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The Netlogon vulnerability directly impacts domain controllers and identity infrastructure,” &lt;a href="https://www.linkedin.com/in/bicer/" rel="noreferrer noopener" target="_blank"&gt;Jack Bicer&lt;/a&gt;, director of vulnerability research at Action1, told CSO, “creating risk of domain level compromise, credential theft, ransomware deployment, and operational outages.”&lt;/p&gt;
+
+
+
+&lt;p&gt;This vulnerability could impact Windows Server versions back to 2016.&lt;/p&gt;
+
+
+
+&lt;p&gt;Another critical vulnerability is in Windows Server’s DNS Client, &lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-41096" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-41096&lt;/a&gt;, also with a CVSS score of 9.8. It could allow remote code execution through specially crafted DNS responses. Bicer said this creates the potential for widespread endpoint compromise across enterprise networks.&lt;/p&gt;
+
+
+
+&lt;p&gt;“While Microsoft currently assesses exploitation likelihood as lower,” he said, “the strategic importance of DNS and Active Directory services significantly elevates the organizational risk associated with delayed patching.” &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.ivanti.com/blog/authors/chris-goettl" rel="noreferrer noopener" target="_blank"&gt;Chris Goettl&lt;/a&gt;, VP of product management at Ivanti, said that from a static analysis perspective, these two vulnerabilities “definitely look like a good opportunity for threat actors. The vulnerabilities are not currently exploited or publicly disclosed, but organizations should be sure to prioritize OS updates in a timely manner.”&lt;/p&gt;
+
+
+
+&lt;p&gt;He added, “additional layers of protection through network segmentation, access restrictions and monitoring should limit the exposure within an enterprise. That being said, these vulnerabilities are out there. Average time to an N-day exploit is around five days currently. Organizations may choose to prioritize critical parts of their infrastructure ahead of the rest of their infrastructure to shorten that exposure window in case of an exploit in the near future.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="severe-hole-in-dynamics-365"&gt;Severe hole in Dynamics 365&lt;/h2&gt;
+
+
+
+&lt;p&gt;The most severe issue this month, Bicer said, is &lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-42898" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-42898&lt;/a&gt; affecting Microsoft Dynamics 365 On Premises. A remote code execution vulnerability with a CVSS score of 9.9, it allows a low privileged authenticated attacker to execute arbitrary code remotely through manipulated process session data.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Because Dynamics 365 environments frequently integrate with identity providers, financial systems, and operational business workflows, compromise of these platforms could rapidly expand into broader enterprise compromise,” Bicer said. “Organizations operating customer relationship management infrastructure should prioritize remediation immediately to reduce the risk of operational disruption and unauthorized access to sensitive business records.” &lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="sso-plugin-flaw"&gt;SSO plugin flaw&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://satnam.co/" rel="noreferrer noopener" target="_blank"&gt;Satnam Narang&lt;/a&gt;, senior staff research engineer at Tenable, drew attention to a critical elevation of privilege vulnerability in the Microsoft’s single-sign-on (SSO) plugin for Atlassian’s Jira project management and Confluence collaboration suites (&lt;a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-41103" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-41103&lt;/a&gt;). During the login process, he explained, an attacker could send a specially crafted response message to exploit this flaw. Exploitation would allow the attacker to sign in using a forged identity, without Microsoft Entra ID authentication. &lt;/p&gt;
+
+
+
+&lt;p&gt;This would allow the attacker to access or modify data in Jira or Confluence, which he described as rich sources of sensitive information for many organizations. However, Narang pointed out, the accessible information would be limited by the access defined by the targeted servers for the authorized user.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.fortra.com/profile/tyler-reguly" rel="noreferrer noopener" target="_blank"&gt;Tyler Reguly&lt;/a&gt;, associate director for security R&amp;amp;D at Fortra, noted that the admins responsible for Confluence and Jira may not be the same people responsible for Microsoft products, so the crossover of this vulnerability may cause it to be entirely overlooked. CSOs should stay on top of their teams with this one, he advised.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="critical-non-cve-update"&gt;Critical non-CVE update&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.linkedin.com/in/rainmbaker/" rel="noreferrer noopener" target="_blank"&gt;Rain Baker&lt;/a&gt;, senior incident response specialist for the ShadowScout team at Nightwing, pointed out that the most critical non-CVE update involves the mandatory rollout of updated Secure Boot certificates. Devices failing to receive these updates before the June 26 deadline face “catastrophic boot-level security failures” or degraded security states, he said. &lt;/p&gt;
+
+
+
+&lt;p&gt;“Ensure your entire fleet successfully rotates to the new trust anchors before June 26,” he said. “For those who haven’t patched for last month’s releases for the Windows Shell and Microsoft Defender bypass flaws, it is imperative that security teams give these the highest priority.” &lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="sap-patches-and-oracle-updates"&gt;SAP patches and Oracle updates&lt;/h2&gt;
+
+
+
+&lt;p&gt;SAP issued two HotNews Notes, two High Priority Notes and 12 Medium Priority Notes.&lt;/p&gt;
+
+
+
+&lt;p&gt;One of the HotNews Notes is #3724838 (it’s also &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-34260" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-34260&lt;/a&gt;, with a CVSS score of 9.6). It patches an SQL injection vulnerability in SAP S/4HANA’s Enterprise Search for ABAP. &lt;a href="https://onapsis.com/blog/sap-security-patch-day-may-2026/" rel="noreferrer noopener" target="_blank"&gt;Researchers at Onapsis&lt;/a&gt; said that, due to improper or missing input validation and sanitization, an authenticated attacker is able to inject malicious SQL statements through user-controlled input, with high impact on the confidentiality and availability of the application. “Fortunately,” Onapsis said, “the affected source code only allows read access to data, so that integrity is not impacted.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Still, &lt;a href="https://pathlock.com/author/jonathan-stross/" rel="noreferrer noopener" target="_blank"&gt;Jonathan Stross&lt;/a&gt;, SAP security analyst at Pathlock, said that if you run Enterprise Search for ABAP “this is the most important technical vulnerability of the month. It allows a low-privileged authenticated attacker to inject malicious SQL through user-controlled input, potentially exposing sensitive database information and crashing the application.”&lt;/p&gt;
+
+
+
+&lt;p&gt;He added that for organizations using S/4HANA broadly across finance, procurement, supply chain, or HR-adjacent processes, this should be treated as an urgent remediation item.&lt;/p&gt;
+
+
+
+&lt;p&gt;SAP stated that there is no workaround, Stross pointed out, so remediation depends on implementing the referenced correction instructions or support packages. &lt;/p&gt;
+
+
+
+&lt;p&gt;The other HotNews note is #3733064, with a CVSS score of 9.6, which patches a missing authentication check vulnerability in SAP Commerce Cloud. Onapsis says the vulnerability is caused by an overly permissive security configuration with improper rule ordering, allowing an unauthenticated user to perform malicious configuration upload and code injection, resulting in arbitrary server-side code execution.&lt;/p&gt;
+
+
+
+&lt;p&gt;“This is one of the highest business-risk items of the month,” said Stross, “because Commerce Cloud environments are frequently exposed beyond the internal corporate network. A successful exploit could affect storefront availability, customer data, order flows, pricing logic, integrations, and trust in the commerce platform.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Finally, Oracle admins should note that the company &lt;a href="https://www.csoonline.com/article/4167335/oracle-will-patch-more-often-to-counter-ai-cybersecurity-threat.html" target="_blank"&gt;is switching to releasing monthly security patches.&lt;/a&gt; The first will come on May 28, which is the fourth Thursday of the month. However, after that the patches will come on the third Tuesday of each month. &lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4170340/may-patch-tuesday-roundup-critical-holes-in-windows-netlogon-dns-and-sap-s-4hana.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.84</comments>
+      <pubDate>Wed, 13 May 2026 00:54:31 +0000</pubDate>
     </item>
     <item>
       <title>Apple security advisory (AV26-446)</title>
@@ -1842,8 +1642,324 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-446</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.99</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Mon, 11 May 2026 20:02:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>Der Kaufratgeber für Breach &amp; Attack Simulation Tools</title>
+      <link>https://www.csoonline.com/article/3494368/der-kaufratgeber-fur-breach-attack-simulation-tools.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-large"&gt;&lt;img alt="BAS Tools Concept 16z9 DEO" class="wp-image-3831499" height="576" src="https://b2b-contenthub.com/wp-content/uploads/2025/02/original1cso_Roman-Samborskyi.jpg?quality=50&amp;amp;strip=all&amp;amp;w=1024" width="1024" /&gt;&lt;figcaption class="wp-element-caption"&gt;Breach &amp;amp; Attack Simulation Tools geben Aufschluss darüber, wie gut (oder schlecht) Ihre Sicherheitskontrollen funktionieren.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;Roman Samborskyi | shutterstock.com&lt;/p&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Lösungen im Bereich Breach &amp;amp; Attack Simulation (BAS) unterstützen Unternehmen dabei, ihr &lt;a href="https://www.csoonline.com/article/3577944/diese-unternehmen-hats-schon-erwischt.html" target="_blank" title="Sicherheitsniveau zu verstehen"&gt;Sicherheitsniveau zu verstehen&lt;/a&gt;. Dazu automatisieren die Tools die Tests spezifischer Bedrohungsvektoren. Als Grundlage dienen dabei in der Regel das &lt;a href="https://attack.mitre.org/" rel="noopener" target="_blank" title="MITRE-ATT&amp;amp;CK"&gt;MITRE-ATT&amp;amp;CK&lt;/a&gt;– oder &lt;a href="https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html" rel="noopener" target="_blank" title="Cyber-Killchain-Framework"&gt;Cyber-Killchain-Framework&lt;/a&gt;. BAS-Produkte simulieren zum Beispiel:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;&lt;p&gt;Netzwerkangriffe und Infiltrationsversuche,&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Lateral Movement,&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Phishing,&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Endpunkt- und Gateway-Attacken,&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Malware- und Ransomware-Angriffe sowie&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Insider-Bedrohungen.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="breach-attack-simulation-eingeordnet"&gt;Breach &amp;amp; Attack Simulation eingeordnet&lt;/h2&gt;
+
+
+
+&lt;p&gt;Breach &amp;amp; Attack Simulation kann &lt;a href="https://www.csoonline.com/article/3495010/red-vs-blue-vs-purple-teams-so-trainieren-sie-effektiv-den-ernstfall.html" target="_blank" title="Red Teaming"&gt;Red Teaming&lt;/a&gt;, &lt;a href="https://www.csoonline.com/article/3492412/penetration-tester-werden-was-ethical-hacker-konnen-mussen.html" target="_blank" title="Penetration Testing"&gt;Penetration Testing&lt;/a&gt; oder auch &lt;a href="https://www.csoonline.com/article/3492897/attack-surface-management-losungen-9-tools-um-ihre-angriffsflache-zu-managen.html" target="_blank" title="Attack Surface Assessments"&gt;Attack Surface Assessments&lt;/a&gt; (ASA) ergänzen, unterscheidet sich aber deutlich von diesen Maßnahmen. Stellen Sie sich vor, Ihr Unternehmen wäre eine Villa:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;&lt;p&gt;Beim &lt;strong&gt;Red Teaming&lt;/strong&gt; oder &lt;strong&gt;Penetration Testing&lt;/strong&gt; beauftragen Sie jemanden, in Ihr Anwesen einzubrechen und Ihren Safe auszuräumen. Das Ziel: potenzielle Zugangsmöglichkeiten aufzudecken.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Breach &amp;amp; Attack Simulation&lt;/strong&gt; ist hingegen, als würden Sie sämtliche Schlösser an den Türen auf Funktionstüchtigkeit prüfen und sicherstellen, dass die installierten Security-Kameras auch entsprechend reagieren, wenn sie Personen erkennen. Das Ziel: sichergehen, dass alle &lt;a href="https://www.csoonline.com/article/3495614/kontrolle-statt-vertrauen-zero-trust-ist-nicht-genug.html" target="_blank" title="Kontrollmaßnahmen"&gt;Kontrollmaßnahmen&lt;/a&gt; wie vorgesehen funktionieren.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Während sich BAS dabei auf Enterprise-Security-Kontrollen wie &lt;a href="https://www.csoonline.com/article/3493047/cyberbedrohungen-erkennen-und-reagieren-was-ndr-edr-und-xdr-unterscheidet.html" target="_blank" title="EDR"&gt;EDR&lt;/a&gt; fokussiert, werden beim &lt;strong&gt;Attack Surface Assessment&lt;/strong&gt; sämtliche potenziellen Schwachstellen und Angriffsvektoren untersucht.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;Das Analystenhaus Gartner fasst diese Technologien in der breiteren Kategorie “&lt;a href="https://www.gartner.com/en/documents/4922031" rel="noopener" target="_blank" title="Exposure Management"&gt;Exposure Management&lt;/a&gt;” zusammen. Laut den Analysten sind Lösungen im Bereich Breach &amp;amp; Attack Simulation vor allem in stark regulierten Branchen wie dem Banken- und Versicherungsumfeld gefragt, die mit &lt;a href="https://www.csoonline.com/article/3496124/cloud-security-journey-wie-compliance-bei-accenture-geht.html" target="_blank" title="wachsenden Compliance-Anforderungen"&gt;wachsenden Compliance-Anforderungen&lt;/a&gt; konfrontiert sind. Diese Einschätzung kann Ilja Rabinovich, Director of Adversarial Tactics beim Sicherheitsanbieter Sygnia, nur bestätigen: “BAS-Produkte sind in der Regel teuer und werden von kleineren Unternehmen mit begrenztem Budget oder eingeschränkter Prozesslandschaft nicht angeschafft.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="der-markt-fur-breach-attack-simulation-tools"&gt;Der Markt für Breach &amp;amp; Attack Simulation Tools&lt;/h2&gt;
+
+
+
+&lt;p&gt;Die Auguren von Gartner &lt;a href="https://www.gartner.com/en/documents/4922031" rel="noopener" target="_blank" title="prognostizieren"&gt;prognostizieren&lt;/a&gt;, dass sich mehr als 40 Prozent aller Unternehmen bis zum Jahr 2026 auf konsolidierte Plattformen oder &lt;a href="https://www.csoonline.com/article/3493613/managed-security-service-provider-6-risiken-die-sie-im-blick-haben-sollten.html" target="_blank" title="Managed Service Provider "&gt;Managed Service Provider &lt;/a&gt;verlassen werden, wenn es um Validierungsprüfungen im Bereich Cybersecurity geht. Entsprechend breit aufgestellt präsentiert sich die BAS-Anbieterlandschaft: Sowohl Standalone-Anbieter als auch große Security-Unternehmen und Service Provider wollen ihre BAS-Lösungen an den Kunden bringen. Chirag Mehta, Analyst bei Constellation Research, sieht dabei eine weitergehende Konsolidierung des Marktes am Horizont: “Wenn Sie ein Tool haben, das Angriffe simulieren kann, ist der nächste logische Schritt, diese Attacken zu verhindern. Das erfordert allerdings, eine Reihe verschiedener Tools zu integrieren, was kein Kinderspiel ist.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Ein wachsender Trend in diesem – wie auch allen anderen Bereichen der IT-Sicherheit – ist &lt;a href="https://www.csoonline.com/article/3494171/chatbots-llms-in-der-sicherheitspraxis-6-wege-zu-mehr-security-mit-generative-ai.html" target="_blank" title="der Einsatz von Generative AI"&gt;der Einsatz von Generative AI&lt;/a&gt; (GenAI). Erik Nost, Analyst bei Forrester Research, sieht diese Entwicklung positiv: “Vermutlich werden wir generative KI als erstes im Bereich des User Interface im Einsatz sehen. Mit Daten auf coole Art und Weise interagieren zu können, ist der neue GenAI-Use-Case.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Der Analyst hält es auch für möglich, dass KI künftig auf der Basis von Daten – oder den für die Benutzer respektive das Unternehmen relevantesten Angriffsarten – &lt;a href="https://www.csoonline.com/article/3492793/ki-gestutzte-bedrohungsjagd-wie-genai-das-threat-hunting-beschleunigt.html" target="_blank" title="Bedrohungen modelliert"&gt;Bedrohungen modelliert&lt;/a&gt;. Er fügt hinzu: “Generative KI könnte außerdem auch eingesetzt werden, um Unternehmen dabei zu helfen, die von BAS gefundenen Probleme zu verstehen, entsprechende Prioritäten zu setzen und spezifische Abhilfemaßnahmen vorzuschlagen.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="das-sollten-bas-losungen-leisten"&gt;Das sollten BAS-Lösungen leisten&lt;/h2&gt;
+
+
+
+&lt;p&gt;Auf folgende wichtige Features sollten Anwender bei Breach &amp;amp; Attack Simulation Tools achten:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Repräsentative Angriffsvektoren&lt;/strong&gt;, um ein möglichst breites Spektrum an für das Unternehmen relevanten Angriffen simulieren zu können.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Realistische Angriffsszenarien&lt;/strong&gt; auf Grundlage von Frameworks wie MITRE ATT&amp;amp;CK, die denen echter Angreifer ähneln.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Anpassbare Szenarien&lt;/strong&gt;, um spezielle Infrastrukturaspekte testen zu können.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Automatisierte Tests&lt;/strong&gt;, um regelmäßige und effiziente Simulationen zu realisieren, ohne den Betrieb zu beeinträchtigen oder zusätzliche personelle Ressourcen einzusetzen.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Detaillierte Reportings und Analysen&lt;/strong&gt;, um die Bedeutung der Tests erklären und verbesserungswürdige Bereiche identifizieren zu können.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Skalierbarkeit&lt;/strong&gt;, um nicht nur die aktuelle Unternehmensumgebung, sondern auch künftige Entwicklungen abdecken zu können.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Testmöglichkeiten für hybride Produktionsumgebungen&lt;/strong&gt;, um Kontrollmaßnahmen unter realen Bedingungen begutachten zu können.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Einfache Nutzung und simple Deployment-Optionen&lt;/strong&gt;, sowie Integrationsmöglichkeiten mit vorhandenen Security-Tools und -Plattformen.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fachkundiger Support&lt;/strong&gt; – insbesondere, wenn Sie mit Breach &amp;amp; Attack Simulation Tools nicht vertraut sind oder keine größeren Sicherheitsteams mit entsprechenden Erfahrungswerten einsetzen können.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Eine &lt;strong&gt;geeignete Kostenstruktur&lt;/strong&gt;, da die Preismodelle von BAS-Anbietern in der Regel variieren. Die Preisstruktur sollte dem Anwendungsfall angemessen sein.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="die-wichtigsten-anbieter-fur-breach-attack-simulation-tools"&gt;Die wichtigsten Anbieter für Breach &amp;amp; Attack Simulation Tools&lt;/h2&gt;
+
+
+
+&lt;p&gt;Im Folgenden werfen wir einen Blick auf die wichtigsten Anbieter – und ihre Lösungen – im Bereich Breach &amp;amp; Attack Simulation. Die Auswahl basiert dabei auf Kundenrezensionen aus Gartners Peer-Insights-Ranking sowie den Einschätzungen der Spezialisten von &lt;a href="https://expertinsights.com/insights/top-breach-and-attack-simulation-solutions/" rel="noopener" target="_blank" title="Expert Insights"&gt;Expert Insights&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.attackiq.com/" rel="noopener" target="_blank" title="AttackIQ"&gt;AttackIQ&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Laut Expert Insights repliziert die zentrale Emulationsplattform von AttackIQ die Taktiken, Techniken und Methoden von Angreifern im Einklang mit dem MITRE-ATT&amp;amp;CK-Framework. Das Angebot des Unternehmens im Bereich Breach &amp;amp; Attack Simulation gliedert sich in drei Optionen:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;&lt;p&gt;Die Managed Platform “&lt;strong&gt;Ready!&lt;/strong&gt;” soll Unternehmen schneller und einfacher zu einer konsistenten Security-Validation-Strategie verhelfen.&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Der agentenlose Testing Service “&lt;strong&gt;Flex&lt;/strong&gt;” funktioniert On Demand und wird im Pay-as-you-Go-Modell oder auch auf monatlicher sowie jährlicher Basis abgerechnet. &lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Bei “&lt;strong&gt;Enterprise&lt;/strong&gt;” handelt es sich um einen umfassenden Co-Managed-Service.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;AttackIQ hat sich zudem einen Namen gemacht, wenn es darum geht, ML- und KI-basierte Cybersecurity-Komponenten zu testen. Nach eigener Aussage ist das Unternehmen zudem der einzige BAS-Anbieter, der sowohl Self-Service- als auch Full-Service-Lösungen anbietet. Künftig soll künstliche Intelligenz Attack-IQ-Kunden außerdem verstärkt dabei unterstützen, Sicherheitslücken automatisiert zu identifizieren und zu beheben.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://cymulate.com/breach-and-attack-simulation/" rel="noopener" target="_blank" title="Cymulate"&gt;Cymulate&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Cymulate gehört nicht nur laut Expert Insights zu den führenden Anbietern für Continuous Threat Exposure Management, sondern ist auch der Anbieter mit den besten Kundenbewertungen bei Gartners Peer Insights – auch dank der guten User Experience. Die “&lt;strong&gt;Breach and Attack (BAS)”&lt;/strong&gt;-Lösung von Cymulate wird im SaaS-Modell bereitgestellt. Für Unternehmen mit Data-Segregation-Bedürfnissen steht auch eine Private-Tenancy-Option zur Verfügung. Wie AttackIQ verwendet Cymulate das MITRE ATT&amp;amp;CK Framework als Grundlage.&lt;/p&gt;
+
+
+
+&lt;p&gt;Laut dem Anbieter dauert es derzeit circa drei bis vier Wochen, um die Integrationen einzurichten und sein BAS-Tool einzusetzen. Diesen Zeitraum möchte Cymulate künftig mit Hilfe von Generative AI auf wenige Minuten reduzieren. Doch die GenAI-Pläne des Anbieters gehen noch weiter: Die Technologie soll künftig automatisiert aus Tausenden oder gar Hunderttausenden verschiedenen Angriffsszenarien Mitigationsstrategien entwickeln können – und den Security-Teams erklären, wie diese umzusetzen sind. Die GenAI-Funktionen sollen laut Cymulate bis Ende Oktober 2024 in vollem Umfang zur Verfügung stehen.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.fortinet.com/de/products/fortitester" rel="noopener" target="_blank" title="Fortinet"&gt;Fortinet&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;In Sachen Kundenbewertungen kann das BAS-Offering von Fortinet nicht ganz mit den ersten beiden Angeboten mithalten. Allerdings kombiniert “&lt;strong&gt;FortiTester&lt;/strong&gt;” Breach &amp;amp; Attack Simulation mit Netzwerk-Performance-Testing und stellt insofern eine umfassende Lösung dar.&lt;/p&gt;
+
+
+
+&lt;p&gt;Das Fortinet-Tool simuliert diverse Angriffsarten auf Grundlage des MITRE-ATT&amp;amp;CK-Frameworks und unterstützt laut Expert Insights außerdem CVE-basierte IPS-Tests, sowie DDoS Traffic Generation.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://cloud.google.com/security/products/mandiant-security-validation" rel="noreferrer noopener" target="_blank"&gt;Mandiant&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Security-Anbieter Mandiant ist in erster Linie für seine Dienstleistungsangebote im Bereich Threat Intelligence bekannt. Die Expertise in diesem Bereich lässt das Unternehmen auch in seine BAS-Softwarelösung “&lt;strong&gt;Security Validation&lt;/strong&gt;” einfließen – und hebt sich dadurch von seinen Mitbewerbern ab.&lt;/p&gt;
+
+
+
+&lt;p&gt;Das Mandiant-Tool unterstützt zum Beispiel MITRE ATT&amp;amp;CK Framework Mapping, automatisiertes Alerting sowie Environmental Drift Detection und simuliert Angriffsszenarien aus der echten Welt.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.netspi.com/breach-and-attack-simulation/" rel="noopener" target="_blank" title="NetSPI"&gt;NetSPI&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;In Sachen Penetrationstests hat sich NetSPI bereits einen Namen gemacht. Das Unternehmen hat mit “&lt;strong&gt;Breach and Attack Simulation&lt;/strong&gt;” ebenfalls eine BAS-Lösung im Angebot, die Sicherheitskontrollen validieren, Detection-Lücken identifizieren und Angriffsflächen managen kann. Das Pentesting-Knowhow von NetSPI manifestiert sich dabei insbesondere in umfassenden Support, wie Derek Wilson, leitender Security-Berater des Unternehmens, verspricht: “Unser erfahrenes Pentester-Team schließt sich mit Ihrem SOC-Team kurz und unterstützt dabei, Detections einzuordnen und Präventionsmaßnahmen zu ergreifen.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Auch bei NetSPI soll künftig Generative AI Mehrwert für die BAS-Kunden erschließen: Künftig soll die Lösung des Anbieters dank der Technologie in der Lage sein, mehrere Datenquellen zu nutzen, um die nötigen Tests möglichst schnell zu identifizieren und zu priorisieren. Darüber hinaus stehen auch Playbooks, die auf Basis von Bedrohungsinformationen für spezifische Industrien generiert werden sowie die Simulation dynamischer Angriffsketten, um Abdeckungslücken zu identifizieren, auf dem Plan.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.picussecurity.com/security-validation-platform" rel="noopener" target="_blank" title="Picus Security"&gt;Picus Security&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Auf Grundlage der Gartner Peer Insights ist Picus Security der BAS-Anbieter mit der zweithöchsten Kundenzufriedenheit und wurde von den Auguren mit einem “Customers Choice”-Award ausgezeichnet. Nach eigenen Angaben zählt Picus Hunderte von globalen Unternehmen zu seinen Kunden, darunter beispielsweise Mastercard oder die ING-Bankengruppe.&lt;/p&gt;
+
+
+
+&lt;p&gt;Die “&lt;strong&gt;Security Validation&lt;/strong&gt;“-Plattform des Anbieters beinhaltet Breach &amp;amp; Attack Simulation, unterstützt darüber hinaus allerdings auch automatisierte Penetrationstests und Attack Surface Management sowie SOC-Optimierung und Cloud Security Posture Managenet (CSPM). Auch Picus investiert stark in KI und will künftig mit Hilfe der Technologie bessere, schnellere und umfassender personalisierte Einblicke in das Sicherheitsniveau der Anwender liefern.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.redscan.com/services/breach-and-attack-simulation/" rel="noopener" target="_blank" title="Redscan"&gt;Redscan&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Weil Redscan auf Managed Detection and Response sowie Penetration Testing spezialisiert ist, bietet das Unternehmen einen praxisorientierten BAS-Ansatz namens “&lt;strong&gt;FAST Attack Simulation&lt;/strong&gt;s”. Dieser verspricht den Anwendern maßgeschneiderte Angriffssimulationen kombiniert mit Beratungsleistungen, um bei den nachfolgenden Schritten zu unterstützen.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.reliaquest.com/platform/breach-and-attack-simulation/" rel="noopener" target="_blank" title="Reliaquest"&gt;Reliaquest&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Der Anbieter Reliaquest wurde für seine Security-Plattform “GreyMatter” 2023 von Gartner in der Kategorie “Managed Detection and Response” mit einem “Customers Choice”-Award ausgezeichnet. Besonders stark ist diese Lösung im Umfeld mittelständischer Unternehmen verbreitet. Eine Funktion dieser Plattform heißt “&lt;strong&gt;Verify&lt;/strong&gt;” und realisiert Breach &amp;amp; Attack Simulation.&lt;/p&gt;
+
+
+
+&lt;p&gt;Die BAS-Lösung von Reliaquest verspricht Anwendern ein umfassendes Portfolio (kuratierter) Angriffsszenarien, um möglichst zeitnah zu entsprechenden Ergebnissen zu kommen. Diese Szenarien werden zudem laufend auf Grundlage aktueller Threat-Informationen aktualisiert. Die ermittelte Bedrohungsabdeckung gleicht das Tool mit Security-Frameworks wie MITRE ATT&amp;amp;CK ab.&lt;/p&gt;
+
+
+
+&lt;p&gt;Sollten Sie diesen Anbieter ins Auge fassen, behalten Sie eines jedoch im Hinterkopf: Möglicherweise ist es im Sinne einer unabhängigen Überprüfung der Wirksamkeit von Sicherheitsmaßnahmen nicht die beste Idee, denselben Anbieter für BAS und MDR zu wählen. Andererseits könnten Anwender auch von dieser Integration profitieren.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.safebreach.com/" rel="noopener" target="_blank" title="SafeBreach"&gt;SafeBreach&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Auch der dedizierte BAS-Anbieter SafeBreach kommt bei den Peer Reviews von Gartner gut weg – auch dank seiner umfassenden Integrationsmöglichkeiten mit anderen Security-Tools. Auch in Sachen namhafte Kunden kann SafeBreach mit Netflix, PayPal, Pepsi und der Carlsberg-Gruppe überzeugen.&lt;/p&gt;
+
+
+
+&lt;p&gt;Die BAS-Plattform “&lt;strong&gt;SafeBreach&lt;/strong&gt;” testet die Wirksamkeit bestehender Sicherheitskontrollen auf der Grundlage von mehr als 25.000 Angriffsmethoden, die dem unternehmenseigenen “Hackers Playbook” entstammen. Zudem verspricht der Anbieter, seine Plattform innerhalb von 24 Stunden um neu aufkommende Bedrohungen ergänzen zu können. Neben maßgeschneiderten Angriffssimulationen auf Grundlage des MITRE-ATT&amp;amp;CK-Frameworks bietet die SafeBreach-Lösung auch die Option, die voraussichtlichen Kosten für Risikominimierungsmaßnahmen zu ermitteln.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="7-fragen-vor-dem-bas-invest"&gt;7 Fragen vor dem BAS-Invest&lt;/h2&gt;
+
+
+
+&lt;p&gt;Forrester-Analyst Nost empfiehlt Unternehmen, ihre BAS-Journey mit einem guten Überblick über ihre Systeme und Kontrollmaßnahmen anzutreten und von “Schnellschüssen” abzusehen: “Bevor Sie nicht wissen, was Sie testen sollen, sollten Sie sich auch nicht auf ein BAS-Tool einlassen.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Davon abgesehen empfiehlt es sich, Anbieter von Breach &amp;amp; Attack Simulation Tools mit den richtigen Fragen zu löchern, um vor unschönen Überraschungen verschont zu bleiben. Zum Beispiel:&lt;/p&gt;
+
+
+
+&lt;ol class="wp-block-list"&gt;
+&lt;li&gt;&lt;p&gt;Inwiefern gewährleistet Ihr Produkt verbesserte Detection-Fähigkeiten im Rahmen von Sicherheitskontrollen?&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Können Tests skaliert und in Produktionsumgebungen gefahren werden – ohne größere Auswirkungen für die Kunden? &lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Wie sehen Ihre Research-Bemühungen mit Blick auf die neueste Bedrohungen aus?&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Wie oft aktualisieren Sie ihre Threat-Bibliothek?&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Können Sie anhand eines Beispiels demonstrieren, wie die Simulationsergebnisse präsentiert werden?&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Sind Ihre Plattformen transparent oder ist nur Black-Box-Testing möglich?&lt;/p&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;p&gt;Besteht die Option für On-Premises- oder Air-Gapped-Deployments?&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Dieser Artikel ist &lt;a href="https://www.csoonline.com/article/2132289/breach-and-attack-simulation-tools.html" target="_blank"&gt;im Original&lt;/a&gt; bei unserer Schwesterpublikation CSOonline.com erschienen.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/3494368/der-kaufratgeber-fur-breach-attack-simulation-tools.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.98</comments>
+      <pubDate>Wed, 13 May 2026 04:14:00 +0000</pubDate>
     </item>
     <item>
       <title>SAP security advisory – May 2026 monthly rollup (AV26-447)</title>
@@ -1852,7 +1968,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-may-2026-monthly-rollup-av26-447</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.62</comments>
+      <comments>Score: 10.44</comments>
       <pubDate>Tue, 12 May 2026 14:22:53 +0000</pubDate>
     </item>
     <item>
@@ -1862,7 +1978,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-448</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.62</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Tue, 12 May 2026 14:31:23 +0000</pubDate>
     </item>
     <item>
@@ -1872,7 +1988,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-449</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.63</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Tue, 12 May 2026 14:41:02 +0000</pubDate>
     </item>
     <item>
@@ -1882,7 +1998,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-450</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.66</comments>
+      <comments>Score: 10.48</comments>
       <pubDate>Tue, 12 May 2026 15:27:11 +0000</pubDate>
     </item>
     <item>
@@ -1892,7 +2008,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-451</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.66</comments>
+      <comments>Score: 10.48</comments>
       <pubDate>Tue, 12 May 2026 15:31:36 +0000</pubDate>
     </item>
     <item>
@@ -1902,7 +2018,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-452</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.79</comments>
+      <comments>Score: 10.60</comments>
       <pubDate>Tue, 12 May 2026 18:47:10 +0000</pubDate>
     </item>
     <item>
@@ -1912,7 +2028,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-453</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.79</comments>
+      <comments>Score: 10.61</comments>
       <pubDate>Tue, 12 May 2026 18:52:54 +0000</pubDate>
     </item>
     <item>
@@ -1922,7 +2038,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-454</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.80</comments>
+      <comments>Score: 10.61</comments>
       <pubDate>Tue, 12 May 2026 19:00:30 +0000</pubDate>
     </item>
     <item>
@@ -1932,7 +2048,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-455</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.80</comments>
+      <comments>Score: 10.61</comments>
       <pubDate>Tue, 12 May 2026 19:04:15 +0000</pubDate>
     </item>
     <item>
@@ -1942,7 +2058,7 @@ A recent report from The Hacker News examined why certain high-risk alert catego
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.81</comments>
+      <comments>Score: 10.62</comments>
       <pubDate>Tue, 12 May 2026 19:14:35 +0000</pubDate>
     </item>
   </channel>
