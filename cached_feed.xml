@@ -8,97 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 May 2026 00:04:50 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 04:53:21 +0000</lastBuildDate>
     <item>
-      <title>CISA’s AI SBOM guidance pushes software supply-chain oversight into new territory</title>
-      <link>https://www.csoonline.com/article/4170694/cisas-ai-sbom-guidance-pushes-software-supply-chain-oversight-into-new-territory.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The US Cybersecurity and Infrastructure Security Agency (CISA) and its G7 cyber agency partners have released a list of minimum elements for an AI software bill of materials, a move that could help CISOs assess the security and provenance of AI systems entering enterprise environments.&lt;/p&gt;
-
-
-
-&lt;p&gt;The guidance extends traditional SBOM concepts into AI by calling for documentation of models, datasets, software components, providers, licenses, and other dependencies. The supplemental minimum elements are not exhaustive or mandatory, &lt;a href="https://www.cisa.gov/resources-tools/resources/software-bill-materials-ai-minimum-elements" rel="noreferrer noopener" target="_blank"&gt;CISA said&lt;/a&gt;, but reflect a consensus among G7 experts and are expected to expand as AI technology evolves.&lt;/p&gt;
-
-
-
-&lt;p&gt;For security leaders, the document puts AI risk more firmly inside enterprise supply-chain oversight. That could make AI SBOMs part of the same vendor-risk conversations that already surround software composition, cloud services, and third-party technology platforms.&lt;/p&gt;
-
-
-
-&lt;p&gt;But one important difference is that AI SBOMs require visibility beyond software composition, because &lt;a href="https://www.csoonline.com/article/4101239/ai-creates-new-security-risks-for-ot-networks-warns-nsa.html"&gt;AI risk&lt;/a&gt; is shaped by models, data, infrastructure, and system behavior.&lt;/p&gt;
-
-
-
-&lt;p&gt;“AI systems add new layers of opacity: model lineage, training and inference data, fine-tuning history, prompts, vector databases, third-party foundation models, APIs, orchestration logic, and runtime behavior,” said &lt;a href="https://my.idc.com/getdoc.jsp?containerId=PRF005665" rel="noreferrer noopener" target="_blank"&gt;Sakshi Grover&lt;/a&gt;, senior research manager for IDC Asia Pacific Cybersecurity Services.&lt;/p&gt;
-
-
-
-&lt;p&gt;AI software is also different because it is probabilistic, with outputs shaped by data provenance as well as code, according to &lt;a href="https://confidis.co/about/our-leadership-team/" rel="noreferrer noopener" target="_blank"&gt;Keith Prabhu&lt;/a&gt;, founder and CEO of Confidis.&lt;/p&gt;
-
-
-
-&lt;p&gt;“AI software inherently encompasses more than just software,” Prabhu said. “In addition to the software components, it would also need to track models, training data, prompts and system instructions, model weights and checkpoints, and GPU dependencies.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://greyhoundresearch.com/svg/" rel="noreferrer noopener" target="_blank"&gt;Sanchit Vir Gogia&lt;/a&gt;, chief analyst at Greyhound Research, put the shift more broadly.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The question is no longer only, ‘what code is inside this product?’ The question is, ‘what code, model, data, infrastructure, control, and vendor decision shapes this system’s behavior?’” Gogia said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-to-make-use-of-it"&gt;How to make use of it&lt;/h2&gt;
-
-
-
-&lt;p&gt;The immediate use of the guidance may be in procurement and vendor risk management. It gives security teams a way to press vendors before AI-enabled products are allowed into production.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Organizations should ask vendors to provide visibility into model provenance, training data sources, software and API dependencies, licensing obligations, security testing practices, update cycles, runtime monitoring controls, and shared responsibility boundaries,” Grover said.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.csoonline.com/article/4106574/demystifying-risk-in-ai.html"&gt;The level of scrutiny&lt;/a&gt; may also depend on the type of supplier.&lt;/p&gt;
-
-
-
-&lt;p&gt;“For large vendors, CISOs should specifically seek transparency around third-party foundation model dependencies, geographic data flows, model update practices, and whether customer data is being retained for model training or fine-tuning,” Grover added. “For startups, the focus should be on the maturity of governance processes, dependency tracking, secure development practices, identity controls, and operational monitoring across the AI life cycle.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The same risk-based approach should apply to how the technology will be used. For higher-risk deployments, Gogia said AI SBOMs should become part of a broader vendor evidence pack, supported by documentation on data flows, security architecture, model behavior, privacy impact, red-team findings, incident response, logging, and prompt-injection testing.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-gaps-that-remain"&gt;The gaps that remain&lt;/h2&gt;
-
-
-
-&lt;p&gt;The biggest gap is that an AI SBOM may show what a vendor says is inside an AI system, but does not prove whether the system can be trusted for the way an enterprise plans to use it.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Minimum elements create visibility,” Gogia said. “They do not create assurance. They tell the buyer what the vendor says exists. They do not, by themselves, prove that every dependency has been disclosed, every dataset is lawful, every control works, every model behaves within tolerance, or every runtime pathway is being monitored.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The hard part will be proving that the document matches reality. Security teams may receive an AI SBOM from a vendor, but they still need to determine whether it reflects the system running in production and keeps pace with changes to the AI environment. Prabhu said even a high-quality AI SBOM will offer only partial visibility into AI risk. Issues such as evolving AI behavior, hallucinations, changing prompt usage, and limited training data transparency can still make it difficult for security leaders to assess actual risk. As AI systems mature, AI SBOMs will also have to evolve to address those gaps, Prabhu added.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4170694/cisas-ai-sbom-guidance-pushes-software-supply-chain-oversight-into-new-territory.html</guid>
+      <title>Ivanti security advisory (AV26-435)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-435</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-435</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Wed, 13 May 2026 10:42:33 +0000</pubDate>
+      <comments>Score: 7.61</comments>
+      <pubDate>Thu, 07 May 2026 15:35:50 +0000</pubDate>
     </item>
     <item>
       <title>Palo Alto Networks bets on identity security for autonomous AI with Idira launch</title>
@@ -192,7 +111,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4170761/palo-alto-bets-on-identity-security-for-autonomous-ai-with-idira-launch.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Wed, 13 May 2026 12:08:16 +0000</pubDate>
     </item>
     <item>
@@ -335,7 +254,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4170818/what-happens-when-chinas-ai-catches-up-to-mythos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Wed, 13 May 2026 13:32:35 +0000</pubDate>
     </item>
     <item>
@@ -345,7 +264,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Fri, 08 May 2026 16:08:21 +0000</pubDate>
     </item>
     <item>
@@ -355,7 +274,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Fri, 08 May 2026 17:39:10 +0000</pubDate>
     </item>
     <item>
@@ -365,7 +284,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Fri, 08 May 2026 18:49:02 +0000</pubDate>
     </item>
     <item>
@@ -492,7 +411,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4170987/fired-employee-sought-ai-help-to-hide-deletion-of-hosting-firms-customer-data.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Wed, 13 May 2026 23:21:27 +0000</pubDate>
     </item>
     <item>
@@ -502,7 +421,7 @@
       <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/openai-confirms-security-breach-in-tanstack-supply-chain-attack/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 14 May 2026 15:07:24 -0400</pubDate>
     </item>
     <item>
@@ -663,7 +582,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4168690/what-cisos-need-to-land-a-board-role.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Thu, 14 May 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
@@ -794,7 +713,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4170340/may-patch-tuesday-roundup-critical-holes-in-windows-netlogon-dns-and-sap-s-4hana.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.33</comments>
       <pubDate>Wed, 13 May 2026 00:54:31 +0000</pubDate>
     </item>
     <item>
@@ -869,7 +788,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4171215/praisonai-vulnerability-gets-scanned-within-4-hours-of-disclosure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Thu, 14 May 2026 11:35:58 +0000</pubDate>
     </item>
     <item>
@@ -1185,7 +1104,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/3494368/der-kaufratgeber-fur-breach-attack-simulation-tools.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Wed, 13 May 2026 04:14:00 +0000</pubDate>
     </item>
     <item>
@@ -1195,68 +1114,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Mon, 11 May 2026 14:15:28 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV26-438)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
-      <pubDate>Mon, 11 May 2026 14:36:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>Dell security advisory (AV26-439)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
-      <pubDate>Mon, 11 May 2026 14:50:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ubuntu security advisory (AV26-440)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
-      <pubDate>Mon, 11 May 2026 15:17:54 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] CISA ICS security advisories (AV26–441)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
-      <pubDate>Mon, 11 May 2026 15:43:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>Red Hat security advisory (AV26-442)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
-      <pubDate>Mon, 11 May 2026 15:53:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>Spring security advisory (AV26-443)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
-      <pubDate>Mon, 11 May 2026 16:04:11 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft’s new AI system finds 16 Windows flaws, including four critical RCEs</title>
@@ -1402,8 +1261,68 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4170785/microsofts-new-ai-system-finds-16-windows-flaws-including-four-critical-rces.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Wed, 13 May 2026 12:23:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV26-438)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.63</comments>
+      <pubDate>Mon, 11 May 2026 14:36:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dell security advisory (AV26-439)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.63</comments>
+      <pubDate>Mon, 11 May 2026 14:50:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ubuntu security advisory (AV26-440)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.64</comments>
+      <pubDate>Mon, 11 May 2026 15:17:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] CISA ICS security advisories (AV26–441)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.65</comments>
+      <pubDate>Mon, 11 May 2026 15:43:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>Red Hat security advisory (AV26-442)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.65</comments>
+      <pubDate>Mon, 11 May 2026 15:53:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>Spring security advisory (AV26-443)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.65</comments>
+      <pubDate>Mon, 11 May 2026 16:04:11 +0000</pubDate>
     </item>
     <item>
       <title>Broadcom VMware security advisory (AV26-444)</title>
@@ -1412,7 +1331,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-444</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Mon, 11 May 2026 17:31:18 +0000</pubDate>
     </item>
     <item>
@@ -1422,7 +1341,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-445</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.80</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Mon, 11 May 2026 19:39:08 +0000</pubDate>
     </item>
     <item>
@@ -1432,7 +1351,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-446</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.81</comments>
+      <comments>Score: 8.72</comments>
       <pubDate>Mon, 11 May 2026 20:02:12 +0000</pubDate>
     </item>
     <item>
@@ -1499,7 +1418,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4171437/ai-agent-finds-18-year-old-remote-code-execution-flaw-in-nginx.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
+      <comments>Score: 8.77</comments>
       <pubDate>Thu, 14 May 2026 23:06:50 +0000</pubDate>
     </item>
     <item>
@@ -1509,7 +1428,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-may-2026-monthly-rollup-av26-447</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Tue, 12 May 2026 14:22:53 +0000</pubDate>
     </item>
     <item>
@@ -1519,7 +1438,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-448</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.20</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Tue, 12 May 2026 14:31:23 +0000</pubDate>
     </item>
     <item>
@@ -1529,7 +1448,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-449</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.20</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Tue, 12 May 2026 14:41:02 +0000</pubDate>
     </item>
     <item>
@@ -1539,7 +1458,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-450</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.22</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Tue, 12 May 2026 15:27:11 +0000</pubDate>
     </item>
     <item>
@@ -1549,7 +1468,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-451</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.22</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Tue, 12 May 2026 15:31:36 +0000</pubDate>
     </item>
     <item>
@@ -1559,7 +1478,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-452</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.18</comments>
       <pubDate>Tue, 12 May 2026 18:47:10 +0000</pubDate>
     </item>
     <item>
@@ -1569,7 +1488,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-453</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.19</comments>
       <pubDate>Tue, 12 May 2026 18:52:54 +0000</pubDate>
     </item>
     <item>
@@ -1579,7 +1498,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-454</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.19</comments>
       <pubDate>Tue, 12 May 2026 19:00:30 +0000</pubDate>
     </item>
     <item>
@@ -1589,7 +1508,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-455</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.19</comments>
       <pubDate>Tue, 12 May 2026 19:04:15 +0000</pubDate>
     </item>
     <item>
@@ -1599,7 +1518,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.31</comments>
+      <comments>Score: 9.19</comments>
       <pubDate>Tue, 12 May 2026 19:14:35 +0000</pubDate>
     </item>
     <item>
@@ -1609,7 +1528,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-457</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.62</comments>
       <pubDate>Wed, 13 May 2026 12:26:05 +0000</pubDate>
     </item>
     <item>
@@ -1619,7 +1538,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-458</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.63</comments>
       <pubDate>Wed, 13 May 2026 12:31:25 +0000</pubDate>
     </item>
     <item>
@@ -1629,7 +1548,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-459</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.78</comments>
+      <comments>Score: 9.65</comments>
       <pubDate>Wed, 13 May 2026 13:11:54 +0000</pubDate>
     </item>
     <item>
@@ -1639,7 +1558,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/exim-security-advisory-av26-460</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.83</comments>
+      <comments>Score: 9.69</comments>
       <pubDate>Wed, 13 May 2026 14:58:00 +0000</pubDate>
     </item>
     <item>
@@ -1649,7 +1568,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-461</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.77</comments>
       <pubDate>Wed, 13 May 2026 17:44:55 +0000</pubDate>
     </item>
     <item>
@@ -1659,7 +1578,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-462</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.78</comments>
       <pubDate>Wed, 13 May 2026 17:50:42 +0000</pubDate>
     </item>
     <item>
@@ -1669,7 +1588,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-463</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.80</comments>
       <pubDate>Wed, 13 May 2026 18:30:45 +0000</pubDate>
     </item>
     <item>
@@ -1679,7 +1598,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-464</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.80</comments>
       <pubDate>Wed, 13 May 2026 18:39:13 +0000</pubDate>
     </item>
     <item>
@@ -1689,7 +1608,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-465</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.82</comments>
       <pubDate>Wed, 13 May 2026 19:26:44 +0000</pubDate>
     </item>
     <item>
@@ -1699,7 +1618,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-466</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.83</comments>
       <pubDate>Wed, 13 May 2026 19:31:08 +0000</pubDate>
     </item>
     <item>
@@ -1709,7 +1628,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-467</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.58</comments>
+      <comments>Score: 10.40</comments>
       <pubDate>Thu, 14 May 2026 13:22:06 +0000</pubDate>
     </item>
     <item>
@@ -1719,7 +1638,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-468</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.67</comments>
+      <comments>Score: 10.49</comments>
       <pubDate>Thu, 14 May 2026 15:43:38 +0000</pubDate>
     </item>
     <item>
@@ -1729,7 +1648,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-469</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.67</comments>
+      <comments>Score: 10.49</comments>
       <pubDate>Thu, 14 May 2026 15:48:40 +0000</pubDate>
     </item>
     <item>
@@ -1739,7 +1658,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-470</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.68</comments>
+      <comments>Score: 10.50</comments>
       <pubDate>Thu, 14 May 2026 16:00:15 +0000</pubDate>
     </item>
     <item>
@@ -1749,7 +1668,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-471</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.78</comments>
+      <comments>Score: 10.59</comments>
       <pubDate>Thu, 14 May 2026 18:33:33 +0000</pubDate>
     </item>
     <item>
@@ -1759,7 +1678,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-472</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.84</comments>
+      <comments>Score: 10.65</comments>
       <pubDate>Thu, 14 May 2026 20:03:36 +0000</pubDate>
     </item>
   </channel>
