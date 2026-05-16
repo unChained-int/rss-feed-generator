@@ -8,81 +8,26 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 May 2026 03:53:18 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 06:24:26 +0000</lastBuildDate>
     <item>
-      <title>PraisonAI vulnerability gets scanned within 4 hours of disclosure</title>
-      <link>https://www.csoonline.com/article/4171215/praisonai-vulnerability-gets-scanned-within-4-hours-of-disclosure.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A newly disclosed authentication bypass flaw in the open-source AI orchestration framework &lt;a href="https://github.com/MervinPraison/PraisonAI" rel="noreferrer noopener" target="_blank"&gt;PraisonAI &lt;/a&gt;was probed by internet scanners less than four hours after its public disclosure.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Sysdig observations, roughly three hours and 44 minutes after a GitHub advisory dropped, a scanner identifying itself as “CVE-Detector/1.0” was already looking through the exposed PraisonAI instances for exact vulnerable endpoints.&lt;/p&gt;
-
-
-
-&lt;p&gt;The bug involves a legacy Flask-based API server component “src/praisonai/api_server.py” in PraisonAI that shipped with authentication disabled by default. The issue affects versions 2.5.6 to 4.6.33, and has been fixed in version 4.6.34.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Authentication disabled by default in a development-grade API server is a known anti-pattern, and its blast radius is bounded by whatever permissions the operator gave the agent workflow,” said&lt;a href="https://www.linkedin.com/in/treyford/" rel="noreferrer noopener" target="_blank"&gt; Trey Ford&lt;/a&gt;, chief strategy and trust officer at Bugcrowd. “Any organization that accelerated AI agent adoption without auditing network binding, authentication defaults, and credential exposure in agent configuration files now faces risk it likely hasn’t quantified.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Sysdig said a GitHub &lt;a href="https://github.com/advisories/GHSA-6rmh-7xcm-cpxj" rel="noreferrer noopener" target="_blank"&gt;advisory&lt;/a&gt; was published around 13:56 UTC on May 11, and probing started at 17:40 UTC.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="authentication-was-disabled-by-default"&gt;Authentication was disabled by default&lt;/h2&gt;
-
-
-
-&lt;p&gt;Sysdig said the vulnerable component was a PraisonAI legacy API server, where authentication protections were effectively disabled by design. The researchers noted that any reachable caller could interact with agent workflows without valid tokens.&lt;/p&gt;
-
-
-
-&lt;p&gt;“PraisonAI ships a legacy Flask-based API server that hard-codes ‘AUTH_ENABLED = False’ and ‘AUTH_TOKEN = None’,” Sysdig researchers said in a &lt;a href="https://www.sysdig.com/blog/cve-2026-44338-praisonai-authentication-bypass-in-under-4-hours-and-the-growing-trend-of-rapid-exploitation" rel="noreferrer noopener" target="_blank"&gt;blog post&lt;/a&gt;. “The check_auth() helper returns True whenever authentication is disabled, so the two “protected” routes fail open by design.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The flaw, tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44338" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-44338&lt;/a&gt;, received a severity rating of CVSS 7.3 out of 10, but is being considered an urgency, considering attackers are already looking to exploit it.  “Any AI service reachable from the internet should be treated as a production asset with controls around authentication, network segmentation, and monitoring,” said &lt;a href="https://www.linkedin.com/in/vineetasangaraju/" rel="noreferrer noopener" target="_blank"&gt;Vineeta Sangaraju&lt;/a&gt;, AI Research Engineer at Black Duck, urging organizations to patch immediately.&lt;/p&gt;
-
-
-
-&lt;p&gt;Sysdig’s researchers said the initial reconnaissance traffic appeared generic at first, targeting common internet-exposed paths such as /./.env and /admin. Minutes later, however, the scanner pivoted to PraisonAI-specific endpoints including “/praisonai/version.txt”, “/docs”, “/api/agents/config”, and “/api/agents.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers warned that a successful exploit could escalate to serious breaches. “The bypass itself is not arbitrary &lt;a href="https://www.csoonline.com/article/4054796/cursors-autorun-lets-hackers-execute-arbitrary-code.html"&gt;code execution&lt;/a&gt;,” they said. “But because it removes authentication from a workflow trigger that an operator deliberately exposed to do something useful, the impact ceiling is whatever that workflow is allowed to do.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Mitigations and recommendations&lt;/h2&gt;
-
-
-
-&lt;p&gt;Sysdig urged organizations to immediately upgrade to PraisonAI version 4.6.34 or later, which removes the vulnerable legacy API behavior and introduces stronger authentication protections.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers also recommended discontinuing use of the legacy “api_server.py” entrypoint entirely, noting that exposed instances running older configurations remain vulnerable to unauthenticated access attempts.&lt;/p&gt;
-
-
-
-&lt;p&gt;To support detection efforts, defenders were advised to monitor for requests containing the “CVE-Detector/1.0” user-agent string, along with suspicious requests targeting /agents, /chat, /api/agents, and related MCP endpoints. “Until an upgrade is possible, network-layer monitoring catches this class of traffic cleanly because the bypass leaves no missing-auth signal in the application logs,” the researchers noted.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4171215/praisonai-vulnerability-gets-scanned-within-4-hours-of-disclosure.html</guid>
+      <title>Microsoft Edge security advisory (AV26-436)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-436</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Thu, 14 May 2026 11:35:58 +0000</pubDate>
+      <comments>Score: 7.60</comments>
+      <pubDate>Fri, 08 May 2026 16:08:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-011 - Vulnerabilities affecting Linux - CVE-2026-43284 and CVE-2026-43500</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Fri, 08 May 2026 17:39:10 +0000</pubDate>
     </item>
     <item>
       <title>cPanel security advisory (AV26-437)</title>
@@ -91,130 +36,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Fri, 08 May 2026 18:49:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>Exchange Server zero-day vulnerability can be triggered by opening a malicious email</title>
-      <link>https://www.csoonline.com/article/4171903/exchange-server-zero-day-vulnerability-can-be-triggered-by-opening-a-malicious-email.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A newly discovered zero-day vulnerability in Microsoft Exchange Server has experts declaring an emergency and urging CSOs to think about the need to abandon on-premises email solutions.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Because it’s already being exploited in the wild, this isn’t a ‘patch next week situation; it’s a ‘mitigate right now’ emergency,” warned &lt;a href="https://www.linkedin.com/in/rob-enderle-03729" rel="noreferrer noopener" target="_blank"&gt;Rob Enderle&lt;/a&gt; of the Enderle Group.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This is another reminder to find a trusted cloud provider for e-mail,” added &lt;a href="https://www.sans.org/profiles/dr-johannes-ullrich" rel="noreferrer noopener" target="_blank"&gt;Johannes Ullrich&lt;/a&gt;, dean of research at the SANS Institute. “On-premises Exchange is becoming a legacy product, and while some organizations need it for internal and outbound email, its attack surface should be minimized by reducing its exposure to external email.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Ullrich&lt;a href="https://techcommunity.microsoft.com/blog/exchange/addressing-exchange-server-may-2026-vulnerability-cve-2026-42897/4518498" rel="noreferrer noopener" target="_blank"&gt; was commenting on an alert from Microsoft this week&lt;/a&gt; about a cross-site scripting vulnerability affecting Exchange Outlook Web Access (OWA) that could be exploited merely by sending a specially crafted email to a user.  If the user opens the message in Outlook Web Access and certain interaction conditions are met, arbitrary JavaScript can be executed in the browser context.&lt;/p&gt;
-
-
-
-&lt;p&gt;Avoiding cross-site scripting problems in webmail systems like Outlook Web Access is hard, Ullrich admitted. A webmail system must include HTML email received from users within the application’s HTML without confusing the two. Techniques like sandboxed iFrames can help, but need to be applied carefully.&lt;/p&gt;
-
-
-
-&lt;p&gt;At the same time, he said, cross-site scripting flaws in webmail can usually be used to read the content of an email, and in some cases even to send an email.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Luckily,” he added, “many organizations have moved away from on-premises Exchange and Outlook Web Access.”&lt;/p&gt;
-
-
-
-&lt;p&gt;“I’m guessing this is bad,” said &lt;a href="https://ca.linkedin.com/in/kellman" rel="noreferrer noopener" target="_blank"&gt;Kellman Meghu&lt;/a&gt;,” CTO of DeepCove Cybersecurity, “but so is running an onsite Exchange Server in general.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Affected by the vulnerability (&lt;a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42897" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-42897&lt;/a&gt;) are Exchange Server 2016, 2019, and Server Subscription Edition (SE), regardless of their update levels.&lt;/p&gt;
-
-
-
-&lt;p&gt;The cloud service, Exchange Online, is unaffected.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="mitigation"&gt;Mitigation&lt;/h2&gt;
-
-
-
-&lt;p&gt;Microsoft is still working on a security patch. In the meantime, Exchange administrators should know that if the Exchange EM Service is enabled on their servers – and it should be; since its release in September 2021 it has been enabled by default – then Microsoft’s automatic mitigation for this vulnerability has already been published for affected versions of Exchange.&lt;/p&gt;
-
-
-
-&lt;p&gt;If EM Service for whatever reason has been disabled, it should be enabled immediately. Note, however, that EM Service won’t be able to check for new mitigations if the server is running an Exchange Server version older than March 2023.&lt;/p&gt;
-
-
-
-&lt;p&gt;Those who can’t use the EM Server, because, for example, they are disconnected or have air-gapped environments, should download the latest version of the Exchange on-premises &lt;a href="https://aka.ms/UnifiedEOMT" rel="noreferrer noopener" target="_blank"&gt;Mitigation Tool (EOMT)&lt;/a&gt; and apply the mitigation on a per server base, or on all servers at once by running the script via an elevated Exchange Management Shell.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="known-issues-with-mitigation-tactics"&gt;Known issues with mitigation tactics&lt;/h2&gt;
-
-
-
-&lt;p&gt;However, admins should note there are known issues once the mitigation is applied either manually or automatically through the EM Service.&lt;/p&gt;
-
-
-
-&lt;p&gt;OWA Print Calendar functionality might not work. As a workaround, copy the data or screenshot the calendar you want to print, or use Outlook Desktop client. &lt;/p&gt;
-
-
-
-&lt;p&gt;Inline images might not display correctly in the recipient’s OWA reading pane. As a workaround, send images as email attachments or use Outlook Desktop client. &lt;/p&gt;
-
-
-
-&lt;p&gt;OWA light (OWA URL ending in &lt;em&gt;/?layout=light&lt;/em&gt;) does not work properly. Note that this feature was &lt;a href="https://support.microsoft.com/en-us/office/learn-more-about-the-light-version-of-outlook-2aec8c2d-da48-4707-ba37-c800e1c284cd" rel="noreferrer noopener" target="_blank"&gt;deprecated several years ago&lt;/a&gt; and is not intended for regular production use.&lt;/p&gt;
-
-
-
-&lt;p&gt;Admins may get a message saying “Mitigation invalid for this Exchange version.” in mitigation details. This issue is cosmetic and the mitigation does apply successfully if the status is shown as “Applied”. Microsoft is investigating how to address this glitch.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="updates-coming-in-the-future"&gt;Updates coming ‘in the future’&lt;/h2&gt;
-
-
-
-&lt;p&gt;A Microsoft spokesperson was asked when the security update would be released. We were referred to the company’s statement. &lt;/p&gt;
-
-
-
-&lt;p&gt;In its warning, Microsoft says security updates for impacted versions of Exchange Server will come “in the future.” They will be for Exchange SE RTM, Exchange 2016 CU23, and Exchange Server 2019 CU14 and CU15. Those running older CU versions are urged to update now.&lt;/p&gt;
-
-
-
-&lt;p&gt;An Exchange SE update will be released as a publicly available security update. Exchange 2016 and 2019 updates will be released only to customers who are enrolled in the &lt;a href="https://techcommunity.microsoft.com/blog/exchange/announcing-period-2-exchange-20162019-extended-security-update-esu-program/4511603" rel="noreferrer noopener" target="_blank"&gt;Period 2 Exchange Server ESU program&lt;/a&gt;. Period 1-only ESU customers will not receive this update, as that program ended last month.&lt;/p&gt;
-
-
-
-&lt;p&gt; Enderle said the fact that Microsoft issued an interim fix that breaks features like calendar printing and inline images is “a clear sign of how desperate they are to stop the bleeding.&lt;/p&gt;
-
-
-
-&lt;p&gt;“CSOs need to move past the ‘wait and see’ approach and treat this as a litmus test for their security automation,” he said. “If your team has the Exchange Emergency Mitigation (EM) Service enabled, you should already be protected, but you need to verify that ‘Mitigation M2’ is actually active across your entire inventory. If you’re running air-gapped or have the EM service disabled, you’re sitting ducks until you manually run the EOMT script.”&lt;/p&gt;
-
-
-
-&lt;p&gt;This is another “massive nudge” from Redmond to shift from on-premises email, Enderle added. “If you aren’t already planning your exit from on-site Exchange, your risk profile is only going to keep climbing as these zero days become the new normal. This does showcase that Azure, and web services in general, are where the industry, and particularly Microsoft, is pushing IT to go, whether they want to or not.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4171903/exchange-server-zero-day-vulnerability-can-be-triggered-by-opening-a-malicious-email.html</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Fri, 15 May 2026 19:57:17 +0000</pubDate>
     </item>
     <item>
       <title>AI agent finds 18-year-old remote code execution flaw in Nginx</title>
@@ -280,7 +103,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4171437/ai-agent-finds-18-year-old-remote-code-execution-flaw-in-nginx.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Thu, 14 May 2026 23:06:50 +0000</pubDate>
     </item>
     <item>
@@ -427,38 +250,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4170785/microsofts-new-ai-system-finds-16-windows-flaws-including-four-critical-rces.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Wed, 13 May 2026 12:23:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL25-012 - Vulnerabilities impacting Cisco ASA and FTD devices – CVE-2025-20333, CVE-2025-20362 and CVE-2025-20363 – Update 2</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
-      <pubDate>Mon, 11 May 2026 14:15:28 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV26-438)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
-      <pubDate>Mon, 11 May 2026 14:36:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>Dell security advisory (AV26-439)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
-      <pubDate>Mon, 11 May 2026 14:50:47 +0000</pubDate>
     </item>
     <item>
       <title>The economics of ransomware 3.0</title>
@@ -619,7 +412,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4171407/the-economics-of-ransomware-3-0.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Fri, 15 May 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -754,48 +547,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4168696/eus-cyber-resiliency-act-will-put-it-leaders-to-the-test.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Fri, 15 May 2026 09:01:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ubuntu security advisory (AV26-440)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
-      <pubDate>Mon, 11 May 2026 15:17:54 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] CISA ICS security advisories (AV26–441)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
-      <pubDate>Mon, 11 May 2026 15:43:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>Red Hat security advisory (AV26-442)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
-      <pubDate>Mon, 11 May 2026 15:53:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>Spring security advisory (AV26-443)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
-      <pubDate>Mon, 11 May 2026 16:04:11 +0000</pubDate>
     </item>
     <item>
       <title>Autonomous systems are finally working. Security is next</title>
@@ -909,8 +662,78 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4171411/autonomous-systems-are-finally-working-security-is-next.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Fri, 15 May 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL25-012 - Vulnerabilities impacting Cisco ASA and FTD devices – CVE-2025-20333, CVE-2025-20362 and CVE-2025-20363 – Update 2</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.24</comments>
+      <pubDate>Mon, 11 May 2026 14:15:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV26-438)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.25</comments>
+      <pubDate>Mon, 11 May 2026 14:36:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dell security advisory (AV26-439)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.25</comments>
+      <pubDate>Mon, 11 May 2026 14:50:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ubuntu security advisory (AV26-440)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.26</comments>
+      <pubDate>Mon, 11 May 2026 15:17:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] CISA ICS security advisories (AV26–441)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.26</comments>
+      <pubDate>Mon, 11 May 2026 15:43:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>Red Hat security advisory (AV26-442)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.27</comments>
+      <pubDate>Mon, 11 May 2026 15:53:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>Spring security advisory (AV26-443)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.27</comments>
+      <pubDate>Mon, 11 May 2026 16:04:11 +0000</pubDate>
     </item>
     <item>
       <title>Broadcom VMware security advisory (AV26-444)</title>
@@ -919,28 +742,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-444</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Mon, 11 May 2026 17:31:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>JetBrains security advisory (AV26-445)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-445</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-445</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
-      <pubDate>Mon, 11 May 2026 19:39:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>Apple security advisory (AV26-446)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-446</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-446</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
-      <pubDate>Mon, 11 May 2026 20:02:12 +0000</pubDate>
     </item>
     <item>
       <title>Cisco warns of an actively exploited SD-WAN flaw with max severity</title>
@@ -1030,8 +833,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4171694/cisco-warns-of-an-actively-exploited-sd-wan-flaw-with-max-severity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Fri, 15 May 2026 11:43:23 +0000</pubDate>
+    </item>
+    <item>
+      <title>JetBrains security advisory (AV26-445)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-445</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-445</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.32</comments>
+      <pubDate>Mon, 11 May 2026 19:39:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Apple security advisory (AV26-446)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-446</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-446</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.32</comments>
+      <pubDate>Mon, 11 May 2026 20:02:12 +0000</pubDate>
     </item>
     <item>
       <title>The Boring Stuff is Dangerous Now</title>
@@ -1039,7 +862,7 @@
       <description>AI agents capable of discovering and exploiting obscure vulnerabilities are emerging alongside developers producing vast amounts of potentially flawed AI-generated code, forcing defenders to adapt accordingly.</description>
       <guid isPermaLink="false">https://www.darkreading.com/cyber-risk/ai-code-and-agents-forces-defenders-adapt</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Mon, 18 May 2026 13:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1049,7 +872,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-may-2026-monthly-rollup-av26-447</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Tue, 12 May 2026 14:22:53 +0000</pubDate>
     </item>
     <item>
@@ -1059,7 +882,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-448</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Tue, 12 May 2026 14:31:23 +0000</pubDate>
     </item>
     <item>
@@ -1069,7 +892,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-449</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Tue, 12 May 2026 14:41:02 +0000</pubDate>
     </item>
     <item>
@@ -1079,7 +902,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-450</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Tue, 12 May 2026 15:27:11 +0000</pubDate>
     </item>
     <item>
@@ -1089,48 +912,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-451</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Tue, 12 May 2026 15:31:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>Adobe security advisory (AV26-452)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-452</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-452</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
-      <pubDate>Tue, 12 May 2026 18:47:10 +0000</pubDate>
-    </item>
-    <item>
-      <title>Intel security advisory (AV26-453)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-453</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-453</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
-      <pubDate>Tue, 12 May 2026 18:52:54 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fortinet security advisory (AV26-454)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-454</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-454</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
-      <pubDate>Tue, 12 May 2026 19:00:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>AMD security advisory (AV26-455)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-455</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-455</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
-      <pubDate>Tue, 12 May 2026 19:04:15 +0000</pubDate>
     </item>
     <item>
       <title>Expired domain leads to supply chain attack on node-ipc npm package</title>
@@ -1274,8 +1057,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4171926/expired-domain-leads-to-supply-chain-attack-on-node-ipc-npm-package.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Fri, 15 May 2026 21:05:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Adobe security advisory (AV26-452)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-452</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-452</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.67</comments>
+      <pubDate>Tue, 12 May 2026 18:47:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>Intel security advisory (AV26-453)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-453</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-453</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.68</comments>
+      <pubDate>Tue, 12 May 2026 18:52:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortinet security advisory (AV26-454)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-454</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-454</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.68</comments>
+      <pubDate>Tue, 12 May 2026 19:00:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>AMD security advisory (AV26-455)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-455</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-455</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.68</comments>
+      <pubDate>Tue, 12 May 2026 19:04:15 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft security advisory – May 2026 monthly rollup (AV26-456)</title>
@@ -1284,7 +1107,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.68</comments>
       <pubDate>Tue, 12 May 2026 19:14:35 +0000</pubDate>
     </item>
     <item>
@@ -1294,7 +1117,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-457</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 9.01</comments>
       <pubDate>Wed, 13 May 2026 12:26:05 +0000</pubDate>
     </item>
     <item>
@@ -1304,7 +1127,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-458</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 9.01</comments>
       <pubDate>Wed, 13 May 2026 12:31:25 +0000</pubDate>
     </item>
     <item>
@@ -1314,7 +1137,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-459</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Wed, 13 May 2026 13:11:54 +0000</pubDate>
     </item>
     <item>
@@ -1324,7 +1147,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/exim-security-advisory-av26-460</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Wed, 13 May 2026 14:58:00 +0000</pubDate>
     </item>
     <item>
@@ -1334,7 +1157,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-461</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.13</comments>
       <pubDate>Wed, 13 May 2026 17:44:55 +0000</pubDate>
     </item>
     <item>
@@ -1344,7 +1167,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-462</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.13</comments>
       <pubDate>Wed, 13 May 2026 17:50:42 +0000</pubDate>
     </item>
     <item>
@@ -1354,7 +1177,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-463</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.20</comments>
+      <comments>Score: 9.14</comments>
       <pubDate>Wed, 13 May 2026 18:30:45 +0000</pubDate>
     </item>
     <item>
@@ -1364,7 +1187,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-464</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.20</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Wed, 13 May 2026 18:39:13 +0000</pubDate>
     </item>
     <item>
@@ -1374,7 +1197,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-465</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.22</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Wed, 13 May 2026 19:26:44 +0000</pubDate>
     </item>
     <item>
@@ -1384,7 +1207,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-466</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.22</comments>
+      <comments>Score: 9.17</comments>
       <pubDate>Wed, 13 May 2026 19:31:08 +0000</pubDate>
     </item>
     <item>
@@ -1394,7 +1217,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-467</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Thu, 14 May 2026 13:22:06 +0000</pubDate>
     </item>
     <item>
@@ -1404,7 +1227,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-468</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.74</comments>
+      <comments>Score: 9.67</comments>
       <pubDate>Thu, 14 May 2026 15:43:38 +0000</pubDate>
     </item>
     <item>
@@ -1414,7 +1237,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-469</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.75</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Thu, 14 May 2026 15:48:40 +0000</pubDate>
     </item>
     <item>
@@ -1424,7 +1247,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-470</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.75</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Thu, 14 May 2026 16:00:15 +0000</pubDate>
     </item>
     <item>
@@ -1434,7 +1257,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-471</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.83</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Thu, 14 May 2026 18:33:33 +0000</pubDate>
     </item>
     <item>
@@ -1444,7 +1267,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-472</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.87</comments>
+      <comments>Score: 9.80</comments>
       <pubDate>Thu, 14 May 2026 20:03:36 +0000</pubDate>
     </item>
     <item>
@@ -1454,7 +1277,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-av26-473</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.60</comments>
+      <comments>Score: 10.50</comments>
       <pubDate>Fri, 15 May 2026 17:42:44 +0000</pubDate>
     </item>
     <item>
@@ -1464,7 +1287,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-474</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.66</comments>
+      <comments>Score: 10.56</comments>
       <pubDate>Fri, 15 May 2026 19:15:37 +0000</pubDate>
     </item>
     <item>
@@ -1474,7 +1297,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-012-critical-vulnerability-affecting-cisco-catalyst-sd-wan-cve-2026-20182</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.43</comments>
+      <comments>Score: 11.34</comments>
       <pubDate>Fri, 15 May 2026 13:03:19 +0000</pubDate>
     </item>
   </channel>
