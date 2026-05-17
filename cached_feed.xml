@@ -8,151 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 May 2026 21:59:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 23:01:56 +0000</lastBuildDate>
     <item>
-      <title>Expired domain leads to supply chain attack on node-ipc npm package</title>
-      <link>https://www.csoonline.com/article/4171926/expired-domain-leads-to-supply-chain-attack-on-node-ipc-npm-package.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A popular npm package called node-ipc has been compromised, with hackers publishing malicious versions that bundle credential stealing malware. The root cause of the compromise was an expired domain name that attackers managed to register in order to hijack a maintainer’s account.&lt;/p&gt;
-
-
-
-&lt;p&gt;The node-ipc package has had malware added to its code in the past. In March 2022, following Russia’s invasion of Ukraine, the project’s creator &lt;a href="https://www.csoonline.com/article/572327/developer-sabotages-own-npm-module-prompting-open-source-supply-chain-security-questions.html" target="_blank"&gt;intentionally added malicious code&lt;/a&gt; to the program to wipe files on systems with Russian or Belarusian IP addresses.&lt;/p&gt;
-
-
-
-&lt;p&gt;Node-ipc is a Node.js module that implements support for local and remote Inter-Process Communication over various types of socket across all major platforms. One use case is in implementing complex multi-process neural networks in JavaScript, but the module is also used as a dependency for 424 other projects, and receives almost 700K weekly downloads.&lt;/p&gt;
-
-
-
-&lt;p&gt;On Thursday, &lt;a href="https://github.com/RIAEvangelist/node-ipc/issues/15" rel="noreferrer noopener" target="_blank"&gt;attackers managed to publish three trojanized versions&lt;/a&gt; across three different branches of the project: 9.1.6, 9.2.3 and 12.0.1. All new versions contained an 80KB obfuscated credential-stealing payload inside the node-ipc.cjs file.&lt;/p&gt;
-
-
-
-&lt;p&gt;The malicious code searches for and steals a wide range of credentials for CI/CD tools, cloud services and infrastructure, Kubernetes, SSH, and AI coding agents. The data is exfiltrated through DNS TXT queries rather than HTTP connections.&lt;/p&gt;
-
-
-
-&lt;p&gt;Since node-ipc is a dependency for hundreds of other packages, which in turn could be dependencies for even more packages, this attack could have a large blast radius. Users should immediately scan their systems to determine if they have any of the compromised versions installed, and if they do, treat the machine and any access token, environment variable, and API key stored on it as compromised.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="exhaustive-credential-collection-and-sneaky-exfiltration"&gt;Exhaustive credential collection and sneaky exfiltration&lt;/h2&gt;
-
-
-
-&lt;p&gt;The malicious payload is decrypted and executed whenever other applications load the package through &lt;em&gt;require(‘node-ipc’)&lt;/em&gt;. The trojanized versions were designed to remain fully functional to avoid immediate detection, which together with other decisions attackers took, such as data exfiltration via DNS TXT, suggest stealthiness was a top priority.&lt;/p&gt;
-
-
-
-&lt;p&gt;Once executed, the malicious code collects information about the host system, including operating system version, hostname, and environment variables. It then starts looking for credentials in various locations based on the detected OS.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The payload chooses between separate decoded target lists for macOS and Linux/default platforms,” researchers from Socket.dev said in &lt;a href="https://socket.dev/blog/node-ipc-package-compromised" rel="noreferrer noopener" target="_blank"&gt;their analysis.&lt;/a&gt; “The lists are not identical. In the analyzed payload, the macOS list contains 113 patterns and the Linux/default list contains 127 patterns.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The target lists are extensive and include:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Configuration files for AWS, Azure, GCP, OCI, DigitalOcean, Scaleway, Hetzner, Fly, Vercel, Railway, Alibaba Cloud, IBM Cloud, Linode, MinIO, Snowflake, Doppler, and Salesforce;&lt;/li&gt;
-
-
-
-&lt;li&gt;SSH keys and SSH configuration;&lt;/li&gt;
-
-
-
-&lt;li&gt;Kubernetes, Docker, Helm, Rancher, and service-account material;&lt;/li&gt;
-
-
-
-&lt;li&gt;npm, Yarn, Netrc, Git, GitHub CLI, GitLab CLI, and Hub credentials;&lt;/li&gt;
-
-
-
-&lt;li&gt;Terraform credentials and tfvars files;&lt;/li&gt;
-
-
-
-&lt;li&gt;.env, .env.local, .env.production, database configuration files, shell histories, and database CLI histories;&lt;/li&gt;
-
-
-
-&lt;li&gt;macOS Keychain database files;&lt;/li&gt;
-
-
-
-&lt;li&gt;Firefox profile key database files on macOS;&lt;/li&gt;
-
-
-
-&lt;li&gt;Linux keyrings and KWallet files;&lt;/li&gt;
-
-
-
-&lt;li&gt;FileZilla, Remmina, OpenVPN, and related connection profiles;&lt;/li&gt;
-
-
-
-&lt;li&gt;Microsoft Teams local storage and IndexedDB paths.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;While browser credential stores are not targeted directly, macOS keychain databases can contain system and browser credentials, so those credentials should be considered compromised as well and rotated.&lt;/p&gt;
-
-
-
-&lt;p&gt;All the collected data is archived in a GZIP file, which is then split into chunks and exfiltrated by making DNS TXT queries on an attacker-controlled domain whose name is similar to that of Microsoft’s legitimate Azure Static Web Apps domain.&lt;/p&gt;
-
-
-
-&lt;p&gt;Since the attackers control the DNS server for their domain name, they can see the TXT record queries made by the infected systems and can reconstruct the archives on their end from the leaked bytes. The Socket researchers estimate that a 500KB file would require around 29,400 TXT queries to exfiltrate in this way.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The payload does not establish persistence in the decoded sample,” the researchers said. “There is no observed cron, launchd, rc.d, service installation, or second-stage download. The operational impact is concentrated in the execution window: collection, archive creation, DNS TXT exfiltration, and attempted cleanup.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="expired-domain-led-to-email-takeover"&gt;Expired domain led to email takeover&lt;/h2&gt;
-
-
-
-&lt;p&gt;The malicious node-ipc versions were published from an npm account called atiertant, which belongs to one of the several developers with maintainer access to the package.  Atiertant had never used his access to publish new node-ipc versions before, and has had no activity on node-ipc or any other npm package he has access to since 2022.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://x.com/TekDefense/status/2054963016039342549" rel="noreferrer noopener" target="_blank"&gt;Security researchers noticed&lt;/a&gt; that the email address for atiertant’s account was hosted on a domain called atlantis-software.net that had expired in January 2025 and was re-registered earlier this month, most likely by the attackers. It was then just a matter of setting up an email server, recreating atiertant’s email address and performing a password reset on the account.&lt;/p&gt;
-
-
-
-&lt;p&gt;This highlights some of the security challenges open-source software projects face. While periodically reviewing access lists for dormant and unused accounts is a general security recommendation for companies, open-source projects are maintained by groups of volunteers, and it’s not unusual for people to take long breaks from contributing to projects, especially if those projects have reached a high level of maturity and feature completeness so they no longer get frequent updates.&lt;/p&gt;
-
-
-
-&lt;p&gt;It’s also likely that the attackers did not target node-ipc from the start, they just searched npm for accounts with email addresses on custom domain names, then checked if any of those domain names had expired. This means there might be other dormant accounts out there susceptible to email takeover using the same method.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Socket.dev report contains additional recommendations for both users and developers, as well as file hashes and other indicators of compromise that can be used by security teams to create detections.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4171926/expired-domain-leads-to-supply-chain-attack-on-node-ipc-npm-package.html</guid>
+      <title>AL26-011 - Vulnerabilities affecting Linux - CVE-2026-43284 and CVE-2026-43500</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-011-vulnerabilities-affecting-linux-cve-2026-43284-cve-2026-43500</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.40</comments>
-      <pubDate>Fri, 15 May 2026 21:05:42 +0000</pubDate>
+      <pubDate>Fri, 08 May 2026 17:39:10 +0000</pubDate>
     </item>
     <item>
       <title>cPanel security advisory (AV26-437)</title>
@@ -161,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-437</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Fri, 08 May 2026 18:49:02 +0000</pubDate>
     </item>
     <item>
@@ -172,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.45</comments>
-      <pubDate>Sun, 17 May 2026 19:59:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2026 21:01:56 +0000</pubDate>
     </item>
     <item>
       <title>Call centres dismantled and ten arrested in EUR 50 million online fraud case</title>
@@ -182,7 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Sun, 17 May 2026 19:59:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2026 21:01:56 +0000</pubDate>
     </item>
     <item>
       <title>Swedish fugitive arrested as new OTF GRIMM targets added to EU Most Wanted</title>
@@ -192,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 17 May 2026 19:59:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2026 21:01:56 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports hit against ‘Black Axe’ criminal organisation in Switzerland: 10 arrests</title>
@@ -202,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 17 May 2026 19:59:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2026 21:01:56 +0000</pubDate>
     </item>
     <item>
       <title>“Terrorgram” network dealt another blow as member sentenced in Denmark</title>
@@ -212,7 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 17 May 2026 19:59:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2026 21:01:56 +0000</pubDate>
     </item>
     <item>
       <title>Europol announces transition arrangements following the departure of Executive Director Catherine De Bolle</title>
@@ -222,17 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 17 May 2026 19:59:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>EU Most Wanted platform helps locate Hungarian child abuser hiding in Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-platform-helps-locate-hungarian-child-abuser-hiding-in-spain</link>
-      <description>The 37-year-old man was arrested in Tenerife on 7 May, three days after his profile was published on the platform. He had been sentenced to eight years’ imprisonment by the Budapest Metropolitan Court and was wanted by the Hungarian authorities.The EU Most Wanted platform is an initiative supported by Europol and the European Network of Fugitive Active Search Teams (ENFAST)....</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-platform-helps-locate-hungarian-child-abuser-hiding-in-spain</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 17 May 2026 19:59:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2026 21:01:56 +0000</pubDate>
     </item>
     <item>
       <title>Atlantic ‘Cocaine Highway’ broken in coordinated maritime operation</title>
@@ -242,7 +97,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 17 May 2026 19:59:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2026 21:01:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Most Wanted platform helps locate Hungarian child abuser hiding in Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-platform-helps-locate-hungarian-child-abuser-hiding-in-spain</link>
+      <description>The 37-year-old man was arrested in Tenerife on 7 May, three days after his profile was published on the platform. He had been sentenced to eight years’ imprisonment by the Budapest Metropolitan Court and was wanted by the Hungarian authorities.The EU Most Wanted platform is an initiative supported by Europol and the European Network of Fugitive Active Search Teams (ENFAST)....</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-platform-helps-locate-hungarian-child-abuser-hiding-in-spain</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 17 May 2026 21:01:56 +0000</pubDate>
     </item>
     <item>
       <title>New 2026 ‘IOCTA’ highlights sophisticated tactics and emerging challenges in the digital landscape</title>
@@ -252,7 +117,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.54</comments>
-      <pubDate>Sun, 17 May 2026 19:59:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2026 21:01:56 +0000</pubDate>
     </item>
     <item>
       <title>AL25-012 - Vulnerabilities impacting Cisco ASA and FTD devices – CVE-2025-20333, CVE-2025-20362 and CVE-2025-20363 – Update 2</title>
@@ -261,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al25-012-vulnerabilities-impacting-cisco-asa-ftd-devices-cve-2025-20333-cve-2025-20362-cve-2025-20363</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Mon, 11 May 2026 14:15:28 +0000</pubDate>
     </item>
     <item>
@@ -271,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-438</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Mon, 11 May 2026 14:36:29 +0000</pubDate>
     </item>
     <item>
@@ -281,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-439</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Mon, 11 May 2026 14:50:47 +0000</pubDate>
     </item>
     <item>
@@ -291,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-440</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Mon, 11 May 2026 15:17:54 +0000</pubDate>
     </item>
     <item>
@@ -301,7 +166,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-441</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Mon, 11 May 2026 15:43:52 +0000</pubDate>
     </item>
     <item>
@@ -311,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-442</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Mon, 11 May 2026 15:53:47 +0000</pubDate>
     </item>
     <item>
@@ -321,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-443</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Mon, 11 May 2026 16:04:11 +0000</pubDate>
     </item>
     <item>
@@ -331,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-444</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Mon, 11 May 2026 17:31:18 +0000</pubDate>
     </item>
     <item>
@@ -341,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-445</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Mon, 11 May 2026 19:39:08 +0000</pubDate>
     </item>
     <item>
@@ -361,7 +226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-may-2026-monthly-rollup-av26-447</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Tue, 12 May 2026 14:22:53 +0000</pubDate>
     </item>
     <item>
@@ -371,7 +236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-448</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Tue, 12 May 2026 14:31:23 +0000</pubDate>
     </item>
     <item>
@@ -381,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-449</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Tue, 12 May 2026 14:41:02 +0000</pubDate>
     </item>
     <item>
@@ -391,7 +256,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-450</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Tue, 12 May 2026 15:27:11 +0000</pubDate>
     </item>
     <item>
@@ -401,7 +266,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-451</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Tue, 12 May 2026 15:31:36 +0000</pubDate>
     </item>
     <item>
@@ -411,7 +276,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-452</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Tue, 12 May 2026 18:47:10 +0000</pubDate>
     </item>
     <item>
@@ -421,7 +286,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/intel-security-advisory-av26-453</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Tue, 12 May 2026 18:52:54 +0000</pubDate>
     </item>
     <item>
@@ -431,7 +296,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-454</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Tue, 12 May 2026 19:00:30 +0000</pubDate>
     </item>
     <item>
@@ -441,7 +306,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-455</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Tue, 12 May 2026 19:04:15 +0000</pubDate>
     </item>
     <item>
@@ -451,7 +316,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Tue, 12 May 2026 19:14:35 +0000</pubDate>
     </item>
     <item>
@@ -461,7 +326,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-457</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Wed, 13 May 2026 12:26:05 +0000</pubDate>
     </item>
     <item>
@@ -471,7 +336,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-458</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Wed, 13 May 2026 12:31:25 +0000</pubDate>
     </item>
     <item>
@@ -481,7 +346,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-459</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.34</comments>
+      <comments>Score: 8.33</comments>
       <pubDate>Wed, 13 May 2026 13:11:54 +0000</pubDate>
     </item>
     <item>
@@ -491,7 +356,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/exim-security-advisory-av26-460</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Wed, 13 May 2026 14:58:00 +0000</pubDate>
     </item>
     <item>
@@ -501,7 +366,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-461</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Wed, 13 May 2026 17:44:55 +0000</pubDate>
     </item>
     <item>
@@ -511,7 +376,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-462</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Wed, 13 May 2026 17:50:42 +0000</pubDate>
     </item>
     <item>
@@ -521,7 +386,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-463</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Wed, 13 May 2026 18:30:45 +0000</pubDate>
     </item>
     <item>
@@ -531,7 +396,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-464</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Wed, 13 May 2026 18:39:13 +0000</pubDate>
     </item>
     <item>
@@ -541,7 +406,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-465</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Wed, 13 May 2026 19:26:44 +0000</pubDate>
     </item>
     <item>
@@ -551,7 +416,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-466</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Wed, 13 May 2026 19:31:08 +0000</pubDate>
     </item>
     <item>
@@ -561,7 +426,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-467</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.71</comments>
       <pubDate>Thu, 14 May 2026 13:22:06 +0000</pubDate>
     </item>
     <item>
@@ -571,7 +436,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-468</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.77</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Thu, 14 May 2026 15:43:38 +0000</pubDate>
     </item>
     <item>
@@ -581,7 +446,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-469</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.77</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Thu, 14 May 2026 15:48:40 +0000</pubDate>
     </item>
     <item>
@@ -591,7 +456,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-470</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.76</comments>
       <pubDate>Thu, 14 May 2026 16:00:15 +0000</pubDate>
     </item>
     <item>
@@ -601,7 +466,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-471</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.82</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Thu, 14 May 2026 18:33:33 +0000</pubDate>
     </item>
     <item>
@@ -611,7 +476,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-472</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Thu, 14 May 2026 20:03:36 +0000</pubDate>
     </item>
     <item>
@@ -621,7 +486,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-av26-473</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.32</comments>
+      <comments>Score: 9.30</comments>
       <pubDate>Fri, 15 May 2026 17:42:44 +0000</pubDate>
     </item>
     <item>
@@ -631,7 +496,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-474</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.36</comments>
+      <comments>Score: 9.33</comments>
       <pubDate>Fri, 15 May 2026 19:15:37 +0000</pubDate>
     </item>
     <item>
@@ -641,7 +506,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-012-critical-vulnerability-affecting-cisco-catalyst-sd-wan-cve-2026-20182</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.21</comments>
+      <comments>Score: 10.19</comments>
       <pubDate>Fri, 15 May 2026 13:03:19 +0000</pubDate>
     </item>
   </channel>
