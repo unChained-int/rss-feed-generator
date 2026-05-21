@@ -8,127 +8,56 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 May 2026 15:33:53 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 18:02:44 +0000</lastBuildDate>
     <item>
-      <title>AntV data visualization tool the latest to be hit by ongoing npm supply chain attacks</title>
-      <link>https://www.csoonline.com/article/4173291/antv-data-visualization-tool-the-latest-to-be-hit-by-ongoing-npm-supply-chain-attacks-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;The world’s largest open-source registry, node package manager (npm), has been hit by another fast-moving malware attack, this time targeting the widely-used AntV enterprise data visualization tool.&lt;/p&gt;
-
-
-
-&lt;p&gt;Unlike last week’s high-profile npm attack &lt;a href="https://www.csoonline.com/article/4170284/mistral-ai-sdk-tanstack-router-hit-in-npm-software-supply-chain-attack.html" target="_blank"&gt;on TanStack&lt;/a&gt;, which exploited a complex GitHub Actions cache poisoning weakness, the latest incident early on May 19 took the more conventional route of compromising the credentials of a high-value npm maintainer account.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to analysis &lt;a href="https://safedep.io/mini-shai-hulud-strikes-again-314-npm-packages-compromised/" rel="noreferrer noopener" target="_blank"&gt;by SafeDep&lt;/a&gt;, the account in question, atool (i@hust.cc), which publishes the timeago.js JavaScript library, had rights to a large catalog of packages, including popular tools such as size-sensor (4.2 million downloads per month), echarts-for-react (3.8 million), @antv/scale (2.2 million), and timeago.js (1.15 million).&lt;/p&gt;
-
-
-
-&lt;p&gt;This privilege level allowed the attacker to publish at least 637 malicious versions across 317 different npm packages in a single 22-minute burst. This resulted in the compromise of a big chunk of Alibaba’s AntV namespace, a growing platform across Asia, the US, and Europe used to build dashboards, user interfaces, and interactive applications.&lt;/p&gt;
-
-
-
-&lt;p&gt;Attacks on the npm supply chain this year plot a challenging trend, &lt;a href="https://www.aikido.dev/blog/mini-shai-hulud-antv-npm-supply-chain-attack" rel="noreferrer noopener" target="_blank"&gt;said Aikido Security&lt;/a&gt; in its analysis. “This is the third major wave we have tracked. It went from a handful of SAP packages in April, to 169 packages in the TanStack wave, to a much larger set of packages now. Each wave has been faster and broader than the last.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="here-we-go-again"&gt;“Here We Go Again”&lt;/h2&gt;
-
-
-
-&lt;p&gt;Anyone unlucky enough to be infected by one of the malicious packages will find themselves on the receiving end of the potent &lt;a href="https://www.akamai.com/blog/security-research/mini-shai-hulud-worm-returns-goes-public" rel="noreferrer noopener" target="_blank"&gt;Mini-Shai-Hulud worm&lt;/a&gt;, the source code for which was recently briefly released to other criminals on GitHub.&lt;/p&gt;
-
-
-
-&lt;p&gt;Its purpose is to steal npm and GitHub tokens, as well as credentials from 130 file paths, including multiple cloud platforms, Kubernetes, Docker, Hashicorp, password vaults, SSH keys, and Bitcoin wallets.&lt;/p&gt;
-
-
-
-&lt;p&gt;For unknown reasons, the attackers then use stolen CI/CD tokens to store exfiltrated data in public GitHub repositories themed on the science fiction novel &lt;em&gt;Dune&lt;/em&gt;, which, within hours of this attack, grew to 2,500 in number. Each repository description contains the string “niagA oG eW ereH :duluH-iahS” (“Shai-Hulud: Here We Go Again” backwards).&lt;/p&gt;
-
-
-
-&lt;p&gt;In theory, the malware is also capable of persistence via a Python-based backdoor installed at &lt;em&gt;~/.local/share/kitty/cat.py&lt;/em&gt;, although &lt;a href="https://www.wiz.io/blog/mini-shai-hulud-teampcp-hits-antv-supply-chain" rel="noreferrer noopener" target="_blank"&gt;according to&lt;/a&gt; security company Wiz, this function doesn’t yet seem to be active.&lt;/p&gt;
-
-
-
-&lt;p&gt;The group behind the campaign, TeamPCP, doesn’t lack for ambition: the malware even tries &lt;a href="https://safedep.io/mini-shai-hulud-strikes-again-314-npm-packages-compromised/#:~:text=codeql%2Eyml%2E-,The,effect%2E" rel="noreferrer noopener" target="_blank"&gt;to modify Claude Code’s &lt;em&gt;settings.json&lt;/em&gt;&lt;/a&gt;, which allows the malware to be stealthily reinstated with full LLM privileges in case the infected npm packages have been removed.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="next-steps"&gt;Next steps&lt;/h2&gt;
-
-
-
-&lt;p&gt;After the attack was detected, AntV’s maintainers issued the following &lt;a href="https://github.com/antvis" rel="noreferrer noopener" target="_blank"&gt;warning on GitHub&lt;/a&gt;:&lt;/p&gt;
-
-
-
-&lt;p&gt;“Due to the impact of an external worm attack, AntV-related npm packages have been compromised. The infected packages have been deleted, while the remaining ones have been marked as deprecated,” it read. “Users are advised to carefully identify and download the latest versions. AntV is actively contacting the npm registry to have the deprecated packages removed.”&lt;/p&gt;
-
-
-
-&lt;p&gt;In other words, while malicious versions have been deleted, remaining packages should be treated with extreme caution, providing an incentive for developers to audit and move to known safe versions.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because the attack infected multiple versions of the same library, establishing a known safe version will be perilous. Developers can consult a list of compromised packages (&lt;a href="https://safedep.io/mini-shai-hulud-strikes-again-314-npm-packages-compromised/#:~:text=Full%20List%20of%20Compromised%20Packages,-317" rel="noreferrer noopener" target="_blank"&gt;published by SafeDep&lt;/a&gt; as a .csv), although it’s safe to assume that if any version of the AntV library is in use, infection is a possibility.&lt;/p&gt;
-
-
-
-&lt;p&gt;Beyond that, recommended actions are to look for signs of compromise in CI/CD environments and repositories, and to rotate all credentials.&lt;/p&gt;
-
-
-
-&lt;p&gt;But the most important advice from experts is much simpler: strengthen defenses against future attacks targeting npm by improving monitoring and package verification.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.infoworld.com/article/4173277/antv-data-visualization-tool-the-latest-to-be-hit-by-ongoing-npm-supply-chain-attacks.html" target="_blank"&gt;InfoWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4173291/antv-data-visualization-tool-the-latest-to-be-hit-by-ongoing-npm-supply-chain-attacks-2.html</guid>
+      <title>EU Most Wanted platform helps locate Hungarian child abuser hiding in Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-platform-helps-locate-hungarian-child-abuser-hiding-in-spain</link>
+      <description>The 37-year-old man was arrested in Tenerife on 7 May, three days after his profile was published on the platform. He had been sentenced to eight years’ imprisonment by the Budapest Metropolitan Court and was wanted by the Hungarian authorities.The EU Most Wanted platform is an initiative supported by Europol and the European Network of Fugitive Active Search Teams (ENFAST)....</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-platform-helps-locate-hungarian-child-abuser-hiding-in-spain</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Tue, 19 May 2026 19:19:05 +0000</pubDate>
+      <pubDate>Thu, 21 May 2026 16:02:44 +0000</pubDate>
     </item>
     <item>
-      <title>HPE security advisory (AV26-457)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-457</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-457</guid>
+      <title>Swedish fugitive arrested as new OTF GRIMM targets added to EU Most Wanted</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/swedish-fugitive-arrested-new-otf-grimm-targets-added-to-eu-most-wanted</link>
+      <description>The arrested individual, a man in his 30s linked to the Foxtrot network, was wanted by Swedish authorities for murder, preparation, and conspiracy to commit murder. He was suspected of playing an active role within an organised crime group, including the recruitment of individuals to carry out violent acts. The arrest was carried out by Tunisian authorities following long-term cooperation...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/swedish-fugitive-arrested-new-otf-grimm-targets-added-to-eu-most-wanted</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 13 May 2026 12:26:05 +0000</pubDate>
+      <pubDate>Thu, 21 May 2026 16:02:44 +0000</pubDate>
     </item>
     <item>
-      <title>Google Chrome security advisory (AV26-458)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-458</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-458</guid>
+      <title>Europol supports international hit against counterfeit medicines and supplements network</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-international-hit-against-counterfeit-medicines-and-supplements-network</link>
+      <description>The criminal organisation, comprising individuals from Romania, the Republic of Moldova, Bulgaria, Estonia, Poland, and Ukraine, has been operating for nearly two decades, generating at least EUR 240 million in illicit transactions, with up to EUR 70 million in 2021 alone. The network has been exploiting the vulnerability of individuals seeking treatments for serious diseases, such as diabetes, cancer, psoriasis,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-international-hit-against-counterfeit-medicines-and-supplements-network</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 13 May 2026 12:31:25 +0000</pubDate>
+      <pubDate>Thu, 21 May 2026 16:02:44 +0000</pubDate>
     </item>
     <item>
-      <title>n8n security advisory (AV26-459)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-459</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-459</guid>
+      <title>“Terrorgram” network dealt another blow as member sentenced in Denmark</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/terrorgram-network-dealt-another-blow-member-sentenced-in-denmark</link>
+      <description>A Danish-French national has been sentenced to six years in prison for terrorism-related offences by the District Court in Glostrup, following an investigation supported by Europol’s European Counter Terrorism Centre (ECTC). A Europol specialist was called to testify during the court proceedings. This underscores the European Law Enforcement Agency’s role in supporting judicial authorities with expert analysis.The 30-year-old man, based...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/terrorgram-network-dealt-another-blow-member-sentenced-in-denmark</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
-      <pubDate>Wed, 13 May 2026 13:11:54 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 21 May 2026 16:02:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol announces transition arrangements following the departure of Executive Director Catherine De Bolle</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-announces-transition-arrangements-following-departure-of-executive-director-catherine-de-bolle</link>
+      <description>As from 2 May, Europol has entered into a transition phase with specific arrangements following the departure of Executive Director Catherine De Bolle, who left her post on 1 May 2026, after eight years of service.Selecting Europol’s new Executive DirectorThe selection process for the new Executive Director is currently underway. The applications closed on 31 March 2026, and a selection...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-announces-transition-arrangements-following-departure-of-executive-director-catherine-de-bolle</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 21 May 2026 16:02:44 +0000</pubDate>
     </item>
     <item>
       <title>Exim security advisory (AV26-460)</title>
@@ -137,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/exim-security-advisory-av26-460</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Wed, 13 May 2026 14:58:00 +0000</pubDate>
     </item>
     <item>
@@ -147,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-461</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Wed, 13 May 2026 17:44:55 +0000</pubDate>
     </item>
     <item>
@@ -157,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-462</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Wed, 13 May 2026 17:50:42 +0000</pubDate>
     </item>
     <item>
@@ -167,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-463</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Wed, 13 May 2026 18:30:45 +0000</pubDate>
     </item>
     <item>
@@ -177,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-464</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Wed, 13 May 2026 18:39:13 +0000</pubDate>
     </item>
     <item>
@@ -187,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-465</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Wed, 13 May 2026 19:26:44 +0000</pubDate>
     </item>
     <item>
@@ -197,119 +126,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-466</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Wed, 13 May 2026 19:31:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>Contractor’s public GitHub account exposed GovCloud and CISA credentials</title>
-      <link>https://www.csoonline.com/article/4173305/contractors-public-github-account-exposed-govcloud-and-cisa-credentials.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Until a few days ago, a publicly-accessible GitHub repository exposed credentials for both US government AWS accounts and internal Cybersecurity and Infrastructure Security Agency (CISA) systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;That’s according to cybersecurity reporter Brian Krebs, &lt;a href="https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/" rel="noreferrer noopener" target="_blank"&gt;who first broke the news over the weekend&lt;/a&gt;, acting on a tip from researcher &lt;a href="https://fr.linkedin.com/in/gvaladon" rel="noreferrer noopener" target="_blank"&gt;Guillaume Valadon&lt;/a&gt; at GitGuardian.&lt;/p&gt;
-
-
-
-&lt;p&gt;Valadon confirmed the information in an email interview with &lt;em&gt;CSO&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Based on the repository’s commit history and the account creator’s own troubleshooting notes, committed back into the repo, Valadon believes the repository was run by a CISA contractor who created it on his personal GitHub account.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This is a serious breach of security controls, because secrets are stored in plain text and committed to Git instead of being fetched from a secret manager at runtime,” he wrote, “and because internal documents meant to remain private were pushed to a public repository inside a personal developer account.”&lt;/p&gt;
-
-
-
-&lt;p&gt;GitGuardian is a French-based service whose products scan internal and external sources, including GitHub, for exposed secrets.&lt;/p&gt;
-
-
-
-&lt;p&gt;On May 14, it found a public GitHub repository named “Private-CISA.” The repository, which had been live since November 13, 2025, contained 844 MB of data, including Kubernetes files, GitHub Actions workflows, internal documentation backups, personal documents and operational scripts, plain-text passwords, AWS tokens, and GitHub access tokens. &lt;/p&gt;
-
-
-
-&lt;p&gt;The good news: GitHub events data indicates the repository was never forked, Valadon said, “which limited the blast radius.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The bad news: The owner of the account didn’t reply immediately to Valadon’s warning message, which is why he went to Krebs.&lt;/p&gt;
-
-
-
-&lt;p&gt;Valadon also reported the leak to the US-based Computer Emergency Response Team Coordination Center (CERT/CC) on May 14, and the next day reached out to CISA. The repository was offline that night. “I must credit them [CISA] for deleting this repository quickly,” Valadon said. “Most of our responsible disclosures take much longer, and many are never fixed. Managing to take the repository offline in a day is impressive work.”&lt;/p&gt;
-
-
-
-&lt;p&gt;“I worked nine years at ANSSI [France’s equivalent to CISA],” Valadon added, “and now, dealing with leaks daily at GitGuardian, this is definitely one of the worst I have ever seen.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Based on the account’s data, Krebs believes it was run by a Washington, DC area cybersecurity firm contracted by CISA. The company wouldn’t confirm that when &lt;em&gt;CSO&lt;/em&gt; asked for comment, instead referring questions to CISA.&lt;/p&gt;
-
-
-
-&lt;p&gt;Asked for comment, a CISA spokesperson said in an email that the agency is aware of the reported exposure and is continuing to investigate the situation. “Currently, there is no indication that any sensitive data was compromised as a result of this incident,” they wrote. “While we hold our team members to the highest standards of integrity and operational awareness, we are working to ensure additional safeguards are implemented to prevent future occurrences.” &lt;/p&gt;
-
-
-
-&lt;p&gt;There are many serious security problems with GitHub repositories, ranging from fake repositories created by threat actors to legitimate accounts that are wrongly created with public access. And last month, researchers at Wiz &lt;a href="https://www.wiz.io/blog/github-rce-vulnerability-cve-2026-3854" rel="noreferrer noopener" target="_blank"&gt;uncovered an injection vulnerability&lt;/a&gt; in the internal git infrastructure that could have enabled hackers to execute arbitrary commands on GitHub’s backend servers.&lt;/p&gt;
-
-
-
-&lt;p&gt;In the current case, the problem is human; GitHub repositories can contain a range of secrets, such as tokens and credentials included by account creators, which is why users need to implement &lt;a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure" rel="noreferrer noopener" target="_blank"&gt;GitHub’s extensive protections and security best practices&lt;/a&gt;, including limiting access to the repository.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Related content: &lt;a href="https://www.csoonline.com/article/3846732/attackers-attempted-hijacking-12000-github-accounts-with-click-fix-alerts.html" target="_blank"&gt;GitHub accounts targeted with fake security alerts&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-csos-and-cios-should-do"&gt;What CSOs and CIOs should do&lt;/h2&gt;
-
-
-
-&lt;p&gt;Exposing secrets on GitHub “is a serious and sadly common problem,” commented &lt;a href="https://www.sans.org/profiles/dr-johannes-ullrich" rel="noreferrer noopener" target="_blank"&gt;Johannes Ullrich&lt;/a&gt;, dean of research at the SANS Institute.&lt;/p&gt;
-
-
-
-&lt;p&gt;But, he added, there are several steps IT can take to prevent this. First, secrets such as passwords and API keys must be centrally managed. An enterprise-wide secret management process isn’t easy to implement, he acknowledged, “but it is also your best bet to avoid secrets from being handled inappropriately.” &lt;/p&gt;
-
-
-
-&lt;p&gt;Second, use tools that proactively scan user systems and public services such as GitHub for exposed keys. “These products are essential to enforce any policy governing the secure handling of secrets,” Ullrich said.&lt;/p&gt;
-
-
-
-&lt;p&gt;“In this particular case, the fault appears to have been with a contractor, not CISA itself,” he noted. “Managing vendor relationships is important and must include agreements on how to handle secrets used to access internal systems and data.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Veteran consultant &lt;a href="https://www.linkedin.com/in/rob-enderle-03729" rel="noreferrer noopener" target="_blank"&gt;Robert Enderle&lt;/a&gt; of the Enderle Group noted that this kind of exposure happens with alarming frequency. “Developers are often under immense pressure to deliver code quickly,” he said, “and the lines between personal and professional repositories can easily blur. However, for a contractor tied to CISA — the very agency tasked with defending our national infrastructure — the potential fallout is catastrophic. Leaving credentials exposed in a public GitHub repository is akin to leaving the master keys to the nation’s cyber defenses on a public park bench. Had those credentials been leveraged by a nation-state actor, it could have facilitated a massive supply chain attack or deep infiltration into critical government systems.” &lt;/p&gt;
-
-
-
-&lt;p&gt;To mitigate that potential, CSOs and CIOs must stop relying on policy alone and implement robust, automated governance, Enderle said. “You cannot expect humans not to make mistakes; you have to build systems that catch them,” he said. This means mandating automated secret scanning tools that actively block commits containing credentials or API keys before they ever hit a repository. Enterprises also need to enforce strict separation between personal and professional developer environments, mandate multi-factor authentication (MFA) across the board, and embrace a &lt;a href="https://www.csoonline.com/zero-trust/" target="_blank"&gt;zero trust&lt;/a&gt; architecture that assumes credentials will eventually be compromised, he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Valadon added that CSOs and CIOs should perform full secret scanning on all internal repositories, not just public GitHub accounts, block secrets before they reach the repository, use short-lived credentials wherever possible, deploy honeytokens, such as fake passwords that would trick curious attackers, in sensitive repositories, and inventory where their organization’s code actually lives, including checking whether it’s in employees’ and contractors’ personal GitHub accounts.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4173305/contractors-public-github-account-exposed-govcloud-and-cisa-credentials.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
-      <pubDate>Tue, 19 May 2026 20:57:46 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft disrupts malware code-signing service used by ransomware gangs</title>
@@ -367,7 +185,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4173417/microsoft-disrupts-malware-code-signing-service-used-by-ransomware-gangs.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Wed, 20 May 2026 00:45:54 +0000</pubDate>
     </item>
     <item>
@@ -377,7 +195,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-467</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Thu, 14 May 2026 13:22:06 +0000</pubDate>
     </item>
     <item>
@@ -387,7 +205,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-468</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Thu, 14 May 2026 15:43:38 +0000</pubDate>
     </item>
     <item>
@@ -397,7 +215,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-469</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Thu, 14 May 2026 15:48:40 +0000</pubDate>
     </item>
     <item>
@@ -407,7 +225,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-470</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Thu, 14 May 2026 16:00:15 +0000</pubDate>
     </item>
     <item>
@@ -417,7 +235,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-471</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Thu, 14 May 2026 18:33:33 +0000</pubDate>
     </item>
     <item>
@@ -427,7 +245,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-472</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Thu, 14 May 2026 20:03:36 +0000</pubDate>
     </item>
     <item>
@@ -437,7 +255,7 @@
       <guid isPermaLink="false">https://www.infosecurity-magazine.com/news/grafana-labs-code-breach-tanstack/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Thu, 21 May 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -578,7 +396,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4173425/why-some-security-fixes-never-reach-your-vulnerability-dashboard.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Wed, 20 May 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -588,7 +406,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-av26-473</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Fri, 15 May 2026 17:42:44 +0000</pubDate>
     </item>
     <item>
@@ -598,8 +416,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-474</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Fri, 15 May 2026 19:15:37 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grafana Labs links GitHub environment breach to TanStack npm supply chain attack</title>
+      <link>https://www.cybersecuritydive.com/news/grafana-labs-github-environment-breach-tanstack-npm-supply-chain/820866/</link>
+      <description>&lt;figure&gt;&lt;div&gt;&lt;img src="https://imgproxy.divecdn.com/tp5ao3khN4HZ6yQwuItrq0qkr_3jaBgfcstPyItc9d0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzU2MzY0MjY4XzEuanBn.webp" /&gt;&lt;/div&gt;&lt;/figure&gt;&lt;p&gt;The company behind the widely used observability platform refused an extortion demand and has since taken steps to harden its security.&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://www.cybersecuritydive.com/news/grafana-labs-github-environment-breach-tanstack-npm-supply-chain/820866/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.10</comments>
+      <pubDate>Thu, 21 May 2026 10:49:54 -0400</pubDate>
     </item>
     <item>
       <title>AI becoming an SOC imperative for curtailing emerging cyber threats</title>
@@ -733,7 +561,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4175349/ai-becoming-an-soc-imperative-for-curtailing-emerging-cyber-threats.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Thu, 21 May 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -812,7 +640,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4175592/microsoft-releases-open-source-tools-to-operationalize-ai-agent-safety-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.79</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Thu, 21 May 2026 10:28:06 +0000</pubDate>
     </item>
     <item>
@@ -822,7 +650,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-012-critical-vulnerability-affecting-cisco-catalyst-sd-wan-cve-2026-20182</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Fri, 15 May 2026 13:03:19 +0000</pubDate>
     </item>
     <item>
@@ -909,7 +737,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4174747/github-admits-major-source-code-leak-after-3800-internal-repositories-breached-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Wed, 20 May 2026 15:47:03 +0000</pubDate>
     </item>
     <item>
@@ -919,7 +747,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-475</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.41</comments>
+      <comments>Score: 9.35</comments>
       <pubDate>Tue, 19 May 2026 14:52:09 +0000</pubDate>
     </item>
     <item>
@@ -929,7 +757,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-476</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.37</comments>
       <pubDate>Tue, 19 May 2026 15:37:28 +0000</pubDate>
     </item>
     <item>
@@ -939,7 +767,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-477</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.44</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Tue, 19 May 2026 16:15:28 +0000</pubDate>
     </item>
     <item>
@@ -949,7 +777,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-478</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.52</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Tue, 19 May 2026 19:15:25 +0000</pubDate>
     </item>
     <item>
@@ -959,7 +787,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-479</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Tue, 19 May 2026 19:34:39 +0000</pubDate>
     </item>
     <item>
@@ -969,7 +797,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-480</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Tue, 19 May 2026 19:48:07 +0000</pubDate>
     </item>
     <item>
@@ -979,7 +807,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-481</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Tue, 19 May 2026 20:05:57 +0000</pubDate>
     </item>
     <item>
@@ -989,7 +817,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-482</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Tue, 19 May 2026 20:17:38 +0000</pubDate>
     </item>
     <item>
@@ -999,7 +827,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-483</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.49</comments>
       <pubDate>Tue, 19 May 2026 20:31:52 +0000</pubDate>
     </item>
     <item>
@@ -1009,7 +837,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-484</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.10</comments>
+      <comments>Score: 10.02</comments>
       <pubDate>Wed, 20 May 2026 15:10:43 +0000</pubDate>
     </item>
     <item>
@@ -1019,7 +847,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-485</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.03</comments>
       <pubDate>Wed, 20 May 2026 15:19:32 +0000</pubDate>
     </item>
     <item>
@@ -1029,7 +857,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-486</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.03</comments>
       <pubDate>Wed, 20 May 2026 15:24:06 +0000</pubDate>
     </item>
     <item>
@@ -1039,7 +867,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-487</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.03</comments>
       <pubDate>Wed, 20 May 2026 15:29:08 +0000</pubDate>
     </item>
     <item>
@@ -1049,7 +877,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-488</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.12</comments>
+      <comments>Score: 10.04</comments>
       <pubDate>Wed, 20 May 2026 15:35:04 +0000</pubDate>
     </item>
     <item>
@@ -1059,7 +887,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-av26-489</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.17</comments>
+      <comments>Score: 10.09</comments>
       <pubDate>Wed, 20 May 2026 17:16:09 +0000</pubDate>
     </item>
     <item>
@@ -1069,7 +897,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-490</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.17</comments>
+      <comments>Score: 10.09</comments>
       <pubDate>Wed, 20 May 2026 17:23:00 +0000</pubDate>
     </item>
     <item>
@@ -1079,7 +907,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-491</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.23</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Wed, 20 May 2026 19:06:36 +0000</pubDate>
     </item>
     <item>
@@ -1089,7 +917,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-492</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.23</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Wed, 20 May 2026 19:10:30 +0000</pubDate>
     </item>
     <item>
@@ -1099,7 +927,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-493</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.24</comments>
+      <comments>Score: 10.16</comments>
       <pubDate>Wed, 20 May 2026 19:24:03 +0000</pubDate>
     </item>
     <item>
@@ -1109,7 +937,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trend-micro-security-advisory-av26-494</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.93</comments>
+      <comments>Score: 10.83</comments>
       <pubDate>Thu, 21 May 2026 13:52:45 +0000</pubDate>
     </item>
     <item>
@@ -1119,26 +947,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-495</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.93</comments>
+      <comments>Score: 10.83</comments>
       <pubDate>Thu, 21 May 2026 13:56:55 +0000</pubDate>
     </item>
     <item>
-      <title>Infosecurity Europe</title>
-      <link>https://www.darkreading.com/events/infosecurity-europe</link>
+      <title>ConnectWise security advisory (AV26-496)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av26-496</link>
       <description>No description available</description>
-      <guid isPermaLink="false">https://www.darkreading.com/events/infosecurity-europe</guid>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av26-496</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 79.63</comments>
-      <pubDate>Tue, 02 Jun 2026 13:30:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Virtual Event] Anatomy of a Data Breach: What to Do if it Happens to You</title>
-      <link>https://www.darkreading.com/events/anatomy-of-a-data-breach-what-to-do-if-it-happens-to-you</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://www.darkreading.com/events/anatomy-of-a-data-breach-what-to-do-if-it-happens-to-you</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 4362.80</comments>
-      <pubDate>Thu, 18 Jun 2026 15:00:00 +0000</pubDate>
+      <comments>Score: 10.99</comments>
+      <pubDate>Thu, 21 May 2026 17:42:51 +0000</pubDate>
     </item>
   </channel>
 </rss>
