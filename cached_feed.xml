@@ -8,193 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 May 2026 12:17:22 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 14:48:14 +0000</lastBuildDate>
     <item>
-      <title>Cybersecurity trends in SEC filings</title>
-      <link>https://www.csoonline.com/article/4177700/cybersecurity-trends-in-sec-filings.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;In 2023, the Securities and Exchange Commission (SEC) required public companies to include a new section in their 10-K annual filings that is devoted to cybersecurity. This section is meant to address “cybersecurity risk management, strategy, governance and incidents.” I got curious as to what senior cybersecurity executives are conveying about their companies in these reports. I turned this into a research project that also gives me a reason to test out some AI techniques as well.&lt;/p&gt;
-
-
-
-&lt;p&gt;The article is broken into two sections: My findings regarding Section 1.C for the top 200 companies in the S&amp;amp;P, and the second being my methods used to include some AI tech.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="10-k-section-1-c"&gt;10-K Section 1.C&lt;/h2&gt;
-
-
-
-&lt;p&gt;Some really great analysis of Section 1.C has already been done to include a &lt;a href="https://corpgov.law.harvard.edu/2025/01/09/cybersecurity-disclosure-overview-a-survey-of-form-10-k-cybersecurity-disclosures-by-sp-100-companies/"&gt;Harvard Law School study&lt;/a&gt;, &lt;a href="https://www.pwc.com/us/en/services/consulting/cybersecurity-risk-regulatory/sec-final-cybersecurity-disclosure-rules/sec-10-k-cyber-disclosures.html"&gt;a PWC study&lt;/a&gt; and &lt;a href="https://www.sciencedirect.com/science/article/pii/S1467089526000059"&gt;an International Journal of Accounting Information Systems paper&lt;/a&gt;. These were great reads, but both were done over a year ago with the first batch of filings. Also, with the Harvard Law study, they only looked at the top 100 companies. I wanted to see if I could reproduce some of the analysis using this year’s filings, as well as ask some of my own questions, like whether there are any major changes between 2024 and 2025.&lt;/p&gt;
-
-
-
-&lt;p&gt;Companies are required to disclose governance regarding cybersecurity risks. Key requirements include describing board oversight of cyber risks, the committee responsible and management’s role in assessing and managing material cybersecurity threats. Years of experience are often included.&lt;/p&gt;
-
-
-
-&lt;p&gt;Similar to the Harvard study, I’ll look at who holds the senior cybersecurity role and their level of experience, who they report to, what part of the board oversees cybersecurity and standards that they are using. Not every company included all these pieces of information, but the bulk of them did. I’ll also look at overall trends between 2024 and 2025.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ciso-role-top-for-cybersecurity"&gt;CISO role top for cybersecurity&lt;/h2&gt;
-
-
-
-&lt;p&gt;The chief information security officer (CISO) continues to be the principal position responsible for cybersecurity, with over 70% of companies reporting CISO as the role responsible for cybersecurity.  Numbers for CISO slightly increased from 2024 to 2025, going from 137 to 142.  A distant second and third are CIO and CSO.  The average years of experience for the role is about 23 years (standard deviation 6 years, 140 companies reported).&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="cio-remains-top-senior-in-a-varied-field"&gt;CIO remains top senior in a varied field&lt;/h2&gt;
-
-
-
-&lt;p&gt;Chief information officer remains the top person that the cybersecurity official reports to and remained stable between 2024 and 2025 (~49 vs ~48).  This is consistent with surveys and other reporting that CIO is the most frequent.  I agree with another CSO article that having the position under the CIO is sub-optimal and both inserts conflicts of interest as well as downplays the importance of cybersecurity at the enterprise level.  Not saying it can’t work, but there are likely better arrangements.  No clear alternative has appeared in either 2024 or 2025 data (see the chart below), and the small relative numbers indicate there is a lot of variety in who the CISO reports to.  The CEO, CFO and CTO were other common reporting positions, but none were a clear second.  It is also worth noting that for over 50 companies, it wasn’t clear from the 10-K write-ups who the reporting position was.&lt;/p&gt;
-
-
-&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-large"&gt;&lt;img alt="Graph: 'Reports to' position" class="wp-image-4177704" height="713" src="https://b2b-contenthub.com/wp-content/uploads/2026/05/graph-reports-to-position.png?w=1024" width="1024" /&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;Derek Dye&lt;/p&gt;&lt;/div&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="board-oversight"&gt;Board oversight&lt;/h2&gt;
-
-
-
-&lt;p&gt;Within the Company’s board, the Audit Committee is by far the most common group responsible for cybersecurity, representing 60% of companies.  This jumps to about 70% (138 companies), If you include all the variations of Audit to include Audit &amp;amp; Risk, Audit &amp;amp; Finance, etc.  Overall, audit numbers remained steady between 2024 and 2025.  Distant second and third were the Risk Committee and Board of Directors broadly.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="nist-csf-for-the-win"&gt;NIST CSF for the win&lt;/h2&gt;
-
-
-
-&lt;p&gt;National Institute of Standards and Technology (NIST) &lt;a href="https://www.nist.gov/cyberframework"&gt;Cybersecurity Framework (CSF)&lt;/a&gt; is the most referenced cybersecurity standard, increasing between 2024 and 2025(113 vs 118). The most common other standard being ISO 27001, which also grew between 2024 and 2025 (49 vs 55).  Interestingly, System and Organization Controls (SOC) was only mentioned by 17 companies.  I find this seemingly low, given the importance of SOC reporting in large public sector companies.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="overall-trends"&gt;Overall trends&lt;/h2&gt;
-
-
-
-&lt;p&gt;Other interesting observations were what companies listed as their broad efforts as well as disclosures of incidents.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Third-party and supply chain risk management.&lt;/strong&gt; Acknowledging that external partners and suppliers represent a massive attack vector, multiple companies have instituted rigorous third-party risk management (TPRM) programs. These programs mandate pre-engagement security assessments, continuous monitoring and contractual requirements for vendors to maintain security standards and report breaches promptly.  Third-party cybersecurity programs are indispensable in an increasingly interconnected economy and increasing reliance on external tools and services for company processes.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Proactive testing and incident preparedness.&lt;/strong&gt; Companies are moving past passive defense into proactive and simulated testing. This includes regular penetration testing, vulnerability scanning and engaging independent external auditors or consultants to assess program maturity and test controls. Furthermore, practically all companies maintain formal Incident Response Plans (IRPs) and conduct regular “tabletop exercises” to simulate cyberattacks, ensuring that management, legal and operational teams are prepared to respond to and recover from real-world crises. The devil is in the details on this one. The 10-K is not meant as a detailed technical rundown of company methods, so while it’s good to see, it’s mostly boilerplate language.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Human-centric security defenses.&lt;/strong&gt; Recognizing that human error is a primary vulnerability, mandatory, enterprise-wide cybersecurity awareness training is a standard requirement. These training programs are frequently supplemented with regular, simulated phishing campaigns to test employee vigilance and provide immediate, targeted feedback or remedial training.  This training will need to adapt to the growing sophistication of AI-enabled deep fakes.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Consistent disclosure of “No Material Impact” despite ongoing threats.&lt;/strong&gt; A ubiquitous trend across the filings is the acknowledgment that while the companies face continuous, sophisticated and evolving cyberattacks, they have not experienced any incidents that have had a &lt;em&gt;material&lt;/em&gt; adverse effect on their business strategy, results of operations or financial condition to date. I find this interesting, especially with the Critical Infrastructure//telecoms coming under repeated VOLT/SALT TYPHOON compromises as well as other attacks. Many companies also disclose that they rely on cyber liability insurance to mitigate financial exposure, though they frequently note it may not cover all potential losses.  I’ll be doing further research here as there are likely more interesting findings between material impacts, news reporting and formal disclosures.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Artificial intelligence.&lt;/strong&gt; AI was cited by over 50 companies and is increasingly referenced as a double-edged sword for cybersecurity.  Companies are leveraging AI and machine learning to automate threat detection and sort through vast amounts of security data. However, several acknowledged that AI empowers threat actors to execute more sophisticated, high-velocity attacks (e.g. deepfakes, advanced phishing).  A further seven companies mentioned the concern of AI and intellectual property disclosures with Prudential and Capital One having the most explicit language on this risk.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="part-2-data-gathering-and-analysis"&gt;Part 2: Data gathering and analysis&lt;/h2&gt;
-
-
-
-&lt;p&gt;This was a very iterative process that increased in complexity as I went through the process and also due to the increased need for accuracy.  I used several coding methods and AI tools to do this analysis. At first, I tried to use the big models to do all the work for me, but that quickly failed when they didn’t want to do that level of work! It also became apparent that getting the 10-K filings would take more work than just asking an AI agent.&lt;/p&gt;
-
-
-
-&lt;p&gt;Enter some vibe coding. I was raised on C, Java and BASH scripting and have avoided using Python until now. Nothing against Python, I just haven’t needed to, and laziness with going with what you already know has won out before. So, this proved a nice additional challenge. Using the datamule Python module and some vibing, I managed to download all the recent 10-Ks for the top 200 companies onto my local machine. From there, I extracted the 1.C sections into a separate file using another Python script. This caused a bit of an issue as there were some differences (~5%) in filings that used a different format, or the cybersecurity write-up was in a different section of the 10-K.  About 15 companies put them in the Risk section or elsewhere.  I used a second Python script that leveraged the command-line version of Gemini (gemini-cli) to pull this information out.&lt;/p&gt;
-
-
-
-&lt;p&gt;I then created a database in postgres that would store some of the key findings and allow for some further analysis. To get the data into there, I created a Python script that would run each of the 1.C files through Gemini and Claude using Python API calls.&lt;/p&gt;
-
-
-
-&lt;p&gt;The use of Gemini API and Anthropic API was the new part that I really wanted to test out, and it proved very interesting. LLMs really shine for condensing and summarizing large texts for meaning. The alternative would be very complex and manually written regular expressions. Using Gemini API and Anthropic API, it took the below prompt and produced a string that I could then plug into the SQL command. Very cool seeing this work. (**Note: I was also thinking of how to do prompt injection, data poisoning and the like with this, but the dataset was small and controlled and this isn’t production code!).&lt;/p&gt;
-
-
-&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-large"&gt;&lt;img alt="10-K analysis workflow diagram" class="wp-image-4177705" height="1025" src="https://b2b-contenthub.com/wp-content/uploads/2026/05/10-k-analysis-workflow.png?w=718" width="718" /&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;Derek Dye&lt;/p&gt;&lt;/div&gt;
-
-
-
-&lt;p&gt;As a verification step, I then wrote another script that found all database entry differences between Gemini and Claude answers and ran the original 1.C section through Gemini again and told it to pick which answer was better.  This changed about 10-30% of the entries, depending on the field.  Additional analysis was done in Google Sheets and Google NotebookLM.&lt;/p&gt;
-
-
-
-&lt;p&gt;With this, I created a basic AI-enabled workflow. It wasn’t agentic, but that would be interesting to create an automated version of this.  This project showed some of the productivity potential of AI by allowing me to do very detailed research in about 15-20 hours of work, which would have taken at least twice as long by hand.  It also highlighted the continued issue with accuracy where accuracy is needed.  The bulk of the 15-20 hours was spent doing verification and refinement to make sure the AI answers were correct.&lt;/p&gt;
-
-
-
-&lt;p&gt;The total cost in tokens for development, debugging, and running was around $15, not expensive, but not something I’d likely develop for every project I have. The bulk of that cost came with the refinement and the addition of additional verification checks to ensure the data was correct.  Next projects might try to do this on my local computer using a local LLM like llama3 using ollama or maybe an agent that allows queries to the dataset this project created.&lt;/p&gt;
-
-
-
-&lt;pre class="wp-block-code"&gt;&lt;code&gt;GEMINI_PROMPT = """
-Analyze this SEC 10-K document and extract the following cybersecurity information.
-Return the response strictly as a JSON object with these exact keys:
-{
- "senior_cyber": "Name or title of the senior person responsible for cybersecurity. Provide a one word response either CISO, CTO, CSO, CIO, or position title.",
- "report_to": "Title or name of who the senior cybersecurity person reports to. one word response either CEO,
-CTO, CSO, CIO, position title, or unknown. ",
- "board": "The board committee overseeing cybersecurity  Provide a 1-3 word answer. ",
- "standards": "The cybersecurity standards/frameworks used use provide 5-7 word answer. If unknown, state unknown. use acronyms if available (e.g., NIST, NIST CSF, NIST CSF 2.0, ISO 27001)",
- "years_of_experience": integer representing years of experience (use 0 if unknown)
-}
-"""
-MODEL_ID = 'gemini-2.5-flash'
-—----
-               # 6. Update PostgreSQL
-               upsert_query = """
-                   INSERT INTO company_cyber_filings_v1_4 (ticker, filing_date, senior_cyber, reports_to, board, st
-andards, years_of_experience)
-                   VALUES (%s, %s, %s,%s,%s,%s,%s)
-                   ON CONFLICT (ticker, filing_date)  
-                   DO UPDATE SET
-                       senior_cyber = EXCLUDED.senior_cyber,
-                       reports_to = EXCLUDED.reports_to,
-                       board = EXCLUDED.board,
-                       standards = EXCLUDED.standards,
-                       years_of_experience = EXCLUDED.years_of_experience;
-               """
-               # 4. Upload file 
-               formatted_date = f"{year}-{month}-{day}" # Formatted for standard SQL DATE
-               cursor.execute(upsert_query, (
-                   prefix,
-                   formatted_date,
-                   gemini_data.get("senior_cyber"),
-                   gemini_data.get("report_to"),
-                   gemini_data.get("board"),
-                   gemini_data.get("standards"),
-                   gemini_data.get("years_of_experience")
-               ))
-               cursor.execute(upsert_query, (prefix,f"{year}{month}{day}"))
-               conn.commit()
-               print(f"  -&amp;gt; Saved to database.")&lt;/code&gt;&lt;/pre&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4177700/cybersecurity-trends-in-sec-filings.html</guid>
+      <title>FreeBSD security advisory (AV26-495)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-495</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-495</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
-      <pubDate>Fri, 29 May 2026 09:00:00 +0000</pubDate>
+      <comments>Score: 7.33</comments>
+      <pubDate>Thu, 21 May 2026 13:56:55 +0000</pubDate>
     </item>
     <item>
       <title>ConnectWise security advisory (AV26-496)</title>
@@ -203,7 +26,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av26-496</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Thu, 21 May 2026 17:42:51 +0000</pubDate>
     </item>
     <item>
@@ -223,7 +46,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-497</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 22 May 2026 15:31:23 +0000</pubDate>
     </item>
     <item>
@@ -233,7 +56,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-498</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Fri, 22 May 2026 15:37:51 +0000</pubDate>
     </item>
     <item>
@@ -243,7 +66,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-499</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Fri, 22 May 2026 15:44:53 +0000</pubDate>
     </item>
     <item>
@@ -253,7 +76,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-500</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Fri, 22 May 2026 15:55:49 +0000</pubDate>
     </item>
     <item>
@@ -263,7 +86,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-501</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Fri, 22 May 2026 16:02:13 +0000</pubDate>
     </item>
     <item>
@@ -273,8 +96,17 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-492</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Fri, 22 May 2026 19:39:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>[An RX Global Event] Infosecurity Europe</title>
+      <link>https://www.darkreading.com/events/infosecurity-europe</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://www.darkreading.com/events/infosecurity-europe</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.51</comments>
+      <pubDate>Tue, 02 Jun 2026 13:30:00 +0000</pubDate>
     </item>
     <item>
       <title>8 arrested in a hit against criminal network smuggling Cuban nationals into Spain</title>
@@ -284,7 +116,7 @@ andards, years_of_experience)
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Sun, 31 May 2026 10:17:22 +0000</pubDate>
+      <pubDate>Sun, 31 May 2026 12:48:14 +0000</pubDate>
     </item>
     <item>
       <title>Europol launches Capture26, the 2026 law enforcement photo competition</title>
@@ -294,37 +126,7 @@ andards, years_of_experience)
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 31 May 2026 10:17:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports international hit against counterfeit medicines and supplements network</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-international-hit-against-counterfeit-medicines-and-supplements-network</link>
-      <description>The criminal organisation, comprising individuals from Romania, the Republic of Moldova, Bulgaria, Estonia, Poland, and Ukraine, has been operating for nearly two decades, generating at least EUR 240 million in illicit transactions, with up to EUR 70 million in 2021 alone. The network has been exploiting the vulnerability of individuals seeking treatments for serious diseases, such as diabetes, cancer, psoriasis,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-international-hit-against-counterfeit-medicines-and-supplements-network</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 31 May 2026 10:17:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>Two dangerous fugitives arrested in Türkiye and Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/two-dangerous-fugitives-arrested-in-turkiye-and-spain</link>
-      <description>Two dangerous fugitives wanted for serious organised crime offences have been arrested in separate international operations.One suspect, wanted by Germany over an attempted murder linked to violence-as-a-service criminal networks, was arrested in Türkiye. The second, a senior Camorra member, was arrested in Spain following a cross-border investigation led by Italian authorities.Fugitive tied to violence-as-a-service networks arrested in TürkiyeA 29-year-old Turkish...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/two-dangerous-fugitives-arrested-in-turkiye-and-spain</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 31 May 2026 10:17:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cybercriminal VPN used by ransomware actors dismantled in global crackdown</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</link>
-      <description>For years, the service, known as ‘First VPN’, was promoted on Russian-speaking cybercrime forums as a trusted tool for remaining beyond the reach of law enforcement. It offered users anonymous payments, hidden infrastructure, and services designed specifically for criminal use.‘First VPN’ had become deeply embedded in the cybercrime ecosystem, appearing in almost every major cybercrime investigation supported by Europol in...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 31 May 2026 10:17:22 +0000</pubDate>
+      <pubDate>Sun, 31 May 2026 12:48:14 +0000</pubDate>
     </item>
     <item>
       <title>Swedish fugitive arrested as new OTF GRIMM targets added to EU Most Wanted</title>
@@ -334,7 +136,7 @@ andards, years_of_experience)
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 31 May 2026 10:17:22 +0000</pubDate>
+      <pubDate>Sun, 31 May 2026 12:48:14 +0000</pubDate>
     </item>
     <item>
       <title>EU targets Iran’s Revolutionary Guard propaganda ecosystem in an online crackdown</title>
@@ -344,7 +146,37 @@ andards, years_of_experience)
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 31 May 2026 10:17:22 +0000</pubDate>
+      <pubDate>Sun, 31 May 2026 12:48:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Two dangerous fugitives arrested in Türkiye and Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/two-dangerous-fugitives-arrested-in-turkiye-and-spain</link>
+      <description>Two dangerous fugitives wanted for serious organised crime offences have been arrested in separate international operations.One suspect, wanted by Germany over an attempted murder linked to violence-as-a-service criminal networks, was arrested in Türkiye. The second, a senior Camorra member, was arrested in Spain following a cross-border investigation led by Italian authorities.Fugitive tied to violence-as-a-service networks arrested in TürkiyeA 29-year-old Turkish...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/two-dangerous-fugitives-arrested-in-turkiye-and-spain</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 31 May 2026 12:48:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol supports international hit against counterfeit medicines and supplements network</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-international-hit-against-counterfeit-medicines-and-supplements-network</link>
+      <description>The criminal organisation, comprising individuals from Romania, the Republic of Moldova, Bulgaria, Estonia, Poland, and Ukraine, has been operating for nearly two decades, generating at least EUR 240 million in illicit transactions, with up to EUR 70 million in 2021 alone. The network has been exploiting the vulnerability of individuals seeking treatments for serious diseases, such as diabetes, cancer, psoriasis,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-international-hit-against-counterfeit-medicines-and-supplements-network</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 31 May 2026 12:48:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cybercriminal VPN used by ransomware actors dismantled in global crackdown</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</link>
+      <description>For years, the service, known as ‘First VPN’, was promoted on Russian-speaking cybercrime forums as a trusted tool for remaining beyond the reach of law enforcement. It offered users anonymous payments, hidden infrastructure, and services designed specifically for criminal use.‘First VPN’ had become deeply embedded in the cybercrime ecosystem, appearing in almost every major cybercrime investigation supported by Europol in...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 31 May 2026 12:48:14 +0000</pubDate>
     </item>
     <item>
       <title>Europol's Project A.S.S.E.T. identifies millions in criminal assets</title>
@@ -354,26 +186,7 @@ andards, years_of_experience)
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.58</comments>
-      <pubDate>Sun, 31 May 2026 10:17:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>[An RX Global Event] Infosecurity Europe</title>
-      <link>https://www.darkreading.com/events/infosecurity-europe</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://www.darkreading.com/events/infosecurity-europe</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Tue, 02 Jun 2026 13:30:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
-      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Sun, 31 May 2026 10:17:22 +0000</pubDate>
+      <pubDate>Sun, 31 May 2026 12:48:14 +0000</pubDate>
     </item>
     <item>
       <title>Russia-aligned crime group Greyvibe extensively uses AI in attacks</title>
@@ -455,8 +268,18 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://www.csoonline.com/article/4178879/russia-aligned-crime-group-greyvibe-extensively-uses-ai-in-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Sat, 30 May 2026 00:22:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
+      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Sun, 31 May 2026 12:48:14 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-502)</title>
@@ -465,7 +288,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-502-0</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 25 May 2026 13:49:45 +0000</pubDate>
     </item>
     <item>
@@ -475,7 +298,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-503</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 25 May 2026 13:58:18 +0000</pubDate>
     </item>
     <item>
@@ -485,7 +308,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-504</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 25 May 2026 14:04:42 +0000</pubDate>
     </item>
     <item>
@@ -495,7 +318,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-505</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 25 May 2026 14:10:56 +0000</pubDate>
     </item>
     <item>
@@ -505,7 +328,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-506</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 25 May 2026 14:16:16 +0000</pubDate>
     </item>
     <item>
@@ -515,7 +338,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-507</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 25 May 2026 14:26:13 +0000</pubDate>
     </item>
     <item>
@@ -525,7 +348,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-508</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 25 May 2026 14:30:43 +0000</pubDate>
     </item>
     <item>
@@ -616,7 +439,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://www.csoonline.com/article/4178446/lack-of-response-to-critical-vulnerability-in-gogs-is-a-reminder-of-the-limits-of-open-source-projects-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Fri, 29 May 2026 00:31:46 +0000</pubDate>
     </item>
     <item>
@@ -626,7 +449,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-509</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Tue, 26 May 2026 12:59:13 +0000</pubDate>
     </item>
     <item>
@@ -636,7 +459,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-510</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Tue, 26 May 2026 14:33:00 +0000</pubDate>
     </item>
     <item>
@@ -646,7 +469,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hitachi-security-advisory-av26-511</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Wed, 27 May 2026 16:04:09 +0000</pubDate>
     </item>
     <item>
@@ -656,7 +479,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-512</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Wed, 27 May 2026 17:18:33 +0000</pubDate>
     </item>
     <item>
@@ -666,7 +489,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Wed, 27 May 2026 17:20:21 +0000</pubDate>
     </item>
     <item>
@@ -676,7 +499,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-513</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Wed, 27 May 2026 17:38:14 +0000</pubDate>
     </item>
     <item>
@@ -686,7 +509,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-514</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Wed, 27 May 2026 17:43:26 +0000</pubDate>
     </item>
     <item>
@@ -696,7 +519,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-515</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Wed, 27 May 2026 19:02:51 +0000</pubDate>
     </item>
     <item>
@@ -706,7 +529,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-516</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Wed, 27 May 2026 19:05:04 +0000</pubDate>
     </item>
     <item>
@@ -716,7 +539,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-517</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Wed, 27 May 2026 19:38:08 +0000</pubDate>
     </item>
     <item>
@@ -726,7 +549,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-518</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.92</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Thu, 28 May 2026 14:00:49 +0000</pubDate>
     </item>
     <item>
@@ -736,7 +559,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-519</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Thu, 28 May 2026 14:08:11 +0000</pubDate>
     </item>
     <item>
@@ -746,7 +569,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av26-520</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Thu, 28 May 2026 14:16:49 +0000</pubDate>
     </item>
     <item>
@@ -756,7 +579,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/notepad-security-advisory-av26-521</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Thu, 28 May 2026 14:21:59 +0000</pubDate>
     </item>
     <item>
@@ -766,7 +589,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-522</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.00</comments>
+      <comments>Score: 8.95</comments>
       <pubDate>Thu, 28 May 2026 17:45:46 +0000</pubDate>
     </item>
     <item>
@@ -776,7 +599,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-523</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.00</comments>
+      <comments>Score: 8.95</comments>
       <pubDate>Thu, 28 May 2026 17:50:23 +0000</pubDate>
     </item>
     <item>
@@ -786,7 +609,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-524</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Thu, 28 May 2026 19:10:15 +0000</pubDate>
     </item>
     <item>
@@ -796,7 +619,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Fri, 29 May 2026 13:12:50 +0000</pubDate>
     </item>
     <item>
@@ -806,7 +629,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.46</comments>
+      <comments>Score: 9.40</comments>
       <pubDate>Fri, 29 May 2026 13:36:26 +0000</pubDate>
     </item>
     <item>
@@ -816,7 +639,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-013-security-incident-impacting-github-internal-repositories</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Fri, 29 May 2026 16:11:50 +0000</pubDate>
     </item>
     <item>
@@ -826,7 +649,7 @@ andards, years_of_experience)
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-462</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.63</comments>
+      <comments>Score: 9.57</comments>
       <pubDate>Fri, 29 May 2026 20:10:00 +0000</pubDate>
     </item>
     <item>
@@ -835,7 +658,7 @@ andards, years_of_experience)
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/celebrate-20-years-of-dark-reading-name-that-toon-contest</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 2626.07</comments>
+      <comments>Score: 2558.20</comments>
       <pubDate>Fri, 26 Jun 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
