@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Jun 2026 23:46:39 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 04:17:43 +0000</lastBuildDate>
+    <item>
+      <title>[Control Systems] Phoenix Contact Security Advisory (AV26-514)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-514</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-514</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Wed, 27 May 2026 17:43:26 +0000</pubDate>
+    </item>
     <item>
       <title>Jenkins security advisory (AV26-515)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-515</link>
@@ -16,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-515</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Wed, 27 May 2026 19:02:51 +0000</pubDate>
     </item>
     <item>
@@ -26,238 +36,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-516</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Wed, 27 May 2026 19:05:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV26-517)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-517</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-517</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
-      <pubDate>Wed, 27 May 2026 19:38:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>Attack targeting OpenAI Codex users exposes AI software supply chain risks</title>
-      <link>https://www.csoonline.com/article/4179815/attack-targeting-openai-codex-users-exposes-ai-software-supply-chain-risks.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A malicious npm package posing as a remote user interface for OpenAI Codex exfiltrated developer authentication tokens, after attackers allegedly published code to npm that was not visible in the project’s public GitHub repository.&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers at &lt;a href="https://www.aikido.dev/blog/codex-remote-ui-steals-ai-tokens" rel="noreferrer noopener" target="_blank"&gt;Aikido&lt;/a&gt; said the package, called codexui-android, appeared to offer legitimate functionality while collecting authentication tokens and sending them to an external server.&lt;/p&gt;
-
-
-
-&lt;p&gt;“AI developer tooling is becoming a high-value target precisely because the tokens are powerful and long-lived,” Aikido said. “A stolen Codex refresh_token goes beyond access to a chat interface — it’s persistent, silent access to whatever that account can do.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Aikido said the incident reflected a broader pattern in which attackers build credible and useful projects as cover for malicious activity.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The legitimacy is the attack vector,” Aikido said. “As AI tools proliferate and developers reach for productivity shortcuts, expect more of this.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The case exposes what some security experts describe as a growing blind spot in software &lt;a href="https://www.csoonline.com/article/4154550/supply-chain-security-is-now-a-board-level-issue-heres-what-csos-need-to-know.html"&gt;supply chain security&lt;/a&gt;, where controls often focus on source code rather than the software artifacts ultimately distributed to users.&lt;/p&gt;
-
-
-
-&lt;p&gt;The incident showed how attackers can use legitimate-looking projects to hide malicious activity, said &lt;a href="https://www.linkedin.com/in/sunilvarkey1/" rel="noreferrer noopener" target="_blank"&gt;Sunil Varkey&lt;/a&gt;, cybersecurity advisor and a former CISO. “In this case, the npm package looked completely legitimate: it had an active GitHub repository, useful features for OpenAI Codex users, and attracted around 27,000 weekly downloads,” Varkey said. “Yet the malicious code that stole sensitive tokens only appeared in the published version, not in the public source code.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Varkey said the risk was widened by a companion Android app that automatically pulled and executed the malicious npm package at runtime.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Most companies have great security tools for their source code, but the build and distribution pipelines are still total blind spots,” said &lt;a href="https://www.linkedin.com/in/devashri-datta-522b364b/" rel="noreferrer noopener" target="_blank"&gt;Devashri Datta&lt;/a&gt;, a cybersecurity researcher. “If an attacker leaves their public GitHub repository completely clean but injects malware directly into the npm package, standard code audits won’t catch a thing.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Datta said enterprises should verify both the provenance of software packages and the consistency between published artifacts and their public source code, warning that seemingly benign source code may not accurately reflect what developers ultimately install.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-enterprise-risk"&gt;The enterprise risk&lt;/h2&gt;
-
-
-
-&lt;p&gt;For enterprises, the concern is less the package itself than the level of access now attached to &lt;a href="https://www.csoonline.com/article/4136476/shai-hulud-style-npm-worm-hits-ci-pipelines-and-ai-coding-tools.html"&gt;AI developer tools&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Aikido said the package stole access tokens, refresh tokens, ID tokens, and account IDs, with the refresh token posing particular risk because it does not expire. According to &lt;a href="https://my.idc.com/getdoc.jsp?containerId=PRF005665" rel="noreferrer noopener" target="_blank"&gt;Sakshi Grover&lt;/a&gt;, senior research manager for IDC Asia Pacific Cybersecurity Services, this means a single successful exfiltration translates into persistent, silent access to everything that the account can reach.&lt;/p&gt;
-
-
-
-&lt;p&gt;Grover pointed to IDC forecasts that by 2028, half of enterprises deploying agentic AI across Asia Pacific excluding Japan will require an AI bill of materials to support continuous vulnerability scanning, license risk management, and compliance assurance. She said the codexui-android incident illustrates why organizations need better visibility into the components used by AI tools and the credentials those tools can access.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Most organizations still lack a complete inventory of what their AI tools can access, what credentials they inherit, and what external services they interact with,” Grover added. “Most enterprises have not yet applied the same least-privilege and behavioral monitoring disciplines to AI tools that they apply to human identities, and that asymmetry is what attackers are now actively exploiting.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4179815/attack-targeting-openai-codex-users-exposes-ai-software-supply-chain-risks.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
-      <pubDate>Tue, 02 Jun 2026 09:54:48 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
-      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Wed, 03 Jun 2026 21:46:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>Attackers exploit Palo Alto GlobalProtect flaw days after disclosure</title>
-      <link>https://www.csoonline.com/article/4179847/attackers-exploit-palo-alto-globalprotect-flaw-days-after-disclosure.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A Palo Alto Networks vulnerability that allows attackers to establish unauthorized VPN access into corporate networks is being actively exploited in the wild, weeks after the company disclosed the flaw as a medium-severity issue and said it was unaware of any attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, according to Rapid7, threat actors began exploiting the bug within days of disclosure.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Rapid7 MDR identified successful exploitation across numerous customers, however we did not observe any indication of successful lateral movement from the devices,” the firm said in its &lt;a href="https://www.rapid7.com/blog/post/etr-rapid7-observed-exploitation-of-pan-os-globalprotect-authentication-bypass-vulnerability-cve-2026-0257/" rel="noreferrer noopener" target="_blank"&gt;analysis&lt;/a&gt;. The attackers reached the network but were not seen pushing deeper in the cases Rapid7 investigated, it said.&lt;/p&gt;
-
-
-
-&lt;p&gt;The flaw, tracked as CVE-2026-0257, affects GlobalProtect, Palo Alto’s remote-access VPN platform. Rapid7 said attackers began exploiting it as early as May 17, four days after Palo Alto published fixes and mitigation guidance.&lt;/p&gt;
-
-
-
-&lt;p&gt;The development marks a significant escalation from &lt;a href="https://security.paloaltonetworks.com/CVE-2026-0257" rel="noreferrer noopener" target="_blank"&gt;Palo Alto’s initial May 13 advisory&lt;/a&gt;, which rated the flaw medium severity and stated that the company was not aware of malicious exploitation at the time.&lt;/p&gt;
-
-
-
-&lt;p&gt;By May 29, Palo Alto had updated its advisory, increasing the vulnerability’s CVSS score to 7.8, marking exploit maturity as “attacked,” assigning its highest urgency rating.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Palo Alto Networks has become aware of limited exploit attempts on unpatched PAN-OS devices without mitigations applied,” the company said in the update.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="exploitation-emerges-quickly"&gt;Exploitation emerges quickly&lt;/h2&gt;
-
-
-
-&lt;p&gt;While the flaw does not provide remote code execution on the firewall itself, Rapid7 urged organizations to treat it as more serious than its assigned severity score might suggest.&lt;/p&gt;
-
-
-
-&lt;p&gt;“While the assigned CVSSv4 score indicates a medium severity, due to the circumstances surrounding this vulnerability, Rapid7 urges that organizations treat this as a critical vulnerability,” the company said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Sunil Varkey, advisor at Beagle Security, said the vulnerability is particularly concerning because it enables what he described as a “fully credential-less authentication bypass.”&lt;/p&gt;
-
-
-
-&lt;p&gt;“Attackers can create a forged cookie using the publicly available public key and directly establish a VPN session without any malware, phishing, or stolen credentials,” Varkey said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Because the resulting session appears legitimate, such activity can be significantly harder to detect than many traditional intrusion techniques, he added.&lt;/p&gt;
-
-
-
-&lt;p&gt;While remote code execution flaws often attract the highest severity ratings, authentication bypass vulnerabilities affecting remote-access infrastructure can create comparable enterprise risk, according to Sakshi Grover, senior research manager for cybersecurity services at IDC Asia/Pacific.&lt;/p&gt;
-
-
-
-&lt;p&gt;“In a modern zero-trust model, identity is the new perimeter,” Grover said. “A vulnerability that grants unauthorized authenticated access effectively compromises that perimeter, even without executing code on the underlying device.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The enterprise risk, she added, is less about what the vulnerability does directly than what access it enables afterward, including lateral movement, credential harvesting, and persistence under the cover of what appears to be a legitimate session.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-caused-the-flaw"&gt;What caused the flaw&lt;/h2&gt;
-
-
-
-&lt;p&gt;The flaw lies in how PAN-OS handles authentication override cookies, Rapid7 said in the disclosure. The gateway decrypts a cookie with a private key, then trusts its contents without checking a signature.&lt;/p&gt;
-
-
-
-&lt;p&gt;The cookie is a convenience feature, Varkey said.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Many organizations enabled authentication override cookies for a simple reason: improving user experience,” he said. “And now it needs to be re-examined seriously.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The bug bites only under one configuration, Rapid7 added. The cookies must be enabled, and the certificate that protects them must also serve another function, such as the gateway’s HTTPS interface. An attacker can then recover the public key and forge a valid cookie. The feature is off by default, but teams that switched it on years ago may not know they are exposed.&lt;/p&gt;
-
-
-
-&lt;p&gt;That points to a wider lesson, Grover said. Risk often comes not from a flaw itself, but from how technology is configured and maintained over time, she said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="patch-pressure-grows"&gt;Patch pressure grows&lt;/h2&gt;
-
-
-
-&lt;p&gt;The urgency surrounding the flaw increased further after the US Cybersecurity and Infrastructure Security Agency added CVE-2026-0257 to its &lt;a href="https://www.cisa.gov/news-events/alerts/2026/05/29/cisa-adds-one-known-exploited-vulnerability-catalog" rel="noreferrer noopener" target="_blank"&gt;Known Exploited Vulnerabilities catalog&lt;/a&gt; on May 29 and directed federal civilian agencies to remediate the issue by June 1.&lt;/p&gt;
-
-
-
-&lt;p&gt;Rapid7 said organizations should review affected GlobalProtect deployments, verify whether vulnerable configurations are present, and apply available fixes as soon as possible.&lt;/p&gt;
-
-
-
-&lt;p&gt;The incident also highlights a broader challenge for organizations pursuing zero-trust architectures.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Zero trust has not eliminated the perimeter; it has redistributed it,” Grover said. “Identity providers, VPN gateways, remote-access portals, SASE edges, and cloud access services have become the new control points attackers target.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Organizations continue to invest heavily in network security and zero-trust initiatives, she said, but legacy VPN infrastructure often remains deeply embedded in enterprise environments, creating a transition period that attackers are exploiting faster than many organizations can modernize.&lt;/p&gt;
-
-
-
-&lt;p&gt;“This incident reinforces a hard truth: despite years of zero-trust discussions, perimeter security remains fragile when convenience overrides careful architecture,” he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;For CISOs, the lesson extends beyond patching. “The recurring pattern of edge-device exploitation is rarely the result of a missing security product,” Grover said. “More often, it reflects gaps in asset visibility, configuration governance, patch prioritization, and architectural modernization.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4179847/attackers-exploit-palo-alto-globalprotect-flaw-days-after-disclosure.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
-      <pubDate>Tue, 02 Jun 2026 11:17:26 +0000</pubDate>
     </item>
     <item>
       <title>Infected Red Hat npm packages expose developer credentials</title>
@@ -343,8 +123,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4179866/infected-red-hat-npm-packages-expose-developer-credentials.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Tue, 02 Jun 2026 12:13:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-517)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-517</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-517</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.64</comments>
+      <pubDate>Wed, 27 May 2026 19:38:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
+      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Thu, 04 Jun 2026 02:17:43 +0000</pubDate>
     </item>
     <item>
       <title>Drupal security advisory (AV26-518)</title>
@@ -353,7 +153,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-518</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 28 May 2026 14:00:49 +0000</pubDate>
     </item>
     <item>
@@ -363,7 +163,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-519</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 28 May 2026 14:08:11 +0000</pubDate>
     </item>
     <item>
@@ -373,7 +173,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av26-520</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 28 May 2026 14:16:49 +0000</pubDate>
     </item>
     <item>
@@ -383,8 +183,31 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/notepad-security-advisory-av26-521</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 28 May 2026 14:21:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>Enterprise Spotlight: Rethinking cloud strategy in the age of AI</title>
+      <link>https://us.resources.csoonline.com/resources/enterprise-spotlight-rethinking-cloud-strategy-in-the-age-of-ai/</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Cloud computing has reached a crossroads. The high cost and data sensitivity of AI workloads are raising the appeal of private clouds, even as neoclouds and sovereign clouds shake up the cloud provider landscape. New cyberthreats, shifting compute requirements, and management complexity are adding to cloud complications.&lt;/p&gt;
+
+
+
+&lt;p&gt;Download the June 2026 issue of the Enterprise Spotlight from the editors of CIO, Computerworld, CSO, InfoWorld, and Network World, and learn how to navigate the latest cloud strategy developments.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://us.resources.csoonline.com/resources/enterprise-spotlight-rethinking-cloud-strategy-in-the-age-of-ai/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.80</comments>
+      <pubDate>Thu, 04 Jun 2026 00:32:27 +0000</pubDate>
     </item>
     <item>
       <title>Erlang security advisory (AV26-522)</title>
@@ -393,7 +216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-522</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 28 May 2026 17:45:46 +0000</pubDate>
     </item>
     <item>
@@ -403,7 +226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-523</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 28 May 2026 17:50:23 +0000</pubDate>
     </item>
     <item>
@@ -413,7 +236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-524</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Thu, 28 May 2026 19:10:15 +0000</pubDate>
     </item>
     <item>
@@ -592,28 +415,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4180205/trump-revives-parts-of-canceled-ai-order-with-cybersecurity-focused-directive.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Tue, 02 Jun 2026 18:46:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV26-525)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
-      <pubDate>Fri, 29 May 2026 13:12:50 +0000</pubDate>
-    </item>
-    <item>
-      <title>Oracle security advisory (AV26-526)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
-      <pubDate>Fri, 29 May 2026 13:36:26 +0000</pubDate>
     </item>
     <item>
       <title>6 critical security gaps every CISO must address</title>
@@ -799,8 +602,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4178412/6-critical-security-gaps-every-ciso-must-address.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Mon, 01 Jun 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV26-525)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.98</comments>
+      <pubDate>Fri, 29 May 2026 13:12:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Oracle security advisory (AV26-526)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.98</comments>
+      <pubDate>Fri, 29 May 2026 13:36:26 +0000</pubDate>
     </item>
     <item>
       <title>AL26-013 Security incident impacting GitHub internal repositories</title>
@@ -809,7 +632,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-013-security-incident-impacting-github-internal-repositories</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Fri, 29 May 2026 16:11:50 +0000</pubDate>
     </item>
     <item>
@@ -819,7 +642,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-462</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Fri, 29 May 2026 20:10:00 +0000</pubDate>
     </item>
     <item>
@@ -890,7 +713,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4179473/oracles-first-monthly-patch-release-fixes-35-flaws-including-11-rated-critical.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Mon, 01 Jun 2026 17:57:19 +0000</pubDate>
     </item>
     <item>
@@ -1059,7 +882,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4180194/lessons-from-the-canvas-cyberattack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Wed, 03 Jun 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1258,7 +1081,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4180316/ai-may-finally-unlock-the-cyber-budgets-cisos-have-wanted-for-years.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Wed, 03 Jun 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1345,7 +1168,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4180467/microsoft-wants-to-put-ai-agents-on-a-short-leash.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Wed, 03 Jun 2026 11:31:14 +0000</pubDate>
     </item>
     <item>
@@ -1456,7 +1279,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4180265/anthropic-grants-project-glasswing-access-to-150-more-companies-with-a-focus-on-critical-infrastructure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Wed, 03 Jun 2026 00:39:17 +0000</pubDate>
     </item>
     <item>
@@ -1466,7 +1289,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.16</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Mon, 01 Jun 2026 12:34:39 +0000</pubDate>
     </item>
     <item>
@@ -1476,7 +1299,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-527</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Mon, 01 Jun 2026 12:52:02 +0000</pubDate>
     </item>
     <item>
@@ -1486,7 +1309,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-528</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Mon, 01 Jun 2026 13:01:54 +0000</pubDate>
     </item>
     <item>
@@ -1496,7 +1319,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-529</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Mon, 01 Jun 2026 13:07:31 +0000</pubDate>
     </item>
     <item>
@@ -1506,7 +1329,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-530</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Mon, 01 Jun 2026 13:15:12 +0000</pubDate>
     </item>
     <item>
@@ -1516,7 +1339,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-531</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Mon, 01 Jun 2026 13:19:43 +0000</pubDate>
     </item>
     <item>
@@ -1526,7 +1349,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-532</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Mon, 01 Jun 2026 13:25:32 +0000</pubDate>
     </item>
     <item>
@@ -1536,7 +1359,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-533</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Mon, 01 Jun 2026 14:50:50 +0000</pubDate>
     </item>
     <item>
@@ -1546,7 +1369,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/plesk-security-advisory-av26-534</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.11</comments>
       <pubDate>Mon, 01 Jun 2026 14:56:27 +0000</pubDate>
     </item>
     <item>
@@ -1556,7 +1379,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-july-2024-quarterly-rollup-av24-401</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.28</comments>
+      <comments>Score: 9.17</comments>
       <pubDate>Mon, 01 Jun 2026 17:39:35 +0000</pubDate>
     </item>
     <item>
@@ -1566,7 +1389,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-june-2026-monthly-rollup-av26-535</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.19</comments>
       <pubDate>Mon, 01 Jun 2026 18:27:07 +0000</pubDate>
     </item>
     <item>
@@ -1576,7 +1399,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-536</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.19</comments>
       <pubDate>Mon, 01 Jun 2026 18:31:58 +0000</pubDate>
     </item>
     <item>
@@ -1586,7 +1409,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-537</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.85</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Tue, 02 Jun 2026 15:09:15 +0000</pubDate>
     </item>
     <item>
@@ -1596,7 +1419,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hp-security-advisory-av26-539</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.85</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Tue, 02 Jun 2026 15:24:01 +0000</pubDate>
     </item>
     <item>
@@ -1606,7 +1429,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-june-2026-monthly-rollup-av26-538</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.80</comments>
       <pubDate>Tue, 02 Jun 2026 17:58:26 +0000</pubDate>
     </item>
     <item>
@@ -1616,7 +1439,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-540</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.80</comments>
       <pubDate>Tue, 02 Jun 2026 18:07:51 +0000</pubDate>
     </item>
     <item>
@@ -1626,7 +1449,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-541</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Tue, 02 Jun 2026 18:22:12 +0000</pubDate>
     </item>
     <item>
@@ -1636,7 +1459,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-542</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.95</comments>
+      <comments>Score: 9.82</comments>
       <pubDate>Tue, 02 Jun 2026 18:35:44 +0000</pubDate>
     </item>
     <item>
@@ -1646,7 +1469,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-543</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.00</comments>
+      <comments>Score: 9.86</comments>
       <pubDate>Tue, 02 Jun 2026 20:02:25 +0000</pubDate>
     </item>
     <item>
@@ -1656,7 +1479,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-544</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.57</comments>
+      <comments>Score: 10.40</comments>
       <pubDate>Wed, 03 Jun 2026 12:49:19 +0000</pubDate>
     </item>
     <item>
@@ -1666,7 +1489,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-545</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.58</comments>
+      <comments>Score: 10.41</comments>
       <pubDate>Wed, 03 Jun 2026 13:01:01 +0000</pubDate>
     </item>
     <item>
@@ -1676,7 +1499,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-546</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.68</comments>
+      <comments>Score: 10.51</comments>
       <pubDate>Wed, 03 Jun 2026 15:39:58 +0000</pubDate>
     </item>
     <item>
@@ -1686,7 +1509,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-547</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.82</comments>
+      <comments>Score: 10.64</comments>
       <pubDate>Wed, 03 Jun 2026 19:22:10 +0000</pubDate>
     </item>
     <item>
@@ -1696,7 +1519,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-548</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.84</comments>
+      <comments>Score: 10.66</comments>
       <pubDate>Wed, 03 Jun 2026 19:49:24 +0000</pubDate>
     </item>
     <item>
@@ -1705,7 +1528,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/celebrate-20-years-of-dark-reading-name-that-toon-contest</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 1101.14</comments>
+      <comments>Score: 1050.57</comments>
       <pubDate>Fri, 26 Jun 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
