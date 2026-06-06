@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Jun 2026 10:06:46 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 12:07:14 +0000</lastBuildDate>
     <item>
       <title>Tanium security advisory (AV26-523)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-523</link>
@@ -16,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-523</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
+      <comments>Score: 7.45</comments>
       <pubDate>Thu, 28 May 2026 17:50:23 +0000</pubDate>
     </item>
     <item>
@@ -26,135 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-524</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
+      <comments>Score: 7.45</comments>
       <pubDate>Thu, 28 May 2026 19:10:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>Hugging Face Transformers RCE flaw enables stealthy compromise via AI model configs</title>
-      <link>https://www.csoonline.com/article/4181094/hugging-face-transformers-rce-flaw-enables-stealthy-compromise-via-ai-model-configs.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A high severity vulnerability in Hugging Face Transformers enables attackers to compromise systems that use the popular Python library to test and run AI models. The flaw impacts library versions that continue to be actively downloaded and comes at a time when attackers are increasingly &lt;a href="https://www.csoonline.com/article/4015077/ai-supply-chain-threats-are-looming-as-security-practices-lag.html"&gt;targeting the AI supply chain&lt;/a&gt;, including through malicious models hosted on the Hugging Face platform.&lt;/p&gt;
-
-
-
-&lt;p&gt;The exploit for this vulnerability involves adding an innocuous-looking parameter called &lt;code&gt;_attn_implementation_internal&lt;/code&gt; to remote model configuration files on Hugging Face and bypasses the &lt;code&gt;trust_remote_code=false&lt;/code&gt; flag that normally prevents the execution of remote code accompanying models.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The malicious field uses an underscore-prefixed name that looks like an internal implementation detail — the kind of field that config files are full of,” researchers from Pluto Security who found the vulnerability &lt;a href="https://pluto.security/blog/unauthenticated-remote-code-execution-in-huggingface-transformers-via-config-injection/"&gt;said in their report&lt;/a&gt;. “There are no runtime warnings, no consent prompts, no unusual log entries.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://github.com/huggingface/transformers"&gt;The Hugging Face Transformers library&lt;/a&gt; allows Python developers to deploy over 1 million machine learning model variants hosted on Hugging Face on their local hardware or cloud instances. It is used in many enterprise environments and CI/CD pipelines to test models pre-trained for various tasks and to fine-tune them with proprietary data.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Hugging Face Transformers PyPI package is downloaded over 146 million times per month and has a total of 2.2 billion installs to date. The project is also one of the highest-rated repositories on GitHub with 161K+ stars, so the blast radius of a remote code execution (RCE) vulnerability is huge.&lt;/p&gt;
-
-
-
-&lt;p&gt;This previously undisclosed flaw, &lt;a href="https://github.com/huggingface/transformers/security/advisories/GHSA-hfg9-3v38-7ppq"&gt;now tracked as CVE-2026-4372&lt;/a&gt;, was silently patched in Transformers 5.3.0, which was released on March 3, but it impacts all versions released since August starting with 4.56.0. Vulnerable versions continue to be downloaded 7 to 8 million times per week and account for around a fourth of weekly installations.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="custom-attention-kernels-bypass-rce-defenses"&gt;Custom ‘attention’ kernels bypass RCE defenses&lt;/h2&gt;
-
-
-
-&lt;p&gt;AI models hosted on Hugging Face can contain custom Python code, which can present a serious security risk if downloaded and executed alongside the model automatically. In the past this capability has been abused by attackers, which is why a parameter called &lt;code&gt;trust_remote_code:&lt;/code&gt; was added to configurations. When set to false, it is meant to give developers an assurance that additional code will not be automatically executed.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, in March last year, Hugging Face added a feature called Hub Kernels that allows users to host custom compiled attention kernels. These kernels improve the performance of models when loaded on GPUs and require an &lt;a href="https://github.com/huggingface/kernels"&gt;additional package called kernels&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The presence of this package on the machine is required to exploit this vulnerability, which is a limiting factor at first glance. However, even though it’s an optional dependency, having the kernels package installed is not uncommon, especially because most users who run local AI models want to benefit from GPU acceleration and will install Transformers with all “extras” packages.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Users who work with GPU-accelerated inference — arguably the most valuable targets — are the most likely to have it installed,” the researchers said. “Enterprise ML platforms and GPU clusters commonly install all optional dependencies to maximize hardware utilization.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerability is the result of three separate design decisions made in the code that combine to introduce the silent RCE risk. First, when the model loading is invoked with &lt;code&gt;AutoModelForCausalLM.from_pretrained(“model-name”)&lt;/code&gt; the library proceeds to download the model’s configuration, weights, and tokenizer from the Hub, assemble the correct architecture, and return a ready-to-use model to the application.&lt;/p&gt;
-
-
-
-&lt;p&gt;The code that parses the model’s &lt;code&gt;config.json&lt;/code&gt; file uses a function called &lt;code&gt;setattr&lt;/code&gt; that parses every key-value pair in the file and loads it into the config object, but does not differentiate between user-configurable parameters and internal parameters that start with the &lt;code&gt;_&lt;/code&gt; character. Such internal parameters should never be present in a user-supplied config because they are not meant to be touched by developers.&lt;/p&gt;
-
-
-
-&lt;p&gt;One of those internal parameters is &lt;code&gt;_attn_implementation_internal&lt;/code&gt;, which is used to control which attention mechanism implementation the model uses: Flash Attention, SDPA, or the default eager implementation.&lt;/p&gt;
-
-
-
-&lt;p&gt;Furthermore, the &lt;code&gt;hub_kernels.py&lt;/code&gt; component checks for the value of this parameter and if it’s set to a pattern that matches two strings separated by &lt;code&gt;/&lt;/code&gt; it assumes this is an owner/repository definition from the Kernels Hub. The code then proceeds to download the kernel from the defined repository and execute it.&lt;/p&gt;
-
-
-
-&lt;p&gt;“No sandboxing. No code signing. No integrity verification. No user prompt,” the researchers said. “Just a raw import of whatever Python code lives in the attacker’s repository — including anything in &lt;code&gt;__init__.py&lt;/code&gt;, which executes automatically on import.”&lt;/p&gt;
-
-
-
-&lt;p&gt;As a result of these three independent issues — the unfiltered &lt;code&gt;setattr&lt;/code&gt;, the unprotected internal attribute, and the unsandboxed kernel loader — exploitation becomes trivial: Publish an attractive model with a configuration that includes &lt;code&gt;_attn_implementation_internal&lt;/code&gt; set to &lt;code&gt;attacker-repo/malicious-kernel&lt;/code&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Supply chain attacks via malicious AI models are increasing&lt;/p&gt;
-
-
-
-&lt;p&gt;This is not an unusual attack. Malicious models get uploaded to Hugging Face all the time and they can be quite successful in tricking users. Last month, a malicious Hugging Face repo posing as a new release of OpenAI’s Privacy Filter model reached the No. 1 trending spot on the platform within 18 hours and was downloaded 244,000 times. &lt;a href="https://www.csoonline.com/article/4169407/malicious-hugging-face-model-masquerading-as-openai-release-hits-244k-downloads.html"&gt;The model code contained infostealer malware for Windows&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Last year, researchers showed how &lt;a href="https://www.csoonline.com/article/3819920/attackers-hide-malicious-code-in-hugging-face-ai-model-pickle-files.html"&gt;attackers can hide malicious code inside Python Pickle files&lt;/a&gt;, a format that is commonly used to distribute AI models.&lt;/p&gt;
-
-
-
-&lt;p&gt;This Transformers vulnerability is not the first that enables remote code execution through maliciously crafted AI models. Last month researchers from security firm HiddenLayer disclosed &lt;a href="https://www.csoonline.com/article/4175958/unpatched-chromadb-flaw-leaves-servers-open-to-remote-code-execution.html"&gt;a RCE vulnerability in ChromaDB&lt;/a&gt; that allowed unauthenticated remote attackers to trick Chroma servers into executing malicious code from model configurations hosted on Hugging Face.&lt;/p&gt;
-
-
-
-&lt;p&gt;Earlier that same month, the same researchers showed &lt;a href="https://www.hiddenlayer.com/research/tokenizer-tampering"&gt;how remote code execution can be achieved by making minor changes to a model’s &lt;code&gt;tokenizer.json&lt;/code&gt; file&lt;/a&gt;, which is used to map token IDs to words and characters creating an alphabet the model uses to generate its outputs.&lt;/p&gt;
-
-
-
-&lt;p&gt;Mitigation&lt;/p&gt;
-
-
-
-&lt;p&gt;With the number of such supply chain attacks increasing, having checks in place for model provenance becomes very important for organizations experimenting with AI and machine learning.&lt;/p&gt;
-
-
-
-&lt;p&gt;Cisco’s AI research team has recently released an open source-tool called the &lt;a href="https://github.com/cisco-ai-defense/model-provenance-kit"&gt;Model Provenance Kit&lt;/a&gt; that uses fingerprints from model weights, tokenizers, and architecture metadata to determine whether a machine learning model derives from one of the 45-plus known base model families from more than 20 trusted publishers, including the leading AI labs.&lt;/p&gt;
-
-
-
-&lt;p&gt;That said, the Pluto Security researchers advise organizations to treat AI model loading and config deserialization APIs in ML frameworks and libraries as code execution surfaces, regardless of the safe flags they provide.&lt;/p&gt;
-
-
-
-&lt;p&gt;This means model loading should be sandboxed and isolated inside monitored containers that don’t have access to host credentials, outbound network access, and extensive filesystem permissions. Configuration files should also be scanned before loading and checked for unexpected fields, including those prefixed with underscore.&lt;/p&gt;
-
-
-
-&lt;p&gt;Transformers users should upgrade to version 5.3.0 immediately and should search for &lt;code&gt;_attn_implementation_internal&lt;/code&gt; in any cached or downloaded &lt;code&gt;config.json&lt;/code&gt; files to determine whether they’ve been targeted.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4181094/hugging-face-transformers-rce-flaw-enables-stealthy-compromise-via-ai-model-configs.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
-      <pubDate>Thu, 04 Jun 2026 12:01:00 +0000</pubDate>
     </item>
     <item>
       <title>8 arrested in a hit against criminal network smuggling Cuban nationals into Spain</title>
@@ -164,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Sat, 06 Jun 2026 08:06:46 +0000</pubDate>
+      <pubDate>Sat, 06 Jun 2026 10:07:14 +0000</pubDate>
     </item>
     <item>
       <title>29 arrested as law enforcement strikes criminal networks behind illegal streaming</title>
@@ -174,7 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 06 Jun 2026 08:06:46 +0000</pubDate>
+      <pubDate>Sat, 06 Jun 2026 10:07:14 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports international hit against counterfeit medicines and supplements network</title>
@@ -184,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 06 Jun 2026 08:06:46 +0000</pubDate>
+      <pubDate>Sat, 06 Jun 2026 10:07:14 +0000</pubDate>
     </item>
     <item>
       <title>Two dangerous fugitives arrested in Türkiye and Spain</title>
@@ -194,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 06 Jun 2026 08:06:46 +0000</pubDate>
+      <pubDate>Sat, 06 Jun 2026 10:07:14 +0000</pubDate>
     </item>
     <item>
       <title>Cybercriminal VPN used by ransomware actors dismantled in global crackdown</title>
@@ -204,7 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 06 Jun 2026 08:06:46 +0000</pubDate>
+      <pubDate>Sat, 06 Jun 2026 10:07:14 +0000</pubDate>
     </item>
     <item>
       <title>Europol launches Capture26, the 2026 law enforcement photo competition</title>
@@ -214,47 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 06 Jun 2026 08:06:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV26-525)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Fri, 29 May 2026 13:12:50 +0000</pubDate>
-    </item>
-    <item>
-      <title>Oracle security advisory (AV26-526)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Fri, 29 May 2026 13:36:26 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-013 Security incident impacting GitHub internal repositories</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-013-security-incident-impacting-github-internal-repositories</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-013-security-incident-impacting-github-internal-repositories</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Fri, 29 May 2026 16:11:50 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol's Project A.S.S.E.T. identifies millions in criminal assets</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europols-project-asset-identifies-millions-in-criminal-assets</link>
-      <description>Europol, in collaboration with law enforcement agencies from 31 countries and leading private sector partners, has concluded its third and most successful operational week of Project A.S.S.E.T. (Asset Search &amp;amp; Seize Enforcement Taskforce). This initiative, organised by the Europol's European Financial and Economic Crime Centre (EFECC), has become a crucial component in the global fight against serious and organised crime and the seizure of criminal assets.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europols-project-asset-identifies-millions-in-criminal-assets</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Sat, 06 Jun 2026 08:06:46 +0000</pubDate>
+      <pubDate>Sat, 06 Jun 2026 10:07:14 +0000</pubDate>
     </item>
     <item>
       <title>OpenAI responds to White House executive order on AI governance</title>
@@ -380,8 +213,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181294/openai-responds-to-white-house-executive-order-on-ai-governance.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Thu, 04 Jun 2026 16:34:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV26-525)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.55</comments>
+      <pubDate>Fri, 29 May 2026 13:12:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Oracle security advisory (AV26-526)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.55</comments>
+      <pubDate>Fri, 29 May 2026 13:36:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-013 Security incident impacting GitHub internal repositories</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-013-security-incident-impacting-github-internal-repositories</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-013-security-incident-impacting-github-internal-repositories</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.56</comments>
+      <pubDate>Fri, 29 May 2026 16:11:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol's Project A.S.S.E.T. identifies millions in criminal assets</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europols-project-asset-identifies-millions-in-criminal-assets</link>
+      <description>Europol, in collaboration with law enforcement agencies from 31 countries and leading private sector partners, has concluded its third and most successful operational week of Project A.S.S.E.T. (Asset Search &amp;amp; Seize Enforcement Taskforce). This initiative, organised by the Europol's European Financial and Economic Crime Centre (EFECC), has become a crucial component in the global fight against serious and organised crime and the seizure of criminal assets.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europols-project-asset-identifies-millions-in-criminal-assets</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Sat, 06 Jun 2026 10:07:14 +0000</pubDate>
     </item>
     <item>
       <title>Palo Alto Networks security advisory (AV26-462) – Update 1</title>
@@ -390,18 +263,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-462</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Fri, 29 May 2026 20:10:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
-      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Sat, 06 Jun 2026 08:06:46 +0000</pubDate>
     </item>
     <item>
       <title>Anthropic grants Project Glasswing access to 150 more companies, with a focus on critical infrastructure</title>
@@ -511,8 +374,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4180265/anthropic-grants-project-glasswing-access-to-150-more-companies-with-a-focus-on-critical-infrastructure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 03 Jun 2026 00:39:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
+      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Sat, 06 Jun 2026 10:07:14 +0000</pubDate>
     </item>
     <item>
       <title>US government report slams NIST for NVD backlog</title>
@@ -662,7 +535,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181438/us-government-report-slams-nist-for-nvd-backlog.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Fri, 05 Jun 2026 01:47:38 +0000</pubDate>
     </item>
     <item>
@@ -779,78 +652,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181230/claude-code-has-an-mcp-security-problem-and-your-developers-are-already-using-it.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Fri, 05 Jun 2026 09:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft security advisory – May 2026 monthly rollup (AV26-456) – Update 2</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
-      <pubDate>Mon, 01 Jun 2026 12:34:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV26-527)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-527</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-527</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
-      <pubDate>Mon, 01 Jun 2026 12:52:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>Dell security advisory (AV26-528)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-528</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-528</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
-      <pubDate>Mon, 01 Jun 2026 13:01:54 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ubuntu security advisory (AV26-529)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-529</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-529</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
-      <pubDate>Mon, 01 Jun 2026 13:07:31 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] CISA ICS security advisories (AV26–530)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-530</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-530</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
-      <pubDate>Mon, 01 Jun 2026 13:15:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>Red Hat security advisory (AV26-531)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-531</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-531</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
-      <pubDate>Mon, 01 Jun 2026 13:19:43 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV26-532)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-532</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-532</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
-      <pubDate>Mon, 01 Jun 2026 13:25:32 +0000</pubDate>
     </item>
     <item>
       <title>Malware could drain your fuel tank as well as your bank account</title>
@@ -888,8 +691,78 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181657/malware-could-drain-your-fuel-tank-as-well-as-your-bank-account.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Fri, 05 Jun 2026 12:25:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft security advisory – May 2026 monthly rollup (AV26-456) – Update 2</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.15</comments>
+      <pubDate>Mon, 01 Jun 2026 12:34:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV26-527)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-527</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-527</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.15</comments>
+      <pubDate>Mon, 01 Jun 2026 12:52:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dell security advisory (AV26-528)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-528</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-528</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.16</comments>
+      <pubDate>Mon, 01 Jun 2026 13:01:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ubuntu security advisory (AV26-529)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-529</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-529</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.16</comments>
+      <pubDate>Mon, 01 Jun 2026 13:07:31 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] CISA ICS security advisories (AV26–530)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-530</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-530</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.16</comments>
+      <pubDate>Mon, 01 Jun 2026 13:15:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>Red Hat security advisory (AV26-531)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-531</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-531</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.16</comments>
+      <pubDate>Mon, 01 Jun 2026 13:19:43 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV26-532)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-532</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-532</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.16</comments>
+      <pubDate>Mon, 01 Jun 2026 13:25:32 +0000</pubDate>
     </item>
     <item>
       <title>Ivanti security advisory (AV26-533)</title>
@@ -898,7 +771,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-533</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Mon, 01 Jun 2026 14:50:50 +0000</pubDate>
     </item>
     <item>
@@ -908,7 +781,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/plesk-security-advisory-av26-534</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Mon, 01 Jun 2026 14:56:27 +0000</pubDate>
     </item>
     <item>
@@ -918,7 +791,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-july-2024-quarterly-rollup-av24-401</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Mon, 01 Jun 2026 17:39:35 +0000</pubDate>
     </item>
     <item>
@@ -928,7 +801,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-june-2026-monthly-rollup-av26-535</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Mon, 01 Jun 2026 18:27:07 +0000</pubDate>
     </item>
     <item>
@@ -938,7 +811,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-536</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Mon, 01 Jun 2026 18:31:58 +0000</pubDate>
     </item>
     <item>
@@ -977,7 +850,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181839/patching-fast-and-slow-ruby-devs-delay-to-defend-against-supply-chain-attack-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.28</comments>
       <pubDate>Fri, 05 Jun 2026 17:07:00 +0000</pubDate>
     </item>
     <item>
@@ -1046,7 +919,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181846/microsoft-identifies-seven-new-ways-ai-agents-can-be-hacked-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Fri, 05 Jun 2026 17:20:34 +0000</pubDate>
     </item>
     <item>
@@ -1056,7 +929,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-537</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Tue, 02 Jun 2026 15:09:15 +0000</pubDate>
     </item>
     <item>
@@ -1066,7 +939,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hp-security-advisory-av26-539</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Tue, 02 Jun 2026 15:24:01 +0000</pubDate>
     </item>
     <item>
@@ -1076,7 +949,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-june-2026-monthly-rollup-av26-538</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Tue, 02 Jun 2026 17:58:26 +0000</pubDate>
     </item>
     <item>
@@ -1086,7 +959,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-540</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Tue, 02 Jun 2026 18:07:51 +0000</pubDate>
     </item>
     <item>
@@ -1096,7 +969,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-541</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Tue, 02 Jun 2026 18:22:12 +0000</pubDate>
     </item>
     <item>
@@ -1106,7 +979,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-542</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Tue, 02 Jun 2026 18:35:44 +0000</pubDate>
     </item>
     <item>
@@ -1116,7 +989,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-543</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Tue, 02 Jun 2026 20:02:25 +0000</pubDate>
     </item>
     <item>
@@ -1126,7 +999,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-544</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.90</comments>
       <pubDate>Wed, 03 Jun 2026 12:49:19 +0000</pubDate>
     </item>
     <item>
@@ -1136,7 +1009,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-545</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Wed, 03 Jun 2026 13:01:01 +0000</pubDate>
     </item>
     <item>
@@ -1146,7 +1019,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-546</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.00</comments>
+      <comments>Score: 8.96</comments>
       <pubDate>Wed, 03 Jun 2026 15:39:58 +0000</pubDate>
     </item>
     <item>
@@ -1156,7 +1029,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-547</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Wed, 03 Jun 2026 19:22:10 +0000</pubDate>
     </item>
     <item>
@@ -1166,7 +1039,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-548</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 9.05</comments>
       <pubDate>Wed, 03 Jun 2026 19:49:24 +0000</pubDate>
     </item>
     <item>
@@ -1176,7 +1049,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-550</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.62</comments>
       <pubDate>Thu, 04 Jun 2026 19:31:30 +0000</pubDate>
     </item>
     <item>
@@ -1186,7 +1059,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-551</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.21</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Fri, 05 Jun 2026 13:03:48 +0000</pubDate>
     </item>
     <item>
@@ -1196,7 +1069,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-552</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.36</comments>
+      <comments>Score: 10.29</comments>
       <pubDate>Fri, 05 Jun 2026 17:19:13 +0000</pubDate>
     </item>
     <item>
@@ -1206,8 +1079,17 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-549</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.38</comments>
+      <comments>Score: 10.31</comments>
       <pubDate>Fri, 05 Jun 2026 18:02:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Name That Toon Contest</title>
+      <link>https://www.darkreading.com/events/celebrate-20-years-of-dark-reading-name-that-toon-contest</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://www.darkreading.com/events/celebrate-20-years-of-dark-reading-name-that-toon-contest</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 587.76</comments>
+      <pubDate>Fri, 26 Jun 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
