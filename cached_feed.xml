@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Jun 2026 11:50:25 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 13:59:02 +0000</lastBuildDate>
+    <item>
+      <title>Veeam security advisory (AV26-519)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-519</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-519</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.33</comments>
+      <pubDate>Thu, 28 May 2026 14:08:11 +0000</pubDate>
+    </item>
     <item>
       <title>Zimbra security advisory (AV26-520)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av26-520</link>
@@ -16,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av26-520</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 28 May 2026 14:16:49 +0000</pubDate>
     </item>
     <item>
@@ -26,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/notepad-security-advisory-av26-521</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 28 May 2026 14:21:59 +0000</pubDate>
     </item>
     <item>
@@ -36,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-522</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Thu, 28 May 2026 17:45:46 +0000</pubDate>
     </item>
     <item>
@@ -46,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-523</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Thu, 28 May 2026 17:50:23 +0000</pubDate>
     </item>
     <item>
@@ -58,143 +68,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.35</comments>
       <pubDate>Thu, 28 May 2026 19:10:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>Claude Code has an MCP security problem — and your developers are already using it</title>
-      <link>https://www.csoonline.com/article/4181230/claude-code-has-an-mcp-security-problem-and-your-developers-are-already-using-it.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Claude Code is Anthropic’s AI coding assistant — a command-line tool that developers are adopting fast. It connects to external services through Model Context Protocol, the standard that lets AI tools interact with Jira, Confluence, GitHub, databases and internal APIs. When a developer connects one of those services, Claude Code runs an OAuth flow, the user approves the scopes and the tool receives a bearer token it uses for every subsequent request.&lt;/p&gt;
-
-
-
-&lt;p&gt;That token is stored in plaintext in a configuration file on the developer’s machine. And researchers have now shown exactly how attackers are getting to it.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;What researchers found&lt;/h2&gt;
-
-
-
-&lt;p&gt;Last week, researchers at&lt;a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"&gt; &lt;/a&gt;&lt;a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"&gt;Mitiga Labs published an attack chain&lt;/a&gt; that should concern every security team whose developers use Claude Code. The attack starts with a malicious npm package — something that looks like a legitimate utility or wrapper. Hidden inside is a post-install hook that runs silently during installation. That hook rewrites a single file: ~/.claude.json.&lt;/p&gt;
-
-
-
-&lt;p&gt;That file is the control point for how Claude Code routes MCP traffic. Change it, and you can point Claude Code’s authenticated requests to attacker-controlled infrastructure instead of the legitimate service. The OAuth tokens stored in that same file get intercepted in transit. The attacker now holds valid, long-lived bearer tokens for every SaaS platform the developer had connected — Jira, Confluence, GitHub, whatever was integrated.&lt;/p&gt;
-
-
-
-&lt;p&gt;What makes this particularly difficult to detect is what the audit logs look like on the other end. The IP address in the provider’s logs resolves to Anthropic’s egress range. The user is real. The session is valid.&lt;a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"&gt; &lt;/a&gt;&lt;a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"&gt;As Mitiga put it&lt;/a&gt;, nothing in that log row is wrong — but nothing in it is right either. The user did not run the query. An attacker did, using a token that was silently redirected before it ever reached its intended destination.&lt;/p&gt;
-
-
-
-&lt;p&gt;Mitiga reported this to Anthropic on April 10.&lt;a href="https://www.securityweek.com/claude-code-oauth-tokens-can-be-stolen-through-stealthy-mcp-hijacking/"&gt; &lt;/a&gt;&lt;a href="https://www.securityweek.com/claude-code-oauth-tokens-can-be-stolen-through-stealthy-mcp-hijacking/"&gt;Anthropic responded on April 12 that the issue was out of scope&lt;/a&gt;, reasoning that the attack requires prior code execution through a package installation that the user consented to. As of this writing, no patch exists. The attack chain is live.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;This is not the first time&lt;/h2&gt;
-
-
-
-&lt;p&gt;The Mitiga disclosure is the most recent, but it is not the first time Claude Code’s configuration model has created a security problem.&lt;/p&gt;
-
-
-
-&lt;p&gt;In February 2026,&lt;a href="https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/"&gt; &lt;/a&gt;&lt;a href="https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/"&gt;Check Point Research published findings on two separate vulnerabilities&lt;/a&gt;. The first, CVE-2025-59536, allowed remote code execution through malicious hooks planted in a repository’s settings file — code that ran before the user could even read the trust dialog. The second, CVE-2026-21852, allowed API key exfiltration by overriding a single environment variable, redirecting authenticated traffic to attacker-controlled infrastructure before any consent prompt appeared.&lt;a href="https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html"&gt; &lt;/a&gt;&lt;a href="https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html"&gt;Simply cloning and opening an untrusted repository was enough&lt;/a&gt; to trigger both.&lt;/p&gt;
-
-
-
-&lt;p&gt;Anthropic patched those vulnerabilities after Check Point’s disclosure. But the pattern they reveal — configuration files that security teams treat as passive metadata actually functioning as active execution paths — is the same pattern the Mitiga attack exploits. The mechanism keeps working because the underlying architecture creates it.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Why security teams need to pay attention&lt;/h2&gt;
-
-
-
-&lt;p&gt;If you have read about adversary-in-the-middle phishing, this should feel familiar. AiTM attacks do not steal credentials directly — they sit between the user and the legitimate service, wait for authentication to succeed and walk away with the session token that proves it happened. The Mitiga attack on Claude Code works the same way. The OAuth flow completes legitimately. The user approved the scopes. The token is valid. The attacker just inserted themselves into the routing layer before the token reached its intended destination.&lt;/p&gt;
-
-
-
-&lt;p&gt;The difference is that AiTM attacks target browser sessions. This targets developer tooling — and developer tooling sits closer to your source code, your internal APIs, your cloud infrastructure and your production systems than most browser sessions ever do.&lt;/p&gt;
-
-
-
-&lt;p&gt;Claude Code adoption is accelerating. Developers install it because it genuinely improves their workflow. They connect it to the tools they use every day. Most of them are not thinking about what the post-install scripts in their npm dependencies are doing to their local configuration files. That is not a failure of awareness — it is an unreasonable expectation. The security team needs to be thinking about it instead.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Three controls that help right now&lt;/h2&gt;
-
-
-
-&lt;ol class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Monitor &lt;/strong&gt;&lt;strong&gt;~/.claude.json for unexpected changes.&lt;/strong&gt; This file is the pivot point in the Mitiga attack. Changes to MCP server endpoints in that file — particularly additions of new localhost proxy addresses or unfamiliar external endpoints — should trigger an alert. Most organizations have no monitoring on user-level configuration files in developer environments. That needs to change.&lt;a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"&gt; &lt;/a&gt;&lt;a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"&gt;Mitiga specifically recommends&lt;/a&gt; tracking changes to Claude Code configuration, MCP server URLs and OAuth refresh behavior as the primary detection layer.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Treat npm post-install hooks as a first-class security concern.&lt;/strong&gt; The Mitiga attack begins with a malicious npm package. Post-install hooks that execute arbitrary code at install time are a known supply chain risk class — but enforcement in developer environments is inconsistent. Audit what runs during package installation in your development pipelines. Consider requiring review of packages that include post-install scripts before they reach developer machines. This is not a Claude Code-specific recommendation; it applies to every tool in your development stack. Claude Code just made the consequences of getting it wrong much more tangible.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Audit OAuth tokens connected to Claude Code integrations and rotate them.&lt;/strong&gt; Developers who connect Claude Code to Jira, Confluence, GitHub or any other SaaS platform create OAuth tokens that persist across sessions. If those tokens were active during a period when a malicious package was installed, they should be treated as potentially compromised. Rotate them. Review the audit logs on the provider side for the activity patterns Mitiga describes — valid-looking requests from Anthropic’s egress IPs that the developer did not initiate. Note that&lt;a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"&gt; &lt;/a&gt;&lt;a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"&gt;token rotation alone does not break the chain&lt;/a&gt; if the malicious hook is still present — the hook will reseed the configuration and capture new tokens on the next refresh. Remediation requires removing the hook and cleaning the configuration first.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;An honest assessment&lt;/h2&gt;
-
-
-
-&lt;p&gt;Anthropic’s response to the Mitiga disclosure — that the attack is out of scope because the user consented to installing the package — follows a logic that security practitioners will recognize and most will reject. Consent to install a package is not consent to have that package rewrite your AI tool’s routing configuration and intercept your SaaS credentials. The two things are not the same and treating them as equivalent places the entire burden of supply chain security on the developer, making a split-second judgment about a dependency name.&lt;/p&gt;
-
-
-
-&lt;p&gt;That is not a reasonable security model.&lt;/p&gt;
-
-
-
-&lt;p&gt;The patched Check Point vulnerabilities show that Anthropic is responsive when the issue is framed correctly. The Mitiga research is a week old. Whether a patch follows is an open question, but the attack chain works today regardless of how that question resolves.&lt;/p&gt;
-
-
-
-&lt;p&gt;Your developers are using Claude Code. The question for security teams is not whether to engage with this risk but how quickly you can implement detection and response that accounts for it. The configuration file is small, the monitoring requirement is specific, and the attack chain is documented. Starting there is better than waiting for a vendor patch that may not come.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4181230/claude-code-has-an-mcp-security-problem-and-your-developers-are-already-using-it.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
-      <pubDate>Fri, 05 Jun 2026 09:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV26-525)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
-      <pubDate>Fri, 29 May 2026 13:12:50 +0000</pubDate>
-    </item>
-    <item>
-      <title>Oracle security advisory (AV26-526)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
-      <pubDate>Fri, 29 May 2026 13:36:26 +0000</pubDate>
     </item>
     <item>
       <title>Malware could drain your fuel tank as well as your bank account</title>
@@ -232,8 +105,28 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181657/malware-could-drain-your-fuel-tank-as-well-as-your-bank-account.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Fri, 05 Jun 2026 12:25:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV26-525)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-525</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.42</comments>
+      <pubDate>Fri, 29 May 2026 13:12:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Oracle security advisory (AV26-526)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.42</comments>
+      <pubDate>Fri, 29 May 2026 13:36:26 +0000</pubDate>
     </item>
     <item>
       <title>AL26-013 Security incident impacting GitHub internal repositories</title>
@@ -242,7 +135,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-013-security-incident-impacting-github-internal-repositories</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Fri, 29 May 2026 16:11:50 +0000</pubDate>
     </item>
     <item>
@@ -252,68 +145,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-462</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
+      <comments>Score: 7.45</comments>
       <pubDate>Fri, 29 May 2026 20:10:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>8 arrested in a hit against criminal network smuggling Cuban nationals into Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/8-arrested-in-hit-against-criminal-network-smuggling-cuban-nationals-spain</link>
-      <description>Spanish National Police (Policía National), with the support of Europol and the Serbian Criminal Investigation Directorate, (Управа криминалистичке полиције), have dismantled a transnational criminal network involved in the smuggling of Cuban nationals from Cuba to Spain through the Western Balkan region. The criminal organisation, operating from Spain and Serbia, is allegedly involved also in document fraud and money laundering.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/8-arrested-in-hit-against-criminal-network-smuggling-cuban-nationals-spain</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
-      <pubDate>Sun, 07 Jun 2026 09:50:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Two dangerous fugitives arrested in Türkiye and Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/two-dangerous-fugitives-arrested-in-turkiye-and-spain</link>
-      <description>Two dangerous fugitives wanted for serious organised crime offences have been arrested in separate international operations.One suspect, wanted by Germany over an attempted murder linked to violence-as-a-service criminal networks, was arrested in Türkiye. The second, a senior Camorra member, was arrested in Spain following a cross-border investigation led by Italian authorities.Fugitive tied to violence-as-a-service networks arrested in TürkiyeA 29-year-old Turkish...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/two-dangerous-fugitives-arrested-in-turkiye-and-spain</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 07 Jun 2026 09:50:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cybercriminal VPN used by ransomware actors dismantled in global crackdown</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</link>
-      <description>For years, the service, known as ‘First VPN’, was promoted on Russian-speaking cybercrime forums as a trusted tool for remaining beyond the reach of law enforcement. It offered users anonymous payments, hidden infrastructure, and services designed specifically for criminal use.‘First VPN’ had become deeply embedded in the cybercrime ecosystem, appearing in almost every major cybercrime investigation supported by Europol in...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 07 Jun 2026 09:50:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol launches Capture26, the 2026 law enforcement photo competition</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-launches-capture26-2026-law-enforcement-photo-competition</link>
-      <description>Europol has opened submissions for Capture26, the 2026 edition of its annual international law enforcement photo competition. This year's theme is #OneSecurity, reflecting the principle that keeping Europe safe is built through coordination, trust, and shared responsibility.Entrants are invited to capture what this cooperation looks like in practice. The competition is open to professional and amateur photographers working for law...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-launches-capture26-2026-law-enforcement-photo-competition</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 07 Jun 2026 09:50:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>29 arrested as law enforcement strikes criminal networks behind illegal streaming</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/29-arrested-law-enforcement-strikes-criminal-networks-behind-illegal-streaming</link>
-      <description>Criminal networks making millions from illegal access to premium sports broadcasts, film and television channels have been targeted in a major international operation coordinated by Bulgaria with Europol’s support. The seven-month operation resulted in 29 arrests, the dismantling of nine organised crime groups and the removal of over 27 000 illegal streaming URLs.Operation KRATOS 2 brought together law enforcement authorities...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/29-arrested-law-enforcement-strikes-criminal-networks-behind-illegal-streaming</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 07 Jun 2026 09:50:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports international hit against counterfeit medicines and supplements network</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-international-hit-against-counterfeit-medicines-and-supplements-network</link>
-      <description>The criminal organisation, comprising individuals from Romania, the Republic of Moldova, Bulgaria, Estonia, Poland, and Ukraine, has been operating for nearly two decades, generating at least EUR 240 million in illicit transactions, with up to EUR 70 million in 2021 alone. The network has been exploiting the vulnerability of individuals seeking treatments for serious diseases, such as diabetes, cancer, psoriasis,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-international-hit-against-counterfeit-medicines-and-supplements-network</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 07 Jun 2026 09:50:25 +0000</pubDate>
     </item>
     <item>
       <title>Patching fast and slow: Ruby devs delay to defend against supply chain attack</title>
@@ -351,8 +184,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181839/patching-fast-and-slow-ruby-devs-delay-to-defend-against-supply-chain-attack-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Fri, 05 Jun 2026 17:07:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>8 arrested in a hit against criminal network smuggling Cuban nationals into Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/8-arrested-in-hit-against-criminal-network-smuggling-cuban-nationals-spain</link>
+      <description>Spanish National Police (Policía National), with the support of Europol and the Serbian Criminal Investigation Directorate, (Управа криминалистичке полиције), have dismantled a transnational criminal network involved in the smuggling of Cuban nationals from Cuba to Spain through the Western Balkan region. The criminal organisation, operating from Spain and Serbia, is allegedly involved also in document fraud and money laundering.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/8-arrested-in-hit-against-criminal-network-smuggling-cuban-nationals-spain</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.51</comments>
+      <pubDate>Sun, 07 Jun 2026 11:59:02 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft identifies seven new ways AI agents can be hacked</title>
@@ -420,8 +263,58 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181846/microsoft-identifies-seven-new-ways-ai-agents-can-be-hacked-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Fri, 05 Jun 2026 17:20:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol launches Capture26, the 2026 law enforcement photo competition</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-launches-capture26-2026-law-enforcement-photo-competition</link>
+      <description>Europol has opened submissions for Capture26, the 2026 edition of its annual international law enforcement photo competition. This year's theme is #OneSecurity, reflecting the principle that keeping Europe safe is built through coordination, trust, and shared responsibility.Entrants are invited to capture what this cooperation looks like in practice. The competition is open to professional and amateur photographers working for law...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-launches-capture26-2026-law-enforcement-photo-competition</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Jun 2026 11:59:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>29 arrested as law enforcement strikes criminal networks behind illegal streaming</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/29-arrested-law-enforcement-strikes-criminal-networks-behind-illegal-streaming</link>
+      <description>Criminal networks making millions from illegal access to premium sports broadcasts, film and television channels have been targeted in a major international operation coordinated by Bulgaria with Europol’s support. The seven-month operation resulted in 29 arrests, the dismantling of nine organised crime groups and the removal of over 27 000 illegal streaming URLs.Operation KRATOS 2 brought together law enforcement authorities...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/29-arrested-law-enforcement-strikes-criminal-networks-behind-illegal-streaming</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Jun 2026 11:59:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>Two dangerous fugitives arrested in Türkiye and Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/two-dangerous-fugitives-arrested-in-turkiye-and-spain</link>
+      <description>Two dangerous fugitives wanted for serious organised crime offences have been arrested in separate international operations.One suspect, wanted by Germany over an attempted murder linked to violence-as-a-service criminal networks, was arrested in Türkiye. The second, a senior Camorra member, was arrested in Spain following a cross-border investigation led by Italian authorities.Fugitive tied to violence-as-a-service networks arrested in TürkiyeA 29-year-old Turkish...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/two-dangerous-fugitives-arrested-in-turkiye-and-spain</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Jun 2026 11:59:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cybercriminal VPN used by ransomware actors dismantled in global crackdown</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</link>
+      <description>For years, the service, known as ‘First VPN’, was promoted on Russian-speaking cybercrime forums as a trusted tool for remaining beyond the reach of law enforcement. It offered users anonymous payments, hidden infrastructure, and services designed specifically for criminal use.‘First VPN’ had become deeply embedded in the cybercrime ecosystem, appearing in almost every major cybercrime investigation supported by Europol in...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Jun 2026 11:59:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol supports international hit against counterfeit medicines and supplements network</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-international-hit-against-counterfeit-medicines-and-supplements-network</link>
+      <description>The criminal organisation, comprising individuals from Romania, the Republic of Moldova, Bulgaria, Estonia, Poland, and Ukraine, has been operating for nearly two decades, generating at least EUR 240 million in illicit transactions, with up to EUR 70 million in 2021 alone. The network has been exploiting the vulnerability of individuals seeking treatments for serious diseases, such as diabetes, cancer, psoriasis,...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-international-hit-against-counterfeit-medicines-and-supplements-network</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 07 Jun 2026 11:59:02 +0000</pubDate>
     </item>
     <item>
       <title>Europol's Project A.S.S.E.T. identifies millions in criminal assets</title>
@@ -431,7 +324,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.58</comments>
-      <pubDate>Sun, 07 Jun 2026 09:50:25 +0000</pubDate>
+      <pubDate>Sun, 07 Jun 2026 11:59:02 +0000</pubDate>
     </item>
     <item>
       <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
@@ -441,7 +334,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.71</comments>
-      <pubDate>Sun, 07 Jun 2026 09:50:25 +0000</pubDate>
+      <pubDate>Sun, 07 Jun 2026 11:59:02 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft security advisory – May 2026 monthly rollup (AV26-456) – Update 2</title>
@@ -450,7 +343,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-may-2026-monthly-rollup-av26-456</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 01 Jun 2026 12:34:39 +0000</pubDate>
     </item>
     <item>
@@ -460,7 +353,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-527</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 01 Jun 2026 12:52:02 +0000</pubDate>
     </item>
     <item>
@@ -470,7 +363,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-528</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 01 Jun 2026 13:01:54 +0000</pubDate>
     </item>
     <item>
@@ -480,7 +373,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-529</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Mon, 01 Jun 2026 13:07:31 +0000</pubDate>
     </item>
     <item>
@@ -490,7 +383,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-530</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 01 Jun 2026 13:15:12 +0000</pubDate>
     </item>
     <item>
@@ -500,7 +393,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-531</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 01 Jun 2026 13:19:43 +0000</pubDate>
     </item>
     <item>
@@ -510,7 +403,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-532</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 01 Jun 2026 13:25:32 +0000</pubDate>
     </item>
     <item>
@@ -520,7 +413,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-533</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 01 Jun 2026 14:50:50 +0000</pubDate>
     </item>
     <item>
@@ -530,7 +423,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/plesk-security-advisory-av26-534</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 01 Jun 2026 14:56:27 +0000</pubDate>
     </item>
     <item>
@@ -540,7 +433,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-july-2024-quarterly-rollup-av24-401</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Mon, 01 Jun 2026 17:39:35 +0000</pubDate>
     </item>
     <item>
@@ -550,7 +443,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-june-2026-monthly-rollup-av26-535</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Mon, 01 Jun 2026 18:27:07 +0000</pubDate>
     </item>
     <item>
@@ -560,7 +453,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-536</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Mon, 01 Jun 2026 18:31:58 +0000</pubDate>
     </item>
     <item>
@@ -570,7 +463,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-537</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Tue, 02 Jun 2026 15:09:15 +0000</pubDate>
     </item>
     <item>
@@ -580,7 +473,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hp-security-advisory-av26-539</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Tue, 02 Jun 2026 15:24:01 +0000</pubDate>
     </item>
     <item>
@@ -590,7 +483,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-june-2026-monthly-rollup-av26-538</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Tue, 02 Jun 2026 17:58:26 +0000</pubDate>
     </item>
     <item>
@@ -600,7 +493,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-540</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Tue, 02 Jun 2026 18:07:51 +0000</pubDate>
     </item>
     <item>
@@ -610,7 +503,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-541</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Tue, 02 Jun 2026 18:22:12 +0000</pubDate>
     </item>
     <item>
@@ -620,7 +513,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-542</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Tue, 02 Jun 2026 18:35:44 +0000</pubDate>
     </item>
     <item>
@@ -630,7 +523,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-543</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Tue, 02 Jun 2026 20:02:25 +0000</pubDate>
     </item>
     <item>
@@ -640,7 +533,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-544</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Wed, 03 Jun 2026 12:49:19 +0000</pubDate>
     </item>
     <item>
@@ -650,7 +543,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-545</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Wed, 03 Jun 2026 13:01:01 +0000</pubDate>
     </item>
     <item>
@@ -660,7 +553,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-546</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Wed, 03 Jun 2026 15:39:58 +0000</pubDate>
     </item>
     <item>
@@ -670,7 +563,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-547</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Wed, 03 Jun 2026 19:22:10 +0000</pubDate>
     </item>
     <item>
@@ -680,7 +573,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-548</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Wed, 03 Jun 2026 19:49:24 +0000</pubDate>
     </item>
     <item>
@@ -690,7 +583,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-550</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Thu, 04 Jun 2026 19:31:30 +0000</pubDate>
     </item>
     <item>
@@ -700,7 +593,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-551</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.46</comments>
+      <comments>Score: 9.40</comments>
       <pubDate>Fri, 05 Jun 2026 13:03:48 +0000</pubDate>
     </item>
     <item>
@@ -710,7 +603,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-552</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Fri, 05 Jun 2026 17:19:13 +0000</pubDate>
     </item>
     <item>
@@ -720,7 +613,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-549</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.59</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Fri, 05 Jun 2026 18:02:32 +0000</pubDate>
     </item>
     <item>
@@ -729,7 +622,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/celebrate-20-years-of-dark-reading-name-that-toon-contest</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 459.31</comments>
+      <comments>Score: 449.19</comments>
       <pubDate>Fri, 26 Jun 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
