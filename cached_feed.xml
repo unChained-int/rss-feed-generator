@@ -8,124 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Jun 2026 10:06:36 +0000</lastBuildDate>
-    <item>
-      <title>Broadcom VMware security advisory (AV26-536)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-536</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-536</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
-      <pubDate>Mon, 01 Jun 2026 18:31:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Protocol Buffers schemas expose remote code execution risk</title>
-      <link>https://www.csoonline.com/article/4182306/google-protocol-buffers-flaw-turns-schemas-into-shells.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A widely used JavaScript implementation of Google’s &lt;a href="https://github.com/protocolbuffers/protobuf" rel="noreferrer noopener" target="_blank"&gt;Protocol Buffers&lt;/a&gt; format is placing too much trust in untrusted data, exposing affected applications to remote code execution and other attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers at Cyera have disclosed six vulnerabilities affecting “&lt;a href="https://github.com/protobufjs/protobuf.js/" rel="noreferrer noopener" target="_blank"&gt;protobuf.js&lt;/a&gt;,” all stemming from the library’s handling of schema and metadata. Attackers could exploit an input validation oversight to insert malicious data and influence an application’s behavior.&lt;/p&gt;
-
-
-
-&lt;p&gt;Protocol Buffers is a technology for packaging data in a compact, structured format to streamline the exchange of information between different applications. The protobuf.js library reportedly receives more than 50 million weekly downloads. It is commonly pulled into applications indirectly through dependencies such as gRPC tooling, Google Cloud libraries, and other frameworks, making it difficult for organizations to track.&lt;/p&gt;
-
-
-
-&lt;p&gt;Researchers disclosed six &lt;a href="https://www.csoonline.com/article/4159882/nist-cuts-down-cve-analysis-amid-vulnerability-overload.html"&gt;CVE&lt;/a&gt;s covering remote code execution, denial-of-service (DoS) conditions, prototype pollution, prototype injection, and code-generation issues.&lt;/p&gt;
-
-
-
-&lt;p&gt;“While exploitation of these vulnerabilities generally requires specific conditions, those conditions are increasingly common in data and AI ecosystems that routinely exchange data, schemas, and configuration files across services, repositories, cloud platforms, and third-party integrations,” Cyera researchers Assaf Morag and Vladimir Tokarev said in a blog &lt;a href="https://www.cyera.com/blog/cyera-research-uncovers-six-protobuf-js-vulnerabilities-impacting-the-backbone-of-data-and-ai-systems" rel="noreferrer noopener" target="_blank"&gt;post&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Patches are available for both protobuf.js and protonufjs-cli, the project’s command-line code generation tools.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="metadata-capable-of-writing-code"&gt;Metadata capable of writing code&lt;/h2&gt;
-
-
-
-&lt;p&gt;The most significant of the bugs is a code-generation flaw tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44291" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-44291&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;According to Cyera, protobuf.js dynamically generates encoder and decoder functions and compiles them using JavaScript’s Function () constructor. Under specific conditions, an attacker can manipulate schema-derived information so that data intended to describe a message instead becomes executable code.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers demonstrated an attack chain in which prototype pollution is used to trick protobuf.js into accepting attacker-controlled values as legitimate protobuf types. Those values are then incorporated into the generated code and executed within the Node.js process.&lt;/p&gt;
-
-
-
-&lt;p&gt;The impact extends beyond runtime applications. A separate code-injection issue, tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-44295" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-44295&lt;/a&gt;, affects the pbjs command-line tool, where crafted schema names can be embedded into generated JavaScript files and executed when those files are later imported.&lt;/p&gt;
-
-
-
-&lt;p&gt;While successful exploitation requires specific preconditions, such as the ability to influence protobuf schemas or descriptors, researchers noted that modern software increasingly exchanges schemas, descriptors, and configuration files across repositories, cloud environments, APIs, and third-party integrations, making those assumptions less restrictive than they once were.&lt;/p&gt;
-
-
-
-&lt;p&gt;The remaining vulnerabilities are less severe. Researchers identified a prototype injection (&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44292" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-44292&lt;/a&gt;) flaw that can alter application behavior by tampering with inherited object properties, as well as denial-of-services (DoS) bugs (&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44289" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-44289&lt;/a&gt;, &lt;a href="https://www.tenable.com/cve/CVE-2026-44290" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-44290&lt;/a&gt;, and &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44294" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-44294&lt;/a&gt;) that can crash or exhaust application resources using maliciously crafted inputs.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="patching-advised-as-supply-chain-risk-looms"&gt;Patching advised as supply chain risk looms&lt;/h2&gt;
-
-
-
-&lt;p&gt;The researchers noted that protobuf.js is often consumed as a transitive dependency, meaning organizations may be exposed without realizing the library is present in their software stack. As schemas move through automated development pipelines and software &lt;a href="https://www.csoonline.com/article/4170694/cisas-ai-sbom-guidance-pushes-software-supply-chain-oversight-into-new-territory.html"&gt;supply chains&lt;/a&gt;, components traditionally viewed as passive data can become a pathway for attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Development teams routinely accept code contributions, integrate third-party components, and automatically process files through CI/CD pipelines,” they explained. “We found that under certain conditions, a malicious protobuf schema could be introduced into this workflow and ultimately executed within trusted build environments.”&lt;/p&gt;
-
-
-
-&lt;p&gt;A compromise at this stage could have downstream impacts on products, customers, and business operations, they added.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vulnerabilities affect protobuf.js versions 7.5.5 and earlier, along with versions 8.0.0 and 8.0.1, as well as vulnerable releases of protobuf.js-cli. Patches are available in protobuf.js 7.5.6 and 8.0.2, while protobuf.js-cli users are advised to upgrade to versions 1.2.1 or 2.0.2.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4182306/google-protocol-buffers-flaw-turns-schemas-into-shells.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Mon, 08 Jun 2026 12:22:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>8 arrested in a hit against criminal network smuggling Cuban nationals into Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/8-arrested-in-hit-against-criminal-network-smuggling-cuban-nationals-spain</link>
-      <description>Spanish National Police (Policía National), with the support of Europol and the Serbian Criminal Investigation Directorate, (Управа криминалистичке полиције), have dismantled a transnational criminal network involved in the smuggling of Cuban nationals from Cuba to Spain through the Western Balkan region. The criminal organisation, operating from Spain and Serbia, is allegedly involved also in document fraud and money laundering.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/8-arrested-in-hit-against-criminal-network-smuggling-cuban-nationals-spain</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
-      <pubDate>Wed, 10 Jun 2026 08:06:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol launches Capture26, the 2026 law enforcement photo competition</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-launches-capture26-2026-law-enforcement-photo-competition</link>
-      <description>Europol has opened submissions for Capture26, the 2026 edition of its annual international law enforcement photo competition. This year's theme is #OneSecurity, reflecting the principle that keeping Europe safe is built through coordination, trust, and shared responsibility.Entrants are invited to capture what this cooperation looks like in practice. The competition is open to professional and amateur photographers working for law...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-launches-capture26-2026-law-enforcement-photo-competition</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 10 Jun 2026 08:06:36 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 10 Jun 2026 14:24:50 +0000</lastBuildDate>
     <item>
       <title>29 arrested as law enforcement strikes criminal networks behind illegal streaming</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/29-arrested-law-enforcement-strikes-criminal-networks-behind-illegal-streaming</link>
@@ -134,17 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 10 Jun 2026 08:06:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cybercriminal VPN used by ransomware actors dismantled in global crackdown</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</link>
-      <description>For years, the service, known as ‘First VPN’, was promoted on Russian-speaking cybercrime forums as a trusted tool for remaining beyond the reach of law enforcement. It offered users anonymous payments, hidden infrastructure, and services designed specifically for criminal use.‘First VPN’ had become deeply embedded in the cybercrime ecosystem, appearing in almost every major cybercrime investigation supported by Europol in...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 10 Jun 2026 08:06:36 +0000</pubDate>
+      <pubDate>Wed, 10 Jun 2026 12:24:50 +0000</pubDate>
     </item>
     <item>
       <title>Samsung mobile security advisory (AV26-537)</title>
@@ -153,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-537</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 02 Jun 2026 15:09:15 +0000</pubDate>
     </item>
     <item>
@@ -163,18 +36,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hp-security-advisory-av26-539</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 02 Jun 2026 15:24:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol's Project A.S.S.E.T. identifies millions in criminal assets</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europols-project-asset-identifies-millions-in-criminal-assets</link>
-      <description>Europol, in collaboration with law enforcement agencies from 31 countries and leading private sector partners, has concluded its third and most successful operational week of Project A.S.S.E.T. (Asset Search &amp;amp; Seize Enforcement Taskforce). This initiative, organised by the Europol's European Financial and Economic Crime Centre (EFECC), has become a crucial component in the global fight against serious and organised crime and the seizure of criminal assets.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europols-project-asset-identifies-millions-in-criminal-assets</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Wed, 10 Jun 2026 08:06:36 +0000</pubDate>
     </item>
     <item>
       <title>Android security advisory – June 2026 monthly rollup (AV26-538) – Update 1</title>
@@ -183,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-june-2026-monthly-rollup-av26-538</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 02 Jun 2026 17:58:26 +0000</pubDate>
     </item>
     <item>
@@ -193,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-540</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 02 Jun 2026 18:07:51 +0000</pubDate>
     </item>
     <item>
@@ -203,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-541</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 02 Jun 2026 18:22:12 +0000</pubDate>
     </item>
     <item>
@@ -213,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-542</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Tue, 02 Jun 2026 18:35:44 +0000</pubDate>
     </item>
     <item>
@@ -223,18 +86,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-543</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Tue, 02 Jun 2026 20:02:25 +0000</pubDate>
     </item>
     <item>
-      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
-      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
+      <title>Europol's Project A.S.S.E.T. identifies millions in criminal assets</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europols-project-asset-identifies-millions-in-criminal-assets</link>
+      <description>Europol, in collaboration with law enforcement agencies from 31 countries and leading private sector partners, has concluded its third and most successful operational week of Project A.S.S.E.T. (Asset Search &amp;amp; Seize Enforcement Taskforce). This initiative, organised by the Europol's European Financial and Economic Crime Centre (EFECC), has become a crucial component in the global fight against serious and organised crime and the seizure of criminal assets.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europols-project-asset-identifies-millions-in-criminal-assets</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Wed, 10 Jun 2026 08:06:36 +0000</pubDate>
+      <comments>Score: 7.58</comments>
+      <pubDate>Wed, 10 Jun 2026 12:24:50 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-544)</title>
@@ -243,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-544</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 03 Jun 2026 12:49:19 +0000</pubDate>
     </item>
     <item>
@@ -253,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-545</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 03 Jun 2026 13:01:01 +0000</pubDate>
     </item>
     <item>
@@ -263,8 +126,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-546</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 03 Jun 2026 15:39:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
+      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Wed, 10 Jun 2026 12:24:50 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV26-547)</title>
@@ -273,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-547</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Wed, 03 Jun 2026 19:22:10 +0000</pubDate>
     </item>
     <item>
@@ -283,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-548</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 03 Jun 2026 19:49:24 +0000</pubDate>
     </item>
     <item>
@@ -426,7 +299,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4182650/openais-lockdown-mode-is-trying-to-solve-the-problem-that-it-created.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Tue, 09 Jun 2026 03:57:45 +0000</pubDate>
     </item>
     <item>
@@ -533,8 +406,98 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4182707/meet-hades-the-malware-that-lies-to-ai-security-agents-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Tue, 09 Jun 2026 05:10:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft feud escalates as researcher drops new Windows zero-day</title>
+      <link>https://www.csoonline.com/article/4183487/microsoft-feud-escalates-as-researcher-drops-new-windows-zero-day.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;The long-running feud between Microsoft and security researcher Nightmare Eclipse has entered a new chapter.&lt;/p&gt;
+
+
+
+&lt;p&gt;Eclipse, who has spent the past several months publicly releasing unpatched Windows vulnerabilities while sparring with Microsoft over vulnerability disclosure practices, has published exploit code for a new zero-day flaw dubbed RoguePlanet.&lt;/p&gt;
+
+
+
+&lt;p&gt;The researcher said their exploit uses a race condition problem affecting Microsoft Defender, giving attackers less than a hundred percent odds at success, which can potentially allow SYSTEM-level privilege on even freshly updated Windows.&lt;/p&gt;
+
+
+
+&lt;p&gt;As &lt;a href="https://www.csoonline.com/article/4160275/caught-quarantined-re-installed-redsun-turns-microsoft-defender-on-itself.html"&gt;before&lt;/a&gt;, the exploit arrives just after Microsoft issued its &lt;a href="https://blog.talosintelligence.com/microsoft-patch-tuesday-for-june-2026-snort-rules-and-prominent-vulnerabilities/" rel="noreferrer noopener" target="_blank"&gt;June 2026&lt;/a&gt; Tuesday patches, where the company issued fixes for over 200 security flaws, including 32 critical ones. “The timing is a giveaway, MiniPlasma was released on May 13, 2026—exactly one day after Microsoft’s May Patch Tuesday cycle, ensuring defenders have no official vendor patch for weeks,” Agnidipta Sarkar, chief evangelist at ColorTokens, had said about Eclipse’s previous “MiniPlasma” &lt;a href="https://www.csoonline.com/article/4172320/patched-windows-bug-resurfaces-6-years-later-as-working-system-level-exploit.html"&gt;disclosure&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;The exploit was dropped in a new GitHub repository, “MSNightmare,” surely a pointed reference to Microsoft, after GitHub (owned by Microsoft) removed Eclipse’s original repositories recently. Several earlier Eclipse disclosures were reportedly incorporated into &lt;a href="https://www.csoonline.com/article/4175970/microsoft-patches-two-zero-day-flaws-in-defender.html"&gt;real-world attacks&lt;/a&gt; shortly after exploit code became available, prompting warnings from Microsoft and multiple security vendors.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-bug-allows-code-execution-through-system-access"&gt;The bug allows code execution through SYSTEM access&lt;/h2&gt;
+
+
+
+&lt;p&gt;In a June 9 blog &lt;a href="https://deadeclipse666.blogspot.com/2026/06/rogueplanet-quick-history.html" rel="noreferrer noopener" target="_blank"&gt;post&lt;/a&gt; titled “RoguePlanet, a quick history,” Eclipse wrote of an initial iteration of the Windows Defender bug. While technical details remain scarce, the blog did mention that it has to do with getting a victim to open a “.vhd(x) on a remote SMB server.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Doing that, the writeup explained, would result in “Defender overwriting its own files and obviously the end outcome was an RCE.” A rough interpretation of the description is that the bug allows executing malicious metadata from a specially crafted virtual hard disk (.vhd) image stored on a remote Server Message Block (SMB) server.&lt;/p&gt;
+
+
+
+&lt;p&gt;Eclipse’s &lt;a href="https://github.com/MSNightmare/RoguePlanet" rel="noreferrer noopener" target="_blank"&gt;PoC&lt;/a&gt; exploit ultimately spawns a SYSTEM shell, allowing arbitrary code to be executed by a potential attacker.&lt;/p&gt;
+
+
+
+&lt;p&gt;A mid-May patch to Defender reportedly sealed the initial attack path detailed by Eclipse, making “junction attacks useless,” which had them re-write RoguePlanet to work around the fix. The current version of the exploit allegedly works against Windows 11 (official channel + Canary) and Windows 10 with the June 2026 patch installed.&lt;/p&gt;
+
+
+
+&lt;p&gt;The PoC code, however, gave out against Windows Server installations since standard users “Cannot mount an ISO image”. While Eclipse was “too drained” to redesign an exploit for this exception, they are certain an exploit is possible.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-feud-behind-the-flaws"&gt;The feud behind the flaws&lt;/h2&gt;
+
+
+
+&lt;p&gt;Microsoft recently &lt;a href="https://github.com/Nightmare-Eclipse" rel="noreferrer noopener" target="_blank"&gt;removed&lt;/a&gt; Eclipse’s GitHub accounts and also disabled their Microsoft Security Response Center (MSRC) access. Following the ban, GitLab also &lt;a href="https://gitlab.com/nightmare-eclipse" rel="noreferrer noopener" target="_blank"&gt;suspended&lt;/a&gt; the researcher’s secondary mirrors.&lt;/p&gt;
+
+
+
+&lt;p&gt;In a May 27 blog &lt;a href="https://www.microsoft.com/en-us/msrc/blog/2026/05/a-shared-responsibility-protecting-customers-through-coordinated-vulnerability-disclosure?source=post_page-----0946117940a4---------------------------------------" rel="noreferrer noopener" target="_blank"&gt;post&lt;/a&gt;, Microsoft criticized the lack of coordinated vulnerability disclosure and threatened legal action, stating that the public disclosures aided attackers and involved a digital crimes unit coordinating with law enforcement.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The vulnerabilities known as &lt;a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41091"&gt;RedSun&lt;/a&gt;, &lt;a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45498"&gt;UnDefend&lt;/a&gt;, &lt;a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33825"&gt;BlueHammer&lt;/a&gt;, &lt;a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45585"&gt;YellowKey&lt;/a&gt;, GreenPlasma, and MiniPlasma were not responsibly disclosed,” the company wrote on Eclipse-disclosed bugs. “Uncoordinated disclosures that put proof-of-concept code for unpatched vulnerabilities into the hands of bad actors are never justifiable and have real-world consequences.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Cybersecurity analyst Kevin Beamount &lt;a href="https://doublepulsar.com/microsofts-stance-on-zero-day-exploits-is-a-dumpster-fire-of-their-own-making-0946117940a4"&gt;called&lt;/a&gt; Microsoft’s response a “dumpster fire of their own making.” Writing of a previous researcher going by the name “SandboxEscaper,” who similarly disclosed Microsoft bugs and published exploit codes, Beaumont pointed to Microsoft’s precedent for hiring such researchers in 2019.&lt;/p&gt;
+
+
+
+&lt;p&gt;“I’m making the point that Microsoft has very publicly hired somebody for doing the same thing Microsoft’s latest blog alleges is criminal behaviour,” Beaumont said.&lt;/p&gt;
+
+
+
+&lt;p&gt;Microsoft did not immediately respond to CSO’s request for a comment.&lt;/p&gt;
+
+
+
+&lt;p&gt;Eclipse announced its return on GitHub on June 9. “Yes, it’s GitHub again, Microsoft forgot that even if they banned my GitLab and GitHub accounts, they cannot unwrite my code. Once it’s public, you can’t remove it.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4183487/microsoft-feud-escalates-as-researcher-drops-new-windows-zero-day.html</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.90</comments>
+      <pubDate>Wed, 10 Jun 2026 12:01:58 +0000</pubDate>
     </item>
     <item>
       <title>Docker security advisory (AV26-550)</title>
@@ -543,7 +506,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-550</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Thu, 04 Jun 2026 19:31:30 +0000</pubDate>
     </item>
     <item>
@@ -552,7 +515,7 @@
       <description>Microsoft today released software updates to plug nearly 200 security holes across its Windows operating systems and supported software, a record number of fixes for the company's monthly Patch Tuesday cycle. Nearly three dozen of those bugs earned Microsoft's most dire "critical" rating, and exploit code for at least three of the weaknesses is now publicly available.</description>
       <guid isPermaLink="false">https://krebsonsecurity.com/2026/06/a-record-breaking-patch-tuesday-for-june-2026/</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Tue, 09 Jun 2026 22:07:28 +0000</pubDate>
     </item>
     <item>
@@ -562,7 +525,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-552</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Fri, 05 Jun 2026 17:19:13 +0000</pubDate>
     </item>
     <item>
@@ -572,7 +535,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-549</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Fri, 05 Jun 2026 18:02:32 +0000</pubDate>
     </item>
     <item>
@@ -683,7 +646,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4183094/anthropic-releases-mythos-class-fable-5-model-with-safeguards-for-cyber-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Tue, 09 Jun 2026 19:40:01 +0000</pubDate>
     </item>
     <item>
@@ -810,7 +773,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4183217/enterprises-know-ai-generated-code-is-vulnerable-theyre-shipping-it-anyway-3.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Wed, 10 Jun 2026 03:05:47 +0000</pubDate>
     </item>
     <item>
@@ -957,7 +920,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4183228/uk-move-to-filter-photos-and-messages-triggers-encryption-worries-for-cisos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.60</comments>
       <pubDate>Wed, 10 Jun 2026 04:16:49 +0000</pubDate>
     </item>
     <item>
@@ -1172,8 +1135,115 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181930/ai-red-teaming-comes-of-age.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.78</comments>
       <pubDate>Wed, 10 Jun 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Autonomous AI agents duped into leaking sensitive data in phishing test</title>
+      <link>https://www.csoonline.com/article/4183445/autonomous-ai-agents-duped-into-leaking-sensitive-data-in-phishing-test.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;AI agents given access to corporate email and business applications could become a new phishing target for attackers, according to cybersecurity researchers, after a test agent built on OpenClaw was tricked into sharing cloud credentials and customer data with an external attacker.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.varonis.com/blog/openclaw-phishing"&gt;Varonis Threat Labs&lt;/a&gt; said it built an OpenClaw AI agent called Pinchy to test whether autonomous agents could fall for the same kinds of phishing attacks that have long targeted employees. Varonis tested the agent in a controlled Google Workspace environment, giving it access to a Gmail inbox with mock AWS credentials, CRM exports, internal conversations, and calendar invites.&lt;/p&gt;
+
+
+
+&lt;p&gt;The test used two configurations: a generic productivity profile and a stricter profile that included email safety instructions telling the agent to be cautious of phishing and verify sender identities before acting on sensitive requests. Varonis said the agent still failed in some scenarios, particularly when requests appeared to come from colleagues and were framed as routine or urgent business tasks.&lt;/p&gt;
+
+
+
+&lt;p&gt;“In some cases, Pinchy not only failed at spotting the phishing attacks, it also performed risky actions that could potentially compromise a real-world organization,” the cybersecurity firm said in its report.&lt;/p&gt;
+
+
+
+&lt;p&gt;In one test, Pinchy forwarded AWS IAM keys, database passwords, and SSH access details to an external Gmail account after receiving what appeared to be a routine request from a colleague for staging credentials.&lt;/p&gt;
+
+
+
+&lt;p&gt;In another test, an attacker asked the agent to send the latest customer export for a quarterly business review presentation. Pinchy retrieved and forwarded a CRM export containing details on 247 enterprise customers, including company names, contact information, contract dates, customer tiers, and roughly $1.28 million in monthly recurring revenue data.&lt;/p&gt;
+
+
+
+&lt;p&gt;But the results were not entirely negative. According to Varonis, the agent performed better against more technical phishing attempts, including a malicious OAuth consent flow disguised as a timesheet platform. In that case, Pinchy inspected the redirect address, identified the destination as suspicious, and stopped before granting consent.&lt;/p&gt;
+
+
+
+&lt;p&gt;“That contrast is what makes the earlier failures structurally important,” Varonis said. “The agent had enough technical reasoning to recognize sophisticated phishing infrastructure. The weak point was social trust and identity verification.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The findings come as companies move AI agents beyond chat interfaces and into workflows where they can retrieve documents, process messages, and act across business software.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="an-architecture-problem"&gt;An architecture problem&lt;/h2&gt;
+
+
+
+&lt;p&gt;The &lt;a href="https://www.csoonline.com/article/4150456/github-phishers-use-fake-openclaw-tokens-to-drain-crypto-wallets.html"&gt;OpenClaw&lt;/a&gt; test points less to a failure of the AI model itself than to the way the agent was configured and deployed, said &lt;a href="https://www.linkedin.com/in/devashri-datta-522b364b/" rel="noreferrer noopener" target="_blank"&gt;Devashri Datta&lt;/a&gt;, a cybersecurity researcher.&lt;/p&gt;
+
+
+
+&lt;p&gt;“The security tests actually proved that the AI models did their jobs well on a purely technical level,” Datta said.&lt;/p&gt;
+
+
+
+&lt;p&gt;The bigger problem was that the agent treated email as both a source of information and a source of instructions, creating what Datta described as a classic IT mistake: mixing the data lane with the control lane.&lt;/p&gt;
+
+
+
+&lt;p&gt;“It didn’t hand over a password because someone asked nicely; it executed what looked like a legitimate operational task,” Datta said. “In any secure system, you never let the data path give administrative orders.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Other analysts said the model should not be taken out of the equation entirely. The risk is not confined to one layer of the technology stack, said &lt;a href="https://confidis.co/about/our-leadership-team/"&gt;Keith Prabhu&lt;/a&gt;, founder and CEO at Confidis. The test showed problems in the model’s ability to judge trust and in the way agent frameworks and enterprise governance handled autonomous access.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Historically, security architectures segregate any orchestration pipeline into authorization, execution, auditing, and escalation,” Prabhu said. “However, this is collapsed into one single pipeline in AI agents, which may lead to them becoming victims of such phishing attacks.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="enterprises-need-enforceable-controls"&gt;Enterprises need enforceable controls&lt;/h2&gt;
+
+
+
+&lt;p&gt;Enterprises should treat AI agents as high-privilege identities, because they can ingest untrusted content while also taking actions across business systems, according to &lt;a href="https://www.linkedin.com/in/sunilvarkey1/"&gt;Sunil Varkey&lt;/a&gt;, a cybersecurity adviser and former CISO.&lt;/p&gt;
+
+
+
+&lt;p&gt;That combination raises the stakes for enterprises, particularly when agents can read emails, documents, web pages, and SaaS comments while also sending messages, exporting data, calling APIs or updating records, he said.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Frameworks like OpenClaw often lack robust enforcement of identity verification, tool-level permissions, and resistance to prompt injection,” Varkey said. “However, the decisive factor in the Varonis tests was over-privileged access, missing human oversight, and absent runtime guardrails.”&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.hfsresearch.com/team/akshat-tyagi/"&gt;Akshat Tyagi&lt;/a&gt;, associate practice leader at HFS Research, said enterprises should focus not only on what an agent can access, but also on what it is allowed to send outside the organization.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Instructions are not controls,” Tyagi said. “If an agent can email sensitive data outside the company just because someone asked convincingly, the problem is not the model alone.”&lt;/p&gt;
+
+
+
+&lt;p&gt;AI agents should have their own identities, with access that can be limited and monitored, Tyagi said. Requests involving credentials or customer data sharing should trigger human review rather than be left to the agent’s judgment.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4183445/autonomous-ai-agents-duped-into-leaking-sensitive-data-in-phishing-test.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.85</comments>
+      <pubDate>Wed, 10 Jun 2026 10:45:31 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-553)</title>
@@ -1182,7 +1252,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-553</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.52</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Mon, 08 Jun 2026 13:50:54 +0000</pubDate>
     </item>
     <item>
@@ -1192,7 +1262,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-554</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Mon, 08 Jun 2026 13:58:08 +0000</pubDate>
     </item>
     <item>
@@ -1202,7 +1272,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-555</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Mon, 08 Jun 2026 14:01:50 +0000</pubDate>
     </item>
     <item>
@@ -1212,7 +1282,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-556</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Mon, 08 Jun 2026 14:06:51 +0000</pubDate>
     </item>
     <item>
@@ -1222,7 +1292,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-557</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Mon, 08 Jun 2026 14:12:47 +0000</pubDate>
     </item>
     <item>
@@ -1232,7 +1302,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-558</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Mon, 08 Jun 2026 14:18:37 +0000</pubDate>
     </item>
     <item>
@@ -1242,8 +1312,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-560</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.62</comments>
+      <comments>Score: 9.50</comments>
       <pubDate>Mon, 08 Jun 2026 17:24:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Who Runs the Ransomware Group ‘The Gentlemen?’</title>
+      <link>https://krebsonsecurity.com/2026/06/who-runs-the-ransomware-group-the-gentlemen/</link>
+      <description>A cybercrime group known as The Gentlemen has emerged as the second most active ransomware gang by victim count, rapidly attracting a talented pool of hackers through an aggressive recruitment strategy that promises affiliates 90 percent of any ransom paid by victims. This post examines clues pointing to a real life identity for the administrator of The Gentlemen ransomware group.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2026/06/who-runs-the-ransomware-group-the-gentlemen/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.59</comments>
+      <pubDate>Wed, 10 Jun 2026 14:03:44 +0000</pubDate>
     </item>
     <item>
       <title>Check Point security advisory (AV26-559) - Update 1</title>
@@ -1252,7 +1332,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-559</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.18</comments>
+      <comments>Score: 10.04</comments>
       <pubDate>Tue, 09 Jun 2026 12:06:36 +0000</pubDate>
     </item>
     <item>
@@ -1262,7 +1342,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-june-2026-monthly-rollup-av26-562</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.20</comments>
+      <comments>Score: 10.06</comments>
       <pubDate>Tue, 09 Jun 2026 12:49:53 +0000</pubDate>
     </item>
     <item>
@@ -1272,7 +1352,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-563</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.21</comments>
+      <comments>Score: 10.07</comments>
       <pubDate>Tue, 09 Jun 2026 12:54:52 +0000</pubDate>
     </item>
     <item>
@@ -1282,7 +1362,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-564</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.21</comments>
+      <comments>Score: 10.07</comments>
       <pubDate>Tue, 09 Jun 2026 12:59:00 +0000</pubDate>
     </item>
     <item>
@@ -1292,7 +1372,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-565</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.21</comments>
+      <comments>Score: 10.07</comments>
       <pubDate>Tue, 09 Jun 2026 13:03:17 +0000</pubDate>
     </item>
     <item>
@@ -1302,7 +1382,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-566</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.25</comments>
+      <comments>Score: 10.11</comments>
       <pubDate>Tue, 09 Jun 2026 14:18:59 +0000</pubDate>
     </item>
     <item>
@@ -1312,7 +1392,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-567</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.30</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Tue, 09 Jun 2026 15:30:20 +0000</pubDate>
     </item>
     <item>
@@ -1322,7 +1402,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-568</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.30</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Tue, 09 Jun 2026 15:35:07 +0000</pubDate>
     </item>
     <item>
@@ -1332,7 +1412,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-561</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.38</comments>
+      <comments>Score: 10.23</comments>
       <pubDate>Tue, 09 Jun 2026 17:51:05 +0000</pubDate>
     </item>
     <item>
@@ -1342,7 +1422,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-june-2026-monthly-rollup-av26-569</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.41</comments>
+      <comments>Score: 10.26</comments>
       <pubDate>Tue, 09 Jun 2026 18:53:14 +0000</pubDate>
     </item>
     <item>
@@ -1352,7 +1432,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-570</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.42</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Tue, 09 Jun 2026 18:59:15 +0000</pubDate>
     </item>
     <item>
@@ -1362,7 +1442,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-571</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.42</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Tue, 09 Jun 2026 19:03:41 +0000</pubDate>
     </item>
     <item>
@@ -1372,8 +1452,27 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-551</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.43</comments>
+      <comments>Score: 10.28</comments>
       <pubDate>Tue, 09 Jun 2026 19:28:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenSSL security advisory (AV26-572)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-572</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-572</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 11.00</comments>
+      <pubDate>Wed, 10 Jun 2026 14:18:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Name That Toon Contest</title>
+      <link>https://www.darkreading.com/events/celebrate-20-years-of-dark-reading-name-that-toon-contest</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://www.darkreading.com/events/celebrate-20-years-of-dark-reading-name-that-toon-contest</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 211.76</comments>
+      <pubDate>Fri, 26 Jun 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
