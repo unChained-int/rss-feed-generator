@@ -8,113 +8,26 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jun 2026 22:50:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 00:20:42 +0000</lastBuildDate>
     <item>
-      <title>Autonomous AI agents duped into leaking sensitive data in phishing test</title>
-      <link>https://www.csoonline.com/article/4183445/autonomous-ai-agents-duped-into-leaking-sensitive-data-in-phishing-test.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;AI agents given access to corporate email and business applications could become a new phishing target for attackers, according to cybersecurity researchers, after a test agent built on OpenClaw was tricked into sharing cloud credentials and customer data with an external attacker.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.varonis.com/blog/openclaw-phishing"&gt;Varonis Threat Labs&lt;/a&gt; said it built an OpenClaw AI agent called Pinchy to test whether autonomous agents could fall for the same kinds of phishing attacks that have long targeted employees. Varonis tested the agent in a controlled Google Workspace environment, giving it access to a Gmail inbox with mock AWS credentials, CRM exports, internal conversations, and calendar invites.&lt;/p&gt;
-
-
-
-&lt;p&gt;The test used two configurations: a generic productivity profile and a stricter profile that included email safety instructions telling the agent to be cautious of phishing and verify sender identities before acting on sensitive requests. Varonis said the agent still failed in some scenarios, particularly when requests appeared to come from colleagues and were framed as routine or urgent business tasks.&lt;/p&gt;
-
-
-
-&lt;p&gt;“In some cases, Pinchy not only failed at spotting the phishing attacks, it also performed risky actions that could potentially compromise a real-world organization,” the cybersecurity firm said in its report.&lt;/p&gt;
-
-
-
-&lt;p&gt;In one test, Pinchy forwarded AWS IAM keys, database passwords, and SSH access details to an external Gmail account after receiving what appeared to be a routine request from a colleague for staging credentials.&lt;/p&gt;
-
-
-
-&lt;p&gt;In another test, an attacker asked the agent to send the latest customer export for a quarterly business review presentation. Pinchy retrieved and forwarded a CRM export containing details on 247 enterprise customers, including company names, contact information, contract dates, customer tiers, and roughly $1.28 million in monthly recurring revenue data.&lt;/p&gt;
-
-
-
-&lt;p&gt;But the results were not entirely negative. According to Varonis, the agent performed better against more technical phishing attempts, including a malicious OAuth consent flow disguised as a timesheet platform. In that case, Pinchy inspected the redirect address, identified the destination as suspicious, and stopped before granting consent.&lt;/p&gt;
-
-
-
-&lt;p&gt;“That contrast is what makes the earlier failures structurally important,” Varonis said. “The agent had enough technical reasoning to recognize sophisticated phishing infrastructure. The weak point was social trust and identity verification.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The findings come as companies move AI agents beyond chat interfaces and into workflows where they can retrieve documents, process messages, and act across business software.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="an-architecture-problem"&gt;An architecture problem&lt;/h2&gt;
-
-
-
-&lt;p&gt;The &lt;a href="https://www.csoonline.com/article/4150456/github-phishers-use-fake-openclaw-tokens-to-drain-crypto-wallets.html"&gt;OpenClaw&lt;/a&gt; test points less to a failure of the AI model itself than to the way the agent was configured and deployed, said &lt;a href="https://www.linkedin.com/in/devashri-datta-522b364b/" rel="noreferrer noopener" target="_blank"&gt;Devashri Datta&lt;/a&gt;, a cybersecurity researcher.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The security tests actually proved that the AI models did their jobs well on a purely technical level,” Datta said.&lt;/p&gt;
-
-
-
-&lt;p&gt;The bigger problem was that the agent treated email as both a source of information and a source of instructions, creating what Datta described as a classic IT mistake: mixing the data lane with the control lane.&lt;/p&gt;
-
-
-
-&lt;p&gt;“It didn’t hand over a password because someone asked nicely; it executed what looked like a legitimate operational task,” Datta said. “In any secure system, you never let the data path give administrative orders.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Other analysts said the model should not be taken out of the equation entirely. The risk is not confined to one layer of the technology stack, said &lt;a href="https://confidis.co/about/our-leadership-team/"&gt;Keith Prabhu&lt;/a&gt;, founder and CEO at Confidis. The test showed problems in the model’s ability to judge trust and in the way agent frameworks and enterprise governance handled autonomous access.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Historically, security architectures segregate any orchestration pipeline into authorization, execution, auditing, and escalation,” Prabhu said. “However, this is collapsed into one single pipeline in AI agents, which may lead to them becoming victims of such phishing attacks.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="enterprises-need-enforceable-controls"&gt;Enterprises need enforceable controls&lt;/h2&gt;
-
-
-
-&lt;p&gt;Enterprises should treat AI agents as high-privilege identities, because they can ingest untrusted content while also taking actions across business systems, according to &lt;a href="https://www.linkedin.com/in/sunilvarkey1/"&gt;Sunil Varkey&lt;/a&gt;, a cybersecurity adviser and former CISO.&lt;/p&gt;
-
-
-
-&lt;p&gt;That combination raises the stakes for enterprises, particularly when agents can read emails, documents, web pages, and SaaS comments while also sending messages, exporting data, calling APIs or updating records, he said.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Frameworks like OpenClaw often lack robust enforcement of identity verification, tool-level permissions, and resistance to prompt injection,” Varkey said. “However, the decisive factor in the Varonis tests was over-privileged access, missing human oversight, and absent runtime guardrails.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.hfsresearch.com/team/akshat-tyagi/"&gt;Akshat Tyagi&lt;/a&gt;, associate practice leader at HFS Research, said enterprises should focus not only on what an agent can access, but also on what it is allowed to send outside the organization.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Instructions are not controls,” Tyagi said. “If an agent can email sensitive data outside the company just because someone asked convincingly, the problem is not the model alone.”&lt;/p&gt;
-
-
-
-&lt;p&gt;AI agents should have their own identities, with access that can be limited and monitored, Tyagi said. Requests involving credentials or customer data sharing should trigger human review rather than be left to the agent’s judgment.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4183445/autonomous-ai-agents-duped-into-leaking-sensitive-data-in-phishing-test.html</guid>
+      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
+      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
-      <pubDate>Wed, 10 Jun 2026 10:45:31 +0000</pubDate>
+      <comments>Score: 7.71</comments>
+      <pubDate>Thu, 11 Jun 2026 22:20:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>CISA tells govt agencies to patch critical exploited flaws in 3 days</title>
+      <link>https://www.bleepingcomputer.com/news/security/cisa-tells-govt-agencies-to-patch-critical-exploited-flaws-in-3-days/</link>
+      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) announced a new Binding Operational Directive, 26-04, that prioritizes security updates for Federal Civilian Executive Branch (FCEB) agencies. [...]</description>
+      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/cisa-tells-govt-agencies-to-patch-critical-exploited-flaws-in-3-days/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.82</comments>
+      <pubDate>Thu, 11 Jun 2026 08:46:44 -0400</pubDate>
     </item>
     <item>
       <title>Progress security advisory (AV26-552)</title>
@@ -123,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-552</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Fri, 05 Jun 2026 17:19:13 +0000</pubDate>
     </item>
     <item>
@@ -133,18 +46,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-549</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Fri, 05 Jun 2026 18:02:32 +0000</pubDate>
-    </item>
-    <item>
-      <title>CISA tells govt agencies to patch critical exploited flaws in 3 days</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-tells-govt-agencies-to-patch-critical-exploited-flaws-in-3-days/</link>
-      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) announced a new Binding Operational Directive, 26-04, that prioritizes security updates for Federal Civilian Executive Branch (FCEB) agencies. [...]</description>
-      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/cisa-tells-govt-agencies-to-patch-critical-exploited-flaws-in-3-days/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
-      <pubDate>Thu, 11 Jun 2026 08:46:44 -0400</pubDate>
     </item>
     <item>
       <title>CISA tells agencies to patch smarter, not harder — foreshadowing broader industry practice</title>
@@ -334,7 +237,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4183750/cisa-tells-agencies-to-patch-smarter-not-harder-foreshadowing-broader-industry-practice.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Wed, 10 Jun 2026 20:23:35 +0000</pubDate>
     </item>
     <item>
@@ -505,7 +408,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4183859/github-finally-pulls-the-plug-on-automatic-install-script-execution-for-npm-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Thu, 11 Jun 2026 00:46:50 +0000</pubDate>
     </item>
     <item>
@@ -515,7 +418,7 @@
       <guid isPermaLink="false">https://krebsonsecurity.com/2026/06/who-runs-the-ransomware-group-the-gentlemen/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Wed, 10 Jun 2026 14:03:44 +0000</pubDate>
     </item>
     <item>
@@ -706,7 +609,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4183772/frontier-ai-models-offer-sneak-peak-of-seismic-cyber-shifts-ahead.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Thu, 11 Jun 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -919,7 +822,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4183666/what-sre-teams-need-before-they-trust-ai-agents.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Thu, 11 Jun 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1026,7 +929,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4184082/servicenow-fixes-api-issue-after-reports-of-suspicious-tenant-activity.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Thu, 11 Jun 2026 13:17:53 +0000</pubDate>
     </item>
     <item>
@@ -1036,7 +939,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-553</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.69</comments>
       <pubDate>Mon, 08 Jun 2026 13:50:54 +0000</pubDate>
     </item>
     <item>
@@ -1046,7 +949,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-554</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Mon, 08 Jun 2026 13:58:08 +0000</pubDate>
     </item>
     <item>
@@ -1056,7 +959,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-555</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Mon, 08 Jun 2026 14:01:50 +0000</pubDate>
     </item>
     <item>
@@ -1066,7 +969,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-556</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Mon, 08 Jun 2026 14:06:51 +0000</pubDate>
     </item>
     <item>
@@ -1076,7 +979,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-557</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Mon, 08 Jun 2026 14:12:47 +0000</pubDate>
     </item>
     <item>
@@ -1086,7 +989,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-558</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Mon, 08 Jun 2026 14:18:37 +0000</pubDate>
     </item>
     <item>
@@ -1096,7 +999,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-560</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.79</comments>
+      <comments>Score: 8.76</comments>
       <pubDate>Mon, 08 Jun 2026 17:24:16 +0000</pubDate>
     </item>
     <item>
@@ -1106,7 +1009,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-559</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.14</comments>
       <pubDate>Tue, 09 Jun 2026 12:06:36 +0000</pubDate>
     </item>
     <item>
@@ -1116,7 +1019,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-june-2026-monthly-rollup-av26-562</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Tue, 09 Jun 2026 12:49:53 +0000</pubDate>
     </item>
     <item>
@@ -1126,7 +1029,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-563</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Tue, 09 Jun 2026 12:54:52 +0000</pubDate>
     </item>
     <item>
@@ -1136,7 +1039,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-564</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Tue, 09 Jun 2026 12:59:00 +0000</pubDate>
     </item>
     <item>
@@ -1146,7 +1049,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-565</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Tue, 09 Jun 2026 13:03:17 +0000</pubDate>
     </item>
     <item>
@@ -1156,7 +1059,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-566</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.22</comments>
+      <comments>Score: 9.19</comments>
       <pubDate>Tue, 09 Jun 2026 14:18:59 +0000</pubDate>
     </item>
     <item>
@@ -1166,7 +1069,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-568</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.21</comments>
       <pubDate>Tue, 09 Jun 2026 15:35:07 +0000</pubDate>
     </item>
     <item>
@@ -1176,7 +1079,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-561</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.27</comments>
       <pubDate>Tue, 09 Jun 2026 17:51:05 +0000</pubDate>
     </item>
     <item>
@@ -1186,7 +1089,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-june-2026-monthly-rollup-av26-569</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.33</comments>
+      <comments>Score: 9.29</comments>
       <pubDate>Tue, 09 Jun 2026 18:53:14 +0000</pubDate>
     </item>
     <item>
@@ -1196,7 +1099,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-570</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.33</comments>
+      <comments>Score: 9.29</comments>
       <pubDate>Tue, 09 Jun 2026 18:59:15 +0000</pubDate>
     </item>
     <item>
@@ -1206,7 +1109,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-571</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.33</comments>
+      <comments>Score: 9.30</comments>
       <pubDate>Tue, 09 Jun 2026 19:03:41 +0000</pubDate>
     </item>
     <item>
@@ -1216,7 +1119,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-551</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.34</comments>
+      <comments>Score: 9.31</comments>
       <pubDate>Tue, 09 Jun 2026 19:28:10 +0000</pubDate>
     </item>
     <item>
@@ -1226,7 +1129,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-572</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.85</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Wed, 10 Jun 2026 14:18:42 +0000</pubDate>
     </item>
     <item>
@@ -1236,7 +1139,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-573</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.85</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Wed, 10 Jun 2026 14:23:28 +0000</pubDate>
     </item>
     <item>
@@ -1246,7 +1149,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-574</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.86</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Wed, 10 Jun 2026 14:29:05 +0000</pubDate>
     </item>
     <item>
@@ -1256,7 +1159,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-575</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.86</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Wed, 10 Jun 2026 14:34:58 +0000</pubDate>
     </item>
     <item>
@@ -1266,7 +1169,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-576</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.86</comments>
+      <comments>Score: 9.82</comments>
       <pubDate>Wed, 10 Jun 2026 14:43:44 +0000</pubDate>
     </item>
     <item>
@@ -1276,7 +1179,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-577</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.87</comments>
+      <comments>Score: 9.82</comments>
       <pubDate>Wed, 10 Jun 2026 14:54:16 +0000</pubDate>
     </item>
     <item>
@@ -1286,7 +1189,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-578</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.90</comments>
       <pubDate>Wed, 10 Jun 2026 17:20:18 +0000</pubDate>
     </item>
     <item>
@@ -1296,7 +1199,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-579</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.90</comments>
       <pubDate>Wed, 10 Jun 2026 17:24:19 +0000</pubDate>
     </item>
     <item>
@@ -1306,7 +1209,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-580</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.95</comments>
+      <comments>Score: 9.90</comments>
       <pubDate>Wed, 10 Jun 2026 17:29:34 +0000</pubDate>
     </item>
     <item>
@@ -1316,7 +1219,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-581</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.95</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Wed, 10 Jun 2026 17:39:07 +0000</pubDate>
     </item>
     <item>
@@ -1326,7 +1229,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-582</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Wed, 10 Jun 2026 18:01:52 +0000</pubDate>
     </item>
     <item>
@@ -1336,7 +1239,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-583</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Wed, 10 Jun 2026 18:06:32 +0000</pubDate>
     </item>
     <item>
@@ -1346,7 +1249,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-584</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Wed, 10 Jun 2026 18:12:08 +0000</pubDate>
     </item>
     <item>
@@ -1356,7 +1259,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-585</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.98</comments>
+      <comments>Score: 9.94</comments>
       <pubDate>Wed, 10 Jun 2026 18:41:12 +0000</pubDate>
     </item>
     <item>
@@ -1366,7 +1269,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-586</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.00</comments>
+      <comments>Score: 9.95</comments>
       <pubDate>Wed, 10 Jun 2026 19:12:32 +0000</pubDate>
     </item>
     <item>
@@ -1376,7 +1279,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-587</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.65</comments>
+      <comments>Score: 10.59</comments>
       <pubDate>Thu, 11 Jun 2026 13:56:53 +0000</pubDate>
     </item>
     <item>
@@ -1386,7 +1289,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-588</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.65</comments>
+      <comments>Score: 10.60</comments>
       <pubDate>Thu, 11 Jun 2026 14:11:00 +0000</pubDate>
     </item>
     <item>
@@ -1396,7 +1299,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-589</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.82</comments>
+      <comments>Score: 10.76</comments>
       <pubDate>Thu, 11 Jun 2026 18:28:15 +0000</pubDate>
     </item>
     <item>
@@ -1406,7 +1309,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-590</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.82</comments>
+      <comments>Score: 10.77</comments>
       <pubDate>Thu, 11 Jun 2026 18:32:02 +0000</pubDate>
     </item>
     <item>
@@ -1416,7 +1319,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-567</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.85</comments>
+      <comments>Score: 10.79</comments>
       <pubDate>Thu, 11 Jun 2026 19:07:06 +0000</pubDate>
     </item>
     <item>
@@ -1425,7 +1328,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/celebrate-20-years-of-dark-reading-name-that-toon-contest</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 151.34</comments>
+      <comments>Score: 149.01</comments>
       <pubDate>Fri, 26 Jun 2026 11:00:00 +0000</pubDate>
     </item>
   </channel>
