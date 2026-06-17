@@ -8,144 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jun 2026 06:15:29 +0000</lastBuildDate>
-    <item>
-      <title>Attackers can turn AI agent guardrails into denial-of-service weapons</title>
-      <link>https://www.csoonline.com/article/4185051/attackers-can-turn-ai-agent-guardrails-into-denial-of-service-weapons.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Attackers can turn AI agent guardrails into denial-of-service weapons, according to new research that found a single poisoned document can dramatically slow shared AI agent workflows by trapping reasoning-based safety systems in extended thinking loops.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Reasoning-based guardrails introduce a new attack surface where security mechanisms themselves become the target,” the researchers from Hong Kong University of Science and Technology and collaborators &lt;a href="https://arxiv.org/pdf/2606.14517" rel="noreferrer noopener" target="_blank"&gt;wrote in the paper&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;They added that “a single poisoned document can saturate shared guardrail infrastructures, effectively starving co-located agents and paralyzing the entire system,” describing a reasoning-extension denial-of-service (DoS) attack that targets the security layer rather than the underlying AI model.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers tested the technique against four AI agent frameworks — LangGraph, BrowserGym, OpenHands, and OSWorld — and found processing times increased across deployments.&lt;/p&gt;
-
-
-
-&lt;p&gt;LangGraph recorded the biggest slowdown at 148x, followed by BrowserGym at 131x, OpenHands at 36.3x, and OSWorld at 18x, according to the paper.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="attack-exploits-reasoning-rather-than-bypassing-security"&gt;Attack exploits reasoning rather than bypassing security&lt;/h2&gt;
-
-
-
-&lt;p&gt;Unlike prompt injection and jailbreak attacks that seek to manipulate model outputs or circumvent safety controls, the new technique targets the reasoning process used by AI agent guardrails, the researchers wrote in the paper.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Unlike traditional LLM attacks that primarily compromise integrity, reasoning-extension DoS targets availability,” the researchers wrote, arguing that AI security discussions have focused largely on preventing unsafe outputs while overlooking resource exhaustion.&lt;/p&gt;
-
-
-
-&lt;p&gt;The researchers also found that stronger AI safety checks may come at the cost of slower performance.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The stronger the guardrail reasons, the longer it reasons,” the researchers wrote, explaining that more sophisticated reasoning can inadvertently increase the time and resources required to process malicious inputs.&lt;/p&gt;
-
-
-
-&lt;p&gt;The attack also worked across eight different LLM families. According to the paper, prompts designed for one open-source model were also effective against other models, suggesting attackers would not need detailed knowledge of a specific proprietary system&lt;/p&gt;
-
-
-
-&lt;p&gt;OpenAI and Anthropic, whose reasoning-based guardrails are referenced in the paper as examples of LLM-powered security mechanisms, did not immediately respond to requests for comment.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="shared-ai-governance-creates-concentration-risk"&gt;Shared AI governance creates concentration risk&lt;/h2&gt;
-
-
-
-&lt;p&gt;“The more important takeaway is not necessarily whether a specific ‘guardrail DoS’ technique proves practical at scale, but that AI governance infrastructure is increasingly becoming critical infrastructure,” said Sakshi Grover, senior research manager for cybersecurity services at IDC Asia/Pacific.&lt;/p&gt;
-
-
-
-&lt;p&gt;“As agentic AI deployments mature, organizations will need to think about resilience, scalability, and fault tolerance for AI control planes in the same way they already do for identity services, API gateways, and other business-critical platforms,” she said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Grover said centralized AI governance also introduces concentration risk.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The consolidation dynamic is real — organizations are rationalizing AI governance by routing multiple agents through shared safety infrastructure, which creates concentration risk,” she said. “A successful guardrail DoS doesn’t need to breach anything; it just needs to make the system unusable at a critical moment.”&lt;/p&gt;
-
-
-
-&lt;p&gt;For business-critical workflows such as automated claims processing, AI-assisted incident response and real-time fraud detection, even temporary latency or resource exhaustion could have material consequences, she added.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="existing-mitigations-offer-only-partial-protection"&gt;Existing mitigations offer only partial protection&lt;/h2&gt;
-
-
-
-&lt;p&gt;The researchers found conventional prompt injection filters remained susceptible to the proposed attack, while strict token limits simply shifted deployments between fail-open and fail-closed behavior. Smaller reasoning budgets reduced latency but also weakened security decisions, creating a tradeoff between availability and protection.&lt;/p&gt;
-
-
-
-&lt;p&gt;The study also found that larger reasoning models often spent more time following the injected reasoning structure, amplifying rather than mitigating the attack.&lt;/p&gt;
-
-
-
-&lt;p&gt;The findings also reinforce the need for enterprises to move beyond model-level security and focus on governance of autonomous AI systems, analysts said.&lt;/p&gt;
-
-
-
-&lt;p&gt;Through 2029, more than 50% of successful cybersecurity attacks against AI agents will exploit access control issues using direct or indirect prompt injection as an attack vector, while through 2028 at least 80% of unauthorized AI agent transactions will result from internal policy violations or misguided AI behavior rather than malicious attacks, said Apeksha Kaushik, senior principal analyst at Gartner.&lt;/p&gt;
-
-
-
-&lt;p&gt;“The transition to autonomous multiagent systems introduces new risks, such as behavioral drift and destructive actions,” Kaushik said, adding that organizations should implement AI agent security lifecycle management that continuously validates agent integrity from deployment through retirement.&lt;/p&gt;
-
-
-
-&lt;p&gt;Current fragmented tools cannot effectively govern complex multi-agent systems, she said, requiring unified discovery, identity, and guardian capabilities to monitor and block rogue behaviors at scale.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ai-governance-moves-to-the-forefront"&gt;AI governance moves to the forefront&lt;/h2&gt;
-
-
-
-&lt;p&gt;Grover said that organizations should begin preparing now by decoupling guardrail infrastructure from agent compute, implementing tiered or asynchronous guardrail checks where possible, monitoring for anomalous reasoning depth, and explicitly red-teaming AI safety stacks for availability failures rather than focusing exclusively on harmful outputs. &lt;/p&gt;
-
-
-
-&lt;p&gt;“Architecture choices are becoming as consequential as model safety choices,” Grover said. “The organizations that treat agentic AI infrastructure with the same rigor they apply to critical application infrastructure will be better positioned. The ones that don’t will find out the hard way.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4185051/attackers-can-turn-ai-agent-guardrails-into-denial-of-service-weapons.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Mon, 15 Jun 2026 12:09:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>Apache security advisory (AV26-563)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-563</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-563</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Tue, 09 Jun 2026 12:54:52 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 17 Jun 2026 11:50:56 +0000</lastBuildDate>
     <item>
       <title>Veeam security advisory (AV26-564)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-564</link>
@@ -153,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-564</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 09 Jun 2026 12:59:00 +0000</pubDate>
     </item>
     <item>
@@ -163,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-565</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 09 Jun 2026 13:03:17 +0000</pubDate>
     </item>
     <item>
@@ -173,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-566</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 09 Jun 2026 14:18:59 +0000</pubDate>
     </item>
     <item>
@@ -183,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-568</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 09 Jun 2026 15:35:07 +0000</pubDate>
     </item>
     <item>
@@ -193,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-561</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Tue, 09 Jun 2026 17:51:05 +0000</pubDate>
     </item>
     <item>
@@ -203,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-june-2026-monthly-rollup-av26-569</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Tue, 09 Jun 2026 18:53:14 +0000</pubDate>
     </item>
     <item>
@@ -213,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-570</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Tue, 09 Jun 2026 18:59:15 +0000</pubDate>
     </item>
     <item>
@@ -223,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-571</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Tue, 09 Jun 2026 19:03:41 +0000</pubDate>
     </item>
     <item>
@@ -233,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-551</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Tue, 09 Jun 2026 19:28:10 +0000</pubDate>
     </item>
     <item>
@@ -244,7 +107,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.71</comments>
-      <pubDate>Wed, 17 Jun 2026 04:15:29 +0000</pubDate>
+      <pubDate>Wed, 17 Jun 2026 09:50:56 +0000</pubDate>
     </item>
     <item>
       <title>OpenSSL security advisory (AV26-572)</title>
@@ -253,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-572</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Wed, 10 Jun 2026 14:18:42 +0000</pubDate>
     </item>
     <item>
@@ -263,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-573</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Wed, 10 Jun 2026 14:23:28 +0000</pubDate>
     </item>
     <item>
@@ -273,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-574</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Wed, 10 Jun 2026 14:29:05 +0000</pubDate>
     </item>
     <item>
@@ -283,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-575</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 10 Jun 2026 14:34:58 +0000</pubDate>
     </item>
     <item>
@@ -293,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-576</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 10 Jun 2026 14:43:44 +0000</pubDate>
     </item>
     <item>
@@ -303,7 +166,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-577</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 10 Jun 2026 14:54:16 +0000</pubDate>
     </item>
     <item>
@@ -313,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-578</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 10 Jun 2026 17:20:18 +0000</pubDate>
     </item>
     <item>
@@ -323,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-579</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 10 Jun 2026 17:24:19 +0000</pubDate>
     </item>
     <item>
@@ -333,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-580</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 10 Jun 2026 17:29:34 +0000</pubDate>
     </item>
     <item>
@@ -343,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-581</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 10 Jun 2026 17:39:07 +0000</pubDate>
     </item>
     <item>
@@ -353,7 +216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-582</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 10 Jun 2026 18:01:52 +0000</pubDate>
     </item>
     <item>
@@ -363,7 +226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-583</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 10 Jun 2026 18:06:32 +0000</pubDate>
     </item>
     <item>
@@ -373,7 +236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-584</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 10 Jun 2026 18:12:08 +0000</pubDate>
     </item>
     <item>
@@ -383,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-585</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Wed, 10 Jun 2026 18:41:12 +0000</pubDate>
     </item>
     <item>
@@ -393,7 +256,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-586</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Wed, 10 Jun 2026 19:12:32 +0000</pubDate>
     </item>
     <item>
@@ -403,7 +266,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-588</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Thu, 11 Jun 2026 14:11:00 +0000</pubDate>
     </item>
     <item>
@@ -413,7 +276,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-589</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Thu, 11 Jun 2026 18:28:15 +0000</pubDate>
     </item>
     <item>
@@ -423,7 +286,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-590</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Thu, 11 Jun 2026 18:32:02 +0000</pubDate>
     </item>
     <item>
@@ -433,7 +296,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-567</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Thu, 11 Jun 2026 19:07:06 +0000</pubDate>
     </item>
     <item>
@@ -652,7 +515,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181934/zero-trust-isnt-broken-but-most-companies-are-doing-it-wrong-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Tue, 16 Jun 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -763,7 +626,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4185525/cisco-sd-wan-flaw-puts-spotlight-on-enterprise-management-plane-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Tue, 16 Jun 2026 09:45:16 +0000</pubDate>
     </item>
     <item>
@@ -773,7 +636,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-591</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Fri, 12 Jun 2026 13:37:46 +0000</pubDate>
     </item>
     <item>
@@ -783,7 +646,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-592</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Fri, 12 Jun 2026 13:46:17 +0000</pubDate>
     </item>
     <item>
@@ -793,7 +656,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-593</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Fri, 12 Jun 2026 13:55:51 +0000</pubDate>
     </item>
     <item>
@@ -803,7 +666,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-594</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Fri, 12 Jun 2026 14:09:11 +0000</pubDate>
     </item>
     <item>
@@ -813,7 +676,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-587</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Fri, 12 Jun 2026 18:03:41 +0000</pubDate>
     </item>
     <item>
@@ -823,7 +686,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av26-595</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Fri, 12 Jun 2026 19:12:40 +0000</pubDate>
     </item>
     <item>
@@ -833,7 +696,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-596</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Fri, 12 Jun 2026 19:27:44 +0000</pubDate>
     </item>
     <item>
@@ -960,8 +823,201 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4185954/microsoft-says-you-dont-need-another-email-security-tool-experts-say-not-so-fast.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
+      <comments>Score: 8.64</comments>
       <pubDate>Wed, 17 Jun 2026 02:46:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>5 AI risk management frameworks for shoring up key gaps</title>
+      <link>https://www.csoonline.com/article/4185917/5-ai-risk-management-frameworks-for-shoring-up-key-gaps.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Organizations racing to embed AI into business operations are realizing that the risk management frameworks they’ve relied on for decades aren’t built for the behaviors, failure modes, and ethical complexities AI systems introduce.&lt;/p&gt;
+
+
+
+&lt;p&gt;Fortunately, a new generation of AI-specific frameworks has emerged to give organizations a structured way to identify where AI can go wrong, what controls to put in place, and how to demonstrate responsible AI use to regulators, customers, and investors. Not all of these emerging frameworks address the same problem. Some focus on governance and organizational accountability, others on technical security controls, threat modeling, or regulatory compliance. Choosing the right one for your organization depends on where your most pressing gaps reside.&lt;/p&gt;
+
+
+
+&lt;p&gt;The frameworks are complementary, not competing, because they have different intents, priorities, and objectives, says Nicole Carignan, CISO at Darktrace.&lt;/p&gt;
+
+
+
+&lt;p&gt;“There is overlap across these frameworks, but that overlap is helpful,” Carignan points out. “It reinforces the core practices organizations need to get right: governance, data integrity, security, accountability, oversight, testing, and continuous improvement.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Here are five frameworks worth considering for your AI risk management needs.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="iso-iec-42001-artificial-intelligence-management-system"&gt;ISO/IEC 42001 Artificial Intelligence Management System&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.iso.org/standard/81230.html"&gt;ISO/IEC 42001:2023&lt;/a&gt; is the first internationally recognized formal standard for AI management. Published by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) in December 2023, ISO/IEC 42001 follows a similar structure to management system standards such as ISO 27001. The framework gives organizations a structured methodology for establishing policies, processes, operational controls, and accountability mechanisms to ensure responsible development and use of AI.&lt;/p&gt;
+
+
+
+&lt;p&gt;ISO/IEC 42001 requires companies to document how they design, monitor, validate, and control AI systems, while also requiring them to conduct AI impact assessments to evaluate potential legal, ethical, and societal impacts. The standard covers governance structures, third-party supplier oversight, data management, transparency obligations, and lifecycle management.&lt;/p&gt;
+
+
+
+&lt;p&gt;ISO/IEC 42001 is a voluntary but certifiable standard that applies across sectors and organization sizes. A growing number of organizations have begun using it to demonstrate adherence to responsible AI practice and alignment with regulations such as the &lt;a href="https://artificialintelligenceact.eu/"&gt;EU AI Act&lt;/a&gt;. The ISO/IEC have &lt;a href="https://www.iso.org/home/insights-news/resources/iso-42001-explained-what-it-is.html?utm_source=chatgpt.com"&gt;described the framework&lt;/a&gt; as helping organizations align their AI practices with legal and regulatory requirements; demonstrate responsible AI governance; manage risks tied to bias, safety, and security; and enhance stakeholder trust.&lt;/p&gt;
+
+
+
+&lt;p&gt;ISO 42001 is a great option for organizations just getting started with AI risk management, says Nicole Carignan, senior vice president for security and AI strategy and field CISO at Darktrace.&lt;/p&gt;
+
+
+
+&lt;p&gt;“It provides the strongest foundation for building an AI risk management program, rather than addressing individual AI risks in isolation,” she explains. “From a program-building standpoint, ISO 42001 is the right place to start because it forces organizations to think holistically about ownership, governance, oversight, data integrity, security risk mitigation, accountability, and continuous improvement.”&lt;/p&gt;
+
+
+
+&lt;p&gt;One downside Carignan is that the framework is resource-intensive to implement, and the full standard is not publicly available. Both challenges can be formidable for organizations that are very early in their AI governance journey, she says.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="nist-ai-risk-management-framework-ai-rmf"&gt;NIST AI Risk Management Framework (AI RMF)&lt;/h2&gt;
+
+
+
+&lt;p&gt;Released by the US National Institute of Standards and Technology (NIST) in January 2023, the &lt;a href="https://airc.nist.gov/AI_RMF_Knowledge_Base/AI_RMF"&gt;AI Risk Management Framework (AI RMF)&lt;/a&gt; is a voluntary framework designed to help organizations of all sizes and across all sectors identify, assess, and manage risks associated with AI systems across their entire lifecycle.&lt;/p&gt;
+
+
+
+&lt;p&gt;The framework consists of two parts. The first offers guidance on how organizations should think about AI risks and the characteristics of trustworthy AI systems, such as validity, safety, security, transparency, explainability, privacy, and fairness. The second part is structured around four interconnected functions:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;&lt;strong&gt;Govern&lt;/strong&gt; focuses on what organizations need to do to build internal culture, policies, and accountability structures for AI use.&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Map&lt;/strong&gt; involves understanding the broader context and potential risks of specific AI systems.&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Measure&lt;/strong&gt; focuses on how organizations must evaluate and track those risks using both qualitative and quantitative methods.&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Manage&lt;/strong&gt; provides guidance on risk prioritization and appropriate responses such as mitigation, transfer, or acceptance.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;NIST AI RMF includes a separate Playbook that provides practical implementation steps to help organizations implement each of these functions effectively.&lt;/p&gt;
+
+
+
+&lt;p&gt;For organizations that are not ready to pursue ISO 42001 formally, the NIST AI RMF can serve as a more flexible and accessible starting point, Carignan says.&lt;/p&gt;
+
+
+
+&lt;p&gt;“It is public and gives organizations a common language for understanding and mitigating AI risk,” she adds. “But if the goal is to build a durable AI risk program, ISO 42001 is the strongest foundation.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Ram Varadarajan, CEO at Acalvio recommends NIST AI RMF as a good place for organization to get started on AI risk governance, “because it’s built around maturity rather than pass/fail audits.” Its gives organizations starting from zero an opportunity to discover where they stand rather than immediately handing out a failing grade.&lt;/p&gt;
+
+
+
+&lt;p&gt;“More importantly, it forces the three conversations that have to happen first: who owns AI risk, what AI is actually running, and who gets hurt if something goes wrong,” Vardarajan says.&lt;/p&gt;
+
+
+
+&lt;p&gt;While researchers at Forrester described NIST AI RMF as a &lt;a href="https://www.forrester.com/blogs/nist-ai-risk-management-framework-1-0-what-it-means-for-enterprises/"&gt;step in the right direction&lt;/a&gt; soon after its launch, they also expressed concern over conflicts of interest among the multiple stakeholders that helped draft the framework, the absence of an explicit role for data governance, and the fact that the framework was “still descriptive and not prescriptive.”&lt;/p&gt;
+
+
+
+&lt;p&gt;As a result, “Chief data officers and heads of data science need to navigate this framework wisely to interpret and apply it to their AI governance efforts,” the analyst firm advised.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="enisa-framework-for-ai-cybersecurity-practices"&gt;ENISA Framework for AI Cybersecurity Practices&lt;/h2&gt;
+
+
+
+&lt;p&gt;ENISA, the European Union Agency for Cybersecurity, developed its &lt;a href="https://www.faicp-framework.com/"&gt;Framework for AI Cybersecurity Practices (FAICP)&lt;/a&gt; in anticipation of the &lt;a href="https://artificialintelligenceact.eu/"&gt;EU AI Act&lt;/a&gt;. Published in June 2023, the framework gives EU organizations structured, AI-specific cybersecurity guidance for enhancing the trustworthiness of their AI activities.&lt;/p&gt;
+
+
+
+&lt;p&gt;FAICP is organized around three progressive layers. The first covers foundational information and communications technology cybersecurity practices that AI systems inherit by running on standard software infrastructure. The second addresses &lt;a href="https://www.csoonline.com/article/4110008/top-cyber-threats-to-your-ai-systems-and-infrastructure.html"&gt;AI-specific risks&lt;/a&gt;, including adversarial attacks, model tampering, data pipeline integrity, and &lt;a href="https://www.csoonline.com/article/4015077/ai-supply-chain-threats-are-looming-as-security-practices-lag.html"&gt;supply chain security&lt;/a&gt;. The third provides sector-specific guidance for regulated industries such as energy, healthcare, and telecommunications.&lt;/p&gt;
+
+
+
+&lt;p&gt;According to the European Parliament, FAICP’s layered nature provides organizations with “a gradual approach” to enhancing the trustworthiness of their AI activities.&lt;/p&gt;
+
+
+
+&lt;p&gt;FAICP is voluntary, but its close alignment with the EU AI Act and the &lt;a href="https://www.enisa.europa.eu/topics/awareness-and-cyber-hygiene/raising-awareness-campaigns/network-and-information-systems-directive-2-nis2"&gt;NIS2 Directive&lt;/a&gt;, which is the EU’s primary cybersecurity law, means that EU regulators consider the framework as a baseline for AI governance practices at all organizations doing business within the EU.&lt;/p&gt;
+
+
+
+&lt;p&gt;FAICP is important because “Europe’s AI Act will likely become the global reference point, the same way Europe’s data privacy law became the de facto standard for companies worldwide regardless of where they’re headquartered,” Vardarajan predicts.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Within two to three years, expect two frameworks to dominate: the EU AI Act setting the legal floor, and NIST AI RMF providing the operational playbook for meeting it,” Vardarajan says.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="iso-iec-238942023-information-technology-artificial-intelligence-guidance-on-risk-management"&gt;ISO/IEC 23894:2023 Information Technology — Artificial Intelligence — Guidance on Risk Management&lt;/h2&gt;
+
+
+
+&lt;p&gt;The &lt;a href="https://www.iso.org/standard/77304.html"&gt;ISO/IEC 23894:2923&lt;/a&gt; framework provides organizations with specific guidance on managing risks associated with artificial intelligence. Released jointly by ISO and IEC in February 2023, the framework builds on and adapts the ISO 31000 general risk management standard to address AI-specific risks such as those tied to&lt;strong&gt; &lt;/strong&gt;algorithmic bias, model drift, unpredictable behavior, and lack of transparency in decision-making. It provides organizations a way to evaluate the likelihood and potential consequences of these risks throughout the full AI system lifecycle.&lt;/p&gt;
+
+
+
+&lt;p&gt;The ISO has &lt;a href="https://iso-library.com/standard/23894/"&gt;described the standard&lt;/a&gt; as a “companion to ISO 31000 (Risk Management) and ISO/IEC 42001 (AI Management Systems).” The main difference between ISO/IEC 42001 and ISO/IEC 23894 is that the former is a certifiable management system. It provides organizations with the full requirements for establishing, implementing, and maintaining an AI management system. ISO/IEC 23894:2023 on the other hand is a guidance-only standard focused on how to identify, assess, and manage AI-specific risks.&lt;/p&gt;
+
+
+
+&lt;p&gt;“Notably, ISO/IEC 23894 offers concrete examples of effective risk management implementation and integration throughout the AI development lifecycle and provides detailed information on AI-specific risk sources,” according to UK-backed &lt;a href="https://aistandardshub.org/a-new-standard-for-ai-risk-management"&gt;AI Standards Hub&lt;/a&gt;. “A key benefit of this standard is that application of the guidance can be customized to any organization and its business context.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="google-secure-ai-framework-saif"&gt;Google Secure AI Framework (SAIF)&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://saif.google/"&gt;Google Secure AI Framework (SAIF)&lt;/a&gt;&lt;/strong&gt; is Google’s practical guide for helping organizations develop and run AI systems with strong built-in protections against digital threats. Launched in 2023, it focuses on weaving security and privacy considerations directly into every stage of an AI project’s life cycle, from design through deployment and ongoing operation.&lt;/p&gt;
+
+
+
+&lt;p&gt;Its main goal is to tackle the unique vulnerabilities that come with AI technologies such as attacks that tamper with training data, trick models through engineered prompts, or steal sensitive information. SAIF draws on Google’s own experiences developing and deploying large scale AI systems and therefore is more engineering-heavy than other frameworks. SAIF is largely focused on helping organizations make their AI systems more resistant to cyberattacks and cyber adversaries and covers areas like data handling, underlying infrastructure, the AI models themselves, user-facing applications and verification processes. It offers organizations practical guidance on implementation controls, shared responsibility, and defending against technical attacks.&lt;/p&gt;
+
+
+
+&lt;p&gt;Technology consultancy Thoughtworks has assessed SAIF as a framework that helps organizations systematically address “common threats such as data poisoning and prompt injection through a clear risk map, component analysis, and practical mitigation strategies.” According to the firm, SAIF’s “focus on the evolving risks of building agentic systems especially timely and valuable. SAIF offers a concise, actionable playbook that teams can use to strengthen security practices for LLM usage and AI-driven applications.”&lt;/p&gt;
+
+
+
+&lt;p&gt;David Brumley, chief AI and science officer at Bugcrowd, says that for organizations that want to adopt a framework, the question is not really “which AI risk framework is best?” but “which framework helps [the] organization safely build, deploy, and learn from AI in the real world?”&lt;/p&gt;
+
+
+
+&lt;p&gt;While most of the currently available AI risk frameworks have their use, most are still focused on preventing bad outcomes rather than helping organizations pave safe roads for a technology that is already inevitable.&lt;/p&gt;
+
+
+
+&lt;p&gt;“That distinction matters,” Brumley says. “AI adoption is not waiting for perfect governance, and those who focus on a [risk management framework] could inadvertently create a shadow AI problem in their organization.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4185917/5-ai-risk-management-frameworks-for-shoring-up-key-gaps.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.88</comments>
+      <pubDate>Wed, 17 Jun 2026 09:01:00 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-597)</title>
@@ -970,7 +1026,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-597</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.60</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Mon, 15 Jun 2026 12:59:55 +0000</pubDate>
     </item>
     <item>
@@ -980,7 +1036,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-598</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Mon, 15 Jun 2026 13:09:14 +0000</pubDate>
     </item>
     <item>
@@ -990,7 +1046,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-599</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Mon, 15 Jun 2026 13:16:16 +0000</pubDate>
     </item>
     <item>
@@ -1000,7 +1056,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-600</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.62</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Mon, 15 Jun 2026 13:35:09 +0000</pubDate>
     </item>
     <item>
@@ -1010,8 +1066,119 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-601</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.62</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Mon, 15 Jun 2026 13:40:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>What 22,000 breaches teach us about incident preparedness</title>
+      <link>https://www.csoonline.com/article/4185797/what-22000-breaches-teach-us-about-incident-preparedness.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;The &lt;a href="https://www.verizon.com/business/resources/reports/dbir/"&gt;2026 Verizon Data Breach Investigations Report&lt;/a&gt; analyzed more than 22,000 confirmed data breaches across 145 countries. Its findings point to a single uncomfortable truth: organizations cannot patch fast enough to prevent every incident. Exploitation of vulnerabilities surged to become the leading initial access vector, the median time to remediate a critical flaw climbed to 43 days, and the volume of critical vulnerabilities grew 50% year over year. Even top-performing organizations only managed to fix 30% to 40% of known exploited vulnerabilities listed in the &lt;a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog"&gt;CISA Known Exploited Vulnerabilities catalog&lt;/a&gt; within the first week of detection. That rate barely budged despite years of investment in tooling, process maturity and regulatory pressure.&lt;/p&gt;
+
+
+
+&lt;p&gt;Most organizations will eventually face a serious incident. The quality of your response determines the outcome.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="ransomware-hits-48-of-breaches-the-payment-decision-is-just-the-beginning"&gt;Ransomware hits 48% of breaches. The payment decision is just the beginning&lt;/h2&gt;
+
+
+
+&lt;p&gt;Ransomware appeared in 48% of all confirmed breaches, up from 44% the prior year. Among cases where organization size was known, 96% of victims were small and medium-sized businesses.&lt;/p&gt;
+
+
+
+&lt;p&gt;The “climax” of every ransomware tabletop I witness has always been the question: pay or refuse? The DBIR reveals that 69% of victims chose not to pay, up from 65% the year before. That number held even when attackers encrypted systems. Refusing is becoming standard practice. The median payout dropped to $139,875.&lt;/p&gt;
+
+
+
+&lt;p&gt;Facing shrinking revenues, ransomware operators now deliberately maximize operational disruption to force faster decisions. The &lt;a href="https://www.blackfog.com/marks-and-spencer-ransomware-attack/"&gt;2025 attack on Marks &amp;amp; Spencer&lt;/a&gt; knocked out online sales, inventory tracking and refrigeration monitoring for weeks, costing an estimated £300 million. The &lt;a href="https://en.wikipedia.org/wiki/Jaguar_Land_Rover_cyberattack"&gt;Jaguar Land Rover breach&lt;/a&gt; halted manufacturing for five weeks, inflicted £1.9 billion in damages and dragged UK GDP below its quarterly forecast.&lt;/p&gt;
+
+
+
+&lt;p&gt;Consider using these cases to inspire your next ransomware drill. The ransom question is one agenda item. Sustaining operations without primary systems, coordinating with legal counsel and law enforcement, managing customer and investor communications under regulatory deadlines, deciding what to disclose and when: these are the decisions that determine whether a company survives a ransomware event or becomes a cautionary headline. Organizations that rehearse only the payment question are practicing the opening scene and skipping the rest of the play.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="third-party-breaches-jumped-60-your-exercises-should-reflect-that"&gt;Third-party breaches jumped 60%. Your exercises should reflect that&lt;/h2&gt;
+
+
+
+&lt;p&gt;Breaches involving a vendor, supplier or service provider reached 48% of all confirmed incidents, a 60% increase from the previous year. This metric doubled the year before that. The trajectory is unmistakable.&lt;/p&gt;
+
+
+
+&lt;p&gt;The DBIR identifies three archetypes: a vulnerability in a vendor’s product opens the door to your environment; a vendor holding your data gets compromised directly; or an attacker breaches the vendor and pivots laterally into your network. Several of the year’s most prominent campaigns triggered two or all three archetypes simultaneously.&lt;/p&gt;
+
+
+
+&lt;p&gt;Most tabletop programs ignore this scenario entirely. I have seen organizations rehearse their internal playbooks dozens of times without once simulating a call to a compromised vendor. When the real call comes, they freeze. A third-party breach tests a fundamentally different set of skills than an internal compromise.&lt;/p&gt;
+
+
+
+&lt;p&gt;When a vendor is breached, the information your team needs most is the information the vendor is least prepared to share quickly. Tabletop exercises should simulate that friction. Participants should practice asking precise questions: What data of ours did you hold? What is the confirmed scope? What logs exist? How are you notifying other affected customers?&lt;/p&gt;
+
+
+
+&lt;p&gt;The other half of the exercise is equally critical. Your customers will demand answers while the investigation is still unfolding. Transparency builds trust. Premature attribution destroys partnerships. The discipline lies in communicating what you know and what you are doing about it without publicly blaming a vendor whose cooperation you still require. A press statement that throws a third party under the bus may generate a satisfying headline. It will also guarantee that the vendor’s legal team stops sharing information with yours.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="vulnerability-exploitation-is-the-top-attack-vector-ai-will-accelerate-it"&gt;Vulnerability exploitation is the top attack vector. AI will accelerate it&lt;/h2&gt;
+
+
+
+&lt;p&gt;Exploitation of vulnerabilities reached 31% of all confirmed breaches, a 55% increase over the prior year’s 20%. It displaced credential abuse as the leading initial access method for the first time in the DBIR’s history.&lt;/p&gt;
+
+
+
+&lt;p&gt;The structural problem is straightforward. Organizations faced a median of 16 CISA Known Exploited Vulnerabilities in 2025, up from 11 the year before. Only 26% were fully remediated, down from 38%. Defenders are caught in &lt;a href="https://en.wikipedia.org/wiki/Red_Queen%27s_race"&gt;Alice’s Red Queen Race&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;AI is compressing the timeline further. The DBIR’s collaboration with Anthropic examined 793 threat actors who misused AI platforms for malicious purposes between March 2025 and February 2026. The median actor sought assistance across 15 distinct ATT&amp;amp;CK techniques. Thirty-two percent of AI-assisted initial access activity targeted vulnerability exploitation specifically. The report notes that creating exploit tools, adapting them across languages and discovering new vulnerabilities “is within reach with current AI coding assistance.” &lt;a href="https://www.anthropic.com/news/disrupting-AI-espionage"&gt;Anthropic’s own threat research&lt;/a&gt; documented the first known AI-orchestrated cyber espionage campaign, in which attackers used agentic AI to execute intrusions autonomously. By December 2025, researchers documented VoidLink, a complete malware framework built by an AI agent in six days. Twenty-nine percent of KEV vulnerabilities were attacked before public disclosure that year.&lt;/p&gt;
+
+
+
+&lt;p&gt;This acceleration demands a shift in how organizations exercise their incident response capabilities. &lt;a href="https://csrc.nist.gov/pubs/sp/800/84/final"&gt;NIST SP 800-84&lt;/a&gt; has long recommended formal test, training and exercise programs for evaluating incident response preparedness. The growing speed and volume of exploitation makes that guidance urgent. Technical tabletop exercises, where participants work through actual triage rather than discuss hypothetical responses, should become routine. Teams need to practice identifying affected systems, determining blast radius, executing containment playbooks and coordinating remediation across departments under realistic time pressure. The window between initial compromise and full-blown breach is shrinking. How fast your technical teams can triage and contain directly determines the severity of the outcome. Organizations that encounter these decisions for the first time during a live incident will not move fast enough.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The breach you practice for is the one you survive&lt;/h2&gt;
+
+
+
+&lt;p&gt;The 2026 DBIR and &lt;a href="https://cloud.google.com/security/resources/m-trends"&gt;Google’s M-Trends 2026 report&lt;/a&gt; paint the same picture from different angles: the speed of attacks is accelerating, the surface area is expanding through third-party dependencies, and the sophistication gap between attackers and defenders is narrowing thanks to widely available AI tooling. These are not projections. They describe the threat landscape as it exists today.&lt;/p&gt;
+
+
+
+&lt;p&gt;Organizations that wait for a breach to test their response capabilities will discover their gaps at the worst possible moment. Playbooks that have never been exercised under pressure tend to collapse on first contact with a real incident. Communication plans that look reasonable on paper fall apart when the general counsel, the CISO and the CEO are in the same room arguing about disclosure timing while customers flood the support lines.&lt;/p&gt;
+
+
+
+&lt;p&gt;The remedy is deliberate, repeated practice. Tabletop exercises that simulate ransomware scenarios should go beyond the payment question and into the operational chaos that follows. Exercises involving third-party breaches should force participants to navigate the tension between transparency and partnership preservation. Technical exercises should compress timelines and demand the same speed of triage that a real exploitation campaign would require.&lt;/p&gt;
+
+
+
+&lt;p&gt;None of this is new advice. But the 2026 data makes the stakes clearer than ever. The organizations that build crisis response as a practiced skill will weather these incidents. Those that treat their incident response plan as a static document will learn its shortcomings the hard way.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4185797/what-22000-breaches-teach-us-about-incident-preparedness.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.88</comments>
+      <pubDate>Wed, 17 Jun 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV26-602)</title>
@@ -1020,7 +1187,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-602</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.32</comments>
+      <comments>Score: 10.13</comments>
       <pubDate>Tue, 16 Jun 2026 12:26:38 +0000</pubDate>
     </item>
     <item>
@@ -1030,7 +1197,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-351</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.37</comments>
+      <comments>Score: 10.18</comments>
       <pubDate>Tue, 16 Jun 2026 13:41:52 +0000</pubDate>
     </item>
     <item>
@@ -1040,7 +1207,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-603</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.37</comments>
+      <comments>Score: 10.18</comments>
       <pubDate>Tue, 16 Jun 2026 13:48:12 +0000</pubDate>
     </item>
     <item>
@@ -1050,7 +1217,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-604</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.51</comments>
+      <comments>Score: 10.31</comments>
       <pubDate>Tue, 16 Jun 2026 17:44:57 +0000</pubDate>
     </item>
   </channel>
