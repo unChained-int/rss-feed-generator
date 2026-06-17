@@ -8,555 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jun 2026 00:19:40 +0000</lastBuildDate>
-    <item>
-      <title>MISP security advisory (AV26-565)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-565</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-565</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Tue, 09 Jun 2026 13:03:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] Siemens security advisory (AV26-566)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-566</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-566</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Tue, 09 Jun 2026 14:18:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fortinet security advisory (AV26-568)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-568</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-568</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Tue, 09 Jun 2026 15:35:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV26-561) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-561</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-561</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
-      <pubDate>Tue, 09 Jun 2026 17:51:05 +0000</pubDate>
-    </item>
-    <item>
-      <title>5 runtime signals for catching a compromised AI agent</title>
-      <link>https://www.csoonline.com/article/4184681/5-runtime-signals-for-catching-a-compromised-ai-agent.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;In June 2025, Simon Willison, the engineer who coined the term “prompt injection,” &lt;a href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/"&gt;published a warning&lt;/a&gt; that circulated widely through the security community. He called it the lethal trifecta — three capabilities that, when combined in a single AI agent, create a near-guaranteed path to exploitation through indirect prompt injection: access to private data; exposure to untrusted content; the ability to communicate externally.&lt;/p&gt;
-
-
-
-&lt;p&gt;The framing was sharp and useful. If your agent reads your email, ingests arbitrary web content, and can make outbound requests, an attacker who embeds malicious instructions anywhere in that content pipeline can direct the agent to exfiltrate your data without you ever knowing. Willison illustrated the point with a long list of real production exploits: Microsoft 365 Copilot, GitHub’s MCP server, GitLab Duo, Slack AI, Google Bard, Amazon Q. The same class of attack, over and over.&lt;/p&gt;
-
-
-
-&lt;p&gt;The trifecta worked as a signal because, at the time, agents were mostly narrowly scoped. An agent capable of performing only one or two of the lethal trifecta activities could be assessed as lower risk. Avoiding the combination felt like a viable design strategy.&lt;/p&gt;
-
-
-
-&lt;p&gt;That window has closed given what practitioners deploy today: A customer-facing support agent reads ticket histories and customer records, ingests user messages and attached files, and calls CRMs, refund APIs, or ticketing systems. An email AI reads your inbox and calendar, processes inbound messages from strangers, and sends replies on your behalf.&lt;/p&gt;
-
-
-
-&lt;p&gt;Rather than being edge cases or poorly designed deployments, these are the agents enterprises and individuals actually want, and they’re the ones vendors are building toward.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="lethal-trifecta-as-default-configuration"&gt;Lethal trifecta as default configuration&lt;/h2&gt;
-
-
-
-&lt;p&gt;Ross McKerchar, CISO at Sophos, &lt;a href="https://www.sophos.com/en-us/blog/inside-the-lethal-trifecta-blast-radius-reduction-in-ai-agent-deployments"&gt;put it plainly&lt;/a&gt; in a piece published this May: “the capabilities practitioners actually want (read my data, understand external context, take action) push firmly into dangerous territory. This isn’t a misconfiguration; it’s the architectural cost of usefulness.” He’s right. An agent without private data access is useless, one that can’t process external content is isolated, and the one that can’t communicate externally is inert. Strip any leg of the trifecta and you have something closer to a search box than an agent.&lt;/p&gt;
-
-
-
-&lt;p&gt;If every legitimate agent architecture exhibits all three trifecta properties, the trifecta is no longer a meaningful indicator of elevated risk. It’s the default configuration. Treating it as a red flag is like treating DNS resolution as a signal of network compromise. Technically &lt;a href="https://www.csoonline.com/article/574989/4-strategies-to-help-reduce-the-risk-of-dns-tunneling.html"&gt;true in some threat models&lt;/a&gt;, but universally present in every real deployment.&lt;/p&gt;
-
-
-
-&lt;p&gt;McKerchar’s piece frames the response as “blast radius reduction”: a reasonable operational philosophy, but one that accepts the trifecta as a given condition rather than a preventable one. That’s a reasonable call. The question is what comes after the acceptance.&lt;/p&gt;
-
-
-
-&lt;p&gt;Meta’s security team arrived at the same conclusion from the other direction. In October 2025, they published the “&lt;a href="https://ai.meta.com/blog/practical-ai-agent-security/"&gt;Rule of Two&lt;/a&gt;,” a framework that recommends agents satisfy no more than two of the three trifecta properties in a single session, with human-in-the-loop approval required if all three are necessary. Willison &lt;a href="https://simonwillison.net/2025/Nov/2/new-prompt-injection-papers/"&gt;himself endorsed the framework&lt;/a&gt; as “the best practical advice for building secure LLM-powered agent systems today.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Meta’s limitations section, however, concedes that many sought-after use cases won’t fit the framework cleanly, and that “designs that satisfy the Agents Rule of Two can still be prone to failure.” That’s not a criticism of the framework but confirmation that the problem has outgrown the architecture-level solution.&lt;/p&gt;
-
-
-
-&lt;p&gt;The scale of exposure is no longer theoretical. &lt;a href="https://blog.google/security/prompt-injections-web/"&gt;Google’s April 2026 sweep&lt;/a&gt; of the Common Crawl repository found prompt injection attempts across public web pages, ranging from pranks to data exfiltration payloads, with malicious attempts up 32% between November 2025 and February 2026. Google noted sophistication remains low for now but flagged the trend as a signal of maturing attacker interest.&lt;/p&gt;
-
-
-
-&lt;p&gt;The environment the trifecta warned about has arrived.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-to-sleuth-out-a-compromised-agent"&gt;How to sleuth out a compromised agent&lt;/h2&gt;
-
-
-
-&lt;p&gt;If the trifecta describes nearly every deployed agent, practitioners need signals that distinguish compromised behavior from normal operation within a trifecta-exhibiting system. That means shifting from architecture-level assessments to &lt;a href="https://www.csoonline.com/article/4145127/runtime-the-new-frontier-of-ai-agent-security.html"&gt;runtime behavioral detection&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The production evidence arrived in a cluster. From Jan. 7 to Jan. 15, 2026, &lt;a href="https://breached.company/the-lethal-trifecta-strikes-four-major-ai-agent-vulnerabilities-in-five-days/"&gt;researchers disclosed exploits&lt;/a&gt; against four separate AI productivity tools in eight days: IBM Bob, Superhuman AI, Notion AI, and Anthropic’s Claude Cowork. Each used indirect prompt injection to exfiltrate data via a channel the agent had legitimate access to. In the Cowork case, a hidden prompt embedded in an uploaded document directed the agent to exfiltrate files via Anthropic’s own allowlisted API domain, invisible to any perimeter control and indistinguishable from normal agent behavior until the data was already gone. In all of these cases, the trifecta wasn’t a risk factor but the operating condition.&lt;/p&gt;
-
-
-
-&lt;p&gt;Here’s what’s worth watching to detect an agent has been compromised.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Instruction-following anomalies.&lt;/strong&gt; A compromised agent doesn’t usually do something structurally different from a healthy one. Following instructions is its normal function. The difference is whose instructions it’s following. Look for agent actions that have no plausible correspondence to a user-initiated task. An agent that was asked to summarize a quarterly report but then attempts an outbound DNS request to an unfamiliar domain didn’t spontaneously decide to do that. Something in the content it ingested told it to.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Tool call sequences that break expected topology.&lt;/strong&gt; In a well-designed agent system, the graph of tool calls for any given task should be relatively predictable. A coding agent invoked to fix a bug should touch files, run tests, perhaps check documentation. It shouldn’t be reaching for email or calendar APIs. Tool call sequences that cross expected workflow boundaries are worth flagging even when each individual call looks legitimate on its own.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Exfiltration via low-bandwidth channels.&lt;/strong&gt; The classic prompt injection exfiltration attack routes stolen data through a mechanism the agent has legitimate access to: a rendered image URL with encoded query parameters, an API call with data embedded in a parameter, a link in a generated document. These don’t look like data theft in isolation; they look like normal agent output. Detection requires correlating what data the agent had access to against what it embedded in its output. That requires end-to-end visibility into the agent’s actions, not just the final response.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Credential and secret access outside task scope.&lt;/strong&gt; If an agent with legitimate access to a secrets store or key vault touches credentials that have no relationship to the current task, that’s a signal. An agent fixing a React rendering bug should likely not be reading AWS credentials. Least-privilege scoping is the architectural defense here, but monitoring for out-of-scope credential access is the detection layer that catches failures in that scoping.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Memory-write anomalies.&lt;/strong&gt; Agents with persistent memory are a growing attack surface. A poisoned memory entry that looks like legitimate user context but contains dormant trigger instructions can persist across sessions and fire long after the initial injection. Monitoring for memory-writes containing instruction-like content, or writes made during sessions that ingested untrusted content, is worth adding to any agent observability pipeline.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="runtime-alone-can-address-the-agent-redirection-threat"&gt;Runtime alone can address the agent redirection threat&lt;/h2&gt;
-
-
-
-&lt;p&gt;For practitioners operating production agent infrastructure, the lethal trifecta tells you what you know: Your agents are exposed. The question is what to do about it.&lt;/p&gt;
-
-
-
-&lt;p&gt;The answers are at the runtime layer, not the architecture layer. That’s where &lt;a href="https://www.csoonline.com/article/653052/how-to-pick-the-best-endpoint-detection-and-response-solution.html"&gt;EDR&lt;/a&gt; and &lt;a href="https://www.csoonline.com/article/566677/12-top-siem-tools-rated-and-compared.html"&gt;SIEM&lt;/a&gt; live for traditional infrastructure — agents need the same instrumentation, and most deployments don’t have it yet. Full execution traces on every agent invocation. Tool call &lt;a href="https://www.csoonline.com/article/3822459/what-is-anomaly-detection-behavior-based-analysis-for-cyber-threats.html"&gt;anomaly detection&lt;/a&gt;. Input screening at ingest. Credential access monitoring scoped to task context. Memory-write auditing. Not a human attacker logging in. An agent that’s been quietly redirected.&lt;/p&gt;
-
-
-
-&lt;p&gt;Willison’s trifecta was the right alarm for its moment, which was last year. Almost every production agent now fits the profile. Because of that, only runtime anomaly detection can potentially provide adequate defense. The above signals are a good place to start.&lt;a&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4184681/5-runtime-signals-for-catching-a-compromised-ai-agent.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Mon, 15 Jun 2026 09:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Sovereign cloud won’t fix your AI risk. Identity governance will</title>
-      <link>https://www.csoonline.com/article/4184634/sovereign-cloud-wont-fix-your-ai-risk-identity-governance-will.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Your board is asking. Your legal team is asking. Your auditors will be asking: Should AI workloads move to sovereign cloud, or stay on AWS, Azure or GCP? European enterprises have already run this experiment — under real regulatory pressure, with real money and real consequences. Many discovered that sovereign cloud alone didn’t deliver the control they expected. The real control point turned out to be somewhere else entirely.&lt;/p&gt;
-
-
-
-&lt;p&gt;Europe ran this experiment first, under regulatory pressure US enterprises are only starting to feel. With DORA fully in force since January 2025, NIS2 enforcement underway across EU member states and the EU AI Act’s high-risk system provisions taking effect in August 2026, European enterprises — particularly in financial services, critical infrastructure and manufacturing — have spent two years migrating workloads, renegotiating contracts and writing sovereign cloud into board-level risk frameworks. The hyperscalers responded. AWS launched its European Sovereign Cloud in January 2026. Microsoft and Google followed with their own sovereignty offerings. The market arrived.&lt;/p&gt;
-
-
-
-&lt;p&gt;US enterprises are not far behind. &lt;a href="https://www.sec.gov/newsroom/speeches-statements/gerding-cybersecurity-disclosure-20231214"&gt;The SEC’s cybersecurity disclosure rules&lt;/a&gt;, &lt;a href="https://www.cisa.gov/resources-tools/resources/principles-secure-integration-artificial-intelligence-operational-technology"&gt;CISA’s AI security guidance&lt;/a&gt;, proposed state-level AI regulations and growing board-level scrutiny of AI governance are creating comparable pressures on this side of the Atlantic. If your organization runs AI workloads on behalf of EU clients, operates EU subsidiaries or simply faces the question of where sensitive AI training data and model outputs should live — you are already in this conversation. The European experience is your preview.&lt;/p&gt;
-
-
-
-&lt;p&gt;What has not arrived is clarity on what you actually get — and what you do not. At the &lt;a href="https://www.kuppingercole.com/events/eic2026/agenda"&gt;European Identity and Cloud Conference&lt;/a&gt; in Berlin this May, the mood among practitioners had shifted measurably from previous years. The cheering for the sovereign cloud concept was over. What was happening on stage and in the corridors was a careful, sometimes uncomfortable, dissection of the gap between marketing slides and operational reality. (&lt;a href="https://www.kuppingercole.com/events/eic2027"&gt;EIC returns to Berlin in May 2027&lt;/a&gt;.)&lt;/p&gt;
-
-
-
-&lt;p&gt;The conference agenda made the shift visible. Where previous years centered on sovereign cloud architecture and vendor selection, the 2026 program’s trending themes — as mapped in the closing session — were AI security, identity fabric, workload identity management, and crypto agility. Sovereign cloud had become assumed infrastructure. The practitioner conversation had moved to what you build on top of it, and who controls that layer.&lt;/p&gt;
-
-
-
-&lt;p&gt;Martin Kuppinger, distinguished analyst and co-founder of KuppingerCole, observed the same shift: “Cloud sovereignty had a much larger role at this year’s EIC, with a differentiated discussion about whether and where it is needed. There is common sense that sovereignty is not a value in its own right — the required level depends on the use case and a proper risk assessment. There is no binary model for sovereignty.”&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;Sovereign cloud, on the slides, looks like control. In the contracts, service matrices and AI agent deployments, it often looks more like a very expensive illusion.&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-control-question-nobody-answers-clearly"&gt;The control question nobody answers clearly&lt;/h2&gt;
-
-
-
-&lt;p&gt;When enterprises talk about sovereign cloud, they are usually thinking about data residency — where the data lives. European data center, European jurisdiction. But data residency is the beginning of the conversation, not the end.&lt;/p&gt;
-
-
-
-&lt;p&gt;The harder questions are about control. Who holds the encryption keys, and who can compel access to them under what legal circumstances? Who sees the metadata, the access logs, the telemetry from your workloads? When you run AI inference or model training on a sovereign cloud platform, who controls the model registry, the training data pipeline, the output logs? And when an AI agent acts autonomously on your behalf — scheduling workloads, provisioning resources, making access decisions — whose infrastructure is that agent running on, and who can observe what it does?&lt;/p&gt;
-
-
-
-&lt;p&gt;These are not hypothetical concerns. &lt;a href="https://www.congress.gov/bill/115th-congress/house-bill/4943/text"&gt;The CLOUD Act of 2018&lt;/a&gt; gives US authorities the ability to compel US companies to produce data stored abroad, regardless of where the servers sit. European sovereign cloud offerings from US hyperscalers are structured to address this — through operational separation, European legal entities and customer-managed keys — but the structures are new, partially tested and vary significantly between providers.&lt;/p&gt;
-
-
-
-&lt;p&gt;Germany’s BSI has raised the stakes further. In April 2026, the agency published its &lt;a href="https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Empfehlungen-nach-Angriffszielen/Cloud-Computing/C3A/C3A_node.html"&gt;Criteria Enabling Cloud Computing Autonomy (C3A)&lt;/a&gt;: The first framework to operationalize what cloud sovereignty actually means in technical terms, including disconnect scenarios, staff residency requirements and an extraordinary provision for federal takeover of cloud operations in defense scenarios. Formally non-binding, the criteria are widely expected to become the de facto benchmark for German federal procurement — and a likely template for EU-level frameworks now in the legislative pipeline. For US CISOs, the direction of travel is clear: Regulatory definitions of cloud sovereignty are tightening, and the gap between “data in Europe” and “operationally sovereign” is only going to widen.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="identity-is-where-sovereignty-actually-lives"&gt;Identity is where sovereignty actually lives&lt;/h2&gt;
-
-
-
-&lt;p&gt;The clearest theme at EIC 2026 was that identity — not network perimeter, not data residency — is where cloud sovereignty either holds or breaks down. The argument is becoming hard to avoid.&lt;/p&gt;
-
-
-
-&lt;p&gt;Jason Keenaghan, who leads identity management strategy at Thales, framed it directly: “Identity is shifting from an IT function to a regulated infrastructure. The most important question for the next decade will be: Who is in control?”&lt;/p&gt;
-
-
-
-&lt;p&gt;For a US CISO, this shift is very real: Identity governance is moving from pure IT plumbing to a regulated control surface that auditors, regulators and even enterprise customers in RfPs will increasingly scrutinize. The question of “who is in control” is no longer philosophical. It is contractual.&lt;/p&gt;
-
-
-
-&lt;p&gt;Here’s the problem. You can put your data in a Frankfurt data center with customer-managed keys. But if your identity governance is weak — if you do not know which human users, service accounts and AI agents have access to what, and under what conditions — your sovereignty posture is only as strong as your weakest identity. A compromised privileged account does not care about data residency.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is particularly acute for AI workloads. Agentic AI systems — models that act autonomously, make API calls, provision resources, access data — are creating a new category of non-human identities that most enterprises’ IAM systems were never designed to manage. Consider a concrete example I have seen in client environments: An LLM-based deployment agent with standing access to production Kubernetes clusters. It schedules workloads, provisions resources and makes access decisions autonomously. If that agent runs on sovereign cloud infrastructure but its identity — its credentials, its permissions, its audit trail — is not properly governed, your sovereignty posture is exactly as strong as the weakest link in that agent’s access chain. If you are running similar agents in US-based cloud regions today, the same identity blind spots exist — even if you never touch a sovereign cloud region.&lt;/p&gt;
-
-
-
-&lt;p&gt;Sebastian Rohr, an IAM consultant and IDPro member who has spent two decades on enterprise identity architectures, distilled the requirements for governing AI agents in practice: “Every agent needs an assigned non-human identity. A solid on-behalf-of delegation model must be established. An audit trail via SIEM integration is required. No long-lived credentials, no API keys — only ephemeral credentials. Context-based authentication and fine-grained access control. Agents must be managed as real identities. And once that foundation exists: Risk-based, continuous re-authentication combined with the ability for real-time revocation. Do we have all these capabilities everywhere today? Not necessarily — but designing the architecture for it? That is entirely possible.”&lt;/p&gt;
-
-
-
-&lt;p&gt;For AI agents in particular, the practical question is this: Can you list every agent running in your environment, govern its entitlements and revoke access in real time? If not, you do not truly control the workload — regardless of which cloud region it runs in.&lt;/p&gt;
-
-
-
-&lt;p&gt;What practitioners at EIC kept coming back to is not a sovereign cloud answer. It is an identity governance answer. Sovereign cloud buys you legal protection and data residency. Identity governance gives you operational control — and increasingly, it is the layer where AI workload sovereignty actually has to be enforced.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="when-sovereign-cloud-is-worth-it-and-when-it-is-not"&gt;When sovereign cloud is worth it — and when it is not&lt;/h2&gt;
-
-
-
-&lt;p&gt;For US CISOs managing EU operations, EU subsidiaries or EU customers, the practical question is not whether sovereign cloud is philosophically correct. It is whether the additional cost and complexity deliver sufficient risk reduction for specific workloads. Most organizations I have worked with are over-applying sovereign cloud to workloads that do not need it, while under-applying it to the ones that do.&lt;/p&gt;
-
-
-
-&lt;p&gt;A working framework, refined across two years of European deployments. Use this as a quick triage for which workloads truly justify a sovereign cloud premium. As Kuppinger puts it: “Within an organization, varying levels of sovereignty demand for different use cases are the norm, not the exception.”&lt;/p&gt;
-
-
-
-&lt;figure class="wp-block-table"&gt;&lt;div class="overflow-table-wrapper"&gt;&lt;table class="has-fixed-layout"&gt;&lt;thead&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Workload type&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Sovereign cloud?&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Why&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;NIS2-regulated processes&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Yes&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Legal obligation, board-level personal liability&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;High-risk AI under EU AI Act&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Yes&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Compliance from August 2026&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Personal data with Schrems II exposure&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Yes&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Transfer risk without adequate protection&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sensitive metadata (access logs, AI telemetry)&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Yes&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Residency alone does not protect metadata&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Dev/test environments&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;Significant cost premium (15–30%) with minimal risk reduction for most US-based operations&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Non-sensitive SaaS workloads&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;Standard DPAs and encryption are usually sufficient; no strong US or EU regulatory driver&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Internal productivity tools&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;No material regulatory exposure; high cost not justified by risk profile&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; &lt;/div&gt;&lt;/figure&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="five-things-european-enterprises-learned-the-hard-way"&gt;Five things European enterprises learned the hard way&lt;/h2&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Sovereign cloud does not mean the hyperscaler cannot see your metadata. &lt;/strong&gt;Customer-managed keys protect data at rest. They do not prevent the platform from logging access patterns, API calls and resource consumption. Know what your provider logs and where those logs go. For US CISOs: This matters for any hyperscaler operating under foreign data localization requirements you may face as the regulatory landscape evolves.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Early sovereign cloud offerings had real service gaps — and exit is harder than expected. &lt;/strong&gt;Many advanced AI/ML services were unavailable at launch; enterprises that committed early ended up running hybrid architectures more complex than anticipated. And lock-in in sovereign cloud contexts is harder to escape than standard cloud. Build exit strategy into procurement decisions before you sign.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Identity governance cannot be deferred. &lt;/strong&gt;The enterprises that got the most value from sovereign cloud investments had already done the identity governance work — asset inventory, access classification, non-human identity management. For US CISOs facing similar AI governance and resilience requirements: This is the lesson that will hurt most if you have not done the work.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Sovereign from a hyperscaler is not the same as sovereign from a European provider. &lt;/strong&gt;AWS European Sovereign Cloud, Microsoft Cloud for Sovereignty and Google Sovereign Cloud are structurally different from offerings built by IONOS, Hetzner, OVHcloud or Deutsche Telekom. The former offers broader service catalogs with sovereignty controls layered on. The latter offer cleaner legal structures with narrower feature sets. Neither is universally better — and the choice should follow workload characteristics, not procurement preference.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-us-cisos-should-do-now"&gt;What US CISOs should do now&lt;/h2&gt;
-
-
-
-&lt;p&gt;If your organization has EU operations, subsidiaries or customers — or AI workloads sensitive enough that the regulatory direction in the US matters — these are decisions you will face. Three concrete steps.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;1. Classify your workloads by sensitivity and regulatory exposure before you classify them by cloud type. &lt;/strong&gt;Not everything needs sovereign cloud. But know which workloads do before a regulator, auditor or customer’s procurement team asks.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;2. Audit your identity governance posture before your cloud strategy. &lt;/strong&gt;Sovereign cloud without IAM maturity is expensive and insufficient. Governance has to happen at the identity layer, not the data center boundary.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;3. Read the contracts carefully. &lt;/strong&gt;Key management, metadata logging, law enforcement access and service continuity provisions vary significantly between providers. Legal and security need to review them together — and AI workload provisions deserve their own column.&lt;/p&gt;
-
-
-
-&lt;p&gt;Europe’s sovereign cloud experiment is still running. The early results suggest the regulatory pressure is real, the market response is genuine and the operational complexity is higher than the marketing suggested. AI workloads make it more complex, not less. That is not a reason to avoid sovereign cloud — it is a reason to approach it with clearer eyes than the first wave of European adopters had. Buy the jurisdiction. Then govern the identity. In that order.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;Sovereign cloud buys you a jurisdiction. Identity governance buys you control. AI workloads need both, and most enterprises are buying only one.&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4184634/sovereign-cloud-wont-fix-your-ai-risk-identity-governance-will.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Mon, 15 Jun 2026 09:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft security advisory – June 2026 monthly rollup (AV26-569)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-june-2026-monthly-rollup-av26-569</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-june-2026-monthly-rollup-av26-569</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Tue, 09 Jun 2026 18:53:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Adobe security advisory (AV26-570)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-570</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-570</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Tue, 09 Jun 2026 18:59:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV26-571)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-571</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-571</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Tue, 09 Jun 2026 19:03:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco security advisory (AV26-551) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-551</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-551</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Tue, 09 Jun 2026 19:28:10 +0000</pubDate>
-    </item>
-    <item>
-      <title>Governing the ghost workforce</title>
-      <link>https://www.csoonline.com/article/4184637/governing-the-ghost-workforce.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Every enterprise security team is fighting a workforce problem they cannot see on any org chart.&lt;/p&gt;
-
-
-
-&lt;p&gt;Bots, service accounts, API keys, OAuth tokens, machine certificates — non-human identities now outnumber human ones in most large organisations, often by a factor of ten to one. They authenticate constantly, operate across every environment, and when forgotten, they do not retire gracefully. They linger, accumulate privilege, and wait. Security practitioners have taken to calling them ghost identities — and the name fits.&lt;/p&gt;
-
-
-
-&lt;p&gt;The security industry has had plenty of warnings. It just has not acted on it.&lt;/p&gt;
-
-
-
-&lt;p&gt;Cast your mind back to &lt;a href="https://krebsonsecurity.com/2020/12/solarwinds-hack-could-affect-18k-customers/"&gt;SolarWinds story&lt;/a&gt;. The attackers did not smash through anything. They slipped in, found machine identities with significant access, and used them the way they were designed to be used — quietly, legitimately, invisibly. Eighteen thousand organisations. Months undetected. The credentials were not stolen in the traditional sense. They were just there, unmonitored, doing what attackers needed them to do.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/uber-hacked-internal-systems-breached-and-vulnerability-reports-stolen/"&gt;Uber, 2022&lt;/a&gt;. Simpler anatomy. A service account nobody owned. Credentials that had not been rotated in who knows how long. Found in a network share by an attacker who was already looking. That one ghost identity opened a direct path to the PAM system — and from there, everything else followed. Cloud environments. Source code. Internal tools. One forgotten credential. That was the price of admission.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/okta-says-its-support-system-was-breached-using-stolen-credentials/"&gt;Okta, 2023&lt;/a&gt;. Different problem, harder to solve. The credentials that mattered were not even on Okta’s own infrastructure. They lived with a third-party support vendor. Technically, someone else’s environment. But they carried access rights into Okta’s systems, and when that vendor was compromised, the pathway was compromised too.&lt;/p&gt;
-
-
-
-&lt;p&gt;Three incidents. Three different entry points. One thing in common — an identity that nobody was watching, carrying access nobody had recently justified, sitting exactly where an attacker needed it to be.&lt;/p&gt;
-
-
-
-&lt;p&gt;Calling this a security problem is not wrong. It just does not cover what is coming next.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The scheduled crisis&lt;/h2&gt;
-
-
-
-&lt;p&gt;In 2026, the consequences of unmanaged non-human identities take a new form. Not a breach. A calendar event.&lt;/p&gt;
-
-
-
-&lt;p&gt;Machine identity certificates have finite lifespans. For much of the past decade, organisations issued them with validity windows of three to five years. Between 2020 and 2022, enterprises expanded their digital infrastructure at extraordinary speed — cloud migrations compressed into months, automation pipelines stood up under pressure, and new services connecting to other services with governance as an afterthought.&lt;/p&gt;
-
-
-
-&lt;p&gt;Those certificates are expiring now. Not in ones and twos. In volume.&lt;/p&gt;
-
-
-
-&lt;p&gt;The cascading failure scenario is not complicated. A certificate expires unnoticed. The service it supports drops. Dependent applications that are authenticated through that service start failing. Monitoring tools running on the same infrastructure miss the alert. The incident response team works on the problem without a complete picture of what connects to what. Hours pass. Sometimes a full day. What started as an overlooked credential with an expiry date becomes an outage with a revenue figure attached and a regulator taking notes.&lt;/p&gt;
-
-
-
-&lt;p&gt;This has happened before on a smaller scale — a single expired certificate took &lt;a href="https://theverge.com/2020/2/3/21120248/microsoft-teams-down-outage-certificate-issue-status"&gt;Microsoft Teams offline&lt;/a&gt; for millions of users in 2020. What 2026 presents is the same failure mode, replicated across organisations that grew fast and governed poorly, hitting simultaneously.&lt;/p&gt;
-
-
-
-&lt;p&gt;Certificate expiration is habitually treated as an IT operations issue. That framing does not survive contact with an outage that takes customer-facing services down for eighteen hours.&lt;/p&gt;
-
-
-&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-large"&gt;&lt;img alt="Figure: The cascading failure chain." class="wp-image-4184639" height="371" src="https://b2b-contenthub.com/wp-content/uploads/2026/06/cascading-failure-chain.png?w=1024" width="1024" /&gt;&lt;figcaption class="wp-element-caption"&gt;Figure 1: The cascading failure chain.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;Ashish Mishra&lt;/p&gt;&lt;/div&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-structural-gap"&gt;The structural gap&lt;/h2&gt;
-
-
-
-&lt;p&gt;The root cause is not negligence. It is architecture.&lt;/p&gt;
-
-
-
-&lt;p&gt;The tools organisations rely on to manage identity — role-based access controls, privileged access management platforms, access certification campaigns — were built for people. They assume an identity has an owner, a manager, and a review cycle. Non-human identities do not fit that model. They get created to solve an immediate problem, granted broad access to make the thing work, and left running long after the project moves on.&lt;/p&gt;
-
-
-
-&lt;p&gt;Over-provisioning compounds the risk. Every unreviewed service account is a potential pivot point. Every dormant API key with write access is an open door. For ghost identities carrying legacy admin rights — and there are more of them than most organisations want to admit — the blast radius of a compromise is often organisation-wide.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;What good looks like&lt;/h2&gt;
-
-
-
-&lt;p&gt;The answer is not a tool. Every vendor in this space will tell you otherwise. They are wrong about the order of operations.&lt;/p&gt;
-
-
-
-&lt;p&gt;Governance comes first. Tooling supports it. And governance starts with a question most organisations cannot currently answer: what non-human identities are we running?&lt;/p&gt;
-
-
-
-&lt;p&gt;That question sounds simple. It is not. NHIs do not get created centrally. They get created by developers solving problems, by platform teams standing up services, by vendors connecting their products to yours. Each decision made sense at the time. None of them got logged somewhere useful. The result, in most large enterprises, is an estate that nobody has a complete map of — and that no tool can govern until someone builds one.&lt;/p&gt;
-
-
-
-&lt;p&gt;So, start there. Not with a platform evaluation. Not with a policy document. With a discovery sprint. Four to six weeks, focused on your highest-risk environments. Cloud first. CI/CD pipelines. Third-party integrations. An imperfect inventory is still infinitely more useful than operating blind.&lt;/p&gt;
-
-
-
-&lt;p&gt;While that work is running, pull your certificate expiration data. Today, not next quarter. Sort by expiry date. Filter for anything lapsing in the next eighteen months. Put a named owner against every entry — and where no owner can be identified, treat the certificate as a ghost identity. Escalate it accordingly. This one action directly addresses the 2026 expiration risk before it becomes an outage.&lt;/p&gt;
-
-
-
-&lt;p&gt;Last, run a privilege audit on your highest-sensitivity service accounts. Any NHI with admin rights that has not been reviewed in the past twelve months should be treated as over-privileged until the evidence says otherwise. Assume excess. Prove necessity.&lt;/p&gt;
-
-
-
-&lt;p&gt;None of this needs a new budget line. It needs someone to decide it is worth doing before the alternative decides for them.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The broader problem&lt;/h2&gt;
-
-
-
-&lt;p&gt;One organisation fixing its NHI estate does not fix the problem. It just means one organisation is less exposed than the rest.&lt;/p&gt;
-
-
-
-&lt;p&gt;The market around machine identity is still finding its feet. Ask three vendors to define the scope of NHI governance, and you will get three different answers. Lifecycle standards that should exist do not. The frameworks security teams rely on — NIST, ISO 27001 — address least privilege as a concept but stop well short of telling anyone what to do with fifty thousand unmanaged service accounts spread across a hybrid cloud environment.&lt;/p&gt;
-
-
-
-&lt;p&gt;What is missing is not ambition. It is specificity. Agreed taxonomy. Shared lifecycle standards. Regulatory guidance that puts NHI governance on the same level as every other identity obligation — not buried in a footnote, not implied by a principle, but stated plainly and enforced accordingly.&lt;/p&gt;
-
-
-
-&lt;p&gt;That conversation is happening. Standards bodies are moving. Regulators are paying closer attention. But the pace is measured in years, and the certificate expiration wave is measured in months.&lt;/p&gt;
-
-
-
-&lt;p&gt;The expiry dates do not wait for the industry to catch up.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The deadline is built in&lt;/h2&gt;
-
-
-
-&lt;p&gt;The ghost workforce does not announce itself. It does not resign or ask for a performance review. It runs until something stops it — a breach, an expiration, or a security team that finally decided to take inventory.&lt;/p&gt;
-
-
-
-&lt;p&gt;In 2026, for organisations that have not mapped and governed their NHI estate, something is going to stop it. The only variable is whether that something is a deliberate programme or an unplanned outage.&lt;/p&gt;
-
-
-
-&lt;p&gt;The runway is very thin.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4184637/governing-the-ghost-workforce.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
-      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Tue, 16 Jun 2026 22:19:40 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 17 Jun 2026 06:15:29 +0000</lastBuildDate>
     <item>
       <title>Attackers can turn AI agent guardrails into denial-of-service weapons</title>
       <link>https://www.csoonline.com/article/4185051/attackers-can-turn-ai-agent-guardrails-into-denial-of-service-weapons.html</link>
@@ -681,8 +133,118 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4185051/attackers-can-turn-ai-agent-guardrails-into-denial-of-service-weapons.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Mon, 15 Jun 2026 12:09:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>Apache security advisory (AV26-563)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-563</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-563</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Tue, 09 Jun 2026 12:54:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>Veeam security advisory (AV26-564)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-564</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-564</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Tue, 09 Jun 2026 12:59:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MISP security advisory (AV26-565)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-565</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-565</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Tue, 09 Jun 2026 13:03:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] Siemens security advisory (AV26-566)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-566</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-566</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.59</comments>
+      <pubDate>Tue, 09 Jun 2026 14:18:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortinet security advisory (AV26-568)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-568</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-568</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.60</comments>
+      <pubDate>Tue, 09 Jun 2026 15:35:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-561) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-561</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-561</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Tue, 09 Jun 2026 17:51:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft security advisory – June 2026 monthly rollup (AV26-569)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-june-2026-monthly-rollup-av26-569</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-june-2026-monthly-rollup-av26-569</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Tue, 09 Jun 2026 18:53:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Adobe security advisory (AV26-570)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-570</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-570</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Tue, 09 Jun 2026 18:59:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-571)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-571</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-571</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Tue, 09 Jun 2026 19:03:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cisco security advisory (AV26-551) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-551</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-551</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Tue, 09 Jun 2026 19:28:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>Operation against criminal network smuggling migrants between Algeria and Spain: nine arrests</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</link>
+      <description>A collaborative operation between the Spanish Guardia Civil and National Police (Policía Nacional), supported by Europol, has resulted in nine arrests and the dismantling of a criminal network smuggling irregular migrants from Algeria to Spain. The operation targeted migrant smugglers responsible for organising trips across the Mediterranean, as well as those managing the complex logistics behind the smuggling events. Europol's migrant smuggling experts provided crucial operational support to the Spanish authorities leading up to and during the action day.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/operation-against-criminal-network-smuggling-migrants-between-algeria-and-spain-nine-arrests</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Wed, 17 Jun 2026 04:15:29 +0000</pubDate>
     </item>
     <item>
       <title>OpenSSL security advisory (AV26-572)</title>
@@ -691,7 +253,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-572</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 10 Jun 2026 14:18:42 +0000</pubDate>
     </item>
     <item>
@@ -701,7 +263,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-573</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 10 Jun 2026 14:23:28 +0000</pubDate>
     </item>
     <item>
@@ -711,7 +273,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-574</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 10 Jun 2026 14:29:05 +0000</pubDate>
     </item>
     <item>
@@ -721,7 +283,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-575</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 10 Jun 2026 14:34:58 +0000</pubDate>
     </item>
     <item>
@@ -731,7 +293,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freebsd-security-advisory-av26-576</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 10 Jun 2026 14:43:44 +0000</pubDate>
     </item>
     <item>
@@ -741,7 +303,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-577</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 10 Jun 2026 14:54:16 +0000</pubDate>
     </item>
     <item>
@@ -751,7 +313,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-578</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 10 Jun 2026 17:20:18 +0000</pubDate>
     </item>
     <item>
@@ -761,7 +323,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-579</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 10 Jun 2026 17:24:19 +0000</pubDate>
     </item>
     <item>
@@ -771,7 +333,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-580</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 10 Jun 2026 17:29:34 +0000</pubDate>
     </item>
     <item>
@@ -781,7 +343,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-581</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 10 Jun 2026 17:39:07 +0000</pubDate>
     </item>
     <item>
@@ -791,7 +353,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-582</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 10 Jun 2026 18:01:52 +0000</pubDate>
     </item>
     <item>
@@ -801,7 +363,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-583</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 10 Jun 2026 18:06:32 +0000</pubDate>
     </item>
     <item>
@@ -811,7 +373,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-584</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 10 Jun 2026 18:12:08 +0000</pubDate>
     </item>
     <item>
@@ -821,7 +383,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-585</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 10 Jun 2026 18:41:12 +0000</pubDate>
     </item>
     <item>
@@ -831,7 +393,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-586</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Wed, 10 Jun 2026 19:12:32 +0000</pubDate>
     </item>
     <item>
@@ -841,7 +403,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-588</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 11 Jun 2026 14:11:00 +0000</pubDate>
     </item>
     <item>
@@ -851,7 +413,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-589</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Thu, 11 Jun 2026 18:28:15 +0000</pubDate>
     </item>
     <item>
@@ -861,7 +423,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-590</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Thu, 11 Jun 2026 18:32:02 +0000</pubDate>
     </item>
     <item>
@@ -871,78 +433,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-567</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Thu, 11 Jun 2026 19:07:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV26-591)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-591</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-591</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
-      <pubDate>Fri, 12 Jun 2026 13:37:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Spring security advisory (AV26-592)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-592</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-592</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
-      <pubDate>Fri, 12 Jun 2026 13:46:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV26-593)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-593</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-593</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
-      <pubDate>Fri, 12 Jun 2026 13:55:51 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control Systems] Moxa security advisory (AV26-594)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-594</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-594</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
-      <pubDate>Fri, 12 Jun 2026 14:09:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>Oracle security advisory (AV26-587) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-587</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-587</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
-      <pubDate>Fri, 12 Jun 2026 18:03:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>GeoServer security advisory (AV26-595)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av26-595</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av26-595</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
-      <pubDate>Fri, 12 Jun 2026 19:12:40 +0000</pubDate>
-    </item>
-    <item>
-      <title>FreePBX security advisory (AV26–596)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-596</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-596</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
-      <pubDate>Fri, 12 Jun 2026 19:27:44 +0000</pubDate>
     </item>
     <item>
       <title>Zero trust isn’t broken. Most companies just do it wrong.</title>
@@ -1160,7 +652,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4181934/zero-trust-isnt-broken-but-most-companies-are-doing-it-wrong-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Tue, 16 Jun 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1271,8 +763,205 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4185525/cisco-sd-wan-flaw-puts-spotlight-on-enterprise-management-plane-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Tue, 16 Jun 2026 09:45:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV26-591)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-591</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-591</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.24</comments>
+      <pubDate>Fri, 12 Jun 2026 13:37:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>Spring security advisory (AV26-592)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-592</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-592</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.24</comments>
+      <pubDate>Fri, 12 Jun 2026 13:46:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-593)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-593</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-593</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.24</comments>
+      <pubDate>Fri, 12 Jun 2026 13:55:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control Systems] Moxa security advisory (AV26-594)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-594</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-594</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.24</comments>
+      <pubDate>Fri, 12 Jun 2026 14:09:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>Oracle security advisory (AV26-587) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-587</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-587</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.30</comments>
+      <pubDate>Fri, 12 Jun 2026 18:03:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>GeoServer security advisory (AV26-595)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av26-595</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av26-595</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.31</comments>
+      <pubDate>Fri, 12 Jun 2026 19:12:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>FreePBX security advisory (AV26–596)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-596</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-596</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.32</comments>
+      <pubDate>Fri, 12 Jun 2026 19:27:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft says you don’t need another email security tool; experts say, not so fast</title>
+      <link>https://www.csoonline.com/article/4185954/microsoft-says-you-dont-need-another-email-security-tool-experts-say-not-so-fast.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Despite best efforts by defenders, malicious emails continue to &lt;a href="https://www.csoonline.com/article/4183653/aged-domain-acquisition-the-tradecraft-phishing-operators-are-using-to-bypass-your-mail-filters-reputation-score.html" target="_blank"&gt;slip through the cybersecurity cracks&lt;/a&gt;, leading some enterprises to implement a layered “defense in depth” strategy that incorporates multiple tools.&lt;/p&gt;
+
+
+
+&lt;p&gt;Microsoft seems to be challenging this idea, revealing that there are only nominal returns from adding integrated pre- and post-send partners to Defender for Office 365’s protections.&lt;/p&gt;
+
+
+
+&lt;p&gt;According to its new quarterly benchmarking data, the tech giant catches the vast majority of malicious and spam emails before delivery, misses the fewest compared to competitors by a wide margin, and removes nearly 100% of dangerous emails that do reach the inbox. Collectively, its integrated partners improve that catch rate by less than .05%.&lt;/p&gt;
+
+
+
+&lt;p&gt;While these numbers seem to tip the scales towards a one-vendor email security stack, experts urge enterprises to be skeptical and cautious of such vendor claims.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.infotech.com/profiles/seva-ioussoufovitch" rel="noreferrer noopener" target="_blank"&gt;Seva Ioussoufovitch&lt;/a&gt;, senior research analyst at Info-Tech Research Group, pointed out, “percentages obscure the true quantity and severity of what’s getting through, and, considering it only takes one message to result in an incident, it’s simple enough to argue that there is real value in the defense in depth that having multiple tools provides.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="malicious-and-spam-email-catch-by-the-numbers"&gt;Malicious and spam email catch by the numbers&lt;/h2&gt;
+
+
+
+&lt;p&gt;Microsoft introduced its quarterly benchmarking report in July 2025 alongside a Defender integrated cloud email security (ICES) ecosystem designed to support multi-vendor security strategies.&lt;/p&gt;
+
+
+
+&lt;p&gt;The SEG players it ranked itself against this year includes Mimecast, Proofpoint, Hornetsecurity, Trend Micro, Iron Port (Cisco), Barracuda, and FireEye (Trellix); ICES companies include Abnormal, Checkpoint Harmony, Cisco, DarkTrace, KnowBe4 Defend, Tessian, and Trend Micro.&lt;/p&gt;
+
+
+
+&lt;p&gt;Redmond reported that Defender “consistently leads” in pre-delivery detection, missing 59% fewer high-severity cyberthreats prior to delivery than the other SEG vendors it evaluated. Its closest competitors were Mimecast and Proofpoint. The company also introduced a new metric in this area: A threat miss rate per 1,000 employees. In Microsoft’s case, that was 194 per 1,000; for Mimecast, 478; for Proofpoint, 483.&lt;/p&gt;
+
+
+
+&lt;p&gt;When it came to post-delivery protection, Defender removed an average of 96.03% of malicious emails that reached the inbox, up from an initial 45% when Microsoft first started tracking the data in its second report.&lt;/p&gt;
+
+
+
+&lt;p&gt;This makes Defender “an increasingly critical backstop, operating even when ICES solutions are in place,” Jeff Pinkston, VP and GM for Microsoft Defender, wrote in a &lt;a href="https://www.microsoft.com/en-us/security/blog/2026/06/15/microsoft-defender-email-security-benchmarking-key-insights-from-one-year-of-data/" rel="noreferrer noopener" target="_blank"&gt;blog post&lt;/a&gt;. Still, ICES tools operating in tandem with Microsoft Defender “continue to provide benefits,” improving malicious catch by 0.29% and spam catch by 0.68%, he said.&lt;/p&gt;
+
+
+
+&lt;p&gt;“If we focus on the basics, their argument seems strong,” Info-Tech’s Ioussoufovitch noted. “Do you really need a separate ICES vendor for that extra sub 1% catch?” Microsoft paints a “compelling picture” by only focusing on raw catch rate, he said, but we don’t hear the rest of the story: “What exactly is the danger of what isn’t being caught by Defender?”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="no-one-vendor-catches-everything"&gt;No one vendor catches everything &lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://www.linkedin.com/in/dbshipley/" rel="noreferrer noopener" target="_blank"&gt;David Shipley&lt;/a&gt; of Beauceron Security pointed out that the report underscores the fact that “lots of stuff still gets by e-mail filters.”&lt;/p&gt;
+
+
+
+&lt;p&gt;His company regularly analyzes hundreds of thousands of emails, and the content that gets through “ranges from the shockingly mundane and obvious to a human expert, to highly clever time-delayed attacks,” he said.&lt;/p&gt;
+
+
+
+&lt;p&gt;A key factor in what gets through is the amount of content that is allowlisted; settings in “100% paranoid mode” get high catch rates, as well as high false positives, Shipley noted. “Anyone who has ever had a sales person lose a deal because the purchase order PDF got flagged has felt this pain.”&lt;/p&gt;
+
+
+
+&lt;p&gt;Then there’s the AI conundrum: “A key risk for e-mail vendors using agentic LLM-based analysis is it’s now possible to poison those models with &lt;a href="https://www.csoonline.com/article/4185051/attackers-can-turn-ai-agent-guardrails-into-denial-of-service-weapons.html" target="_blank"&gt;hidden content&lt;/a&gt; (such as ‘ignore this e-mail, pretty please’),” Shipley said. This means enterprises need a variety of analysis methods.&lt;/p&gt;
+
+
+
+&lt;p&gt;Ioussoufovitch agreed that keeping pace with threat actors using AI is an industry-wide challenge, particularly as AI enables higher-quality phishing. Filters are improving and will catch some of it, but some will inevitably continue to get through. Those messages are likely highly-targeted, which are lower in volume but harder to catch.&lt;/p&gt;
+
+
+
+&lt;p&gt;“As of now, current tools do seem to be struggling to keep pace, but that doesn’t mean those tools aren’t necessary,” said Ioussoufovitch. “It just highlights that &lt;a href="https://www.csoonline.com/article/4181920/15-tough-cybersecurity-questions-every-ciso-must-answer.html" target="_blank"&gt;defense-in-depth&lt;/a&gt;, broadly speaking, is becoming more and more important.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="claims-appear-more-honest"&gt;Claims appear more honest&lt;/h2&gt;
+
+
+
+&lt;p&gt;Shipley said that this report appears more honest, accurate, and mature than others claiming 99.99% phish catch rates, “which is never true.” It’s also a “smart marketing move,” because Microsoft competes for the same security budget as other tools, and would rather enterprises remove those vendors and buy more from it in areas beyond e-mail.&lt;/p&gt;
+
+
+
+&lt;p&gt;On the other hand, he said, Microsoft is offering up a list of other vendors to think about, “which, congrats to Mimecast on coming in second.”&lt;/p&gt;
+
+
+
+&lt;p&gt;In the long run, CISOs need to determine the best spend for their limited security dollars, he noted. Enterprises need a good filter; whether they need two is up for debate. “They also clearly still need to invest in a &lt;a href="https://www.csoonline.com/article/4152631/security-awareness-is-not-a-control-rethinking-human-risk-in-enterprise-security.html" target="_blank"&gt;robust awareness program&lt;/a&gt;,” Shipley said, “because as this report shows, lots of phishes are still getting delivered.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="missing-an-important-nuance"&gt;Missing an important nuance&lt;/h2&gt;
+
+
+
+&lt;p&gt;Ioussoufovitch noted that while the claims in the study are interesting, the data is presented without much of the nuance that would make it truly actionable.&lt;/p&gt;
+
+
+
+&lt;p&gt;“We are all too familiar with vendors’ abilities to massage data to tell the story they want, so I would advise leaders not to extrapolate the data beyond what it actually says,” he said.&lt;/p&gt;
+
+
+
+&lt;p&gt;Instead of the takeaway being “get rid of our current vendors,” this post highlights that Defender provides “considerable value,” he noted. Whether adding or subtracting additional vendors is worth the money should be a case-by-case conversation that considers an organization’s risk appetite, and overall security budget and environment.&lt;/p&gt;
+
+
+
+&lt;p&gt;“I’d treat these claims more as a reminder to assess your own environment and compare detections,” he said. “Come to conclusions based on the data you have, not what a vendor is presenting.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4185954/microsoft-says-you-dont-need-another-email-security-tool-experts-say-not-so-fast.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.86</comments>
+      <pubDate>Wed, 17 Jun 2026 02:46:20 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-597)</title>
@@ -1281,7 +970,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-597</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.60</comments>
       <pubDate>Mon, 15 Jun 2026 12:59:55 +0000</pubDate>
     </item>
     <item>
@@ -1291,7 +980,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-598</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Mon, 15 Jun 2026 13:09:14 +0000</pubDate>
     </item>
     <item>
@@ -1301,7 +990,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-599</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.78</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Mon, 15 Jun 2026 13:16:16 +0000</pubDate>
     </item>
     <item>
@@ -1311,7 +1000,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-600</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.79</comments>
+      <comments>Score: 9.62</comments>
       <pubDate>Mon, 15 Jun 2026 13:35:09 +0000</pubDate>
     </item>
     <item>
@@ -1321,7 +1010,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-601</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.79</comments>
+      <comments>Score: 9.62</comments>
       <pubDate>Mon, 15 Jun 2026 13:40:01 +0000</pubDate>
     </item>
     <item>
@@ -1331,7 +1020,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-602</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.53</comments>
+      <comments>Score: 10.32</comments>
       <pubDate>Tue, 16 Jun 2026 12:26:38 +0000</pubDate>
     </item>
     <item>
@@ -1341,7 +1030,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-351</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.58</comments>
+      <comments>Score: 10.37</comments>
       <pubDate>Tue, 16 Jun 2026 13:41:52 +0000</pubDate>
     </item>
     <item>
@@ -1351,7 +1040,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-603</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.58</comments>
+      <comments>Score: 10.37</comments>
       <pubDate>Tue, 16 Jun 2026 13:48:12 +0000</pubDate>
     </item>
     <item>
@@ -1361,7 +1050,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-604</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.74</comments>
+      <comments>Score: 10.51</comments>
       <pubDate>Tue, 16 Jun 2026 17:44:57 +0000</pubDate>
     </item>
   </channel>
