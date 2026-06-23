@@ -8,182 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Jun 2026 20:18:11 +0000</lastBuildDate>
-    <item>
-      <title>Breaking the SOC triangle: How AI reshapes security operations trade-offs</title>
-      <link>https://www.csoonline.com/article/4186877/breaking-the-soc-triangle-how-ai-reshapes-security-operations-trade-offs.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A simple framework has always governed security operations that I call the SOC Triangle. It is a balance between quality, consistency and cost efficiency.&lt;/p&gt;
-
-
-
-&lt;p&gt;Every SOC operates within it. Push for higher-quality investigations, deeper analysis, richer context, fewer missed signals and you pay for it in time and expertise. Standardize workflows to ensure consistency across every alert, and you often lose the flexibility needed to handle real-world complexity and nuance. Optimize for cost efficiency, and the pressure shows up quickly in both quality and consistency.&lt;/p&gt;
-
-
-
-&lt;p&gt;For years, the SOC Triangle has shaped how security teams are built and how they perform. This is why organizations add headcount to improve outcomes, rely on rigid playbooks to reduce variability and improve scale, and still struggle to operate at their theoretical best and optimize security and quality of service outcomes.&lt;/p&gt;
-
-
-
-&lt;p&gt;The constraint is not a failure of strategy. It is structural. And until recently, it was largely unavoidable.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-the-soc-was-built-this-way"&gt;Why the SOC was built this way&lt;/h2&gt;
-
-
-
-&lt;p&gt;Most security operations centers are designed as human-routing systems. Alerts are ingested, triaged, escalated and resolved by analysts at multiple levels. Every meaningful step, including collecting evidence, correlating signals and making decisions, depends on human capacity.&lt;/p&gt;
-
-
-
-&lt;p&gt;That dependency introduces variability. Two analysts can approach the same alert differently, influenced by experience, fatigue and time pressure. To improve consistency, organizations introduce &lt;a href="https://www.csoonline.com/article/3622920/soar-buyers-guide-11-security-orchestration-automation-and-response-products-and-how-to-choose.html?utm=hybrid_search"&gt;playbooks and workflows&lt;/a&gt;. But those controls often reduce flexibility, especially in complex cases, and fail to provide coverage where decision making relies in part on unstructured context, and where workflows may not be fully deterministic and require real-time reasoning to determine the best course of action.&lt;/p&gt;
-
-
-
-&lt;p&gt;At the same time, scaling either quality or consistency typically requires more people, reducing cost efficiency.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is the SOC Triangle in practice: a system where improving one dimension creates friction in another.&lt;/p&gt;
-
-
-
-&lt;p&gt;The same constraint is also why the managed detection and response market exists. When organizations could not solve the triangle in-house, they outsourced it. But the service model does not eliminate the trade-offs. It reconstitutes them at the provider layer, where the same human-routing architecture, the same playbooks and the same staffing economics drive the same limits. Customers pay for consistency and predictability, and they get it. What they often do not get is the investigation depth and environmental customization tailored to their business context and to optimizing against their security program maturity goals that they would want if resources were not the binding constraint.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="where-the-model-starts-to-break"&gt;Where the model starts to break&lt;/h2&gt;
-
-
-
-&lt;p&gt;The challenge is not just the existence of trade-offs, but their growing intensity.&lt;/p&gt;
-
-
-
-&lt;p&gt;Modern SOCs must process higher volumes of alerts across more tools and environments. The work itself, gathering and correlating evidence across identity systems, endpoints, cloud platforms and threat intelligence, is both repetitive and cognitively demanding.&lt;/p&gt;
-
-
-
-&lt;p&gt;Under this pressure, the triangle tightens.&lt;/p&gt;
-
-
-
-&lt;p&gt;Quality degrades because analysts do not have time to fully investigate every signal and rigid automation playbooks often fail to capture the depth and nuance that security leaders expect which results in increased friction for end users. Consistency suffers because decisions are made under time constraints. Cost rises because the only way to compensate is to add more people or accept increased risk.&lt;/p&gt;
-
-
-
-&lt;p&gt;This hits hardest for organizations that have outsourced SOC operations. Service economics lock the trade-offs in place. Per-alert pricing constrains how much investigation each signal receives. Standardized playbooks limit how much the service can tailor to a specific environment. Tier structures exist because the math of humans investigating alerts demands they exist. Every one of those mechanisms is a rational response to the triangle. None of them changes its shape and its fundamental constraints.&lt;/p&gt;
-
-
-
-&lt;p&gt;For years, this has been accepted as the cost of doing business, whether that business is run in-house or outsourced.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-ai-changes-the-constraint"&gt;How AI changes the constraint&lt;/h2&gt;
-
-
-
-&lt;p&gt;AI is often framed as a tool for efficiency. The more meaningful shift is that it &lt;a href="https://www.csoonline.com/article/4158008/the-ai-inflection-point-what-security-leaders-must-do-now.html"&gt;changes how certain SOC workflows&lt;/a&gt; are executed.&lt;/p&gt;
-
-
-
-&lt;p&gt;Much of SOC work follows a pattern: gather data, correlate signals, ask follow-up questions and form a conclusion. These workflows are complex but repeatable. They require consistency and scale as much as expertise.&lt;/p&gt;
-
-
-
-&lt;p&gt;When those workflows are no longer constrained by human bandwidth, the SOC Triangle begins to change shape.&lt;/p&gt;
-
-
-
-&lt;p&gt;Quality improves because investigations can incorporate more meaningful data, apply investigative reasoning in real time and take into account unstructured information and business-specific context without shortcuts. Consistency improves because the same logic is applied across every alert. Cost efficiency improves because scaling no longer depends on linear increases in headcount.&lt;/p&gt;
-
-
-
-&lt;p&gt;I am watching this play out in production environments today. Investigations that used to consume the majority of Tier 1 and 2 analysts’ shifts now resolve in minutes, with deeper context than the human path could produce within these time frames. The same rigor is applied to every alert, not only the anecdotal ones that earn attention. What used to be a choice between going deep on a few cases or going shallow on many is no longer a compromise security leaders need to make.&lt;/p&gt;
-
-
-
-&lt;p&gt;For the first time, these dimensions are not strictly in opposition.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="from-trade-offs-to-expansion"&gt;From trade-offs to expansion&lt;/h2&gt;
-
-
-
-&lt;p&gt;This does not eliminate the SOC Triangle. It expands it.&lt;/p&gt;
-
-
-
-&lt;p&gt;Not every workflow can be automated, and not every decision can be reduced to a repeatable process. Strategic judgment, incident leadership and risk appetite remain human responsibilities and business decisions.&lt;/p&gt;
-
-
-
-&lt;p&gt;But the boundary within which SOC teams operate is no longer tied to legacy constraints.&lt;/p&gt;
-
-
-
-&lt;p&gt;Instead of choosing between quality, consistency and cost, organizations can begin to improve all three for the types of work best suited to machine execution. That is a meaningful shift, whether it occurs within a company’s SOC or in the service relationship with a partner that operates it.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="where-it-matters-most"&gt;Where it matters most&lt;/h2&gt;
-
-
-
-&lt;p&gt;The impact is most visible in the high-volume workflows where performance gaps have been largest: alert triage and enrichment, initial investigation and evidence gathering, correlation across systems and routine response recommendations. These are the areas where human-led processes introduce the most variability, where time pressure degrades quality and where scaling costs are most visible. They are also the areas where trade-offs have historically been unavoidable.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-human-role-evolves"&gt;The human role evolves&lt;/h2&gt;
-
-
-
-&lt;p&gt;AI does not remove the need for human expertise. It changes &lt;a href="https://www.csoonline.com/article/4168681/8-guiding-principles-for-reskilling-the-soc-for-agentic-ai.html"&gt;where that expertise is applied&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;As machines take on repeatable work, human effort shifts toward higher-value activities: interpreting ambiguous signals, managing complex incidents, setting policy and making risk-based decisions. The operating model moves from human-executed workflows to human-governed systems.&lt;/p&gt;
-
-
-
-&lt;p&gt;That changes what organizations should expect from security operations, whether in-house or outsourced. The conversation moves from “how many alerts did you close last week” to “what patterns are you seeing in my environment, and what should I do about them.” The output is judgment, not throughput. That is a different product than most security teams have been buying, and it is a different service than most managed detection and response service providers have been selling.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-shift-that-matters"&gt;The shift that matters&lt;/h2&gt;
-
-
-
-&lt;p&gt;For years, SOC leaders have accepted the triangle as a fixed constraint. What is changing now is not just the tooling. It is the economics of how security work is performed.&lt;/p&gt;
-
-
-
-&lt;p&gt;The triangle still exists. But it no longer defines a rigid set of trade-offs. In parts of the SOC and the services that support it, those trade-offs are beginning to loosen.&lt;/p&gt;
-
-
-
-&lt;p&gt;In a field where constraints have long dictated outcomes, that shift matters.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;&lt;a href="https://www.csoonline.com/expert-contributor-network/"&gt;Want to join?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4186877/breaking-the-soc-triangle-how-ai-reshapes-security-operations-trade-offs.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
-      <pubDate>Fri, 19 Jun 2026 10:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 23 Jun 2026 22:16:39 +0000</lastBuildDate>
     <item>
       <title>Europe-wide race to locate fugitives unfolds at Europol</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/europe-wide-race-to-locate-fugitives-unfolds-europol</link>
@@ -192,7 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.34</comments>
-      <pubDate>Tue, 23 Jun 2026 18:18:11 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2026 20:16:39 +0000</pubDate>
     </item>
     <item>
       <title>From The Hague to the host cities: Europol supports FIFA World Cup 2026</title>
@@ -202,7 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.37</comments>
-      <pubDate>Tue, 23 Jun 2026 18:18:11 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2026 20:16:39 +0000</pubDate>
     </item>
     <item>
       <title>Ten arrested in crackdown on counterfeit firearms trafficking route from Türkiye to the EU</title>
@@ -212,7 +37,16 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.41</comments>
-      <pubDate>Tue, 23 Jun 2026 18:18:11 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2026 20:16:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>Scattered Spider Hackers Plead Guilty on Day 1 of Trial</title>
+      <link>https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/</link>
+      <description>Two men pleaded guilty in the United Kingdom this week to criminal charges stemming from an August 2024 cyberattack that crippled Transport for London, the entity responsible for the public transport network in the Greater London area. The duo were key members of a prolific cybercrime group known as Scattered Spider, and their guilty pleas came on the first day of what was expected to be a six-week trial.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.45</comments>
+      <pubDate>Tue, 23 Jun 2026 16:12:49 +0000</pubDate>
     </item>
     <item>
       <title>Counter-terrorism operation disrupted Islamic State Khorasan Province activities</title>
@@ -222,7 +56,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Tue, 23 Jun 2026 18:18:11 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2026 20:16:39 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-597)</title>
@@ -231,7 +65,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-597</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Mon, 15 Jun 2026 12:59:55 +0000</pubDate>
     </item>
     <item>
@@ -241,7 +75,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-598</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Mon, 15 Jun 2026 13:09:14 +0000</pubDate>
     </item>
     <item>
@@ -251,7 +85,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-599</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Mon, 15 Jun 2026 13:16:16 +0000</pubDate>
     </item>
     <item>
@@ -261,7 +95,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-600</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Mon, 15 Jun 2026 13:35:09 +0000</pubDate>
     </item>
     <item>
@@ -271,7 +105,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-601</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Mon, 15 Jun 2026 13:40:01 +0000</pubDate>
     </item>
     <item>
@@ -282,7 +116,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Tue, 23 Jun 2026 18:18:11 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2026 20:16:39 +0000</pubDate>
     </item>
     <item>
       <title>Seven members of major Islamic State financing network convicted</title>
@@ -292,16 +126,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Tue, 23 Jun 2026 18:18:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>Scattered Spider Hackers Plead Guilty on Day 1 of Trial</title>
-      <link>https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/</link>
-      <description>Two men pleaded guilty in the United Kingdom this week to criminal charges stemming from an August 2024 cyberattack that crippled Transport for London, the entity responsible for the public transport network in the Greater London area. The duo were key members of a prolific cybercrime group known as Scattered Spider, and their guilty pleas came on the first day of what was expected to be a six-week trial.</description>
-      <guid isPermaLink="false">https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/</guid>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Tue, 23 Jun 2026 16:12:49 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2026 20:16:39 +0000</pubDate>
     </item>
     <item>
       <title>Why Southeast Asia CISOs Need Zero Trust as Their AI Control Plane – AI Agents, Data Borders and Supply Chains</title>
@@ -323,7 +148,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4187548/why-southeast-asia-cisos-need-zero-trust-as-their-ai-control-plane-ai-agents-data-borders-and-supply-chains.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Mon, 22 Jun 2026 03:11:09 +0000</pubDate>
     </item>
     <item>
@@ -333,7 +158,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-602</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Tue, 16 Jun 2026 12:26:38 +0000</pubDate>
     </item>
     <item>
@@ -343,7 +168,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-351</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
+      <comments>Score: 7.64</comments>
       <pubDate>Tue, 16 Jun 2026 13:41:52 +0000</pubDate>
     </item>
     <item>
@@ -353,18 +178,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-603</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
+      <comments>Score: 7.64</comments>
       <pubDate>Tue, 16 Jun 2026 13:48:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV26-604)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-604</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-604</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Tue, 16 Jun 2026 17:44:57 +0000</pubDate>
     </item>
     <item>
       <title>6 security leader tips for mastering business risk</title>
@@ -554,8 +369,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4186984/6-security-leader-tips-for-mastering-business-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Mon, 22 Jun 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV26-604)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-604</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-604</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.66</comments>
+      <pubDate>Tue, 16 Jun 2026 17:44:57 +0000</pubDate>
     </item>
     <item>
       <title>Anatomy of a retail ransomware attack: Tabletop simulates modern mayhem methods</title>
@@ -689,7 +514,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4186989/anatomy-of-a-retail-ransomware-attack-tabletop-simulates-modern-mayhem-methods.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Mon, 22 Jun 2026 07:30:00 +0000</pubDate>
     </item>
     <item>
@@ -699,7 +524,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-june-2026-quarterly-rollup-av26-605</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Wed, 17 Jun 2026 13:04:37 +0000</pubDate>
     </item>
     <item>
@@ -709,7 +534,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-606</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Wed, 17 Jun 2026 14:00:53 +0000</pubDate>
     </item>
     <item>
@@ -719,7 +544,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-av26-607</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Wed, 17 Jun 2026 15:36:55 +0000</pubDate>
     </item>
     <item>
@@ -729,7 +554,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-608</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Wed, 17 Jun 2026 16:12:02 +0000</pubDate>
     </item>
     <item>
@@ -739,7 +564,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-609</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Wed, 17 Jun 2026 17:23:55 +0000</pubDate>
     </item>
     <item>
@@ -749,7 +574,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-610</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Wed, 17 Jun 2026 17:39:36 +0000</pubDate>
     </item>
     <item>
@@ -759,7 +584,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-611</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Wed, 17 Jun 2026 18:00:01 +0000</pubDate>
     </item>
     <item>
@@ -769,7 +594,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-612</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Wed, 17 Jun 2026 18:14:07 +0000</pubDate>
     </item>
     <item>
@@ -779,7 +604,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-613</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Wed, 17 Jun 2026 18:44:15 +0000</pubDate>
     </item>
     <item>
@@ -789,7 +614,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-614</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Wed, 17 Jun 2026 19:19:26 +0000</pubDate>
     </item>
     <item>
@@ -900,7 +725,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4187917/aws-continuum-offers-devs-help-with-securing-code-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Mon, 22 Jun 2026 16:32:41 +0000</pubDate>
     </item>
     <item>
@@ -910,7 +735,7 @@
       <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/lastpass-confirms-data-breach-in-klue-supply-chain-attack/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Tue, 23 Jun 2026 09:58:25 -0400</pubDate>
     </item>
     <item>
@@ -920,7 +745,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-014-fortibleed-leak-thousands-compromised-credentials-impacting-fortinet-devices</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Thu, 18 Jun 2026 13:52:14 +0000</pubDate>
     </item>
     <item>
@@ -930,7 +755,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-586</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Thu, 18 Jun 2026 17:15:42 +0000</pubDate>
     </item>
     <item>
@@ -940,7 +765,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-615</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Thu, 18 Jun 2026 17:26:18 +0000</pubDate>
     </item>
     <item>
@@ -1075,18 +900,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4188049/change-your-cyber-risk-strategy-to-meet-ai-threats-five-eyes-countries-warn-csos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Tue, 23 Jun 2026 01:08:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] Mitsubishi Electric security advisory (AV26-616)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-mitsubishi-electric-security-advisory-av26-616</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-mitsubishi-electric-security-advisory-av26-616</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
-      <pubDate>Fri, 19 Jun 2026 18:53:39 +0000</pubDate>
     </item>
     <item>
       <title>Cybersecurity is no longer about protection. It’s about survival.</title>
@@ -1284,8 +1099,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4188186/cybersecurity-is-no-longer-about-protection-its-about-survival.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Tue, 23 Jun 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] Mitsubishi Electric security advisory (AV26-616)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-mitsubishi-electric-security-advisory-av26-616</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-mitsubishi-electric-security-advisory-av26-616</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.42</comments>
+      <pubDate>Fri, 19 Jun 2026 18:53:39 +0000</pubDate>
     </item>
     <item>
       <title>OpenAI rolls out AI-led push to fix open-source software flaws</title>
@@ -1391,7 +1216,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4188321/openai-rolls-out-ai-led-push-to-fix-open-source-software-flaws.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Tue, 23 Jun 2026 10:32:40 +0000</pubDate>
     </item>
     <item>
@@ -1598,7 +1423,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4188510/trump-sets-post-quantum-crypto-deadlines-launches-broader-federal-quantum-initiative.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.92</comments>
+      <comments>Score: 8.84</comments>
       <pubDate>Tue, 23 Jun 2026 18:25:37 +0000</pubDate>
     </item>
     <item>
@@ -1608,7 +1433,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-617</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.91</comments>
+      <comments>Score: 9.85</comments>
       <pubDate>Mon, 22 Jun 2026 13:38:40 +0000</pubDate>
     </item>
     <item>
@@ -1618,7 +1443,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-618</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.91</comments>
+      <comments>Score: 9.85</comments>
       <pubDate>Mon, 22 Jun 2026 13:44:52 +0000</pubDate>
     </item>
     <item>
@@ -1628,7 +1453,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.86</comments>
       <pubDate>Mon, 22 Jun 2026 13:55:58 +0000</pubDate>
     </item>
     <item>
@@ -1638,7 +1463,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-620</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.86</comments>
       <pubDate>Mon, 22 Jun 2026 14:09:43 +0000</pubDate>
     </item>
     <item>
@@ -1648,7 +1473,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-621</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.87</comments>
       <pubDate>Mon, 22 Jun 2026 14:24:29 +0000</pubDate>
     </item>
     <item>
@@ -1658,7 +1483,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-622</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.03</comments>
+      <comments>Score: 9.97</comments>
       <pubDate>Mon, 22 Jun 2026 17:33:19 +0000</pubDate>
     </item>
     <item>
@@ -1668,7 +1493,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-623</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.03</comments>
+      <comments>Score: 9.97</comments>
       <pubDate>Mon, 22 Jun 2026 17:41:48 +0000</pubDate>
     </item>
     <item>
@@ -1678,7 +1503,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nodejs-security-advisory-av26-624</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.04</comments>
+      <comments>Score: 9.97</comments>
       <pubDate>Mon, 22 Jun 2026 17:50:22 +0000</pubDate>
     </item>
     <item>
@@ -1688,7 +1513,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-625</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.79</comments>
+      <comments>Score: 10.71</comments>
       <pubDate>Tue, 23 Jun 2026 15:00:13 +0000</pubDate>
     </item>
     <item>
@@ -1698,8 +1523,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-498</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.00</comments>
+      <comments>Score: 10.92</comments>
       <pubDate>Tue, 23 Jun 2026 20:14:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] CISA ICS security advisories (AV26–241) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-241</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-241</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.92</comments>
+      <pubDate>Tue, 23 Jun 2026 20:23:46 +0000</pubDate>
     </item>
   </channel>
 </rss>
