@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Jul 2026 20:11:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 22:01:13 +0000</lastBuildDate>
+    <item>
+      <title>Dell security advisory (AV26-619)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-619</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-619</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.18</comments>
+      <pubDate>Mon, 22 Jun 2026 13:55:58 +0000</pubDate>
+    </item>
     <item>
       <title>[Control systems] CISA ICS security advisories (AV26–620)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-620</link>
@@ -16,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-620</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.19</comments>
+      <comments>Score: 7.18</comments>
       <pubDate>Mon, 22 Jun 2026 14:09:43 +0000</pubDate>
     </item>
     <item>
@@ -26,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-621</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.19</comments>
+      <comments>Score: 7.18</comments>
       <pubDate>Mon, 22 Jun 2026 14:24:29 +0000</pubDate>
     </item>
     <item>
@@ -60,97 +70,6 @@
       <pubDate>Mon, 22 Jun 2026 17:50:22 +0000</pubDate>
     </item>
     <item>
-      <title>Argo CD flaw shows why GitOps infrastructure should be treated as tier zero</title>
-      <link>https://www.csoonline.com/article/4192188/argo-cd-flaw-shows-why-gitops-infrastructure-should-be-treated-as-tier-zero.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;A newly disclosed vulnerability in Argo CD is drawing attention to the security risks of GitOps platforms, with researchers warning that the flaw could allow attackers who gain a foothold inside a Kubernetes cluster to execute code and manipulate application deployments.&lt;/p&gt;
-
-
-
-&lt;p&gt;Security firm Synacktiv said in a &lt;a href="https://www.synacktiv.com/en/publications/caught-in-the-octopus-trap-unauthenticated-rce-in-argo-cd-with-codeql" rel="noreferrer noopener" target="_blank"&gt;report&lt;/a&gt; that the flaw affects Argo CD’s repo-server component, which fetches content from Git repositories and generates Kubernetes manifests used to deploy resources in a cluster. Argo CD is one of the most popular Kubernetes tools and is based on the GitOps paradigm.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Argo CD requires significant privileges within the cluster,” Synacktiv said. “Additionally, it has access to private Git repositories, making it an attractive target for attackers.”&lt;/p&gt;
-
-
-
-&lt;p&gt;The issue centers on the repo-server’s unauthenticated GenerateManifest gRPC endpoint. Synacktiv said an attacker able to reach that endpoint could supply Kustomize options in a manifest generation request and abuse Kustomize’s Helm-related build options to execute attacker-controlled commands.&lt;/p&gt;
-
-
-
-&lt;p&gt;Exploitation requires access to both the repo-server gRPC port and the Redis database port, which should not be exposed to users. Argo CD provides Kubernetes network policies designed to prevent that scenario, but those protections are not enabled by default in Helm chart deployments, according to Synacktiv.&lt;/p&gt;
-
-
-
-&lt;p&gt;In such deployments, compromising a single pod inside the cluster could be enough to give an attacker the internal access needed to exploit the vulnerability.&lt;/p&gt;
-
-
-
-&lt;p&gt;Synacktiv said it was able to use the flaw to obtain the Redis password from the repo-server environment and access Argo CD’s Redis database. The researchers then manipulated cached deployment data, allowing a malicious manifest to be deployed automatically when Argo CD’s Auto Sync feature was enabled.&lt;/p&gt;
-
-
-
-&lt;p&gt;If Auto Sync is not enabled, exploitation would require a user to manually sync the application.&lt;/p&gt;
-
-
-
-&lt;p&gt;Synacktiv publicly disclosed the details on July 1, 2026, after first reporting the issue to Argo CD maintainers in January 2025. The vulnerability remains unpatched, and the firm recommended strict Kubernetes network policies to block untrusted pods from reaching the repo-server and Redis services until a fix is available.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="assessing-internal-cluster-exposure"&gt;Assessing internal cluster exposure&lt;/h2&gt;
-
-
-
-&lt;p&gt;For CISOs, the key question is not only whether Argo CD is exposed to the internet, but whether &lt;a href="https://www.csoonline.com/article/4151367/why-kubernetes-controllers-are-the-perfect-backdoor.html"&gt;other workloads&lt;/a&gt; inside the Kubernetes cluster can reach its internal services.&lt;/p&gt;
-
-
-
-&lt;p&gt;“Because the repo-server’s gRPC service does not enforce authentication, any pod that can reach it becomes equivalent to an authenticated attacker,” said &lt;a href="https://www.linkedin.com/in/devashri-datta-522b364b/" rel="noreferrer noopener" target="_blank"&gt;Devashri Datta&lt;/a&gt;, a cybersecurity researcher. “In a typical cluster, that means any compromised application pod, misconfigured service mesh, or adjacent workload with local code execution can directly query the GenerateManifest endpoint or hit the Redis cache, no internet exposure required.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Organizations should not equate “not internet-facing” with “low risk,” because modern attacks often begin with the compromise of an internal workload, according to &lt;a href="https://my.idc.com/getdoc.jsp?containerId=PRF005665" rel="noreferrer noopener" target="_blank"&gt;Sakshi Grover&lt;/a&gt;, senior research manager for cybersecurity services research at IDC Asia/Pacific.&lt;/p&gt;
-
-
-
-&lt;p&gt;“CISOs should therefore evaluate which workloads can communicate with the Argo CD control plane, whether east-west traffic is appropriately segmented, and whether unnecessary trust relationships exist between application workloads and GitOps infrastructure,” Grover said. “The assessment should focus on attack paths rather than perimeter exposure.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="treating-gitops-as-tier-zero"&gt;Treating GitOps as tier-zero&lt;/h2&gt;
-
-
-
-&lt;p&gt;The flaw also underscores the role GitOps platforms play in controlling software deployment across enterprise infrastructure.&lt;/p&gt;
-
-
-
-&lt;p&gt;“GitOps engines aren’t utility services; they’re tier-0 control-plane components,” Datta said. “By design, Argo CD holds read access to private repositories, sync/write access to target clusters, and custody of deployment secrets. It sits at the precise intersection of source code, configuration management, and live infrastructure.”&lt;/p&gt;
-
-
-
-&lt;p&gt;That level of access means an Argo CD compromise may extend beyond a single application. An attacker could turn the platform used to deploy applications into a channel for malicious manifests, while also interfering with auto-sync behavior and extracting credentials cached in supporting systems such as Redis.&lt;/p&gt;
-
-
-
-&lt;p&gt;A compromise of these platforms could influence &lt;a href="https://www.csoonline.com/article/4165420/sap-npm-package-attack-highlights-risks-in-developer-tools-and-ci-cd-pipelines.html"&gt;software delivery at scale&lt;/a&gt;, making them strategic assets that should be subject to stricter governance and privileged access controls similar to those applied to identity platforms and other critical management systems.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4192188/argo-cd-flaw-shows-why-gitops-infrastructure-should-be-treated-as-tier-zero.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.20</comments>
-      <pubDate>Thu, 02 Jul 2026 10:57:39 +0000</pubDate>
-    </item>
-    <item>
       <title>Broadcom VMware security advisory (AV26-625)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-625</link>
       <description>No description available</description>
@@ -167,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-498</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Tue, 23 Jun 2026 20:14:02 +0000</pubDate>
     </item>
     <item>
@@ -177,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-241</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
+      <comments>Score: 7.25</comments>
       <pubDate>Tue, 23 Jun 2026 20:23:46 +0000</pubDate>
     </item>
     <item>
@@ -188,7 +107,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.28</comments>
-      <pubDate>Sat, 04 Jul 2026 18:11:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:01:13 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-626)</title>
@@ -197,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-626</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.30</comments>
       <pubDate>Wed, 24 Jun 2026 13:16:58 +0000</pubDate>
     </item>
     <item>
@@ -207,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-627</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.31</comments>
+      <comments>Score: 7.30</comments>
       <pubDate>Wed, 24 Jun 2026 13:23:35 +0000</pubDate>
     </item>
     <item>
@@ -248,7 +167,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.37</comments>
-      <pubDate>Sat, 04 Jul 2026 18:11:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:01:13 +0000</pubDate>
     </item>
     <item>
       <title>Drupal security advisory (AV26-631)</title>
@@ -257,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-631</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Thu, 25 Jun 2026 11:46:41 +0000</pubDate>
     </item>
     <item>
@@ -267,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-632</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Thu, 25 Jun 2026 11:47:51 +0000</pubDate>
     </item>
     <item>
@@ -277,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-633</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.40</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Thu, 25 Jun 2026 15:31:48 +0000</pubDate>
     </item>
     <item>
@@ -288,7 +207,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.41</comments>
-      <pubDate>Sat, 04 Jul 2026 18:11:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:01:13 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV26-547) – Update 1</title>
@@ -297,7 +216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-547</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.41</comments>
       <pubDate>Thu, 25 Jun 2026 19:37:20 +0000</pubDate>
     </item>
     <item>
@@ -308,7 +227,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.46</comments>
-      <pubDate>Sat, 04 Jul 2026 18:11:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:01:13 +0000</pubDate>
     </item>
     <item>
       <title>Counter-terrorism operation disrupted Islamic State Khorasan Province activities</title>
@@ -318,7 +237,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.48</comments>
-      <pubDate>Sat, 04 Jul 2026 18:11:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:01:13 +0000</pubDate>
     </item>
     <item>
       <title>Google Chrome security advisory (AV26-634)</title>
@@ -327,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-634</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
+      <comments>Score: 7.49</comments>
       <pubDate>Fri, 26 Jun 2026 12:47:53 +0000</pubDate>
     </item>
     <item>
@@ -338,7 +257,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 04 Jul 2026 18:11:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:01:13 +0000</pubDate>
     </item>
     <item>
       <title>156 individuals identified in first-of-its-kind drug-facilitated sexual assaults operation</title>
@@ -348,7 +267,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 04 Jul 2026 18:11:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:01:13 +0000</pubDate>
     </item>
     <item>
       <title>Global cyber strike disrupts SocGholish, Amadey, and StealC malware networks</title>
@@ -358,7 +277,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 04 Jul 2026 18:11:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:01:13 +0000</pubDate>
     </item>
     <item>
       <title>Drug traffickers brought down after shipping 1.4 tonnes of cannabis by parcel post</title>
@@ -368,7 +287,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 04 Jul 2026 18:11:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:01:13 +0000</pubDate>
     </item>
     <item>
       <title>Press conference: new edition of the Europol mapping report</title>
@@ -378,7 +297,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 04 Jul 2026 18:11:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:01:13 +0000</pubDate>
     </item>
     <item>
       <title>Ubuntu security advisory (AV26-635)</title>
@@ -387,7 +306,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-635</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Mon, 29 Jun 2026 13:30:52 +0000</pubDate>
     </item>
     <item>
@@ -397,7 +316,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-636</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Mon, 29 Jun 2026 13:34:52 +0000</pubDate>
     </item>
     <item>
@@ -407,7 +326,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-637</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Mon, 29 Jun 2026 13:44:45 +0000</pubDate>
     </item>
     <item>
@@ -417,7 +336,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-638</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Mon, 29 Jun 2026 17:12:47 +0000</pubDate>
     </item>
     <item>
@@ -427,7 +346,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-639</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Mon, 29 Jun 2026 17:18:19 +0000</pubDate>
     </item>
     <item>
@@ -437,7 +356,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-640</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Mon, 29 Jun 2026 17:26:07 +0000</pubDate>
     </item>
     <item>
@@ -447,7 +366,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Mon, 29 Jun 2026 17:32:51 +0000</pubDate>
     </item>
     <item>
@@ -457,7 +376,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-641</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Mon, 29 Jun 2026 19:08:08 +0000</pubDate>
     </item>
     <item>
@@ -467,7 +386,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/simplehelp-security-advisory-av26-642</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.33</comments>
       <pubDate>Tue, 30 Jun 2026 12:28:47 +0000</pubDate>
     </item>
     <item>
@@ -477,7 +396,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wolfssl-security-advisory-av26-643</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Tue, 30 Jun 2026 14:24:25 +0000</pubDate>
     </item>
     <item>
@@ -487,7 +406,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-644</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.43</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Tue, 30 Jun 2026 17:38:29 +0000</pubDate>
     </item>
     <item>
@@ -497,7 +416,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-645</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Tue, 30 Jun 2026 17:55:16 +0000</pubDate>
     </item>
     <item>
@@ -507,7 +426,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-646</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.35</comments>
+      <comments>Score: 9.31</comments>
       <pubDate>Thu, 02 Jul 2026 17:07:37 +0000</pubDate>
     </item>
     <item>
@@ -517,7 +436,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-648</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.37</comments>
+      <comments>Score: 9.32</comments>
       <pubDate>Thu, 02 Jul 2026 17:49:35 +0000</pubDate>
     </item>
     <item>
@@ -527,7 +446,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-552</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.37</comments>
+      <comments>Score: 9.32</comments>
       <pubDate>Thu, 02 Jul 2026 17:55:20 +0000</pubDate>
     </item>
     <item>
@@ -537,7 +456,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-016-vulnerability-impacting-citrix-netscaler-cve-2026-8451</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.40</comments>
+      <comments>Score: 9.35</comments>
       <pubDate>Thu, 02 Jul 2026 19:04:51 +0000</pubDate>
     </item>
     <item>
@@ -547,7 +466,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-647</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.41</comments>
+      <comments>Score: 9.37</comments>
       <pubDate>Thu, 02 Jul 2026 19:38:10 +0000</pubDate>
     </item>
     <item>
@@ -557,7 +476,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-649</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.88</comments>
       <pubDate>Fri, 03 Jul 2026 14:26:17 +0000</pubDate>
     </item>
     <item>
@@ -567,7 +486,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-650</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.06</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Fri, 03 Jul 2026 18:36:09 +0000</pubDate>
     </item>
     <item>
@@ -577,7 +496,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-651</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.07</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Fri, 03 Jul 2026 18:41:41 +0000</pubDate>
     </item>
     <item>
@@ -587,7 +506,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-015-critical-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-45659</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.29</comments>
+      <comments>Score: 10.25</comments>
       <pubDate>Thu, 02 Jul 2026 14:37:55 +0000</pubDate>
     </item>
   </channel>
