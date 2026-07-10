@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Jul 2026 04:54:07 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 08:24:39 +0000</lastBuildDate>
+    <item>
+      <title>156 individuals identified in first-of-its-kind drug-facilitated sexual assaults operation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/156-individuals-identified-in-first-of-its-kind-drug-facilitated-sexual-assaults-operation</link>
+      <description>From 22 to 24 June 2026, 29 investigators gathered at the National Crime Agency (NCA) headquarters in London. There, they collaborated closely to identify perpetrators, victims, misogynist groups, and new investigative leads as part of Project Medusa.Launched in April 2026, Project Medusa is a collaborative effort aiming to disrupt and dismantle online networks that facilitate DFSA, while strengthening cross-border strategies...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/156-individuals-identified-in-first-of-its-kind-drug-facilitated-sexual-assaults-operation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 10 Jul 2026 06:24:39 +0000</pubDate>
+    </item>
     <item>
       <title>Emerging drug trafficking corridor from Western to Eastern Europe disrupted</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/emerging-drug-trafficking-corridor-western-to-eastern-europe-disrupted</link>
@@ -17,108 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 10 Jul 2026 02:54:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>1 024 arrests in global operation against human trafficking</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/1024-arrests-in-global-operation-against-human-trafficking</link>
-      <description>This year’s edition of the annual effort took place from 8 to 12 June 2026 with coordination and support from Europol, Frontex, and INTERPOL. It aimed to detect and disrupt criminal activities associated with human trafficking to identify involved individuals, to trigger investigations against organised crime groups, and to safeguard potential victims. The operation was conducted under the EMPACT framework,...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/1024-arrests-in-global-operation-against-human-trafficking</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 10 Jul 2026 02:54:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>My threat feed told me it was ‘Chalubo.’ The binary disagreed</title>
-      <link>https://www.csoonline.com/article/4193946/my-threat-feed-told-me-it-was-chalubo-the-binary-disagreed.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;I’ve spent two years doing incident response and threat intel, and the one habit I’d keep if I had to give up every other is also the most boring. I don’t act on a piece of intelligence until I’ve checked it against the thing it claims to describe. It’s slow. It’s tedious. Almost nobody does it, because checking costs the exact time the feed was supposed to save. So, we read the report, nod and move on. That works fine most weeks. The weeks it doesn’t are the ones I remember, and the one I keep coming back to started with a feed that sounded completely sure of itself and had it backwards.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-cluster-the-feed-got-wrong"&gt;A cluster the feed got wrong&lt;/h2&gt;
-
-
-
-&lt;p&gt;I was mapping infrastructure behind a loader operation, sweeping a single service port through a commercial platform. It handed back a cluster of hosts; all tagged the same thing: Chalubo RAT. The tag didn’t stop me. The metadata did. Every host in the cluster carried one first-seen date, down to the day.&lt;/p&gt;
-
-
-
-&lt;p&gt;Real infrastructure never looks that clean. Operators stand hosts up a few at a time, over weeks, whenever they get to it. A whole cluster sharing one first-seen date almost always means you’re looking at the day the feed’s pipeline ingested the batch, not the day anyone actually saw those hosts live. So now I had two things I didn’t trust: The family name and the too-perfect date. Easiest way to settle it was to close the feed and go look at the malware.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href="https://news.sophos.com/en-us/2018/10/22/chalubo-botnet/"&gt;Chalubo&lt;/a&gt; is a Linux botnet. It brute-forces SSH and throws DDoS traffic. What I had in front of me was a Windows shellcode loader, a DonutLoader variant, the kind of thing that sits at the front of a ransomware intrusion. Different platform, different job. Calling one the other isn’t a near miss. It’s a category error.&lt;/p&gt;
-
-
-
-&lt;p&gt;So, I detonated it in an isolated lab, captured the traffic, mapped the C2 and pulled the config. It spoke a protocol of its own: Payload delivery on one custom channel, a steganographic beacon on a second, across a ten-host cluster, with a config format that had nothing to do with Chalubo. The reason for the bad tag turned out to be dull. The feed’s rule for that port keyed on the port plus a loose pattern, my loader tripped it and the label propagated across the whole batch with the ingest date stapled on.&lt;/p&gt;
-
-
-
-&lt;p&gt;This isn’t a knock on the vendor. Fingerprinting malware families across the entire internet is genuinely hard. The damage starts one step later, with whatever the reader does with that tag. Believe it, and you spend the week hardening against a Linux DDoS botnet while a Windows ransomware precursor sits quietly on your network. Wrong threat. Wrong priorities. The feed didn’t just come up empty. It pointed the response in the wrong direction, with total confidence and a familiar logo on it. Nothing about the tag looked wrong. The file was the only thing that said otherwise.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-same-gap-in-a-federal-advisory"&gt;The same gap, in a federal advisory&lt;/h2&gt;
-
-
-
-&lt;p&gt;For a while I filed this as a commercial-feed problem, the tax you pay for buying intel from a vendor cutting corners at scale. Then the same shape turned up in one of the best sources any of us get for free.&lt;/p&gt;
-
-
-
-&lt;p&gt;Earlier this year I spent some time inside the joint FBI and CISA &lt;a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-050a"&gt;advisory&lt;/a&gt; on Ghost, or Cring depending on who’s naming it, a ransomware crew that’s hit organizations in seventy-plus countries. Like everyone, I opened the PDF first. Its indicator table is literally headed “MD5 File Hashes”: 14 samples, each pinned to an MD5 and nothing else. MD5’s been broken for years. It’s the whole reason detection moved to SHA-256, and an MD5-only indicator doesn’t drop cleanly into half the tooling defenders actually run.&lt;/p&gt;
-
-
-
-&lt;p&gt;Then I opened the other copy of the same advisory. It doesn’t only ship as a PDF. There’s a machine-readable STIX bundle too, the format built to feed straight into a TIP or a SIEM. Same advisory, same code, different file. Six of those fourteen samples carried SHA-256 in the STIX, with SHA-1 and fuzzy hashes next to them, none of it in the PDF table. The stronger indicators were in the official release the entire time, sitting in the file almost nobody opens. Read the PDF like most people do, and you walk away with weaker detections than whoever opened the STIX, and nothing tells you there’s a difference.&lt;/p&gt;
-
-
-
-&lt;p&gt;That same bundle cut the other way too, and this is the part worth slowing down on. Down in its relationships sat a threat-actor object naming APT41, Winnti, Wicked Panda, wired to several of the Ghost indicators. The advisory’s text never says APT41. It goes out of its way to call the attribution “variable over time.” Pull on the thread and it falls apart: No vendor has ever tied Ghost to APT41, and the object looks like automated enrichment, not a human analyst’s call. The STIX isn’t lying to you. The problem is subtler. Feed it into your TIP and you’ve quietly inherited a nation-state attribution nobody actually made. One file was missing good data. The other was carrying data nobody vetted. You only catch either by looking.&lt;/p&gt;
-
-
-
-&lt;p&gt;And it’s not a one-country quirk. A while later I reversed a Go backdoor, GAMYBEAR, the one UAC-0241 pointed at Ukrainian schools and state bodies, documented in a CERT-UA &lt;a href="https://cert.gov.ua/article/6286219"&gt;advisory&lt;/a&gt;. Good report. It nailed the behavior. But the actual loader gave up more than fifteen binary-level corrections to what the advisory had: A persistence mechanism attributed to the wrong component, a broken TLS implementation and a handful of indicators that only held once I checked them against the real sample instead of the writeup. That’s the kind of detail that keeps a detection alive after the operator renames the file. Commercial vendor. Federal agency. Foreign CERT. Three sources, all accurate, all carrying something other than the full truth in the copy most people read.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-i-do-differently-now"&gt;What I do differently now&lt;/h2&gt;
-
-
-
-&lt;p&gt;The lesson wasn’t trust intelligence more or trust it less. It’s narrower than that. An indicator is a claim, and a claim gets checked before you stake a defense on it, most of all when it’s the advisory covering your own organization, because that’s the one whose blind spots quietly become yours. It’s cheap enough to make routine. If I were standing up a detection program next week, three things would be in from day one.&lt;/p&gt;
-
-
-
-&lt;p&gt;Treat any automated family label as a guess until something specific backs it. A row of identical first-seen dates is a fact about a pipeline, not a record of an attack. When an advisory ships in more than one format, open the machine-readable copy and don’t stop at the PDF, because the structured file tends to hold both the stronger indicators and the unvetted ones, and you want to see both. And for anything that actually matters, run a live sample through your own stack before you call it covered. The gap between an indicator and a detection that fires is exactly where attackers like to live.&lt;/p&gt;
-
-
-
-&lt;p&gt;I still reach for all three kinds of source every week, and I’ll defend every one of them. They were never the problem. The checking was always the cheap part. Assuming I could skip it was the expensive one. A report is where the work starts. Not where it stops.&lt;/p&gt;
-
-
-
-&lt;p&gt;The full teardowns behind these three cases are published on GitHub: The &lt;a href="https://github.com/yankywilson/donutcluster-AS138995"&gt;DonutLoader protocol analysis&lt;/a&gt;, the &lt;a href="https://github.com/yankywilson/ghost-cring-defender-toolkit"&gt;Ghost detection content&lt;/a&gt; and the &lt;a href="https://github.com/yankywilson/gamybear"&gt;GAMYBEAR reversing notes and rule&lt;/a&gt;, each in its own repository.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;a href="https://www.cio.com/expert-contributor-network/"&gt;&lt;strong&gt;Want to join?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4193946/my-threat-feed-told-me-it-was-chalubo-the-binary-disagreed.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
-      <pubDate>Wed, 08 Jul 2026 09:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Jul 2026 06:24:39 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV26-646)</title>
@@ -127,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-646</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Thu, 02 Jul 2026 17:07:37 +0000</pubDate>
     </item>
     <item>
@@ -137,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-648</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Thu, 02 Jul 2026 17:49:35 +0000</pubDate>
     </item>
     <item>
@@ -147,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-552</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Thu, 02 Jul 2026 17:55:20 +0000</pubDate>
     </item>
     <item>
@@ -157,8 +66,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-016-vulnerability-impacting-citrix-netscaler-cve-2026-8451</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Thu, 02 Jul 2026 19:04:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>Iran's Cyber Crosshairs Focus Beyond Critical Infrastructure</title>
+      <link>https://www.darkreading.com/cyber-risk/iran-cyber-crosshairs-beyond-critical-infrastructure</link>
+      <description>Obscurity isn't a defense. If your company has any Internet-facing vulnerability, you're at risk from multiple threats.</description>
+      <guid isPermaLink="false">https://www.darkreading.com/cyber-risk/iran-cyber-crosshairs-beyond-critical-infrastructure</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.70</comments>
+      <pubDate>Thu, 09 Jul 2026 20:32:00 +0000</pubDate>
     </item>
     <item>
       <title>WatchGuard security advisory (AV26-649)</title>
@@ -167,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-649</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Fri, 03 Jul 2026 14:26:17 +0000</pubDate>
     </item>
     <item>
@@ -177,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-650</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 03 Jul 2026 18:36:09 +0000</pubDate>
     </item>
     <item>
@@ -187,18 +106,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-651</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 03 Jul 2026 18:41:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>Iran's Cyber Crosshairs Focus Beyond Critical Infrastructure</title>
-      <link>https://www.darkreading.com/cyber-risk/iran-cyber-crosshairs-beyond-critical-infrastructure</link>
-      <description>Obscurity isn't a defense. If your company has any Internet-facing vulnerability, you're at risk from multiple threats.</description>
-      <guid isPermaLink="false">https://www.darkreading.com/cyber-risk/iran-cyber-crosshairs-beyond-critical-infrastructure</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
-      <pubDate>Thu, 09 Jul 2026 20:32:00 +0000</pubDate>
     </item>
     <item>
       <title>GitHub’s public APIs are becoming an enterprise reconnaissance tool</title>
@@ -312,7 +221,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4194665/githubs-public-apis-are-becoming-an-enterprise-reconnaissance-tool-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Wed, 08 Jul 2026 23:08:07 +0000</pubDate>
     </item>
     <item>
@@ -427,7 +336,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4194708/lateral-movement-risk-rises-as-enterprises-emphasize-convenience-over-containment.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Thu, 09 Jul 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -532,7 +441,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4194544/why-fixing-your-data-architecture-matters-more-than-upgrading-your-detection-models.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Thu, 09 Jul 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -701,7 +610,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4194548/agentic-ai-identity-a-6-stage-maturity-model-for-non-human-identities.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Thu, 09 Jul 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -820,7 +729,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4194997/uk-cyber-agency-unveils-ai-powered-cyber-shield-to-counter-attacks-at-machine-speed.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Thu, 09 Jul 2026 12:28:01 +0000</pubDate>
     </item>
     <item>
@@ -903,18 +812,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4194984/attack-on-amazon-bedrock-linked-ai-gateway-highlights-new-cloud-security-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Thu, 09 Jul 2026 13:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-015 - Critical vulnerability impacting Microsoft SharePoint Server – CVE-2026-45659</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-015-critical-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-45659</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-015-critical-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-45659</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
-      <pubDate>Thu, 02 Jul 2026 14:37:55 +0000</pubDate>
     </item>
     <item>
       <title>Red Hat security advisory (AV26-652)</title>
@@ -923,7 +822,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-652</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Mon, 06 Jul 2026 13:05:14 +0000</pubDate>
     </item>
     <item>
@@ -933,7 +832,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-653</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Mon, 06 Jul 2026 13:10:41 +0000</pubDate>
     </item>
     <item>
@@ -943,7 +842,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-654</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Mon, 06 Jul 2026 13:16:37 +0000</pubDate>
     </item>
     <item>
@@ -953,7 +852,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-655</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Mon, 06 Jul 2026 13:26:59 +0000</pubDate>
     </item>
     <item>
@@ -963,7 +862,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-656</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Mon, 06 Jul 2026 13:38:12 +0000</pubDate>
     </item>
     <item>
@@ -973,7 +872,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-657</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Mon, 06 Jul 2026 13:45:28 +0000</pubDate>
     </item>
     <item>
@@ -983,8 +882,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssh-security-advisory-av26-658</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Mon, 06 Jul 2026 13:51:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-015 - Critical vulnerability impacting Microsoft SharePoint Server – CVE-2026-45659</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-015-critical-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-45659</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-015-critical-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-45659</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.58</comments>
+      <pubDate>Thu, 02 Jul 2026 14:37:55 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft Edge security advisory (AV26-659)</title>
@@ -993,7 +902,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-659</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Mon, 06 Jul 2026 15:14:40 +0000</pubDate>
     </item>
     <item>
@@ -1003,18 +912,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-660</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Mon, 06 Jul 2026 17:50:31 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qualcomm security advisory – July 2026 monthly rollup (AV26-661)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-july-2026-monthly-rollup-av26-661</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-july-2026-monthly-rollup-av26-661</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
-      <pubDate>Mon, 06 Jul 2026 18:46:42 +0000</pubDate>
     </item>
     <item>
       <title>AI coding tool hole illustrates a big problem with human in the loop</title>
@@ -1120,8 +1019,161 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4195235/ai-coding-tool-hole-illustrates-a-big-problem-with-human-in-the-loop.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.62</comments>
       <pubDate>Thu, 09 Jul 2026 22:55:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>Qualcomm security advisory – July 2026 monthly rollup (AV26-661)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-july-2026-monthly-rollup-av26-661</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-july-2026-monthly-rollup-av26-661</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.64</comments>
+      <pubDate>Mon, 06 Jul 2026 18:46:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Check Point CTO Jonathan Zanger sees AI elevating the value of cyber</title>
+      <link>https://www.csoonline.com/article/4195311/check-point-cto-jonathan-zanger-sees-ai-elevating-the-value-of-cyber.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;Check Point Software CTO Jonathan Zanger met with CSO Spain during the software company’s Engage 2026 user conference last week in Paris.&lt;/p&gt;
+
+
+
+&lt;p&gt;At the event, Check Point executives and representatives discussed how the company is dealing with various types of threats, how it is adopting AI securely, and how Check Point and others can leverage AI for their own benefit.&lt;/p&gt;
+
+
+
+&lt;p&gt;“That’s why I believe 2026 is a fascinating year to work in this field. Every technological change drastically affects cybersecurity,” Zanger told CSO Spain. “I think we’re currently witnessing the biggest change since the advent of the internet. So, without a doubt, we’re facing significant transformations.”&lt;/p&gt;
+
+
+
+&lt;p&gt;What follows CSO Spain’s discussion with Zanger, edited for length and clarity.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;How are AI agents changing the way we detect and stop cyber threats? What new risks are they creating?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;I’ll try to answer on several levels. The first is how we operate differently as a cybersecurity company protecting our clients.&lt;/p&gt;
+
+
+
+&lt;p&gt;We’ve always had teams of experts monitoring threats, identifying malicious actors, and creating new defenses for our products. Consequently, whenever we detected an APT group, we investigated it and created signatures to protect against it. Or when we saw a suspicious network used by threat actors, we identified its location and blocked it. While it’s true that, in many ways, we were always limited by the number of talented people capable of gathering that intelligence and turning it into actionable defenses, what has AI allowed us to do? Dramatically scale this operation.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Could you give an example?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;We’ve always had red teams testing our products to ensure their security. And we’ve always valued those teams highly because they made our products significantly more secure. Now, those teams are incredibly powerful thanks to AI, working 20 times more efficiently. What do we have now? A combination of people and AI agents, with around 300 instances continuously monitoring and testing our systems. This is what allows us to deliver better cybersecurity and scale our capabilities.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;But it’s clear that malicious actors are using AI to carry out their operations…&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;That’s right. Just as it helped us scale our operations, it’s also helped them. We’re now seeing a proliferation of smaller, faster threat groups and malicious actors, capable of conducting phishing campaigns with less expertise than before. Consequently, we’re seeing more people entering the field of offensive cybersecurity. So, perhaps the final piece of the puzzle is that organizations are adopting AI systems, and now we have a new challenge: How are we going to protect them?&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;In this context, what security challenges arise when AI agents can access and operate enterprise systems? In your opinion, what should organizations prepare for?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Systems used to be deterministic: Given the same input, they produced a predictable output, which made them easier to protect. With AI agents, this changes, as they understand natural language, handle ambiguity, and their behavior isn’t always predictable, requiring a new approach to cybersecurity. Furthermore, something very important must be considered: AI depends on the systems it’s connected to. There’s a tension between security teams, who seek to limit these connections to reduce risks, and those promoting AI, who want to integrate it throughout the organization to gather information from any area.&lt;/p&gt;
+
+
+
+&lt;p&gt;In other words, the more connections AI has, the greater the attack surface and the security risk.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;How is generative AI making it easier for attackers to create cyberattacks? From your perspective, what are the most important defenses today?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;AI has transformed software development, making it much faster and more accessible. But what’s happening? Cybercriminals are exploiting this same capability, allowing them to escalate attacks like phishing, ransomware, malware, and vulnerability exploitation, increasing both the speed and volume of threats.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;What do you recommend doing in this scenario?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Defenders must also embrace AI. Detection and response are no longer enough when an attack can cause damage in seconds, so prevention plays a key role. While attackers maintain a certain advantage because they only need to hit once and are not subject to regulations, defenders have a differentiating factor: collaboration between teams, organizations, and security companies, which helps to level the playing field.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;But you can’t deny that many AI platforms still have vulnerabilities…&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;That’s right, because innovation often advances faster than security. That’s why I recommend incorporating a layer of security from the very beginning of any AI project and not assuming that a platform is secure simply because it comes from a reputable vendor.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;How can AI platforms be used securely in the face of the expanding attack surface? What do you consider to be the most significant risk?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Throughout the evolution of systems, innovation, and organizations, security hasn’t always been a priority from the outset of product development. We see this because we investigate different platforms, especially AI platforms, to assess their security. This has allowed us to uncover serious vulnerabilities in every AI platform we’ve analyzed over the past year, as well as in all major AI development tools.&lt;/p&gt;
+
+
+
+&lt;p&gt;Now, I’m not criticizing anyone here, because their job is to launch innovative products quickly. But I do believe security gaps exist. That’s why I think that, in many cases, this is the role of organizations like ours: to work with companies to ensure that when they use this innovative technology, they do so in a way that protects their data, safeguards their employees, and doesn’t increase their risk.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Would you share any lessons you’ve learned from adopting AI?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Absolutely. The lesson I take away is that when you adopt AI, whatever the use case, you must do so by incorporating a layer of security. And don’t assume a platform is secure just because it comes from an innovative AI company.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;In your opinion, what are the most important innovations in security platforms today? And how do they help customers and organizations stay protected?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;I’d like to identify three major areas where AI is transforming cybersecurity. The first is the use of AI to strengthen defense operations. Just as it has revolutionized software development, AI is changing how security teams work, enabling them to detect vulnerabilities, assess security posture, implement changes, and respond to threats more quickly, efficiently, and scalably.&lt;/p&gt;
+
+
+
+&lt;p&gt;The second area is the protection of the AI ​​applications and agents themselves. As these technologies are integrated into corporate networks, the challenge arises of ensuring they do not become a new attack vector or expose sensitive information. This is a very recent field, driven by the rapid adoption of generative AI, in which there is still ample room for innovation.&lt;/p&gt;
+
+
+
+&lt;p&gt;Finally, I want to emphasize the need to defend against increasingly rapid and sophisticated AI-driven attacks. To this end, I advocate combining advanced models capable of detecting zero-day vulnerabilities and anomalous behavior with AI systems that simulate the behavior of an ethical attacker. This way, organizations can anticipate cybercriminals, identify their attack surface, and strengthen their defenses before an incident occurs.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;The final question concerns the needs of small and medium-sized organizations, which want AI systems to be more transparent and easier to audit when they help detect or respond to threats. What are your thoughts on this?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;I believe explainability is a crucial part of what we must offer our clients as cybersecurity advocates. There’s always a tension between blocking something immediately and, at the same time, being able to explain why it was blocked. People like to understand what happened, and this presents a delicate balance. Therefore, my perspective is that we should automatically block as many threats as possible, without requiring human intervention, but we must also enable humans to understand what happened and modify the future behavior of the protection mechanisms.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;&lt;a href="https://www.computerworld.es/profile/victor-manuel-fernandez/"&gt;Víctor Manuel Fernández&lt;/a&gt; attending Engage 2026 as a guest of Check Point Software.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4195311/check-point-cto-jonathan-zanger-sees-ai-elevating-the-value-of-cyber.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.94</comments>
+      <pubDate>Fri, 10 Jul 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Android security advisory – July 2026 monthly rollup (AV26-662)</title>
@@ -1130,7 +1182,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-july-2026-monthly-rollup-av26-662</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Tue, 07 Jul 2026 15:30:22 +0000</pubDate>
     </item>
     <item>
@@ -1140,7 +1192,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-663</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Tue, 07 Jul 2026 15:31:37 +0000</pubDate>
     </item>
     <item>
@@ -1150,7 +1202,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-664</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Tue, 07 Jul 2026 15:32:18 +0000</pubDate>
     </item>
     <item>
@@ -1160,7 +1212,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-665</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Tue, 07 Jul 2026 15:37:11 +0000</pubDate>
     </item>
     <item>
@@ -1170,7 +1222,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-666</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Tue, 07 Jul 2026 15:40:38 +0000</pubDate>
     </item>
     <item>
@@ -1180,7 +1232,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av26-667</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Tue, 07 Jul 2026 15:44:00 +0000</pubDate>
     </item>
     <item>
@@ -1190,7 +1242,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-668</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.20</comments>
+      <comments>Score: 9.12</comments>
       <pubDate>Tue, 07 Jul 2026 19:35:43 +0000</pubDate>
     </item>
     <item>
@@ -1200,7 +1252,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-669</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.13</comments>
       <pubDate>Tue, 07 Jul 2026 19:47:13 +0000</pubDate>
     </item>
     <item>
@@ -1210,7 +1262,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-647</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.13</comments>
       <pubDate>Tue, 07 Jul 2026 19:49:45 +0000</pubDate>
     </item>
     <item>
@@ -1220,7 +1272,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/langflow-security-advisory-av26-670</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.64</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Wed, 08 Jul 2026 13:05:23 +0000</pubDate>
     </item>
     <item>
@@ -1230,7 +1282,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cyber-n8n-security-advisory-av26-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.70</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Wed, 08 Jul 2026 15:16:36 +0000</pubDate>
     </item>
     <item>
@@ -1240,7 +1292,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.71</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Wed, 08 Jul 2026 15:22:10 +0000</pubDate>
     </item>
     <item>
@@ -1250,7 +1302,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-673</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.72</comments>
+      <comments>Score: 9.62</comments>
       <pubDate>Wed, 08 Jul 2026 15:50:04 +0000</pubDate>
     </item>
     <item>
@@ -1260,7 +1312,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-674</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.67</comments>
       <pubDate>Wed, 08 Jul 2026 17:34:16 +0000</pubDate>
     </item>
     <item>
@@ -1270,7 +1322,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-675</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.78</comments>
+      <comments>Score: 9.68</comments>
       <pubDate>Wed, 08 Jul 2026 17:57:34 +0000</pubDate>
     </item>
     <item>
@@ -1280,7 +1332,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-676</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.81</comments>
+      <comments>Score: 9.71</comments>
       <pubDate>Wed, 08 Jul 2026 19:00:23 +0000</pubDate>
     </item>
     <item>
@@ -1290,7 +1342,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.81</comments>
+      <comments>Score: 9.71</comments>
       <pubDate>Wed, 08 Jul 2026 19:04:15 +0000</pubDate>
     </item>
     <item>
@@ -1300,7 +1352,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-678</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.84</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Wed, 08 Jul 2026 20:01:04 +0000</pubDate>
     </item>
     <item>
@@ -1310,7 +1362,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-679</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.55</comments>
+      <comments>Score: 10.43</comments>
       <pubDate>Thu, 09 Jul 2026 17:34:07 +0000</pubDate>
     </item>
     <item>
@@ -1320,7 +1372,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-680</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.57</comments>
+      <comments>Score: 10.44</comments>
       <pubDate>Thu, 09 Jul 2026 18:02:14 +0000</pubDate>
     </item>
     <item>
@@ -1330,7 +1382,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-084</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.64</comments>
+      <comments>Score: 10.51</comments>
       <pubDate>Thu, 09 Jul 2026 19:45:45 +0000</pubDate>
     </item>
   </channel>
