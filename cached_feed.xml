@@ -8,148 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Jul 2026 20:11:42 +0000</lastBuildDate>
-    <item>
-      <title>Governments to enterprises: Improve your router security hygiene</title>
-      <link>https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Global security agencies say enterprises must clean up their act as Russian government-sponsored attackers exploit weaknesses in routers.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;According to a new multinational &lt;a href="https://www.ic3.gov/CSA/2026/260713.pdf" rel="noreferrer noopener" target="_blank"&gt;cybersecurity advisory&lt;/a&gt;, cyberattackers continue to exploit inadequately-protected and/or poorly-configured network devices via age-old tactics. Threat actors scan for weakened devices, typically routers, allowing them to “opportunistically” compromise critical infrastructure networks, according to the bulletin from 19 federal agencies across North America, the UK, Europe, and Australia.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;They then transfer configuration files to servers they control. These files, containing plaintext or weakly-encoded information like credentials, or details about the organization’s network, hold most of the potential value, noted &lt;a href="https://www.infotech.com/profiles/seva-ioussoufovitch" rel="noreferrer noopener" target="_blank"&gt;Seva Ioussoufovitch&lt;/a&gt;, a senior research analyst at Info-Tech Research Group.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“It might sound simple, but this tactic has been exploited for well over a decade, and is clearly still effective,” he said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-snmp-attacks-work"&gt;How SNMP attacks work&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;To begin their attack, state-sponsored cybercriminals send requests via the standard Simple Network Management Protocol (SNMP) framework that supports device-network information exchange, which allows them to scan for weak, insecure devices still using older SNMPv1 or SNMPv2 protocols that accept common or default “community strings” for authentication. These strings are typically shared passwords, with predictable, public defaults that might have been left untouched by admins. Additionally, many of these devices may remain in their basic router configurations.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Using spoofed IP addresses, threat actors instruct SNMP agents running on these devices to copy their configurations to a file (typically “config.bkp” or “output.txt”), then transfer that file to virtual private servers (VPSs) that they control. In addition, cybercriminals are exploiting &lt;a href="https://www.csoonline.com/article/4168484/your-refresh-plan-has-a-cve-blind-spot.html" target="_blank"&gt;common vulnerabilities and exposures&lt;/a&gt; (CVEs) in Cisco devices, as well as in the Cisco’s Smart Install (SMI) tool.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Actors have exploited, at the very least, &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2018-0171" rel="noreferrer noopener" target="_blank"&gt;CVE-2018-0171&lt;/a&gt; (published in 2018) and &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2008-4128" rel="noreferrer noopener" target="_blank"&gt;CVE-2008-4128&lt;/a&gt; (published in 2008), according to the bulletin. Both of these targeted &lt;a href="https://www.csoonline.com/article/4043721/russian-hackers-exploit-old-cisco-flaw-to-target-global-enterprise-networks.html" target="_blank"&gt;Cisco routers&lt;/a&gt;, giving remote, unauthenticated attackers the ability to execute arbitrary code, take unauthorized actions, or cause a denial of service (DoS).&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Notable groups using this method are known to the security community as “Berserk Bear,” “Crouching Yeti,” “Dragonfly,” “Energetic Bear,” “Ghost Blizzard,” and “Static Tundra.” According to the bulletin, the industries most vulnerable to Russian state-sponsored cyber actors include communications, energy, financial services, defense industrial bases, healthcare and public health facilities, and government services and facilities.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-set-and-forget-approach-even-in-2026"&gt;A set-and-forget approach, even in 2026&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The problem with router hygiene is that devices are susceptible to a “confluence of typical enterprise shortcomings” when it comes to operationalizing security, noted Info-Tech’s Ioussoufovitch.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Many organizations still take a set-it-and-forget-it approach to routers, and don’t track them like they would an endpoint,” he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Compounding this risk is the fact that routers are typically critical to business continuity, which increases the necessity of keeping their security up-to-date. To make things worse, in some cases, it might also be unclear who’s in charge of device security. “Security points to the network team and they’re pointing right back at security,” Ioussoufovitch noted.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;As well, many organizations continue to rely on legacy hardware that may be unsupported, but that the business is unwilling to replace.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Ultimately, Ioussoufovitch said, “network security just doesn’t seem to be receiving the same amount of attention as the usual areas of focus (like endpoints).”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="recommendation-move-away-from-older-protocols-and-devices-immediately"&gt;Recommendation: Move away from older protocols and devices immediately&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Specifically, the agencies urged security teams and network admins to upgrade to SNMPv3, enforce secure passwords, disable Cisco Smart Install, and block SNMP and common file transfer methods “at the firewall.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Enterprises should immediately disable SNMPv1 and SNMPv2, which are “legacy protocols and should no longer be needed on current devices.” In instances where they are still deemed necessary, shift from default settings to grant read-only access (no read-write access).&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;SNMPv3 should be employed with &lt;em&gt;authPriv&lt;/em&gt; configured to the “most modern encryption standard,” the bulletin advised. SNMPv3 adds strong authentication and data encryption unavailable in previous versions, and has more securely encoded parameters to authenticate and encrypt data.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Moving to SNMPv3, which offers stronger authentication and encryption, is a clear, actionable step security teams need to prioritize now,” Ioussoufovitch agreed.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The government agencies urged enterprises to use strong, unique passwords for local accounts on network devices, and to monitor for unusual credentials that do not match standard naming conventions, or misconfiguration in logs or intrusion detection systems (IDS). Networks should support multi-factor authentication (MFA), and admins should enforce allow lists for management protocols like SNMP.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Additionally, enterprises should update network device software, retire end-of-life devices, and disable Cisco Smart Install on all machines once initial configuration is complete, as this introduces serious &lt;a href="https://www.csoonline.com/article/4195710/jurassic-park-cybersecurity-and-the-dangerous-myth-of-control.html" target="_blank"&gt;security issues&lt;/a&gt; when it inadvertently remains enabled, the agencies said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="network-security-must-improve-across-the-board"&gt;Network security must improve across the board&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The advisory is a signal that enterprises may be underinvesting in network security, noted Ioussoufovitch. Admins and security leaders should be asking these questions:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Do they have decent network detection and response capabilities in place?&lt;/li&gt;
-
-
-
-&lt;li&gt;Are they applying analytics and anomaly detection to network traffic patterns?&lt;/li&gt;
-
-
-
-&lt;li&gt;Have they incorporated micro-segmentation across the enterprise environment to limit risks posed by any individual router?&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Getting at least some of these proactive measures in place, while taking a more disciplined approach to the tracking and replacement of EOL devices, can help security and network teams finally start making some headway against these types of threats,” said Ioussoufovitch.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/dbshipley/" rel="noreferrer noopener" target="_blank"&gt;David Shipley&lt;/a&gt; of Beauceron Security agreed that enterprise networking equipment security must be improved, but said that’s more on the vendors than the critical infrastructure providers. Vendors should be shipping products that are secure by default; customers shouldn’t have to be going back and turning these features on.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;He added that it would be great to see Salt Typhoon-proof levels of device security and authentication. “Right now, it’s been trivial for them to pwn networking gear,” he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;While the guidance is important and will help, Shipley said, “building better and shipping secure by default would do even more.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
-      <pubDate>Tue, 14 Jul 2026 01:49:53 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 15 Jul 2026 22:03:56 +0000</lastBuildDate>
     <item>
       <title>US authorities warn of Russian attacks on critical infrastructure</title>
       <link>https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html</link>
@@ -174,7 +33,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 14 Jul 2026 00:49:46 +0000</pubDate>
     </item>
     <item>
@@ -184,7 +43,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/langflow-security-advisory-av26-670</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Wed, 08 Jul 2026 13:05:23 +0000</pubDate>
     </item>
     <item>
@@ -194,7 +53,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cyber-n8n-security-advisory-av26-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Wed, 08 Jul 2026 15:16:36 +0000</pubDate>
     </item>
     <item>
@@ -204,7 +63,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Wed, 08 Jul 2026 15:22:10 +0000</pubDate>
     </item>
     <item>
@@ -214,7 +73,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-673</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Wed, 08 Jul 2026 15:50:04 +0000</pubDate>
     </item>
     <item>
@@ -224,7 +83,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-674</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Wed, 08 Jul 2026 17:34:16 +0000</pubDate>
     </item>
     <item>
@@ -234,7 +93,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-675</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Wed, 08 Jul 2026 17:57:34 +0000</pubDate>
     </item>
     <item>
@@ -244,7 +103,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-676</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Wed, 08 Jul 2026 19:00:23 +0000</pubDate>
     </item>
     <item>
@@ -254,7 +113,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Wed, 08 Jul 2026 19:04:15 +0000</pubDate>
     </item>
     <item>
@@ -264,7 +123,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-678</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 08 Jul 2026 20:01:04 +0000</pubDate>
     </item>
     <item>
@@ -379,7 +238,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196303/ai-incidents-need-a-new-playbook-heres-how-to-build-one.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.77</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Tue, 14 Jul 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -389,7 +248,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-679</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Thu, 09 Jul 2026 17:34:07 +0000</pubDate>
     </item>
     <item>
@@ -399,7 +258,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-680</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Thu, 09 Jul 2026 18:02:14 +0000</pubDate>
     </item>
     <item>
@@ -409,7 +268,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-084</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Thu, 09 Jul 2026 19:45:45 +0000</pubDate>
     </item>
     <item>
@@ -419,7 +278,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-681</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Fri, 10 Jul 2026 17:59:53 +0000</pubDate>
     </item>
     <item>
@@ -429,7 +288,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-682</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Fri, 10 Jul 2026 18:06:59 +0000</pubDate>
     </item>
     <item>
@@ -439,7 +298,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vulnerability-impacting-roundcube-webmail-cve-2025-49113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Fri, 10 Jul 2026 19:12:59 +0000</pubDate>
     </item>
     <item>
@@ -449,7 +308,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/bitwarden-security-advisory-av26-683</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Fri, 10 Jul 2026 19:57:14 +0000</pubDate>
     </item>
     <item>
@@ -594,7 +453,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4197086/microsoft-is-forcing-an-enterprise-transition-to-passkeys-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Wed, 15 Jul 2026 02:08:45 +0000</pubDate>
     </item>
     <item>
@@ -777,7 +636,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196428/7-skills-and-traits-of-elite-security-engineers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Wed, 15 Jul 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -896,7 +755,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196818/cybersecurity-needs-more-prevention-and-less-reliance-on-cure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Wed, 15 Jul 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1007,7 +866,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196827/when-80000-fans-log-on-at-once-the-2026-world-cups-unique-cybersecurity-issues.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.53</comments>
       <pubDate>Wed, 15 Jul 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1126,8 +985,103 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4197348/white-house-launches-ai-driven-vulnerability-clearinghouse-to-speed-cyber-remediation.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Wed, 15 Jul 2026 12:43:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>NPM ecosystem hit with two new supply chain compromises</title>
+      <link>https://www.csoonline.com/article/4197499/npm-ecosystem-hit-with-two-new-supply-chain-compromises.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Attacks targeting developer ecosystems are increasing in frequency and sophistication, with Node.js developers firmly in this week’s crosshairs, as multiple npm packages belonging to the open-source AsyncAPI and Jscrambler Code Integrity were poisoned with malware following compromised development credentials.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The incidents highlight the cascading effect of software supply chain attacks in which stolen credentials are then used to perpetrate additional compromises. Security researchers advise organizations to completely rebuild from clean images any developer machines that have installed a poisoned package — and to rotate all npm tokens, source control access, cloud credentials, CI/CD secrets, SSH keys, signing keys, and browser sessions.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Affected packages include: &lt;a href="mailto:jscrambler@8.14.0"&gt;jscrambler@8.14.0&lt;/a&gt;, &lt;a href="mailto:jscrambler@8.16.0"&gt;jscrambler@8.16.0&lt;/a&gt;, &lt;a href="mailto:jscrambler@8.17.0"&gt;jscrambler@8.17.0&lt;/a&gt;, &lt;a href="mailto:jscrambler@8.18.0"&gt;jscrambler@8.18.0&lt;/a&gt;, &lt;a href="mailto:jscrambler@8.20.0"&gt;jscrambler@8.20.0&lt;/a&gt;, @asyncapi/generator-helpers@1.1.1, @asyncapi/generator-components@0.7.1, @asyncapi/generator@3.3.1, @asyncapi/specs@6.11.2 and @asyncapi/specs@6.11.2-alpha.1.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;However, packages that list any of the above poisoned packages as dependencies may also be impacted, including those from the same projects, such as jscrambler-webpack-plugin 8.6.2, gulp-jscrambler 8.6.2, grunt-jscrambler 8.5.2, and jscrambler-metro-plugin 9.0.2.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="vulnerable-github-actions-workflow-used-as-entry-point"&gt;Vulnerable GitHub Actions workflow used as entry point&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The attack against AsyncAPI, an open-source reference specification and toolset for implementing event-driven architectures and asynchronous APIs, occurred on Tuesday and was independently detected by multiple security companies monitoring the npm registry, including Upwind, Socket.dev, Wiz, StepSecurity, and Aikido Security.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;According to the researchers’ analysis, attackers took advantage of a &lt;a href="https://www.csoonline.com/article/4008621/github-actions-attack-renders-even-security-aware-orgs-vulnerable.html"&gt;known configuration vulnerability in a GitHub Actions CI/CD workflow&lt;/a&gt; that had been reported in April. The flaw involves the &lt;code&gt;pull_request_target&lt;/code&gt; event, which executes whenever a new pull request is made. When triggered, the workflow automatically checks out and executes the developer’s submitted pull request code in the Actions container, but this is done in the context of the base repository with full access to secrets.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The AsyncAPI project had &lt;a href="https://github.com/asyncapi/generator/pull/2092"&gt;a proposed fix&lt;/a&gt; since May 17, but the fix had not yet gone through the full review and was not merged into the main branch.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“At 05:08 UTC, the attacker opened PR #2155 containing a markdown file with obfuscated JavaScript hidden after approximately 1,000 bytes of whitespace,” researchers from Wiz explained &lt;a href="https://www.wiz.io/blog/m-red-team-asyncapi-supply-chain-compromise-via-github-actions"&gt;in their report&lt;/a&gt;. “The payload was designed to scan the GitHub Actions runner’s environment for secrets and exfiltrate them to a dead-drop URL on the rentry.co pastebin.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;When a GitHub Actions workflow is triggered and is executed in an environment, a temporary &lt;code&gt;GITHUB_TOKEN&lt;/code&gt; is generated to allow for authenticated git commands against the repository. Other tokens might also be included.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In this case, the attackers managed to obtain a token associated with asyncapi-bot, a service account that had access across the entire AsyncAPI organization on GitHub. This allowed them to perform malicious code commits in two separate repositories. Those commits then triggered automated build workflows that generated and published the npm packages.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The payload bundled in the packages shares some similarities with a malware framework called Miasma that was used in previous supply chain compromises. However, the malware code appears to be significantly different from previously documented variants.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The first-stage code downloads a secondary trojan payload that has variants for Linux, Windows, and macOS. This is a modular malware framework with credential theft capabilities that targets passwords and cookies saved inside browsers, SSH keys, npm and GitHub tokens, AWS credentials, macOS Keychain, and cryptocurrency wallets.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The trojan communicated with a command-and-control server and can accept remote commands to perform file operations, list directories, and exfiltrate data.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="jscrambler-compromised-via-leaked-npm-credential"&gt;Jscrambler compromised via leaked npm credential&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The Jscrambler attack happened over the weekend on July 11 with attackers publishing multiple trojanized versions in two waves. Jscrambler Code Integrity is a client-side security library designed to protect JavaScript-based web and mobile applications against tampering and reverse engineering.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Jscrambler published &lt;a href="https://jscrambler.com/blog/security-advisory-malicious-npm-package"&gt;an advisory&lt;/a&gt; in response to the incident in which it clarified that the attackers published malicious versions of the package using a npm publishing credential. However, unlike the AsyncAPI case, how that credential was leaked in the first place is not clear.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Initially the attackers released new package versions with two malicious scripts that get executed at install time using a preinstall hook in the configuration script. The scripts also execute platform-specific binaries for Linux, macOS, and Windows embedded in an obfuscated container.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Because &lt;code&gt;preinstall&lt;/code&gt; or &lt;code&gt;postinstall&lt;/code&gt; hooks are common ways to deliver malware in npm packages, they are automatically checked by security tools. To avoid detection, the attackers pivoted to a method that involved injecting the malicious code directly in the &lt;code&gt;dist/index.js&lt;/code&gt; and &lt;code&gt;dist/bin/jscrambler.js&lt;/code&gt; files. This changed the malware execution from package installation time to when the package gets imported into other projects or the Jscrambler CLI is invoked.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The embedded malware executables for different platforms are written in Rust and, according to &lt;a href="https://socket.dev/blog/jscrambler-supply-chain-attack"&gt;Socket.dev’s analysis&lt;/a&gt;, were “a broad, developer-focused credential and secret harvester” that targeted browser-extension crypto wallets, API keys from AI coding assistants and MCP servers, cloud credentials for AWS, Azure and GCP, authentication tokens for messaging applications (such as Discord, Slack, and Telegram), password stores from browsers, Steam, and KDE.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4197499/npm-ecosystem-hit-with-two-new-supply-chain-compromises.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.94</comments>
+      <pubDate>Wed, 15 Jul 2026 20:33:40 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-684)</title>
@@ -1136,7 +1090,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-684</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.21</comments>
       <pubDate>Mon, 13 Jul 2026 12:53:49 +0000</pubDate>
     </item>
     <item>
@@ -1146,7 +1100,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-685</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.21</comments>
       <pubDate>Mon, 13 Jul 2026 12:54:36 +0000</pubDate>
     </item>
     <item>
@@ -1156,7 +1110,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-686</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.21</comments>
       <pubDate>Mon, 13 Jul 2026 12:55:49 +0000</pubDate>
     </item>
     <item>
@@ -1166,7 +1120,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-687</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.21</comments>
       <pubDate>Mon, 13 Jul 2026 12:56:34 +0000</pubDate>
     </item>
     <item>
@@ -1176,7 +1130,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.21</comments>
       <pubDate>Mon, 13 Jul 2026 12:59:13 +0000</pubDate>
     </item>
     <item>
@@ -1355,7 +1309,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196940/patch-tuesday-roundup-microsoft-fixes-a-monthly-record-569-holes-sap-patches-a-critical-memory-corruption-bug.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.31</comments>
+      <comments>Score: 9.24</comments>
       <pubDate>Wed, 15 Jul 2026 01:54:00 +0000</pubDate>
     </item>
     <item>
@@ -1365,7 +1319,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-689</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.91</comments>
+      <comments>Score: 9.85</comments>
       <pubDate>Tue, 14 Jul 2026 13:33:00 +0000</pubDate>
     </item>
     <item>
@@ -1375,7 +1329,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-july-2026-monthly-rollup-av26-690</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.86</comments>
       <pubDate>Tue, 14 Jul 2026 13:54:12 +0000</pubDate>
     </item>
     <item>
@@ -1385,7 +1339,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-691</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.87</comments>
       <pubDate>Tue, 14 Jul 2026 14:12:52 +0000</pubDate>
     </item>
     <item>
@@ -1395,7 +1349,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-692</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.88</comments>
       <pubDate>Tue, 14 Jul 2026 14:23:33 +0000</pubDate>
     </item>
     <item>
@@ -1405,7 +1359,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.88</comments>
       <pubDate>Tue, 14 Jul 2026 14:34:41 +0000</pubDate>
     </item>
     <item>
@@ -1415,7 +1369,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-694</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Tue, 14 Jul 2026 15:44:38 +0000</pubDate>
     </item>
     <item>
@@ -1425,7 +1379,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-695</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.07</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Tue, 14 Jul 2026 18:38:50 +0000</pubDate>
     </item>
     <item>
@@ -1435,7 +1389,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-696</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.08</comments>
+      <comments>Score: 10.02</comments>
       <pubDate>Tue, 14 Jul 2026 19:07:39 +0000</pubDate>
     </item>
     <item>
@@ -1445,7 +1399,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-697</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.09</comments>
+      <comments>Score: 10.03</comments>
       <pubDate>Tue, 14 Jul 2026 19:25:40 +0000</pubDate>
     </item>
     <item>
@@ -1455,7 +1409,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-july-2026-monthly-rollup-av26-698</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.05</comments>
       <pubDate>Tue, 14 Jul 2026 20:02:49 +0000</pubDate>
     </item>
     <item>
@@ -1465,7 +1419,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-699</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.12</comments>
+      <comments>Score: 10.06</comments>
       <pubDate>Tue, 14 Jul 2026 20:27:13 +0000</pubDate>
     </item>
     <item>
@@ -1475,7 +1429,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-700</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.79</comments>
+      <comments>Score: 10.71</comments>
       <pubDate>Wed, 15 Jul 2026 14:56:58 +0000</pubDate>
     </item>
     <item>
@@ -1485,7 +1439,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-701</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.80</comments>
+      <comments>Score: 10.72</comments>
       <pubDate>Wed, 15 Jul 2026 15:12:44 +0000</pubDate>
     </item>
     <item>
@@ -1495,7 +1449,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-702</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.80</comments>
+      <comments>Score: 10.73</comments>
       <pubDate>Wed, 15 Jul 2026 15:22:04 +0000</pubDate>
     </item>
     <item>
@@ -1505,7 +1459,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/notepad-security-advisory-av26-703</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.81</comments>
+      <comments>Score: 10.74</comments>
       <pubDate>Wed, 15 Jul 2026 15:30:53 +0000</pubDate>
     </item>
     <item>
@@ -1515,7 +1469,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-704</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.82</comments>
+      <comments>Score: 10.75</comments>
       <pubDate>Wed, 15 Jul 2026 15:46:09 +0000</pubDate>
     </item>
     <item>
@@ -1525,7 +1479,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-705</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.87</comments>
+      <comments>Score: 10.80</comments>
       <pubDate>Wed, 15 Jul 2026 17:06:52 +0000</pubDate>
     </item>
     <item>
@@ -1535,7 +1489,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.96</comments>
+      <comments>Score: 10.88</comments>
       <pubDate>Wed, 15 Jul 2026 19:12:30 +0000</pubDate>
     </item>
     <item>
@@ -1545,7 +1499,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-706</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.96</comments>
+      <comments>Score: 10.89</comments>
       <pubDate>Wed, 15 Jul 2026 19:20:48 +0000</pubDate>
     </item>
     <item>
@@ -1555,7 +1509,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.92</comments>
+      <comments>Score: 11.84</comments>
       <pubDate>Wed, 15 Jul 2026 18:09:31 +0000</pubDate>
     </item>
   </channel>
