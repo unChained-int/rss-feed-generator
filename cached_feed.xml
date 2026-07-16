@@ -8,132 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Jul 2026 06:22:19 +0000</lastBuildDate>
-    <item>
-      <title>Adobe security advisory (AV26-647) – Update 2</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-647</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-647</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
-      <pubDate>Tue, 07 Jul 2026 19:49:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>AI incidents need a new playbook. Here’s how to build one</title>
-      <link>https://www.csoonline.com/article/4196303/ai-incidents-need-a-new-playbook-heres-how-to-build-one.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Seventy-one percent of organizations say AI has access to core business systems. Only 16% govern that access effectively, &lt;a href="https://www.cybersecurity-insiders.com/2026-ciso-ai-risk-report/"&gt;according to the 2026 CISO AI Risk Report&lt;/a&gt;. Ask your IR team three questions: Where is your AI system inventory? What happens if a production model starts generating harmful outputs? Who has the authority to take it offline?&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I’ve spent 14 years in security — energy, banking, telecom, manufacturing. Red team work, detection programs and the last several years focused on AI risk and ShadowAI. What I see consistently: Organizations have AI in production, they have an IR playbook and they think those two things are connected. They’re not.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The CISO who thinks their IR playbook covers AI incidents probably hasn’t tested it. The ones who have tested it know it doesn’t.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="two-kinds-of-ai-incident-and-why-that-split-matters-more-than-the-list"&gt;Two kinds of AI incident — and why that split matters more than the list&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;AI incidents &lt;a href="https://www.glacis.io/guide-ai-incident-response"&gt;surged 56.4% from 2023 to 2024, reaching 233 documented cases&lt;/a&gt;. Most IR frameworks — including NIST SP 800-61, MITRE ATLAS and the GLACIS AI Incident Response Playbook — provide you with a taxonomy of six incident types and stop there. While useful, it misses the more important split: Failures the model causes on its own, versus failures caused by a human. Your detection approach, your containment logic and your legal exposure are very different between those two groups.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Model-originated failures — degradation, bias, hallucinations — happen when the system does exactly what it was built to do, just badly. The Epic Sepsis Model, deployed across hundreds of US hospitals, had a sensitivity of only 33% at external validation. It missed two-thirds of actual sepsis cases and flooded physicians with false alerts, &lt;a href="https://doi.org/10.1001/jamainternmed.2021.2626"&gt;as a 2021 JAMA Internal Medicine study found&lt;/a&gt;. No one attacked it. It just quietly stopped working while every dashboard stayed green.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Externally induced failures — adversarial attacks, data poisoning, privacy breaches — happen when someone corrupts the inputs or the training environment. Tesla’s Autopilot phantom braking cases, &lt;a href="https://www.glacis.io/guide-ai-incident-response"&gt;investigated by NHTSA across hundreds of thousands of vehicles&lt;/a&gt;, show what adversarial input failures look like in a safety-critical system. These two groups need different primary defenses and their own playbooks.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Then there is the hybrid case, which carries the most legal exposure right now. Hallucinations are model-originated but they land in court like human errors. When Air Canada’s chatbot invented a bereavement fare policy, &lt;a href="https://decisions.civilresolutionbc.ca/crt/crtd/en/item/519/index.do"&gt;the airline was held liable&lt;/a&gt;. When a US federal court let &lt;a href="https://law.justia.com/cases/federal/district-courts/california/candce/3:2023cv01924/414830/96/"&gt;Mobley v. Workday&lt;/a&gt; proceed, it accepted that an AI hiring platform could be directly liable as an ‘agent’ of the employers using it. Neither failure looked like a security incident. Both ended up as legal ones. If your legal team is not on your IR call tree, your playbook is already incomplete.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-cia-triad-doesnt-cover-a-hallucination"&gt;The CIA triad doesn’t cover a hallucination&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The CIA triad — confidentiality, integrity, availability — does not apply to most AI incidents. When Air Canada’s chatbot made up a policy, nothing was unavailable, nothing was changed without authorization, nothing was disclosed. The framework simply doesn’t reach it. When the Epic Sepsis Model missed two-thirds of cases, there was no breach, no intrusion, no indicator of compromise. By every traditional IR metric, the system looked fine.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is not an edge case. Classical IR frameworks assume deterministic failures with static indicators of compromise — an assumption &lt;a href="https://doi.org/10.3390/jcp6010020"&gt;that breaks down against probabilistic systems&lt;/a&gt;. Microsoft’s Security Blog said it well in April 2026: A model may produce harmful output today and something completely different from the same prompt tomorrow. The root cause is not a line of code. It is a probability distribution, and &lt;a href="https://www.microsoft.com/en-us/security/blog/2026/04/15/incident-response-for-ai-same-fire-different-fuel/"&gt;as Microsoft’s Security Blog put it&lt;/a&gt;, you cannot patch a probability distribution.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The numbers confirm the gap. Average AI incident detection time is 4.5 days. &lt;a href="https://www.glacis.io/guide-ai-incident-response"&gt;Sixty-seven percent of AI incidents come from model errors, not adversarial attacks&lt;/a&gt; — yet security budgets keep funding perimeter tools built for the latter. We are looking for the wrong signals, with the wrong tools, for the wrong failure modes.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-a-mature-ai-ir-capability-looks-like"&gt;What a mature AI IR capability looks like&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I get asked this at every conference I speak at. Here is the short answer: Three things that mature teams have in place before any incident occurs.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;First, an AI Bill of Materials (AIBOM) for every production system. Think of it like a software SBOM, but for AI: It documents the base model, training datasets, third-party dependencies and the full component stack. Without it, you don’t know what your AI is made of — and you can’t investigate a data poisoning incident or a supply chain compromise without that baseline. The OWASP GenAI Security Project released an &lt;a href="https://genai.owasp.org/resource/owasp-aibom-generator/"&gt;open-source AIBOM generator&lt;/a&gt; in December 2025 that produces output in CycloneDX format aligned with SPDX standards. It is practical to implement now.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Second, a model card for every production AI system — not a document in a shared drive nobody opens, but something your IR team can pull up in the first ten minutes of a response. Training data provenance. Model version. Known performance limits, including which subpopulations showed weaker accuracy in testing. Access controls. Blast radius if it fails. Most organizations I work with have model documentation written for data scientists that no one in security can use at 2am. That is not documentation. That is liability.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Third, a named data scientist on the IR call tree. Not someone to brief after the incident — someone with authority to interrogate model behavior in real time. Traditional IR has a network engineer on call. AI IR needs the same logic applied to the people who understand how the failing system works.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A fourth thing that very few teams have: A documented rollback threshold for each deployed model. A pre-agreed definition of what anomaly rate, drift metric or fairness deviation triggers containment or a fallback switch. Teams without this spend the first hours of an AI incident debating whether what they are seeing is actually a problem. Teams with a threshold spend those hours responding.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="four-things-to-do-before-the-next-incident"&gt;Four things to do before the next incident&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Rewrite your detection triggers. Output anomaly scoring, data distribution monitoring for drift and behavioral tracking of model API usage need to be in your detection layer. They will not come from your SIEM. This is instrumentation work at the AI system level.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Redefine containment. For most AI incidents, ‘isolate the system’ is the wrong first move. Switching to a rule-based fallback while keeping the service running may cause less harm than taking the system offline and triggering a business escalation. Each deployed model needs pre-defined rollback criteria and a named fallback. Write those down now.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Get legal in the room before the incident. &lt;a href="https://law.justia.com/cases/federal/district-courts/california/candce/3:2023cv01924/414830/96/"&gt;Mobley v. Workday&lt;/a&gt; means both the AI vendor and the deploying organization can carry liability for bias incidents. &lt;a href="https://decisions.civilresolutionbc.ca/crt/crtd/en/item/519/index.do"&gt;Air Canada&lt;/a&gt; means you cannot disclaim what your AI says to a customer. If your legal team is learning about an AI incident from a press inquiry, something has already gone wrong.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Build your AI inventory and treat it like your asset register. Start with the AIBOM for your highest-risk systems — those with access to customer data, financial decisions or clinical workflows. The &lt;a href="https://doi.org/10.3390/jcp6010020"&gt;GenAI-IRF framework&lt;/a&gt; gives you a structured taxonomy for this work and the &lt;a href="https://www.glacis.io/guide-ai-incident-response"&gt;GLACIS AI Incident Response Playbook&lt;/a&gt; maps it to NIST SP 800-61 and MITRE ATLAS procedures your team can adapt without starting from scratch.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.proofpoint.com/us/resources/threat-reports/ai-human-risk-landscape-report"&gt;Forty-two percent of organizations have already had a suspicious or confirmed AI incident&lt;/a&gt;, and more than half say their security posture is catching up, inconsistent or reactive. Updating your playbook isn’t optional. Fix it before you need it.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;a href="https://www.cio.com/expert-contributor-network/"&gt;&lt;strong&gt;Want to join?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4196303/ai-incidents-need-a-new-playbook-heres-how-to-build-one.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
-      <pubDate>Tue, 14 Jul 2026 09:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 16 Jul 2026 09:17:33 +0000</lastBuildDate>
     <item>
       <title>Langflow security advisory (AV26-670)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/langflow-security-advisory-av26-670</link>
@@ -141,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/langflow-security-advisory-av26-670</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Wed, 08 Jul 2026 13:05:23 +0000</pubDate>
     </item>
     <item>
@@ -151,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cyber-n8n-security-advisory-av26-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Wed, 08 Jul 2026 15:16:36 +0000</pubDate>
     </item>
     <item>
@@ -161,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-672</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Wed, 08 Jul 2026 15:22:10 +0000</pubDate>
     </item>
     <item>
@@ -171,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-673</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Wed, 08 Jul 2026 15:50:04 +0000</pubDate>
     </item>
     <item>
@@ -181,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-674</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Wed, 08 Jul 2026 17:34:16 +0000</pubDate>
     </item>
     <item>
@@ -191,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-675</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.59</comments>
       <pubDate>Wed, 08 Jul 2026 17:57:34 +0000</pubDate>
     </item>
     <item>
@@ -201,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-676</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Wed, 08 Jul 2026 19:00:23 +0000</pubDate>
     </item>
     <item>
@@ -211,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-677</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Wed, 08 Jul 2026 19:04:15 +0000</pubDate>
     </item>
     <item>
@@ -221,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-678</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Wed, 08 Jul 2026 20:01:04 +0000</pubDate>
     </item>
     <item>
@@ -231,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-679</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Thu, 09 Jul 2026 17:34:07 +0000</pubDate>
     </item>
     <item>
@@ -241,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-680</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Thu, 09 Jul 2026 18:02:14 +0000</pubDate>
     </item>
     <item>
@@ -251,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-084</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Thu, 09 Jul 2026 19:45:45 +0000</pubDate>
     </item>
     <item>
@@ -396,7 +271,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4197086/microsoft-is-forcing-an-enterprise-transition-to-passkeys-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Wed, 15 Jul 2026 02:08:45 +0000</pubDate>
     </item>
     <item>
@@ -406,7 +281,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-681</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Fri, 10 Jul 2026 17:59:53 +0000</pubDate>
     </item>
     <item>
@@ -416,7 +291,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-682</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Fri, 10 Jul 2026 18:06:59 +0000</pubDate>
     </item>
     <item>
@@ -426,7 +301,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vulnerability-impacting-roundcube-webmail-cve-2025-49113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Fri, 10 Jul 2026 19:12:59 +0000</pubDate>
     </item>
     <item>
@@ -436,7 +311,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/bitwarden-security-advisory-av26-683</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Fri, 10 Jul 2026 19:57:14 +0000</pubDate>
     </item>
     <item>
@@ -619,7 +494,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196428/7-skills-and-traits-of-elite-security-engineers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Wed, 15 Jul 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -738,7 +613,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196818/cybersecurity-needs-more-prevention-and-less-reliance-on-cure.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Wed, 15 Jul 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -849,7 +724,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196827/when-80000-fans-log-on-at-once-the-2026-world-cups-unique-cybersecurity-issues.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Wed, 15 Jul 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -968,7 +843,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4197348/white-house-launches-ai-driven-vulnerability-clearinghouse-to-speed-cyber-remediation.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Wed, 15 Jul 2026 12:43:59 +0000</pubDate>
     </item>
     <item>
@@ -1063,7 +938,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4197499/npm-ecosystem-hit-with-two-new-supply-chain-compromises.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Wed, 15 Jul 2026 20:33:40 +0000</pubDate>
     </item>
     <item>
@@ -1242,8 +1117,171 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196940/patch-tuesday-roundup-microsoft-fixes-a-monthly-record-569-holes-sap-patches-a-critical-memory-corruption-bug.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.97</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Wed, 15 Jul 2026 01:54:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Flaw surge fuels need for CISOs to rethink vulnerability management</title>
+      <link>https://www.csoonline.com/article/4196435/flaw-surge-fuels-need-for-cisos-to-rethink-vulnerability-management.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Security experts are calling on enterprises to revise their vulnerability management strategies and move towards “just in time” patching in response the increased pace of vulnerability exploitation.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Attackers are &lt;a href="https://www.csoonline.com/article/4181924/ai-worm-prototype-shows-attackers-dont-need-mythos-to-take-over-your-network.html"&gt;turning to AI&lt;/a&gt; to increase the &lt;a href="https://www.csoonline.com/article/3632268/gen-ai-is-transforming-the-cyber-threat-landscape-by-democratizing-vulnerability-hunting.html"&gt;rate of vulnerability exploitation&lt;/a&gt; and supply chain compromise so that traditional forms of vulnerability management are no longer keeping pace.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Muhammad Yahya Patel, vCISO and cybersecurity advisor for EMEA at managed security services vendor Huntress, recently &lt;a href="https://www.csoonline.com/article/4176086/vulnerabilities-have-become-cyber-attackers-no-1-door-to-the-enterprise.html"&gt;told CSO&lt;/a&gt; that “organizations need to shift their vulnerability management program to a risk-based, continuous [approach], tied to real-time exploitation intelligence — not scheduled patch cycles that leave exploitation windows wide open for days and weeks.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="wild-frontier"&gt;Wild frontier&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Frontier AI tools such as Claude Mythos have &lt;a href="https://www.csoonline.com/article/4158117/anthropics-mythos-signals-a-structural-cybersecurity-shift.html"&gt;signaled a structural shift for cybersecurity&lt;/a&gt;, readily surfacing vulnerabilities at a huge scale — a development that, as government security assurance organizations such as the UK’s National Cyber Security Centre point out, is likely to lead to a surge in patches.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Most organizations already struggle to fix known issues quickly, so a spike in AI-driven discovery could easily overwhelm teams and widen the gap between finding problems and fixing them,” Andrew Woodford, CTO at network security vendor Titania, tells CSO. “In many ways, this just exposes a problem that’s already there.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Shane Fry, CTO at cybersecurity vendor RunSafe Security, argues that &lt;a href="https://www.csoonline.com/article/3520881/patch-management-a-dull-it-pain-that-wont-go-away.html"&gt;patching as a security strategy&lt;/a&gt; has been in crisis for years, and AI-accelerated vulnerability discovery has simply pushed it over the edge.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Some experts contend that virtual patching — a technique that involves blocking exploit attempts at a security layer rather than fixing vulnerable code — represents a sound mitigation strategy, but Fry has reservations about the approach.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“While virtual patching will play a role going forward, its effectiveness is limited and leaves security teams chasing a gap they will never be able to close,” Fry says.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Instead, security teams need to shift toward mitigation-first approaches that make it impossible for attackers to exploit bugs in software.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Removing entire classes of exploits upfront takes the heat out of the patch gap, and allows patching to become strategic rather than reactive,” Fry argues.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="assume-autonomy"&gt;‘Assume Autonomy’&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The conventional patch management model was designed around a world where vulnerability discovery happened at human speed: A human researcher finds a flaw, reports it, a CVE gets assigned, vendors ship a fix, enterprises test and deploy it — a process that can take weeks.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;AI-powered vulnerability discovery blows this model out of the water.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“If offensive AI can identify, validate, and exploit vulnerabilities without human authorization, a 43-day median patch time, as noted in Verizon’s DBIR, is the least of your problems,” argues Rik Ferguson, vice president of security intelligence at Forescout. “An AI system doesn’t wait for a proof-of-concept to circulate on GitHub or a CVSS score to land in a dashboard. It finds the flaw, confirms exploitability, and moves.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Ferguson advocates a change of approach toward what he describes as “Assume Autonomy.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The question is what compensating controls you put in place between discovery and remediation, and how you constrain what an attacker can do with access they’ve already acquired,” Ferguson explains.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Just-in-time patching fits in with this philosophy and is a desirable goal but may be difficult to achieve in practice especially for the many enterprises that struggle with asset management.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Just-in-time patching is sound in principle: prioritize and deploy fixes as exploitation intelligence emerges rather than waiting for the scheduled window,” Ferguson says. “But achieving it has some real-world requirements: continuous asset visibility, knowing precisely what you have, where it is, and what its current exposure status is.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;For example, Ferguson adds, “you can’t patch just-in-time against a vulnerability in a device you didn’t know was on your network.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="virtual-patching"&gt;Virtual patching&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Gunter Ollmann, CTO at pen testing as a service firm Cobalt, notes that just-in-time patching makes sense if and when a patch is available — but that’s not always possible.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The major problem lies in the discovery of new vulnerabilities in code or systems that the business has no rights or capabilities to fix themselves, and they have a dependence upon third parties to develop the fix or patch — and are therefore subject to external SLA [service level agreement] turnarounds,” Ollmann explains.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In such cases, enterprises will need to deploy virtual patches capable of blocking or deflecting the exploitation vectors of the vulnerable system.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Businesses are in desperate need of quickly deciphering a new vulnerability and dynamically creating an appropriate blocking rule — or rules — for their layered defenses,” Ollmann says.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Virtual patching may mitigate security threats particularly in operational technology (OT) and IoT environments where applying a vendor patch to a running production system risks unplanned downtime or safety system interruption but only serves as a stop gap, Ferguson tells CSO.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“A network-layer control that blocks exploitation of a known flaw, while you work through the testing and deployment cycle for the actual fix, is a compensating control,” notes Ferguson, who warns that virtual patches come with multiple drawbacks.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Virtual patches require accurate detection signatures, they don’t remediate the underlying vulnerability, and they can create a false sense of closure that delays proper patching indefinitely,” Ferguson argues. “The risk is that temporary becomes permanent. The underlying vulnerability stays open, and the virtual patch becomes the reason nobody revisits it.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="just-in-time-risk-reduction"&gt;Just-in-time risk reduction&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Douglas McKee, director of vulnerability intelligence at Rapid7, advocates what he describes as just-in-time risk reduction rather than just-in-time patching because of the practical difficulties with the latter.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“In the real world, especially in OT, medical devices, and business-critical systems, you can’t always patch the second a CVE drops,” McKee argues. “You still need testing, maintenance windows, rollback plans, and someone who actually owns the asset. However, the old monthly scan, report, and remediation cycle will not survive this pace.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="tips-for-modernizing-vulnerability-management"&gt;Tips for modernizing vulnerability management&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The enterprise attack surface has expanded significantly of late, and patch management models haven’t kept up. In response, security leaders’ vulnerability management strategies have to become more of a continuous monitoring function, not a triage and remediation process.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Modernizing enterprise approaches to vulnerability management involves “real-time exploitation intelligence integrated into prioritization, compensating controls deployed at discovery rather than at patch release, and visibility across the full asset estate that conventional patch management tools were never designed to cover,” Ferguson says.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Rapid7’s McKee stresses that security teams need to separate “known vulnerable” from “actually reachable and exploitable in my environment.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;This process can be achieved through a combination of asset inventory, internet exposure mapping, KEV tracking, vulnerability intelligence, ownership, and emergency change paths.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Prioritization based on risk factors like public exposure, known exploitation, automation potential, and technical impact is key,” McKee concludes.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4196435/flaw-surge-fuels-need-for-cisos-to-rethink-vulnerability-management.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.91</comments>
+      <pubDate>Thu, 16 Jul 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-684)</title>
@@ -1252,7 +1290,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-684</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.96</comments>
       <pubDate>Mon, 13 Jul 2026 12:53:49 +0000</pubDate>
     </item>
     <item>
@@ -1262,7 +1300,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-685</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.96</comments>
       <pubDate>Mon, 13 Jul 2026 12:54:36 +0000</pubDate>
     </item>
     <item>
@@ -1272,7 +1310,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-686</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.96</comments>
       <pubDate>Mon, 13 Jul 2026 12:55:49 +0000</pubDate>
     </item>
     <item>
@@ -1282,7 +1320,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-687</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.96</comments>
       <pubDate>Mon, 13 Jul 2026 12:56:34 +0000</pubDate>
     </item>
     <item>
@@ -1292,8 +1330,173 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.96</comments>
       <pubDate>Mon, 13 Jul 2026 12:59:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>The executive profile your security team isn’t defending</title>
+      <link>https://www.csoonline.com/article/4197460/the-executive-profile-your-security-team-isnt-defending.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;A few years ago, I was retained to conduct a digital risk review for the chief executive of a mid-sized financial services firm. The brief was standard. Assess what was publicly available about the executive, identify exposure and advise on remediation. The AI tools I used completed the substantive reconnaissance in under ten minutes.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;What came back was a synthesized profile. Board memberships and the dates they started. A pattern of public commentary that revealed which policy positions the executive held strongly and which ones he would likely bend on under pressure. A philanthropic interest that explained which causes he would respond to if someone framed an ask around them. None of this information was sensitive in isolation. But assembled into a single, queryable narrative, it was something an attacker could use immediately.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;What I was looking at was a publicly accessible query to a general-purpose AI tool. And that is the problem most executive protection programs have not yet confronted. The reconnaissance phase for a targeted social engineering attack now takes minutes, not days, and the inputs required are trivial.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;AI-aggregated executive data has become an attack surface. Most security programs have not yet adapted to it.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;The reconnaissance phase has effectively collapsed&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Traditional &lt;a href="https://www.csoonline.com/article/567859/what-is-osint-top-open-source-intelligence-tools.html"&gt;OSINT&lt;/a&gt; work against an executive target required skill and patience. A competent analyst could build a useful profile over several days by working through search engines, corporate filings, social platforms and archived media. That work was a meaningful barrier. It took time and it required judgment about which sources to trust. It also left trails if the attacker was careless.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;AI aggregation removes all three constraints.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The speed advantage is obvious but it is not the most important change. The more significant shift is synthesis. A search engine returns documents. An AI tool returns a coherent narrative with inferred relationships and interpreted significance. When I query a major AI platform for a senior executive by name, I get a structured account of their career arc, their professional relationships, their areas of visible influence and frequently their personal interests, relationships and public-facing affiliations.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The &lt;a href="https://westoahu.hawaii.edu/cyber/global-weekly-exec-summary/alphv-hackers-reveal-details-of-mgm-cyber-attack/"&gt;MGM Resorts incident &lt;/a&gt;reported in 2023 illustrated the principle at scale. Attackers reportedly identified an MGM executive on LinkedIn, used that public profile information to impersonate them in a call to the IT help desk and obtained access credentials within minutes. The OSINT required was minimal and the manipulation was straightforward. What AI tools have done since is make that kind of reconnaissance faster, more complete and available to actors who lack the manual tradecraft to run it themselves.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;As the&lt;a href="https://www.verizon.com/business/resources/reports/dbir/"&gt; Verizon Data Breach Investigations Report &lt;/a&gt;consistently documents, the human element is present in the majority of confirmed breaches, and social engineering remains one of the most reliable initial access vectors.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The accessible nature of AI tools is also expanding the threat population. Attacks that previously required a skilled analyst to design now require only a motivated actor with internet access. That changes the volume and targeting calculus. Executives who were previously too obscure to justify a sophisticated manual attack are now viable targets for anyone with a grievance and a query box.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;What should CIOs and CISOs do about it?&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The instinct in many organizations is to route anything involving an executive’s public profile to the comms or PR function. That instinct made sense when the risk was reputational. It no longer covers the exposure.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;What follows is how I advise clients to structure this work.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="monitor-regularly"&gt;Monitor regularly&lt;/h3&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The starting point is establishing visibility into what AI tools are actually returning about your executive population. Not a one-time audit conducted during a board meeting and forgotten. The profiles shift continuously as new content is indexed, old content is reweighted and the models are updated.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Assign ownership to run structured queries across the major platforms, including ChatGPT, Gemini, Perplexity and the Microsoft Copilot stack, on a regular cadence. Document what you find and track changes. Treat the output the same way you would treat a vulnerability scan as something to be prioritized and acted upon.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="reduce-the-available-attack-surface"&gt;Reduce the available attack surface&lt;/h3&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Work with each executive to identify content that expands their AI-indexed profile without serving any legitimate business purpose. This includes legacy conference bios that contain personal details, social posts that reveal schedule patterns or family context and board announcements that, in aggregate, map an executive’s full professional network. For some of this content, removal is possible and worth pursuing with a targeted effort.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The more important conversation is around future behavior. Executives who habitually overshare on LinkedIn or in conference panels need to understand, concretely, what that sharing enables.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Family member exposure is a consistent blind spot. An attacker who cannot pressure an executive directly may look for leverage through a spouse, a sibling or a child. Executives rarely consider their family members’ public digital footprint as part of their own security posture. It is.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="shape-the-narrative-where-reduction-isnt-possible"&gt;Shape the narrative where reduction isn’t possible&lt;/h3&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Public company executives, board members with mandatory disclosure obligations and individuals whose public profiles are central to their organizations’ credibility cannot simply go dark.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The objective shifts from reduction to shaping in these cases. The goal is to ensure that what AI tools synthesize from the indexed content is professionally bound and does not inadvertently surface high-value pretext material. This is a joint exercise between security and communications, with security defining risk boundaries and communications executing the strategy.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="train-executives-on-what-their-own-profile-looks-like"&gt;Train executives on what their own profile looks like&lt;/h3&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The most effective single intervention I have seen in executive briefings is also the simplest. Open a browser and query an AI platform on the executive in the room. Let them see the output. The reaction is consistent. They are surprised by the synthesis, uncomfortable with specific details that surface and immediately more engaged with the rest of the conversation than they were before.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Abstract threat briefings about social engineering risks rarely land with senior leaders who feel they understand their own security position. Demonstrated evidence of their AI-mediated profile lands every time. As covered in the context of &lt;a href="https://www.cio.com/article/4076479/from-awareness-to-ai-driven-resilience-protecting-identities-data-and-agents.html"&gt;executive-targeted attacks&lt;/a&gt;, awareness is a prerequisite for the behavior change that makes protection programs effective.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="integrate-this-into-the-executive-protection-program"&gt;Integrate this into the executive protection program&lt;/h3&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;This work belongs alongside endpoint security, credential management and physical protection in a unified executive protection program. When it remains a communications function, it lacks the reporting structure, budget authority and operational discipline that security work requires.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Assign an owner with a security mandate. Include AI exposure in the risk register. Report on it at the same cadence as other executive protection metrics. The organizations that have done this well have not created a separate program for it. They have extended an existing one.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;What effective executive protection programs now include&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The organizations that have integrated AI exposure into their executive protection work share a few characteristics that distinguish them from those still treating it as a communications edge case.&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;They treat the executive’s public information footprint as a managed attack surface with a named accountable party. Someone is responsible for it, the same way someone is responsible for endpoint patching or identity governance.&lt;/li&gt;
+
+
+
+&lt;li&gt;They include AI-assisted reconnaissance as a starting condition in red team exercises. Before any social engineering simulation begins, the red team runs the same queries an attacker would run. The pretext they design is based on what those queries return.&lt;/li&gt;
+
+
+
+&lt;li&gt;Their executive protection briefings include an AI profile review as a standing agenda point. Physical security considerations, credential exposure and public information risk are reviewed together because they are connected. An attacker who knows an executive’s schedule from their public-facing content can time a credential reset attempt or a vishing call with equal precision.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The executive I reviewed several years ago had no idea what his AI-indexed profile contained or what it enabled. Most of the executives I work with today are in the same position. By the time you finish reading this, it is likely those queries have already been run on someone in your organization. The question is whether your program is positioned to detect it and respond in time.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;a href="https://www.cio.com/expert-contributor-network/"&gt;&lt;strong&gt;Want to join?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4197460/the-executive-profile-your-security-team-isnt-defending.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.99</comments>
+      <pubDate>Thu, 16 Jul 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] Siemens security advisory (AV26-689)</title>
@@ -1302,7 +1505,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-689</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.54</comments>
       <pubDate>Tue, 14 Jul 2026 13:33:00 +0000</pubDate>
     </item>
     <item>
@@ -1312,7 +1515,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-july-2026-monthly-rollup-av26-690</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.62</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Tue, 14 Jul 2026 13:54:12 +0000</pubDate>
     </item>
     <item>
@@ -1322,7 +1525,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-691</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.63</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Tue, 14 Jul 2026 14:12:52 +0000</pubDate>
     </item>
     <item>
@@ -1332,7 +1535,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-692</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.64</comments>
+      <comments>Score: 9.56</comments>
       <pubDate>Tue, 14 Jul 2026 14:23:33 +0000</pubDate>
     </item>
     <item>
@@ -1342,7 +1545,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.64</comments>
+      <comments>Score: 9.56</comments>
       <pubDate>Tue, 14 Jul 2026 14:34:41 +0000</pubDate>
     </item>
     <item>
@@ -1352,7 +1555,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-694</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.67</comments>
+      <comments>Score: 9.59</comments>
       <pubDate>Tue, 14 Jul 2026 15:44:38 +0000</pubDate>
     </item>
     <item>
@@ -1362,7 +1565,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-695</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.67</comments>
       <pubDate>Tue, 14 Jul 2026 18:38:50 +0000</pubDate>
     </item>
     <item>
@@ -1372,7 +1575,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-696</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.69</comments>
       <pubDate>Tue, 14 Jul 2026 19:07:39 +0000</pubDate>
     </item>
     <item>
@@ -1382,7 +1585,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-697</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.78</comments>
+      <comments>Score: 9.70</comments>
       <pubDate>Tue, 14 Jul 2026 19:25:40 +0000</pubDate>
     </item>
     <item>
@@ -1392,7 +1595,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-july-2026-monthly-rollup-av26-698</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.80</comments>
+      <comments>Score: 9.71</comments>
       <pubDate>Tue, 14 Jul 2026 20:02:49 +0000</pubDate>
     </item>
     <item>
@@ -1402,7 +1605,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-699</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.81</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Tue, 14 Jul 2026 20:27:13 +0000</pubDate>
     </item>
     <item>
@@ -1412,7 +1615,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-700</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.41</comments>
+      <comments>Score: 10.30</comments>
       <pubDate>Wed, 15 Jul 2026 14:56:58 +0000</pubDate>
     </item>
     <item>
@@ -1422,7 +1625,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-701</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.42</comments>
+      <comments>Score: 10.31</comments>
       <pubDate>Wed, 15 Jul 2026 15:12:44 +0000</pubDate>
     </item>
     <item>
@@ -1432,7 +1635,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-702</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.42</comments>
+      <comments>Score: 10.32</comments>
       <pubDate>Wed, 15 Jul 2026 15:22:04 +0000</pubDate>
     </item>
     <item>
@@ -1442,7 +1645,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/notepad-security-advisory-av26-703</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.43</comments>
+      <comments>Score: 10.32</comments>
       <pubDate>Wed, 15 Jul 2026 15:30:53 +0000</pubDate>
     </item>
     <item>
@@ -1452,7 +1655,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-704</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.44</comments>
+      <comments>Score: 10.33</comments>
       <pubDate>Wed, 15 Jul 2026 15:46:09 +0000</pubDate>
     </item>
     <item>
@@ -1462,7 +1665,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-705</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.48</comments>
+      <comments>Score: 10.38</comments>
       <pubDate>Wed, 15 Jul 2026 17:06:52 +0000</pubDate>
     </item>
     <item>
@@ -1472,7 +1675,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.56</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Wed, 15 Jul 2026 19:12:30 +0000</pubDate>
     </item>
     <item>
@@ -1482,7 +1685,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-706</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.57</comments>
+      <comments>Score: 10.46</comments>
       <pubDate>Wed, 15 Jul 2026 19:20:48 +0000</pubDate>
     </item>
     <item>
@@ -1492,7 +1695,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.52</comments>
+      <comments>Score: 11.42</comments>
       <pubDate>Wed, 15 Jul 2026 18:09:31 +0000</pubDate>
     </item>
   </channel>
