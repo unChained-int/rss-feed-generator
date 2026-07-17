@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Jul 2026 15:16:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 17:15:11 +0000</lastBuildDate>
     <item>
       <title>FreePBX security advisory (AV26-680)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-680</link>
@@ -16,103 +16,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-680</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Thu, 09 Jul 2026 18:02:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>NPM ecosystem hit with two new supply chain compromises</title>
-      <link>https://www.csoonline.com/article/4197499/npm-ecosystem-hit-with-two-new-supply-chain-compromises.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Attacks targeting developer ecosystems are increasing in frequency and sophistication, with Node.js developers firmly in this week’s crosshairs, as multiple npm packages belonging to the open-source AsyncAPI and Jscrambler Code Integrity were poisoned with malware following compromised development credentials.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The incidents highlight the cascading effect of software supply chain attacks in which stolen credentials are then used to perpetrate additional compromises. Security researchers advise organizations to completely rebuild from clean images any developer machines that have installed a poisoned package — and to rotate all npm tokens, source control access, cloud credentials, CI/CD secrets, SSH keys, signing keys, and browser sessions.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Affected packages include: &lt;a href="mailto:jscrambler@8.14.0"&gt;jscrambler@8.14.0&lt;/a&gt;, &lt;a href="mailto:jscrambler@8.16.0"&gt;jscrambler@8.16.0&lt;/a&gt;, &lt;a href="mailto:jscrambler@8.17.0"&gt;jscrambler@8.17.0&lt;/a&gt;, &lt;a href="mailto:jscrambler@8.18.0"&gt;jscrambler@8.18.0&lt;/a&gt;, &lt;a href="mailto:jscrambler@8.20.0"&gt;jscrambler@8.20.0&lt;/a&gt;, @asyncapi/generator-helpers@1.1.1, @asyncapi/generator-components@0.7.1, @asyncapi/generator@3.3.1, @asyncapi/specs@6.11.2 and @asyncapi/specs@6.11.2-alpha.1.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;However, packages that list any of the above poisoned packages as dependencies may also be impacted, including those from the same projects, such as jscrambler-webpack-plugin 8.6.2, gulp-jscrambler 8.6.2, grunt-jscrambler 8.5.2, and jscrambler-metro-plugin 9.0.2.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="vulnerable-github-actions-workflow-used-as-entry-point"&gt;Vulnerable GitHub Actions workflow used as entry point&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The attack against AsyncAPI, an open-source reference specification and toolset for implementing event-driven architectures and asynchronous APIs, occurred on Tuesday and was independently detected by multiple security companies monitoring the npm registry, including Upwind, Socket.dev, Wiz, StepSecurity, and Aikido Security.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;According to the researchers’ analysis, attackers took advantage of a &lt;a href="https://www.csoonline.com/article/4008621/github-actions-attack-renders-even-security-aware-orgs-vulnerable.html"&gt;known configuration vulnerability in a GitHub Actions CI/CD workflow&lt;/a&gt; that had been reported in April. The flaw involves the &lt;code&gt;pull_request_target&lt;/code&gt; event, which executes whenever a new pull request is made. When triggered, the workflow automatically checks out and executes the developer’s submitted pull request code in the Actions container, but this is done in the context of the base repository with full access to secrets.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The AsyncAPI project had &lt;a href="https://github.com/asyncapi/generator/pull/2092"&gt;a proposed fix&lt;/a&gt; since May 17, but the fix had not yet gone through the full review and was not merged into the main branch.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“At 05:08 UTC, the attacker opened PR #2155 containing a markdown file with obfuscated JavaScript hidden after approximately 1,000 bytes of whitespace,” researchers from Wiz explained &lt;a href="https://www.wiz.io/blog/m-red-team-asyncapi-supply-chain-compromise-via-github-actions"&gt;in their report&lt;/a&gt;. “The payload was designed to scan the GitHub Actions runner’s environment for secrets and exfiltrate them to a dead-drop URL on the rentry.co pastebin.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;When a GitHub Actions workflow is triggered and is executed in an environment, a temporary &lt;code&gt;GITHUB_TOKEN&lt;/code&gt; is generated to allow for authenticated git commands against the repository. Other tokens might also be included.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In this case, the attackers managed to obtain a token associated with asyncapi-bot, a service account that had access across the entire AsyncAPI organization on GitHub. This allowed them to perform malicious code commits in two separate repositories. Those commits then triggered automated build workflows that generated and published the npm packages.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The payload bundled in the packages shares some similarities with a malware framework called Miasma that was used in previous supply chain compromises. However, the malware code appears to be significantly different from previously documented variants.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The first-stage code downloads a secondary trojan payload that has variants for Linux, Windows, and macOS. This is a modular malware framework with credential theft capabilities that targets passwords and cookies saved inside browsers, SSH keys, npm and GitHub tokens, AWS credentials, macOS Keychain, and cryptocurrency wallets.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The trojan communicated with a command-and-control server and can accept remote commands to perform file operations, list directories, and exfiltrate data.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="jscrambler-compromised-via-leaked-npm-credential"&gt;Jscrambler compromised via leaked npm credential&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The Jscrambler attack happened over the weekend on July 11 with attackers publishing multiple trojanized versions in two waves. Jscrambler Code Integrity is a client-side security library designed to protect JavaScript-based web and mobile applications against tampering and reverse engineering.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Jscrambler published &lt;a href="https://jscrambler.com/blog/security-advisory-malicious-npm-package"&gt;an advisory&lt;/a&gt; in response to the incident in which it clarified that the attackers published malicious versions of the package using a npm publishing credential. However, unlike the AsyncAPI case, how that credential was leaked in the first place is not clear.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Initially the attackers released new package versions with two malicious scripts that get executed at install time using a preinstall hook in the configuration script. The scripts also execute platform-specific binaries for Linux, macOS, and Windows embedded in an obfuscated container.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Because &lt;code&gt;preinstall&lt;/code&gt; or &lt;code&gt;postinstall&lt;/code&gt; hooks are common ways to deliver malware in npm packages, they are automatically checked by security tools. To avoid detection, the attackers pivoted to a method that involved injecting the malicious code directly in the &lt;code&gt;dist/index.js&lt;/code&gt; and &lt;code&gt;dist/bin/jscrambler.js&lt;/code&gt; files. This changed the malware execution from package installation time to when the package gets imported into other projects or the Jscrambler CLI is invoked.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The embedded malware executables for different platforms are written in Rust and, according to &lt;a href="https://socket.dev/blog/jscrambler-supply-chain-attack"&gt;Socket.dev’s analysis&lt;/a&gt;, were “a broad, developer-focused credential and secret harvester” that targeted browser-extension crypto wallets, API keys from AI coding assistants and MCP servers, cloud credentials for AWS, Azure and GCP, authentication tokens for messaging applications (such as Discord, Slack, and Telegram), password stores from browsers, Steam, and KDE.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4197499/npm-ecosystem-hit-with-two-new-supply-chain-compromises.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Wed, 15 Jul 2026 20:33:40 +0000</pubDate>
     </item>
     <item>
       <title>Django security advisory (AV26-084) – Update 1</title>
@@ -121,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-084</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Thu, 09 Jul 2026 19:45:45 +0000</pubDate>
     </item>
     <item>
@@ -131,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-681</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Fri, 10 Jul 2026 17:59:53 +0000</pubDate>
     </item>
     <item>
@@ -141,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-682</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Fri, 10 Jul 2026 18:06:59 +0000</pubDate>
     </item>
     <item>
@@ -151,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vulnerability-impacting-roundcube-webmail-cve-2025-49113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Fri, 10 Jul 2026 19:12:59 +0000</pubDate>
     </item>
     <item>
@@ -161,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/bitwarden-security-advisory-av26-683</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Fri, 10 Jul 2026 19:57:14 +0000</pubDate>
     </item>
     <item>
@@ -324,7 +229,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196435/flaw-surge-fuels-need-for-cisos-to-rethink-vulnerability-management.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 16 Jul 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -489,7 +394,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4197460/the-executive-profile-your-security-team-isnt-defending.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Thu, 16 Jul 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -606,7 +511,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4197463/when-ai-gets-a-body-it-inherits-an-attack-surface.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Thu, 16 Jul 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -709,7 +614,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4197733/cisa-urges-software-vendors-to-formalize-vulnerability-disclosure-programs.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Thu, 16 Jul 2026 10:48:58 +0000</pubDate>
     </item>
     <item>
@@ -788,7 +693,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4197775/cisa-urges-immediate-sharepoint-hardening-as-exploits-mount.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Thu, 16 Jul 2026 12:06:13 +0000</pubDate>
     </item>
     <item>
@@ -967,7 +872,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4196940/patch-tuesday-roundup-microsoft-fixes-a-monthly-record-569-holes-sap-patches-a-critical-memory-corruption-bug.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Wed, 15 Jul 2026 01:54:00 +0000</pubDate>
     </item>
     <item>
@@ -977,7 +882,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-684</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 13 Jul 2026 12:53:49 +0000</pubDate>
     </item>
     <item>
@@ -987,7 +892,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-685</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 13 Jul 2026 12:54:36 +0000</pubDate>
     </item>
     <item>
@@ -997,7 +902,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-686</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 13 Jul 2026 12:55:49 +0000</pubDate>
     </item>
     <item>
@@ -1007,7 +912,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-687</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 13 Jul 2026 12:56:34 +0000</pubDate>
     </item>
     <item>
@@ -1017,7 +922,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-688</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.41</comments>
       <pubDate>Mon, 13 Jul 2026 12:59:13 +0000</pubDate>
     </item>
     <item>
@@ -1152,7 +1057,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4198007/senior-executives-are-killing-your-shadow-ai-strategy.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Fri, 17 Jul 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1298,58 +1203,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4197923/the-saas-blind-spot-why-security-teams-cant-get-inside-their-own-apps.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.75</comments>
+      <comments>Score: 8.67</comments>
       <pubDate>Fri, 17 Jul 2026 09:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] Siemens security advisory (AV26-689)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-689</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-689</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
-      <pubDate>Tue, 14 Jul 2026 13:33:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>SAP security advisory – July 2026 monthly rollup (AV26-690)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-july-2026-monthly-rollup-av26-690</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-july-2026-monthly-rollup-av26-690</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.86</comments>
-      <pubDate>Tue, 14 Jul 2026 13:54:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV26-691)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-691</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-691</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
-      <pubDate>Tue, 14 Jul 2026 14:12:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV26-692)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-692</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-692</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
-      <pubDate>Tue, 14 Jul 2026 14:23:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>ServiceNow security advisory (AV26-693)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-693</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-693</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
-      <pubDate>Tue, 14 Jul 2026 14:34:41 +0000</pubDate>
     </item>
     <item>
       <title>New CISO appointments 2026</title>
@@ -1491,8 +1346,58 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4186743/new-ciso-appointments-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Fri, 17 Jul 2026 12:25:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] Siemens security advisory (AV26-689)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-689</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-689</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.82</comments>
+      <pubDate>Tue, 14 Jul 2026 13:33:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>SAP security advisory – July 2026 monthly rollup (AV26-690)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-july-2026-monthly-rollup-av26-690</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-july-2026-monthly-rollup-av26-690</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.82</comments>
+      <pubDate>Tue, 14 Jul 2026 13:54:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-691)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-691</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-691</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.83</comments>
+      <pubDate>Tue, 14 Jul 2026 14:12:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV26-692)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-692</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-692</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.83</comments>
+      <pubDate>Tue, 14 Jul 2026 14:23:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>ServiceNow security advisory (AV26-693)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-693</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-693</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.84</comments>
+      <pubDate>Tue, 14 Jul 2026 14:34:41 +0000</pubDate>
     </item>
     <item>
       <title>Veeam security advisory (AV26-694)</title>
@@ -1501,38 +1406,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-694</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Tue, 14 Jul 2026 15:44:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fortinet security advisory (AV26-695)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-695</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-695</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.96</comments>
-      <pubDate>Tue, 14 Jul 2026 18:38:50 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ivanti security advisory (AV26-696)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-696</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-696</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.97</comments>
-      <pubDate>Tue, 14 Jul 2026 19:07:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>Adobe security advisory (AV26-697)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-697</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-697</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.97</comments>
-      <pubDate>Tue, 14 Jul 2026 19:25:40 +0000</pubDate>
     </item>
     <item>
       <title>Google must open Android to rival AI agents, EU orders</title>
@@ -1570,8 +1445,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4198425/google-must-open-android-to-rival-ai-agents-eu-orders-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.97</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Fri, 17 Jul 2026 14:38:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortinet security advisory (AV26-695)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-695</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-695</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.92</comments>
+      <pubDate>Tue, 14 Jul 2026 18:38:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ivanti security advisory (AV26-696)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-696</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-696</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.93</comments>
+      <pubDate>Tue, 14 Jul 2026 19:07:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>Adobe security advisory (AV26-697)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-697</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-697</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.93</comments>
+      <pubDate>Tue, 14 Jul 2026 19:25:40 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV26-699) – Update 1</title>
@@ -1580,7 +1485,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-699</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.95</comments>
       <pubDate>Tue, 14 Jul 2026 20:27:13 +0000</pubDate>
     </item>
     <item>
@@ -1590,7 +1495,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-700</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.37</comments>
       <pubDate>Wed, 15 Jul 2026 14:56:58 +0000</pubDate>
     </item>
     <item>
@@ -1600,7 +1505,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-701</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Wed, 15 Jul 2026 15:12:44 +0000</pubDate>
     </item>
     <item>
@@ -1610,7 +1515,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-702</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Wed, 15 Jul 2026 15:22:04 +0000</pubDate>
     </item>
     <item>
@@ -1620,7 +1525,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/notepad-security-advisory-av26-703</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Wed, 15 Jul 2026 15:30:53 +0000</pubDate>
     </item>
     <item>
@@ -1630,7 +1535,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-704</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.44</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Wed, 15 Jul 2026 15:46:09 +0000</pubDate>
     </item>
     <item>
@@ -1640,7 +1545,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-705</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Wed, 15 Jul 2026 17:06:52 +0000</pubDate>
     </item>
     <item>
@@ -1650,7 +1555,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Wed, 15 Jul 2026 19:12:30 +0000</pubDate>
     </item>
     <item>
@@ -1660,7 +1565,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-706</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Wed, 15 Jul 2026 19:20:48 +0000</pubDate>
     </item>
     <item>
@@ -1670,7 +1575,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zoom-security-advisory-av26-707</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.03</comments>
+      <comments>Score: 9.97</comments>
       <pubDate>Thu, 16 Jul 2026 12:40:09 +0000</pubDate>
     </item>
     <item>
@@ -1680,7 +1585,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-708</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.05</comments>
+      <comments>Score: 9.98</comments>
       <pubDate>Thu, 16 Jul 2026 13:05:56 +0000</pubDate>
     </item>
     <item>
@@ -1690,7 +1595,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-709</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.05</comments>
       <pubDate>Thu, 16 Jul 2026 15:07:51 +0000</pubDate>
     </item>
     <item>
@@ -1700,7 +1605,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av26-710</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.21</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Thu, 16 Jul 2026 18:13:25 +0000</pubDate>
     </item>
     <item>
@@ -1710,7 +1615,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-july-2026-monthly-rollup-av26-698</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.23</comments>
+      <comments>Score: 10.16</comments>
       <pubDate>Thu, 16 Jul 2026 18:41:34 +0000</pubDate>
     </item>
     <item>
@@ -1720,7 +1625,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-568</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.24</comments>
+      <comments>Score: 10.17</comments>
       <pubDate>Thu, 16 Jul 2026 19:01:50 +0000</pubDate>
     </item>
     <item>
@@ -1730,7 +1635,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-351</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.25</comments>
+      <comments>Score: 10.18</comments>
       <pubDate>Thu, 16 Jul 2026 19:18:11 +0000</pubDate>
     </item>
     <item>
@@ -1740,7 +1645,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Wed, 15 Jul 2026 18:09:31 +0000</pubDate>
     </item>
     <item>
@@ -1750,7 +1655,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-711</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.96</comments>
+      <comments>Score: 10.88</comments>
       <pubDate>Fri, 17 Jul 2026 14:16:09 +0000</pubDate>
     </item>
     <item>
@@ -1760,8 +1665,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-712</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.99</comments>
+      <comments>Score: 10.91</comments>
       <pubDate>Fri, 17 Jul 2026 15:04:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-713)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-713</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-713</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.92</comments>
+      <pubDate>Fri, 17 Jul 2026 15:21:55 +0000</pubDate>
     </item>
   </channel>
 </rss>
