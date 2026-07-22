@@ -8,113 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 22 Jul 2026 15:48:53 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 17:22:50 +0000</lastBuildDate>
     <item>
-      <title>ServiceNow’s sandbox escape RCE hole now exploited in the wild</title>
-      <link>https://www.csoonline.com/article/4198993/servicenows-sandbox-escape-rce-hole-now-exploited-in-the-wild.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A sandbox security hole that could lead to remote code execution (RCE), patched last week by ServiceNow, is being actively exploited in the wild, according to &lt;a href="https://x.com/defusedcyber/status/2078418391321219448" rel="noreferrer noopener" target="_blank"&gt;a report from threat intel firm Defused&lt;/a&gt;. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The report, posted on X, said the firm is “observing in-the-wild exploitation of the ServiceNow pre-auth sandbox-escape RCE (CVE-2026-6875).”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Defused CEO &lt;a href="https://www.linkedin.com/in/simokohonen" rel="noreferrer noopener" target="_blank"&gt;Simo Kohonen&lt;/a&gt;, in an interview with CSO Online, noted that it appeared that the attacker has changed its tactics from those documented in an earlier proof of concept (PoC) from researchers at Searchlight Cyber, in response to ServiceNow patches and defenses. The company had implemented five different mitigations in its code base, which “neutered” the initial attack methodology, he said, adding that, overall, his team is seeing more attack method tweaks than it used to see. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“We are seeing a lot of [attack] variations, much more so than a year ago, for the same vulnerability,” Kohonen said. Attackers “now have more tools to build their own stuff.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;However, he admitted that his team has thus far only observed this exploit an in the wild exploitation “once, by one actor.” &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In response to the report, ServiceNow issued a statement saying that it has not yet directly seen any such exploitations. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“ServiceNow is aware of a cybersecurity company’s recent publication regarding exploitation activity associated with a previously disclosed security vulnerability, identified as &lt;a href="https://support.servicenow.com/kb/kb/kb/kb?id=kb_article_view&amp;amp;sysparm_article=KB3137947" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-6875&lt;/a&gt;. Based on our investigation to date, we have not observed evidence that this activity is related to instances that ServiceNow hosts,” the emailed statement said. “We have provided updates and patches designed to address this issue, and we encourage our self-hosted and ServiceNow-hosted customers to apply the relevant patches if they have not already done so.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-repeatable-failure-point"&gt;A ‘repeatable failure point’&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Analysts and consultants said the bigger concern with this hole is that it focuses on the lack of protections in the sandbox, which many security and IT teams have relied on for years. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The vulnerability lets an attacker bypass ServiceNow’s scripting sandbox entirely, and researchers are now seeing exploitation using a different technique than the one originally published, which means signature-based defenses built on the first proof of concept are unlikely to catch every variant,” said &lt;a href="https://my.idc.com/getdoc.jsp?containerId=PRF004767" rel="noreferrer noopener" target="_blank"&gt;Frank Dickson&lt;/a&gt;, group VP for security at IDC. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“A compromise that starts in the cloud tenant can end up inside the corporate network, turning a SaaS incident into an on-premises one,” he pointed out. “And because ServiceNow frequently houses HR records, CMDB asset data, and the ticketing system itself, an attacker sitting inside it may have visibility into how the incident response team is tracking the incident.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Dickson added that this incident is further proof that both IT and security teams need to reevaluate their patching methodologies. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Enterprises outsource patching for platforms like ServiceNow to the vendor, but keep the risk that comes from what those platforms touch: HR records, CMDB inventories, and now on-premises systems through MID Server integration. Control sits with the vendor, liability sits with the enterprise, and that mismatch argues for treating core SaaS platforms as part of the internal attack surface, not externalized vendor risk,” he said, noting that as vendors embed more AI-driven scripting into their platforms, the sandbox boundary becomes “a repeatable failure point.” &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Because of this, he advised, “CISOs should start asking every AI-enabled SaaS vendor how that boundary is architected and tested, before the next version of this story breaks elsewhere.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/noah-m-kenney-27499a166/" rel="noreferrer noopener" target="_blank"&gt;Noah Kenney&lt;/a&gt;, principal consultant at Digital 520, said the sandbox escape is the more disturbing element of the issue. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The significance is not that ServiceNow had a critical bug, so much as the fact that the bug is a sandbox escape in the AI Platform, which means the containment layer specifically built to run untrusted AI-driven code safely is the thing that failed,” he said. “CISOs have been told repeatedly that the sandbox is what makes enterprise AI safe to deploy, but we’re now seeing the sandbox breaking and that should reframe how CISOs think about every feature sitting behind a similar wall.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="addition-of-ai-increases-blast-radius"&gt;Addition of AI increases blast radius&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is yet another example where AI is fundamentally changing just about every IT and security rule, he pointed out.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Enterprises are bolting AI onto their most privileged systems of record faster than anyone is updating the threat models for those systems, and the AI layer is becoming the softest part of the hardest targets,” Kenney said. “The real question for a CISO is how many of your critical platforms shipped an AI feature in the past year, and whether a single person in your organization can tell you what that did to the pre-auth attack surface. Most cannot, and that is the actual exposure.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/akm76/" rel="noreferrer noopener" target="_blank"&gt;Aman Mahapatra&lt;/a&gt;, chief strategy officer for Tribeca Softtech, a New York City-based technology consulting firm, agreed.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“A vulnerability that gives an attacker a foothold in the ServiceNow instance is now also a vulnerability that gives them access to whatever AI agents are running inside that instance, along with any capability tokens, service accounts, or delegated permissions those agents hold,” Mahapatra said. “The blast radius of a ServiceNow compromise in 2026 is meaningfully larger than the same compromise would have been in 2023, and most enterprise security programs have not caught up to that shift.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Defused’s Kohonen said that he did not disagree with the sandbox concerns, but he stressed that enterprise CISOs have long ago abandoned the belief that sandboxes are secure. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Nothing is foolproof, and having a sandbox is better than not having one,” he said. “But the belief that a sandbox removes all of the risk is incredibly dumb,” especially in the reality of today’s threat landscape, which contains “an endless conveyor belt of exploits.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4198993/servicenows-sandbox-escape-rce-hole-now-exploited-in-the-wild.html</guid>
+      <title>Veeam security advisory (AV26-694)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-694</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-694</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
-      <pubDate>Mon, 20 Jul 2026 20:24:54 +0000</pubDate>
+      <comments>Score: 7.53</comments>
+      <pubDate>Tue, 14 Jul 2026 15:44:38 +0000</pubDate>
     </item>
     <item>
       <title>Fortinet security advisory (AV26-695)</title>
@@ -123,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-695</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 14 Jul 2026 18:38:50 +0000</pubDate>
     </item>
     <item>
@@ -133,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-696</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 14 Jul 2026 19:07:39 +0000</pubDate>
     </item>
     <item>
@@ -143,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-697</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 14 Jul 2026 19:25:40 +0000</pubDate>
     </item>
     <item>
@@ -153,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-699</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Tue, 14 Jul 2026 20:27:13 +0000</pubDate>
     </item>
     <item>
@@ -163,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-700</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 15 Jul 2026 14:56:58 +0000</pubDate>
     </item>
     <item>
@@ -173,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-701</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 15 Jul 2026 15:12:44 +0000</pubDate>
     </item>
     <item>
@@ -183,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-702</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 15 Jul 2026 15:22:04 +0000</pubDate>
     </item>
     <item>
@@ -193,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/notepad-security-advisory-av26-703</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 15 Jul 2026 15:30:53 +0000</pubDate>
     </item>
     <item>
@@ -203,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-704</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Wed, 15 Jul 2026 15:46:09 +0000</pubDate>
     </item>
     <item>
@@ -213,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-705</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 15 Jul 2026 17:06:52 +0000</pubDate>
     </item>
     <item>
@@ -223,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-av26-526</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Wed, 15 Jul 2026 19:12:30 +0000</pubDate>
     </item>
     <item>
@@ -233,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-706</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Wed, 15 Jul 2026 19:20:48 +0000</pubDate>
     </item>
     <item>
@@ -344,7 +247,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4198528/security-in-the-age-of-ai-where-to-start-key-challenges-identified-by-white-hacker-ceo-park-chan-am.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Tue, 21 Jul 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -435,7 +338,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4198524/context-bombing-heralds-a-new-ai-era-of-deceptive-defense.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Tue, 21 Jul 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -445,7 +348,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zoom-security-advisory-av26-707</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Thu, 16 Jul 2026 12:40:09 +0000</pubDate>
     </item>
     <item>
@@ -455,7 +358,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-708</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Thu, 16 Jul 2026 13:05:56 +0000</pubDate>
     </item>
     <item>
@@ -465,7 +368,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-709</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Thu, 16 Jul 2026 15:07:51 +0000</pubDate>
     </item>
     <item>
@@ -475,7 +378,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av26-710</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Thu, 16 Jul 2026 18:13:25 +0000</pubDate>
     </item>
     <item>
@@ -485,7 +388,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-568</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Thu, 16 Jul 2026 19:01:50 +0000</pubDate>
     </item>
     <item>
@@ -495,7 +398,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-351</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Thu, 16 Jul 2026 19:18:11 +0000</pubDate>
     </item>
     <item>
@@ -505,7 +408,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/freepbx-security-advisory-av26-711</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Fri, 17 Jul 2026 14:16:09 +0000</pubDate>
     </item>
     <item>
@@ -515,7 +418,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-712</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Fri, 17 Jul 2026 15:04:24 +0000</pubDate>
     </item>
     <item>
@@ -525,7 +428,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-713</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Fri, 17 Jul 2026 15:21:55 +0000</pubDate>
     </item>
     <item>
@@ -535,7 +438,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-714</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Fri, 17 Jul 2026 18:33:47 +0000</pubDate>
     </item>
     <item>
@@ -822,7 +725,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4198016/socs-face-a-human-challenge-as-ai-speeds-alerts-and-threats.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Mon, 20 Jul 2026 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1255,7 +1158,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4186743/new-ciso-appointments-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Wed, 22 Jul 2026 06:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1402,18 +1305,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4188581/10-survival-tips-for-csos-who-report-to-the-ceo.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Wed, 22 Jul 2026 07:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-017 - Critical vulnerabilities impacting Microsoft SharePoint Server – CVE-2026-56164, CVE-2026-55040 and CVE-2026-58644</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
-      <pubDate>Wed, 15 Jul 2026 18:09:31 +0000</pubDate>
     </item>
     <item>
       <title>AI, security operations and the new race against time</title>
@@ -1643,8 +1536,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4198963/ai-security-operations-and-the-new-race-against-time.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.67</comments>
       <pubDate>Wed, 22 Jul 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-017 - Critical vulnerabilities impacting Microsoft SharePoint Server – CVE-2026-56164, CVE-2026-55040 and CVE-2026-58644</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-017-critical-vulnerabilities-impacting-microsoft-sharepoint-server-cve-2026-56164-cve-2026-55040-cve-2026-58644</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.70</comments>
+      <pubDate>Wed, 15 Jul 2026 18:09:31 +0000</pubDate>
     </item>
     <item>
       <title>OpenAI model escape puts enterprise AI defenses on notice</title>
@@ -1750,7 +1653,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4200043/openai-model-escape-puts-enterprise-ai-defenses-on-notice.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.84</comments>
       <pubDate>Wed, 22 Jul 2026 13:29:30 +0000</pubDate>
     </item>
     <item>
@@ -1833,7 +1736,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4199408/ai-agents-can-escape-sandboxes-without-ever-breaking-them.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Tue, 21 Jul 2026 11:46:02 +0000</pubDate>
     </item>
     <item>
@@ -1843,7 +1746,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-715</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.41</comments>
+      <comments>Score: 9.37</comments>
       <pubDate>Mon, 20 Jul 2026 15:14:31 +0000</pubDate>
     </item>
     <item>
@@ -1853,7 +1756,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-716</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.41</comments>
+      <comments>Score: 9.37</comments>
       <pubDate>Mon, 20 Jul 2026 15:18:34 +0000</pubDate>
     </item>
     <item>
@@ -1863,7 +1766,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubuntu-security-advisory-av26-717</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.41</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Mon, 20 Jul 2026 15:21:45 +0000</pubDate>
     </item>
     <item>
@@ -1873,7 +1776,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-ics-security-advisories-av26-718</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Mon, 20 Jul 2026 15:23:54 +0000</pubDate>
     </item>
     <item>
@@ -1883,7 +1786,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-719</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Mon, 20 Jul 2026 15:28:07 +0000</pubDate>
     </item>
     <item>
@@ -1893,7 +1796,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-720</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Mon, 20 Jul 2026 15:31:37 +0000</pubDate>
     </item>
     <item>
@@ -1903,7 +1806,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av26-721</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Mon, 20 Jul 2026 15:36:07 +0000</pubDate>
     </item>
     <item>
@@ -1913,7 +1816,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-693</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Mon, 20 Jul 2026 15:57:13 +0000</pubDate>
     </item>
     <item>
@@ -1923,7 +1826,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-722</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Mon, 20 Jul 2026 16:02:47 +0000</pubDate>
     </item>
     <item>
@@ -1933,7 +1836,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-724</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.05</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Tue, 21 Jul 2026 13:56:14 +0000</pubDate>
     </item>
     <item>
@@ -1943,7 +1846,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-725</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.06</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Tue, 21 Jul 2026 14:02:40 +0000</pubDate>
     </item>
     <item>
@@ -1953,7 +1856,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-july-2026-monthly-rollup-av26-698</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.06</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Tue, 21 Jul 2026 14:04:18 +0000</pubDate>
     </item>
     <item>
@@ -1963,7 +1866,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-726</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.06</comments>
+      <comments>Score: 10.01</comments>
       <pubDate>Tue, 21 Jul 2026 14:12:40 +0000</pubDate>
     </item>
     <item>
@@ -1973,7 +1876,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-723</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 10.06</comments>
       <pubDate>Tue, 21 Jul 2026 15:35:54 +0000</pubDate>
     </item>
     <item>
@@ -1983,7 +1886,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-727</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.21</comments>
+      <comments>Score: 10.15</comments>
       <pubDate>Tue, 21 Jul 2026 18:35:00 +0000</pubDate>
     </item>
     <item>
@@ -1993,7 +1896,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-728</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.85</comments>
+      <comments>Score: 10.79</comments>
       <pubDate>Wed, 22 Jul 2026 12:11:16 +0000</pubDate>
     </item>
     <item>
@@ -2003,7 +1906,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-july-2026-quarterly-rollup-av26-729</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.97</comments>
+      <comments>Score: 10.90</comments>
       <pubDate>Wed, 22 Jul 2026 14:58:18 +0000</pubDate>
     </item>
     <item>
@@ -2013,7 +1916,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-730</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.98</comments>
+      <comments>Score: 10.91</comments>
       <pubDate>Wed, 22 Jul 2026 15:14:05 +0000</pubDate>
     </item>
   </channel>
