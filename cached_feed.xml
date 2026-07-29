@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Jul 2026 03:28:52 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 06:33:25 +0000</lastBuildDate>
     <item>
       <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</link>
@@ -17,204 +17,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 29 Jul 2026 01:28:52 +0000</pubDate>
+      <pubDate>Wed, 29 Jul 2026 04:33:25 +0000</pubDate>
     </item>
     <item>
-      <title>The containment paradox: Why your ransomware playbook has the wrong people in charge</title>
-      <link>https://www.csoonline.com/article/4200141/the-containment-paradox-why-your-ransomware-playbook-has-the-wrong-people-in-charge.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I have sat in on a version of the same incident post-mortem in three sectors over the past two years. The script does not vary much. At 4:47 a.m. on a Saturday, an on-duty SOC analyst sees a ransomware payload spreading across three servers in the data center. The playbook says isolate. They hit the switch. Sixteen minutes later the CFO is on the phone: Those three servers were the production payment gateway. The malware would likely have reached a dozen more endpoints. The isolation took down revenue for fourteen hours. The Monday morning question from the board is not how the attacker got in. It is who, in the organization, was authorized to make a decision of this commercial magnitude at 4:47 in the morning.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is the question most incident response programs avoid putting in writing. The plan is documented. The SOC has it open on the second monitor. What is missing is the answer to a single question: Tho decides that a business-critical system goes offline and who carries the operational and financial consequences of that decision? In most playbooks I have reviewed, that authority is not assigned. It sits implicitly with whichever SOC analyst is on shift — typically someone who neither owns the affected business process nor can fully see the downstream consequences of the action they are about to take.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This piece is about the gap between technical incident response and operational accountability. It introduces the containment paradox, the no-touch register as a governance instrument, a RACI structure for containment decisions and the answer to the most common objection — that a veto right will simply slow you down while attackers move.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-isolate-first-stopped-being-the-safe-default"&gt;Why “isolate first” stopped being the safe default&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The classical incident response doctrine comes out of enterprise IT. It carries a reflex that used to be safely correct: When in doubt, isolate. A suspicious endpoint comes off the network. A compromised server is taken down. A flagged account is disabled. Fast action reduces dwell time, and reduced dwell time reduces damage. That logic is the spine of every SOAR default configuration and most IR runbooks.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The doctrine breaks once isolation itself becomes the loss event. A disconnected workstation costs a knowledge worker a productive hour. A disconnected payment gateway, ERP backbone, identity provider, manufacturing line or trading platform costs revenue, contract penalties, regulatory exposure and trust — sometimes within minutes. The containment measure becomes the damage. It is no longer mitigation; it is escalation by another route. &lt;a href="https://www.verizon.com/business/resources/reports/dbir/"&gt;Verizon’s 2026 Data Breach Investigations Report&lt;/a&gt;, drawing on more than 31,000 incidents across 145 countries, finds ransomware now present in 48 percent of all breaches — but also that 69 percent of victims chose not to pay and the median ransom dropped to $139,875. Read against incident-response practice, those numbers say two things: The trigger event is more common than ever, and the decisions that follow it carry more commercial weight than ever.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Colonial Pipeline in May 2021 is the case study every CISO already knows but few have internalized correctly. The DarkSide ransomware was on the corporate billing system, not on the pipeline control network. Colonial shut down the pipeline anyway, because they could not guarantee the ransomware would stay on the IT side. The outage lasted six days, hit 17 states plus the District of Columbia and triggered the largest fuel supply crisis on the US East Coast in decades. The intrusion compromised a network. The response disabled a region. JBS followed the same pattern weeks later. A major US consumer goods manufacturer pursued a vendor lawsuit in 2023 arguing that the contractor had extended recovery time and was liable for the resulting downtime. Recovery duration is now an attributable damage figure in litigation. That shift was unthinkable a few years ago.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-accountability-and-authority-asymmetry"&gt;The accountability and authority asymmetry&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In most enterprises, the executive responsible for the availability of a business service — the head of payments, the head of trading, the plant manager, the head of clinical systems — does not have the authority to prevent that service from being taken offline during an incident. The SOC has the authority. The business owner has the accountability. These are different people, often in different reporting lines, and the asymmetry only becomes visible when something is actually shut down. NIST’s &lt;a href="https://csrc.nist.gov/projects/incident-response"&gt;SP 800-61 Revision 3&lt;/a&gt;, finalized in April 2025 by Amy Nelson, Shanée Rekhi, Murugiah Souppaya and Karen Scarfone, restructures the entire incident response model around the NIST Cybersecurity Framework 2.0 — moving the framing explicitly from “tactical execution” to “strategic alignment with broader risk management.” That shift is exactly the gap I am describing. The new doctrine treats incident response not as a SOC function but as an organizational risk-management activity in which the business owner is a named participant.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is not a problem that goes away with better SOC training. It is a governance problem. The asymmetry exists because the IR playbook was written by the security function, for the security function and never went through the legal and operational review that would have surfaced it. A SOC analyst at 4 a.m. on Saturday is not the right person to decide whether the company should lose fourteen hours of payments to prevent four hours of attacker dwell time. That decision belongs to a named operational owner — and if that owner cannot be reached in time, the playbook should specify a pre-agreed safe-state action, not let the analyst improvise.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-no-touch-register-a-second-reading-of-your-crown-jewels-list"&gt;The no-touch register: A second reading of your crown jewels list&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Most security programs already maintain a crown jewels register — the inventory of systems whose loss would be existential. In its standard reading, the register drives investment, patch cadence, backup frequency and monitoring depth. That reading is right but incomplete. The same list has a second function that is at least as important: It is the inventory of systems your SOC must not touch without confirmation from a named business owner.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I call this second function the no-touch register. It is not a separate database. It is the same crown jewels list with one additional column: For each asset, which containment actions are pre-authorized for the SOC to execute, and which actions require operational confirmation. The split looks something like this:&lt;/p&gt;
-
-
-
-&lt;figure class="wp-block-table"&gt;&lt;div class="overflow-table-wrapper"&gt;&lt;table class="has-fixed-layout"&gt;&lt;thead&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Asset class&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;SOC pre-authorized actions&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Veto-protected actions&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Payment gateway&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Detect, analyze, preserve evidence, monitor, restrict outbound traffic.&lt;/td&gt;&lt;td&gt;Isolate from network, take service offline, force credential reset of operational accounts.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Identity provider (IdP)&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Detect, enrich logs, alert on session anomalies, raise additional MFA.&lt;/td&gt;&lt;td&gt;Disable federated trust, mass-revoke active sessions, force tenant-wide logout.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Manufacturing control system&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Detect, passively monitor, escalate.&lt;/td&gt;&lt;td&gt;Any action that could interrupt continuous process or trigger safety response.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Clinical EHR backend&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Detect, restrict admin access, enhance logging.&lt;/td&gt;&lt;td&gt;Take system offline, block clinician access, suspend data feeds to bedside devices.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Standard endpoint (laptop, dev workstation)&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Full containment — isolate, image, re-provision.&lt;/td&gt;&lt;td&gt;None.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; &lt;/div&gt;&lt;/figure&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The point of the table is not the rows. It is the discipline of filling it out. In every engagement where I have run this exercise, the meeting itself produces the value: Business owners hear, often for the first time, that the IR playbook authorizes the SOC to take their service offline; the SOC hears, often for the first time, what the downstream cost of that action actually is. Most of the no-touch register is consensus once the conversation has happened. The artifact then makes that consensus enforceable.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="raci-for-containment-decisions"&gt;RACI for containment decisions&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Once a no-touch register exists, the RACI for veto-protected actions becomes straightforward. The model below aligns with the four-role logic that the &lt;a href="https://securityandtechnology.org/ransomwaretaskforce/"&gt;Institute for Security and Technology’s Ransomware Task Force&lt;/a&gt; — a coalition of more than 60 organizations across government, industry and law enforcement — has repeatedly recommended in its progress reports: Containment authority belongs to the operational owner, not the security function alone.&lt;/p&gt;
-
-
-
-&lt;figure class="wp-block-table"&gt;&lt;div class="overflow-table-wrapper"&gt;&lt;table class="has-fixed-layout"&gt;&lt;thead&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Role&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;RACI&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Reason&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Business asset owner&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Accountable&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Holds both the availability mandate and the downstream commercial, safety or regulatory consequences of taking the service offline. Delegates operational confirmation to a named on-call lead but retains strategic responsibility.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Security Operations Center&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Responsible&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Executes the containment measure once confirmation arrives or the defined escalation window elapses and the pre-agreed safe-state fallback applies.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;CISO / Head of Security&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Consulted&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Sets the methodological guardrails but is not the single-incident decision maker. Escalates to Accountable for enterprise-wide coordination on systemic incidents.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Executive leadership / board&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Informed&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Receives a structured notification, not a real-time consultation. The Informed status is what makes post-incident reconstruction defensible in audit, regulatory review and litigation.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; &lt;/div&gt;&lt;/figure&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In most enterprises this RACI line has never been filled in. The cost of that omission is invisible in normal operations and becomes existential during incident reconstruction — when an internal lessons-learned, a regulator, or a plaintiff asks who decided to take the system offline, on what basis and with what authority.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-objection-does-this-slow-you-down-while-attackers-move"&gt;The objection: Does this slow you down while attackers move?&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Every workshop on this topic produces the same pushback. If the SOC has to wait for a business owner’s confirmation, dwell time goes up, damage probability goes up and the veto right has effectively disarmed the response. Stated generally, this objection is correct. Stated about the no-touch register, it rests on three misunderstandings.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The veto applies to a narrow asset class. The register covers the crown jewels — typically a small number per business unit, not the entire estate. Containing a compromised laptop is not veto-protected. Containing the identity provider that laptop authenticates against is. The veto-protected set is the intersection of assets whose loss is existential and actions that produce exactly that loss.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The veto is time-bounded. A serviceable playbook defines the escalation chain with hard windows and a deliberate fallback action if the chain runs out. The structure looks like this:&lt;/p&gt;
-
-
-
-&lt;figure class="wp-block-table"&gt;&lt;div class="overflow-table-wrapper"&gt;&lt;table class="has-fixed-layout"&gt;&lt;thead&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Step&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Escalation role&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Max wait&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Action if no response&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;On-call service owner (primary contact for the asset)&lt;/td&gt;&lt;td&gt;5 minutes&lt;/td&gt;&lt;td&gt;Escalate to business asset owner.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Business asset owner&lt;/td&gt;&lt;td&gt;10 minutes&lt;/td&gt;&lt;td&gt;Escalate to executive on call.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Executive on call (head of service line or COO delegate)&lt;/td&gt;&lt;td&gt;15 minutes&lt;/td&gt;&lt;td&gt;Apply pre-agreed safe-state fallback — not unilateral isolation.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; &lt;/div&gt;&lt;/figure&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The pre-agreed safe-state fallback is the design point most playbooks skip. It is not the original containment action executed unilaterally after the window closes. It is a separate, deliberately-designed action that brings the asset to a manageable state without forcing the SOC to improvise under pressure — degraded mode, read-only access, traffic restriction or whatever the business owner has pre-authorized in writing for exactly this case.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The veto applies to actions, not detections. The SOC retains full authority to detect, enrich, preserve evidence, intensify monitoring and isolate every system not on the no-touch list. What is veto-protected is the small class of actions that would induce an unplanned outage of a continuous business service. Modern SOAR platforms handle this branching natively. CISA’s Federal Government Cybersecurity Incident and Vulnerability Response Playbooks, published under Executive Order 14028 and intended explicitly for private-sector adaptation, model exactly this kind of branched decision tree. The reason most enterprise implementations do not is not technical. The IR governance never asked them to.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="three-steps-to-implement-and-one-meeting-that-produces-most-of-the-value"&gt;Three steps to implement, and one meeting that produces most of the value&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Implementing a no-touch register requires no new software, no additional headcount and no separate budget line. It requires four hours in a room with the right people and a willingness to write down decisions that were previously implicit.&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;Build the register. Sit down with the business asset owners and identify the systems whose unplanned outage would be more damaging than the worst plausible cyber incident on those same systems. The list is shorter than most CISOs expect. The conversation is the actual outcome; the table is the artifact.&lt;/li&gt;
-
-
-
-&lt;li&gt;Embed the security stop in the playbook that the SOC actually runs — not the playbook in the audit folder. Before any containment action against a register asset, insert a checkpoint: Confirmation by a named business role, defined escalation chain, defined maximum window, defined safe-state fallback if the window expires.&lt;/li&gt;
-
-
-
-&lt;li&gt;Fill in the RACI. For containment of register assets: Business owner Accountable, SOC Responsible, CISO Consulted, executive leadership Informed. In most organizations this column has never been completed. Completing it is the precondition for being able to answer, after the incident, who decided what on which basis.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-447-a-m-test"&gt;The 4:47 a.m. test&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;If I run only one diagnostic on a current IR program, this is the one. I ask: At 4:47 a.m. on a Saturday, with a credible ransomware payload spreading on three crown-jewel systems, is the SOC analyst authorized to take those systems offline on their own judgment? If yes, the governance has not yet caught up to the cost of that decision. If no, can the analyst reach a named accountable owner within a defined window, and is there a pre-agreed safe-state fallback if that window expires? If both answers are yes, the no-touch register exists in practice, even if it has not been named. If either answer is no, the gap is governance, not technology.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The containment paradox is not solved by faster automation or by adding humans to the loop after the fact. It is solved by writing down, in advance and in plain language, who is authorized to take which business service offline — and what the response is when that person cannot be reached. The artifact is one page. The conversation that produces it is several hours. The cost of not having it is measured in the language of board reports, regulatory filings and discovery requests.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;a href="https://www.cio.com/expert-contributor-network/"&gt;&lt;strong&gt;Want to join?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4200141/the-containment-paradox-why-your-ransomware-playbook-has-the-wrong-people-in-charge.html</guid>
+      <title>Europol supports operation against amphetamine producers</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</link>
+      <description>As part of an extensive investigation led by the German Krefeld Public Prosecutor's Office and Mönchengladbach Police, officers from the North Rhine-Westphalia Police, as well as Polish and Dutch law enforcement conducted coordinated searches at ten locations in Germany and three in the Netherlands in the early hours of 15 July 2026. Several suspects were arrested during the operation.Nine suspects...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
-      <pubDate>Mon, 27 Jul 2026 10:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tenable security advisory (AV26-724)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-724</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-724</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
-      <pubDate>Tue, 21 Jul 2026 13:56:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Zyxel security advisory (AV26-725)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-725</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-725</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
-      <pubDate>Tue, 21 Jul 2026 14:02:40 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV26-726)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-726</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-726</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Tue, 21 Jul 2026 14:12:40 +0000</pubDate>
-    </item>
-    <item>
-      <title>WordPress security advisory (AV26-723) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-723</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-723</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Tue, 21 Jul 2026 15:35:54 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 29 Jul 2026 04:33:25 +0000</pubDate>
     </item>
     <item>
       <title>OpenAI not part of the new Open Secure AI Alliance</title>
@@ -264,18 +77,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4201761/openai-not-part-of-the-new-open-secure-ai-alliance.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Mon, 27 Jul 2026 11:08:51 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV26-727)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-727</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-727</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Tue, 21 Jul 2026 18:35:00 +0000</pubDate>
     </item>
     <item>
       <title>Certighost haunts Microsoft Active Directory Certificate Services</title>
@@ -377,8 +180,58 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4201771/certighost-haunts-microsoft-active-directory-certificate-services.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.64</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Mon, 27 Jul 2026 11:43:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tenable security advisory (AV26-724)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-724</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-security-advisory-av26-724</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Tue, 21 Jul 2026 13:56:14 +0000</pubDate>
+    </item>
+    <item>
+      <title>Zyxel security advisory (AV26-725)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-725</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-725</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.59</comments>
+      <pubDate>Tue, 21 Jul 2026 14:02:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV26-726)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-726</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-726</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.59</comments>
+      <pubDate>Tue, 21 Jul 2026 14:12:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>WordPress security advisory (AV26-723) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-723</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-723</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.59</comments>
+      <pubDate>Tue, 21 Jul 2026 15:35:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-727)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-727</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-727</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Tue, 21 Jul 2026 18:35:00 +0000</pubDate>
     </item>
     <item>
       <title>SolarWinds security advisory (AV26-728)</title>
@@ -387,7 +240,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-728</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Wed, 22 Jul 2026 12:11:16 +0000</pubDate>
     </item>
     <item>
@@ -397,7 +250,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-july-2026-quarterly-rollup-av26-729</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 22 Jul 2026 14:58:18 +0000</pubDate>
     </item>
     <item>
@@ -407,7 +260,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-730</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 22 Jul 2026 15:14:05 +0000</pubDate>
     </item>
     <item>
@@ -417,7 +270,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-731</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Wed, 22 Jul 2026 15:48:29 +0000</pubDate>
     </item>
     <item>
@@ -427,7 +280,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-732</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 22 Jul 2026 17:44:57 +0000</pubDate>
     </item>
     <item>
@@ -437,7 +290,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-733</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 22 Jul 2026 17:53:53 +0000</pubDate>
     </item>
     <item>
@@ -447,7 +300,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-734</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 22 Jul 2026 18:07:41 +0000</pubDate>
     </item>
     <item>
@@ -457,7 +310,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-736</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 22 Jul 2026 18:27:51 +0000</pubDate>
     </item>
     <item>
@@ -467,7 +320,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/exim-security-advisory-av26-737</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 22 Jul 2026 18:47:05 +0000</pubDate>
     </item>
     <item>
@@ -477,7 +330,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-738</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 22 Jul 2026 18:56:34 +0000</pubDate>
     </item>
     <item>
@@ -487,7 +340,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-735</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Thu, 23 Jul 2026 12:26:51 +0000</pubDate>
     </item>
     <item>
@@ -497,18 +350,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-july-2026-monthly-rollup-av26-698</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Thu, 23 Jul 2026 12:51:19 +0000</pubDate>
-    </item>
-    <item>
-      <title>JetBrains security advisory (AV26-739)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-739</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-739</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
-      <pubDate>Thu, 23 Jul 2026 14:32:58 +0000</pubDate>
     </item>
     <item>
       <title>Samsung’s AI-powered glasses could be looking at your data</title>
@@ -646,8 +489,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4201977/samsungs-ai-powered-glasses-could-be-looking-at-your-data.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Tue, 28 Jul 2026 01:42:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>JetBrains security advisory (AV26-739)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-739</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-739</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.97</comments>
+      <pubDate>Thu, 23 Jul 2026 14:32:58 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft unveils multi-model agentic cyber stack for security operations</title>
@@ -737,7 +590,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4202080/microsoft-unveils-multi-model-agentic-cyber-stack-for-security-operations.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Tue, 28 Jul 2026 02:25:00 +0000</pubDate>
     </item>
     <item>
@@ -890,38 +743,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4202067/hackers-are-compromising-hotel-wi-fi-gateways-to-hijack-microsoft-365-accounts.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Tue, 28 Jul 2026 02:28:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft Edge security advisory (AV26-740)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-740</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-740</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
-      <pubDate>Fri, 24 Jul 2026 13:58:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google Chrome security advisory (AV26-741)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-741</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-741</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
-      <pubDate>Fri, 24 Jul 2026 14:22:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control Systems] Moxa security advisory (AV26-742)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-742</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-742</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
-      <pubDate>Fri, 24 Jul 2026 14:46:28 +0000</pubDate>
     </item>
     <item>
       <title>Why your AI safety certificates are worthless at runtime</title>
@@ -1141,8 +964,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4201919/why-your-ai-safety-certificates-are-worthless-at-runtime.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft Edge security advisory (AV26-740)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-740</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-740</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.24</comments>
+      <pubDate>Fri, 24 Jul 2026 13:58:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Chrome security advisory (AV26-741)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-741</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-741</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.24</comments>
+      <pubDate>Fri, 24 Jul 2026 14:22:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control Systems] Moxa security advisory (AV26-742)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-742</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-742</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.25</comments>
+      <pubDate>Fri, 24 Jul 2026 14:46:28 +0000</pubDate>
     </item>
     <item>
       <title>Ericsson security advisory (AV26-743)</title>
@@ -1151,7 +1004,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ericsson-security-advisory-av26-743</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.28</comments>
       <pubDate>Fri, 24 Jul 2026 17:11:58 +0000</pubDate>
     </item>
     <item>
@@ -1161,7 +1014,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-744</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.33</comments>
+      <comments>Score: 8.28</comments>
       <pubDate>Fri, 24 Jul 2026 17:29:02 +0000</pubDate>
     </item>
     <item>
@@ -1171,7 +1024,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-745</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Fri, 24 Jul 2026 19:03:10 +0000</pubDate>
     </item>
     <item>
@@ -1181,7 +1034,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-746</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Fri, 24 Jul 2026 19:38:17 +0000</pubDate>
     </item>
     <item>
@@ -1256,7 +1109,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4202205/infoblox-joins-crowded-easm-market-with-dns-centric-approach.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.33</comments>
       <pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1399,7 +1252,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4200130/when-the-hackers-get-hacked-the-klue-breach-and-the-new-reality-of-third-party-cyber-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Mon, 27 Jul 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1526,7 +1379,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4202502/arista-patches-maximum-severity-vulnerability-that-is-already-being-exploited.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
+      <comments>Score: 8.76</comments>
       <pubDate>Wed, 29 Jul 2026 00:43:54 +0000</pubDate>
     </item>
     <item>
@@ -1660,7 +1513,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4202540/the-csos-blind-spot-why-platform-engineering-2-0-is-now-a-security-imperative.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.78</comments>
       <pubDate>Wed, 29 Jul 2026 01:09:14 +0000</pubDate>
     </item>
     <item>
@@ -1829,7 +1682,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4202530/a-13-year-old-flaw-is-exposing-tens-of-thousands-of-data-center-management-systems.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.92</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Wed, 29 Jul 2026 01:34:10 +0000</pubDate>
     </item>
     <item>
@@ -1876,7 +1729,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4202566/fortinets-new-fortigate-platform-converges-firewall-sase-technologies-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.92</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Wed, 29 Jul 2026 01:35:11 +0000</pubDate>
     </item>
     <item>
@@ -2011,7 +1864,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4201361/hugging-face-breach-shows-why-incident-response-needs-a-multi-model-ai-strategy.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.27</comments>
+      <comments>Score: 9.16</comments>
       <pubDate>Tue, 28 Jul 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -2021,7 +1874,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-av26-747</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.82</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Mon, 27 Jul 2026 17:58:33 +0000</pubDate>
     </item>
     <item>
@@ -2031,7 +1884,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-748</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.83</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Mon, 27 Jul 2026 18:12:06 +0000</pubDate>
     </item>
     <item>
@@ -2041,7 +1894,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-109</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.83</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Mon, 27 Jul 2026 18:14:46 +0000</pubDate>
     </item>
     <item>
@@ -2051,7 +1904,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-750</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.88</comments>
+      <comments>Score: 9.79</comments>
       <pubDate>Mon, 27 Jul 2026 19:52:49 +0000</pubDate>
     </item>
     <item>
@@ -2061,7 +1914,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-749</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Tue, 28 Jul 2026 14:32:14 +0000</pubDate>
     </item>
     <item>
@@ -2071,7 +1924,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-751</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Tue, 28 Jul 2026 14:34:26 +0000</pubDate>
     </item>
     <item>
@@ -2081,7 +1934,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Tue, 28 Jul 2026 14:36:10 +0000</pubDate>
     </item>
     <item>
@@ -2091,7 +1944,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-753</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Tue, 28 Jul 2026 14:37:10 +0000</pubDate>
     </item>
     <item>
@@ -2101,7 +1954,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vercel-security-advisory-av26-754</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.39</comments>
       <pubDate>Tue, 28 Jul 2026 14:40:27 +0000</pubDate>
     </item>
     <item>
@@ -2111,7 +1964,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-755</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.63</comments>
+      <comments>Score: 10.52</comments>
       <pubDate>Tue, 28 Jul 2026 18:14:11 +0000</pubDate>
     </item>
   </channel>
