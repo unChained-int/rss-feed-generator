@@ -8,140 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 05 Aug 2026 10:38:04 +0000</lastBuildDate>
-    <item>
-      <title>Zero Networks targets AI agent security gaps with network-level ‘Least Agency’ controls</title>
-      <link>https://www.csoonline.com/article/4204394/zero-networks-targets-ai-agent-security-gaps-with-network-level-least-agency-controls.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;While AI security today is largely focused on restricting what an agent can do, Zero Networks says it has built a failsafe. The company says it can block a compromise midway by adding a network layer protection.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;On Monday, the company announced the launch of “Least Agency Enforcement,” a new capability designed to implement the Open Worldwide Application Security Project’s (&lt;a href="https://www.csoonline.com/article/560221/what-is-owasp-and-why-it-matters-for-appsec.html" target="_blank"&gt;OWASP&lt;/a&gt;) emerging Least Agency principle for enterprise AI.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Built on Zero Network’s identity-based micro-segmentation platform, the offering aims to prevent AI agents from exceeding their intended autonomy by restricting which systems they can communicate with, what resources they can access, and when human approval is required for sensitive actions.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Most vendors are trying to control AI agents at the application layer,” said&lt;a href="https://www.linkedin.com/in/chrisboehmii/" rel="noreferrer noopener" target="_blank"&gt; Chris Boehm&lt;/a&gt;, Zero Networks’ field CTO. “The question we care about isn’t what the agent was asked to do. It’s what the agent can reach if it’s manipulated, misconfigured, or just wrong.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The pitch is that while application-level controls focus on prompts and model outputs, identity and network enforcement limit the business impact if those safeguards fail.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Extending least privilege from people to agents&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The announcement comes as organizations &lt;a href="https://www.csoonline.com/article/4203384/ai-agents-gain-access-to-financial-workflows-amid-growing-governance-gaps.html"&gt;increasingly experiment&lt;/a&gt; with agentic AI without corresponding security controls. According to Zero Networks’ own research, nearly 80% of enterprises have already deployed internal AI agents, yet roughly two-thirds still lack governance policies for them.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;OWASP’s Agentic Applications Top 10 project recently &lt;a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"&gt;introduced&lt;/a&gt; the Least Agency principle, recommending that organizations explicitly constrain an AI agent’s autonomy, tool usage, and decision-making authority to reduce risks such as prompt injection, privilege abuse, and compromised agents.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Using identity-based microsegmentation, automated policy generation, and just-in-time multi-factor authentication (MFA), Least Agency Enforcement allows organizations to limit AI agents to explicitly authorized systems and services, the company said in a press release shared with CSO ahead of its publication.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The offering is aimed at mapping what an agent identity should be allowed to touch, then enforcing it at the host firewall so everything outside that set is denied by default.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“We’re doing the same thing for AI agents that least privilege did for people, except now it must be automatic,” said &lt;a href="https://www.linkedin.com/in/bennyl/" rel="noreferrer noopener" target="_blank"&gt;Benny Lakunishok&lt;/a&gt;, CEO and Co-founder of Zero Networks, in the release. “If an agent gets fooled or misused, it should hit a wall almost immediately, not wander around the network looking for something valuable.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Not another IAM or PAM offering&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Rather than competing directly with identity providers or privilege access management platforms, Zero Networks positions Least Agency Enforcement as addressing what happens after an AI agent has already received valid credentials.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;According to the company, conventional IAM, PAM, and non-human identity (&lt;a href="https://www.csoonline.com/article/3828216/understanding-owasps-top-10-list-of-non-human-identity-critical-risks.html"&gt;NHI&lt;/a&gt;) platforms primarily govern whether an AI is entitled to receive access. Once an authenticated session begins, however, those tools generally do not control where the agent can move across the network, Boehm argued.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Instead, Zero Networks’ enforcement works on both the identity and network layers. It claims understanding and restricting communication to authorized agents, as well as having sensitive protocols routed through MFA as a backup against compromises.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Sensitive paths get an MFA prompt on the protocols itself, so a compromised agent identity can’t quietly use RDP, SMB, or WinRM to move sideways,” Boehm explained.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Least Agency Enforcement builds on the company’s existing AI security portfolio, which includes AI agents Control, &lt;a href="https://www.networkworld.com/article/4161533/how-zero-networks-is-closing-the-network-enforcement-gap-for-ai-agents.html"&gt;AI Segmentation&lt;/a&gt;, AI SaaS Control, and protections for enterprise LLM deployments. The capability is available immediately and will be demonstrated at Black Hat USA 2026, where Zero Networks plans to showcase its broader AI security platform.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4204394/zero-networks-targets-ai-agent-security-gaps-with-network-level-least-agency-controls.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
-      <pubDate>Mon, 03 Aug 2026 13:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Season 4 of The Europol Podcast available now</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</link>
-      <description>The Europol Podcast is the official podcast of the EU’s agency for law enforcement cooperation. This season, we spoke to our Europol experts on the emerging threats and key developments in the field of cybercrime. We explored:How cybercrime enablers are facilitating crimeHow CSAM offenders are adapting to new technologyHow ransomware is evolvingHow online fraud schemes are becoming a growing threatHow...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 05 Aug 2026 08:38:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</link>
-      <description>Led by the Greek authorities and supported by Europol, the investigation targeted a criminal network composed mainly of Syrian and Egyptian nationals suspected of organising the illegal transportation of migrants from Greece through Bulgaria and Romania before facilitating their onward journey to Italy.The action day took place on 16 July 2026, with operational activities carried out in Thessaloniki and Athens...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 05 Aug 2026 08:38:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</link>
-      <description>An estimated 4 340 URLs related to nihilistic violent extremism were referred during the initiative organised by Europol’s EU Internet Referral Unit - EU IRU and the Spanish Intelligence Centre against Terrorism and Organised Crime (CITCO). This successful action complements the efforts undertaken within Project COMPASS, coordinated by Europol’s European Counter Terrorism Centre, which unites law enforcement authorities from EU...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 05 Aug 2026 08:38:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fact Check: Clarifying claims about Europol's operational processing environments</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/fact-check-clarifying-claims-about-europols-operational-processing-environments</link>
-      <description>Recently, online reporting has alleged that Europol operated a “secret” or “shadow” database outside the requirements of EU law and data protection rules.These claims are incorrect and are based on a misunderstanding of Europol's operational setup and legal framework.The reporting refers primarily to two different technical environments:the Computer Forensic Network (CFN); and the Internet Facing Operational Environment (IFOE).These environments serve...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fact-check-clarifying-claims-about-europols-operational-processing-environments</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 05 Aug 2026 08:38:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>28 arrests in international strike against child sexual exploitation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/28-arrests-in-international-strike-against-child-sexual-exploitation</link>
-      <description>The operation, conducted from late May to mid-June 2026, took place in Canada, Czechia, Germany, Norway, Poland, Sweden, and Switzerland. It also led to the seizure of more than 460 items, including electronic devices, crypto wallets, drugs and large quantities of doping substances. The operation is ongoing and further arrests are expected.Cryptocurrency to access the dark webAll suspects are men...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/28-arrests-in-international-strike-against-child-sexual-exploitation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 05 Aug 2026 08:38:04 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 05 Aug 2026 12:55:18 +0000</lastBuildDate>
     <item>
       <title>When violence shapes identities in a larger pool of perpetrators: new Europol terrorism report</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/when-violence-shapes-identities-in-larger-pool-of-perpetrators-new-europol-terrorism-report</link>
@@ -150,17 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 05 Aug 2026 08:38:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</link>
-      <description>The action day led to:5 arrests (1 High Value Target, 2 police officers and 2 associates)5 locations searched;Seizures include: 3 vehicles used for migrant smuggling activities, firearms and ammunitions, a radio station, mobile devices and cash (EUR 5 700 and RSD 40 000) About EUR 1 300 per person to cross SerbiaActive since 2025, the criminal network is suspected of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 05 Aug 2026 08:38:04 +0000</pubDate>
+      <pubDate>Wed, 05 Aug 2026 10:55:18 +0000</pubDate>
     </item>
     <item>
       <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
@@ -170,17 +27,37 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 05 Aug 2026 08:38:04 +0000</pubDate>
+      <pubDate>Wed, 05 Aug 2026 10:55:18 +0000</pubDate>
     </item>
     <item>
-      <title>Europol supports operation against amphetamine producers</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</link>
-      <description>As part of an extensive investigation led by the German Krefeld Public Prosecutor's Office and Mönchengladbach Police, officers from the North Rhine-Westphalia Police, as well as Polish and Dutch law enforcement conducted coordinated searches at ten locations in Germany and three in the Netherlands in the early hours of 15 July 2026. Several suspects were arrested during the operation.Nine suspects...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</guid>
+      <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</link>
+      <description>An estimated 4 340 URLs related to nihilistic violent extremism were referred during the initiative organised by Europol’s EU Internet Referral Unit - EU IRU and the Spanish Intelligence Centre against Terrorism and Organised Crime (CITCO). This successful action complements the efforts undertaken within Project COMPASS, coordinated by Europol’s European Counter Terrorism Centre, which unites law enforcement authorities from EU...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 05 Aug 2026 08:38:04 +0000</pubDate>
+      <pubDate>Wed, 05 Aug 2026 10:55:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fact Check: Clarifying claims about Europol's operational processing environments</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/fact-check-clarifying-claims-about-europols-operational-processing-environments</link>
+      <description>Recently, online reporting has alleged that Europol operated a “secret” or “shadow” database outside the requirements of EU law and data protection rules.These claims are incorrect and are based on a misunderstanding of Europol's operational setup and legal framework.The reporting refers primarily to two different technical environments:the Computer Forensic Network (CFN); and the Internet Facing Operational Environment (IFOE).These environments serve...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fact-check-clarifying-claims-about-europols-operational-processing-environments</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 05 Aug 2026 10:55:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>28 arrests in international strike against child sexual exploitation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/28-arrests-in-international-strike-against-child-sexual-exploitation</link>
+      <description>The operation, conducted from late May to mid-June 2026, took place in Canada, Czechia, Germany, Norway, Poland, Sweden, and Switzerland. It also led to the seizure of more than 460 items, including electronic devices, crypto wallets, drugs and large quantities of doping substances. The operation is ongoing and further arrests are expected.Cryptocurrency to access the dark webAll suspects are men...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/28-arrests-in-international-strike-against-child-sexual-exploitation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 05 Aug 2026 10:55:18 +0000</pubDate>
     </item>
     <item>
       <title>French-Spanish operation targets hazardous waste trafficking network: four arrested</title>
@@ -190,7 +67,37 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Wed, 05 Aug 2026 08:38:04 +0000</pubDate>
+      <pubDate>Wed, 05 Aug 2026 10:55:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</link>
+      <description>The action day led to:5 arrests (1 High Value Target, 2 police officers and 2 associates)5 locations searched;Seizures include: 3 vehicles used for migrant smuggling activities, firearms and ammunitions, a radio station, mobile devices and cash (EUR 5 700 and RSD 40 000) About EUR 1 300 per person to cross SerbiaActive since 2025, the criminal network is suspected of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 05 Aug 2026 10:55:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol supports operation against amphetamine producers</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</link>
+      <description>As part of an extensive investigation led by the German Krefeld Public Prosecutor's Office and Mönchengladbach Police, officers from the North Rhine-Westphalia Police, as well as Polish and Dutch law enforcement conducted coordinated searches at ten locations in Germany and three in the Netherlands in the early hours of 15 July 2026. Several suspects were arrested during the operation.Nine suspects...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 05 Aug 2026 10:55:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</link>
+      <description>Led by the Greek authorities and supported by Europol, the investigation targeted a criminal network composed mainly of Syrian and Egyptian nationals suspected of organising the illegal transportation of migrants from Greece through Bulgaria and Romania before facilitating their onward journey to Italy.The action day took place on 16 July 2026, with operational activities carried out in Thessaloniki and Athens...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Wed, 05 Aug 2026 10:55:18 +0000</pubDate>
     </item>
     <item>
       <title>Apache security advisory (AV26-749)</title>
@@ -199,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-749</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 28 Jul 2026 14:32:14 +0000</pubDate>
     </item>
     <item>
@@ -209,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-751</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 28 Jul 2026 14:34:26 +0000</pubDate>
     </item>
     <item>
@@ -219,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 28 Jul 2026 14:36:10 +0000</pubDate>
     </item>
     <item>
@@ -229,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-753</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 28 Jul 2026 14:37:10 +0000</pubDate>
     </item>
     <item>
@@ -239,18 +146,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vercel-security-advisory-av26-754</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Tue, 28 Jul 2026 14:40:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Progress security advisory (AV26-755)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-755</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-755</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Tue, 28 Jul 2026 18:14:11 +0000</pubDate>
     </item>
     <item>
       <title>Ruby on Rails critical bug puts every image upload under scrutiny</title>
@@ -403,8 +300,18 @@
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4205383/ruby-on-rails-critical-bug-puts-every-image-upload-under-scrutiny.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Wed, 05 Aug 2026 01:56:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>Progress security advisory (AV26-755)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-755</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-755</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Tue, 28 Jul 2026 18:14:11 +0000</pubDate>
     </item>
     <item>
       <title>Adobe security advisory (AV26-756)</title>
@@ -413,7 +320,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-756</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Wed, 29 Jul 2026 14:33:45 +0000</pubDate>
     </item>
     <item>
@@ -423,7 +330,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-757</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Thu, 30 Jul 2026 12:45:49 +0000</pubDate>
     </item>
     <item>
@@ -433,7 +340,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-758</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Thu, 30 Jul 2026 13:11:52 +0000</pubDate>
     </item>
     <item>
@@ -443,7 +350,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-759</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.92</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Thu, 30 Jul 2026 13:50:36 +0000</pubDate>
     </item>
     <item>
@@ -453,7 +360,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-760</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Thu, 30 Jul 2026 14:18:55 +0000</pubDate>
     </item>
     <item>
@@ -463,7 +370,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-761</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Thu, 30 Jul 2026 14:36:27 +0000</pubDate>
     </item>
     <item>
@@ -473,7 +380,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-762</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Thu, 30 Jul 2026 14:49:52 +0000</pubDate>
     </item>
     <item>
@@ -483,7 +390,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Thu, 30 Jul 2026 17:53:01 +0000</pubDate>
     </item>
     <item>
@@ -493,7 +400,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/php-group-security-advisory-av26-764</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Thu, 30 Jul 2026 18:11:55 +0000</pubDate>
     </item>
     <item>
@@ -503,7 +410,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gladinet-security-advisory-av26-765</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Thu, 30 Jul 2026 18:24:27 +0000</pubDate>
     </item>
     <item>
@@ -634,7 +541,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4204731/attackers-are-crafting-malicious-ai-instruction-files-to-turn-your-agentic-workflows-into-quiet-criminal-helpers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Tue, 04 Aug 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -797,7 +704,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4204541/the-minnesota-attackers-may-hold-a-better-backup-of-your-plant-than-you-do.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Tue, 04 Aug 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -906,7 +813,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4204548/secure-ai-adoption-starts-with-api-best-practices.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Tue, 04 Aug 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -960,15 +867,15 @@
 
 
 
-&lt;h2 class="wp-block-heading" id="commvault-brings-google-threat-intelligence-into-recovery-workflows"&gt;CommVault brings Google Threat Intelligence into recovery workflows&lt;/h2&gt;
+&lt;h2 class="wp-block-heading" id="commvault-brings-google-threat-intelligence-into-recovery-workflows"&gt;Commvault brings Google Threat Intelligence into recovery workflows&lt;/h2&gt;
 
 
 
-&lt;p class="wp-block-paragraph"&gt;CommVault announced an integration between its Threat Scan and Google Threat Intelligence to help organizations identify clean recovery points after cyberattacks.&lt;/p&gt;
+&lt;p class="wp-block-paragraph"&gt;Commvault announced an integration between its Threat Scan and Google Threat Intelligence to help organizations identify clean recovery points after cyberattacks.&lt;/p&gt;
 
 
 
-&lt;p class="wp-block-paragraph"&gt;The integration combines Google’s threat intelligence with CommVault’s backup validation workflows, while new inline file hash collection allows recovery points to be checked against threat indicators during backup operations. The company says the layered approach enables customers to validate recovery points faster before performing deeper malware or forensic analysis and strengthens its AI-enabled Synthetic Recovery capability. Availability is expected in the coming months.&lt;/p&gt;
+&lt;p class="wp-block-paragraph"&gt;The integration combines Google’s threat intelligence with Commvault’s backup validation workflows, while new inline file hash collection allows recovery points to be checked against threat indicators during backup operations. The company says the layered approach enables customers to validate recovery points faster before performing deeper malware or forensic analysis and strengthens its AI-enabled Synthetic Recovery capability. Availability is expected in the coming months.&lt;/p&gt;
 
 
 
@@ -1012,12 +919,12 @@
 
 
 
-&lt;p class="wp-block-paragraph"&gt;Tanium announced several additions to its Autonomous IT Platform spanning agentic AI, exposure management, and security operations. New Alas capabilities include background AI agents, agentic performance analysis, expanded automation, and an &lt;a href="https://www.csoonline.com/article/4087656/what-cisos-need-to-know-about-new-tools-for-securing-mcp-servers.html"&gt;MCP server&lt;/a&gt; that exposes governed Tanium data to compatible AI assistants. The company also introduced External Attack Surface Management, Attack Path Mapping, Agent-Guided Threat Hunting, and a private preview integration with Google Threat Intelligence, extending its focus from endpoint management to coordinated autonomous security operations.&lt;/p&gt;
+&lt;p class="wp-block-paragraph"&gt;Tanium announced several additions to its Autonomous IT Platform spanning agentic AI, exposure management, and security operations. New Atlas capabilities include background AI agents, agentic performance analysis, expanded automation, and an &lt;a href="https://www.csoonline.com/article/4087656/what-cisos-need-to-know-about-new-tools-for-securing-mcp-servers.html"&gt;MCP server&lt;/a&gt; that exposes governed Tanium data to compatible AI assistants. The company also introduced External Attack Surface Management, Attack Path Mapping, Agent-Guided Threat Hunting, and a private preview integration with Google Threat Intelligence, extending its focus from endpoint management to coordinated autonomous security operations.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4204921/the-top-new-cybersecurity-products-at-black-hat-usa-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.16</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Tue, 04 Aug 2026 12:00:04 +0000</pubDate>
     </item>
     <item>
@@ -1027,7 +934,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-766</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Fri, 31 Jul 2026 13:00:19 +0000</pubDate>
     </item>
     <item>
@@ -1037,7 +944,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rails-security-advisory-av26-767</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Fri, 31 Jul 2026 13:17:03 +0000</pubDate>
     </item>
     <item>
@@ -1047,7 +954,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-768</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Fri, 31 Jul 2026 14:23:37 +0000</pubDate>
     </item>
     <item>
@@ -1148,7 +1055,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4204310/airlock-digital-unveils-agentic-ai-control-governance-to-extend-preventative-endpoint-security.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Tue, 04 Aug 2026 16:49:31 +0000</pubDate>
     </item>
     <item>
@@ -1239,7 +1146,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205276/chaindrop-credential-stealing-worm-infects-over-400-npm-packages.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Tue, 04 Aug 2026 22:37:24 +0000</pubDate>
     </item>
     <item>
@@ -1364,7 +1271,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205391/ai-threat-report-rogue-agents-workflow-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.78</comments>
       <pubDate>Wed, 05 Aug 2026 07:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1545,7 +1452,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205348/why-you-need-a-reliable-ai-agent-kill-switch.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Wed, 05 Aug 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -1664,8 +1571,131 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205129/one-c2-kit-30-customers-2-governments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.97</comments>
+      <comments>Score: 8.88</comments>
       <pubDate>Wed, 05 Aug 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI, Anthropic AI agents resorted to deception in new cybersecurity incidents</title>
+      <link>https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;OpenAI’s GPT-5.6 Sol and Anthropic’s Mythos 5 have been implicated in another series of AI security incidents after the models created fake online identities, targeted real people, and attempted to manipulate developers into approving malicious code during controlled cyber evaluations, according to the UK AI Security Institute.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“On 28&lt;sup&gt;th&lt;/sup&gt; July 2026, AISI’s Security Team detected unusual data transfers leaving our research systems during a routine cyber evaluation,” AISI &lt;a href="https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing" rel="noreferrer noopener" target="_blank"&gt;said in a blog post&lt;/a&gt;. “On investigation, we found that some of the agents being tested had engaged in sustained, potentially harmful activity directed at real people and organisations.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The incidents occurred during cybersecurity tests in which researchers deliberately gave frontier AI models broad internet access and relaxed some safety controls to measure their underlying cyber capabilities. AISI said the incidents marked the first time it had seen “risks around autonomy and deception manifest this clearly, without specific prompting, in the real world.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;AISI ran the cyber challenge 122 times across seven frontier models and identified 19 autonomous, unsanctioned actions during 10 evaluation runs.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Almost all of this behaviour (17 actions) came from a single model, Anthropic’s Mythos 5, with 2 actions involving OpenAI’s GPT-5.6-Sol with cyber classifiers (mechanisms to prevent misuse) disabled,” the post added.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The disclosure comes less than two weeks after OpenAI &lt;a href="https://www.csoonline.com/article/4202852/openai-rogue-ai-agents-attack-expanded-beyond-hugging-face.html"&gt;revealed&lt;/a&gt; that one of its frontier models compromised infrastructure at Hugging Face during a cyber evaluation, and days after researchers disclosed another AI agent security incident involving Modal.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="deception-emerged-without-instruction"&gt;Deception emerged without instruction&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The most serious sequence involved an AI agent attempting what AISI described as a software supply-chain attack.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“In the most serious sequence, an agent tried to insert malicious code into a publicly used open-source project and took actions in an attempt to secure approval for this insertion by human reviewers,” AISI wrote. “The agent researched the project’s human maintainers, created multiple fake identities, and used the fake identities to socially engineer a real maintainer into approving the code.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The researchers further added that “When the agent’s pull request was challenged in public, it edited its earlier activity to appear harmless and considered adopting a fresh identity to continue.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;However, the institute added that “Our investigation has not identified any resulting real-world harm.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Investigators also found agents contacting real people, attempting prompt injections, and leaving messages inviting other concurrently running agents to collaborate.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“It was never instructed to deceive; deception emerged as a by-product of pursuing the task, the kind of goal-directed deception that, until recently, had been largely theoretical,” AISI wrote, adding that while unrestricted internet access and evaluation design contributed to the behavior, they did not fully explain it.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="not-a-sandbox-escape"&gt;Not a sandbox escape&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;AISI emphasized that the models did not escape their sandboxed environments. Instead, internet access had been intentionally enabled and cyber safety classifiers deliberately disabled to measure maximum cyber capability rather than public deployment behavior.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“This was not a sandbox escape. It was a boundary that existed in language and nowhere else,” said Sanchit Vir Gogia, chief analyst at Greyhound Research. “The risk variable is not how clever the model is. It is how much practical authority the organisation has handed over, and how little of it can be independently withdrawn.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;OpenAI, whose GPT-5.6 Sol model accounted for two of the recorded actions, posted a blog describing the AISI evaluation and a separate incident involving an external testing partner named “Irregular.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“As model capabilities advance, the security and safety systems around models need to advance too,” the company wrote in the blog post. OpenAI said it will review third-party evaluation practices, including controls around internet access, isolation, monitoring, and incident response, and work with AI labs and independent evaluators to strengthen industry standards.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Anthropic, however, did not make any public announcement related to AISI’s disclosure.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Anthropic and OpenAI did not immediately respond to a request for comment.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="enterprise-guardrails"&gt;Enterprise guardrails&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;For enterprise security leaders, the findings extend beyond AI red teaming, said Enza Iannopollo, principal analyst at Forrester.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“This data confirms our expectations on agents’ behaviours. They can, and they will, overcome boundaries and safeguards to accomplish their objectives,” she said. “The real question is what can happen when organizations deploy these systems in their production environments.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Iannopollo said enterprises should apply least privilege, continuous risk management, and governance controls when deploying AI agents.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The findings also underscore the need to rethink how AI systems are evaluated, according to Vibhum Dubey, a cybersecurity researcher and red teamer.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“For years, security testing has focused on whether an AI model could complete a task. We now need to evaluate how it completes that task,” Dubey said.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;While AISI stressed that the incidents occurred under highly specific evaluation conditions and found no evidence of resulting real-world harm, it argued that they point to a broader shift in how AI security risks may emerge. “Harm may arise not only when people deliberately misuse publicly available models, but when capable agents operating in an internal research or privileged-access setting take unintended action beyond their authorised scope,” the institute wrote.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.95</comments>
+      <pubDate>Wed, 05 Aug 2026 11:41:46 +0000</pubDate>
     </item>
     <item>
       <title>Critical Azure Cosmos DB flaw threatened cross-tenant database takeover</title>
@@ -1771,8 +1801,99 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4204925/critical-azure-cosmos-db-flaw-threatened-cross-tenant-database-takeover.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.09</comments>
       <pubDate>Tue, 04 Aug 2026 12:14:31 +0000</pubDate>
+    </item>
+    <item>
+      <title>Critical Paperclip bugs expose AI agent trust failures</title>
+      <link>https://www.csoonline.com/article/4205630/critical-paperclip-bugs-expose-ai-agent-trust-failures.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Security researchers are warning against trust assumptions in AI security with newly detailed flaws affecting the open-source AI agent platform Paperclip that could be chained into remote code execution (RCE), data exposure, and developer-machine compromise.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;An Oasis Security &lt;a href="https://www.oasis.security/blog/paperclip-agent-vulnerabilities"&gt;research&lt;/a&gt; shared with CSO ahead of its publication on Wednesday disclosed details of three recent vulnerabilities affecting different Paperclip deployment modes. These include a max-severity authorization bypass issue, multiple improperly protected API endpoints, and a DNS rebinding flaw that enables drive-by RCE against locally deployed instances.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Oasis argues they all stemmed from the same underlying trust assumption Paperclip makes.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The Paperclip vulnerabilities Oasis Security has disclosed expose something more consequential than a single open-source project: a systemic failure in how AI agent control planes handle identity boundaries,” said &lt;a href="https://www.linkedin.com/in/darrenguccione/" rel="noreferrer noopener" target="_blank"&gt;Darren Guccione&lt;/a&gt;, CEO and co-founder of Keeper Security, who has also reviewed Oasis’ research. “An attacker who gains control of an agent configuration doesn’t just access data; they gain the ability to direct privileged action across every system that agent can reach.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The flaws are now all patched with fixes shipped in versions 2026.416.0 and 0.3.1.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Configuration exploited for code execution&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The most severe finding, tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41679" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-41679&lt;/a&gt;, affected authenticated deployments using Paperclip’s default registration settings.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Oasis found that an attacker could begin as an unauthenticated user, self-register for an account, approve their own command-line (CLI) authorization request, and obtain persistent board-level API access without requiring separate administrative approval.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Basically, an attacker on the internet can simply sign up for an account, immediately log in, and use the account to win board-level permissions through the CLI.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Those permissions were sufficient to exploit another authorization mismatch issue in the platform’s company import workflow, Oasis researchers wrote. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In affected versions, while creating a new company directly required instance administrator privileges, importing a company enforced only board-level permissions. Because imported company bundles could include executable agent definitions, an attacker could upload a malicious “.paperclip.yaml” file specifying a process-based agent, then trigger that agent to execute arbitrary operating system commands under the Paperclip server’s privileges.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Oasis warned that this is why AI agent configuration should be treated as &lt;a href="https://www.csoonline.com/article/4199408/ai-agents-can-escape-sandboxes-without-ever-breaking-them.html"&gt;executable&lt;/a&gt; input rather than simple data. Paperclip did not immediately respond to CSO’s requests for comments.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Bugs exploited the same underlying assumption&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Other than the critical RCE chain, Oasis disclosed two vulnerabilities that highlight the same architectural flaws.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;One is about several API endpoints that either lacked authentication or &lt;a href="https://github.com/advisories/GHSA-xfqj-r5qw-8g4j" rel="noreferrer noopener" target="_blank"&gt;failed to enforce&lt;/a&gt; tenant-level authorization, exposing workflow information, skill documentation, and deployment metadata that could aid attackers in reconnaissance or cross-tenant information disclosure.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The other &lt;a href="https://github.com/microsoft/amplifier-app-paperclip/blob/main/.agents/skills/deal-with-security-advisory/SKILL.md" rel="noreferrer noopener" target="_blank"&gt;issue&lt;/a&gt; (CVSS 9.6) affected Paperclip’s default “local_trusted” deployment mode, where the platform assumed requests reaching localhost originated from trusted software. Oasis demonstrated that a DNS rebinding attack could violate that assumption, allowing an attacker-controlled webpage to communicate with the local Paperclip service and ultimately execute commands on a developer’s machine after importing and triggering a malicious agent.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Paperclip patched the RCE path and the leaking APIs issues in version 2026.416.0 by requiring administrator privileges for new-company imports, strengthening authorization checks across related operations, and adding regression tests.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The third issue was addressed in Paperclip 0.3.1 by enabling hostname validation, hardening imports, and restricting risky adapters in agent-safe imports.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Guccione argues that traditional access controls are ill-suited for autonomous agents. “The security question is no longer whether a credential is valid at the point of entry,” he said. “It’s whether the agent invoking that credential is doing so within the intended scope, for the intended purpose, under the authority of a human who would sanction that action.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4205630/critical-paperclip-bugs-expose-ai-agent-trust-failures.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.96</comments>
+      <pubDate>Wed, 05 Aug 2026 12:00:17 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-770)</title>
@@ -1781,7 +1902,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-770</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.26</comments>
+      <comments>Score: 10.19</comments>
       <pubDate>Tue, 04 Aug 2026 15:06:33 +0000</pubDate>
     </item>
     <item>
@@ -1791,7 +1912,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-771</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.27</comments>
+      <comments>Score: 10.20</comments>
       <pubDate>Tue, 04 Aug 2026 15:23:08 +0000</pubDate>
     </item>
     <item>
@@ -1801,7 +1922,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-772</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.28</comments>
+      <comments>Score: 10.20</comments>
       <pubDate>Tue, 04 Aug 2026 15:31:21 +0000</pubDate>
     </item>
     <item>
@@ -1811,7 +1932,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-inc-security-advisory-av26-773</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.28</comments>
+      <comments>Score: 10.20</comments>
       <pubDate>Tue, 04 Aug 2026 15:36:27 +0000</pubDate>
     </item>
     <item>
@@ -1821,7 +1942,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/checkpoint-security-advisory-av26-774</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.29</comments>
+      <comments>Score: 10.21</comments>
       <pubDate>Tue, 04 Aug 2026 15:44:42 +0000</pubDate>
     </item>
     <item>
@@ -1831,7 +1952,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-775</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.35</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Tue, 04 Aug 2026 17:31:23 +0000</pubDate>
     </item>
     <item>
@@ -1841,7 +1962,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-769</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.36</comments>
+      <comments>Score: 10.28</comments>
       <pubDate>Tue, 04 Aug 2026 17:59:53 +0000</pubDate>
     </item>
     <item>
@@ -1851,7 +1972,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-776</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.43</comments>
+      <comments>Score: 10.35</comments>
       <pubDate>Tue, 04 Aug 2026 19:46:09 +0000</pubDate>
     </item>
     <item>
@@ -1861,7 +1982,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-777</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.44</comments>
+      <comments>Score: 10.36</comments>
       <pubDate>Tue, 04 Aug 2026 20:03:24 +0000</pubDate>
     </item>
   </channel>
