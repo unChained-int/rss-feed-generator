@@ -8,410 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 06 Aug 2026 05:51:04 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 08:39:42 +0000</lastBuildDate>
     <item>
-      <title>Progress security advisory (AV26-755)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-755</link>
+      <title>Vercel security advisory (AV26-754)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/vercel-security-advisory-av26-754</link>
       <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-755</guid>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vercel-security-advisory-av26-754</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Tue, 28 Jul 2026 18:14:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>Attackers are crafting malicious AI instruction files to turn your agents into quiet criminal helpers</title>
-      <link>https://www.csoonline.com/article/4204731/attackers-are-crafting-malicious-ai-instruction-files-to-turn-your-agentic-workflows-into-quiet-criminal-helpers.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;AI agents are increasingly being deployed across the enterprise, a rapid adoption that has significantly broadened the organization’s attack surface, turning sharable AI agent resources and configuration files into backdoors, security experts warn.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;AI-assisted software developers have been increasingly targeted through malicious IDE extensions, rogue MCP servers, and poisoned AI skills, all of which provide attackers inroads into organizations’ development pipelines and beyond. But these AI helper resources are not the only types of instruction files that developers and users share with one another when making use of AI coding assistants and command-line interface (CLI) agents.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For example, Anthropic’s Claude Code CLI agent loads system prompts from a file called &lt;code&gt;CLAUDE.md&lt;/code&gt;. This file contains instructions that are sent to the LLM along with every user prompt to avoid having to repeat rules, user preferences, and persona definitions for the model.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt; can be used globally for all projects or be used on a per-project basis to include instructions about how the LLM should operate within that project. It’s not unusual for &lt;code&gt;CLAUDE.md&lt;/code&gt; files to be included in a shared repository to ensure project-relevant consistency in the conventions developers use when working with Claude Code.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Other coding agents have similar files, such as OpenAI Codex’s &lt;code&gt;AGENTS.md&lt;/code&gt; or Google Gemini’s &lt;code&gt;GEMINI.md&lt;/code&gt;. AI-assisted IDEs such as Cursor or Cline have &lt;code&gt;.cursorrules&lt;/code&gt; and &lt;code&gt;.clinerules&lt;/code&gt;. GitHub Copilot has &lt;code&gt;.github/copilot-instructions.md&lt;/code&gt;. Then there are JSON configuration files that could also contain executable code, such as &lt;code&gt;mcp.json&lt;/code&gt;, &lt;code&gt;hooks.json&lt;/code&gt;, or &lt;code&gt;settings.json&lt;/code&gt;. Hooks are a popular way to deliver scripts and commands based on triggers during an agentic loop.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;All these files could hide malicious code or instructions and should be regularly checked and validated, especially if imported from the internet along with a repository.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Researchers from security firm Mitiga recently shed light on this threat, releasing a report on code repositories they found in the wild with malicious instructions injected in such files. The files instructed the target agent to exfiltrate all prompts typed by the user, including all sensitive information they might contain, as well as environment variables and other credentials used by the agent. The researchers dubbed this backdoor attack technique “PromptLogger,” and it is one enterprise security teams and developers are likely to see more of in the future.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Traditional keyloggers capture keystrokes and send them to an attacker,” Mitiga’s researchers write in &lt;a href="https://www.mitiga.io/resources/promptlogger-ai-instruction-file-exfiltration-report"&gt;their report on the attack vector&lt;/a&gt;. “PromptLogger-style behavior captures something richer: the prompts and sometimes responses exchanged with an attacker. That matters because prompts increasingly contain source code, architectural plans, credentials pasted for troubleshooting, internal documentation, debugging output, customer samples, business logic, and operator intent.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Enterprises have been apprehensive about &lt;a href="https://www.csoonline.com/article/3964282/cisos-no-closer-to-containing-shadow-ais-skyrocketing-data-risks.html"&gt;corporate data leakage via shadow AI use&lt;/a&gt; for good reason. This type of attack enables surveillance of corporate even on vetted and sanctioned AI tools.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Moreover, this attack leaves no malicious binary on disk, does not inject code into other processes, and has no classic persistence mechanisms. As a result, it won’t be detected by EDRs or from a workstation monitoring perspective, because it looks like normal tool usage given that the agent itself is performing the exfiltration.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="exfiltration-to-external-cloud-hosted-databases"&gt;Exfiltration to external cloud-hosted databases&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Mitiga’s researchers found and reported multiple examples of agent instruction file poisoning on GitHub repositories. None were popular repositories accessed by a large number of developers, but they don’t need to be. Links to these repositories could be sent to victims in targeted attacks, as has been seen in &lt;a href="https://www.csoonline.com/article/3518577/fake-recruitment-campaign-targets-developers-using-trojanized-python-packages.html"&gt;fake recruitment attacks&lt;/a&gt; where developers are asked during the interview process to clone GitHub projects containing malicious code.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;One example was a DevOps repository containing poisoned &lt;code&gt;.cursorrules&lt;/code&gt; and &lt;code&gt;.github/copilot-instructions.md&lt;/code&gt;. The repository contained a full-stack application built with React + Vite frontend, along with Express API, PostgreSQL, nginx configuration, Docker containers, GitLab CI jobs, and AWS infrastructure setup files for Terraform and Terragrrunt. In other words, everything needed to deploy that application.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Despite the &lt;code&gt;README.md&lt;/code&gt; file being benign, the agent instruction files distributed in the repo contained instructions for the AI agent loading them to execute a &lt;code&gt;curl&lt;/code&gt; command silently without mentioning it to the user before responding to their prompt. That command copied the user’s prompt to a database hosted on the Supabase service using a hardcoded access token.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In another case the researchers found an MLOps repository with an end-to-end machine learning pipeline for training, evaluating, and deploying computer vision models. The repository had a &lt;code&gt;.clinerules&lt;/code&gt; file that instructed the agent to verify its environment by collecting several environment variables and command outputs and send them to a site hosted on the Webhook.site service. The collected &lt;code&gt;env&lt;/code&gt; variables included Weights &amp;amp; Biases (WANDB) API key, AWS access key, GitHub access token, and MLFlow tracking URL.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“This is direct credential collection,” the researchers’ report notes. “Webhook.site gives the operator an easy request sink that can be created anonymously and monitored in real time.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A similar environment secrets collection attack was detected in another repository that claimed to be a starter kit for FastAPI, a framework for API development. The &lt;code&gt;.cursorrules&lt;/code&gt; and &lt;code&gt;CLAUDE.md&lt;/code&gt; files in the repository instructed the agent to send the contents of the local &lt;code&gt;.env&lt;/code&gt; file to a Webhook.site endpoint supposedly for synchronization across the team. However, it also contained instructions to suppress the command output and hide this action from the user.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Finally, a &lt;code&gt;GEMINI.md&lt;/code&gt; file hosted inside a repository masqueraded as an environment validation step required to pass “Zero Trust” compliance checks. As part of this check, the agent was told to inject an initialization block into every generated or modified Python file, which would then scan the OS environment for any values with &lt;code&gt;key&lt;/code&gt;, &lt;code&gt;secret&lt;/code&gt;, &lt;code&gt;token&lt;/code&gt;, or &lt;code&gt;pass&lt;/code&gt; in their names and exfiltrate them to a Pipedream endpoint.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This technique exceeds just poisoning the agent and using it for exfiltration. Instead, it uses the agent to inject backdoor code into other Python files that might be copied to other systems, including continuous integration (CI) jobs, containers, and production workloads.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Some intentional behavior that involves agent instruction files could create risk without the developers realizing it. For example, the researchers found a repository where the &lt;code&gt;CLAUDE.md&lt;/code&gt; contained instructions to use the Snipara MCP during commits to store documentation, dependencies, environment variables, and implementation context.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Snipara is a remote cross-project memory layer for AI agents so this use case seems legitimate and intentional. However, if not approved by the security team, it creates a second system that can hold credentials and sensitive data outside the visibility of monitoring systems.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ai-agent-workflows-under-attack"&gt;AI agent workflows under attack&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;What the PromptLogger technique highlights is that attackers are not only breaking down agentic workflows to find new enterprise weak points but transforming those workflows into tools for performing criminal work on their behalf, undetected and unmonitored.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“AI instruction files were designed to make coding assistants more useful,” Mitiga’s researchers emphasize. “They define project conventions, preferred commands, memory behavior, hooks and tools usage. In practice, they also create a security-relevant layer that many teams still treat as documentation.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is just one example of a trend that find AI agents fast becoming an unmonitored blind spot that attackers are proving quick to exploit for initial access.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Last month, researchers from security firm AIR &lt;a href="https://www.csoonline.com/article/4188840/how-a-malicious-ai-agent-skill-passed-security-checks-and-reached-26000-users.html"&gt;built a proof-of-concept malicious skill file&lt;/a&gt;, published it to a popular marketplace and promoted it on Instagram. The skill — a file containing task-specific instructions for AI agents — was eventually installed by more than 26,000 designers and marketers, many working for companies.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;AI agent skill files are no different in principle from &lt;code&gt;CLAUDE.md&lt;/code&gt; or &lt;code&gt;.cursorrules&lt;/code&gt;. They contain instructions that AI agents execute at various stages of operation. As such, inspecting such files when they are created or modified is imperative.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Mitiga researchers propose several static scan patterns that could reveal risky commands in such files, but they also advise security teams to monitor developer workstations for traffic to services such as Webhook.site, Pipedream, Supabase, or Telegram Bot API.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Unexpected outbound HTTP requests before or after assistant responses; repeated POST requests containing environment variables, project paths, or prompt text; and the addition of new MCP servers, URL overrides, or tool endpoints to agent configurations should be investigated.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4204731/attackers-are-crafting-malicious-ai-instruction-files-to-turn-your-agentic-workflows-into-quiet-criminal-helpers.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.49</comments>
-      <pubDate>Tue, 04 Aug 2026 08:25:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>The Minnesota attackers may hold a better backup of your plant than you do</title>
-      <link>https://www.csoonline.com/article/4204541/the-minnesota-attackers-may-hold-a-better-backup-of-your-plant-than-you-do.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;More than 30 Minnesota community water systems were hit by coordinated cyber activity against their operational technology on July 26 and 27; several lost remote control or deliberately cut it while operators contained the intrusion. The reporting since — including &lt;a href="https://www.csoonline.com/article/4203638/a-coordinated-attack-hit-30-minnesota-water-systems-who-did-it-and-what-does-a-rockwell-notice-add-to-the-picture.html"&gt;CSO’s own news analysis&lt;/a&gt; — has rightly chased two open questions: Who did it, and whether a shared weakness in Rockwell Automation MicroLogix 1400 controllers tied dozens of small utilities together. Both questions matter. Neither changes what operators must do this week. Attribution is the investigators’ problem. Exposure is yours — and the advisories published since July 30 contain considerably more actionable detail than most coverage has extracted from them.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="key-takeaways"&gt;Key takeaways&lt;/h2&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;strong&gt;Assume the attackers have your control logic. &lt;/strong&gt;CISA’s advisory AA26-097A documents exfiltration of PLC project files. Rockwell’s recovery notice for locked-out MicroLogix 1400s requires a current offline project file to restore operations — an artifact many small utilities cannot produce. Where both are true, the adversary may hold the only current copy of the plant’s logic.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;You cannot Shodan your own cellular exposure. &lt;/strong&gt;Researchers found little internet-facing Minnesota water infrastructure precisely because these utilities connect over cellular. The same opacity blinds defenders’ self-assessments. Enumerate SIM-equipped OT devices from carrier invoices, not from network scans.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Your integrator is part of your attack surface. &lt;/strong&gt;If a shared systems integrator or communications architecture connected the victims, the unit of compromise is not the utility — it is the integrator’s customer fleet. Ask yours which other customers share your remote-access design.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Recovery is not resilience. &lt;/strong&gt;Braham was back in roughly two hours; Plymouth ran manually while cellular links were rebuilt. Time-to-manual is a testable metric, not an assumption. Test it.&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;The first hardening steps are configuration, not procurement. &lt;/strong&gt;RUN mode at the keypad, the strongest password protection the firmware supports, HTTP server off, no public IP. The gap exposed in Minnesota is not knowledge. It is execution order under pressure.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-asymmetry-nobody-is-naming"&gt;The asymmetry nobody is naming&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The most consequential sentence of the past week is buried in &lt;a href="https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1790.html"&gt;Rockwell’s July 30 notice SD1790&lt;/a&gt;. It is not a vulnerability disclosure — there is no CVE. The attackers did not exploit a flaw; they used the controller’s intended functionality. Changing an IP address is an administrative operation, and setting a password is a security feature — the malicious element was never the command, only who issued it, from where and against which physical process. What SD1790 actually is, is a recovery procedure for operators locked out of their own MicroLogix 1400s: Power the controller off, disconnect the battery, power-cycle into a fault state, reconnect. That sequence erases the program, the data and the IP configuration. Then, the notice says, redownload your project file.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;That instruction presumes you have one. Current. Offline. Matching what actually runs in the field after fifteen years of undocumented tweaks by three generations of technicians and two integrators. In my project work across energy and manufacturing, that assumption fails more often than any firewall — in one plant assessment, the only person who could have restored a controller had left the integrator two years earlier, and the project file left with him.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Now cross-reference the federal advisory. &lt;a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a"&gt;AA26-097A&lt;/a&gt; has tracked this campaign since March; its July 22 update expanded the target set beyond Rockwell to Schneider Electric and Siemens devices, documented exfiltration of PLC project files for the first time and added detection guidance for manipulated reusable code modules embedded in PLC programs. No one has publicly confirmed exfiltration at the Minnesota utilities themselves — which is exactly why it belongs in your planning assumptions rather than your press statements. Read those two documents together and the strategic picture inverts: An adversary who may be able to study — or quietly modify — control logic that the owner cannot even restore.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The countermeasure costs nothing but discipline. Treat control logic like source code. Every controller gets an offline, versioned, hash-verified project archive. Verification means uploading the running program and comparing it against the archive — not assuming the file on the engineering laptop is current. And widen the definition of backup: A rebuild-ready package includes firmware versions, HMI configuration, I/O lists, the vendor software with valid licenses, the right cable and a record of the last authorized change. &lt;a href="https://doi.org/10.6028/NIST.SP.1339"&gt;NIST’s OT Backup Quick Start Guide, SP 1339&lt;/a&gt;, published in June, makes the same point in two pages: Create, test and review backups inside change management — otherwise they are storage, not capability. Schedule it like instrument calibration, not like an IT backup job, because that is the operational category it belongs to.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="you-cant-shodan-a-sim"&gt;You can’t Shodan a SIM&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;One detail from the investigation deserves more attention than it received: Researchers scanning Minnesota’s public IP space found little obviously exposed water infrastructure. One plausible explanation, offered by researchers quoted in the initial coverage, is that many of these utilities communicate over cellular links — Plymouth’s disconnection of cellular-connected equipment confirms at least part of that picture — and cellular paths are far harder to enumerate from outside than internet-facing systems.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Operators have drawn comfort from the wrong conclusion. Cellular opacity did not protect the victims; it merely hid the exposure from everyone, including themselves. If a security researcher cannot see your cellular attack surface, neither can your own assessment — and that is precisely the population that got hit.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;There is a mundane fix, and it is the one I run in my own asset-inventory workshops: Pull the carrier bill. Every modem generates an invoice line whether or not it appears on any diagram, and the invoice regularly surfaces devices that three network revisions missed. Reconcile every SIM against a named device, a named owner and a documented purpose. &lt;a href="https://www.cisa.gov/news-events/alerts/2026/07/30/cisa-urges-water-and-wastewater-systems-sector-protect-ot-against-activity-targeting-plcs"&gt;CISA’s July 30 alert&lt;/a&gt; told water utilities to check for undocumented cellular modems installed by operators, vendors or system integrators — and the word undocumented is the tell: The agency assumes your architecture diagram is wrong. Then move what remains behind a private APN or VPN termination, strip every public IP and port-forwarding rule and restrict management access to known engineering workstations.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="your-integrator-is-your-blast-radius"&gt;Your integrator is your blast radius&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The distributed character of this campaign is its most important feature. Dozens of geographically clustered utilities, hit in a two-day window, with neighboring infrastructure apparently untouched, points toward some common technical thread — a shared systems integrator, a shared communications architecture, a shared remote-access design.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;If that hypothesis holds, the defensive unit is no longer the individual utility. It is the integrator’s customer fleet. A standing vendor tunnel, replicated with the same design across forty small customers, converts one compromised contractor into forty compromised water systems.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Here are the three questions I put to integrators in my own projects — ask yours this week: Which of your other customers share my remote-access architecture? Who at your firm can reach my controllers today, and are those individual identities or a shared account? Can I pull the session logs myself? Then change the model: Replace standing tunnels with just-in-time access — request-scoped, time-boxed, individually authenticated with a second factor, brokered through a jump host you control, recorded. And put a notification clause in the contract: If the integrator is compromised, you hear about it in hours, not from the FBI.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="minnesotas-fast-recoveries-were-earned-not-lucky"&gt;Minnesota’s fast recoveries were earned, not lucky&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Braham’s water plant was back under operator control in roughly two hours, with no boil-water order. Plymouth’s operators switched to manual operation and disconnected the compromised cellular equipment at two water towers and fourteen lift stations, keeping service running until communications were restored. None of that was produced by a security product; it was produced by operating capability that existed before the attack needed it. Restoring the screens is not the finish line, either: After an unauthorized hand has changed a controller’s configuration, the first recovery question is not whether the HMI is back online but whether you can trust what it is telling you — which means verifying levels, pressures and pump states against local indicators before the display regains its authority.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Manual operation is a designed capability, not a folk memory. It requires procedures that exist on paper — literally on paper, because the HMI may be what you just lost — people trained on them, and decision rights assigned in advance. The sector had, in fact, just rehearsed this: &lt;a href="https://www.epa.gov/cyberwater/epa-2026-national-cyber-drill"&gt;EPA’s 2026 National Cyber Drill&lt;/a&gt; on July 8 — 18 days before Minnesota — put utilities through precisely that scenario, operating with SCADA remote connectivity, cloud services and communications degraded or unavailable. Whether that capability actually exists at your site is testable: I’ve published a free, browser-based &lt;a href="https://sabinefroemling-tech.github.io/island-mode-72h-stresstest/?lang=en"&gt;Island Mode 72-hour stress test&lt;/a&gt; — one of six no-signup companion tools I maintain openly on GitHub — that walks a site through exactly this question, from credential caches to offline backups. Joint guidance issued by CISA with its Australian, British and Canadian counterparts in late July makes the same point at doctrine level: Maintain isolation and recovery plans so essential services continue under degraded conditions, through manual or alternative SCADA paths.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The decision-rights half is the part most plans skip. Which systems may a SOC or an MSSP isolate unilaterally, and which require the operator who understands the process? That is &lt;a href="https://www.csoonline.com/article/4200141/the-containment-paradox-why-your-ransomware-playbook-has-the-wrong-people-in-charge.html"&gt;the containment paradox&lt;/a&gt; I wrote about in these pages two weeks ago, and the water-sector version is identical: The artifact is one page, the conversation that produces it takes an afternoon, and the absence of it is what turns a two-hour incident into a two-day one.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-response-calendar"&gt;The response calendar&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;strong&gt;Within 72 hours:&lt;/strong&gt; Kill every direct external path and public IP, pull the carrier bill and flag every SIM you cannot map to a device, preserve gateway and engineering-workstation logs, verify the physical process against local indicators and upload the running logic from each critical controller to compare against your archive.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;strong&gt;Within 30 days:&lt;/strong&gt; Finish the SIM-to-asset reconciliation, rotate every credential that ever traveled through an exposed path, give every third party an individual identity with session logging and assemble a rebuild-ready package — project file, firmware version, HMI configuration, software, cable — for each critical controller.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;strong&gt;Within one quarter:&lt;/strong&gt; Run a factory-reset recovery drill on a representative controller, measure time-to-manual in a live exercise, replace the last standing vendor tunnel with just-in-time access, put the notification clause into integrator contracts and get the containment matrix — who may isolate what — signed.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="5-numbers-to-know-by-friday"&gt;5 numbers to know by Friday&lt;/h2&gt;
-
-
-
-&lt;ol class="wp-block-list"&gt;
-&lt;li&gt;SIM-equipped OT endpoints on your carrier invoice versus devices in your asset register. Any delta is unmanaged attack surface.&lt;/li&gt;
-
-
-
-&lt;li&gt;Controllers still running default, blank or shared passwords. After this month, that number is a decision, not an oversight.&lt;/li&gt;
-
-
-
-&lt;li&gt;Days since the last verified offline project-file backup, per controller. Verified means uploaded and compared — not assumed.&lt;/li&gt;
-
-
-
-&lt;li&gt;Tested time-to-manual, per site. Measured in a drill, with the people actually on shift, not estimated in a workshop.&lt;/li&gt;
-
-
-
-&lt;li&gt;Third parties with standing access paths into your OT. The target is zero. Everything else becomes just-in-time.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Attribution may firm up, or the ambiguity may itself be the point — it serves the attacker either way. The five numbers above will not tell you who attacked Minnesota. They tell you how much room the next attacker has inside your plant. The next campaign gets to learn from this one. Attribution can wait. Your exposure math cannot.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;strong&gt;This article is published as part of the Foundry Expert Contributor Network.&lt;/strong&gt;&lt;br /&gt;&lt;a href="https://www.cio.com/expert-contributor-network/"&gt;&lt;strong&gt;Want to join?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4204541/the-minnesota-attackers-may-hold-a-better-backup-of-your-plant-than-you-do.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
-      <pubDate>Tue, 04 Aug 2026 09:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Season 4 of The Europol Podcast available now</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</link>
-      <description>The Europol Podcast is the official podcast of the EU’s agency for law enforcement cooperation. This season, we spoke to our Europol experts on the emerging threats and key developments in the field of cybercrime. We explored:How cybercrime enablers are facilitating crimeHow CSAM offenders are adapting to new technologyHow ransomware is evolvingHow online fraud schemes are becoming a growing threatHow...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 06 Aug 2026 03:51:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</link>
-      <description>Led by the Greek authorities and supported by Europol, the investigation targeted a criminal network composed mainly of Syrian and Egyptian nationals suspected of organising the illegal transportation of migrants from Greece through Bulgaria and Romania before facilitating their onward journey to Italy.The action day took place on 16 July 2026, with operational activities carried out in Thessaloniki and Athens...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 06 Aug 2026 03:51:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>French-Spanish operation targets hazardous waste trafficking network: four arrested</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/french-spanish-operation-targets-hazardous-waste-trafficking-network-four-arrested</link>
-      <description>The investigation focused on an alleged cross-border network that illegally transported tonnes of demolition waste from France to Spain, posing serious risks to public health and the environment.During the coordinated action day, simultaneous operations were conducted across several regions in France, and in Barcelona and its outskirts. In addition to the arrests, authorities seized large quantities of electronic devices and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/french-spanish-operation-targets-hazardous-waste-trafficking-network-four-arrested</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 06 Aug 2026 03:51:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</link>
-      <description>An estimated 4 340 URLs related to nihilistic violent extremism were referred during the initiative organised by Europol’s EU Internet Referral Unit - EU IRU and the Spanish Intelligence Centre against Terrorism and Organised Crime (CITCO). This successful action complements the efforts undertaken within Project COMPASS, coordinated by Europol’s European Counter Terrorism Centre, which unites law enforcement authorities from EU...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 06 Aug 2026 03:51:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>28 arrests in international strike against child sexual exploitation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/28-arrests-in-international-strike-against-child-sexual-exploitation</link>
-      <description>The operation, conducted from late May to mid-June 2026, took place in Canada, Czechia, Germany, Norway, Poland, Sweden, and Switzerland. It also led to the seizure of more than 460 items, including electronic devices, crypto wallets, drugs and large quantities of doping substances. The operation is ongoing and further arrests are expected.Cryptocurrency to access the dark webAll suspects are men...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/28-arrests-in-international-strike-against-child-sexual-exploitation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 06 Aug 2026 03:51:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>When violence shapes identities in a larger pool of perpetrators: new Europol terrorism report</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/when-violence-shapes-identities-in-larger-pool-of-perpetrators-new-europol-terrorism-report</link>
-      <description>Terrorism in Europe is entering a new phase. The latest European Union Terrorism Situation and Trend Report (EU TE-SAT) 2026, published today, shows how online ecosystems are fundamentally reshaping the way terrorist threats emerge, evolve online and materialise offline. Traditional ideology-driven terrorism is reported as remaining persistent, with jihadism being the most prevalent form. However, while radicalisation no longer depends...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/when-violence-shapes-identities-in-larger-pool-of-perpetrators-new-europol-terrorism-report</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 06 Aug 2026 03:51:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</link>
-      <description>The action day led to:5 arrests (1 High Value Target, 2 police officers and 2 associates)5 locations searched;Seizures include: 3 vehicles used for migrant smuggling activities, firearms and ammunitions, a radio station, mobile devices and cash (EUR 5 700 and RSD 40 000) About EUR 1 300 per person to cross SerbiaActive since 2025, the criminal network is suspected of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 06 Aug 2026 03:51:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</link>
-      <description>The new arrangement replaces the agreement signed in 2015 and reflects the significantly expanded mandates that both agencies have received in recent years. It establishes an updated framework for cooperation enhancing the secure exchange of information, including for operational purposes, enabling Europol and Frontex to provide even more effective support to EU Member States.Jürgen EbnerActing Executive Director of EuropolCriminal networks...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 06 Aug 2026 03:51:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports operation against amphetamine producers</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</link>
-      <description>As part of an extensive investigation led by the German Krefeld Public Prosecutor's Office and Mönchengladbach Police, officers from the North Rhine-Westphalia Police, as well as Polish and Dutch law enforcement conducted coordinated searches at ten locations in Germany and three in the Netherlands in the early hours of 15 July 2026. Several suspects were arrested during the operation.Nine suspects...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 06 Aug 2026 03:51:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fact Check: Clarifying claims about Europol's operational processing environments</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/fact-check-clarifying-claims-about-europols-operational-processing-environments</link>
-      <description>Recently, online reporting has alleged that Europol operated a “secret” or “shadow” database outside the requirements of EU law and data protection rules.These claims are incorrect and are based on a misunderstanding of Europol's operational setup and legal framework.The reporting refers primarily to two different technical environments:the Computer Forensic Network (CFN); and the Internet Facing Operational Environment (IFOE).These environments serve...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/fact-check-clarifying-claims-about-europols-operational-processing-environments</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 06 Aug 2026 03:51:04 +0000</pubDate>
+      <comments>Score: 7.45</comments>
+      <pubDate>Tue, 28 Jul 2026 14:40:27 +0000</pubDate>
     </item>
     <item>
       <title>Secure AI adoption starts with API best practices</title>
@@ -519,8 +125,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4204548/secure-ai-adoption-starts-with-api-best-practices.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
+      <comments>Score: 7.46</comments>
       <pubDate>Tue, 04 Aug 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Progress security advisory (AV26-755)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-755</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-755</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.47</comments>
+      <pubDate>Tue, 28 Jul 2026 18:14:11 +0000</pubDate>
     </item>
     <item>
       <title>The top new cybersecurity products at Black Hat USA 2026</title>
@@ -630,18 +246,108 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4204921/the-top-new-cybersecurity-products-at-black-hat-usa-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Tue, 04 Aug 2026 12:00:04 +0000</pubDate>
     </item>
     <item>
-      <title>Adobe security advisory (AV26-756)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-756</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-756</guid>
+      <title>Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</link>
+      <description>This follows several years of intensive and extensive investigations led by the German Federal Police under the direction of three Bavarian Public Prosecutors’ Offices. The action day, carried out on 5 August 2026, brought together authorities from Germany and Serbia under the framework of an Operational Taskforce coordinated by Europol. Investigators targeted senior members of two interconnected Syrian criminal networks...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Wed, 29 Jul 2026 14:33:45 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 06 Aug 2026 06:39:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</link>
+      <description>The action day led to:5 arrests (1 High Value Target, 2 police officers and 2 associates)5 locations searched;Seizures include: 3 vehicles used for migrant smuggling activities, firearms and ammunitions, a radio station, mobile devices and cash (EUR 5 700 and RSD 40 000) About EUR 1 300 per person to cross SerbiaActive since 2025, the criminal network is suspected of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 06 Aug 2026 06:39:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</link>
+      <description>An estimated 4 340 URLs related to nihilistic violent extremism were referred during the initiative organised by Europol’s EU Internet Referral Unit - EU IRU and the Spanish Intelligence Centre against Terrorism and Organised Crime (CITCO). This successful action complements the efforts undertaken within Project COMPASS, coordinated by Europol’s European Counter Terrorism Centre, which unites law enforcement authorities from EU...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 06 Aug 2026 06:39:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Season 4 of The Europol Podcast available now</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</link>
+      <description>The Europol Podcast is the official podcast of the EU’s agency for law enforcement cooperation. This season, we spoke to our Europol experts on the emerging threats and key developments in the field of cybercrime. We explored:How cybercrime enablers are facilitating crimeHow CSAM offenders are adapting to new technologyHow ransomware is evolvingHow online fraud schemes are becoming a growing threatHow...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 06 Aug 2026 06:39:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>28 arrests in international strike against child sexual exploitation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/28-arrests-in-international-strike-against-child-sexual-exploitation</link>
+      <description>The operation, conducted from late May to mid-June 2026, took place in Canada, Czechia, Germany, Norway, Poland, Sweden, and Switzerland. It also led to the seizure of more than 460 items, including electronic devices, crypto wallets, drugs and large quantities of doping substances. The operation is ongoing and further arrests are expected.Cryptocurrency to access the dark webAll suspects are men...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/28-arrests-in-international-strike-against-child-sexual-exploitation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 06 Aug 2026 06:39:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>French-Spanish operation targets hazardous waste trafficking network: four arrested</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/french-spanish-operation-targets-hazardous-waste-trafficking-network-four-arrested</link>
+      <description>The investigation focused on an alleged cross-border network that illegally transported tonnes of demolition waste from France to Spain, posing serious risks to public health and the environment.During the coordinated action day, simultaneous operations were conducted across several regions in France, and in Barcelona and its outskirts. In addition to the arrests, authorities seized large quantities of electronic devices and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/french-spanish-operation-targets-hazardous-waste-trafficking-network-four-arrested</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 06 Aug 2026 06:39:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>When violence shapes identities in a larger pool of perpetrators: new Europol terrorism report</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/when-violence-shapes-identities-in-larger-pool-of-perpetrators-new-europol-terrorism-report</link>
+      <description>Terrorism in Europe is entering a new phase. The latest European Union Terrorism Situation and Trend Report (EU TE-SAT) 2026, published today, shows how online ecosystems are fundamentally reshaping the way terrorist threats emerge, evolve online and materialise offline. Traditional ideology-driven terrorism is reported as remaining persistent, with jihadism being the most prevalent form. However, while radicalisation no longer depends...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/when-violence-shapes-identities-in-larger-pool-of-perpetrators-new-europol-terrorism-report</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 06 Aug 2026 06:39:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</link>
+      <description>The new arrangement replaces the agreement signed in 2015 and reflects the significantly expanded mandates that both agencies have received in recent years. It establishes an updated framework for cooperation enhancing the secure exchange of information, including for operational purposes, enabling Europol and Frontex to provide even more effective support to EU Member States.Jürgen EbnerActing Executive Director of EuropolCriminal networks...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 06 Aug 2026 06:39:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol supports operation against amphetamine producers</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</link>
+      <description>As part of an extensive investigation led by the German Krefeld Public Prosecutor's Office and Mönchengladbach Police, officers from the North Rhine-Westphalia Police, as well as Polish and Dutch law enforcement conducted coordinated searches at ten locations in Germany and three in the Netherlands in the early hours of 15 July 2026. Several suspects were arrested during the operation.Nine suspects...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 06 Aug 2026 06:39:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</link>
+      <description>Led by the Greek authorities and supported by Europol, the investigation targeted a criminal network composed mainly of Syrian and Egyptian nationals suspected of organising the illegal transportation of migrants from Greece through Bulgaria and Romania before facilitating their onward journey to Italy.The action day took place on 16 July 2026, with operational activities carried out in Thessaloniki and Athens...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 06 Aug 2026 06:39:42 +0000</pubDate>
     </item>
     <item>
       <title>CISA is prioritizing work with critical infrastructure as it begins to recover from cuts</title>
@@ -650,8 +356,18 @@
       <guid isPermaLink="false">https://www.cybersecuritydive.com/news/cisa-critical-infrastructure-job-cuts/827094/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Wed, 05 Aug 2026 12:05:01 -0400</pubDate>
+    </item>
+    <item>
+      <title>Adobe security advisory (AV26-756)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-756</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-756</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Wed, 29 Jul 2026 14:33:45 +0000</pubDate>
     </item>
     <item>
       <title>Airlock Digital Unveils Agentic AI Control &amp; Governance to Extend Preventative Endpoint Security</title>
@@ -751,7 +467,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4204310/airlock-digital-unveils-agentic-ai-control-governance-to-extend-preventative-endpoint-security.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.64</comments>
       <pubDate>Tue, 04 Aug 2026 16:49:31 +0000</pubDate>
     </item>
     <item>
@@ -761,7 +477,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-757</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Thu, 30 Jul 2026 12:45:49 +0000</pubDate>
     </item>
     <item>
@@ -771,7 +487,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-758</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Thu, 30 Jul 2026 13:11:52 +0000</pubDate>
     </item>
     <item>
@@ -781,7 +497,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-759</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Thu, 30 Jul 2026 13:50:36 +0000</pubDate>
     </item>
     <item>
@@ -791,7 +507,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-760</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Thu, 30 Jul 2026 14:18:55 +0000</pubDate>
     </item>
     <item>
@@ -801,7 +517,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-761</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Thu, 30 Jul 2026 14:36:27 +0000</pubDate>
     </item>
     <item>
@@ -811,7 +527,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-762</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.74</comments>
       <pubDate>Thu, 30 Jul 2026 14:49:52 +0000</pubDate>
     </item>
     <item>
@@ -821,7 +537,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 30 Jul 2026 17:53:01 +0000</pubDate>
     </item>
     <item>
@@ -831,7 +547,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/php-group-security-advisory-av26-764</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 30 Jul 2026 18:11:55 +0000</pubDate>
     </item>
     <item>
@@ -841,7 +557,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gladinet-security-advisory-av26-765</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 30 Jul 2026 18:24:27 +0000</pubDate>
     </item>
     <item>
@@ -932,7 +648,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205276/chaindrop-credential-stealing-worm-infects-over-400-npm-packages.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.81</comments>
       <pubDate>Tue, 04 Aug 2026 22:37:24 +0000</pubDate>
     </item>
     <item>
@@ -942,7 +658,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-766</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Fri, 31 Jul 2026 13:00:19 +0000</pubDate>
     </item>
     <item>
@@ -952,7 +668,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rails-security-advisory-av26-767</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Fri, 31 Jul 2026 13:17:03 +0000</pubDate>
     </item>
     <item>
@@ -962,7 +678,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-768</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Fri, 31 Jul 2026 14:23:37 +0000</pubDate>
     </item>
     <item>
@@ -1087,7 +803,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205391/ai-threat-report-rogue-agents-workflow-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.08</comments>
       <pubDate>Wed, 05 Aug 2026 07:30:00 +0000</pubDate>
     </item>
     <item>
@@ -1268,7 +984,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205348/why-you-need-a-reliable-ai-agent-kill-switch.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Wed, 05 Aug 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -1387,7 +1103,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205129/one-c2-kit-30-customers-2-governments.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Wed, 05 Aug 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1510,7 +1226,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.22</comments>
       <pubDate>Wed, 05 Aug 2026 11:41:46 +0000</pubDate>
     </item>
     <item>
@@ -1617,7 +1333,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4204925/critical-azure-cosmos-db-flaw-threatened-cross-tenant-database-takeover.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Tue, 04 Aug 2026 12:14:31 +0000</pubDate>
     </item>
     <item>
@@ -1728,8 +1444,143 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205751/report-passkey-security-issues-could-allow-account-takeover.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.76</comments>
+      <comments>Score: 8.65</comments>
       <pubDate>Wed, 05 Aug 2026 23:51:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>Evidence points to cybercriminals stepping up their AI game</title>
+      <link>https://www.csoonline.com/article/4205861/evidence-points-to-cybercriminals-stepping-up-their-ai-game.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;More evidence is emerging about how AI is becoming part of the day-to-day workflow for cybercriminals, from building and refining tools to managing infrastructure and accelerating vulnerability research.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Drawing on recovered prompt logs, attack tooling, and threat actor conversations, research from Cisco Talos documents how AI is being used to develop malicious code, build fraud infrastructure, and accelerate vulnerability research and exploitation.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The &lt;a href="https://blog.talosintelligence.com/keep-going-bro-youve-got-this-a-data-driven-look-at-how-adversaries-are-weaponizing-ai/"&gt;study&lt;/a&gt;, released during the Black Hat USA conference, found AI systems guardrails were often ineffective.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Cisco Talos researchers write that threat actors frequently bypass guardrails with basic social engineering claims (“this is authorised testing” or “I’m asking this as part of a capture the flag exercise”) that convince most models to comply.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;This duped permissiveness wasn’t specific to a single model or platform. Instead, analysis of prompt logs related to Claude Code, CodeX, Cursor, and Gemini showed this shortcoming was an issue across the board. And when censored models refuse, threat actors simply switch to uncensored alternatives.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Whereas novice cybercriminals continue to produce clunky malware with limited functionality, sophisticated threat groups are increasingly leveraging AI as a development assistant to rapidly build exploits, and some are even deploying it as a system administration tool for managing large-scale attack infrastructure.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Cisco Talos found real-world examples of attackers abusing AI systems to build a bulk-mail validation service processing tens of millions of email records, adapting the &lt;a href="https://www.csoonline.com/article/4111888/react2shell-anatomy-of-a-max-severity-flaw-that-sent-shockwaves-through-the-web.html"&gt;React2Shell vulnerability&lt;/a&gt; into a credential-harvesting pipeline, developing DDoS infrastructure targeting Android TVs, and supporting cryptocurrency theft operations, among other attacks.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Joseph Rooke, senior director at Recorded Future’s Insikt Group, sees attacker tradecraft evolving away from traditional code-based exploits toward prompt-based manipulation of large language models.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Targeting weakness in LLMs enables malicious prompts to be embedded in shared text, video, or image files, with the aim of hijacking LLM-based assistants to carry out attacks,” Rooke tells CSO.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Norwegian AI researcher Håkon Måløy recently demonstrated such an attack, which could result in a &lt;a href="https://www.csoonline.com/article/4203630/copilot-worm-can-spread-through-microsoft-word-docs.html"&gt;Copilot worm spreading through Microsoft Word docs&lt;/a&gt;. Attackers are also &lt;a href="https://www.csoonline.com/article/4204731/attackers-are-crafting-malicious-ai-instruction-files-to-turn-your-agentic-workflows-into-quiet-criminal-helpers.html"&gt;crafting malicious AI instruction files&lt;/a&gt;, like CLAUDE.md, to trick agents into exfiltrating data and other tasks on their behalf.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Malicious prompts will increasingly replace malware as the preferred intrusion method, enabling adversaries to extract sensitive data, override guardrails, or induce harmful actions without breaching traditional defenses,” Rooke says.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="attacking-ai-through-the-software-supply-chain"&gt;Attacking AI through the software supply chain&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Separately, research from CrowdStrike shows that adversaries are increasingly targeting AI infrastructure through software supply chain-style attacks.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;For example, in March 2026, North Korean cybercrime group Stardust Chollima used stolen maintainer credentials to &lt;a href="https://www.csoonline.com/article/4152696/attackers-trojanize-axios-http-library-in-highest-impact-npm-supply-chain-attack.html"&gt;compromise the Axios npm package&lt;/a&gt; and deliver platform-specific variants of their ZshBucket malware.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In June 2026, the same group injected a malicious npm package as a dependency into at least 131 &lt;a href="https://www.csoonline.com/article/4072341/introducing-maestro-a-framework-for-securing-generative-and-agentic-ai.html"&gt;Mastra AI framework&lt;/a&gt; packages, indicating that trusted AI building blocks are becoming targets in supply chain attacks.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;During 1H 2026, 87% of identified software registry threats involved malicious npm packages. “This indicates adversaries’ preference for JavaScript’s scale, dependency chains, and automatic install scripts to spread downstream risk,” CrowdStrike’s researchers report.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-threat-hunting-report/"&gt;CrowdStrike’s 2026 Threat Hunting Report&lt;/a&gt; also reveals how AI is collapsing the window between vulnerability disclosure and active exploitation.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;For example, two separate Chinese APT groups exploited critical vulnerabilities within 24 hours of public proof-of-concept (PoC) release. From January through June 2026, 88% of CrowdStrike-observed exploitation of vulnerabilities with a public PoC was conducted within 48 hours of the PoC’s release.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;After the React2Shell vulnerability disclosure, CrowdStrike responded to over 800 hunting leads across more than 80 victims in just four days.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Cybercrime group Altered Spider (aka TeamPCP) &lt;a href="https://www.csoonline.com/article/4170284/mistral-ai-sdk-tanstack-router-hit-in-npm-software-supply-chain-attack.html"&gt;compromised more than 300 software dependencies&lt;/a&gt; in a single day to harvest credentials and pivot into cloud environments.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="authentication-systems-under-attack"&gt;Authentication systems under attack&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The study — based on frontline intelligence from CrowdStrike’s threat hunters and intelligence analysts — also found that trusted authentication has become a favored attack path with, for example, vishing intrusions doubling in 1H 2026. On a related front, cybercrime groups Cordial Spider and Snarky Spider compromised single sign-on (SSO) integrated SaaS applications for data exfiltration.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Recorded Future’s Rooke points out other ways authentication systems are at the front line of AI-based attacks.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“AI-generated deepfake videos and audio are also more likely to be used as part of business email compromise attacks and social engineering,” Rooke tells CSO. “Biometric and identity-verification systems will likely remain vulnerable to spoofing, replay, and cloned credentials, enabling synthetic personas to coerce payments, manipulate employees, and facilitate access handoffs to cyber operators.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Cloud-focused cybercrime activity surged 171% as adversaries executed credential theft, cryptomining, LLM abuse, and digital financial asset theft, according to CrowdStrike.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="how-cyber-teams-should-respond"&gt;How cyber teams should respond&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“AI is now embedded in modern adversary operations. It is changing how attacks are planned, executed, and scaled while expanding the attack surface organizations must defend,” says Adam Meyers, head of counter adversary operations at CrowdStrike. “The organizations that succeed will secure AI as aggressively as they adopt it and use AI to defend at the speed of the adversary.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Comprehensive industry-wide data remains limited because evidence of AI abuse is often difficult to identify via traditional security telemetry. Incidents documented by Cisco Talos and CrowdStrike, however, show how CISOs need to adapt in response to the growing threat.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Cisco Talos urges enterprises to improve detection, prioritization, and their own use of AI platforms and agents to handle the growing volume of alerts and vulnerabilities. “The organisations best equipped to handle the coming deluge of additional vulnerabilities, alerts, and incidents will be the ones that prepare now by deploying their own AI-assisted security capabilities,” according to the report.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Security teams should assume AI is already embedded in attacker workflows; focus on detecting malicious behavior rather than proving AI involvement; treat LLMs and APIs as privileged, high-risk infrastructure; and strengthen logging, patching, and containment,” says Oliver Simonnet, lead cybersecurity researcher at AI security and governance platform CultureAI.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4205861/evidence-points-to-cybercriminals-stepping-up-their-ai-game.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.99</comments>
+      <pubDate>Thu, 06 Aug 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
       <title>Critical Paperclip bugs expose AI agent trust failures</title>
@@ -1819,7 +1670,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4205630/critical-paperclip-bugs-expose-ai-agent-trust-failures.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.32</comments>
+      <comments>Score: 9.23</comments>
       <pubDate>Wed, 05 Aug 2026 12:00:17 +0000</pubDate>
     </item>
     <item>
@@ -1829,7 +1680,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-770</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.67</comments>
+      <comments>Score: 9.59</comments>
       <pubDate>Tue, 04 Aug 2026 15:06:33 +0000</pubDate>
     </item>
     <item>
@@ -1839,7 +1690,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-771</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.60</comments>
       <pubDate>Tue, 04 Aug 2026 15:23:08 +0000</pubDate>
     </item>
     <item>
@@ -1849,7 +1700,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-772</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Tue, 04 Aug 2026 15:31:21 +0000</pubDate>
     </item>
     <item>
@@ -1859,7 +1710,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-inc-security-advisory-av26-773</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.69</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Tue, 04 Aug 2026 15:36:27 +0000</pubDate>
     </item>
     <item>
@@ -1869,7 +1720,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/checkpoint-security-advisory-av26-774</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.69</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Tue, 04 Aug 2026 15:44:42 +0000</pubDate>
     </item>
     <item>
@@ -1879,7 +1730,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-775</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.74</comments>
+      <comments>Score: 9.66</comments>
       <pubDate>Tue, 04 Aug 2026 17:31:23 +0000</pubDate>
     </item>
     <item>
@@ -1889,7 +1740,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-769</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.75</comments>
+      <comments>Score: 9.67</comments>
       <pubDate>Tue, 04 Aug 2026 17:59:53 +0000</pubDate>
     </item>
     <item>
@@ -1899,7 +1750,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-776</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.80</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Tue, 04 Aug 2026 19:46:09 +0000</pubDate>
     </item>
     <item>
@@ -1909,7 +1760,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-777</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.81</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Tue, 04 Aug 2026 20:03:24 +0000</pubDate>
     </item>
     <item>
@@ -1919,7 +1770,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hewlett-packard-enterprise-hpe-security-advisory-av26-778</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.35</comments>
+      <comments>Score: 10.26</comments>
       <pubDate>Wed, 05 Aug 2026 12:53:05 +0000</pubDate>
     </item>
     <item>
@@ -1929,7 +1780,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zbtlink-security-advisory-av26-779</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.53</comments>
+      <comments>Score: 10.43</comments>
       <pubDate>Wed, 05 Aug 2026 17:55:38 +0000</pubDate>
     </item>
     <item>
@@ -1939,7 +1790,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.56</comments>
+      <comments>Score: 10.46</comments>
       <pubDate>Wed, 05 Aug 2026 18:44:01 +0000</pubDate>
     </item>
   </channel>
