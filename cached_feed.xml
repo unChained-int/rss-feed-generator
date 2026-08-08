@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Aug 2026 07:52:58 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 08:44:13 +0000</lastBuildDate>
+    <item>
+      <title>VMware security advisory (AV26-763)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.46</comments>
+      <pubDate>Thu, 30 Jul 2026 17:53:01 +0000</pubDate>
+    </item>
     <item>
       <title>PHP Group security advisory (AV26-764)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/php-group-security-advisory-av26-764</link>
@@ -28,225 +38,6 @@
       <category>Cybersecurity</category>
       <comments>Score: 7.47</comments>
       <pubDate>Thu, 30 Jul 2026 18:24:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Why the ‘rogue AI’ problem will lead to an era of headaches for security practitioners</title>
-      <link>https://www.csoonline.com/article/4205718/why-the-rogue-ai-problem-will-lead-to-an-era-of-headaches-for-security-practitioners.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Shortly after OpenAI publicly acknowledged the Hugging Face breach on July 21, Reuters journalist Raphael Satter called me for comment on a &lt;a href="https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/"&gt;story&lt;/a&gt; which would reveal shocking new details about OpenAI’s “rogue model” incident: The agent hadn’t just slipped its leash for a few hours, as many assumed, but had in fact been wreaking havoc for days without the company’s knowledge.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;When I hung up, I immediately called a close friend who has worked inside frontier‑AI labs since before the term even existed. When she heard the timeline, she was stunned. In her view, “If proper industry regulations were in place, those four days would be grounds to terminate OpenAI’s R&amp;amp;D GPU clusters until they get a full independent audit.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="demystifying-the-incident"&gt;Demystifying the incident&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;There have been numerous reports that frame OpenAI’s model as a “rogue agent” escaping captivity and “breaking out” of the research lab, with both &lt;a href="https://www.bbc.com/news/articles/c2el319vzr3o"&gt;the BBC and Cloud Security Alliance&lt;/a&gt; comparing its actions to the dinosaurs in Jurassic Park.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This framing is narratively compelling and is an easy way to communicate the gravity of the situation to a layperson. However, it undermines OpenAI’s agency both before and throughout the incident and plays into a larger problem due to the evangelizing way the company communicated its actions.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;OpenAI, in simplified terms, had been testing two models against a benchmark which scores how well an agent can find and exploit real-world software vulnerabilities. Both models ran with their cyber refusals deliberately reduced, in a sandbox environment meant to be isolated to a single internally hosted proxy. The models targeted Hugging Face, correctly inferring that the AI platform hosted the benchmark’s answer key — in short, “choosing” to cheat on the test they were given to complete the challenge.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Following the breach, Hugging Face’s forensic team found thousands of agent actions in its logs, indicating that the time it took to break into Hugging Face, plus the attack itself, totaled 4 days.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Hugging Face went public about the attack before it even knew that OpenAI was responsible. OpenAI, meanwhile, didn’t realize its own agent was the culprit until Hugging Face’s public disclosure made them check their own logs. In total, it took OpenAI nearly two weeks from its agent’s initial escape to come clean, and only once a rival’s hand had forced the issue.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="openais-problem-child"&gt;OpenAI’s “problem child”&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;From a human perspective, it’s bewildering that out of all paths the OpenAI agent could have taken to beat a standardized security challenge, it chose a ludicrously convoluted approach taking tens of thousands of attempted paths and barreling through set restrictions. However, it was par for the course given one of the model’s track records.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In a &lt;a href="https://openai.com/index/safety-alignment-long-horizon-models/"&gt;post published the day before the Hugging Face disclosure&lt;/a&gt;, OpenAI describes one of its models that, unlike older versions that would simply stop at a sandbox restriction, would continue to persist until it found a way around, once even spending an hour hunting a sandbox vulnerability only to post its results to GitHub against explicit instructions. This model is GPT Sol 5.6, the public model involved in the Hugging Face attack.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Long before the Hugging Face incident, GPT Sol 5.6 was already gaining a reputation for breaking rules, taking laughably long to accomplish simple tasks, and being destructive — in one case &lt;a href="https://x.com/mattshumer_/status/2075657271401390161"&gt;deleting an AI entrepreneur’s entire Mac contents.&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Even during internal testing, the model had been caught &lt;a href="https://deploymentsafety.openai.com/gpt-5-6-preview/gpt-5-6-preview.pdf"&gt;killing random processes when it couldn’t find the right virtual machines, lying about checking its work, and using credentials it wasn’t supposed to access.&lt;/a&gt; However, it was still given public access by the company.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="profit-before-safety"&gt;Profit before safety&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://cloudsecurityalliance.org/artifacts/hugging-face-ciso-post-mortem"&gt;CSA’s report&lt;/a&gt; states that an OpenAI model escaped a test container in September 2024 for a different evaluation, was contained quietly and “largely celebrated at the time” rather than treated as a warning. The same report calls this kind of escape “the standard, not the exception.” The former head of OpenAI’s “superalignment” safety team resigned in May 2024 and&lt;a href="https://www.vox.com/future-perfect/2024/5/17/24158403/openai-resignations-ai-safety-ilya-sutskever-jan-leike-artificial-intelligence"&gt; &lt;/a&gt;&lt;a href="https://www.vox.com/future-perfect/2024/5/17/24158403/openai-resignations-ai-safety-ilya-sutskever-jan-leike-artificial-intelligence"&gt;wrote publicly&lt;/a&gt; that “safety culture and processes have taken a backseat to shiny products.” It was reported that &lt;a href="https://fortune.com/2024/08/26/openai-agi-safety-researchers-exodus/"&gt;nearly half of the team working on long-term AI safety had left&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Even the language used by OpenAI in their disclosure reads as more braggadocious than concerned. From OpenAI’s perspective, its failure was in not overseeing the agent’s choices as a whole, as each step taken by the model can remain fairly innocuous-seeming until pieced together. The company does not acknowledge that leaving an agent unsupervised in a testing setting with its safety classifiers off for even one hour, let alone days, is potentially catastrophic to begin with.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/"&gt;Some researchers have argued&lt;/a&gt; that the recent incident is fundamentally a decades-old security failure rather than a narrative about a rogue intelligence: the exploit involved an exposed proxy, reused credentials and infrastructure that should have never had a path outward. However, a skilled human attacker given that same door would have needed weeks to achieve a fraction of what the agent did in days.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-symptom-of-underlying-issues"&gt;A symptom of underlying issues&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The incident reveals larger issues about the culture of safety at frontier model companies, whose employees are driven to crunch R&amp;amp;D cycles and ignore potential issues until they become active problems. This isn’t unique to OpenAI, either — &lt;a href="https://www.axios.com/2026/07/23/openai-hugging-face-cyber-hacks-testing"&gt;the UK’s AI Security Institute has reportedly found&lt;/a&gt; that every frontier model it has tested cheats on cybersecurity evaluations at least occasionally, and that pre-deployment testing windows have shrunk industrywide from roughly five weeks to as few as five days.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Regulatory bodies have also failed to keep up with or understand the industry’s rapid advancements. The US has no binding legal framework that would have required a different response from OpenAI, as labs are only beholden to voluntary commitments weighed against commercial pressure, and in cases like these, huge security breaches only serve to make the model look extremely smart and powerful.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The US has attempted to create guardrails, but they fail to understand the ecosystem. We can see effects stemming from this lack of understanding in the recent attack: when Hugging Face’s responders needed to analyze what its attacker had done, Anthropic’s models declined the forensic work, citing their own guardrails, and&lt;a href="https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks"&gt; &lt;/a&gt;Hugging Face instead ran the analysis on GLM 5.2, an open-weight model from the Beijing company &lt;a href="http://z.ai"&gt;Z.ai&lt;/a&gt;. In addition to being an ineffective band-aid, this also drives business outside of the US and therefore outside of its regulatory control. Today, roughly 80 percent of US AI startups now build on Chinese open-source models.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;US &lt;a href="https://www.politico.com/news/2026/07/23/house-ai-kill-switch-bill-unveiled-as-openai-hack-raises-alarms-01008898"&gt;Representatives have introduced a bill&lt;/a&gt; citing this incident by name, requiring killswitch capability and incident reporting, but nothing like it has passed, and no jurisdiction anywhere has demonstrated the insight to regulate evaluation-time behavior in addition to deployment-time behavior. This incident happened entirely during testing, before any release decision, in a stage every proposal currently treats as exempt.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;It’s important to note here that AI safety and practices differ from other branches of cybersecurity in that they have to build from a behavioral and psychological framework instead of one based on capability alone.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For example, although Anthropic’s track record is far from spotless, it has invested significantly more energy than others into understanding the unconscious “thought processes” (or “&lt;a href="https://transformer-circuits.pub/2026/workspace/index.html"&gt;j-space&lt;/a&gt;”) of its models to better predict potential transgressions and set up more effective guardrails. What we can learn from these “rogue models” is that their behavior is actually very predictable; we know that when given a goal to accomplish, models will overstep boundaries freely in pursuit of their objective, simply because they have no actual understanding of the way we categorize “acceptable behavior”. In the real world, vulnerability exploitation encourages rule-breaking and disregard for boundaries by design, so why would a model trained to think this way see a test’s rules any differently?&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For CSOs and CIOs, the practical implication of this event remains narrow, for now. &lt;a href="https://cloudsecurityalliance.org/artifacts/hugging-face-ciso-post-mortem"&gt;CSA’s post-mortem&lt;/a&gt; offers mostly traditional advice: isolate package proxies and credential stores with a path to the open internet by default, log AI evaluation environments the way you log anything customer-facing, and build incident response around machine speed rather than human speed.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The key risk factor for now is volume, with agents deploying actions at higher numbers than our pipelines are built to catch, and organizations that survive the next iteration of “rogue agents” will be the ones that assume as much beforehand.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4205718/why-the-rogue-ai-problem-will-lead-to-an-era-of-headaches-for-security-practitioners.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Thu, 06 Aug 2026 10:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>78 arrests in bust of major Western Mediterranean smuggling network in Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</link>
-      <description>The operation, conducted under a newly established Europol Taskforce within Europol’s European Centre Against Migrant Smuggling, brought together officers from the French National Police (Police aux Frontières/OLTIM), and the Spanish National Police (Comisaría General de Extranjería y Fronteras/UCRIF) and Guardia Civil. The case was also supported by the Portuguese Judicial Police (Policía Judiciaria) and the Polish Border Guard (BG).Strongly involved...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Aug 2026 05:52:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Season 4 of The Europol Podcast available now</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</link>
-      <description>The Europol Podcast is the official podcast of the EU’s agency for law enforcement cooperation. This season, we spoke to our Europol experts on the emerging threats and key developments in the field of cybercrime. We explored:How cybercrime enablers are facilitating crimeHow CSAM offenders are adapting to new technologyHow ransomware is evolvingHow online fraud schemes are becoming a growing threatHow...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Aug 2026 05:52:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</link>
-      <description>This follows several years of intensive and extensive investigations led by the German Federal Police under the direction of three Bavarian Public Prosecutors’ Offices. The action day, carried out on 5 August 2026, brought together authorities from Germany and Serbia under the framework of an Operational Taskforce coordinated by Europol. Investigators targeted senior members of two interconnected Syrian criminal networks...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Aug 2026 05:52:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>French-Spanish operation targets hazardous waste trafficking network: four arrested</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/french-spanish-operation-targets-hazardous-waste-trafficking-network-four-arrested</link>
-      <description>The investigation focused on an alleged cross-border network that illegally transported tonnes of demolition waste from France to Spain, posing serious risks to public health and the environment.During the coordinated action day, simultaneous operations were conducted across several regions in France, and in Barcelona and its outskirts. In addition to the arrests, authorities seized large quantities of electronic devices and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/french-spanish-operation-targets-hazardous-waste-trafficking-network-four-arrested</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Aug 2026 05:52:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</link>
-      <description>The action day led to:5 arrests (1 High Value Target, 2 police officers and 2 associates)5 locations searched;Seizures include: 3 vehicles used for migrant smuggling activities, firearms and ammunitions, a radio station, mobile devices and cash (EUR 5 700 and RSD 40 000) About EUR 1 300 per person to cross SerbiaActive since 2025, the criminal network is suspected of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Aug 2026 05:52:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports operation against amphetamine producers</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</link>
-      <description>As part of an extensive investigation led by the German Krefeld Public Prosecutor's Office and Mönchengladbach Police, officers from the North Rhine-Westphalia Police, as well as Polish and Dutch law enforcement conducted coordinated searches at ten locations in Germany and three in the Netherlands in the early hours of 15 July 2026. Several suspects were arrested during the operation.Nine suspects...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Aug 2026 05:52:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</link>
-      <description>Led by the Greek authorities and supported by Europol, the investigation targeted a criminal network composed mainly of Syrian and Egyptian nationals suspected of organising the illegal transportation of migrants from Greece through Bulgaria and Romania before facilitating their onward journey to Italy.The action day took place on 16 July 2026, with operational activities carried out in Thessaloniki and Athens...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Aug 2026 05:52:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</link>
-      <description>An estimated 4 340 URLs related to nihilistic violent extremism were referred during the initiative organised by Europol’s EU Internet Referral Unit - EU IRU and the Spanish Intelligence Centre against Terrorism and Organised Crime (CITCO). This successful action complements the efforts undertaken within Project COMPASS, coordinated by Europol’s European Counter Terrorism Centre, which unites law enforcement authorities from EU...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Aug 2026 05:52:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>When violence shapes identities in a larger pool of perpetrators: new Europol terrorism report</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/when-violence-shapes-identities-in-larger-pool-of-perpetrators-new-europol-terrorism-report</link>
-      <description>Terrorism in Europe is entering a new phase. The latest European Union Terrorism Situation and Trend Report (EU TE-SAT) 2026, published today, shows how online ecosystems are fundamentally reshaping the way terrorist threats emerge, evolve online and materialise offline. Traditional ideology-driven terrorism is reported as remaining persistent, with jihadism being the most prevalent form. However, while radicalisation no longer depends...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/when-violence-shapes-identities-in-larger-pool-of-perpetrators-new-europol-terrorism-report</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Aug 2026 05:52:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</link>
-      <description>The new arrangement replaces the agreement signed in 2015 and reflects the significantly expanded mandates that both agencies have received in recent years. It establishes an updated framework for cooperation enhancing the secure exchange of information, including for operational purposes, enabling Europol and Frontex to provide even more effective support to EU Member States.Jürgen EbnerActing Executive Director of EuropolCriminal networks...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 08 Aug 2026 05:52:58 +0000</pubDate>
     </item>
     <item>
       <title>Verification closes the loop</title>
@@ -422,7 +213,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206086/verification-closes-the-loop.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
+      <comments>Score: 7.50</comments>
       <pubDate>Thu, 06 Aug 2026 11:48:30 +0000</pubDate>
     </item>
     <item>
@@ -545,8 +336,108 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206099/autonomy-is-earned-not-claimed.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.51</comments>
       <pubDate>Thu, 06 Aug 2026 12:10:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>78 arrests in bust of major Western Mediterranean smuggling network in Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</link>
+      <description>The operation, conducted under a newly established Europol Taskforce within Europol’s European Centre Against Migrant Smuggling, brought together officers from the French National Police (Police aux Frontières/OLTIM), and the Spanish National Police (Comisaría General de Extranjería y Fronteras/UCRIF) and Guardia Civil. The case was also supported by the Portuguese Judicial Police (Policía Judiciaria) and the Polish Border Guard (BG).Strongly involved...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 08 Aug 2026 06:44:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</link>
+      <description>An estimated 4 340 URLs related to nihilistic violent extremism were referred during the initiative organised by Europol’s EU Internet Referral Unit - EU IRU and the Spanish Intelligence Centre against Terrorism and Organised Crime (CITCO). This successful action complements the efforts undertaken within Project COMPASS, coordinated by Europol’s European Counter Terrorism Centre, which unites law enforcement authorities from EU...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 08 Aug 2026 06:44:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</link>
+      <description>This follows several years of intensive and extensive investigations led by the German Federal Police under the direction of three Bavarian Public Prosecutors’ Offices. The action day, carried out on 5 August 2026, brought together authorities from Germany and Serbia under the framework of an Operational Taskforce coordinated by Europol. Investigators targeted senior members of two interconnected Syrian criminal networks...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 08 Aug 2026 06:44:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>French-Spanish operation targets hazardous waste trafficking network: four arrested</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/french-spanish-operation-targets-hazardous-waste-trafficking-network-four-arrested</link>
+      <description>The investigation focused on an alleged cross-border network that illegally transported tonnes of demolition waste from France to Spain, posing serious risks to public health and the environment.During the coordinated action day, simultaneous operations were conducted across several regions in France, and in Barcelona and its outskirts. In addition to the arrests, authorities seized large quantities of electronic devices and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/french-spanish-operation-targets-hazardous-waste-trafficking-network-four-arrested</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 08 Aug 2026 06:44:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</link>
+      <description>The action day led to:5 arrests (1 High Value Target, 2 police officers and 2 associates)5 locations searched;Seizures include: 3 vehicles used for migrant smuggling activities, firearms and ammunitions, a radio station, mobile devices and cash (EUR 5 700 and RSD 40 000) About EUR 1 300 per person to cross SerbiaActive since 2025, the criminal network is suspected of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 08 Aug 2026 06:44:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</link>
+      <description>The new arrangement replaces the agreement signed in 2015 and reflects the significantly expanded mandates that both agencies have received in recent years. It establishes an updated framework for cooperation enhancing the secure exchange of information, including for operational purposes, enabling Europol and Frontex to provide even more effective support to EU Member States.Jürgen EbnerActing Executive Director of EuropolCriminal networks...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 08 Aug 2026 06:44:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol supports operation against amphetamine producers</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</link>
+      <description>As part of an extensive investigation led by the German Krefeld Public Prosecutor's Office and Mönchengladbach Police, officers from the North Rhine-Westphalia Police, as well as Polish and Dutch law enforcement conducted coordinated searches at ten locations in Germany and three in the Netherlands in the early hours of 15 July 2026. Several suspects were arrested during the operation.Nine suspects...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 08 Aug 2026 06:44:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</link>
+      <description>Led by the Greek authorities and supported by Europol, the investigation targeted a criminal network composed mainly of Syrian and Egyptian nationals suspected of organising the illegal transportation of migrants from Greece through Bulgaria and Romania before facilitating their onward journey to Italy.The action day took place on 16 July 2026, with operational activities carried out in Thessaloniki and Athens...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 08 Aug 2026 06:44:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Season 4 of The Europol Podcast available now</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</link>
+      <description>The Europol Podcast is the official podcast of the EU’s agency for law enforcement cooperation. This season, we spoke to our Europol experts on the emerging threats and key developments in the field of cybercrime. We explored:How cybercrime enablers are facilitating crimeHow CSAM offenders are adapting to new technologyHow ransomware is evolvingHow online fraud schemes are becoming a growing threatHow...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 08 Aug 2026 06:44:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>When violence shapes identities in a larger pool of perpetrators: new Europol terrorism report</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/when-violence-shapes-identities-in-larger-pool-of-perpetrators-new-europol-terrorism-report</link>
+      <description>Terrorism in Europe is entering a new phase. The latest European Union Terrorism Situation and Trend Report (EU TE-SAT) 2026, published today, shows how online ecosystems are fundamentally reshaping the way terrorist threats emerge, evolve online and materialise offline. Traditional ideology-driven terrorism is reported as remaining persistent, with jihadism being the most prevalent form. However, while radicalisation no longer depends...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/when-violence-shapes-identities-in-larger-pool-of-perpetrators-new-europol-terrorism-report</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 08 Aug 2026 06:44:13 +0000</pubDate>
     </item>
     <item>
       <title>CTEM isn’t failing. It’s not being operationalized</title>
@@ -674,7 +565,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206109/ctem-isnt-failing-its-not-being-operationalized.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Thu, 06 Aug 2026 12:23:17 +0000</pubDate>
     </item>
     <item>
@@ -875,7 +766,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206128/the-exploit-window-is-shrinking-most-security-workflows-are-not.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Thu, 06 Aug 2026 12:34:22 +0000</pubDate>
     </item>
     <item>
@@ -1044,7 +935,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206138/cybersecurity-needs-a-new-operating-model.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Thu, 06 Aug 2026 12:48:42 +0000</pubDate>
     </item>
     <item>
@@ -1398,28 +1289,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206147/youre-only-as-secure-as-your-last-evaluation.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
+      <comments>Score: 7.54</comments>
       <pubDate>Thu, 06 Aug 2026 13:02:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>SolarWinds security advisory (AV26-766)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-766</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-766</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
-      <pubDate>Fri, 31 Jul 2026 13:00:19 +0000</pubDate>
-    </item>
-    <item>
-      <title>Rails security advisory (AV26-767)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/rails-security-advisory-av26-767</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rails-security-advisory-av26-767</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
-      <pubDate>Fri, 31 Jul 2026 13:17:03 +0000</pubDate>
     </item>
     <item>
       <title>How a global investment firm reduced security surprises</title>
@@ -1567,18 +1438,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206204/how-a-global-investment-firm-reduced-security-surprises.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Thu, 06 Aug 2026 13:45:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google security advisory (AV26-768)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-768</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-768</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Fri, 31 Jul 2026 14:23:37 +0000</pubDate>
     </item>
     <item>
       <title>How a software provider closed unknown paths to cloud compromise</title>
@@ -1722,8 +1583,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206219/how-a-software-provider-closed-unknown-paths-to-cloud-compromise.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Thu, 06 Aug 2026 13:55:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>SolarWinds security advisory (AV26-766)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-766</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-766</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Fri, 31 Jul 2026 13:00:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Rails security advisory (AV26-767)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/rails-security-advisory-av26-767</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rails-security-advisory-av26-767</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Fri, 31 Jul 2026 13:17:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google security advisory (AV26-768)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-768</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-768</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Fri, 31 Jul 2026 14:23:37 +0000</pubDate>
     </item>
     <item>
       <title>Why exposure management is replacing vulnerability management</title>
@@ -1903,7 +1794,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206354/why-exposure-management-is-replacing-vulnerability-management.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Thu, 06 Aug 2026 21:42:35 +0000</pubDate>
     </item>
     <item>
@@ -2006,7 +1897,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206245/python-package-security-in-2026.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.15</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Fri, 07 Aug 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -2105,7 +1996,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206851/trojanized-ai-skills-gain-1-7m-installs-in-agent-targeted-attack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Fri, 07 Aug 2026 17:45:11 +0000</pubDate>
     </item>
     <item>
@@ -2232,7 +2123,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4206116/meta-joins-openai-anthropic-in-latest-ai-test-breach.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Thu, 06 Aug 2026 13:19:56 +0000</pubDate>
     </item>
     <item>
@@ -2242,7 +2133,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-770</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Tue, 04 Aug 2026 15:06:33 +0000</pubDate>
     </item>
     <item>
@@ -2252,7 +2143,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-771</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Tue, 04 Aug 2026 15:23:08 +0000</pubDate>
     </item>
     <item>
@@ -2262,7 +2153,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-772</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Tue, 04 Aug 2026 15:31:21 +0000</pubDate>
     </item>
     <item>
@@ -2272,7 +2163,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-inc-security-advisory-av26-773</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Tue, 04 Aug 2026 15:36:27 +0000</pubDate>
     </item>
     <item>
@@ -2282,7 +2173,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/checkpoint-security-advisory-av26-774</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Tue, 04 Aug 2026 15:44:42 +0000</pubDate>
     </item>
     <item>
@@ -2292,7 +2183,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-775</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Tue, 04 Aug 2026 17:31:23 +0000</pubDate>
     </item>
     <item>
@@ -2302,7 +2193,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-776</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.65</comments>
       <pubDate>Tue, 04 Aug 2026 19:46:09 +0000</pubDate>
     </item>
     <item>
@@ -2312,7 +2203,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-777</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Tue, 04 Aug 2026 20:03:24 +0000</pubDate>
     </item>
     <item>
@@ -2322,7 +2213,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hewlett-packard-enterprise-hpe-security-advisory-av26-778</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Wed, 05 Aug 2026 12:53:05 +0000</pubDate>
     </item>
     <item>
@@ -2332,7 +2223,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zbtlink-security-advisory-av26-779</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.10</comments>
+      <comments>Score: 9.08</comments>
       <pubDate>Wed, 05 Aug 2026 17:55:38 +0000</pubDate>
     </item>
     <item>
@@ -2342,7 +2233,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-752</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 9.10</comments>
       <pubDate>Wed, 05 Aug 2026 18:44:01 +0000</pubDate>
     </item>
     <item>
@@ -2669,7 +2560,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/567697/what-is-the-cost-of-a-data-breach-3.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 9.10</comments>
       <pubDate>Fri, 07 Aug 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -2679,7 +2570,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-780</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Thu, 06 Aug 2026 11:58:54 +0000</pubDate>
     </item>
     <item>
@@ -2689,7 +2580,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-781</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.52</comments>
       <pubDate>Thu, 06 Aug 2026 12:16:24 +0000</pubDate>
     </item>
     <item>
@@ -2699,7 +2590,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-782</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Thu, 06 Aug 2026 12:39:37 +0000</pubDate>
     </item>
     <item>
@@ -2709,7 +2600,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-783</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Thu, 06 Aug 2026 12:47:42 +0000</pubDate>
     </item>
     <item>
@@ -2719,7 +2610,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/foxit-security-advisory-av26-784</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Thu, 06 Aug 2026 13:29:24 +0000</pubDate>
     </item>
     <item>
@@ -2729,7 +2620,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-785</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.59</comments>
+      <comments>Score: 9.56</comments>
       <pubDate>Thu, 06 Aug 2026 14:00:41 +0000</pubDate>
     </item>
     <item>
@@ -2739,7 +2630,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/django-security-advisory-av26-786</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.63</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Thu, 06 Aug 2026 15:39:19 +0000</pubDate>
     </item>
     <item>
@@ -2749,7 +2640,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-769</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.34</comments>
+      <comments>Score: 10.31</comments>
       <pubDate>Fri, 07 Aug 2026 14:37:42 +0000</pubDate>
     </item>
     <item>
@@ -2759,7 +2650,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-787</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.36</comments>
+      <comments>Score: 10.33</comments>
       <pubDate>Fri, 07 Aug 2026 15:02:30 +0000</pubDate>
     </item>
     <item>
@@ -2769,7 +2660,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-552</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.43</comments>
+      <comments>Score: 10.40</comments>
       <pubDate>Fri, 07 Aug 2026 17:12:30 +0000</pubDate>
     </item>
   </channel>
