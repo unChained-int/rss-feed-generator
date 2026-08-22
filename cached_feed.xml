@@ -8,229 +8,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 22 Aug 2026 10:25:58 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 11:22:24 +0000</lastBuildDate>
     <item>
-      <title>AI can find zero-days but still can’t reliably write secure code</title>
-      <link>https://www.csoonline.com/article/4210735/ai-can-find-zero-days-but-still-cant-reliably-write-secure-code.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In recent months, LLMs have gone from flooding open-source projects and bug bounty programs with questionable security reports that wasted developers’ time, to routinely finding zero-day flaws that humans and traditional security audit tools had missed for years — a rapid evolution in cyber capabilities that &lt;a href="https://www.csoonline.com/article/4207311/openai-says-astra-could-reach-critical-cyber-capability-tightens-safeguards.html"&gt;scares even their own creators&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;But despite these advances in vulnerability discovery and exploit generation, AI models do not appear to be progressing as fast in vital areas of cyber defense, often leaving basic security flaws in the code they generate — a critical gap not only due to widespread use of AI for software development but also in helping provide patches for the holes AI can now readily find and exploit.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;According to &lt;a href="https://www.veracode.com/resources/analyst-reports/2026-genai-code-security-report/report/"&gt;a recent study from application security firm Veracode&lt;/a&gt;, 44% of AI-generated code contains at least one known OWASP Top 10 vulnerability. While recent frontier models scored higher, no model had more than a 68% security pass rate, meaning it still generated insecure code once every three tries.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Moreover, the average security pass rate for AI-generated code hardly improved across four study snapshots Veracode performed over the past year, which combined tested more than 100 model versions.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Meanwhile, all tested models produced syntax-correct code 99% of the time.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Why are they getting better at syntax? Why are they getting better at writing exploit code yet not getting better at writing secure code?” asks Chris Wysopal, chief security evangelist at Veracode, when discussing the results with CSO. “That is my question to [the AI labs], and that’s what we’re trying to measure.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;It’s a critical question for IT leaders looking to make good on AI’s promise to accelerate software development in an era that also sees AI helping to shrink time-to-exploit closer to instantaneous.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="cyber-imbalance"&gt;Cyber imbalance&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Veracode is not the only company observing the growing asymmetry between offensive and defensive cyber capabilities in LLMs. Tests from Dutch software quality assurance firm Software Improvement Group (SIG) for &lt;a href="https://www.softwareimprovementgroup.com/wp-content/uploads/State-of-Software-2026.pdf"&gt;its State of Software 2026 report&lt;/a&gt; found that AI-generated code produces roughly two times the security risk violations compared to human-written code.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“We also found that 71% of all code, not just AI code, has a low degree of security controls,” Jasper Geurts, SIG’s CTO, tells CSO. “AI didn’t create the problem; it amplified it. Where organizations have measured and managed code quality, AI accelerates delivery. Where they haven’t, it accelerates technical debt and security exposure.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In July, researchers from &lt;a href="http://xint.io"&gt;Xint.io&lt;/a&gt;, a code security testing platform developed by Theori, used five recent AI models from Anthropic and OpenAI to vibe-code applications from scratch, and worked with them to re-architect and harden one existing human-written application. Across the 28 app variants, the researchers found and validated 434 security flaws, of which 196 were in the newly generated codebases (greenfield) and 238 in the re-architected application (brownfield).&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“In general, we find that the most common type of flaws in AI-generated code are flaws where the code still compiles — so the code runs but will have embedded secrets or will use too many resources at scale,” Kay Kwak, product owner for Xint at Theori, tells CSO. “This is in part due to shortcuts/quick-starts in the training data; as well as developers asking for a feature without also explicitly asking for a guardrail. We also found that the larger and more complex the codebase is, the more likely for AI to lose track of fine-grained user permissions.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;As Xint’s study shows, models have problems generating safe code even when they work on an existing codebase. And this extends to fixing security flaws, according to &lt;a href="https://www.csoonline.com/article/4206598/human-oversight-is-still-critical-as-ai-patching-tools-miss-security-risks.html"&gt;research from 1Password’s Off-By-1 Labs&lt;/a&gt;, which tested the quality of new patches generated by various models for six known and fixed vulnerabilities in complex open-source projects.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Across over 6,000 runs, the average success rate for generating a patch that fully resolved the vulnerability without materially changing application behavior was just 26%. Over half of the LLM-generated patches did not resolve the vulnerability, added a new vulnerability, or both.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Since our research looked at patching, we were observing more of an editing process than a net-new creation process,” Keith Hoodlet, head of 1Password’s Off-By-1 Labs, tells CSO. “As such, our research and the research from Veracode should be viewed as complementary, rather than assessing the same challenges. Having said that, we cite their research as an inspiration for our work, and both bodies of research directionally point toward similar conclusions.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="better-training-alone-might-not-solve-secure-coding"&gt;Better training alone might not solve secure coding&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;While AI labs rush to highlight model improvements in cutting-edge vulnerability research, it’s not entirely clear why secure code generation and vulnerability remediation appear to lag far behind vulnerability discovery and exploit development.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Xint’s Kwak believes that writing secure code and proving code is secure are inherently hard problems. “The difficulty isn’t specific to AI,” he says. “Software engineering has an underspecification problem: Nobody writes down everything the code must not do.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Different definitions of success for offensive and defensive scenarios may also help explain the disparities. Offensive success is relatively straightforward to verify: If an agent can reproduce or exploit a vulnerability, the result is concrete. But determining whether a patch closes every relevant exploitation vector and vulnerable code path is much harder.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;That said, training data quality matters for LLM performance, and it’s fair to assume existing models were trained on a lot of public code that varies widely in quality and security.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“All the experimentation we’re hearing about is that they’re playing around with offensive capability and trying to understand how to do offense; that’s how those agents got loose,” Veracode’s Wysopal says, referring to the string of &lt;a href="https://www.csoonline.com/article/4206116/meta-joins-openai-anthropic-in-latest-ai-test-breach.html"&gt;recent incidents at AI labs&lt;/a&gt; in which agents escaped containment during testing and attacked third-party systems.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“What they should be doing is having a curated secure software dataset and training on that, saying: ‘Forget about all the other code you trained on, which was the random code across the internet. Get rid of all of that,’” he says. “License the best code you can from maybe banks or other places like avionics, where code is known to be secure because it’s gone through rigorous code review, and train on that only. That’s hard and takes time but that’s how you would do it for defense. As far as I know, they’re not doing things like that.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Meanwhile, Hoodlet points out another inherent limitation of LLMs: their attention mechanisms, through which they judge the context and relevance of input tokens.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The attention mechanisms, which are fundamental to the nature of how current LLMs function, may inhibit models from ever fully addressing the challenge of patching vulnerabilities,” he says. “In section 7.3 of the &lt;a href="https://1password.com/files/resources/frontier-models-vulnerability-patches-flawed.pdf"&gt;research paper&lt;/a&gt;, we observed situations where an agent’s patch only addressed a single code path from the proof-of-concept exploit, while missing character-for-character identical instances of the same bug in adjacent code paths. It’s unclear how much more training is required to produce better secure coding outcomes given this inherent limitation.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Geurts thinks better training will help only at the margins because a model does not have an organization’s architecture, security policies, threat model, and other application-specific context by default. Harnesses can supply that context and embed deterministic security checks inside the development workflow.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="harness-engineering-remains-critical"&gt;Harness engineering remains critical&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For its study, Veracode deliberately used minimal prompts sent directly to models without additional security instructions, which is not how software engineering teams use LLMs in practice. The other studies used varying degrees of scaffolding, but none evaluated the full breadth of controls that might exist in a mature enterprise development pipeline, which often include specialized AI coding assistants with detailed specifications, validation workflows, system prompts, MCP connections, skills definitions, and other supporting tools.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Such harnesses can retrieve relevant files and architectural documentation, provide threat model information, list approved coding patterns, run compilers and tests, invoke static and dynamic security testing tools, and enforce approval gates that prevent AI agents from continuing until identified failures are addressed.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For example, OpenAI partnered with Trail of Bits to use its models to find vulnerabilities in open-source projects critical to internet infrastructure and help develop patches for them. For the project, dubbed &lt;a href="https://openai.com/index/patch-the-planet/"&gt;Patch the Planet&lt;/a&gt;, researchers built specialized workflows and harnesses, and, as of Aug. 11, the initiative listed 1,250 reported issues across 49 codebases, 271 authored fixes, and 146 patches accepted upstream.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Xint has observed a similar effect in internal testing, according to Kwak. The company evaluated frontier models against 208,000 lines of code containing 17 injected vulnerabilities. Bare prompted loops found between zero and one of the flaws, whereas models operating inside Xint’s specialized harness found between 11 and 14.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The bare loops only ever opened 2.9% of the files, and you can’t find a bug in a file you never open,” Kwak says.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Harnesses can determine which evidence reaches the model, which tools can contradict its initial answer, what counts as progress, and when the workflow should stop or escalate. This can matter as much as the choice of model, especially when working with large repositories. There are plenty of examples over the past six months where open-weight models less capable at long reasoning loops performed as well as frontier models when used inside purpose-built harnesses that helped keep them on track and managed their memory.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;SIG recently used Claude Sonnet 4.6 to build the same test project 20 times. Ten runs used the same model, task, scaffold, acceptance tests, and initial instructions, while the other 10 also had the company’s Sigrid Guardrails system through MCP as a mandatory security and quality gate. The guided runs produced approximately 97% fewer high-risk security findings under SIG’s analysis and achieved 24% higher maintainability scores.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The harness is the operating system for AI agents,” Geurts notes. “It’s where you put the constraints that make them reliable. Without it, AI is fast and convincing, even when it’s wrong.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Effective harnesses embed deterministic analysis tools into the AI workflow, such as code linters, type checkers, security scanners, and tests that block an agent from proceeding until its output is verified. But even with well-engineered harnesses there is no guarantee that no vulnerabilities remain.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Harness implementation is largely where we believe the industry is heading,” Off-By-1 Labs’ Hoodlet says. “If you run a workflow that moves from vulnerability discovery, to critic/judge, patching, and validation before going back through vulnerability discovery, do you need to repeat that process 10 times to achieve a 90% or better chance of generating a robust patch? Does it require a hundred iterations, or a thousand to achieve a robust patch outcome? That is something we’re interested in taking a closer look at.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="human-oversight-still-needed"&gt;Human oversight still needed&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Validation gates and automated checks can reduce the volume of defective code that reaches developers, but they do not transfer responsibility for the result to the LLM. An AI agent can act on scanner findings, run tests, and revise its output, but in the end the organization still needs to decide whether the requirements were complete, the validation was sufficient, and the residual risk is acceptable.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Geurts argues that this changes where human judgment is applied and that, as organizations scale AI adoption, the human role moves upstream: from reviewing code to governing what and how gets built.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;br /&gt;Experts agree that companies should retain the security controls they presently use rather than treating AI-based code reviewers as their replacement. Compilation, type checking, unit and integration tests, static application security testing, software composition analysis, secrets scanning, and infrastructure checks can catch different classes of security failures.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“All the controls that we have today have to continue to be used, but we do have these additional capabilities of agentic security testing,” Wysopal tells CSO. He views deterministic tools and AI-based security testing as complementary because each can identify problems the other misses.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;But ultimately, security-sensitive changes should remain under the control of developers who understand the affected code and its role in the larger system.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“You wouldn’t have an AI deploy your software with no human in the loop — so why are you asking for ‘auto-remediation’ patching that would allow you to skip your engineers?” Kwak asks. “The key steps of merging changes and testing those changes should remain the responsibility of code owners.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;br /&gt;Human validation will limit how quickly organizations can accept AI-generated changes, particularly as agents produce more code and more patch candidates. But at least for now, treating that review process as avoidable can be dangerous.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“While this may not be efficient in terms of code velocity, to reuse a mantra from the US Navy SEALs: ‘Slow is smooth, and smooth is fast,’” Hoodlet says. “Producing larger volumes of code faster is not equivalent to producing functional, secure, and robust code. Code that is functional, secure, and robust is incredibly efficient — as it only needs to be written once.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;See also:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;&lt;a href="https://www.csoonline.com/article/4204731/attackers-are-crafting-malicious-ai-instruction-files-to-turn-your-agentic-workflows-into-quiet-criminal-helpers.html"&gt;Attackers are crafting malicious AI instruction files to turn your agents into quiet criminal helpers&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.csoonline.com/article/4201361/hugging-face-breach-shows-why-incident-response-needs-a-multi-model-ai-strategy.html"&gt;Hugging Face breach shows why incident response needs a multi-model AI strategy&lt;/a&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;a href="https://www.csoonline.com/article/4198524/context-bombing-heralds-a-new-ai-era-of-deceptive-defense.html"&gt;Context bombing heralds a new AI era of deceptive defense&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4210735/ai-can-find-zero-days-but-still-cant-reliably-write-secure-code.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
-      <pubDate>Tue, 18 Aug 2026 08:25:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>WebPros security advisory (AV26-815)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-815</link>
+      <title>GitLab security advisory (AV26-814)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-814</link>
       <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-815</guid>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-814</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
-      <pubDate>Thu, 13 Aug 2026 15:17:54 +0000</pubDate>
+      <comments>Score: 7.43</comments>
+      <pubDate>Thu, 13 Aug 2026 13:54:04 +0000</pubDate>
     </item>
     <item>
       <title>What you say during a cyber breach can — and will — be used against you</title>
@@ -364,8 +151,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4210677/what-you-say-during-a-cyber-breach-can-and-will-be-used-against-you.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Tue, 18 Aug 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>WebPros security advisory (AV26-815)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-815</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-815</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.44</comments>
+      <pubDate>Thu, 13 Aug 2026 15:17:54 +0000</pubDate>
     </item>
     <item>
       <title>Kriminal breaks out of Grok, Claude guardrails at $12.99</title>
@@ -451,7 +248,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
+      <comments>Score: 7.44</comments>
       <pubDate>Thu, 20 Aug 2026 12:00:08 +0000</pubDate>
     </item>
     <item>
@@ -462,27 +259,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 22 Aug 2026 08:25:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</link>
-      <description>The new arrangement replaces the agreement signed in 2015 and reflects the significantly expanded mandates that both agencies have received in recent years. It establishes an updated framework for cooperation enhancing the secure exchange of information, including for operational purposes, enabling Europol and Frontex to provide even more effective support to EU Member States.Jürgen EbnerActing Executive Director of EuropolCriminal networks...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 22 Aug 2026 08:25:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>Season 4 of The Europol Podcast available now</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</link>
-      <description>The Europol Podcast is the official podcast of the EU’s agency for law enforcement cooperation. This season, we spoke to our Europol experts on the emerging threats and key developments in the field of cybercrime. We explored:How cybercrime enablers are facilitating crimeHow CSAM offenders are adapting to new technologyHow ransomware is evolvingHow online fraud schemes are becoming a growing threatBonus...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 22 Aug 2026 08:25:58 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2026 09:22:24 +0000</pubDate>
     </item>
     <item>
       <title>Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia</title>
@@ -492,7 +269,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 22 Aug 2026 08:25:58 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2026 09:22:24 +0000</pubDate>
     </item>
     <item>
       <title>French-Spanish operation targets hazardous waste trafficking network: four arrested</title>
@@ -502,7 +279,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 22 Aug 2026 08:25:58 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2026 09:22:24 +0000</pubDate>
     </item>
     <item>
       <title>When violence shapes identities in a larger pool of perpetrators: new Europol terrorism report</title>
@@ -512,7 +289,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 22 Aug 2026 08:25:58 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2026 09:22:24 +0000</pubDate>
     </item>
     <item>
       <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
@@ -522,7 +299,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 22 Aug 2026 08:25:58 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2026 09:22:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</link>
+      <description>The new arrangement replaces the agreement signed in 2015 and reflects the significantly expanded mandates that both agencies have received in recent years. It establishes an updated framework for cooperation enhancing the secure exchange of information, including for operational purposes, enabling Europol and Frontex to provide even more effective support to EU Member States.Jürgen EbnerActing Executive Director of EuropolCriminal networks...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 22 Aug 2026 09:22:24 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports operation against amphetamine producers</title>
@@ -532,7 +319,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 22 Aug 2026 08:25:58 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2026 09:22:24 +0000</pubDate>
     </item>
     <item>
       <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
@@ -542,7 +329,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 22 Aug 2026 08:25:58 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2026 09:22:24 +0000</pubDate>
     </item>
     <item>
       <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
@@ -552,7 +339,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 22 Aug 2026 08:25:58 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2026 09:22:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>Season 4 of The Europol Podcast available now</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</link>
+      <description>The Europol Podcast is the official podcast of the EU’s agency for law enforcement cooperation. This season, we spoke to our Europol experts on the emerging threats and key developments in the field of cybercrime. We explored:How cybercrime enablers are facilitating crimeHow CSAM offenders are adapting to new technologyHow ransomware is evolvingHow online fraud schemes are becoming a growing threatBonus...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 22 Aug 2026 09:22:24 +0000</pubDate>
     </item>
     <item>
       <title>HashiCorp security advisory (AV26-817)</title>
@@ -630,7 +427,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4211140/critical-gitlab-flaw-allows-attackers-to-delete-and-modify-public-repos.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Tue, 18 Aug 2026 19:33:31 +0000</pubDate>
     </item>
     <item>
@@ -767,7 +564,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4211342/microsoft-finally-patches-critical-one-click-copilot-vulnerability-more-than-eight-months-after-learning-of-it-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Wed, 19 Aug 2026 02:27:16 +0000</pubDate>
     </item>
     <item>
@@ -904,7 +701,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4212157/ransomware-takes-aim-at-enterprise-resilience.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Fri, 21 Aug 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -1011,7 +808,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4212017/ai-threats-are-everywhere-a-risk-first-ciso-decides-what-to-prioritize.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Fri, 21 Aug 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1154,7 +951,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4212398/openai-adds-an-ai-safety-layer-to-detect-misuse-without-retaining-enterprise-data.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Fri, 21 Aug 2026 09:45:36 +0000</pubDate>
     </item>
     <item>
@@ -1164,7 +961,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-819</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Mon, 17 Aug 2026 12:49:08 +0000</pubDate>
     </item>
     <item>
@@ -1174,7 +971,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tenable-inc-security-advisory-av26-820</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Mon, 17 Aug 2026 13:03:29 +0000</pubDate>
     </item>
     <item>
@@ -1184,7 +981,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-821</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Mon, 17 Aug 2026 13:23:00 +0000</pubDate>
     </item>
     <item>
@@ -1194,7 +991,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-edge-security-advisory-av26-822</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Mon, 17 Aug 2026 13:49:25 +0000</pubDate>
     </item>
     <item>
@@ -1204,7 +1001,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-645</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Mon, 17 Aug 2026 14:08:57 +0000</pubDate>
     </item>
     <item>
@@ -1214,7 +1011,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-august-2026-monthly-rollup-av26-798</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Mon, 17 Aug 2026 15:57:16 +0000</pubDate>
     </item>
     <item>
@@ -1224,7 +1021,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-824</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Mon, 17 Aug 2026 18:01:58 +0000</pubDate>
     </item>
     <item>
@@ -1234,7 +1031,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-825</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Tue, 18 Aug 2026 13:04:57 +0000</pubDate>
     </item>
     <item>
@@ -1244,7 +1041,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-826</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Tue, 18 Aug 2026 13:38:16 +0000</pubDate>
     </item>
     <item>
@@ -1254,7 +1051,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mattermost-security-advisory-av26-828</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.53</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Tue, 18 Aug 2026 14:14:17 +0000</pubDate>
     </item>
     <item>
@@ -1264,7 +1061,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-august-2026-monthly-rollup-av26-804</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Tue, 18 Aug 2026 17:53:03 +0000</pubDate>
     </item>
     <item>
@@ -1274,7 +1071,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Tue, 18 Aug 2026 18:01:05 +0000</pubDate>
     </item>
     <item>
@@ -1284,7 +1081,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-823</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Tue, 18 Aug 2026 18:26:40 +0000</pubDate>
     </item>
     <item>
@@ -1294,7 +1091,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-829</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Wed, 19 Aug 2026 12:49:25 +0000</pubDate>
     </item>
     <item>
@@ -1304,7 +1101,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nvidia-security-advisory-av26-830</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Wed, 19 Aug 2026 17:03:25 +0000</pubDate>
     </item>
     <item>
@@ -1314,7 +1111,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-831</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Wed, 19 Aug 2026 18:24:05 +0000</pubDate>
     </item>
     <item>
@@ -1324,7 +1121,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mlflow-security-advisory-av26-832</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Wed, 19 Aug 2026 18:28:55 +0000</pubDate>
     </item>
     <item>
@@ -1334,7 +1131,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-833</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.06</comments>
+      <comments>Score: 9.04</comments>
       <pubDate>Wed, 19 Aug 2026 18:38:33 +0000</pubDate>
     </item>
     <item>
@@ -1344,7 +1141,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-834</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Thu, 20 Aug 2026 13:22:00 +0000</pubDate>
     </item>
     <item>
@@ -1354,7 +1151,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trueconf-security-advisory-av26-835</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.67</comments>
+      <comments>Score: 9.64</comments>
       <pubDate>Thu, 20 Aug 2026 19:35:16 +0000</pubDate>
     </item>
     <item>
@@ -1364,7 +1161,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-836</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.67</comments>
+      <comments>Score: 9.65</comments>
       <pubDate>Thu, 20 Aug 2026 19:42:21 +0000</pubDate>
     </item>
     <item>
@@ -1374,7 +1171,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-837</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.65</comments>
       <pubDate>Thu, 20 Aug 2026 19:53:15 +0000</pubDate>
     </item>
     <item>
@@ -1384,7 +1181,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-838</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.20</comments>
+      <comments>Score: 10.17</comments>
       <pubDate>Fri, 21 Aug 2026 13:08:58 +0000</pubDate>
     </item>
     <item>
@@ -1394,7 +1191,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-839</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.22</comments>
+      <comments>Score: 10.19</comments>
       <pubDate>Fri, 21 Aug 2026 13:32:22 +0000</pubDate>
     </item>
     <item>
@@ -1404,7 +1201,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-840</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.26</comments>
+      <comments>Score: 10.23</comments>
       <pubDate>Fri, 21 Aug 2026 14:52:28 +0000</pubDate>
     </item>
     <item>
@@ -1414,7 +1211,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av26-816</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.41</comments>
+      <comments>Score: 10.38</comments>
       <pubDate>Fri, 21 Aug 2026 19:11:47 +0000</pubDate>
     </item>
     <item>
@@ -1424,7 +1221,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-security-advisory-av26-841</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.43</comments>
+      <comments>Score: 10.40</comments>
       <pubDate>Fri, 21 Aug 2026 19:41:02 +0000</pubDate>
     </item>
     <item>
@@ -1434,7 +1231,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-842</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.47</comments>
+      <comments>Score: 10.44</comments>
       <pubDate>Fri, 21 Aug 2026 20:52:54 +0000</pubDate>
     </item>
     <item>
@@ -1444,7 +1241,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-827</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.48</comments>
+      <comments>Score: 10.45</comments>
       <pubDate>Fri, 21 Aug 2026 21:04:28 +0000</pubDate>
     </item>
   </channel>
