@@ -8,200 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Aug 2026 13:57:46 +0000</lastBuildDate>
-    <item>
-      <title>Microsoft warns patch window is collapsing, urges shift to network-level containment</title>
-      <link>https://www.csoonline.com/article/4214135/microsoft-warns-patch-window-is-collapsing-urges-shift-to-network-level-containment.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Microsoft is warning that the window for patching vulnerabilities is rapidly shrinking, as attackers move from disclosure to exploitation faster than enterprises can safely deploy fixes, and is urging organizations to adopt network-level controls to limit exposure during that gap.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In a &lt;a href="https://azure.microsoft.com/en-us/blog/the-patch-window-is-collapsing-why-security-needs-a-new-control-plane/" rel="noreferrer noopener" target="_blank"&gt;blog post&lt;/a&gt;, Igor Sakhnov, corporate vice president and general manager for Azure Networking at Microsoft, said the traditional model of vulnerability management “increasingly reflects a world that no longer exists,” as modern attack timelines compress while enterprise processes remain unchanged.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“When a vulnerability was disclosed, organizations had time to understand the issue, assess affected systems, test patches, coordinate change windows, and deploy fixes before widespread exploitation occurred,” Sakhnov wrote. “Today that timeline is rapidly shrinking.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="attack-timelines-compress-as-patching-remains-complex"&gt;Attack timelines compress as patching remains complex&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Microsoft said vulnerabilities are now “more visible, more widely distributed, and more rapidly weaponized than ever before,” while enterprise environments have grown more complex, spanning hybrid and multicloud infrastructure.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Modern attack campaigns operate at internet scale. Security research, public disclosures, proof-of-concept exploits, and threat intelligence circulate globally within hours,” Sakhnov wrote, adding that “Meanwhile, the operational realities of enterprise environments have not changed.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This mismatch creates what Microsoft described as “one of the most dangerous periods in modern cybersecurity: the window between awareness and remediation.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Shriya Mehrotra, director analyst at Gartner, said this compression is already visible in certain environments.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Yes, particularly for high-risk, internet-facing systems. Attackers can exploit critical vulnerabilities within hours, while many enterprises still require weeks to test and deploy patches,” Mehrotra said, adding that the dynamic “does not apply equally to every vulnerability or every organization.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Microsoft said advances in AI and the rapid spread of exploit information are further accelerating the time from disclosure to attack.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“As these capabilities become more accessible, the timeline between disclosure and exploitation continues to compress,” Sakhnov wrote, describing the result as a “structural imbalance” between attackers and defenders.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="network-level-controls-as-a-control-plane"&gt;Network-level controls as a control plane&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;To address this gap, Microsoft is proposing a shift toward what it describes as a new security “control plane” centered on the network.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“When a workload cannot immediately defend itself, another layer must help provide protection,” Sakhnov wrote, adding that organizations are “increasingly looking to the network” as that layer.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Unlike endpoint-based controls, network-level protections “operate around workloads rather than inside them,” allowing defenses to be applied without waiting for patches to be deployed or applications to be modified.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The objective is not to avoid patching,” Sakhnov wrote. “The objective is to create a meaningful layer of defense during the period when patching has not yet been completed.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Mehrotra said the approach reflects a continuation of existing security practices rather than a complete departure.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Security teams should prioritize vulnerabilities that are actively exploited and externally exposed, then use segmentation, traffic controls, WAF/IPS policies, or temporary isolation until patches can be deployed safely,” she said. “While the control plane advances automation, it is largely an evolution of established segmentation, compensating-control, and Zero Trust approaches.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="practical-challenges-in-real-world-environments"&gt;Practical challenges in real-world environments&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;While the model emphasizes faster, network-level containment, analysts said implementation remains uneven across enterprises.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Mehrotra noted that the approach is more feasible in mature environments.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“This model is practical for mature cloud environments, but many enterprises still face challenges implementing it consistently,” she said. “Effective real-time containment depends on accurate asset inventories, exposure mapping, traffic visibility, application context, and centralized policy enforcement.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Bhupendra Chopra, co-founder and CRO at Kanerika, said many organizations still lack the foundational visibility needed to make such a model work.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Realistically, not yet,” Chopra said. “Most large enterprises don’t have one accurate view of their own systems. Asset records sit in different tools that don’t talk to each other, and ownership of a given application changes hands without anyone updating who’s responsible for it.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="limits-of-containment-before-patching"&gt;Limits of containment before patching&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Microsoft said the goal of the control plane is to reduce exposure during the period between disclosure and remediation, not to replace patching.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“In this new reality, organizations cannot rely on patching alone,” Sakhnov wrote, adding that security strategies must combine “strong patch management practices with compensating controls capable of responding at machine speed.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Analysts said relying on containment introduces its own risks if not managed carefully.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Network-based containment can miss unmanaged, encrypted, identity-based, or alternative attack paths,” Mehrotra said, adding that overly broad controls can disrupt legitimate business services. “Organizations should view containment as a way to reduce immediate exposure and buy time, not as a replacement for permanent patching.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Chopra said there is also a risk that temporary controls become permanent.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“A network rule blocks a risky path, nobody circles back to patch the underlying system, and eighteen months later that workaround is its own liability nobody remembers approving,” he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The shift outlined by Microsoft places new emphasis on managing risk during the period when vulnerabilities are known but not yet fixed. “The future of cybersecurity will depend on an organization’s ability to reduce risk during the time between disclosure and remediation,” Sakhnov wrote.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4214135/microsoft-warns-patch-window-is-collapsing-urges-shift-to-network-level-containment.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
-      <pubDate>Wed, 26 Aug 2026 11:07:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>Atlassian security advisory (AV26-829)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-829</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-829</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
-      <pubDate>Wed, 19 Aug 2026 12:49:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>NVIDIA security advisory (AV26-830)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/nvidia-security-advisory-av26-830</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nvidia-security-advisory-av26-830</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
-      <pubDate>Wed, 19 Aug 2026 17:03:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Oracle Corporation security advisory (AV26-831)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-831</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-831</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
-      <pubDate>Wed, 19 Aug 2026 18:24:05 +0000</pubDate>
-    </item>
-    <item>
-      <title>MLflow security advisory (AV26-832)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mlflow-security-advisory-av26-832</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mlflow-security-advisory-av26-832</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
-      <pubDate>Wed, 19 Aug 2026 18:28:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>Citrix security advisory (AV26-833)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-833</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-833</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
-      <pubDate>Wed, 19 Aug 2026 18:38:33 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 28 Aug 2026 23:30:34 +0000</lastBuildDate>
     <item>
       <title>Growing number of data requests and complex legal landscape among key challenges for accessing electronic evidence</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/growing-number-of-data-requests-and-complex-legal-landscape-among-key-challenges-for-accessing-electronic-evidence</link>
@@ -210,17 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 28 Aug 2026 11:57:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>78 arrests in bust of major Western Mediterranean smuggling network in Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</link>
-      <description>The operation, conducted under a newly established Europol Taskforce within Europol’s European Centre Against Migrant Smuggling, brought together officers from the French National Police (Police aux Frontières/OLTIM), and the Spanish National Police (Comisaría General de Extranjería y Fronteras/UCRIF) and Guardia Civil. The case was also supported by the Portuguese Judicial Police (Policía Judiciaria) and the Polish Border Guard (BG).Strongly involved...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 28 Aug 2026 11:57:46 +0000</pubDate>
+      <pubDate>Fri, 28 Aug 2026 21:30:34 +0000</pubDate>
     </item>
     <item>
       <title>Museum heists turn violent: new Europol report on cultural property theft tactics</title>
@@ -230,17 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 28 Aug 2026 11:57:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</link>
-      <description>The new arrangement replaces the agreement signed in 2015 and reflects the significantly expanded mandates that both agencies have received in recent years. It establishes an updated framework for cooperation enhancing the secure exchange of information, including for operational purposes, enabling Europol and Frontex to provide even more effective support to EU Member States.Jürgen EbnerActing Executive Director of EuropolCriminal networks...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 28 Aug 2026 11:57:46 +0000</pubDate>
+      <pubDate>Fri, 28 Aug 2026 21:30:34 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports operation against amphetamine producers</title>
@@ -250,47 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 28 Aug 2026 11:57:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</link>
-      <description>An estimated 4 340 URLs related to nihilistic violent extremism were referred during the initiative organised by Europol’s EU Internet Referral Unit - EU IRU and the Spanish Intelligence Centre against Terrorism and Organised Crime (CITCO). This successful action complements the efforts undertaken within Project COMPASS, coordinated by Europol’s European Counter Terrorism Centre, which unites law enforcement authorities from EU...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 28 Aug 2026 11:57:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Season 4 of The Europol Podcast available now</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</link>
-      <description>The Europol Podcast is the official podcast of the EU’s agency for law enforcement cooperation. This season, we spoke to our Europol experts on the emerging threats and key developments in the field of cybercrime. We explored:How cybercrime enablers are facilitating crimeHow CSAM offenders are adapting to new technologyHow ransomware is evolvingHow online fraud schemes are becoming a growing threatBonus...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 28 Aug 2026 11:57:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</link>
-      <description>This follows several years of intensive and extensive investigations led by the German Federal Police under the direction of three Bavarian Public Prosecutors’ Offices. The action day, carried out on 5 August 2026, brought together authorities from Germany and Serbia under the framework of an Operational Taskforce coordinated by Europol. Investigators targeted senior members of two interconnected Syrian criminal networks...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 28 Aug 2026 11:57:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</link>
-      <description>The action day led to:5 arrests (1 High Value Target, 2 police officers and 2 associates)5 locations searched;Seizures include: 3 vehicles used for migrant smuggling activities, firearms and ammunitions, a radio station, mobile devices and cash (EUR 5 700 and RSD 40 000) About EUR 1 300 per person to cross SerbiaActive since 2025, the criminal network is suspected of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Fri, 28 Aug 2026 11:57:46 +0000</pubDate>
+      <pubDate>Fri, 28 Aug 2026 21:30:34 +0000</pubDate>
     </item>
     <item>
       <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
@@ -300,17 +47,67 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Fri, 28 Aug 2026 11:57:46 +0000</pubDate>
+      <pubDate>Fri, 28 Aug 2026 21:30:34 +0000</pubDate>
     </item>
     <item>
-      <title>Cisco security advisory (AV26-834)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-834</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-834</guid>
+      <title>Season 4 of The Europol Podcast available now</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</link>
+      <description>The Europol Podcast is the official podcast of the EU’s agency for law enforcement cooperation. This season, we spoke to our Europol experts on the emerging threats and key developments in the field of cybercrime. We explored:How cybercrime enablers are facilitating crimeHow CSAM offenders are adapting to new technologyHow ransomware is evolvingHow online fraud schemes are becoming a growing threatBonus...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/season-4-of-europol-podcast-available-now</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
-      <pubDate>Thu, 20 Aug 2026 13:22:00 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 28 Aug 2026 21:30:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>78 arrests in bust of major Western Mediterranean smuggling network in Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</link>
+      <description>The operation, conducted under a newly established Europol Taskforce within Europol’s European Centre Against Migrant Smuggling, brought together officers from the French National Police (Police aux Frontières/OLTIM), and the Spanish National Police (Comisaría General de Extranjería y Fronteras/UCRIF) and Guardia Civil. The case was also supported by the Portuguese Judicial Police (Policía Judiciaria) and the Polish Border Guard (BG).Strongly involved...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 28 Aug 2026 21:30:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</link>
+      <description>The action day led to:5 arrests (1 High Value Target, 2 police officers and 2 associates)5 locations searched;Seizures include: 3 vehicles used for migrant smuggling activities, firearms and ammunitions, a radio station, mobile devices and cash (EUR 5 700 and RSD 40 000) About EUR 1 300 per person to cross SerbiaActive since 2025, the criminal network is suspected of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 28 Aug 2026 21:30:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</link>
+      <description>The new arrangement replaces the agreement signed in 2015 and reflects the significantly expanded mandates that both agencies have received in recent years. It establishes an updated framework for cooperation enhancing the secure exchange of information, including for operational purposes, enabling Europol and Frontex to provide even more effective support to EU Member States.Jürgen EbnerActing Executive Director of EuropolCriminal networks...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-and-frontex-strengthen-cooperation-new-working-arrangement</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 28 Aug 2026 21:30:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</link>
+      <description>An estimated 4 340 URLs related to nihilistic violent extremism were referred during the initiative organised by Europol’s EU Internet Referral Unit - EU IRU and the Spanish Intelligence Centre against Terrorism and Organised Crime (CITCO). This successful action complements the efforts undertaken within Project COMPASS, coordinated by Europol’s European Counter Terrorism Centre, which unites law enforcement authorities from EU...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-led-action-against-nihilistic-violent-extremist-network-com</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 28 Aug 2026 21:30:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</link>
+      <description>This follows several years of intensive and extensive investigations led by the German Federal Police under the direction of three Bavarian Public Prosecutors’ Offices. The action day, carried out on 5 August 2026, brought together authorities from Germany and Serbia under the framework of an Operational Taskforce coordinated by Europol. Investigators targeted senior members of two interconnected Syrian criminal networks...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Fri, 28 Aug 2026 21:30:34 +0000</pubDate>
     </item>
     <item>
       <title>TrueConf security advisory (AV26-835)</title>
@@ -319,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trueconf-security-advisory-av26-835</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Thu, 20 Aug 2026 19:35:16 +0000</pubDate>
     </item>
     <item>
@@ -329,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-836</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Thu, 20 Aug 2026 19:42:21 +0000</pubDate>
     </item>
     <item>
@@ -339,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-837</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Thu, 20 Aug 2026 19:53:15 +0000</pubDate>
     </item>
     <item>
@@ -349,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-838</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Fri, 21 Aug 2026 13:08:58 +0000</pubDate>
     </item>
     <item>
@@ -359,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-839</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.63</comments>
       <pubDate>Fri, 21 Aug 2026 13:32:22 +0000</pubDate>
     </item>
     <item>
@@ -369,7 +166,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-840</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.64</comments>
       <pubDate>Fri, 21 Aug 2026 14:52:28 +0000</pubDate>
     </item>
     <item>
@@ -379,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av26-816</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.73</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Fri, 21 Aug 2026 19:11:47 +0000</pubDate>
     </item>
     <item>
@@ -389,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-security-advisory-av26-841</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Fri, 21 Aug 2026 19:41:02 +0000</pubDate>
     </item>
     <item>
@@ -399,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-842</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Fri, 21 Aug 2026 20:52:54 +0000</pubDate>
     </item>
     <item>
@@ -409,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-827</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Fri, 21 Aug 2026 21:04:28 +0000</pubDate>
     </item>
     <item>
@@ -419,7 +216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-843</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Mon, 24 Aug 2026 13:12:11 +0000</pubDate>
     </item>
     <item>
@@ -429,7 +226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-january-2026-quarterly-rollup-av26-042</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Mon, 24 Aug 2026 18:42:49 +0000</pubDate>
     </item>
     <item>
@@ -439,7 +236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.55</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Mon, 24 Aug 2026 19:03:22 +0000</pubDate>
     </item>
     <item>
@@ -598,7 +395,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4215083/ctem-redefines-the-approach-to-cybersecurity-in-organizations.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Fri, 28 Aug 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -719,7 +516,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4214953/beyond-compliance-designing-systems-that-earn-customer-trust.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.80</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Fri, 28 Aug 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -830,7 +627,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4214961/the-first-24-hours-of-an-ai-agent-security-incident.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Fri, 28 Aug 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1021,7 +818,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4214535/critical-infrastructures-long-undefended-tail-exposed-by-uk-energy-attack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Thu, 27 Aug 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -1031,7 +828,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitea-security-advisory-av26-845</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.98</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Tue, 25 Aug 2026 18:29:34 +0000</pubDate>
     </item>
     <item>
@@ -1041,7 +838,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-846</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.80</comments>
       <pubDate>Tue, 25 Aug 2026 18:55:13 +0000</pubDate>
     </item>
     <item>
@@ -1051,7 +848,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-847</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Tue, 25 Aug 2026 19:09:53 +0000</pubDate>
     </item>
     <item>
@@ -1065,8 +862,151 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Thu, 27 Aug 2026 11:04:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>ServiceNow patches three maximum severity flaws that could put enterprise data at risk</title>
+      <link>https://www.csoonline.com/article/4215430/servicenow-patches-three-maximum-severity-flaws-that-could-put-enterprise-data-at-risk.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Code injection and SQL injection attacks have been around for decades, and they are still tried-and-true ways for attackers to compromise systems.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;ServiceNow’s latest trio of maximum severity flaws shows that even AI-era platforms remain vulnerable to these techniques: The software provider has released patches for three bugs in its ServiceNow AI Platform that could be exploited via low-complexity code injection, SQL injection, and privilege escalation attacks, with no user interaction required.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Although its cloud-based instances have already been updated, ServiceNow advises self-hosted customers to upgrade or patch immediately.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“You never want to see a 10/10 critical,” said &lt;a href="https://www.beauceronsecurity.com/blog/tag/David+Shipley" rel="noreferrer noopener" target="_blank"&gt;David Shipley&lt;/a&gt; of Beauceron Security. “And you really don’t want to see three drop in row unless it’s an Olympic judging panel.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="gives-attackers-the-ability-to-access-modify-and-create-data"&gt;Gives attackers the ability to access, modify and create data&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The ServiceNow AI Platform, formerly the Now Platform, combines AI and autonomous agents, data, and security and governance controls across enterprise IT, employee, and customer relationship management (CRM) workflows. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;That makes it a juicy target for attackers.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The three critical vulnerabilities now being patched are tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-18885" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-18885&lt;/a&gt;, &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-18886" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-18886&lt;/a&gt;, and &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-74820" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-74820&lt;/a&gt;. CVE-2026-18885 would allow unauthenticated users to execute arbitrary code and access and/or modify instance data. CVE-2026-18886 could give malicious actors the ability to create or change instance data and escalate privileges, and the CVE-2026-74820 vulnerability could allow attackers to execute arbitrary SQL statements against an instance’s underlying database to alter data.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Along with these, ServiceNow also patched the high-severity &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-6876" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-6876&lt;/a&gt;, a sandbox escape vulnerability impacting ServiceNow AI. This vulnerability could allow attackers with basic privileges to perform remote code execution (RCE).&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;ServiceNow said in &lt;a href="https://support.servicenow.com/kb?id=kb_article_view&amp;amp;sysparm_article=KB3152242" rel="noreferrer noopener" target="_blank"&gt;its advisory&lt;/a&gt; that it was “not currently aware of exploitation” of any of the flaws. The company has released patches for all four, for impacted Xanadu, Yokohama, and Zurich versions of the platform.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Recently, ServiceNow has also issued patches for several other critical vulnerabilities, including June’s &lt;a href="https://www.csoonline.com/article/4184082/servicenow-fixes-api-issue-after-reports-of-suspicious-tenant-activity.html" target="_blank"&gt;API issue&lt;/a&gt; and last month’s  &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-6875" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-6875&lt;/a&gt;, a pre-authentication &lt;a href="https://www.csoonline.com/article/4198993/servicenows-sandbox-escape-rce-hole-now-exploited-in-the-wild.html" target="_blank"&gt;sandbox escape&lt;/a&gt; in its AI Platform. Like the vulnerabilities disclosed this week, it could allow unauthenticated users to execute code. And earlier this month, independent research also identified &lt;a href="https://www.csoonline.com/article/4209788/salesforce-servicenow-data-targeted-in-city-forum-attacks.html" target="_blank"&gt;attacks exposing company data&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="concerning-severity-and-accessibility"&gt;Concerning severity and accessibility&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;What makes the current vulnerabilities particularly serious is the combination of severity and accessibility, noted &lt;a href="https://www.sans.org/profiles/ensar-seker" rel="noreferrer noopener" target="_blank"&gt;Ensar Seker&lt;/a&gt;, CISO at SOCRadar; exploitation can potentially occur without authentication.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“That means an attacker may not need to steal credentials or compromise an employee before attempting to exploit the platform,” Seker said, noting that CVE-2026-18885 is especially concerning because it could support arbitrary code execution through the GraphQL Composite Data API. This means that, in a successful attack, “code injection can effectively turn a trusted enterprise application into an attacker-controlled execution environment,” he pointed out.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;CVE-2026-74820 presents a different, but equally serious risk, he said. With SQL injection, an attacker can interact with an underlying database in unintended ways, potentially reading, manipulating, or destroying data.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In general, code injection and SQL injection attacks are dangerous because they break fundamental security boundaries between data supplied by a user and instructions executed by a system, Seker explained. Once attacker-controlled input is interpreted as code or a database command, application-level access controls may no longer be adequate.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Then, he noted, there’s the role ServiceNow plays inside enterprises that use it across their operations, assets, approvals, and integrations. Successful attackers can not only gain access to sensitive operational data, but move laterally and abuse trusted customer and partner workflows and integrations.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Compromising that type of platform can therefore be much more significant than compromising a standalone application,” he said. Attackers targeting platforms with extensive integrations may be more interested in the credentials, tokens, and systems connected to them, rather than just the platform itself.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="patch-but-also-verify-external-integrations"&gt;Patch, but also verify external integrations&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The immediate priority for enterprises is to determine which ServiceNow instances and versions they operate, and confirm they have been patched, Seker advised. Security teams should also inventory ServiceNow integrations, APIs, and highly privileged service accounts.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Further, he said, teams should review historical telemetry for indicators of attempted exploitation, like unusual requests involving affected APIs and upload functionality. They should also look for unexpected administrative or privilege changes, unexplained creation or modification of records, anomalous service-account behavior, and unusual access to sensitive ServiceNow data. If suspicious activity is flagged, look for downstream systems connected to ServiceNow rather than treating it as an isolated application.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Overall, Seker noted, AI changes the economics of vulnerability exploitation more than it changes the underlying vulnerability. Attackers are using AI to analyze disclosures, generate and modify exploit attempts, enumerate exposed services, adapt payloads to different environments, and automate post-exploitation activity.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="work-to-reduce-time-to-remediation"&gt;Work to reduce time to remediation&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The period between public disclosure and widespread exploitation can therefore become increasingly compressed,” Seker said. This means organizations should work to reduce time between disclosure, exposure assessment, and remediation.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;This requires strong API authentication and authorization, strict input validation, parameterized database queries, least-privilege access, integration segmentation, application and API-layer monitoring, and controls that detect anomalous behavior, he emphasized. Internet-facing interfaces should also be minimized.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;But injection vulnerabilities are not new, he observed. Established controls like secure coding and static and dynamic API and adversarial testing prior to production can help eliminate weaknesses.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Also assume that AI will continue to automate threat actors’ vulnerability discovery and exploitation, he added. By that token, defenders should implement similar automation around asset discovery, exposure validation, and remediation.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In addition, security teams should not evaluate SaaS and enterprise platforms solely on their traditional vulnerability-management processes. Risk should be assessed on their blast radius: The data they contain, the systems, credentials, and APIs they access, and what an attacker could do, Seker said.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="accessibility-no-interaction-required"&gt;Accessibility, no interaction required&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Beauceron’s Shipley pointed out that, while these vulnerability disclosures are critical for builders, they present a conundrum: Attackers now know about them, too. Within 15 minutes of ServiceNow’s publication, if not sooner, they were likely exploiting the flaws.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;While there was no previous evidence of exploit attempts, “you can take it to the bank that these are getting worked now,” he said. Unauthenticated access and network accessibility can create a “sweet exploit chain,” and low complexity exploits with no interaction required “make security professionals’ blood run cold.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“SQL injection is part of the OG group of web vulnerabilities that just keep on delivering,” he pointed out. Billions of lines of code still contain basic failings like these, revealing a lack of incentive on the part of software makers to ship secure code. “Until we change that,” he said, “the so-called Vulnpocalypse is here to stay.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4215430/servicenow-patches-three-maximum-severity-flaws-that-could-put-enterprise-data-at-risk.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.98</comments>
+      <pubDate>Fri, 28 Aug 2026 22:59:31 +0000</pubDate>
     </item>
     <item>
       <title>Adobe security advisory (AV26-848)</title>
@@ -1075,7 +1015,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-848</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.20</comments>
       <pubDate>Wed, 26 Aug 2026 13:56:44 +0000</pubDate>
     </item>
     <item>
@@ -1085,7 +1025,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nvidia-security-advisory-av26-849</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.43</comments>
+      <comments>Score: 9.20</comments>
       <pubDate>Wed, 26 Aug 2026 14:17:01 +0000</pubDate>
     </item>
     <item>
@@ -1095,7 +1035,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-850</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.51</comments>
+      <comments>Score: 9.27</comments>
       <pubDate>Wed, 26 Aug 2026 17:11:47 +0000</pubDate>
     </item>
     <item>
@@ -1105,7 +1045,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nextjs-security-advisory-av26-851</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.51</comments>
+      <comments>Score: 9.27</comments>
       <pubDate>Wed, 26 Aug 2026 17:13:59 +0000</pubDate>
     </item>
     <item>
@@ -1115,7 +1055,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-852</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.52</comments>
+      <comments>Score: 9.28</comments>
       <pubDate>Wed, 26 Aug 2026 17:33:37 +0000</pubDate>
     </item>
     <item>
@@ -1125,7 +1065,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-645</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.54</comments>
+      <comments>Score: 9.30</comments>
       <pubDate>Wed, 26 Aug 2026 18:27:03 +0000</pubDate>
     </item>
     <item>
@@ -1135,7 +1075,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-853</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.08</comments>
+      <comments>Score: 9.78</comments>
       <pubDate>Thu, 27 Aug 2026 12:44:22 +0000</pubDate>
     </item>
     <item>
@@ -1145,7 +1085,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-854</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.08</comments>
+      <comments>Score: 9.79</comments>
       <pubDate>Thu, 27 Aug 2026 12:57:33 +0000</pubDate>
     </item>
     <item>
@@ -1155,7 +1095,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-855</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.12</comments>
+      <comments>Score: 9.82</comments>
       <pubDate>Thu, 27 Aug 2026 14:03:14 +0000</pubDate>
     </item>
     <item>
@@ -1165,7 +1105,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-august-2026-monthly-rollup-av26-804</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.23</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Thu, 27 Aug 2026 17:23:07 +0000</pubDate>
     </item>
     <item>
@@ -1175,7 +1115,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-national-instruments-security-advisory-av26-856</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.93</comments>
+      <comments>Score: 10.56</comments>
       <pubDate>Fri, 28 Aug 2026 12:16:59 +0000</pubDate>
     </item>
     <item>
@@ -1185,8 +1125,67 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-857</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.99</comments>
+      <comments>Score: 10.61</comments>
       <pubDate>Fri, 28 Aug 2026 13:43:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>Redis security advisory (AV26-859)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-859</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-859</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.64</comments>
+      <pubDate>Fri, 28 Aug 2026 14:34:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grafana security advisory (AV26-860)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av26-860</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av26-860</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.66</comments>
+      <pubDate>Fri, 28 Aug 2026 14:58:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>cPanel security advisory (AV26-861)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-861</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-861</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.67</comments>
+      <pubDate>Fri, 28 Aug 2026 15:10:37 +0000</pubDate>
+    </item>
+    <item>
+      <title>PaperCut security advisory (AV26-858) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/papercut-security-advisory-av26-858</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/papercut-security-advisory-av26-858</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.83</comments>
+      <pubDate>Fri, 28 Aug 2026 19:24:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Virtual Event] Building a Secure AI Strategy for the Enterprise</title>
+      <link>https://www.darkreading.com/events/virtual-event-building-secure-ai-strategy-enterprise-2026</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://www.darkreading.com/events/virtual-event-building-secure-ai-strategy-enterprise-2026</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 103536.86</comments>
+      <pubDate>Thu, 08 Oct 2026 15:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Virtual Event] What Every Enterprise Should Know About Securing Cloud Assets in the Age of AI</title>
+      <link>https://www.darkreading.com/events/virtual-event-what-every-enterprise-know-securing-cloud-2026</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://www.darkreading.com/events/virtual-event-what-every-enterprise-know-securing-cloud-2026</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 660211426.75</comments>
+      <pubDate>Thu, 12 Nov 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
