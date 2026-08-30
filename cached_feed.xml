@@ -8,238 +8,26 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Aug 2026 15:13:38 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 19:08:15 +0000</lastBuildDate>
     <item>
-      <title>Beyond compliance: Designing systems that earn customer trust</title>
-      <link>https://www.csoonline.com/article/4214953/beyond-compliance-designing-systems-that-earn-customer-trust.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Over the years, I have learned that customer trust is not built by compliance alone. It comes from how systems actually handle data every day. In practice, I think five areas matter most&lt;/p&gt;
-
-
-
-&lt;ol class="wp-block-list"&gt;
-&lt;li&gt;Making customer intent consistent across systems&lt;/li&gt;
-
-
-
-&lt;li&gt;Treating privacy as a distributed-systems problem&lt;/li&gt;
-
-
-
-&lt;li&gt;Reducing unnecessary data&lt;/li&gt;
-
-
-
-&lt;li&gt;Designing for failure&lt;/li&gt;
-
-
-
-&lt;li&gt;Understanding how AI is expanding the trust boundary&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I will go into each of these below and share why they matter in real systems with some of my experiences. For CISOs and other security leaders, these ideas can also help turn broad privacy and trust goals into concrete priorities for architecture, governance, data protection and operational risk.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I learned this while working on large-scale digital commerce and personalization systems. A customer action that looks simple on the surface can involve many systems behind the scenes. A preference may be stored in one place, used by several services, cached for performance and also influence analytics or machine-learning systems. That experience taught me that privacy is not just about having the right policy or control in one system. The real challenge is making sure the customer’s choice is respected everywhere that data is used.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The first area is &lt;strong&gt;customer intent&lt;/strong&gt;. If a customer changes a privacy setting, opts out of personalization or asks for certain data to be deleted, that choice should not stop at the system where it was first recorded. In practice, the same data may already be used by other services, caches, event pipelines, analytics systems or machine-learning workflows. The challenge is making sure the customer’s latest choice is understood and respected across all of them, even when those systems do not update at the same time.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is where privacy becomes a &lt;strong&gt;distributed-systems problem&lt;/strong&gt;, and freshness of data becomes just as important as correctness. A preference may be updated correctly in the source system, but another service may still have an older value in a cache, an event may already be in transit or a batch process may be working from yesterday’s data. I learned from working on personalization and recommendation systems that stale information can be completely accurate and still lead to the wrong outcome because the customer’s intent has changed. Privacy works the same way, but with higher consequences. Each individual system may be functioning as designed, while the overall experience no longer reflects what the customer asked for. For security leaders, that means a privacy control should not be judged only by whether it exists, but also by how quickly and reliably the latest customer choice reaches every place where that data is used.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Regulation has pushed engineering in the right direction.&lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679"&gt; Article 25 of the GDPR&lt;/a&gt; established the idea of data protection by design and by default, while the&lt;a href="https://www.nist.gov/privacy-framework"&gt; NIST Privacy Framework&lt;/a&gt; treats privacy as a risk-management problem that should be considered while systems are being built. I see both as important shifts because they move privacy closer to architecture and engineering decisions. But in practice, privacy programs can still gravitate toward proving that a control exists: Was consent captured? Who can access the data? Can we process deletion requests? Those questions matter, but they are still mostly about compliance. The harder question is whether the system continues to respect the customer’s intent after the data moves through multiple services, storage layers, pipelines and downstream consumers.While designing or reviewing a data flow, I find one question particularly useful, “If customer intent changes here, where can the old intent still survive?” It forces the discussion beyond whether a control exists and toward how the system actually behaves.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Trust breaks at system boundaries&lt;/h3&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A deletion request is a good example of where this gets complicated. To the customer, the action is simple: they ask for their data to be deleted. Behind the scenes, that information may exist in transactional storage, event streams, caches, analytical datasets, logs or derived data used by other systems. Some information may need to be deleted quickly, while other records may have legitimate security, fraud, financial or regulatory retention requirements. The goal is not necessarily to delete everything everywhere at the same moment. The important part is knowing where the data exists, why it is there, who owns it and what should happen after the customer makes the request. This is where a compliance requirement becomes an engineering and operational trust problem.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is also why I see data minimization as more than a privacy requirement. Every additional copy of customer data creates another place that has to be secured and eventually cleaned up. Over time, data that was collected for one reasonable purpose can become a dependency for analytics, experimentation or machine-learning systems and in most cases for heavy commerce and personalization focused system the likelihood of this is very high. Leading to teams managing a growing number of systems to understand the privacy and retention rules. For security leaders, &lt;strong&gt;reducing unnecessary data&lt;/strong&gt; can therefore reduce both privacy risk and operational complexity.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The&lt;a href="https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business?utm_source"&gt; &lt;/a&gt;&lt;a href="https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business?utm_source"&gt;Federal Trade Commission’s guidance for businesses&lt;/a&gt; makes a similar point: companies should collect only the information they need and keep it only as long as there is a legitimate business reason to do so. A useful question to translate it as an engineering question would be &lt;strong&gt;“Does this data earn the complexity that comes with keeping it?”&lt;/strong&gt; If the answer is yes, then the system should have clear ownership, access controls, retention rules and a defined purpose. If the answer is unclear, that is usually a signal to challenge why the data is being collected or retained in the first place a good push to either remove or follow minimum retention policy an internal information security team follows.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading"&gt;Privacy controls should be &lt;strong&gt;designed for failure&lt;/strong&gt;&lt;/h3&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Another lesson I learned from operating large-scale systems is that we should not design only for the happy path. In reliability engineering, we routinely ask what happens when a dependency times out, a message is delayed and/or a service becomes unavailable, similarly privacy controls should be reviewed. What happens if the system cannot determine the latest consent state? What happens if a deletion request succeeds in most systems but fails in one downstream service? What happens if an old event arrives after a customer has changed a preference? At scale, they become normal operating conditions, and security leaders need to know how the system is expected to behave when they occur.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The important part is to make that failure behavior intentional, like the safest choice may be to stop processing when the latest privacy state cannot be verified. We can see it as fraud prevention or security required on financial records where not every system needs the same rule. What matters is that the exception is understood and designed rather than discovered during an incident. For CISOs, this is where privacy moves from policy into operational risk where we should ask whether a control exists and know what the system will do when that control is unavailable or fails.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This also means privacy needs its own observability. We spend a lot of effort monitoring availability, latency and error rates, but I think privacy controls should have similar operational signals. How long does it take for a preference change to reach downstream systems? Where are deletion requests failing? Which systems are still depending on data that should have been retired? Without that visibility teams may know that a privacy control but still have very little confidence in how it is behaving in production. For CISOs, this is an important to understand privacy is not only be audited periodically, but also about measurable as part of day-to-day system health.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading"&gt;AI is widening the &lt;strong&gt;trust boundary&lt;/strong&gt;&lt;/h3&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I have seen this trust boundary grow over time. During the 2015-2020, personalization and recommendation systems became increasingly sophisticated by bringing together more customer signals to improve relevance and experience. With LLMs and now agentic systems, that boundary is expanding much faster. A traditional application may read from a known database or call a defined API. An AI system can retrieve information from documents, customer records, previous interactions or other tools, combine that information and increasingly take actions based on it. That makes the trust boundary ridiculously wid. For CISOs, engineers, auditing and security team the question is no longer only “Who can access this data?” it is more about “What information can this system retrieve, combine and act on?”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The scale of this shift is already visible.&lt;a href="https://www.cisco.com/c/dam/en_us/about/doing_business/trust-center/docs/cisco-privacy-benchmark-study-2026.pdf"&gt; &lt;/a&gt;&lt;a href="https://www.cisco.com/c/dam/en_us/about/doing_business/trust-center/docs/cisco-privacy-benchmark-study-2026.pdf"&gt;Cisco’s 2026 Data and Privacy Benchmark Study&lt;/a&gt; found that 90% of surveyed organizations had expanded their privacy programs because of AI, while 93% planned to invest more in privacy and data governance over the next two years. I see this as a sign that AI governance cannot be separated from data governance. Before security leaders think about model controls, they need to understand what data the AI system can reach, how that access is authorized and whether the same privacy rules continue to apply when information is retrieved, combined or used to take an action. The risk is beyond too much data, it’s also that customers may not understand how their information is being used once AI is involved. A support interaction, a document or a past transaction may have been collected for one purpose, but an AI system can make that information useful in a completely different context and a place where trust can erode quickly. For me the practical question is whether the customer’s original expectation still holds when data is reused by an AI system. If the answer is unclear, the architecture and governance model need more work before the feature scales.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Turning trust into a CISO priority&lt;/h3&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I think the practical takeaway is to make customer trust part of the system review process rather than a check only during compliance reviews. When reviewing a new data flow, AI capability or customer-facing feature, I would ask a few basic questions: What customer data is being used? Why is it needed? How fresh does the customer’s preference need to be? Where can that data travel or be copied? Is the data classified and annotated so downstream systems know how it should be handled? What happens when a privacy control fails? And can we observe whether the system is actually behaving the way we intended? One practical approach that I have seen work well in large distributed systems is attaching the right security and privacy metadata to the data itself. For example, classification can help identify sensitive data, retention metadata can define how long it should remain and routing policies can determine where that information is allowed to move. This becomes especially useful when the same data flows through many services because the control does not depend entirely on every downstream team remembering the original intent.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;These kinds of controls help turn a broad goal like “earn customer trust” into concrete engineering and information-security governance priorities. The harder work is making sure the system continues to respect customer intent as data moves, copied or is used in new ways. For security leaders the priority proving that the right controls exist while understanding how those controls behave in production and if the architecture can preserve customer intent through change, failure and increasingly complex AI-driven data flows, then compliance becomes part of a system customers can actually trust.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4214953/beyond-compliance-designing-systems-that-earn-customer-trust.html</guid>
+      <title>MLflow security advisory (AV26-832)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mlflow-security-advisory-av26-832</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mlflow-security-advisory-av26-832</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.27</comments>
-      <pubDate>Fri, 28 Aug 2026 09:00:00 +0000</pubDate>
+      <comments>Score: 7.25</comments>
+      <pubDate>Wed, 19 Aug 2026 18:28:55 +0000</pubDate>
     </item>
     <item>
-      <title>The first 24 hours of an AI agent security incident</title>
-      <link>https://www.csoonline.com/article/4214961/the-first-24-hours-of-an-ai-agent-security-incident.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Most of what I read on AI agent security follows the same shape: a taxonomy of risks, a list of governance principles and a call to “adopt responsible AI practices.” That’s useful for a board deck. It’s nearly useless at 2 a.m. when an autonomous agent with live credentials has just done something nobody authorized, and someone is asking me what happens next.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I don’t want to write another framework. I want to walk through what I would actually do, hour by hour, in the first day after discovering an AI agent has been hijacked, manipulated or has simply acted outside the bounds anyone intended for it.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-the-clock-runs-differently-for-agents"&gt;Why the clock runs differently for agents&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I built my early incident response instincts around a human attacker moving at human speed, or malware executing a fixed set of instructions. Every time I’ve walked through an agent incident since, I’ve had to unlearn part of that instinct, because agentic AI breaks both assumptions at once.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Anthropic’s own account of the &lt;a href="https://www.anthropic.com/news/disrupting-AI-espionage"&gt;GTG-1002 campaign&lt;/a&gt; is the clearest illustration I’ve come across. A Chinese state-sponsored group manipulated Claude Code into attempting infiltration against roughly 30 organizations, and the AI reportedly carried out most of the tactical work with minimal human involvement. When I first read that writeup, what stuck with me wasn’t the attribution, it was the tempo. That’s not a phishing email sitting in an inbox for a day before someone clicks it. That’s a compromise that scales itself while my team is still getting paged.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Months earlier, researchers at Aim Security disclosed EchoLeak, a &lt;a href="https://checkmarx.com/zero-post/echoleak-cve-2025-32711-show-us-that-ai-security-is-challenging/"&gt;zero-click prompt injection flaw&lt;/a&gt; in Microsoft 365 Copilot with a CVSS score of 9.3, the kind of severity rating that would normally have my team dropping everything. A single crafted email, ingested during routine summarization, was enough to trigger data exfiltration from OneDrive, SharePoint and Teams with no user interaction at all. No link to sandbox. No attachment to detonate. Just content the agent was designed to read, which is exactly the class of risk &lt;a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/"&gt;OWASP’s LLM Top 10&lt;/a&gt; now ranks as the number one threat facing these systems.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;And the blast radius problem isn’t hypothetical either. Obsidian Security’s &lt;a href="https://www.obsidiansecurity.com/blog/prompt-injection"&gt;analysis of the Salesloft-Drift OAuth compromise&lt;/a&gt; shows how a single compromised connected app cascaded into hundreds of downstream SaaS environments. I expect that pattern to get worse, not better, once agents are the ones holding the tokens and chaining tool calls across systems on our behalf.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;What these incidents share is a structural feature that’s rewired how I run the first day: the attacker may be a set of instructions embedded in a document, a poisoned tool response or a manipulated memory store, not a person sitting behind a keyboard. Containment means revoking an identity and severing tool access. It doesn’t mean isolating a host, at least not first, and I’ve had to correct colleagues mid-incident who instinctively reached for the network cable.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-hour-by-hour-playbook"&gt;The hour-by-hour playbook&lt;/h2&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="hour-0-recognize-what-i-am-actually-looking-at"&gt;Hour 0: Recognize what I am actually looking at&lt;/h3&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The clock starts at detection, and detection is often where I lose the most time. Agent incidents rarely trip the alerts my SOC is tuned for. I look for tool-call volume from a single agent identity that’s statistically abnormal, an agent acting outside its declared task scope (an email-summarization agent suddenly querying a file share) or outputs that reference instructions no human operator gave. My job at this point is triage, not diagnosis: is this one compromised session, a shared credential or a systemic prompt-injection vector sitting in a document that any agent might ingest?&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="hours-0-1-contain-by-identity-not-by-host"&gt;Hours 0-1: Contain by identity, not by host&lt;/h3&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is where I’ve seen traditional IR playbooks get it wrong most often for agents. Pulling a network cable does nothing if the damage already happened through an API call three systems away. I revoke or suspend the agent’s credentials, API keys and OAuth tokens immediately, the same way I would treat a compromised service account. I kill the active session if the orchestration layer supports it. I freeze, but don’t delete, the agent’s memory store and tool-call history, because I will need every bit of it later. And if the agent runs through a broker or gateway, I disable its registered tools there rather than chasing individual downstream systems one at a time.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="hours-1-4-scope-the-blast-radius"&gt;Hours 1-4: Scope the blast radius&lt;/h3&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Now I am answering what the agent actually touched. I pull the full tool-call log, every API invoked, every parameter passed, every response received, and I cross-reference it against the agent’s entitlements to see what it could reach versus what it did reach. I also check whether the agent’s own actions created new artifacts along the way: A scheduled task, a forwarding rule, a new API key, because autonomous agents are often better at persistence than the people who built them. If the entry vector looks like indirect prompt injection, I try to identify every other session that ingested the same poisoned content. This is rarely a single-victim event.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="hours-4-8-notify-before-i-am-certain"&gt;Hours 4-8: Notify before I am certain&lt;/h3&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Legal, privacy and executive stakeholders need a first briefing well before forensics is complete. I’ve learned that waiting for certainty is how AI incidents turn into disclosure failures. I give leadership three things: what the agent could access, what the evidence currently shows it did access and what’s still unknown. I loop in legal early if the agent touched regulated data. And I make an explicit call on whether other agents built from the same base configuration or tool integration need to be paused as a precaution, since a single vulnerable pattern can be replicated across an entire agent fleet before anyone notices.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="hours-8-16-reconstruct-the-decision-chain"&gt;Hours 8-16: Reconstruct the decision chain&lt;/h3&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is the forensics work I find genuinely different from a traditional breach. I’m not just rebuilding what happened on disk. I’m rebuilding why the model decided to do it. I walk the full prompt and response chain, including anything the agent retrieved before the anomalous action, and I try to find the specific instruction, visible or hidden, that redirected its behavior. I also check whether the agent’s own reasoning output shows it recognized the instruction as suspicious and proceeded anyway, which points to a guardrail gap, versus never flagging it at all, which points to a detection gap. The fix looks different depending on which one I find.&lt;/p&gt;
-
-
-
-&lt;h3 class="wp-block-heading" id="hours-16-24-decide-on-restoration-and-change-something-first"&gt;Hours 16-24: Decide on restoration, and change something first&lt;/h3&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I don’t restore an agent to its prior configuration by default. That’s how these incidents come back within a week. I patch the specific vector, sanitize the ingestion path, tighten the tool scope or add an approval gate for whatever action class was abused. I re-issue credentials with narrower entitlements than before, never identical ones. And I write the 24-hour incident summary while the timeline is still fresh, because it becomes the input for both the post-incident review and, often, a regulatory or customer notification.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-ive-learned-separates-recovery-from-repeat-incidents"&gt;What I’ve learned separates recovery from repeat incidents&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Risk frameworks tell us agents need least-privilege access and human oversight. I agree, and I’ve also found that’s not actionable at hour one when I am the one being paged. What I actually need in the room is operational sequencing: contain by identity before I contain by host, freeze evidence before I patch, notify before I am certain and never restore to the exact configuration that just failed. Every time I’ve watched a team handle an EchoLeak-class or GTG-1002-class incident well, it wasn’t because they had the best risk taxonomy on the wall. It was because they’d already rehearsed the first 24 hours before they needed them.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;That’s the piece I think our industry is still missing. We’ve spent two years writing agent governance principles. I’d rather spend the next year running tabletop exercises against the clock, because the next incident won’t wait for my policy to catch up.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4214961/the-first-24-hours-of-an-ai-agent-security-incident.html</guid>
+      <title>Citrix security advisory (AV26-833)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-833</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-833</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
-      <pubDate>Fri, 28 Aug 2026 10:00:00 +0000</pubDate>
+      <comments>Score: 7.25</comments>
+      <pubDate>Wed, 19 Aug 2026 18:38:33 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV26-834)</title>
@@ -248,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-834</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.32</comments>
+      <comments>Score: 7.31</comments>
       <pubDate>Thu, 20 Aug 2026 13:22:00 +0000</pubDate>
     </item>
     <item>
@@ -258,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/trueconf-security-advisory-av26-835</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 20 Aug 2026 19:35:16 +0000</pubDate>
     </item>
     <item>
@@ -268,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-836</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 20 Aug 2026 19:42:21 +0000</pubDate>
     </item>
     <item>
@@ -278,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-837</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.34</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 20 Aug 2026 19:53:15 +0000</pubDate>
     </item>
     <item>
@@ -288,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-838</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Fri, 21 Aug 2026 13:08:58 +0000</pubDate>
     </item>
     <item>
@@ -298,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-839</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.41</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Fri, 21 Aug 2026 13:32:22 +0000</pubDate>
     </item>
     <item>
@@ -308,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-840</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.42</comments>
+      <comments>Score: 7.40</comments>
       <pubDate>Fri, 21 Aug 2026 14:52:28 +0000</pubDate>
     </item>
     <item>
@@ -318,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av26-816</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 21 Aug 2026 19:11:47 +0000</pubDate>
     </item>
     <item>
@@ -328,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-cisa-security-advisory-av26-841</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.44</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Fri, 21 Aug 2026 19:41:02 +0000</pubDate>
     </item>
     <item>
@@ -338,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-842</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Fri, 21 Aug 2026 20:52:54 +0000</pubDate>
     </item>
     <item>
@@ -348,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-827</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
+      <comments>Score: 7.43</comments>
       <pubDate>Fri, 21 Aug 2026 21:04:28 +0000</pubDate>
     </item>
     <item>
@@ -359,47 +147,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 30 Aug 2026 13:13:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</link>
-      <description>This follows several years of intensive and extensive investigations led by the German Federal Police under the direction of three Bavarian Public Prosecutors’ Offices. The action day, carried out on 5 August 2026, brought together authorities from Germany and Serbia under the framework of an Operational Taskforce coordinated by Europol. Investigators targeted senior members of two interconnected Syrian criminal networks...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 30 Aug 2026 13:13:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>78 arrests in bust of major Western Mediterranean smuggling network in Spain</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</link>
-      <description>The operation, conducted under a newly established Europol Taskforce within Europol’s European Centre Against Migrant Smuggling, brought together officers from the French National Police (Police aux Frontières/OLTIM), and the Spanish National Police (Comisaría General de Extranjería y Fronteras/UCRIF) and Guardia Civil. The case was also supported by the Portuguese Judicial Police (Policía Judiciaria) and the Polish Border Guard (BG).Strongly involved...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 30 Aug 2026 13:13:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>Museum heists turn violent: new Europol report on cultural property theft tactics</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/museum-heists-turn-violent-new-europol-report-cultural-property-theft-tactics</link>
-      <description>The spotlight features some key findings:Increasing violence: Museum thefts are becoming more aggressive, with offenders using tools like sledgehammers, explosives, and firearms to breach premises and intimidate staff.Targeted high-value items: Thieves are increasingly focusing on precious metals, gemstones, and culturally significant artefacts, driven by high market demand and ease of illicit resale.Emerging criminal profiles: The report suggests the involvement of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/museum-heists-turn-violent-new-europol-report-cultural-property-theft-tactics</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 30 Aug 2026 13:13:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</link>
-      <description>The action day led to:5 arrests (1 High Value Target, 2 police officers and 2 associates)5 locations searched;Seizures include: 3 vehicles used for migrant smuggling activities, firearms and ammunitions, a radio station, mobile devices and cash (EUR 5 700 and RSD 40 000) About EUR 1 300 per person to cross SerbiaActive since 2025, the criminal network is suspected of...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 30 Aug 2026 13:13:38 +0000</pubDate>
+      <pubDate>Sun, 30 Aug 2026 17:08:15 +0000</pubDate>
     </item>
     <item>
       <title>Europol and Frontex strengthen cooperation with new Working Arrangement</title>
@@ -409,7 +157,37 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 30 Aug 2026 13:13:38 +0000</pubDate>
+      <pubDate>Sun, 30 Aug 2026 17:08:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>78 arrests in bust of major Western Mediterranean smuggling network in Spain</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</link>
+      <description>The operation, conducted under a newly established Europol Taskforce within Europol’s European Centre Against Migrant Smuggling, brought together officers from the French National Police (Police aux Frontières/OLTIM), and the Spanish National Police (Comisaría General de Extranjería y Fronteras/UCRIF) and Guardia Civil. The case was also supported by the Portuguese Judicial Police (Policía Judiciaria) and the Polish Border Guard (BG).Strongly involved...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/78-arrests-in-bust-of-major-western-mediterranean-smuggling-network-in-spain</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 30 Aug 2026 17:08:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Museum heists turn violent: new Europol report on cultural property theft tactics</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/museum-heists-turn-violent-new-europol-report-cultural-property-theft-tactics</link>
+      <description>The spotlight features some key findings:Increasing violence: Museum thefts are becoming more aggressive, with offenders using tools like sledgehammers, explosives, and firearms to breach premises and intimidate staff.Targeted high-value items: Thieves are increasingly focusing on precious metals, gemstones, and culturally significant artefacts, driven by high market demand and ease of illicit resale.Emerging criminal profiles: The report suggests the involvement of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/museum-heists-turn-violent-new-europol-report-cultural-property-theft-tactics</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 30 Aug 2026 17:08:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Five arrests for smuggling migrants across the Bulgarian-Serbian green border</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</link>
+      <description>The action day led to:5 arrests (1 High Value Target, 2 police officers and 2 associates)5 locations searched;Seizures include: 3 vehicles used for migrant smuggling activities, firearms and ammunitions, a radio station, mobile devices and cash (EUR 5 700 and RSD 40 000) About EUR 1 300 per person to cross SerbiaActive since 2025, the criminal network is suspected of...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-arrests-for-smuggling-migrants-across-bulgarian-serbian-green-border</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 30 Aug 2026 17:08:15 +0000</pubDate>
     </item>
     <item>
       <title>Europol supports operation against amphetamine producers</title>
@@ -419,7 +197,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 30 Aug 2026 13:13:38 +0000</pubDate>
+      <pubDate>Sun, 30 Aug 2026 17:08:15 +0000</pubDate>
     </item>
     <item>
       <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
@@ -429,7 +207,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 30 Aug 2026 13:13:38 +0000</pubDate>
+      <pubDate>Sun, 30 Aug 2026 17:08:15 +0000</pubDate>
     </item>
     <item>
       <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
@@ -439,7 +217,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 30 Aug 2026 13:13:38 +0000</pubDate>
+      <pubDate>Sun, 30 Aug 2026 17:08:15 +0000</pubDate>
     </item>
     <item>
       <title>Season 4 of The Europol Podcast available now</title>
@@ -449,7 +227,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sun, 30 Aug 2026 13:13:38 +0000</pubDate>
+      <pubDate>Sun, 30 Aug 2026 17:08:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</link>
+      <description>This follows several years of intensive and extensive investigations led by the German Federal Police under the direction of three Bavarian Public Prosecutors’ Offices. The action day, carried out on 5 August 2026, brought together authorities from Germany and Serbia under the framework of an Operational Taskforce coordinated by Europol. Investigators targeted senior members of two interconnected Syrian criminal networks...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 30 Aug 2026 17:08:15 +0000</pubDate>
     </item>
     <item>
       <title>ServiceNow patches three maximum severity flaws that could put enterprise data at risk</title>
@@ -591,7 +379,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4215430/servicenow-patches-three-maximum-severity-flaws-that-could-put-enterprise-data-at-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Fri, 28 Aug 2026 22:59:31 +0000</pubDate>
     </item>
     <item>
@@ -782,7 +570,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4214535/critical-infrastructures-long-undefended-tail-exposed-by-uk-energy-attack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Thu, 27 Aug 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -792,7 +580,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-843</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Mon, 24 Aug 2026 13:12:11 +0000</pubDate>
     </item>
     <item>
@@ -802,7 +590,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-security-advisory-january-2026-quarterly-rollup-av26-042</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 24 Aug 2026 18:42:49 +0000</pubDate>
     </item>
     <item>
@@ -812,7 +600,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-844</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Mon, 24 Aug 2026 19:03:22 +0000</pubDate>
     </item>
     <item>
@@ -826,7 +614,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 27 Aug 2026 11:04:15 +0000</pubDate>
     </item>
     <item>
@@ -836,7 +624,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitea-security-advisory-av26-845</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Tue, 25 Aug 2026 18:29:34 +0000</pubDate>
     </item>
     <item>
@@ -846,7 +634,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openssl-security-advisory-av26-846</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Tue, 25 Aug 2026 18:55:13 +0000</pubDate>
     </item>
     <item>
@@ -856,7 +644,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-847</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Tue, 25 Aug 2026 19:09:53 +0000</pubDate>
     </item>
     <item>
@@ -866,7 +654,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-848</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.45</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Wed, 26 Aug 2026 13:56:44 +0000</pubDate>
     </item>
     <item>
@@ -876,7 +664,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nvidia-security-advisory-av26-849</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.40</comments>
       <pubDate>Wed, 26 Aug 2026 14:17:01 +0000</pubDate>
     </item>
     <item>
@@ -886,7 +674,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-850</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Wed, 26 Aug 2026 17:11:47 +0000</pubDate>
     </item>
     <item>
@@ -896,7 +684,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nextjs-security-advisory-av26-851</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.50</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Wed, 26 Aug 2026 17:13:59 +0000</pubDate>
     </item>
     <item>
@@ -906,7 +694,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-852</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Wed, 26 Aug 2026 17:33:37 +0000</pubDate>
     </item>
     <item>
@@ -916,7 +704,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-645</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Wed, 26 Aug 2026 18:27:03 +0000</pubDate>
     </item>
     <item>
@@ -926,7 +714,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-853</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.77</comments>
       <pubDate>Thu, 27 Aug 2026 12:44:22 +0000</pubDate>
     </item>
     <item>
@@ -936,7 +724,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-854</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.85</comments>
+      <comments>Score: 8.77</comments>
       <pubDate>Thu, 27 Aug 2026 12:57:33 +0000</pubDate>
     </item>
     <item>
@@ -946,7 +734,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-855</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Thu, 27 Aug 2026 14:03:14 +0000</pubDate>
     </item>
     <item>
@@ -956,7 +744,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-august-2026-monthly-rollup-av26-804</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Thu, 27 Aug 2026 17:23:07 +0000</pubDate>
     </item>
     <item>
@@ -966,7 +754,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-national-instruments-security-advisory-av26-856</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.35</comments>
+      <comments>Score: 9.26</comments>
       <pubDate>Fri, 28 Aug 2026 12:16:59 +0000</pubDate>
     </item>
     <item>
@@ -976,7 +764,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-857</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.39</comments>
+      <comments>Score: 9.29</comments>
       <pubDate>Fri, 28 Aug 2026 13:43:29 +0000</pubDate>
     </item>
     <item>
@@ -986,7 +774,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-859</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.41</comments>
+      <comments>Score: 9.31</comments>
       <pubDate>Fri, 28 Aug 2026 14:34:41 +0000</pubDate>
     </item>
     <item>
@@ -996,7 +784,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av26-860</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.32</comments>
       <pubDate>Fri, 28 Aug 2026 14:58:34 +0000</pubDate>
     </item>
     <item>
@@ -1006,7 +794,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cpanel-security-advisory-av26-861</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.42</comments>
+      <comments>Score: 9.33</comments>
       <pubDate>Fri, 28 Aug 2026 15:10:37 +0000</pubDate>
     </item>
     <item>
@@ -1016,7 +804,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/papercut-security-advisory-av26-858</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.53</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Fri, 28 Aug 2026 19:24:56 +0000</pubDate>
     </item>
     <item>
@@ -1026,7 +814,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <guid isPermaLink="false">https://www.darkreading.com/events/virtual-event-building-secure-ai-strategy-enterprise-2026</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 68457.66</comments>
+      <comments>Score: 65725.28</comments>
       <pubDate>Thu, 08 Oct 2026 15:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1035,7 +823,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/virtual-event-what-every-enterprise-know-securing-cloud-2026</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 436519473.03</comments>
+      <comments>Score: 419095718.82</comments>
       <pubDate>Thu, 12 Nov 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
