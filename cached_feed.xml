@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Sep 2026 03:31:42 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 09:04:50 +0000</lastBuildDate>
     <item>
       <title>Next.js security advisory (AV26-851)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/nextjs-security-advisory-av26-851</link>
@@ -16,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nextjs-security-advisory-av26-851</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Wed, 26 Aug 2026 17:13:59 +0000</pubDate>
     </item>
     <item>
@@ -26,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-852</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Wed, 26 Aug 2026 17:33:37 +0000</pubDate>
     </item>
     <item>
@@ -36,87 +36,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-645</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
+      <comments>Score: 7.22</comments>
       <pubDate>Wed, 26 Aug 2026 18:27:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>Exploited JFrog Artifactory bug puts software supply chain on alert</title>
-      <link>https://www.csoonline.com/article/4217534/exploited-jfrog-artifactory-bug-puts-software-supply-chain-on-alert.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A critical authentication bypass in JFrog Artifactory is now being exploited in the wild, with attackers observed generating administrator tokens and probing the software supply-chain platform’s sensitive data.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The flaw, tracked as &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-82329" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-82329&lt;/a&gt;, was disclosed by JFrog on August 28 and can, under default configuration, allow an unauthenticated attacker with network access to obtain administrative privileges.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;By September 1, watchTowr said its Attacker Eye honeypot was already seeing threat actors exploit internet-exposed systems. The activity included attackers minting administrator tokens and enumerating users, groups, credential sets and federated access topologies.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“This moved from disclosure to real-world exploitation with uncomfortable efficiency,” said &lt;a href="https://www.linkedin.com/in/yganchev/" rel="noreferrer noopener" target="_blank"&gt;Yordan Ganchev&lt;/a&gt;, principal threat intelligence specialist at watchTowr. “When attackers gain admin level access to a central software supply chain system, they can do what every engineering team does best – build, ship and distribute software fast.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-phantom-key-for-administrator-access"&gt;A ‘Phantom’ key for administrator access&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The bug comes from JFrog Access, the component responsible for issuing and validating credentials. According to Ganchev, affected instances without an additional join key configured receive a “phantom” join key that attackers can abuse to forge access and create administrator-level credentials.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;JFrog’s &lt;a href="https://docs.jfrog.com/releases/docs/jfrog-security-advisories#cve-2026-82329---potential-authentication-bypass-leading-to-administrative-access-in-artifactory" rel="noreferrer noopener" target="_blank"&gt;advisory &lt;/a&gt;describes the issue as an authentication weakness that may allow an unauthenticated attacker with network access to obtain administrative privileges under default configuration.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The vulnerability was assigned a critical severity (CVSS 9.8)  and affects several self-hosted Artifactory release branches. JFrog has released fixes for affected self-hosted versions, while affected cloud environments have already been fortified.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Users are advised to upgrade to versions 7.111.21,7.117.28, 7.125.20, 7.133.29, 7.146.38, or 7.161.20, depending on their release branch.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Admin on Artifactory means admin on its own checks,” said &lt;a href="https://www.linkedin.com/in/collin-hogue-spears/" rel="noreferrer noopener" target="_blank"&gt;Collin Hogue-Spears&lt;/a&gt;, senior director of Solution Management at Black Duck. “CVE-2026-82329 delivers an intrusion. Administrative control of the repository turns that intrusion into a substitution.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;An attacker with administrator control of a central artifact repository could potentially tamper with build pipelines, move laterally into production systems, and push malicious changes to downstream customers, Ganchev said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Patching fixed the door, but not what walked through it&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The immediate advice is to patch affected self-hosted Artifactory systems, particularly those exposed to the internet.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Systems exposed while vulnerable should be treated with suspicion of being potentially compromised,” Ganchev warned. “Defenders should inspect audit logs, rotate exposed credentials and investigate connected systems for malicious changes or backdoor access.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Hogue-Spears made a similar point about administrator tokens. Because a token created before remediation may remain valid until revoked, organizations should revoke and reissue administrator tokens on vulnerable instances rather than assuming a software upgrade alone erases the attacker’s access, he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Hogue-Spears also argued that integrity checks should extend beyond the repository itself. Production systems should pin container images to immutable digests and verify signatures and provenance at deployment. “A signature stored beside an artifact is evidence,” he said. “A signature checked at deployment time is enforcement.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4217534/exploited-jfrog-artifactory-bug-puts-software-supply-chain-on-alert.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.26</comments>
-      <pubDate>Wed, 02 Sep 2026 12:24:40 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV26-853)</title>
@@ -125,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-853</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Thu, 27 Aug 2026 12:44:22 +0000</pubDate>
     </item>
     <item>
@@ -135,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-854</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Thu, 27 Aug 2026 12:57:33 +0000</pubDate>
     </item>
     <item>
@@ -145,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-855</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Thu, 27 Aug 2026 14:03:14 +0000</pubDate>
     </item>
     <item>
@@ -155,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-august-2026-monthly-rollup-av26-804</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
+      <comments>Score: 7.28</comments>
       <pubDate>Thu, 27 Aug 2026 17:23:07 +0000</pubDate>
     </item>
     <item>
@@ -165,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-national-instruments-security-advisory-av26-856</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 28 Aug 2026 12:16:59 +0000</pubDate>
     </item>
     <item>
@@ -175,7 +96,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-857</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 28 Aug 2026 13:43:29 +0000</pubDate>
     </item>
     <item>
@@ -185,7 +106,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-859</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Fri, 28 Aug 2026 14:34:41 +0000</pubDate>
     </item>
     <item>
@@ -195,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av26-860</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Fri, 28 Aug 2026 14:58:34 +0000</pubDate>
     </item>
     <item>
@@ -205,8 +126,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-861</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Fri, 28 Aug 2026 15:10:37 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol celebrates the International Day of Police Cooperation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-celebrates-international-day-of-police-cooperation</link>
+      <description>On 7 September, Europol is marking the International Day of Police Cooperation together with its partners to recognise the central role our network plays in tackling the most serious threats against the EU’s internal security.Connecting investigators, expertise, and information across national boundaries is at the heart of Europol. When those connections are strong, law enforcement is better equipped to respond...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-celebrates-international-day-of-police-cooperation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 07 Sep 2026 07:04:50 +0000</pubDate>
     </item>
     <item>
       <title>Europol and European Labour Authority strengthen cooperation against labour exploitation</title>
@@ -216,47 +147,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 07 Sep 2026 01:31:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Growing number of data requests and complex legal landscape among key challenges for accessing electronic evidence</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/growing-number-of-data-requests-and-complex-legal-landscape-among-key-challenges-for-accessing-electronic-evidence</link>
-      <description>Over half of all criminal investigations today include a request for cross-border access to electronic evidence such as texts, e-mails or messages in apps. However, gaining access to electronic evidence presents significant legal and technical challenges. For instance, evidence may be stored in an unknown location, servers can be spread across different countries, and there are no harmonised deadlines for...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/growing-number-of-data-requests-and-complex-legal-landscape-among-key-challenges-for-accessing-electronic-evidence</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 07 Sep 2026 01:31:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Global public-private operation disrupts Sality botnet active for two decades</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/global-public-private-operation-disrupts-sality-botnet-active-for-two-decades</link>
-      <description>An international operation supported by Europol has disrupted the Sality peer-to-peer (P2P) botnet, a long-running criminal infrastructure used to distribute malicious payloads to thousands of infected computers worldwide.The coordinated action, carried out on 31 August 2026 and led by the US authorities, targeted a botnet believed to have been operating for more than two decades. At its peak, the botnet...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/global-public-private-operation-disrupts-sality-botnet-active-for-two-decades</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 07 Sep 2026 01:31:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol supports operation against amphetamine producers</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</link>
-      <description>As part of an extensive investigation led by the German Krefeld Public Prosecutor's Office and Mönchengladbach Police, officers from the North Rhine-Westphalia Police, as well as Polish and Dutch law enforcement conducted coordinated searches at ten locations in Germany and three in the Netherlands in the early hours of 15 July 2026. Several suspects were arrested during the operation.Nine suspects...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-supports-operation-against-amphetamine-producers</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 07 Sep 2026 01:31:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</link>
-      <description>Led by the Greek authorities and supported by Europol, the investigation targeted a criminal network composed mainly of Syrian and Egyptian nationals suspected of organising the illegal transportation of migrants from Greece through Bulgaria and Romania before facilitating their onward journey to Italy.The action day took place on 16 July 2026, with operational activities carried out in Thessaloniki and Athens...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 07 Sep 2026 01:31:42 +0000</pubDate>
+      <pubDate>Mon, 07 Sep 2026 07:04:50 +0000</pubDate>
     </item>
     <item>
       <title>Europol-led action against nihilistic violent extremist network "The Com"</title>
@@ -266,7 +157,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 07 Sep 2026 01:31:42 +0000</pubDate>
+      <pubDate>Mon, 07 Sep 2026 07:04:50 +0000</pubDate>
     </item>
     <item>
       <title>Season 4 of The Europol Podcast available now</title>
@@ -276,17 +167,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 07 Sep 2026 01:31:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</link>
-      <description>This follows several years of intensive and extensive investigations led by the German Federal Police under the direction of three Bavarian Public Prosecutors’ Offices. The action day, carried out on 5 August 2026, brought together authorities from Germany and Serbia under the framework of an Operational Taskforce coordinated by Europol. Investigators targeted senior members of two interconnected Syrian criminal networks...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 07 Sep 2026 01:31:42 +0000</pubDate>
+      <pubDate>Mon, 07 Sep 2026 07:04:50 +0000</pubDate>
     </item>
     <item>
       <title>78 arrests in bust of major Western Mediterranean smuggling network in Spain</title>
@@ -296,7 +177,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 07 Sep 2026 01:31:42 +0000</pubDate>
+      <pubDate>Mon, 07 Sep 2026 07:04:50 +0000</pubDate>
     </item>
     <item>
       <title>Museum heists turn violent: new Europol report on cultural property theft tactics</title>
@@ -306,7 +187,47 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 07 Sep 2026 01:31:42 +0000</pubDate>
+      <pubDate>Mon, 07 Sep 2026 07:04:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Growing number of data requests and complex legal landscape among key challenges for accessing electronic evidence</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/growing-number-of-data-requests-and-complex-legal-landscape-among-key-challenges-for-accessing-electronic-evidence</link>
+      <description>Over half of all criminal investigations today include a request for cross-border access to electronic evidence such as texts, e-mails or messages in apps. However, gaining access to electronic evidence presents significant legal and technical challenges. For instance, evidence may be stored in an unknown location, servers can be spread across different countries, and there are no harmonised deadlines for...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/growing-number-of-data-requests-and-complex-legal-landscape-among-key-challenges-for-accessing-electronic-evidence</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 07 Sep 2026 07:04:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Global public-private operation disrupts Sality botnet active for two decades</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/global-public-private-operation-disrupts-sality-botnet-active-for-two-decades</link>
+      <description>An international operation supported by Europol has disrupted the Sality peer-to-peer (P2P) botnet, a long-running criminal infrastructure used to distribute malicious payloads to thousands of infected computers worldwide.The coordinated action, carried out on 31 August 2026 and led by the US authorities, targeted a botnet believed to have been operating for more than two decades. At its peak, the botnet...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/global-public-private-operation-disrupts-sality-botnet-active-for-two-decades</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 07 Sep 2026 07:04:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Migrant smuggling network using rental cars dismantled across the Balkans</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</link>
+      <description>Led by the Greek authorities and supported by Europol, the investigation targeted a criminal network composed mainly of Syrian and Egyptian nationals suspected of organising the illegal transportation of migrants from Greece through Bulgaria and Romania before facilitating their onward journey to Italy.The action day took place on 16 July 2026, with operational activities carried out in Thessaloniki and Athens...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/migrant-smuggling-network-using-rental-cars-dismantled-across-balkans</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 07 Sep 2026 07:04:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</link>
+      <description>This follows several years of intensive and extensive investigations led by the German Federal Police under the direction of three Bavarian Public Prosecutors’ Offices. The action day, carried out on 5 August 2026, brought together authorities from Germany and Serbia under the framework of an Operational Taskforce coordinated by Europol. Investigators targeted senior members of two interconnected Syrian criminal networks...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/syrian-migrant-smugglers-arrested-in-coordinated-strike-in-germany-and-serbia</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 07 Sep 2026 07:04:50 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-862)</title>
@@ -315,7 +236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-862</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 31 Aug 2026 15:52:14 +0000</pubDate>
     </item>
     <item>
@@ -325,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-863</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 31 Aug 2026 15:55:51 +0000</pubDate>
     </item>
     <item>
@@ -335,7 +256,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-864</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 31 Aug 2026 15:59:15 +0000</pubDate>
     </item>
     <item>
@@ -345,7 +266,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/papercut-security-advisory-av26-858</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Mon, 31 Aug 2026 16:00:58 +0000</pubDate>
     </item>
     <item>
@@ -355,18 +276,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-865</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Mon, 31 Aug 2026 19:00:31 +0000</pubDate>
-    </item>
-    <item>
-      <title>WebPros security advisory (AV26-866)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-866</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-866</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
-      <pubDate>Tue, 01 Sep 2026 13:34:50 +0000</pubDate>
     </item>
     <item>
       <title>OpenAI launches GPT-6 Astra, its first model to cross a critical cybersecurity threshold</title>
@@ -468,8 +379,18 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4218679/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Fri, 04 Sep 2026 09:37:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>WebPros security advisory (AV26-866)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-866</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-866</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.94</comments>
+      <pubDate>Tue, 01 Sep 2026 13:34:50 +0000</pubDate>
     </item>
     <item>
       <title>Mozilla security advisory (AV26-868)</title>
@@ -478,7 +399,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-868</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Tue, 01 Sep 2026 18:14:12 +0000</pubDate>
     </item>
     <item>
@@ -488,7 +409,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rockwell-automation-security-advisory-av26-869</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Tue, 01 Sep 2026 18:45:58 +0000</pubDate>
     </item>
     <item>
@@ -498,7 +419,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-870</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 7.99</comments>
       <pubDate>Tue, 01 Sep 2026 18:50:12 +0000</pubDate>
     </item>
     <item>
@@ -508,7 +429,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-871</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Wed, 02 Sep 2026 12:28:12 +0000</pubDate>
     </item>
     <item>
@@ -518,7 +439,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-873</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Wed, 02 Sep 2026 13:38:08 +0000</pubDate>
     </item>
     <item>
@@ -528,7 +449,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-874</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.21</comments>
       <pubDate>Wed, 02 Sep 2026 14:27:54 +0000</pubDate>
     </item>
     <item>
@@ -538,7 +459,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-875</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Wed, 02 Sep 2026 15:33:28 +0000</pubDate>
     </item>
     <item>
@@ -548,7 +469,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-872</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.34</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Wed, 02 Sep 2026 18:44:56 +0000</pubDate>
     </item>
     <item>
@@ -558,7 +479,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jfrog-security-advisory-av26-867</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.27</comments>
       <pubDate>Wed, 02 Sep 2026 18:55:31 +0000</pubDate>
     </item>
     <item>
@@ -568,7 +489,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-876</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Thu, 03 Sep 2026 13:13:34 +0000</pubDate>
     </item>
     <item>
@@ -578,7 +499,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jenkins-security-advisory-av26-877</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Thu, 03 Sep 2026 13:54:40 +0000</pubDate>
     </item>
     <item>
@@ -588,7 +509,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-878</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Thu, 03 Sep 2026 14:05:53 +0000</pubDate>
     </item>
     <item>
@@ -598,7 +519,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-879</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.66</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Thu, 03 Sep 2026 15:05:51 +0000</pubDate>
     </item>
     <item>
@@ -608,7 +529,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-880</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Thu, 03 Sep 2026 18:59:03 +0000</pubDate>
     </item>
     <item>
@@ -618,7 +539,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-881</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.64</comments>
       <pubDate>Thu, 03 Sep 2026 19:32:38 +0000</pubDate>
     </item>
     <item>
@@ -628,8 +549,181 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-882</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.65</comments>
       <pubDate>Thu, 03 Sep 2026 19:47:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>What do CISOs need to rest easy about future AI risks?</title>
+      <link>https://www.csoonline.com/article/4218433/what-do-cisos-need-to-rest-easy-about-future-ai-risks.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Security leaders’ confidence in their ability to navigate the security risks AI will pose over the next two years rests on several clear factors, according to IANS analysis of its AI Security Survey, fielded earlier this year.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Of the 113 CISOs IANS surveyed in April and May, 41% expressed optimism about their organization’s ability to manage AI security risks over the next 24 months, versus 38% who were pessimistic.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Delving deeper, IANS identified six strong organizational signals that differentiate CISOs who feel confident about their ability to address rapidly evolving AI risks and those CISOs who dread what’s to come. And they have less to do with current controls and capacities and more to do with the CISO’s standing and sway within the organization.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The findings reveal a distinction between present-day risk perceptions and optimism about the manageability of AI risk in the future. Perceptions of present-day risk are associated most strongly with AI security maturity — an organization’s operational capacity and security controls to manage its AI environment,” the report said. “Optimism about the future is associated more strongly with organizational readiness factors.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Those factors include:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;Leadership’s understanding of AI risk&lt;/li&gt;
+
+
+
+&lt;li&gt;Clearly defined AI governance ownership&lt;/li&gt;
+
+
+
+&lt;li&gt;The security team’s effectiveness with AI tools&lt;/li&gt;
+
+
+
+&lt;li&gt;CISO ownership over the AI-security budget&lt;/li&gt;
+
+
+
+&lt;li&gt;Sustainable security team workloads&lt;/li&gt;
+
+
+
+&lt;li&gt;Sufficient security staffing&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Above any present-day measure of AI security maturity or budgetary increases, CISO optimism about the hard road ahead appears to rest largely on whether organizational leadership listens to, empowers, and adequately resources them — at least according to IANS’ poll.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="a-question-of-confidence"&gt;A question of confidence&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Cybersecurity consultants and analysts largely agree those elements will play a critical role in a company’s AI cybersecurity effectiveness going forward, but with nuance and caveats.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.infotech.com/profiles/pearl-almeida"&gt;Pearl Almeida&lt;/a&gt;, a research director at Info-Tech Research Group, underscores misalignment and leadership misunderstanding of AI risks as key factors that undercut a CISOs’ ability to mitigate those risks. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The risk-averse CISOs who resisted agent adoption have mostly been overruled by the business, and they [business executives] are moving forward whether or not they feel ready,” Almeida says. “Only a handful of organizations I work with have strong controls in place. The rest are starting with fundamentals because deferring is no longer an option.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Moreover, many CISOs are contending with what Almeida described as “organizational blind spots.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“In my conversations with CISOs, I have found that most leaders, security ones included, cannot explain how an agent works. They know that they need to use it, but don’t understand the mechanics: where the agent gets its information, how it calls on tools, how it makes decisions, how human-in-the-loop actually works,” Almeida says. “When you can’t describe the mechanism, you can’t right-size the exposure.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;As for AI governance, Almeida cautions that clear ownership isn’t enough on its own; the real issue is security culture.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Assigning a named business owner only works if security is already embedded in how the business operates rather than bolted on at approval,” she explains. “Owners who won’t take accountability should understand the trade plainly: They are handing security the authority to shut their workflow down during an incident without consulting them.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://zenity.io/authors/rock-lambros"&gt;Rock Lambros&lt;/a&gt;, director of AI standards and governance at agentic security vendor Zenity, cautions that optimism can be misleading.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Every number in the report is one person’s self-assessment measured against that same person’s self-assessment,” Lambros notes. “A CISO who just told you their program is ‘efficient’ on a five-point scale isn’t going to turn around two questions later and rate their risk a nine. People stay consistent with themselves.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;As for the factors identified, Lambros noted two clear groupings.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Leadership understanding, clear governance ownership, and CISO budget control all rise and fall together because they’re all downstream of a single decision somebody made in the C-suite or the boardroom,” Lambros says, adding that workload and staffing are closely aligned, “measuring whether the team has room to breathe.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="the-practicalities-of-preparedness"&gt;The practicalities of preparedness&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://greyhoundresearch.com/svg/"&gt;Sanchit Vir Gogia&lt;/a&gt;, chief analyst at Greyhound Research, notes that, while the factors IANS identified may be indicators of organizational readiness, “readiness is not the same measure as security.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“They show whether the CISO has leadership understanding, budget control, and capacity to act, not whether the AI estate is under control,” Gogia says.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/akm76/"&gt;Aman Mahapatra&lt;/a&gt;, chief strategy officer for Tribeca Softtech, a New York City-based technology consulting firm, echoes Gogia’s concerns.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“A CISO with an informed board, clean governance ownership, budget control, and a fully staffed team will feel optimistic whether or not a single agent in production has bounded authorization,” Mahapatra says. “That is a useful map of how CISOs currently think. It is not a security roadmap, and the risk is that it gets read as one.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;How a security team uses AI internally, however, provides practical indication of preparedness, Mahapatra suggests, because it “builds durable capability rather than favorable conditions.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;And it’s something CISOs should emphasize, as it “has to be earned over quarters, which is exactly why it compounds,” he says. “Teams running AI in their own triage and detection tuning learn experientially where prompt injection bites and how agents fail under adversarial input, and that knowledge transfers directly to securing AI everywhere else.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Cybersecurity consultant &lt;a href="https://formergov.com/directory/brianlevine"&gt;Brian Levine&lt;/a&gt;, executive director of FormerGov, advises CISOs to ensure that AI governance ownership includes a focus on third-party risk. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Governance is useless if you don’t actually know which models are being pulled into your environment and the risks associated with those models,” Levine says. “For a CISO, the risk isn’t just the AI you build. It’s the AI you inherit via vendors and unauthorized use.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://acceligence.com/talent/profiles/justin-greis/"&gt;Justin Greis&lt;/a&gt;, CEO of consulting firm Acceligence, says future AI risk preparedness hinges on gaining as much intelligence about AI system data and app interactions as possible.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The CISO needs to know what identity that agent is operating under, what systems it can reach, what information it can retrieve, what transactions it can initiate, what other agents or tools it can invoke, whether every material action is observable and whether the organization can immediately terminate its authority,” Greis says. “That starts looking much closer to managing a digital workforce than securing another software application.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Greis also was skeptical — along with various analysts and consultants — about whether a 41% optimism rate truly reflects what most enterprise CISOs are experiencing.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Almost half of the CISOs are optimistic about the AI security future? Who the heck are these people?” Greis asks. “The enterprise CISOs I talk with are white-knuckling their way through the fastest-moving security challenge of their careers.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;And that begs the question of timing: Asked in April and May about their level of confidence, would those CISOs answer the same way given what they’ve seen since?&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;It’s possible that the further advancement of Mythos-class models and high-profile rogue acts by agents may be shaking that optimism. But it’s also true that AI amplifies foundational security shortcomings, with organizational dysfunction chief among them. &lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4218433/what-do-cisos-need-to-rest-easy-about-future-ai-risks.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.97</comments>
+      <pubDate>Mon, 07 Sep 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
       <title>Google security advisory (AV26-883) – Update 1</title>
@@ -638,7 +732,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-883</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Fri, 04 Sep 2026 17:21:27 +0000</pubDate>
     </item>
     <item>
@@ -648,7 +742,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-019-vulnerabilities-impacting-citrix-netscaler-adc-netscaler-gateway-cve-2026-19490-cve-2026-19489</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.22</comments>
+      <comments>Score: 9.10</comments>
       <pubDate>Fri, 04 Sep 2026 19:00:54 +0000</pubDate>
     </item>
     <item>
@@ -658,7 +752,7 @@
       <guid isPermaLink="false">https://www.darkreading.com/events/virtual-event-building-secure-ai-strategy-enterprise-2026</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10467.99</comments>
+      <comments>Score: 9879.89</comments>
       <pubDate>Thu, 08 Oct 2026 15:00:00 +0000</pubDate>
     </item>
     <item>
@@ -667,7 +761,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/virtual-event-what-every-enterprise-know-securing-cloud-2026</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 66732818.96</comments>
+      <comments>Score: 62982609.63</comments>
       <pubDate>Thu, 12 Nov 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
