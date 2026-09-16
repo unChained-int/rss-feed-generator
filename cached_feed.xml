@@ -8,172 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Sep 2026 16:23:00 +0000</lastBuildDate>
-    <item>
-      <title>Adobe security advisory (AV26-888) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-888</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-888</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Tue, 08 Sep 2026 18:57:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft security advisory – September 2026 monthly rollup (AV26-896) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-september-2026-monthly-rollup-av26-896</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-september-2026-monthly-rollup-av26-896</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Tue, 08 Sep 2026 19:03:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ivanti security advisory (AV26-897)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-897</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-897</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Tue, 08 Sep 2026 19:22:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>A maximum severity GitLab flaw could turn your CI/CD server into an attacker’s treasure trove</title>
-      <link>https://www.csoonline.com/article/4221934/a-maximum-severity-gitlab-flaw-could-turn-your-ci-cd-server-into-an-attackers-treasure-trove.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Yet another security vulnerability has been discovered in GitLab infrastructure, this one a perfect 10 in severity.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-3-2-released/#cve-2026-85706---path-traversal-issue-in-repository-commits-api-impacts-gitlab-ceee" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-85706&lt;/a&gt;, the &lt;a href="https://www.csoonline.com/article/4211140/critical-gitlab-flaw-allows-attackers-to-delete-and-modify-public-repos.html?utm=hybrid_search" target="_blank"&gt;second flaw&lt;/a&gt; GitLab has disclosed in just a month, is a maximum-severity vulnerability that allows attackers to read arbitrary files in a single HTTP request. The path traversal flaw results from improper confinement and lack of authentication enforcement in GitLab’s repository commits API, the company reported.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Threat actors could exploit it “under certain conditions” and read arbitrary files (credentials, secrets, and other sensitive data) on vulnerable GitLab servers.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The company has fixed the vulnerability, which impacts GitLab Community Edition (CE) and Enterprise Edition (EE), and has advised customers with public-facing self-hosted GitLab instances to patch their servers immediately, or remove public access.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Experts say the flaw is alarming because GitLab’s DevSecOps platform is used by roughly 50% of the Fortune 100 and has more than &lt;a href="https://about.gitlab.com/company/" rel="noreferrer noopener" target="_blank"&gt;50 million&lt;/a&gt; estimated registered users.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“GitLab is not simply a source-code repository,” noted &lt;a href="https://www.infotech.com/profiles/safayat-moahamad" rel="noreferrer noopener" target="_blank"&gt;Safayat Moahamad&lt;/a&gt;, advisory director at Info-Tech Research Group. In many enterprises, it is connected to build pipelines, deployment processes, application security workflows, and other trusted systems.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;As a result, unauthorized access to configuration files, secrets, or credentials on the GitLab server could “create consequences well beyond the affected instance,” he said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="dont-wait-for-the-normal-patch-cycle"&gt;Don’t wait for the normal patch cycle&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;GitLab has been a favorite hacker target of late: In January, it patched a &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-0723"&gt;high-severity flaw&lt;/a&gt; that allowed attackers possessing a target’s account ID to bypass two-factor authentication, and in August, it fixed a &lt;a href="https://www.csoonline.com/article/4218440/securing-ai-agents-key-controls-and-best-practices.html" target="_blank"&gt;critical vulnerability&lt;/a&gt; that could give unauthenticated users the ability to make modifications inside code repositories or even completely delete them with a single HTTP request.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The current maximum severity bug, &lt;a href="https://cve.tools/v/CVE-2026-85706" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-85706&lt;/a&gt;, was reported through GitLab’s HackerOne bug bounty program. It affected CE and EE versions 18.7 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The US Cybersecurity and Infrastructure Security Agency (CISA) has added CVE-2026-85706 to its Known Exploited Vulnerabilities catalog, noting that this type of vulnerability is a frequent attack vector for malicious cyber actors, and particularly poses significant risks to the federal enterprise; &lt;a href="https://www.linkedin.com/posts/watchtowr-intel-is-already-observing-in-the-wild-share-7504127030326673408-E8qx/" rel="noreferrer noopener" target="_blank"&gt;watchTowr Intel&lt;/a&gt; has reported that it is already observing “in-the-wild probes.” “Based on recent GitLab vulnerabilities, we know the time until indiscriminate exploitation is likely not far away,” it warned.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is not a vulnerability that organizations should leave for the normal patch cycle, Moahamad emphasized. “It offers an unauthenticated path to arbitrary files on a platform that frequently sits at the center of source code, build, and deployment workflows,” he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Enterprises should patch immediately, hunt for suspicious repository-commits API activity, and investigate whether exposed files contained credentials or secrets that may now require rotation, he advised.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Beyond patching, the watchTowr Intel team said defenders should try to identify exploitation attempts by hunting through log files for HTTP POST requests to “&lt;em&gt;/api/v4/projects/{id}/repository/commits/&lt;/em&gt;” URIs containing “&lt;em&gt;file.path&lt;/em&gt;” parameters.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="ci-cd-platforms-are-critical-trust-infrastructure"&gt;CI/CD platforms are critical trust infrastructure &lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Organizations running affected self-managed GitLab CE or EE instances should be most concerned, Moahamad noted. Risk increases where GitLab is connected to sensitive repositories, CI/CD pipelines, cloud environments, or production-deployment processes.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The information and/or access that attackers could obtain depends on what the GitLab service can read and what organizations store on the server, he explained. It could include configuration files, secrets, &lt;a href="https://www.csoonline.com/article/4220702/ai-workflows-may-be-creating-a-dangerous-new-authorization-blind-spot.html" target="_blank"&gt;credentials&lt;/a&gt;, and other sensitive server-side data. If those files happen to contain usable tokens, keys, or credentials, an attacker could attempt to access connected infrastructure&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The flaw directly creates an unauthorized file access risk,” he said. Credential theft, lateral movement, source code exposure, and supply chain compromise are possible follow-on scenarios.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Source code and CI/CD platforms must be governed as “critical trust infrastructure,” he said. While patching remains essential, resilience will depend on knowing where platforms can be exposed, limiting what they can access, detecting abnormal API behavior, and having a tested process for investigating and rotating credentials.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/dbshipley/" rel="noreferrer noopener" target="_blank"&gt;David Shipley&lt;/a&gt; of Beauceron Security described two factors colliding to generate “maximum pain” for GitLab users.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;First is the vulnerability. “It’s a 10 for a reason: Unauthenticated read access to GitLab client source code,” he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Second, this especially hurts because developers still have bad habits: way too much code continues to ship or is in production with embedded SSH keys, cloud secrets, tokens, and other valuable data that attackers can use to get into infrastructure, Shipley said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“So for attackers, you’ve got the classics,” he noted: Data exfiltration and extortion, ransomware, cloud infrastructure hijacking for crypto mining, and the stealing of AI tokens and infrastructure to enable other criminal activity.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“This level of vulnerability is the code and cloud equivalent of being able to get the credit card number, expiry and security number,” Shipley said. “It opens up a world of criminal data shopping.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The bottom line: “Get those secrets out of production code and adopt modern coding authentication best practices,” he advised.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4221934/a-maximum-severity-gitlab-flaw-could-turn-your-ci-cd-server-into-an-attackers-treasure-trove.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
-      <pubDate>Tue, 15 Sep 2026 00:52:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fortinet security advisory (AV26-898)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-898</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-898</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Wed, 09 Sep 2026 13:48:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>Commvault security advisory (AV26-899)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-899</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-899</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Wed, 09 Sep 2026 13:59:24 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 16 Sep 2026 19:52:54 +0000</lastBuildDate>
     <item>
       <title>NVIDIA security advisory (AV26-900)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/nvidia-security-advisory-av26-900</link>
@@ -181,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nvidia-security-advisory-av26-900</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Wed, 09 Sep 2026 15:47:38 +0000</pubDate>
     </item>
     <item>
@@ -191,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-901</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Wed, 09 Sep 2026 15:51:52 +0000</pubDate>
     </item>
     <item>
@@ -201,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-885</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 09 Sep 2026 19:22:35 +0000</pubDate>
     </item>
     <item>
@@ -211,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-902</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 09 Sep 2026 19:30:15 +0000</pubDate>
     </item>
     <item>
@@ -221,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-904</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 09 Sep 2026 19:52:18 +0000</pubDate>
     </item>
     <item>
@@ -231,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-023</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 09 Sep 2026 19:57:35 +0000</pubDate>
     </item>
     <item>
@@ -241,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-197</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 09 Sep 2026 20:04:27 +0000</pubDate>
     </item>
     <item>
@@ -251,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-833</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 09 Sep 2026 20:10:50 +0000</pubDate>
     </item>
     <item>
@@ -261,48 +96,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-019-vulnerabilities-impacting-citrix-netscaler-adc-netscaler-gateway-cve-2026-19490-cve-2026-19489</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 09 Sep 2026 20:20:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>Crackdown on Italian organised criminal network involved in large-scale euro counterfeiting</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/crackdown-italian-organised-criminal-network-involved-in-large-scale-euro-counterfeiting</link>
-      <description>Europol has supported an international operation targeting a criminal network linked to the Italian mafia-type organisation Camorra. The operation, coordinated by the Baden-Württemberg State Criminal Police Office and the Stuttgart Public Prosecutor’s Office, resulted in the execution of six arrest warrants and simultaneous searches of 16 residential and commercial properties across Germany, Italy, and Spain. In Germany, two illegally held pistols with ammunition were seized, as well as counterfeit euro banknotes of Italian origin linked to the so-called “Napoli Group”. Furthermore, the officers in the field seized 16 phone mobiles and storage devices.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/crackdown-italian-organised-criminal-network-involved-in-large-scale-euro-counterfeiting</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
-      <pubDate>Wed, 16 Sep 2026 14:23:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Palo Alto Networks security advisory (AV26-905)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-905</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-905</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
-      <pubDate>Thu, 10 Sep 2026 12:10:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fortra security advisory (AV26-906)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/fortra-security-advisory-av26-906</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortra-security-advisory-av26-906</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
-      <pubDate>Thu, 10 Sep 2026 12:38:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] Advantech security advisory (AV26-907)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-advantech-security-advisory-av26-907</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-advantech-security-advisory-av26-907</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
-      <pubDate>Thu, 10 Sep 2026 13:50:38 +0000</pubDate>
     </item>
     <item>
       <title>AI is exposing a security structure built for yesterday’s threats</title>
@@ -408,8 +203,48 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4221801/ai-is-exposing-a-security-structure-built-for-yesterdays-threats.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Tue, 15 Sep 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Palo Alto Networks security advisory (AV26-905)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-905</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-905</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.82</comments>
+      <pubDate>Thu, 10 Sep 2026 12:10:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortra security advisory (AV26-906)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortra-security-advisory-av26-906</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortra-security-advisory-av26-906</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.83</comments>
+      <pubDate>Thu, 10 Sep 2026 12:38:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] Advantech security advisory (AV26-907)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-advantech-security-advisory-av26-907</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-advantech-security-advisory-av26-907</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.84</comments>
+      <pubDate>Thu, 10 Sep 2026 13:50:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>Crackdown on Italian organised criminal network involved in large-scale euro counterfeiting</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/crackdown-italian-organised-criminal-network-involved-in-large-scale-euro-counterfeiting</link>
+      <description>Europol has supported an international operation targeting a criminal network linked to the Italian mafia-type organisation Camorra. The operation, coordinated by the Baden-Württemberg State Criminal Police Office and the Stuttgart Public Prosecutor’s Office, resulted in the execution of six arrest warrants and simultaneous searches of 16 residential and commercial properties across Germany, Italy, and Spain. In Germany, two illegally held pistols with ammunition were seized, as well as counterfeit euro banknotes of Italian origin linked to the so-called “Napoli Group”. Furthermore, the officers in the field seized 16 phone mobiles and storage devices.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/crackdown-italian-organised-criminal-network-involved-in-large-scale-euro-counterfeiting</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.85</comments>
+      <pubDate>Wed, 16 Sep 2026 17:52:54 +0000</pubDate>
     </item>
     <item>
       <title>Adobe security advisory (AV26-808) – Update 1</title>
@@ -418,7 +253,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-808</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.86</comments>
       <pubDate>Thu, 10 Sep 2026 16:03:46 +0000</pubDate>
     </item>
     <item>
@@ -428,7 +263,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-908</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.90</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Thu, 10 Sep 2026 17:38:55 +0000</pubDate>
     </item>
     <item>
@@ -438,8 +273,17 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-909</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Thu, 10 Sep 2026 18:13:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>Data Broker Radaris Loses Domains in Privacy Fight</title>
+      <link>https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/</link>
+      <description>The consumer data broker Radaris.com has long had a reputation for ignoring requests to remove personal information from its vast empire of people-search services online. That reputation caught up with the company recently in a lawsuit alleging Radaris violated a New Jersey privacy law that provides for hefty fines against data brokers that publish personal information on state law enforcement officials. In the face of repeated stonewalling and prevarication by attorneys for Radaris, the judge in the case ordered that radaris.com and more than a dozen other data broker domains be transferred to the plaintiffs.</description>
+      <guid isPermaLink="false">https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/</guid>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.88</comments>
+      <pubDate>Wed, 16 Sep 2026 18:14:22 +0000</pubDate>
     </item>
     <item>
       <title>AL26-020 - Vulnerabilities Impacting MikroTik RouterOS - CVE-2026-67276, CVE-2026-67277 and CVE-2026-86060</title>
@@ -448,7 +292,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-020-vulnerabilities-impacting-mikrotik-routeros-cve-2026-67276-cve-2026-67277-cve-2026-86060</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.93</comments>
+      <comments>Score: 7.89</comments>
       <pubDate>Thu, 10 Sep 2026 19:50:46 +0000</pubDate>
     </item>
     <item>
@@ -535,7 +379,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4222191/exaforce-extends-its-ai-security-tool-to-monitor-more-than-just-claude.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Tue, 15 Sep 2026 13:00:00 +0000</pubDate>
     </item>
     <item>
@@ -545,7 +389,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-887</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Fri, 11 Sep 2026 11:40:00 +0000</pubDate>
     </item>
     <item>
@@ -555,7 +399,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-910</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Fri, 11 Sep 2026 13:10:01 +0000</pubDate>
     </item>
     <item>
@@ -565,7 +409,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-911</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Fri, 11 Sep 2026 13:38:57 +0000</pubDate>
     </item>
     <item>
@@ -575,7 +419,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-912</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.13</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Fri, 11 Sep 2026 15:09:27 +0000</pubDate>
     </item>
     <item>
@@ -585,7 +429,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-geovision-security-advisory-av26-913</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Fri, 11 Sep 2026 15:38:24 +0000</pubDate>
     </item>
     <item>
@@ -595,7 +439,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-national-instruments-security-advisory-av26-914</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.14</comments>
+      <comments>Score: 8.10</comments>
       <pubDate>Fri, 11 Sep 2026 15:56:24 +0000</pubDate>
     </item>
     <item>
@@ -605,7 +449,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-915</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Fri, 11 Sep 2026 19:04:13 +0000</pubDate>
     </item>
     <item>
@@ -615,7 +459,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/connectwise-security-advisory-av26-903</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Fri, 11 Sep 2026 19:25:59 +0000</pubDate>
     </item>
     <item>
@@ -625,7 +469,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-916</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Fri, 11 Sep 2026 19:32:09 +0000</pubDate>
     </item>
     <item>
@@ -635,7 +479,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jfrog-security-advisory-av26-867</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Fri, 11 Sep 2026 20:11:45 +0000</pubDate>
     </item>
     <item>
@@ -645,7 +489,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-917</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Fri, 11 Sep 2026 20:35:56 +0000</pubDate>
     </item>
     <item>
@@ -852,7 +696,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4221311/ai-made-software-development-unrecognizable-is-cybersecurity-next.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Wed, 16 Sep 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -983,7 +827,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4222302/you-dont-have-to-join-the-hack-back-program-to-inherit-its-risk.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Wed, 16 Sep 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1102,7 +946,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4222867/ai-agent-authorization-risks-remain-a-gap-in-new-nist-cisa-token-security-guidance.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.97</comments>
+      <comments>Score: 8.83</comments>
       <pubDate>Wed, 16 Sep 2026 15:42:00 +0000</pubDate>
     </item>
     <item>
@@ -1257,7 +1101,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4222904/big-techs-ai-safety-rift-signals-disruption-and-disparity-for-enterprises-3.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.00</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Wed, 16 Sep 2026 16:19:26 +0000</pubDate>
     </item>
     <item>
@@ -1271,7 +1115,7 @@
       <guid isPermaLink="false">https://www.darkreading.com/vulnerabilities-threats/bhusa26huggingfacetalk</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.22</comments>
+      <comments>Score: 9.10</comments>
       <pubDate>Tue, 15 Sep 2026 19:27:19 +0000</pubDate>
     </item>
     <item>
@@ -1281,7 +1125,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-918</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.38</comments>
+      <comments>Score: 9.29</comments>
       <pubDate>Mon, 14 Sep 2026 14:30:08 +0000</pubDate>
     </item>
     <item>
@@ -1291,18 +1135,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/samsung-mobile-security-advisory-av26-919</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.40</comments>
+      <comments>Score: 9.31</comments>
       <pubDate>Mon, 14 Sep 2026 15:11:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Android security advisory – September 2026 monthly rollup (AV26-920)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-september-2026-monthly-rollup-av26-920</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-september-2026-monthly-rollup-av26-920</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
-      <pubDate>Mon, 14 Sep 2026 17:27:48 +0000</pubDate>
     </item>
     <item>
       <title>Cisco security advisory (AV26-921)</title>
@@ -1311,7 +1145,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-921</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.50</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Mon, 14 Sep 2026 19:23:22 +0000</pubDate>
     </item>
     <item>
@@ -1321,7 +1155,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-922</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.05</comments>
+      <comments>Score: 9.95</comments>
       <pubDate>Tue, 15 Sep 2026 14:29:59 +0000</pubDate>
     </item>
     <item>
@@ -1331,7 +1165,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-923</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.08</comments>
+      <comments>Score: 9.97</comments>
       <pubDate>Tue, 15 Sep 2026 15:10:16 +0000</pubDate>
     </item>
     <item>
@@ -1341,7 +1175,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-924</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.20</comments>
+      <comments>Score: 10.08</comments>
       <pubDate>Tue, 15 Sep 2026 18:54:45 +0000</pubDate>
     </item>
     <item>
@@ -1351,17 +1185,78 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-925</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.20</comments>
+      <comments>Score: 10.09</comments>
       <pubDate>Tue, 15 Sep 2026 18:59:34 +0000</pubDate>
     </item>
     <item>
-      <title>[Virtual Event] What Every Enterprise Should Know About Securing Cloud Assets in the Age of AI</title>
-      <link>https://www.darkreading.com/events/virtual-event-what-every-enterprise-know-securing-cloud-2026</link>
+      <title>Android security advisory – September 2026 monthly rollup (AV26-920) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-september-2026-monthly-rollup-av26-920</link>
       <description>No description available</description>
-      <guid isPermaLink="false">https://www.darkreading.com/events/virtual-event-what-every-enterprise-know-securing-cloud-2026</guid>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-september-2026-monthly-rollup-av26-920</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 6152069.04</comments>
-      <pubDate>Thu, 12 Nov 2026 16:00:00 +0000</pubDate>
+      <comments>Score: 10.89</comments>
+      <pubDate>Wed, 16 Sep 2026 17:10:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google security advisory (AV26-926)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-926</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-926</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.89</comments>
+      <pubDate>Wed, 16 Sep 2026 17:13:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control Systems] Phoenix Contact security advisory (AV26-927)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-927</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-927</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.92</comments>
+      <pubDate>Wed, 16 Sep 2026 18:00:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-928)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-928</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-928</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.95</comments>
+      <pubDate>Wed, 16 Sep 2026 18:35:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>Oracle Corporation security advisory (AV26-929)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-929</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-929</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.98</comments>
+      <pubDate>Wed, 16 Sep 2026 19:29:43 +0000</pubDate>
+    </item>
+    <item>
+      <title>Apple security advisory (AV26-930)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-930</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-930</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.99</comments>
+      <pubDate>Wed, 16 Sep 2026 19:42:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>ISC BIND security advisory (AV26-931)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-931</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-931</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.99</comments>
+      <pubDate>Wed, 16 Sep 2026 19:43:29 +0000</pubDate>
     </item>
   </channel>
 </rss>
