@@ -8,27 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Sep 2026 18:19:04 +0000</lastBuildDate>
-    <item>
-      <title>Oracle Corporation security advisory (AV26-929)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-929</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-929</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
-      <pubDate>Wed, 16 Sep 2026 19:29:43 +0000</pubDate>
-    </item>
-    <item>
-      <title>Apple security advisory (AV26-930)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-930</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-930</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
-      <pubDate>Wed, 16 Sep 2026 19:42:16 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 24 Sep 2026 22:05:35 +0000</lastBuildDate>
     <item>
       <title>ISC BIND security advisory (AV26-931)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-931</link>
@@ -36,127 +16,30 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-931</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.55</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Wed, 16 Sep 2026 19:43:29 +0000</pubDate>
     </item>
     <item>
-      <title>AI malware just removed the human from the attack loop</title>
-      <link>https://www.csoonline.com/article/4225264/ai-malware-just-removed-the-human-from-the-attack-loop.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Attackers using AI have greatly benefited when it comes to speed and scale, and now, says Cisco Talos, the technology has evolved to execute large portions of the attack chain entirely without human involvement.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Researchers at the threat intelligence group have identified what they call the first “LLM-as-C2” architecture that can fully automate the command-and-control (C2) chain. Dubbed CLOSEDQUORUM, the malware binary relies on a panel of large language model (LLM) judges to map and execute the optimal path to steal credentials.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“This is not merely augmenting what an operator can accomplish in a session, but transferring an entire phase of the attack from the operator to the system,” Cisco Talos security and threat researcher &lt;a href="https://blogs.cisco.com/author/rfetterm" rel="noreferrer noopener" target="_blank"&gt;Ryan Fetterman&lt;/a&gt; explained in a &lt;a href="https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/" rel="noreferrer noopener" target="_blank"&gt;blog post&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The benefits of speed and scale are compounded because the human-in-the-loop is no longer the bottleneck, he noted. Whereas humans have limits when it comes to working hours, attention span, and cognitive load, an &lt;a href="https://www.csoonline.com/article/4223011/16-governance-tools-for-securing-your-ai-fleet.html" target="_blank"&gt;AI system&lt;/a&gt; can continue when its operators are no longer watching. “It does not go offline when the attacker sleeps,” he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Cisco Talos emphasized, however, that there is not yet any confirmation of CLOSEDQUORUM deployment in the wild.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="an-llm-panel-producing-executable-decisions"&gt;An LLM panel producing executable decisions&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Discovered by Cisco Talos’ new &lt;a href="https://blog.talosintelligence.com/introducing-cairn-frontier-tracking-for-ai-integrated-malware/" rel="noreferrer noopener" target="_blank"&gt;Cognitive Artifact Intelligence Research Network&lt;/a&gt; (CAIRN) research toolkit, CLOSEDQUORUM collapses decision-making around a particular attack phase into constrained choices, giving AI the ability to act independently.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The malware specifically targets Microsoft’s Local Security Authority Subsystem Service (LSASS) credential dumping; LSASS processes logins and password changes, and enforces security policies. Dumping can extract domain and local credentials from memory.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;CLOSEDQUORUM also executes browser credential theft, particularly targeting saved passwords in Chrome, Edge, and Firefox, and seeks to extract crypto wallets including MetaMask, Ethereum, and Exodus.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Tactical knowledge is directly encoded as model-readable context, and subsequent model outputs are automatically converted into executables. Compiled in Google’s Go programming language, the 64-bit Windows executable supports up to four LLM integrations: DeepSeek, Qwen, Mistral, and Google Gemini.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;After deployment, CLOSEDQUORUM queries the panel of models in sequence with the system prompt: ‘You are an advanced malware strategist. Provide ONLY executable decisions.’ CLOSEDQUORUM then tallies their independent verdicts and acts based on its goal of harvesting user credentials and crypto wallets.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The session is closed; no humans are admitted. Models receive context, choose capabilities, provide execution parameters, and continuously make decisions without the need for continued human commands or tasking from dedicated, attacker-operated C2 servers.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The complete dynamic operation is delegated to the AI,” Fetterman explained. The LLMs vote on next actions, and the action with the most votes is automatically selected. Importantly, the model panel is not free to respond in any format; it is constrained to using a defined JSON structure with a decision field mapping to a specific capability. Anything else is discarded.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“This design reduces the model’s output to a constrained set of executable choices,” Fetterman explained.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In the event of a tie, the &lt;a href="https://www.csoonline.com/article/4224418/the-cyber-ai-parity-window-now-has-a-deadline.html" target="_blank"&gt;malware&lt;/a&gt; decides based on model preference: first DeepSeek, then Qwen, Mistral, and, finally, Gemini. “The tie behavior is fully deterministic and biased toward DeepSeek,” Fetterman noted.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The multi-LLM structure reduces impacts from any individual refusals, timeouts, or malformed responses. Thus, “it increases the likelihood of obtaining a valid decision, but does not guarantee one,” Fetterman explained. The quorum can reach a decision even when one or more member is unresponsive or hits a guardrail. If all models happen to fail, this serves as a consensus, causing the loop to sleep and retry rather than defaulting to action.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Fetterman called CLOSEDQUORUM a credentials-as-a-service model, and noted that a human operator who acquires the malware does not need to be online to run their campaign. “They deploy the binary, and the LLM panel runs the attack,” he said. “This type of scaffolding approach could easily be translated and applied to other &lt;a href="https://www.csoonline.com/article/575497/owasp-lists-10-most-critical-large-language-model-vulnerabilities.html" target="_blank"&gt;adversary objectives&lt;/a&gt;.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-fleeting-window-of-ai-transition"&gt;A ‘fleeting window’ of AI transition&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Cisco Talos discovered CLOSEDQUORUM with its new CAIRN open-source research toolkit for hunting, classifying, and tracking AI-integrated malware. Released today, CAIRN is “metadata-first,” and can craft structured graphs of artifact relationships to help human defenders identify related malware families and infrastructure.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Malware samples are sent to &lt;a href="https://www.virustotal.com/" rel="noreferrer noopener" target="_blank"&gt;VirusTotal&lt;/a&gt;, which extracts and indexes static, dynamic, reputation, and behavioral metadata. AI-related artifacts are surfaced from content, behavior, URLs, labels, and resource metadata, and 12 targeted filters capture different classes of artifacts (APIs, prompts, frameworks, tooling, runtimes).&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Findings are classified by artifact, behavioral context, and operational families; text is studied for semantic similarities and relationships; and VirusTotal maps infrastructure, variants, and campaign connections.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Talos has used CAIRN to hunt malware development since July 2025, and the researchers have found that the autonomous framework is changing rapidly. “The progression from ‘LLM as optional feature’ to ‘fully autonomous multi-model consensus orchestrator with no human operator’ filled in within a single calendar year,” Fetterman noted.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Scripts have been compiled into malware, and tradecraft is being taught and spread as CLOSEDQUORUM and similar techniques reach threat actors with no connection to the original malware sample. “We may be in a fleeting window to observe AI transition,” Fetterman noted. “AI integration is becoming commonplace in all software.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;CLOSEDQUORUM in particular has distinct hallmarks: AI-provider API traffic originating from unexpected Windows executables; structured prompts containing context or capability language; repeated execution at randomized five minute to 15 minute intervals; and Discord webhook communication from the same process or host. Intrusions are achievable with currently available models and “ordinary API access,” Fetterman noted.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Still, the malware technique introduces weaknesses too: Provider refusals, malformed outputs, predictable tie-breaks, constrained schemas, and dependence on commercial APIs can all lead to attack failure.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Autonomy does not make the implant infallible; it exchanges some human limitations for model and infrastructure limitations,” Fetterman said. “The advantage for defenders is that this progression is still only beginning.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4225264/ai-malware-just-removed-the-human-from-the-attack-loop.html</guid>
+      <title>Six arrests for smuggling migrants via Schengen airports</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/six-arrests-for-smuggling-migrants-schengen-airports</link>
+      <description>Europol supported a migrant smuggling investigation involving law enforcement authorities from 17 countries. The criminal network was also engaged in document fraud and money laundering.
+
+The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kingdom (UK) led to six arrests, 10 house searches, and multiple seizures, including ID documents, electronic equipment, evidence, and a large amount of cash.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/six-arrests-for-smuggling-migrants-schengen-airports</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Wed, 23 Sep 2026 00:39:51 +0000</pubDate>
+      <comments>Score: 7.55</comments>
+      <pubDate>Thu, 24 Sep 2026 20:05:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cisco security advisory (AV26-932)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-932</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-932</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.65</comments>
+      <pubDate>Thu, 17 Sep 2026 15:34:44 +0000</pubDate>
     </item>
     <item>
       <title>Seven arrests in Brazil during crackdown on South America-Europe cocaine pipeline</title>
@@ -166,17 +49,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.66</comments>
-      <pubDate>Thu, 24 Sep 2026 16:19:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco security advisory (AV26-932)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-932</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-932</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Thu, 17 Sep 2026 15:34:44 +0000</pubDate>
+      <pubDate>Thu, 24 Sep 2026 20:05:35 +0000</pubDate>
     </item>
     <item>
       <title>AL26-021 - Vulnerabilities Impacting Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) - CVE-2026-20192, CVE-2026-76423 and CVE-2026-76460</title>
@@ -185,7 +58,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-021-vulnerabilities-impacting-cisco-identity-services-engine-ise-cisco-ise-passive-identity-connector-ise-pic-cve-2026-20192-cve-2026-76423-cve-2026-76460</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.69</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Thu, 17 Sep 2026 17:32:01 +0000</pubDate>
     </item>
     <item>
@@ -195,7 +68,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-933</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Thu, 17 Sep 2026 18:21:48 +0000</pubDate>
     </item>
     <item>
@@ -205,7 +78,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-934</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Thu, 17 Sep 2026 19:46:03 +0000</pubDate>
     </item>
     <item>
@@ -215,7 +88,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-935</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.68</comments>
       <pubDate>Thu, 17 Sep 2026 19:52:03 +0000</pubDate>
     </item>
     <item>
@@ -346,18 +219,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4225230/okta-bets-on-identity-to-control-ai-agents-but-is-identity-alone-enough.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Wed, 23 Sep 2026 08:25:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Crackdown on Italian organised criminal network involved in large-scale euro counterfeiting</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/crackdown-italian-organised-criminal-network-involved-in-large-scale-euro-counterfeiting</link>
-      <description>Europol has supported an international operation targeting a criminal network linked to the Italian mafia-type organisation Camorra. The operation, coordinated by the Baden-Württemberg State Criminal Police Office and the Stuttgart Public Prosecutor’s Office, resulted in the execution of six arrest warrants and simultaneous searches of 16 residential and commercial properties across Germany, Italy, and Spain. In Germany, two illegally held pistols with ammunition were seized, as well as counterfeit euro banknotes of Italian origin linked to the so-called “Napoli Group”. Furthermore, the officers in the field seized 16 phone mobiles and storage devices.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/crackdown-italian-organised-criminal-network-involved-in-large-scale-euro-counterfeiting</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
-      <pubDate>Thu, 24 Sep 2026 16:19:04 +0000</pubDate>
     </item>
     <item>
       <title>Grafana security advisory (AV26-936)</title>
@@ -366,7 +229,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av26-936</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Fri, 18 Sep 2026 13:46:15 +0000</pubDate>
     </item>
     <item>
@@ -376,7 +239,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-advantech-security-advisory-av26-937</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.82</comments>
       <pubDate>Fri, 18 Sep 2026 14:09:49 +0000</pubDate>
     </item>
     <item>
@@ -386,7 +249,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-938</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Fri, 18 Sep 2026 15:24:19 +0000</pubDate>
     </item>
     <item>
@@ -396,8 +259,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-939</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Fri, 18 Sep 2026 15:40:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>Crackdown on Italian organised criminal network involved in large-scale euro counterfeiting</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/crackdown-italian-organised-criminal-network-involved-in-large-scale-euro-counterfeiting</link>
+      <description>Europol has supported an international operation targeting a criminal network linked to the Italian mafia-type organisation Camorra. The operation, coordinated by the Baden-Württemberg State Criminal Police Office and the Stuttgart Public Prosecutor’s Office, resulted in the execution of six arrest warrants and simultaneous searches of 16 residential and commercial properties across Germany, Italy, and Spain. In Germany, two illegally held pistols with ammunition were seized, as well as counterfeit euro banknotes of Italian origin linked to the so-called “Napoli Group”. Furthermore, the officers in the field seized 16 phone mobiles and storage devices.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/crackdown-italian-organised-criminal-network-involved-in-large-scale-euro-counterfeiting</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.85</comments>
+      <pubDate>Thu, 24 Sep 2026 20:05:35 +0000</pubDate>
     </item>
     <item>
       <title>Arista Networks security advisory (AV26-940)</title>
@@ -406,7 +279,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-940</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.88</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Fri, 18 Sep 2026 17:29:31 +0000</pubDate>
     </item>
     <item>
@@ -416,7 +289,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-941</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Fri, 18 Sep 2026 17:40:52 +0000</pubDate>
     </item>
     <item>
@@ -426,7 +299,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-942</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.89</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Fri, 18 Sep 2026 17:52:31 +0000</pubDate>
     </item>
     <item>
@@ -436,7 +309,7 @@
       <guid isPermaLink="false">https://www.cybersecuritydive.com/news/wiz-ai-critical-infrastructure-scan-for-good/831255/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Thu, 24 Sep 2026 11:11:00 -0400</pubDate>
     </item>
     <item>
@@ -583,7 +456,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4225812/check-point-hacked-the-security-software-protecting-your-network-has-become-a-prime-attack-target.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.38</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Thu, 24 Sep 2026 02:05:30 +0000</pubDate>
     </item>
     <item>
@@ -593,38 +466,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-943</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.82</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Mon, 21 Sep 2026 14:36:37 +0000</pubDate>
-    </item>
-    <item>
-      <title>Exim security advisory (AV26-944)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/exim-security-advisory-av26-944</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/exim-security-advisory-av26-944</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.82</comments>
-      <pubDate>Mon, 21 Sep 2026 14:51:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>MongoDB Security Advisory (AV26-945)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.87</comments>
-      <pubDate>Mon, 21 Sep 2026 17:21:24 +0000</pubDate>
-    </item>
-    <item>
-      <title>MISP security advisory (AV26-946)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-946</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-946</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.89</comments>
-      <pubDate>Mon, 21 Sep 2026 18:29:06 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft integrates SOC capabilities with Defender for enterprises</title>
@@ -742,8 +585,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4226195/microsoft-integrates-soc-capabilities-with-defender-for-enterprises.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Thu, 24 Sep 2026 15:55:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>Exim security advisory (AV26-944)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/exim-security-advisory-av26-944</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/exim-security-advisory-av26-944</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.75</comments>
+      <pubDate>Mon, 21 Sep 2026 14:51:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>MongoDB Security Advisory (AV26-945)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.80</comments>
+      <pubDate>Mon, 21 Sep 2026 17:21:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>MISP security advisory (AV26-946)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-946</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-946</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.82</comments>
+      <pubDate>Mon, 21 Sep 2026 18:29:06 +0000</pubDate>
     </item>
     <item>
       <title>Veeam security advisory (AV26-513) – Update 1</title>
@@ -752,7 +625,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-513</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.91</comments>
+      <comments>Score: 8.84</comments>
       <pubDate>Mon, 21 Sep 2026 19:24:49 +0000</pubDate>
     </item>
     <item>
@@ -762,7 +635,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-603</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Mon, 21 Sep 2026 20:12:57 +0000</pubDate>
     </item>
     <item>
@@ -772,7 +645,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-503</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.93</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Mon, 21 Sep 2026 20:20:59 +0000</pubDate>
     </item>
     <item>
@@ -835,7 +708,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4225721/f5-fixes-actively-exploited-zero-day-flaw-in-big-ip-apm.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.07</comments>
       <pubDate>Wed, 23 Sep 2026 20:44:25 +0000</pubDate>
     </item>
     <item>
@@ -845,7 +718,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-948</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.36</comments>
+      <comments>Score: 9.27</comments>
       <pubDate>Tue, 22 Sep 2026 15:30:00 +0000</pubDate>
     </item>
     <item>
@@ -855,7 +728,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-022-vulnerability-impacting-f5-big-ip-access-policy-manager-apm-cve-2026-94127</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.45</comments>
+      <comments>Score: 9.35</comments>
       <pubDate>Tue, 22 Sep 2026 19:10:40 +0000</pubDate>
     </item>
     <item>
@@ -865,7 +738,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-947</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Tue, 22 Sep 2026 20:02:58 +0000</pubDate>
     </item>
     <item>
@@ -875,7 +748,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-949</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.47</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Tue, 22 Sep 2026 20:10:20 +0000</pubDate>
     </item>
     <item>
@@ -885,7 +758,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-902</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.48</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Tue, 22 Sep 2026 20:32:13 +0000</pubDate>
     </item>
     <item>
@@ -895,7 +768,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-950</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.00</comments>
+      <comments>Score: 9.89</comments>
       <pubDate>Wed, 23 Sep 2026 14:45:56 +0000</pubDate>
     </item>
     <item>
@@ -905,7 +778,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-951</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.02</comments>
+      <comments>Score: 9.90</comments>
       <pubDate>Wed, 23 Sep 2026 15:13:27 +0000</pubDate>
     </item>
     <item>
@@ -915,8 +788,123 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-952</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.03</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Wed, 23 Sep 2026 15:35:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>WordPress patches a critical severity security vulnerability</title>
+      <link>https://www.csoonline.com/article/4226330/wordpress-patches-a-critical-severity-security-vulnerability.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;WordPress has patched what it described as a critical severity security vulnerability that would allow an unauthenticated attacker full remote code execution (RCE) capabilities. There have already been reports of attacks in the wild.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Given its popularity, WordPress has frequently been &lt;a href="https://www.csoonline.com/article/4118066/modular-ds-bug-hands-hackers-instant-wordpress-admin-access.html" target="_blank"&gt;under attack&lt;/a&gt;, and patched another &lt;a href="https://www.csoonline.com/article/4198791/patch-now-wordpress-rest-api-bug-allows-remote-code-execution.html" target="_blank"&gt;maximum severity bug allowing RCE&lt;/a&gt; in July. WordPress said the current hole, tracked as &lt;a href="https://ressl.ch/blog/cve-2026-87902-wordpress/" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-87902&lt;/a&gt;, was discovered and reported to the company by Switzerland-based security researcher &lt;a href="https://www.linkedin.com/in/robertressl/" rel="noreferrer noopener" target="_blank"&gt;Robert Ressl&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The &lt;a href="https://wordpress.org/news/2026/09/wordpress-7-1-2-release/"&gt;post&lt;/a&gt; announcing the WordPress 7.1.2 security release said that the fix addressed an issue where “an unauthenticated attacker can, under certain conditions, make page template resolution include a chosen readable local PHP file outside the active theme directories. If relevant pre-conditions for both the server environment and the active theme are met, this can lead to remote code execution (RCE).”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;It urged users to update their sites immediately, and said that the fix had been backported through version 4.7, as the hole also impacts many older versions of WordPress.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/noah-m-kenney-27499a166/" rel="noreferrer noopener" target="_blank"&gt;Noah Kenney&lt;/a&gt;, principal consultant at Digital 520, said his top concern was the massive extent of damage an attacker could inflict with this hole. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Once attackers have PHP execution, they can read &lt;em&gt;wp-config.php&lt;/em&gt;, obtain database credentials and authentication keys, create administrator accounts, alter payment or lead capture forms, redirect visitors, and install persistent code,” he said. “The less obvious part is how they get there. &lt;em&gt;Pearcmd.php&lt;/em&gt; is a legitimate PHP package management tool, but attackers can abuse its configuration commands to write content of their choosing to disk. The current attacks use it to place malicious PHP in &lt;em&gt;/tmp&lt;/em&gt;, then use the WordPress flaw to load and execute that file. A security team monitoring only the WordPress directory for changes could miss that first stage entirely.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="new-risk-reality"&gt;New risk reality&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;But IDC and others saw the speed with which attacks began as the most concerning element of this report. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“This WordPress vulnerability is a textbook example of the new risk reality: attackers are exploiting critical bugs within hours of disclosure, and most enterprises are not patching fast enough to keep up,” said IDC Research Director &lt;a href="https://my.idc.com/getdoc.jsp?containerId=PRF005506" rel="noreferrer noopener" target="_blank"&gt;Philip Harris&lt;/a&gt;, citing &lt;a href="https://patchstack.com/articles/cve-2026-87902-attackers-started-probing-wordpress-sites-hours-after-the-patch/" rel="noreferrer noopener" target="_blank"&gt;reports from security firm Patchstack&lt;/a&gt; that attackers had leveraged the hole shortly after WordPress posted the patch. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Patchstack said, “When this post first went up, every request we had seen was reconnaissance against harmless core files. That is no longer true. Attackers are now including &lt;em&gt;pearcmd.php&lt;/em&gt; and using it to write PHP files to disk and public scanning tooling for this CVE is in circulation.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;IDC’s Harris noted that Patchstack’s telemetry illustrated the new reality, with attacker reconnaissance occurring within five hours of the patch, and full exploitation within about a day. “The window between disclosure and exploitation has collapsed to the point that mean time to exploit for critical vulnerabilities is now negative in some cases, meaning exploit code appears before or immediately after a patch ships,” he said. “This WordPress bug tracks that pattern closely: Patchstack recorded the first probing traffic under five hours after WordPress 7.1.2 was released, and traffic volume increased roughly tenfold within a day as attackers moved from scanning to actual payload delivery.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/akm76/" rel="noreferrer noopener" target="_blank"&gt;Aman Mahapatra&lt;/a&gt;, chief strategy officer for New York City-based technology consulting firm Tribeca Softech, agreed.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The number that should anchor this story is not the 9.2 CVSS score, but it is the gap between patch and exploit. With this vulnerability, that gap was effectively zero,” he said. “WordPress shipped 7.1.2 on September 22, and Patchstack blocked the first exploitation attempt at 11:49 UTC the same day, using payloads that matched the exact encoding the patch was written to fix. Attackers did not discover this bug. They read the fix. Publishing a patch is now functionally publishing an exploit guide, and any enterprise still running a remediation cycle measured in weeks is operating on a timeline that stopped existing some time ago.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="speedier-patching-needed"&gt;Speedier patching needed&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;One response to the speed of attacker actions is to automate updates, but that is not necessarily a good option. Some enterprise CISOs are nervous about excessive patch automation; they want to review and approve any system changes, mostly to avoid disasters such as &lt;a href="https://www.csoonline.com/article/3487735/crowdstrike-questions-could-give-cisos-pause-with-options-available.html" target="_blank"&gt;2024’s Crowdstrike incident&lt;/a&gt;. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Ressl said in an interview that another concern about automated updates is that many enterprises don’t perform sufficient verification that the updates executed properly.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Having automatic updates enabled is not the same as verifying that the patch is installed,” he said. “Compatibility and availability concerns are legitimate reasons for testing updates. My recommendation is a rapid, tested rollout with verification across all exposed installations, including staging sites.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Mahapatra added that the problem with update automation is especially severe in larger enterprises. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“WordPress applies minor security releases automatically by default, which means the average hobbyist blog is probably already patched,” he pointed out. “Enterprise sites routinely disable those auto-updates to enforce change control, so the organizations with the most mature governance are the ones most likely to still be exposed this week, because their own process is holding the fix in a queue while attackers scan. Change control that cannot distinguish an unauthenticated remote code execution flaw from a routine plugin update is protecting the process rather than the enterprise, and this is the vulnerability that makes that distinction expensive.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;And, noted &lt;a href="https://acceligence.com/talent/profiles/nidhi-luthra/" rel="noreferrer noopener" target="_blank"&gt;Nidhi Luthra&lt;/a&gt;, executive advisor for Acceligence: “A security release can become an attacker roadmap almost immediately, so emergency patching for internet-facing systems needs an hours-level response.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="forgotten-wordpress-sites-may-not-be-patched"&gt;Forgotten WordPress sites may not be patched&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Mahapatra added that another, perhaps bigger, concern is the fact that many enterprise WordPress deployments happen below the radar. They are not typical shadow IT, because they are fully authorized at the time, but they are still often unknown to IT management. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In enterprises, he said, “the exposure is materially larger than most organizations will assume because most enterprises do not think of themselves as WordPress shops, and almost all of them are. The risk sits in the web estate that IT never inventoried: marketing microsites, campaign landing pages, regional country sites, investor relations pages built by an outside agency, and the properties of companies acquired three years ago that nobody got around to migrating. The affected [WordPress version] range runs from 4.7.0 through 7.1.1, nearly a decade of installs, and the forgotten sites are precisely the ones still sitting on old branches.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Mahapatra said that he has especially seen this in enterprises in the finance vertical.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“When I walk through external attack surface reviews with banking CISOs, the WordPress instances that surface are almost never the corporate site,” he said. “They are the sites that belong to marketing, a subsidiary, or an agency contract that expired, and none of them appear in the CMDB the security team is patching against.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4226330/wordpress-patches-a-critical-severity-security-vulnerability.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.93</comments>
+      <pubDate>Thu, 24 Sep 2026 20:26:22 +0000</pubDate>
     </item>
     <item>
       <title>Adobe security advisory (AV26-953)</title>
@@ -925,7 +913,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-953</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.09</comments>
+      <comments>Score: 9.97</comments>
       <pubDate>Wed, 23 Sep 2026 17:37:47 +0000</pubDate>
     </item>
     <item>
@@ -935,7 +923,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-954</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.10</comments>
+      <comments>Score: 9.98</comments>
       <pubDate>Wed, 23 Sep 2026 17:46:25 +0000</pubDate>
     </item>
     <item>
@@ -945,7 +933,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-955</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.10</comments>
+      <comments>Score: 9.98</comments>
       <pubDate>Wed, 23 Sep 2026 17:47:42 +0000</pubDate>
     </item>
     <item>
@@ -955,7 +943,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-956</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.10</comments>
+      <comments>Score: 9.98</comments>
       <pubDate>Wed, 23 Sep 2026 17:49:55 +0000</pubDate>
     </item>
     <item>
@@ -965,7 +953,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nvidia-security-advisory-av26-957</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.11</comments>
+      <comments>Score: 9.99</comments>
       <pubDate>Wed, 23 Sep 2026 18:07:07 +0000</pubDate>
     </item>
     <item>
@@ -975,7 +963,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-958</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.12</comments>
+      <comments>Score: 10.00</comments>
       <pubDate>Wed, 23 Sep 2026 18:33:57 +0000</pubDate>
     </item>
     <item>
@@ -985,7 +973,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-959</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.02</comments>
       <pubDate>Wed, 23 Sep 2026 19:10:58 +0000</pubDate>
     </item>
     <item>
@@ -995,7 +983,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/forcepoint-security-advisory-av26-960</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.14</comments>
+      <comments>Score: 10.02</comments>
       <pubDate>Wed, 23 Sep 2026 19:11:24 +0000</pubDate>
     </item>
     <item>
@@ -1005,7 +993,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-961</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.85</comments>
+      <comments>Score: 10.70</comments>
       <pubDate>Thu, 24 Sep 2026 14:43:22 +0000</pubDate>
     </item>
     <item>
@@ -1015,7 +1003,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-august-2026-monthly-rollup-av26-804</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.86</comments>
+      <comments>Score: 10.71</comments>
       <pubDate>Thu, 24 Sep 2026 14:48:52 +0000</pubDate>
     </item>
     <item>
@@ -1025,8 +1013,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-023-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-65660</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.95</comments>
+      <comments>Score: 10.80</comments>
       <pubDate>Thu, 24 Sep 2026 17:12:45 +0000</pubDate>
+    </item>
+    <item>
+      <title>Adobe security advisory (AV26-808) – Update 2</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-808</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-808</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.92</comments>
+      <pubDate>Thu, 24 Sep 2026 20:04:25 +0000</pubDate>
     </item>
     <item>
       <title>[Virtual Event] Cybersecurity Outlook 2027</title>
@@ -1034,7 +1032,7 @@
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 155498946.12</comments>
+      <comments>Score: 149502337.86</comments>
       <pubDate>Thu, 03 Dec 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
