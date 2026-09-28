@@ -8,90 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Sep 2026 06:25:49 +0000</lastBuildDate>
-    <item>
-      <title>F5 fixes actively exploited zero-day flaw in BIG-IP APM</title>
-      <link>https://www.csoonline.com/article/4225721/f5-fixes-actively-exploited-zero-day-flaw-in-big-ip-apm.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Technology company F5 fixed a critical remote code execution vulnerability in its BIG-IP Access Policy Manager (APM) platform on Tuesday. The flaw impacts deployments configured as OAuth authorization servers and was already under active exploitation in the wild before the patch became available.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;BIG-IP APM is a software component in F5’s BIG-IP hardware platform that enables companies to control access to internal network resources. APM performs various client-side checks and handles authorization and authentication, along with providing VPN connectivity for remote users.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The flaw, tracked as CVE-2026-94127, is described as a heap-based buffer overflow and is rated 9.8 on the CVSS scale. The vulnerability impacts the BIG-IP system when configured in appliance mode as well but can be exploited only when both APM and an OAuth authorization server profile are configured.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Deployments using APM only as an OAuth client or resource server are not affected, F5 said in &lt;a href="https://my.f5.com/manage/s/article/K000162605"&gt;its advisory&lt;/a&gt;. The company advises users to apply Hotfix-BIGIP-21.1.0.2.0.30.22-ENG.iso for the 21.x for the 21.x release branch and Hotfix-BIGIP-17.5.1.9.0.160.12-ENG.iso or Hotfix-BIGIP 17.1.3.5.0.41.14-ENG.iso for the still supported 17.5.x and 17.1.x branches.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In addition to the fixes, F5 also released an iRule that can be obtained from the support portal and can be deployed as mitigation until the patch gets applied.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="check-for-oauth-failures"&gt;Check for OAuth failures&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The US Cybersecurity and Infrastructure Security Agency (CISA) &lt;a href="https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog"&gt;added this vulnerability to its Known Exploited Vulnerabilities (KEV) catalog&lt;/a&gt; on Tuesday, signaling confirmed active exploitation in the wild. The Shadowserver &lt;a href="https://dashboard.shadowserver.org/statistics/iot-devices/time-series/?date_range=7&amp;amp;vendor=f5&amp;amp;model=big-ip+apm&amp;amp;dataset=count&amp;amp;limit=100&amp;amp;group_by=geo&amp;amp;stacking=stacked"&gt;Foundation tracks more than 15,000 BIG-IP APM deployments exposed to the internet&lt;/a&gt;, with North America and Europe accounting for around 5,000 each.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;F5 advises customers to check installations for several indicators of compromise that require correlation as the presence of just one is not necessarily a sign of exploitation.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“At a high level, multiple OAuth authentication failures, followed by suspicious commands, shortly followed by a TMM SIGABRT is the combination that should lead to human review of the system,” the company said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;OAuth authentication failures are not unusual, but a repetition of more than 10 such messages in the logs, especially originating from the same IP address, should be reason for further investigation. The following command can reveal the number of authentication failures: &lt;code&gt;tmctl global_oauth_stat -s total_requests,total_userinfo_requests,total_failed&lt;/code&gt;&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;If suspicious counts of OAuth messages are noticed, administrators should review the information recorded around those timestamps in &lt;code&gt;/var/log/audit&lt;/code&gt;, as well as the presence of TMM core files because exploitation can cause the TMM to enter a loop and crash, generating such files.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;BIG-IP APM and other F5 devices and appliances have been targeted by attackers over the past few years as part of &lt;a href="https://www.csoonline.com/article/4074945/network-security-devices-endanger-orgs-with-90s-era-flaws.html"&gt;a larger trend of compromising network edge devices&lt;/a&gt; and VPN gateways as an entry point into corporate networks. Just earlier this month, security researchers &lt;a href="https://www.csoonline.com/article/4220693/stealth-rootkit-targeting-f5-big-ip-could-expose-enterprise-identity-gateways.html"&gt;uncovered a Linux rootkit implant specifically designed for BIG-IP APM systems&lt;/a&gt; that was linked to exploitation of an older vulnerability, CVE-2025-5352.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4225721/f5-fixes-actively-exploited-zero-day-flaw-in-big-ip-apm.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
-      <pubDate>Wed, 23 Sep 2026 20:44:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grafana security advisory (AV26-936)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av26-936</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/grafana-security-advisory-av26-936</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Fri, 18 Sep 2026 13:46:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] Advantech security advisory (AV26-937)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-advantech-security-advisory-av26-937</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-advantech-security-advisory-av26-937</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
-      <pubDate>Fri, 18 Sep 2026 14:09:49 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 28 Sep 2026 15:04:23 +0000</lastBuildDate>
     <item>
       <title>[Control Systems] Moxa security advisory (AV26-938)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-938</link>
@@ -99,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-938</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Fri, 18 Sep 2026 15:24:19 +0000</pubDate>
     </item>
     <item>
@@ -109,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-939</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Fri, 18 Sep 2026 15:40:56 +0000</pubDate>
     </item>
     <item>
@@ -119,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-940</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 18 Sep 2026 17:29:31 +0000</pubDate>
     </item>
     <item>
@@ -129,7 +46,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-941</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 18 Sep 2026 17:40:52 +0000</pubDate>
     </item>
     <item>
@@ -139,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-abb-security-advisory-av26-942</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 18 Sep 2026 17:52:31 +0000</pubDate>
     </item>
     <item>
@@ -152,7 +69,7 @@ This question was at the heart of the 17th Europol Data Protection Experts Netwo
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Mon, 28 Sep 2026 04:25:49 +0000</pubDate>
+      <pubDate>Mon, 28 Sep 2026 13:04:23 +0000</pubDate>
     </item>
     <item>
       <title>Drug trafficking investigation leads to some of the world’s biggest underground bankers</title>
@@ -162,17 +79,7 @@ This question was at the heart of the 17th Europol Data Protection Experts Netwo
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 28 Sep 2026 04:25:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>International investigation identifies over 70 potential victims exploited in Indian restaurants</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-investigation-identifies-over-70-potential-victims-exploited-in-indian-restaurants</link>
-      <description>The coordinated action conducted on 18 September 2026 led to two arrests. Allegedly, the traffickers forced their victims to work up to 16 hours per day, underpaid them and impeded them from leaving the country. It is estimated that the criminal network generated at least EUR 4 million in illicit profits by underpaying and exploiting the workers.Investigators suspect that the...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-investigation-identifies-over-70-potential-victims-exploited-in-indian-restaurants</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 28 Sep 2026 04:25:49 +0000</pubDate>
+      <pubDate>Mon, 28 Sep 2026 13:04:23 +0000</pubDate>
     </item>
     <item>
       <title>Andorran Police joins Europol’s secure communication network</title>
@@ -182,7 +89,7 @@ This question was at the heart of the 17th Europol Data Protection Experts Netwo
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 28 Sep 2026 04:25:49 +0000</pubDate>
+      <pubDate>Mon, 28 Sep 2026 13:04:23 +0000</pubDate>
     </item>
     <item>
       <title>Two-week Europol task force identifies 18 sexually abused children worldwide</title>
@@ -192,7 +99,17 @@ This question was at the heart of the 17th Europol Data Protection Experts Netwo
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 28 Sep 2026 04:25:49 +0000</pubDate>
+      <pubDate>Mon, 28 Sep 2026 13:04:23 +0000</pubDate>
+    </item>
+    <item>
+      <title>International investigation identifies over 70 potential victims exploited in Indian restaurants</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/international-investigation-identifies-over-70-potential-victims-exploited-in-indian-restaurants</link>
+      <description>The coordinated action conducted on 18 September 2026 led to two arrests. Allegedly, the traffickers forced their victims to work up to 16 hours per day, underpaid them and impeded them from leaving the country. It is estimated that the criminal network generated at least EUR 4 million in illicit profits by underpaying and exploiting the workers.Investigators suspect that the...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/international-investigation-identifies-over-70-potential-victims-exploited-in-indian-restaurants</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 28 Sep 2026 13:04:23 +0000</pubDate>
     </item>
     <item>
       <title>Six arrests for smuggling migrants via Schengen airports</title>
@@ -204,17 +121,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Mon, 28 Sep 2026 04:25:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Seven arrests in Brazil during crackdown on South America-Europe cocaine pipeline</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/seven-arrests-in-brazil-during-crackdown-south-america-europe-cocaine-pipeline</link>
-      <description>Europol has supported law enforcement agencies from Italy and Brazil in dismantling a major drug trafficking and money laundering network linked to the Italian ‘Ndrangheta. The operation, code-named operation ‘EREDITÀ’, led to seven arrests and is the culmination of a multi-year investigation into large-scale cocaine trafficking and money laundering between South America and Europe. This success builds on previous Italian and Brazilian operations ‘SAMBA’ and ‘MAFIUSI’, which led to 28 arrests across both countries.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/seven-arrests-in-brazil-during-crackdown-south-america-europe-cocaine-pipeline</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Mon, 28 Sep 2026 04:25:49 +0000</pubDate>
+      <pubDate>Mon, 28 Sep 2026 13:04:23 +0000</pubDate>
     </item>
     <item>
       <title>WordPress patches a critical severity security vulnerability</title>
@@ -328,8 +235,18 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://www.csoonline.com/article/4226330/wordpress-patches-a-critical-severity-security-vulnerability.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Thu, 24 Sep 2026 20:26:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>Seven arrests in Brazil during crackdown on South America-Europe cocaine pipeline</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/seven-arrests-in-brazil-during-crackdown-south-america-europe-cocaine-pipeline</link>
+      <description>Europol has supported law enforcement agencies from Italy and Brazil in dismantling a major drug trafficking and money laundering network linked to the Italian ‘Ndrangheta. The operation, code-named operation ‘EREDITÀ’, led to seven arrests and is the culmination of a multi-year investigation into large-scale cocaine trafficking and money laundering between South America and Europe. This success builds on previous Italian and Brazilian operations ‘SAMBA’ and ‘MAFIUSI’, which led to 28 arrests across both countries.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/seven-arrests-in-brazil-during-crackdown-south-america-europe-cocaine-pipeline</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.66</comments>
+      <pubDate>Mon, 28 Sep 2026 13:04:23 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-943)</title>
@@ -338,7 +255,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-943</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Mon, 21 Sep 2026 14:36:37 +0000</pubDate>
     </item>
     <item>
@@ -348,7 +265,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/exim-security-advisory-av26-944</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Mon, 21 Sep 2026 14:51:36 +0000</pubDate>
     </item>
     <item>
@@ -358,7 +275,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.71</comments>
       <pubDate>Mon, 21 Sep 2026 17:21:24 +0000</pubDate>
     </item>
     <item>
@@ -368,7 +285,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-946</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
+      <comments>Score: 7.72</comments>
       <pubDate>Mon, 21 Sep 2026 18:29:06 +0000</pubDate>
     </item>
     <item>
@@ -378,7 +295,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-513</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 21 Sep 2026 19:24:49 +0000</pubDate>
     </item>
     <item>
@@ -388,7 +305,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-603</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 21 Sep 2026 20:12:57 +0000</pubDate>
     </item>
     <item>
@@ -398,7 +315,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-503</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.73</comments>
       <pubDate>Mon, 21 Sep 2026 20:20:59 +0000</pubDate>
     </item>
     <item>
@@ -409,7 +326,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.85</comments>
-      <pubDate>Mon, 28 Sep 2026 04:25:49 +0000</pubDate>
+      <pubDate>Mon, 28 Sep 2026 13:04:23 +0000</pubDate>
     </item>
     <item>
       <title>Erlang security advisory (AV26-948)</title>
@@ -418,7 +335,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/erlang-security-advisory-av26-948</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Tue, 22 Sep 2026 15:30:00 +0000</pubDate>
     </item>
     <item>
@@ -428,7 +345,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-022-vulnerability-impacting-f5-big-ip-access-policy-manager-apm-cve-2026-94127</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Tue, 22 Sep 2026 19:10:40 +0000</pubDate>
     </item>
     <item>
@@ -438,7 +355,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-947</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Tue, 22 Sep 2026 20:02:58 +0000</pubDate>
     </item>
     <item>
@@ -448,7 +365,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-949</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Tue, 22 Sep 2026 20:10:20 +0000</pubDate>
     </item>
     <item>
@@ -458,7 +375,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-902</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Tue, 22 Sep 2026 20:32:13 +0000</pubDate>
     </item>
     <item>
@@ -468,7 +385,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-950</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Wed, 23 Sep 2026 14:45:56 +0000</pubDate>
     </item>
     <item>
@@ -478,7 +395,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-951</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Wed, 23 Sep 2026 15:13:27 +0000</pubDate>
     </item>
     <item>
@@ -488,7 +405,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-953</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Wed, 23 Sep 2026 17:37:47 +0000</pubDate>
     </item>
     <item>
@@ -498,7 +415,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-954</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Wed, 23 Sep 2026 17:46:25 +0000</pubDate>
     </item>
     <item>
@@ -508,7 +425,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-955</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Wed, 23 Sep 2026 17:47:42 +0000</pubDate>
     </item>
     <item>
@@ -518,7 +435,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-956</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Wed, 23 Sep 2026 17:49:55 +0000</pubDate>
     </item>
     <item>
@@ -528,7 +445,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nvidia-security-advisory-av26-957</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Wed, 23 Sep 2026 18:07:07 +0000</pubDate>
     </item>
     <item>
@@ -538,7 +455,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-958</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Wed, 23 Sep 2026 18:33:57 +0000</pubDate>
     </item>
     <item>
@@ -548,7 +465,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-959</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Wed, 23 Sep 2026 19:10:58 +0000</pubDate>
     </item>
     <item>
@@ -558,7 +475,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/forcepoint-security-advisory-av26-960</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
+      <comments>Score: 8.20</comments>
       <pubDate>Wed, 23 Sep 2026 19:11:24 +0000</pubDate>
     </item>
     <item>
@@ -568,7 +485,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-961</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.47</comments>
       <pubDate>Thu, 24 Sep 2026 14:43:22 +0000</pubDate>
     </item>
     <item>
@@ -578,7 +495,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-023-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-65660</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Thu, 24 Sep 2026 17:12:45 +0000</pubDate>
     </item>
     <item>
@@ -588,8 +505,119 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-808</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.55</comments>
       <pubDate>Thu, 24 Sep 2026 20:04:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>Stolen AI credentials feed growing LLM proxy economy</title>
+      <link>https://www.csoonline.com/article/4227199/stolen-ai-credentials-feed-growing-llm-proxy-economy.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Cyber threat groups have increasingly targeted enterprise AI assets, such as credentials, cloud environments, and research, as a means for &lt;a href="https://www.csoonline.com/article/4221307/threat-actors-are-coming-for-your-ai-assets-to-operationalize-their-use-of-ai.html"&gt;operationalizing their own use of AI&lt;/a&gt;. Now, another sophisticated means for obfuscating illegitimate use of AI resources is coming more clearly to light.  &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.team-cymru.com/post/llm-gateway-frontier-model-abuse"&gt;According to a report last week&lt;/a&gt; from security firm Team Cymru, malicious actors are employing proxy servers, known as transfer stations, to hide the origin of traffic to frontier AI models, providing cover for model distillation attacks and potential abuse of stolen AI subscription credentials.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Team Cymru researchers initially identified 10,867 such servers running two open-source relay platforms called Claude Relay Service (CRS) and its successor, sub2api. Their investigation later expanded, and the total number of such proxies is now estimated at more than 80,000.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“A transfer station breaks the assumption every frontier-model control depends on: that the account making a request belongs to the party consuming the answer,” said Scott Fisher, senior principal engineer at Team Cymru, in the company’s report. “What we have uncovered is an entire ecosystem designed explicitly to break the frontier model providers’ T&amp;amp;Cs, enabling fraud and illicit activity.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;These transfer services authenticate customers with their own accounts but connect to upstream AI services using pools of API keys or logged-in consumer subscriptions that in many cases have been obtained through malicious activities such as credential theft.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Team Cymru managed to tie several clusters of activity through these proxies to IP addresses in China and Hong Kong. Considering that over half of the transfer gateways are hosted on VPS services in the US, it suggests the intent is to hide the geographic location of the traffic, potentially to enable model distillation attacks, in which targeted prompts are designed to extract model knowledge that is then used to train and improve other AI models.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;All the frontier labs have reported distillation attacks against their services, and earlier this month the NSA, CISA, and FBI published &lt;a href="https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/4592113/nsa-and-others-warn-china-based-ai-companies-are-distilling-us-frontier-ai-mode/"&gt;an advisory&lt;/a&gt; directly accusing six China-based AI companies of engaging in industrial-scale distillation of US models through transfer stations and fraudulent account pools.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;But distillation is far from the only use for these services. In August researchers from Palo Alto Networks &lt;a href="https://unit42.paloaltonetworks.com/ai-token-jacking/"&gt;warned about the increasing number of AI token-jacking cases&lt;/a&gt;, in which stolen API tokens and subscription credentials were abused via transfer stations leading to hundreds of thousands of dollars in losses to victims. Credentials associated with privileged enterprise developer accounts are harvested via information stealers, phishing campaigns, and supply-chain attacks via npm packages.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.okta.com/blog/threat-intelligence/signing_in_without_actually_signing_in/"&gt;An investigation of infostealer data dumps by Okta Threat Intelligence&lt;/a&gt; found 561 Anthropic session tokens collected from 5,871 infected machines, including 164 that had not expired when the dataset was released. It also identified 24 valid API keys for Gemini, OpenAI, Groq, and OpenRouter, along with underground tools designed to find AI-service sessions in stolen browser data.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Meanwhile researchers from &lt;a href="https://gambit.security/ai-across-the-intrusion-lifecycle"&gt;Gambit Security observed&lt;/a&gt; a Chinese-speaking threat actor validating 2,975 credentials collected from 1,742 hosts and uploading working keys to an AI API-reselling gateway. The collection included 448 Gemini keys, 254 OpenAI keys, 176 Anthropic keys, as well as credentials for Groq, OpenRouter, xAI, and Amazon Web Services.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="a-commercial-relay-ecosystem"&gt;A commercial relay ecosystem&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The two most common relay packages in Team Cymru’s initial scan were CSR and sub2api, both published on GitHub by a developer known as Wei-Shaw. The newer platform supports user management, per-user billing, subscription-to-API conversion, model routing, and prompt auditing.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The sub2api project has been forked more than 8,000 times and its Telegram channel has almost 7,000 subscribers. Interestingly, its GitHub page lists 26 commercial sponsors, including 15 API relay resellers, residential proxy vendors, two AI account providers, a content delivery network optimized for relay traffic, and a media-generation API service.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Meanwhile, Palo Alto Networks found transfer stations running new-api and one-api, two other open-source platforms, and noted that many AI transfer station advertisements are being posted on Chinese-language marketplaces such as Taobao.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="china-linked-traffic"&gt;China-linked traffic&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Team Cymru analyzed a cluster of servers hosted by several US virtual private server providers and found more than 4,000 IP addresses in China and Hong Kong connecting to 304 transfer stations. During eight days in late August, those addresses sent approximately 14TB to the relays and received more than 7TB.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The relays contacted both Chinese AI services, including DeepSeek, Qwen, Zhipu, MiniMax, and ByteDance’s Doubao, as well as Western providers such as Anthropic, OpenAI, Google, and xAI. However, the researchers noted that traffic toward the Chinese services was lower-volume and download-heavy, while traffic toward the Western providers was upload-heavy.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Seventeen relays proxying traffic to Anthropic’s API, uploaded approximately 81GB while receiving approximately 1.4GB, a ratio of 58 to 1. Team Cymru estimated the uploaded data could represent between 16 billion and 23 billion input tokens if it consisted of text-based context.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Team Cymru could not see the prompts or responses so could not confirm what the sessions were about, but the unusual traffic pattern could be consistent with automated querying for model distillation.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Inference endpoints are live, production attack surfaces,” Joe Brinkley, head of offensive security at Cobalt, tells CSO. “If providers want to protect their models from extraction, they need to defend them at the application layer with real behavioral telemetry, sybil defenses, and output controls, rather than expecting policy and compliance to do the heavy lifting.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="protecting-ai-credentials"&gt;Protecting AI credentials&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Organizations should treat model credentials like other production secrets. Long-lived keys should be replaced with short-lived credentials where possible, and API accounts should have configured spending limits and alerts for changes in request volume, models used, and activity at unusual times of day. Privileged developer accounts that can create keys or change billing limits should have even stricter monitoring.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Security teams should regularly scan their organization’s repositories, containers, application packages, and configuration files for exposed AI credentials. Where possible long-lived credentials should live outside agent sandboxes, and temporary tokens should be generated and injected into workflows when approved tools require them.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Incident response procedures should include playbooks for the immediate revocation and rotation of AI credentials along with invalidation of any active session tokens associated with compromised AI subscriptions.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4227199/stolen-ai-credentials-feed-growing-llm-proxy-economy.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.73</comments>
+      <pubDate>Mon, 28 Sep 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
       <title>GitLab security advisory (AV26-962)</title>
@@ -598,7 +626,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-962</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.01</comments>
+      <comments>Score: 8.84</comments>
       <pubDate>Fri, 25 Sep 2026 12:35:05 +0000</pubDate>
     </item>
     <item>
@@ -608,7 +636,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/servicenow-security-advisory-av26-963</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.85</comments>
       <pubDate>Fri, 25 Sep 2026 12:56:31 +0000</pubDate>
     </item>
     <item>
@@ -618,7 +646,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-887</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 8.90</comments>
       <pubDate>Fri, 25 Sep 2026 15:33:02 +0000</pubDate>
     </item>
     <item>
@@ -628,7 +656,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-august-2026-monthly-rollup-av26-804</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.09</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Fri, 25 Sep 2026 15:55:30 +0000</pubDate>
     </item>
     <item>
@@ -638,7 +666,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zimbra-security-advisory-av26-964</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.15</comments>
+      <comments>Score: 8.96</comments>
       <pubDate>Fri, 25 Sep 2026 18:40:08 +0000</pubDate>
     </item>
     <item>
@@ -648,8 +676,109 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-952</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Fri, 25 Sep 2026 20:33:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>NetScaler admins told to patch critical zero-days in ADC and Gateway now</title>
+      <link>https://www.csoonline.com/article/4227488/netscaler-admins-told-to-patch-critical-zero-days-in-adc-and-gateway-now-2.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column"&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Citrix NetScaler ADC and NetScaler Gateway users should take their systems offline and patch them immediately, they were told over the weekend, as news emerged of two critical unauthenticated remote code execution &lt;a href="https://www.csoonline.com/article/4155155/the-zero-day-timeline-just-collapsed-heres-what-security-leaders-do-next.html"&gt;zero-day&lt;/a&gt; vulnerabilities in the products under active attack.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“&lt;a href="https://www.linkedin.com/feed/update/urn:li:activity:7509660925809819649" rel="noreferrer noopener" target="_blank"&gt;Monday will be too late&lt;/a&gt;,” watchtower CEO &lt;a href="https://www.linkedin.com/in/benjamin-harris-sg" rel="noreferrer noopener" target="_blank"&gt;Benjamin Harris&lt;/a&gt; wrote in a LinkedIn post on Sunday.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Citrix subsequently confirmed the two remotely exploitable vulnerabilities were under attack, and released fixes for both. Affected customers should install the patched versions “as soon as possible,” &lt;a href="https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778/" rel="noreferrer noopener" target="_blank"&gt;Citrix wrote in an advisory&lt;/a&gt; issued later on Sunday.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;NetScaler appliances are an important part of many enterprise networks, providing VPN and remote access, load balancing and other application delivery services.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Agnidipta Sarkar, chief evangelist at ColorTokens, said, “RCE on these NetScaler deployments means an unauthenticated remote attacker can run arbitrary commands on the appliance itself, typically with high privileges. If that succeeds, attackers install persistent backdoors/webshells, modify configurations, disable logging, create rogue virtual servers, or brick/DOS the device.” They could also pivot into the internal network and reach Active Directory or other crown jewels, he added.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a&gt;&lt;/a&gt;Citrix is tracking the two exploited vulnerabilities as CVE-2026-88771 and CVE-2026-88772. It has released fixes in NetScaler ADC and Gateway 14.1-73.37 and later, 13.1-64.23 and later, with corresponding FIPS and NDcPP builds also available.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-88771" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-88771&lt;/a&gt; is a critical remote code execution (RCE) vulnerability in Netscaler ADC and Netscaler Gateway caused by improper input validation. With a CVSS rating of 9.5, it enables unauthenticated attackers to execute arbitrary commands on the appliance.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Citrix said all NetScaler ADC and NetScaler Gateway deployments are affected, including default configurations, with no additional feature required to meet the vulnerability’s precondition. It’s barely &lt;a href="https://www.csoonline.com/article/4212082/citrix-issues-critical-security-updates-for-its-netscaler-devices.html"&gt;a month since Citrix patched two other critical security holes&lt;/a&gt; in the appliances&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-88772" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-88772&lt;/a&gt; also has a CVSS score of 9.5; it involves a memory overflow that can result in remote code execution or denial of service. It requires Datagram Transport Layer Security (DTLS) to be enabled, but Citrix notes that is the case by default on VPN virtual servers, making the condition relevant to many NetScaler Gateway deployments.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Citrix said exploitation of both vulnerabilities had been observed on unmitigated deployments, while watchTowr reported the vulnerabilities had been &lt;a href="https://watchtowr.com/intelligence/citrix-netscaler-adc-citrix-netscaler-gateway-remote-code-execution-cve-2026-88771/" rel="noreferrer noopener" target="_blank"&gt;exploited before fixes became available&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The US Cybersecurity and Infrastructure Security Agency (CISA) added both to its Known Exploited Vulnerabilities (KEV) catalog on Sunday.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Since most attackers here will expect discovery, they might silently harvest credentials, especially VPN credentials, exfiltrate existing business data or any other data that is immediately available,” Sarkar said, recommending taking systems offline and upgrading them immediately.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Six more Netscaler bugs&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Citrix addressed six other vulnerabilities in Sunday’s security update, although it said their exposure depends on specific configurations.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-88773" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-88773&lt;/a&gt;, rated 9.3, is an HTTP request-smuggling vulnerability affecting deployments using HTTP or SSL virtual servers. &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-88774" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-88774&lt;/a&gt;, rated 7.0, is a feature policy bypass related to HTTP URL handling; Citrix noted that URL normalization can prevent WAF and security rules from being bypassed.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Three further memory-overflow vulnerabilities — &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-88775" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-88775&lt;/a&gt;, &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-88776" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-88776&lt;/a&gt; and &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-88777" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-88777&lt;/a&gt; — are each rated 8.8 and can cause unpredictable behavior or denial of service under their respective configurations.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The final flaw, &lt;a href="https://www.cve.org/CVERecord?id=CVE-2026-88778" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-88778&lt;/a&gt;, is also rated 8.8 and involves TCP Initial Sequence Number Prediction which, Citrix said, can be handled by enabling Enhanced ISN Generation.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Citrix said the advisory applies to customer-managed NetScaler appliances and recommended upgrading affected deployments immediately. The company also made generic indicators of compromise (IOCs) available through NetScaler Console to help customers assess whether their appliances may have been affected.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;em&gt;This article first appeared on &lt;/em&gt;&lt;a href="https://www.networkworld.com/article/4227476/netscaler-admins-told-to-patch-critical-zero-days-in-adc-and-gateway-now.html"&gt;Network World&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4227488/netscaler-admins-told-to-patch-critical-zero-days-in-adc-and-gateway-now-2.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.80</comments>
+      <pubDate>Mon, 28 Sep 2026 10:02:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Citrix security advisory (AV26-965)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-965</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-965</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.88</comments>
+      <pubDate>Mon, 28 Sep 2026 12:16:20 +0000</pubDate>
     </item>
     <item>
       <title>AL26-024 - Critical vulnerabilities affecting Citrix NetScaler ADC and NetScaler Gateway – CVE-2026-88771 and CVE-2026-88772</title>
@@ -658,7 +787,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.52</comments>
+      <comments>Score: 11.21</comments>
       <pubDate>Sun, 27 Sep 2026 18:02:05 +0000</pubDate>
     </item>
     <item>
@@ -667,7 +796,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <description>No description available</description>
       <guid isPermaLink="false">https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 64745717.59</comments>
+      <comments>Score: 59171402.06</comments>
       <pubDate>Thu, 03 Dec 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
