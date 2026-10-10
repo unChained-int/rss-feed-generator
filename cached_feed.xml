@@ -8,97 +8,30 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Oct 2026 06:46:50 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 13:22:35 +0000</lastBuildDate>
     <item>
-      <title>AWS takes aim at runaway AI agent behavior with Strands Box</title>
-      <link>https://www.csoonline.com/article/4232446/aws-takes-aim-at-runaway-ai-agent-behavior-with-strands-box-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+      <title>Protecting citizens, preserving rights</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/protecting-citizens-preserving-rights</link>
+      <description>How can law enforcement make effective use of data and technology while ensuring that fundamental rights and the rule of law remain protected?
 
-
-
-&lt;p class="wp-block-paragraph"&gt;Amazon Web Services (AWS) has introduced an open-source sandbox for AI agents that allows developers to restrict their actions based on previous behavior, seeking to address security risks as enterprises give autonomous systems greater access to applications and data.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The tool, called Strands Box, combines &lt;a href="https://www.infoworld.com/article/4215416/running-ai-agents-in-sandboxes-with-microsoft-execution-containers.html" target="_blank"&gt;operating system-level isolation&lt;/a&gt; with policies that govern what agents can do. Released in developer preview on October 7 under the Apache 2.0 license, it currently supports Macs with Apple silicon processors running macOS 15 or later.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Strands Box uses Dogwood, an open-source policy language developed by AWS, and its accompanying evaluation engine to determine whether an agent should be permitted to perform an action. The engine can factor in an agent’s recorded activity across different tools, allowing a file read through a shell command, for example, to trigger restrictions on subsequent network requests.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Consider an agent investigating a production incident,” AWS said in a post. “We want it to post progress updates to the incident channel in Slack as it finds things, but not to flood the channel and bury the updates from humans. A policy can let the agent post, but no more than three times every 10 minutes. The agent can keep investigating, while Box enforces the posting limit without relying on the agent to remember it.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Strands Box checks actions routed through its shell and Python interpreters and its &lt;a href="https://www.infoworld.com/article/4028404/why-mcp-matters-and-how-to-secure-it.html"&gt;Model Context Protocol (MCP)&lt;/a&gt; broker. By default, its network gateway evaluates outbound requests against policies and can attach credentials to approved requests without exposing the secrets to the agent.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;AWS said the approach is intended to provide controls &lt;a href="https://www.infoworld.com/article/4175859/microsofts-open-source-toolkit-for-controlling-out-of-control-ai-agents.html"&gt;independent of the AI agent&lt;/a&gt; framework, reducing reliance on permission mechanisms built into individual agents. Its real strength, however, may lie less in the underlying technology than in how it is applied.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Strands Box addresses a real security gap, although its underlying technologies are not new,” said &lt;a href="https://pareekh.com/about/" rel="noreferrer noopener" target="_blank"&gt;Pareekh Jain&lt;/a&gt;, CEO of Pareekh Consulting. “Its main advantage is making security easier to enforce consistently across different AI agent frameworks.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="security-gains-come-with-trade-offs"&gt;Security gains come with trade-offs&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Dogwood’s policies do not cover every action an agent can take. Files accessed directly through an agent harness’s built-in tools, for instance, remain subject to operating system-level restrictions but are not evaluated by Dogwood’s policy engine.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;AWS also acknowledged that its shell and Python interpreters run outside the sandbox as part of a trusted process, expanding the number of components whose security the system depends on.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Jain cautioned that the additional security controls could increase processing overhead and introduce new components that might themselves contain vulnerabilities.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Poorly designed policies could block legitimate agent actions or create operational complexity, while overly permissive policies could still leave gaps,” said &lt;a href="https://www.linkedin.com/in/tulikasheel/" rel="noreferrer noopener" target="_blank"&gt;Tulika Sheel&lt;/a&gt;, senior vice president at Kadence International.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“It cannot prevent every harmful decision an agent makes within its allowed permissions,” Jain said. “Enterprises will still need IAM, monitoring, and human oversight.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="strands-box-faces-a-portability-test"&gt;Strands Box faces a portability test&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;AWS said it wants to expand support beyond macOS and enable developers to deploy agents with their policies intact across platforms such as Amazon Bedrock AgentCore, Amazon ECS, and Kubernetes. The company has not provided a timeline for those capabilities.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Jain said a common policy layer could let developers concentrate on building agents while security teams maintain common rules. Adoption would depend on broader platform support and how much overhead policy enforcement introduces, he added.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Sheel said the open-source approach could help adoption, but enterprises would need evidence that the controls work reliably in production before adopting them widely.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“As agents become more autonomous, behavioral controls could become as fundamental to AI infrastructure as identity and access management are today,” Sheel said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;em&gt;The article originally appeared on &lt;a href="https://www.infoworld.com/article/4232439/aws-takes-aim-at-runaway-ai-agent-behavior-with-strands-box.html"&gt;InfoWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4232446/aws-takes-aim-at-runaway-ai-agent-behavior-with-strands-box-2.html</guid>
+This question was at the heart of the 17th Europol Data Protection Experts Network (EDEN) conference, held in Lisbon, Portugal, on 22 and 23 September 2026 under the theme ‘Do Not Cross: Protecting Citizens, Preserving Rights’.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/protecting-citizens-preserving-rights</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Thu, 08 Oct 2026 10:17:15 +0000</pubDate>
+      <comments>Score: 7.51</comments>
+      <pubDate>Sat, 10 Oct 2026 11:22:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>FBI Seizes 7 Domains, Disrupts Flax Typhoon Tools Used in Critical Infrastructure Intrusions</title>
+      <link>https://thehackernews.com/2026/10/fbi-seizes-7-domains-disrupts-flax.html</link>
+      <description>The U.S. Federal Bureau of Investigation (FBI) and Department of Justice (DoJ) have announced the disruption of malicious tools used by a China-linked advanced persistent threat group known as Flax Typhoon.
+
+To that end, the agencies seized several domains and blocked access to platforms that were used to scan, and in some cases infiltrate, U.S. critical infrastructure. The list of seized</description>
+      <guid isPermaLink="false">https://thehackernews.com/2026/10/fbi-seizes-7-domains-disrupts-flax.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.51</comments>
+      <pubDate>Fri, 09 Oct 2026 12:09:29 +0530</pubDate>
     </item>
     <item>
       <title>European and Ecuadorian cooperation leads to 20 arrests in major hit against drug trafficking</title>
@@ -108,17 +41,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 10 Oct 2026 04:46:50 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol urges early action to protect cryptocurrencies and sensitive data from quantum threats</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</link>
-      <description>The timing of these capabilities remains uncertain. However, this should not be the main concern. Adapting systems and coordinating security upgrades will take time. Therefore, regardless of the nature of the threats that may emerge, crypto-agility should be pursued proactively to ensure that systems can withstand and overcome future threats while remaining secure.Both reports highlight the need to identify and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 10 Oct 2026 04:46:50 +0000</pubDate>
+      <pubDate>Sat, 10 Oct 2026 11:22:35 +0000</pubDate>
     </item>
     <item>
       <title>EU law enforcement chiefs gather to discuss new challenges in EU security</title>
@@ -128,7 +51,57 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 10 Oct 2026 04:46:50 +0000</pubDate>
+      <pubDate>Sat, 10 Oct 2026 11:22:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol urges early action to protect cryptocurrencies and sensitive data from quantum threats</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</link>
+      <description>The timing of these capabilities remains uncertain. However, this should not be the main concern. Adapting systems and coordinating security upgrades will take time. Therefore, regardless of the nature of the threats that may emerge, crypto-agility should be pursued proactively to ensure that systems can withstand and overcome future threats while remaining secure.Both reports highlight the need to identify and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 10 Oct 2026 11:22:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortinet security advisory (AV26-989)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-989</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-989</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.53</comments>
+      <pubDate>Fri, 02 Oct 2026 11:37:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>WatchGuard security advisory (AV26-990)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-990</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-990</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.54</comments>
+      <pubDate>Fri, 02 Oct 2026 13:00:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control Systems] Johnson Controls security advisory (AV26-991)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-991</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-991</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.54</comments>
+      <pubDate>Fri, 02 Oct 2026 13:12:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>MikroTik security advisory (AV26-992)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-992</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-992</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.55</comments>
+      <pubDate>Fri, 02 Oct 2026 14:22:25 +0000</pubDate>
     </item>
     <item>
       <title>Six arrests for smuggling migrants via Schengen airports</title>
@@ -140,59 +113,7 @@ The action day on 22 September 2026 in Austria, Italy, Spain, and the United Kin
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.55</comments>
-      <pubDate>Sat, 10 Oct 2026 04:46:50 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fortinet security advisory (AV26-989)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-989</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-989</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
-      <pubDate>Fri, 02 Oct 2026 11:37:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>WatchGuard security advisory (AV26-990)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-990</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-990</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Fri, 02 Oct 2026 13:00:56 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control Systems] Johnson Controls security advisory (AV26-991)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-991</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-991</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Fri, 02 Oct 2026 13:12:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>MikroTik security advisory (AV26-992)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-992</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-992</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Fri, 02 Oct 2026 14:22:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</link>
-      <description>Five suspects linked to the organisation and recruitment of serious violence have been arrested in Spain, Morocco, and France, in the latest results of the Operational Taskforce (OTF) GRIMM, coordinated by Europol.
-
-The arrests in August and September target the upper levels of violence-as-a-service: those suspected of ordering attacks, finding perpetrators and coordinating crimes from abroad. Among those apprehended are fugitives featured on the EU Most Wanted website.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
-      <pubDate>Sat, 10 Oct 2026 04:46:50 +0000</pubDate>
+      <pubDate>Sat, 10 Oct 2026 11:22:35 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] Hitachi security advisory (AV26-993)</title>
@@ -201,7 +122,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-993</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Fri, 02 Oct 2026 17:37:58 +0000</pubDate>
     </item>
     <item>
@@ -211,7 +132,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-994</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Fri, 02 Oct 2026 17:51:07 +0000</pubDate>
     </item>
     <item>
@@ -221,20 +142,8 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-995</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Fri, 02 Oct 2026 18:01:09 +0000</pubDate>
-    </item>
-    <item>
-      <title>FBI Seizes 7 Domains, Disrupts Flax Typhoon Tools Used in Critical Infrastructure Intrusions</title>
-      <link>https://thehackernews.com/2026/10/fbi-seizes-7-domains-disrupts-flax.html</link>
-      <description>The U.S. Federal Bureau of Investigation (FBI) and Department of Justice (DoJ) have announced the disruption of malicious tools used by a China-linked advanced persistent threat group known as Flax Typhoon.
-
-To that end, the agencies seized several domains and blocked access to platforms that were used to scan, and in some cases infiltrate, U.S. critical infrastructure. The list of seized</description>
-      <guid isPermaLink="false">https://thehackernews.com/2026/10/fbi-seizes-7-domains-disrupts-flax.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
-      <pubDate>Fri, 09 Oct 2026 12:09:29 +0530</pubDate>
     </item>
     <item>
       <title>Growing PQC at the edge belies deeper quantum-readiness challenges</title>
@@ -384,8 +293,20 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://www.csoonline.com/article/4232205/growing-pqc-at-the-edge-belies-deeper-quantum-readiness-challenges.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Thu, 08 Oct 2026 19:05:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</link>
+      <description>Five suspects linked to the organisation and recruitment of serious violence have been arrested in Spain, Morocco, and France, in the latest results of the Operational Taskforce (OTF) GRIMM, coordinated by Europol.
+
+The arrests in August and September target the upper levels of violence-as-a-service: those suspected of ordering attacks, finding perpetrators and coordinating crimes from abroad. Among those apprehended are fugitives featured on the EU Most Wanted website.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.60</comments>
+      <pubDate>Sat, 10 Oct 2026 11:22:35 +0000</pubDate>
     </item>
     <item>
       <title>When building an AI-native security program, start with outcomes</title>
@@ -575,7 +496,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://www.csoonline.com/article/4232574/when-building-an-ai-native-security-program-start-with-outcomes.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 7.98</comments>
       <pubDate>Fri, 09 Oct 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -585,7 +506,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-996</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Mon, 05 Oct 2026 11:45:18 +0000</pubDate>
     </item>
     <item>
@@ -595,48 +516,8 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-997</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Mon, 05 Oct 2026 13:11:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] GeoVision security advisory (AV26-998)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-geovision-security-advisory-av26-998</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-geovision-security-advisory-av26-998</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
-      <pubDate>Mon, 05 Oct 2026 17:47:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>Progress security advisory (AV26-999)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-999</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-999</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
-      <pubDate>Mon, 05 Oct 2026 18:01:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV26-1000)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1000</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1000</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.29</comments>
-      <pubDate>Mon, 05 Oct 2026 18:16:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft security advisory (AV26-1001)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-av26-1001</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-av26-1001</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
-      <pubDate>Mon, 05 Oct 2026 18:53:16 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall’s latest critical flaw indicates a security pattern, not another one-off bug</title>
@@ -786,7 +667,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://www.csoonline.com/article/4232246/sonicwalls-latest-critical-flaw-indicates-a-security-pattern-not-another-one-off-bug.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.34</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Thu, 08 Oct 2026 03:19:05 +0000</pubDate>
     </item>
     <item>
@@ -841,8 +722,48 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://www.csoonline.com/article/4233219/ransomware-consultant-said-he-would-decrypt-data-is-accused-of-paying-ransoms-instead.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.42</comments>
+      <comments>Score: 8.19</comments>
       <pubDate>Fri, 09 Oct 2026 15:44:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] GeoVision security advisory (AV26-998)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-geovision-security-advisory-av26-998</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-geovision-security-advisory-av26-998</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.20</comments>
+      <pubDate>Mon, 05 Oct 2026 17:47:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>Progress security advisory (AV26-999)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-999</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-999</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.20</comments>
+      <pubDate>Mon, 05 Oct 2026 18:01:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-1000)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1000</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1000</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.21</comments>
+      <pubDate>Mon, 05 Oct 2026 18:16:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>Microsoft security advisory (AV26-1001)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-av26-1001</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-av26-1001</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.21</comments>
+      <pubDate>Mon, 05 Oct 2026 18:53:16 +0000</pubDate>
     </item>
     <item>
       <title>Android security advisory – October 2026 monthly rollup (AV26-1003)</title>
@@ -851,7 +772,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-october-2026-monthly-rollup-av26-1003</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Tue, 06 Oct 2026 13:59:04 +0000</pubDate>
     </item>
     <item>
@@ -861,7 +782,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rapid7-security-advisory-av26-1004</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.54</comments>
       <pubDate>Tue, 06 Oct 2026 17:56:12 +0000</pubDate>
     </item>
     <item>
@@ -871,7 +792,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1005</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Tue, 06 Oct 2026 19:42:39 +0000</pubDate>
     </item>
     <item>
@@ -881,7 +802,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1002</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.89</comments>
       <pubDate>Wed, 07 Oct 2026 13:21:03 +0000</pubDate>
     </item>
     <item>
@@ -891,7 +812,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1006</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.04</comments>
+      <comments>Score: 8.90</comments>
       <pubDate>Wed, 07 Oct 2026 13:54:39 +0000</pubDate>
     </item>
     <item>
@@ -901,7 +822,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-1007</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Wed, 07 Oct 2026 14:31:40 +0000</pubDate>
     </item>
     <item>
@@ -911,7 +832,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/broadcom-vmware-security-advisory-av26-1008</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.06</comments>
+      <comments>Score: 8.92</comments>
       <pubDate>Wed, 07 Oct 2026 14:56:11 +0000</pubDate>
     </item>
     <item>
@@ -921,7 +842,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-1009</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.06</comments>
+      <comments>Score: 8.93</comments>
       <pubDate>Wed, 07 Oct 2026 15:14:30 +0000</pubDate>
     </item>
     <item>
@@ -931,7 +852,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1010</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 8.93</comments>
       <pubDate>Wed, 07 Oct 2026 15:39:38 +0000</pubDate>
     </item>
     <item>
@@ -941,7 +862,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1011</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Wed, 07 Oct 2026 15:56:36 +0000</pubDate>
     </item>
     <item>
@@ -951,7 +872,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1012</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Wed, 07 Oct 2026 17:14:28 +0000</pubDate>
     </item>
     <item>
@@ -961,7 +882,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-av26-1013</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Wed, 07 Oct 2026 17:24:34 +0000</pubDate>
     </item>
     <item>
@@ -971,7 +892,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-1014</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Wed, 07 Oct 2026 17:48:08 +0000</pubDate>
     </item>
     <item>
@@ -981,7 +902,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-1015</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.13</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Wed, 07 Oct 2026 18:18:19 +0000</pubDate>
     </item>
     <item>
@@ -991,7 +912,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wolfssl-security-advisory-av26-1016</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 9.00</comments>
       <pubDate>Wed, 07 Oct 2026 18:39:37 +0000</pubDate>
     </item>
     <item>
@@ -1001,7 +922,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-1018</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Thu, 08 Oct 2026 13:41:13 +0000</pubDate>
     </item>
     <item>
@@ -1011,7 +932,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-1019</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.62</comments>
+      <comments>Score: 9.44</comments>
       <pubDate>Thu, 08 Oct 2026 14:00:14 +0000</pubDate>
     </item>
     <item>
@@ -1021,7 +942,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1020</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.64</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Thu, 08 Oct 2026 14:49:21 +0000</pubDate>
     </item>
     <item>
@@ -1031,7 +952,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/elastic-security-advisory-av26-1021</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.65</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Thu, 08 Oct 2026 15:21:43 +0000</pubDate>
     </item>
     <item>
@@ -1041,7 +962,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1022</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.74</comments>
+      <comments>Score: 9.56</comments>
       <pubDate>Thu, 08 Oct 2026 18:36:13 +0000</pubDate>
     </item>
     <item>
@@ -1051,7 +972,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1023</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.34</comments>
+      <comments>Score: 10.12</comments>
       <pubDate>Fri, 09 Oct 2026 13:31:29 +0000</pubDate>
     </item>
     <item>
@@ -1061,7 +982,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1025</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Fri, 09 Oct 2026 18:02:41 +0000</pubDate>
     </item>
     <item>
@@ -1071,7 +992,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1024</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.27</comments>
       <pubDate>Fri, 09 Oct 2026 18:05:36 +0000</pubDate>
     </item>
     <item>
@@ -1081,7 +1002,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1017</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.52</comments>
+      <comments>Score: 10.28</comments>
       <pubDate>Fri, 09 Oct 2026 18:26:33 +0000</pubDate>
     </item>
     <item>
@@ -1091,7 +1012,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av26-1026</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.55</comments>
+      <comments>Score: 10.32</comments>
       <pubDate>Fri, 09 Oct 2026 19:25:04 +0000</pubDate>
     </item>
     <item>
@@ -1101,7 +1022,7 @@ To that end, the agencies seized several domains and blocked access to platforms
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.51</comments>
+      <comments>Score: 11.28</comments>
       <pubDate>Fri, 09 Oct 2026 18:16:08 +0000</pubDate>
     </item>
   </channel>
