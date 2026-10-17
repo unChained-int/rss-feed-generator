@@ -8,70 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 17 Oct 2026 06:43:13 +0000</lastBuildDate>
-    <item>
-      <title>Cisco warns of actively exploited Secure Email Gateway flaw</title>
-      <link>https://www.csoonline.com/article/4235801/cisco-warns-of-actively-exploited-secure-email-gateway-flaw.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A critical vulnerability affecting Cisco’s Secure Email Gateway product is allowing attackers to&lt;br /&gt;write arbitrary files on the underlying operating system. In an &lt;a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp" rel="noreferrer noopener" target="_blank"&gt;advisory&lt;/a&gt; issued on Wednesday, the company urged customers to apply available fixes after confirming that the flaw is being exploited in the wild.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The flaw affects the product’s Advanced Malware Protection (AMP) feature and stems from improper handling of email attachments when the File Reputation service is enabled. By sending an email containing a specially crafted attachment through a vulnerable appliance, an attacker can execute commands with root privileges.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Cisco released software updates to address the flaw, but warns that there are no workarounds that address the vulnerability.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Exploitation is subject to preconditions&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-76519" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-76519&lt;/a&gt;, the vulnerability affects physical and virtual &lt;a href="https://www.csoonline.com/article/4222391/critical-cisco-secure-email-gateway-zero-day-gives-attackers-root-access.html" target="_blank"&gt;Cisco Secure Email Gateway &lt;/a&gt;appliances running vulnerable Cisco AsyncOS software, provided two conditions are met. The File Reputation service needs to be enabled and assigned to a mail policy, and the Content Scanner Tools version is earlier than 25.3.0.5525.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The File Reputation service is part of Cisco AMP, which helps assess the reputation of files passing through the email gateway. In this case, improper handling of attachments creates an opportunity for an attacker to write arbitrary files to the underlying operating system. Successful exploitation can then lead to root-level command execution, potentially enabling further compromise of the appliance.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Cisco warns that attackers who compromise an appliance could access &lt;a href="https://www.csoonline.com/article/4235139/how-claude-codes-256kb-blind-spot-put-developers-secrets-in-the-preview-pane.html"&gt;private SSH keys&lt;/a&gt; used to authenticate between members of an appliance cluster, potentially allowing them to compromise other cluster members. Attackers with root access may also remove or conceal evidence of their activity.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Cisco recommends checking the appliance’s system logs for indicators of compromise using the command grep “System Security” system_logs. However, a clean result should not replace broader investigation: the vendor advises administrators to cross-check external network and firewall logs for suspicious traffic, including unexpected uploads from affected appliances or downloads from malicious IP addresses.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Patches are available, but incident response matters&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Cisco lists AsyncOS 15.5.5-014 and 16.5.0-780 as fixed releases for the corresponding software branches. Customers on AsyncOS 16.0 are advised to migrate to a fixed release. The vendor also said the fix is available through Content Scanner Tools version 25.3.0.5525 and later, and that updating the tools does not require a software upgrade or appliance restart.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For potentially compromised virtual appliances, Cisco recommends preserving forensic evidence before rebuilding the system, deploying a clean virtual machine, rebuilding its configuration without importing previous configuration files, and renewing credentials and cryptographic materials. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Organizations should also assess other appliances in the same cluster. The company said it has already deployed the fixed Content Scanner Tools package for its Secure Email Cloud Gateway &lt;a href="https://www.csoonline.com/article/4118159/cisco-finally-patches-seven-week-old-zero-day-flaw-in-secure-email-gateway-products-2.html"&gt;environment&lt;/a&gt;. The advisory does not disclose the number of victims or identify the attackers behind the exploitation.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4235801/cisco-warns-of-actively-exploited-secure-email-gateway-flaw.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Thu, 15 Oct 2026 12:32:50 +0000</pubDate>
-    </item>
+    <lastBuildDate>Sat, 17 Oct 2026 11:28:40 +0000</lastBuildDate>
     <item>
       <title>Citrix security advisory (AV26-1023)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1023</link>
@@ -79,8 +16,48 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1023</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
+      <comments>Score: 7.55</comments>
       <pubDate>Fri, 09 Oct 2026 13:31:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>MongoDB security advisory (AV26-1024)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1024</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1024</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Fri, 09 Oct 2026 18:05:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-1025)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1025</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1025</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Fri, 09 Oct 2026 18:15:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>SonicWall security advisory (AV26-1017) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1017</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1017</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Fri, 09 Oct 2026 18:26:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>SmarterTools security advisory (AV26-1026)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av26-1026</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av26-1026</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.59</comments>
+      <pubDate>Fri, 09 Oct 2026 19:25:04 +0000</pubDate>
     </item>
     <item>
       <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
@@ -92,47 +69,19 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.60</comments>
-      <pubDate>Sat, 17 Oct 2026 04:43:13 +0000</pubDate>
+      <pubDate>Sat, 17 Oct 2026 09:28:40 +0000</pubDate>
     </item>
     <item>
-      <title>MongoDB security advisory (AV26-1024)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1024</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1024</guid>
+      <title>MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon</title>
+      <link>https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html</link>
+      <description>Cybersecurity researchers have discovered a malicious npm package that's part of a recently disclosed software supply chain attack campaign dubbed MALFEX.
+
+The package, named "imgdecode," was uploaded to the package registry on September 30, 2026, by a user named "malfexteste8." It has been downloaded 979 times as of writing and is still available on npm as of writing. The latest version of</description>
+      <guid isPermaLink="false">https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.61</comments>
-      <pubDate>Fri, 09 Oct 2026 18:05:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV26-1025)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1025</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1025</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Fri, 09 Oct 2026 18:15:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>SonicWall security advisory (AV26-1017) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1017</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1017</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
-      <pubDate>Fri, 09 Oct 2026 18:26:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>SmarterTools security advisory (AV26-1026)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av26-1026</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av26-1026</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Fri, 09 Oct 2026 19:25:04 +0000</pubDate>
+      <pubDate>Sat, 17 Oct 2026 16:41:56 +0530</pubDate>
     </item>
     <item>
       <title>No click required: How the ad industry became a pipeline for mercenary spyware</title>
@@ -288,7 +237,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4236143/no-click-required-how-the-ad-industry-became-a-pipeline-for-mercenary-spyware.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.94</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Fri, 16 Oct 2026 01:02:34 +0000</pubDate>
     </item>
     <item>
@@ -431,7 +380,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4235447/malware-evasion-made-easier-with-ai-but-behavior-still-gives-it-away.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Fri, 16 Oct 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -474,7 +423,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4236276/cyberattack-ais-must-be-trained-only-on-air-gapped-systems-hundreds-of-ai-researchers-say.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.03</comments>
       <pubDate>Fri, 16 Oct 2026 08:41:16 +0000</pubDate>
     </item>
     <item>
@@ -513,7 +462,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4236478/bank-of-america-spent-millions-on-anti-money-laundering-tech-but-not-enough-to-avoid-a-1-2b-fine.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Fri, 16 Oct 2026 12:42:15 +0000</pubDate>
     </item>
     <item>
@@ -552,7 +501,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4236599/xbow-spent-40k-on-ai-and-cracked-google-chrome-wide-open-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.41</comments>
+      <comments>Score: 8.24</comments>
       <pubDate>Fri, 16 Oct 2026 15:17:37 +0000</pubDate>
     </item>
     <item>
@@ -623,7 +572,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4236659/hallucinated-domain-in-official-openai-skill-underscores-ai-supply-chain-risks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Fri, 16 Oct 2026 17:29:00 +0000</pubDate>
     </item>
     <item>
@@ -633,7 +582,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-1027</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Tue, 13 Oct 2026 12:48:07 +0000</pubDate>
     </item>
     <item>
@@ -643,7 +592,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1028</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.57</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Tue, 13 Oct 2026 13:02:47 +0000</pubDate>
     </item>
     <item>
@@ -653,7 +602,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-1029</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Tue, 13 Oct 2026 13:15:21 +0000</pubDate>
     </item>
     <item>
@@ -663,7 +612,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-october-2026-monthly-rollup-av26-1030</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Tue, 13 Oct 2026 13:27:09 +0000</pubDate>
     </item>
     <item>
@@ -673,7 +622,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1031</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Tue, 13 Oct 2026 13:36:59 +0000</pubDate>
     </item>
     <item>
@@ -683,7 +632,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1032</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Tue, 13 Oct 2026 13:43:03 +0000</pubDate>
     </item>
     <item>
@@ -693,7 +642,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.61</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Fri, 09 Oct 2026 18:16:08 +0000</pubDate>
     </item>
     <item>
@@ -703,7 +652,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-1033</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.67</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Tue, 13 Oct 2026 18:53:51 +0000</pubDate>
     </item>
     <item>
@@ -713,7 +662,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1034</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Tue, 13 Oct 2026 19:10:44 +0000</pubDate>
     </item>
     <item>
@@ -723,7 +672,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/esri-security-advisory-av26-1036</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Tue, 13 Oct 2026 20:10:52 +0000</pubDate>
     </item>
     <item>
@@ -733,7 +682,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Tue, 13 Oct 2026 20:21:54 +0000</pubDate>
     </item>
     <item>
@@ -743,7 +692,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2026-monthly-rollup-av26-1038</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Wed, 14 Oct 2026 15:36:15 +0000</pubDate>
     </item>
     <item>
@@ -753,7 +702,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1039</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Wed, 14 Oct 2026 15:44:16 +0000</pubDate>
     </item>
     <item>
@@ -763,7 +712,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1040</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.14</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Wed, 14 Oct 2026 18:31:46 +0000</pubDate>
     </item>
     <item>
@@ -773,7 +722,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1042</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.17</comments>
+      <comments>Score: 9.06</comments>
       <pubDate>Wed, 14 Oct 2026 20:00:12 +0000</pubDate>
     </item>
     <item>
@@ -783,7 +732,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1041</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.60</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Thu, 15 Oct 2026 13:11:51 +0000</pubDate>
     </item>
     <item>
@@ -793,7 +742,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1043</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.48</comments>
       <pubDate>Thu, 15 Oct 2026 13:44:50 +0000</pubDate>
     </item>
     <item>
@@ -803,7 +752,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1044</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.64</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Thu, 15 Oct 2026 14:40:03 +0000</pubDate>
     </item>
     <item>
@@ -813,7 +762,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1045</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.64</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Thu, 15 Oct 2026 14:50:27 +0000</pubDate>
     </item>
     <item>
@@ -823,7 +772,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1046</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.65</comments>
+      <comments>Score: 9.52</comments>
       <pubDate>Thu, 15 Oct 2026 15:09:14 +0000</pubDate>
     </item>
     <item>
@@ -833,7 +782,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1047</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.65</comments>
+      <comments>Score: 9.53</comments>
       <pubDate>Thu, 15 Oct 2026 15:19:12 +0000</pubDate>
     </item>
     <item>
@@ -843,7 +792,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1048</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.73</comments>
+      <comments>Score: 9.60</comments>
       <pubDate>Thu, 15 Oct 2026 17:58:39 +0000</pubDate>
     </item>
     <item>
@@ -853,7 +802,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-1049</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.74</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Thu, 15 Oct 2026 18:20:30 +0000</pubDate>
     </item>
     <item>
@@ -863,7 +812,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1002</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.74</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Thu, 15 Oct 2026 18:33:45 +0000</pubDate>
     </item>
     <item>
@@ -873,7 +822,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1050</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.75</comments>
+      <comments>Score: 9.62</comments>
       <pubDate>Thu, 15 Oct 2026 18:53:12 +0000</pubDate>
     </item>
     <item>
@@ -883,7 +832,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-1051</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.76</comments>
+      <comments>Score: 9.63</comments>
       <pubDate>Thu, 15 Oct 2026 19:10:41 +0000</pubDate>
     </item>
     <item>
@@ -893,7 +842,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1052</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.64</comments>
       <pubDate>Thu, 15 Oct 2026 19:24:46 +0000</pubDate>
     </item>
     <item>
@@ -903,7 +852,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1053</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.77</comments>
+      <comments>Score: 9.64</comments>
       <pubDate>Thu, 15 Oct 2026 19:35:56 +0000</pubDate>
     </item>
     <item>
@@ -913,7 +862,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.34</comments>
+      <comments>Score: 10.17</comments>
       <pubDate>Fri, 16 Oct 2026 13:16:21 +0000</pubDate>
     </item>
     <item>
@@ -923,7 +872,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.34</comments>
+      <comments>Score: 10.18</comments>
       <pubDate>Fri, 16 Oct 2026 13:29:16 +0000</pubDate>
     </item>
     <item>
@@ -933,7 +882,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1057</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.37</comments>
+      <comments>Score: 10.21</comments>
       <pubDate>Fri, 16 Oct 2026 14:19:42 +0000</pubDate>
     </item>
     <item>
@@ -943,7 +892,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.40</comments>
+      <comments>Score: 10.24</comments>
       <pubDate>Fri, 16 Oct 2026 15:09:38 +0000</pubDate>
     </item>
     <item>
@@ -953,7 +902,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.50</comments>
+      <comments>Score: 10.33</comments>
       <pubDate>Fri, 16 Oct 2026 17:50:47 +0000</pubDate>
     </item>
     <item>
@@ -963,7 +912,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.52</comments>
+      <comments>Score: 10.35</comments>
       <pubDate>Fri, 16 Oct 2026 18:27:37 +0000</pubDate>
     </item>
     <item>
@@ -973,7 +922,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/bmc-helix-security-advisory-av26-1059</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.53</comments>
+      <comments>Score: 10.36</comments>
       <pubDate>Fri, 16 Oct 2026 18:45:43 +0000</pubDate>
     </item>
     <item>
@@ -983,7 +932,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.59</comments>
+      <comments>Score: 10.41</comments>
       <pubDate>Fri, 16 Oct 2026 20:16:50 +0000</pubDate>
     </item>
     <item>
@@ -993,7 +942,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-025-critical-vulnerability-impacting-beyondtrust-remote-support-cve-2026-102764</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.45</comments>
+      <comments>Score: 11.28</comments>
       <pubDate>Fri, 16 Oct 2026 16:34:00 +0000</pubDate>
     </item>
   </channel>
