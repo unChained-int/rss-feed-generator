@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 21 Oct 2026 01:23:26 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 07:14:31 +0000</lastBuildDate>
     <item>
       <title>MikroTik security advisory (AV26-1029)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-1029</link>
@@ -16,7 +16,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mikrotik-security-advisory-av26-1029</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Tue, 13 Oct 2026 13:15:21 +0000</pubDate>
     </item>
     <item>
@@ -26,7 +26,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-october-2026-monthly-rollup-av26-1030</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Tue, 13 Oct 2026 13:27:09 +0000</pubDate>
     </item>
     <item>
@@ -36,7 +36,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1031</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Tue, 13 Oct 2026 13:36:59 +0000</pubDate>
     </item>
     <item>
@@ -46,102 +46,20 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1032</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
+      <comments>Score: 7.58</comments>
       <pubDate>Tue, 13 Oct 2026 13:43:03 +0000</pubDate>
     </item>
     <item>
-      <title>The password nobody owns: Taking machines to zero standing privilege (ZSP)</title>
-      <link>https://www.csoonline.com/article/4236528/the-password-nobody-owns-taking-machines-to-zero-standing-privilege-zsp.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+      <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</link>
+      <description>Five suspects linked to the organisation and recruitment of serious violence have been arrested in Spain, Morocco, and France, in the latest results of the Operational Taskforce (OTF) GRIMM, coordinated by Europol.
 
-
-
-&lt;p class="wp-block-paragraph"&gt;Ask your infrastructure lead who owns the service account behind the overnight finance batch and notice how long the answer takes. In many of the environments I’ve reviewed, the engineer who set it up left years ago and the password has been sitting in a vault, or sometimes a plain config file, ever since. It usually still carries permissions sized for a migration that wrapped up before anyone on the current team joined, so people leave it alone rather than risk breaking something nobody fully understands.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Multiply that across the landscape, and the numbers get uncomfortable quickly. Palo Alto Networks surveyed more than 2,900 security leaders for its&lt;a href="https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-introduces-idira--the-next-generation-identity-security-platform-built-for-the-ai-enterprise"&gt; 2026 Identity Security Landscape&lt;/a&gt; and found an average of 109 machine identities for every human one.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I’d treat any single ratio with some caution, since each vendor counts identities differently. The same report’s finding that 61% of privileged access requests are still met with standing privilege, instead of being granted on demand, is much harder to wave away.&lt;a href="https://www.cybersecuritytribe.com/news/research-reveals-44-growth-in-nhis-from-2024-to-2025"&gt; &lt;/a&gt;&lt;a href="https://www.cybersecuritytribe.com/news/research-reveals-44-growth-in-nhis-from-2024-to-2025"&gt;Entro Labs&lt;/a&gt; looked at the age of these identities too. Close to half were more than a year old, and 7.5% had been around for somewhere between five and ten years.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Over the past decade, most security programmes have put real effort into controlling human admins through PAM. Machine accounts tended to get a vault and a rotation schedule, and in most of the programmes I’ve worked on, that’s roughly where the effort on them ended.&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Why rotation only buys you time&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Vaulting and rotating a service account password beats leaving it hard-coded in a script, and I wouldn’t advise anyone to pull out a vault that’s working. Rotation changes the secret, though it leaves the access exactly as it was. Between one change and the next, the credential stays valid with every permission intact, readable from wherever the application fetches it. If an attacker copies it a few days into a ninety-day cycle, they’ve got close to three months to use it quietly. OAuth integrations make this worse, because a refresh token can keep renewing itself long after anyone remembers granting it.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The&lt;a href="https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift"&gt; &lt;/a&gt;&lt;a href="https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift"&gt;Salesloft Drift campaign&lt;/a&gt; in August 2025 is the clearest recent example I can point to. Google Threat Intelligence Group reported that the actor it tracks as UNC6395 used stolen OAuth and refresh tokens tied to the Drift integration to pull data out of Salesforce customer instances between 8 and 18 August, and&lt;a href="https://thehackernews.com/2025/09/salesloft-takes-drift-offline-after.html"&gt; &lt;/a&gt;&lt;a href="https://thehackernews.com/2025/09/salesloft-takes-drift-offline-after.html"&gt;more than 700 organisations&lt;/a&gt; were caught up in it. Because the tokens were genuine and no person was signing in, there was no MFA prompt to trip and nothing unusual for the authentication layer to notice. I suspect plenty of the affected customers would have struggled to name who in their own team had approved that integration in the first place.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;I’d want every CIO to look closely at what the attackers were after. Customers were told to search their Salesforce records for secrets such as AWS keys and Snowflake tokens, since support cases are a common place for staff to paste credentials while troubleshooting. In other words, the stolen standing token was being used to hunt for more standing tokens in other systems. Salesloft later&lt;a href="https://www.cm-alliance.com/cybersecurity-blog/salesloft-drift-attack-one-compromised-integration-shakes-700-cos"&gt; &lt;/a&gt;&lt;a href="https://www.cm-alliance.com/cybersecurity-blog/salesloft-drift-attack-one-compromised-integration-shakes-700-cos"&gt;linked the initial access&lt;/a&gt; to a compromise of its GitHub account back in March, months before the theft began.&lt;/p&gt;
-
-
-&lt;div class="extendedBlock-wrapper block-coreImage undefined"&gt;&lt;figure class="wp-block-image size-large is-resized wp-lightbox-container"&gt; width="1024" height="469" sizes="auto, (max-width: 1024px) 100vw, 1024px"&amp;gt;&lt;button class="lightbox-trigger" type="button"&gt;
-				&lt;svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg"&gt;
-					&lt;path d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" fill="#fff"&gt;&lt;/path&gt;
-				&lt;/svg&gt;
-			&lt;/button&gt;&lt;figcaption class="wp-element-caption"&gt;&lt;em&gt;Figure 1: Standing credential vs zero standing privilege&lt;/em&gt;.&lt;/figcaption&gt;&lt;/figure&gt;&lt;p class="imageCredit"&gt;Ashish Mishra&lt;/p&gt;&lt;/div&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;What zero standing privilege looks like for a machine&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;With zero standing privilege, a machine identity holds no usable access while it sits idle. When it has work to do, it proves who it is to a policy engine and gets back a short-lived credential scoped to that job, which expires on its own once the job finishes.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Most of you will already have something like this for people, usually as just-in-time elevation through a PAM platform. Workloads tend to get there through workload identity federation instead. The workload presents a signed token from a platform the target already trusts, such as a Kubernetes cluster or a CI pipeline, and swaps it for temporary access. GitHub Actions deploying into AWS is the easiest case to picture. The pipeline requests an OIDC token from GitHub, AWS checks it against a trust policy tied to that repository, and the job runs under a role whose credentials last around an hour by default. No access key gets stored in the repo at any point. Google’s own&lt;a href="https://github.com/google-github-actions/auth"&gt; &lt;/a&gt;&lt;a href="https://github.com/google-github-actions/auth"&gt;authentication action for GitHub&lt;/a&gt; recommends federation over exported service account keys on the same grounds, warning that those keys are long-lived and need the same care as a password.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Getting there without breaking production&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Full zero standing privilege across every machine identity isn’t achievable in most enterprises right now, and it’s worth saying so plainly to your board. Older applications that log in to a database with a username and password won’t federate, and plenty of vendor appliances only accept a static API key. Practitioners increasingly describe&lt;a href="https://startwithidentity.com/articles/zero-standing-privileges-best-practices/"&gt; &lt;/a&gt;&lt;a href="https://startwithidentity.com/articles/zero-standing-privileges-best-practices/"&gt;near-zero standing privilege&lt;/a&gt; as the realistic target for machines, which is how I’d frame it too.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Everything starts with an inventory. You need every machine credential in one place, including the OAuth grants your SaaS integrations hold, with a named human owner recorded against each. The owner field can look like admin overhead, but an account with no owner tends to survive every clean-up exercise, because nobody has the authority to approve switching it off. Once the list exists, sort it by what an attacker could reach with each credential. CI/CD pipelines and cloud admin roles usually end up near the top, and they also happen to be where federation is most mature, so moving pipelines to OIDC tends to be one of the earliest wins.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Connected SaaS apps deserve a separate look. A lot of them were approved years ago with broad scopes, often by a business team rather than security, and nobody has revisited them since. Cut the scopes down to what each integration actually uses. It’s also fair to ask suppliers how they store the refresh tokens they hold on your behalf, and after Drift, a vendor with access to your CRM should have a ready answer.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Some systems won’t federate for years. In those cases, you can still shorten how long a credential lives, even if you can’t change what it’s allowed to do. Vault-issued dynamic secrets work well here, with the database account created when the session starts and dropped when it closes, and the application usually needs little or no rewriting.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For board reporting, the number I’d track is the share of machine access granted on demand compared with the share held permanently. Expect the first reading to look poor. It’s still worth putting in front of the board early, since the change from one quarter to the next tells them far more about progress than any single snapshot.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4236528/the-password-nobody-owns-taking-machines-to-zero-standing-privilege-zsp.html</guid>
+The arrests in August and September target the upper levels of violence-as-a-service: those suspected of ordering attacks, finding perpetrators and coordinating crimes from abroad. Among those apprehended are fugitives featured on the EU Most Wanted website.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Mon, 19 Oct 2026 09:00:00 +0000</pubDate>
+      <comments>Score: 7.60</comments>
+      <pubDate>Wed, 21 Oct 2026 05:14:31 +0000</pubDate>
     </item>
     <item>
       <title>Commvault security advisory (AV26-1033)</title>
@@ -150,7 +68,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-1033</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Tue, 13 Oct 2026 18:53:51 +0000</pubDate>
     </item>
     <item>
@@ -160,7 +78,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1034</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Tue, 13 Oct 2026 19:10:44 +0000</pubDate>
     </item>
     <item>
@@ -170,7 +88,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/esri-security-advisory-av26-1036</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Tue, 13 Oct 2026 20:10:52 +0000</pubDate>
     </item>
     <item>
@@ -180,95 +98,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
+      <comments>Score: 7.62</comments>
       <pubDate>Tue, 13 Oct 2026 20:21:54 +0000</pubDate>
-    </item>
-    <item>
-      <title>ConnectWise backup credentials exposed multiple Microsoft 365 tenants</title>
-      <link>https://www.csoonline.com/article/4237087/connectwise-backup-credentials-exposed-multiple-microsoft-365-tenants.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;ConnectWise has disabled key cloud services and is investigating unauthorized access to customers’ Microsoft 365 environments after a credential tied to its Cloud Backup platform was compromised and used to authenticate into customer tenants, prompting Huntress to identify suspicious sign-ins across 162 organizations.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The activity involved the Cloud Backup application obtaining Microsoft Graph access tokens using a credential associated with ConnectWise’s own tenant. Security firm Huntress has also confirmed unauthorized sign-ins across 162 tenants as of 19:00 UTC on October 16.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Huntress said the application authenticated from the IP address 144.172.64[.]128 on October 15, between 06.13 and 08.34 UTC. The address belonged to a hosting provider, rather than the Azure private IP space from which the application normally communicated. The authentication events were recorded in Microsoft’s sign-in logs.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;ConnectWise has &lt;a href="https://www.connectwise.com/company/trust/advisories"&gt;acknowledged&lt;/a&gt; the activity and has disabled seven application identities on October 17. It also suspended Cloud Backup, along with SaaS Security and Cloud Management. Microsoft did not immediately respond to a request for comment.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The company updated its advisory on October 19 and said it had not observed successful threat activity in the environments it monitors since implementing containment measures, but had yet to establish a timeline for restoring the services.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Existing backup archives remain encrypted and isolated, and we have no indication that those archives have been compromised,” noted ConnectWise. The October 19 advisory update included two additional IP addresses, 144.172.64[.]99 and 144.172.64[.]60, identified through downstream security monitoring.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Integration credentials used to escalate access&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;ConnectWise Cloud Backup needs broad permissions to back up and restore customer data across Microsoft 365 services, including Exchange Online, OneDrive, &lt;a href="https://www.csoonline.com/article/4197775/cisa-urges-immediate-sharepoint-hardening-as-exploits-mount.html"&gt;SharePoint&lt;/a&gt; and Teams. Huntress said the compromised credential allowed the application to obtain Microsoft Graph tokens in customer tenants without requiring an individual user to sign in.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;That application-based authentication does not involve a user password or trigger the multi-factor authentication (&lt;a href="https://www.csoonline.com/article/570795/how-to-hack-2fa.html"&gt;MFA&lt;/a&gt;) prompt associated with a usual login. The credential lives in the vendor’s own environment, meaning customers could not have generated it through activity in their individual tenants.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Huntress also identified activity involving a second ConnectWise application, Cloud Management for Microsoft Teams, in one partner tenant. According to the security firm, the application assigned itself the Global Administrator role and added credentials to two other applications, including a Huntress application specific to that partner.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The sequence took approximately five minutes, Huntress said, adding that it had not established whether the separate stages of activity were conducted by the same operator.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Service suspensions buy time, but tenant-level checks remain necessary&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;ConnectWise disabled the seven application identities and revoked certificates associated with affected application connections. The company said those actions prevent new authentication through the disabled connections but do not automatically reverse changes already made inside customer tenants.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Previously issued access tokens may also remain usable until they expire or are otherwise invalidated, it added.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The service disruption extends beyond backups. With Cloud Backup suspended, scheduled backups, access to affected archives, and restoration capabilities remain unavailable. SaaS Security monitoring and alerting, as well as Cloud Management’s user and license management functions, have also been taken offline while remediation continues.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Huntress said its investigation had not confirmed data theft. In the one tenant whose audit logs it examined in detail, the firm found no recorded mail or file access, but warned that this did not prove that no data had been taken. Some Microsoft Graph directory reads do not leave an audit trail, limiting what investigators can establish from available records, it noted.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Both companies have urged partners and customer administrators to review their Microsoft 365 environments. ConnectWise’s guidance calls for checks of application sign-ins, credentials, directory roles, consent grants, policy changes, and possible mailbox forwarding or other persistence mechanisms.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;ConnectWise partners were also advised to keep affected applications disabled until it provides formal restoration instructions. As of October 19, investigation and service restoration efforts remained ongoing.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4237087/connectwise-backup-credentials-exposed-multiple-microsoft-365-tenants.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
-      <pubDate>Mon, 19 Oct 2026 12:00:56 +0000</pubDate>
     </item>
     <item>
       <title>Microsoft security advisory – October 2026 monthly rollup (AV26-1038)</title>
@@ -277,7 +108,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2026-monthly-rollup-av26-1038</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 14 Oct 2026 15:36:15 +0000</pubDate>
     </item>
     <item>
@@ -287,7 +118,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1039</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Wed, 14 Oct 2026 15:44:16 +0000</pubDate>
     </item>
     <item>
@@ -297,7 +128,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1040</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.78</comments>
       <pubDate>Wed, 14 Oct 2026 18:31:46 +0000</pubDate>
     </item>
     <item>
@@ -307,7 +138,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1042</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.84</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Wed, 14 Oct 2026 20:00:12 +0000</pubDate>
     </item>
     <item>
@@ -317,7 +148,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1041</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.01</comments>
+      <comments>Score: 7.95</comments>
       <pubDate>Thu, 15 Oct 2026 13:11:51 +0000</pubDate>
     </item>
     <item>
@@ -327,7 +158,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1043</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Thu, 15 Oct 2026 13:44:50 +0000</pubDate>
     </item>
     <item>
@@ -337,7 +168,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1044</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.02</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Thu, 15 Oct 2026 14:40:03 +0000</pubDate>
     </item>
     <item>
@@ -347,7 +178,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1045</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 15 Oct 2026 14:50:27 +0000</pubDate>
     </item>
     <item>
@@ -357,7 +188,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1046</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 15 Oct 2026 15:09:14 +0000</pubDate>
     </item>
     <item>
@@ -367,7 +198,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1047</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 15 Oct 2026 15:19:12 +0000</pubDate>
     </item>
     <item>
@@ -377,7 +208,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1048</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Thu, 15 Oct 2026 17:58:39 +0000</pubDate>
     </item>
     <item>
@@ -387,7 +218,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-1049</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Thu, 15 Oct 2026 18:20:30 +0000</pubDate>
     </item>
     <item>
@@ -397,7 +228,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1002</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Thu, 15 Oct 2026 18:33:45 +0000</pubDate>
     </item>
     <item>
@@ -407,7 +238,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1050</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Thu, 15 Oct 2026 18:53:12 +0000</pubDate>
     </item>
     <item>
@@ -417,7 +248,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-1051</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Thu, 15 Oct 2026 19:10:41 +0000</pubDate>
     </item>
     <item>
@@ -427,7 +258,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1052</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Thu, 15 Oct 2026 19:24:46 +0000</pubDate>
     </item>
     <item>
@@ -437,58 +268,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1053</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.08</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Thu, 15 Oct 2026 19:35:56 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-024 - Critical vulnerabilities affecting Citrix NetScaler ADC and NetScaler Gateway – CVE-2026-88771 and CVE-2026-88772 – Update 2</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
-      <pubDate>Fri, 09 Oct 2026 18:16:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control Systems] Moxa security advisory (AV26-1055)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
-      <pubDate>Fri, 16 Oct 2026 13:16:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>Palo Alto Networks security advisory (AV26-1056)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
-      <pubDate>Fri, 16 Oct 2026 13:29:16 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV26-1057)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1057</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1057</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.31</comments>
-      <pubDate>Fri, 16 Oct 2026 14:19:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ivanti security advisory (AV26-1035) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.32</comments>
-      <pubDate>Fri, 16 Oct 2026 15:09:38 +0000</pubDate>
     </item>
     <item>
       <title>OT systems complicate quantum-resistant data protection</title>
@@ -642,28 +423,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4236142/ot-systems-complicate-shift-to-quantum-resistant-data-protection.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.35</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Tue, 20 Oct 2026 08:25:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Progress security advisory (AV26-1058)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
-      <pubDate>Fri, 16 Oct 2026 17:50:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>BeyondTrust security advisory (AV26-1054) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
-      <pubDate>Fri, 16 Oct 2026 18:27:37 +0000</pubDate>
     </item>
     <item>
       <title>When defrost becomes sabotage: 3 OT lessons from France’s supermarket attack</title>
@@ -765,8 +526,78 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4237172/when-defrost-becomes-sabotage-3-ot-lessons-from-frances-supermarket-attack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 20 Oct 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control Systems] Moxa security advisory (AV26-1055)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.22</comments>
+      <pubDate>Fri, 16 Oct 2026 13:16:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>Palo Alto Networks security advisory (AV26-1056)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.22</comments>
+      <pubDate>Fri, 16 Oct 2026 13:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-024 - Critical vulnerabilities affecting Citrix NetScaler ADC and NetScaler Gateway – CVE-2026-88771 and CVE-2026-88772 – Update 2</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.22</comments>
+      <pubDate>Fri, 09 Oct 2026 18:16:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV26-1057)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1057</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1057</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.23</comments>
+      <pubDate>Fri, 16 Oct 2026 14:19:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ivanti security advisory (AV26-1035) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.24</comments>
+      <pubDate>Fri, 16 Oct 2026 15:09:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>Progress security advisory (AV26-1058)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.28</comments>
+      <pubDate>Fri, 16 Oct 2026 17:50:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>BeyondTrust security advisory (AV26-1054) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.29</comments>
+      <pubDate>Fri, 16 Oct 2026 18:27:37 +0000</pubDate>
     </item>
     <item>
       <title>BMC Helix security advisory (AV26-1059)</title>
@@ -775,7 +606,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/bmc-helix-security-advisory-av26-1059</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.37</comments>
+      <comments>Score: 8.29</comments>
       <pubDate>Fri, 16 Oct 2026 18:45:43 +0000</pubDate>
     </item>
     <item>
@@ -785,7 +616,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.40</comments>
+      <comments>Score: 8.31</comments>
       <pubDate>Fri, 16 Oct 2026 20:16:50 +0000</pubDate>
     </item>
     <item>
@@ -900,8 +731,151 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4238124/uk-fca-exec-wants-to-require-disclosure-of-significant-ai-failures-and-near-misses-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.75</comments>
       <pubDate>Wed, 21 Oct 2026 01:09:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>US bans DeepSeek across federal agencies, putting AI supply chains under scrutiny</title>
+      <link>https://www.csoonline.com/article/4238149/us-bans-deepseek-across-federal-agencies-putting-ai-supply-chains-under-scrutiny-2.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;DeepSeek has been dealt a huge blow in the US, even as it continues to innovate and keep pace with, or in some cases outperform, rival models from American labs.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The US Secretary of Homeland Security has issued an order banning all DeepSeek products and services from federal agencies. Government organizations must purge their IT systems of it within 60 days; those with “compelling justification” can make a case for exemption by written request to the Cybersecurity and Infrastructure Security Agency (CISA).&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The Department of Homeland Security (DHS) cited multiple concerns about the Chinese-hosted model, including &lt;a href="https://www.cio.com/article/4235303/true-data-sovereignty-isnt-where-its-kept-but-who-has-access-to-it.html" target="_blank"&gt;data sovereignty&lt;/a&gt;, lax Chinese laws, and security vulnerabilities.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Analyst &lt;a href="https://www.infotech.com/profiles/erik-avakian" rel="noreferrer noopener" target="_blank"&gt;Erik Avakian&lt;/a&gt;, technical counselor at Infotech, understands the concern. “When organizations use any type of hosted AI service, they’re potentially sending intellectual property, confidential business information, or other sensitive data into an environment where they may have very little visibility or control over what happens to it,” he said.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="government-concerns"&gt;Government concerns&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;According to a &lt;a href="https://public-inspection.federalregister.gov/2026-21447.pdf" rel="noreferrer noopener" target="_blank"&gt;document published in the US Federal Register&lt;/a&gt;, all technology developed by China-based Hangzhou DeepSeek Artificial Intelligence Co. will be banned from procurement by federal civilian agencies. This includes affiliated products and any third-party tools or software built using DeepSeek implementations.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Affected civilian executive branch agencies include the Departments of Treasury, State, and Justice; it does not apply, however, to private consumers, the general public, state/local governments, or Department of Defense (DoD) national security systems.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“DeepSeek’s models present multiple threat vectors,” the Order stated. To begin with, the company’s servers are located in the People’ s Republic of China (PRC), whose legal system grants “extensive authority” to government cyber and intelligence functions to access private infrastructure.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;DeepSeek’s account generation process collects personally identifiable information (PII) and may also track and digitally fingerprint users, the Order asserted. Its prompt response process may result in the transfer of sensitive data to the PRC. This could give it “actionable intelligence” on US programs or individual users.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Further, the Order stated, DeepSeek models themselves may contain malware or other security vulnerabilities. DHS pointed to &lt;a href="https://www.nowsecure.com/blog/2025/02/06/nowsecure-uncovers-multiple-security-and-privacy-flaws-in-deepseek-ios-mobile-app/" rel="noreferrer noopener" target="_blank"&gt;open-source security research&lt;/a&gt; published in February 2025 that uncovered many iOS mobile apps with multiple critical vulnerabilities.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Until the ban takes full effect, DHS advised agencies to mitigate risk by monitoring inbound and outbound data traffic, implementing enhanced logging and controls on data exfiltration, and detecting and flagging anomalous activity.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Agencies can submit requests for exceptions to the ban in writing, and must provide a “compelling justification,” such as its impact on mission-critical functions, or other considerations related to national interest such as national security reviews, investigations, or security agreements, as reasons why such exemption should be granted,.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="security-issues-are-rampant"&gt;Security issues are rampant&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The ban comes just as DeepSeek is open-sourcing DeepInfer, its in-house interference framework. DeepInfer powers DeepSeek-V4.1-Flash with what the company said is high throughput and low latency. It features high-performance kernels, an optimized inference engine, structured outputs, and speculative decoding.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;DeepSeek said its production token encoding and decoding components, which are aligned with processing logic behind the DeepSeek API, will bring the “same API behavior to community deployments.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Open models. Open kernels. Open inference,” DeepSeek &lt;a href="https://x.com/deepseek_ai/status/2112476496283775135" rel="noreferrer noopener" target="_blank"&gt;posted to social media site X&lt;/a&gt;. “From private deployments to public clouds, we’ll keep working with the community to make large-scale inference more efficient.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;This isn’t its first roadblock from a &lt;a href="https://www.csoonline.com/article/3816397/hackers-impersonate-deepseek-to-distribute-malware.html" target="_blank"&gt;cybersecurity perspective&lt;/a&gt;. Most notably, in January 2025, &lt;a href="https://www.csoonline.com/article/3813224/deepseek-leaks-one-million-sensitive-records-in-a-major-data-breach.html" target="_blank"&gt;the company leaked&lt;/a&gt; more than one million log entries, including chat histories, API secrets, and other sensitive information, through an unsecured database.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;DeepSeek reportedly addressed the exposure, but it still raised questions about the overall security practices surrounding the platform, particularly for organizations considering entrusting it with their own sensitive business information, Avakian pointed out.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;That’s not to imply that every DeepSeek model is “inherently malicious,” he said, but there are still major questions around data privacy, the potential for information access under Chinese laws, the security of the broader AI ecosystem, and the susceptibility of DeepSeek’s models to jailbreaks and manipulation.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Taken together, [these issues] raise legitimate concerns about whether organizations can adequately understand and manage the risks involved,” Avakian said.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="enterprises-should-seriously-assess-associated-risk"&gt;Enterprises should seriously assess associated risk&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Enterprises are increasingly exploring DeepSeek, although most publicly-documented adoption has been in China, Avakian noted. Some DeepSeek models have also been made available through platforms like Microsoft Azure and AWS.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“There’s genuine enterprise interest in the technology, as organizations look for opportunities to improve productivity, offer new capabilities, or reduce costs,” Avakian said. Useful applications include document summarization, internal research, and coding assistance.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;DeepInfer also has the potential to reduce costs, but possible benefits should be weighed against associated security risks, he pointed out. The framework was just released, so organizations are going to need to validate the claimed efficiencies in their own environments rather than assuming savings will automatically translate into lower operating costs.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;He encouraged organizations to start with relatively low-risk use cases, preferably using “public, synthetic, or appropriately sanitized information,” within a sandboxed environment they control themselves.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The important question to ask: ‘What is the business problem we’re trying to solve?’ From there, Avakian said, determine whether DeepSeek is the best way to solve it, validate security controls, and expand the use cases based on risk tolerance. Effective &lt;a href="https://www.cio.com/article/4237146/closing-the-agent-governance-gap.html" target="_blank"&gt;governance and risk assessment&lt;/a&gt; are key, he noted: understand what you’re bringing into your environment, validate its security, restrict its permissions, and make sure you can monitor what it’s doing.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Approach this like any other software supply chain decision,” Avakian advised. “The fact that something is open source, inexpensive, or technically impressive doesn’t automatically make it appropriate for enterprise use.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="impact-on-the-broader-ai-ecosystem"&gt;Impact on the broader AI ecosystem&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The fact that the Order also addressed third-party products and services developed using DeepSeek implementations is important, Avakian said, because organizations may be using DeepSeek technologies indirectly, through vendors, software platforms, or other services, without necessarily knowing what’s operating underneath. “These are classic supply chain issues,” he observed.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;It’s no longer enough to know which AI applications employees are using; enterprises must understand which models, frameworks, dependencies, and external services are embedded in products they’re purchasing and deploying, Avakian said. This means revisiting AI inventories, potentially updating procurement requirements, and expanding processes around third-party risk management, he advised.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Ultimately, enterprises leveraging these tools need to understand not only the AI technologies they’re intentionally deploying, but also the technologies they’re inheriting through third parties,” he said.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.cio.com/article/4238132/us-bans-deepseek-across-federal-agencies-putting-ai-supply-chains-under-scrutiny.html"&gt;CIO.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4238149/us-bans-deepseek-across-federal-agencies-putting-ai-supply-chains-under-scrutiny-2.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.78</comments>
+      <pubDate>Wed, 21 Oct 2026 01:55:45 +0000</pubDate>
     </item>
     <item>
       <title>F5 rushes out emergency NGINX patches for three critical flaws</title>
@@ -1023,7 +997,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4237420/f5-rushes-out-emergency-nginx-patches-for-three-critical-flaws.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Tue, 20 Oct 2026 03:25:43 +0000</pubDate>
     </item>
     <item>
@@ -1033,7 +1007,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-025-critical-vulnerability-impacting-beyondtrust-remote-support-cve-2026-102764</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.34</comments>
+      <comments>Score: 9.26</comments>
       <pubDate>Fri, 16 Oct 2026 16:34:00 +0000</pubDate>
     </item>
     <item>
@@ -1043,7 +1017,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-423</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.75</comments>
+      <comments>Score: 9.59</comments>
       <pubDate>Mon, 19 Oct 2026 13:24:47 +0000</pubDate>
     </item>
     <item>
@@ -1053,7 +1027,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1061</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.78</comments>
       <pubDate>Mon, 19 Oct 2026 20:20:30 +0000</pubDate>
     </item>
     <item>
@@ -1063,7 +1037,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/eptura-security-advisory-av26-1062</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.79</comments>
       <pubDate>Mon, 19 Oct 2026 20:30:24 +0000</pubDate>
     </item>
     <item>
@@ -1073,7 +1047,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1064</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.52</comments>
+      <comments>Score: 10.31</comments>
       <pubDate>Tue, 20 Oct 2026 13:01:07 +0000</pubDate>
     </item>
     <item>
@@ -1083,7 +1057,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-advantech-security-advisory-av26-1065</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.52</comments>
+      <comments>Score: 10.31</comments>
       <pubDate>Tue, 20 Oct 2026 13:10:55 +0000</pubDate>
     </item>
     <item>
@@ -1093,7 +1067,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-geovision-security-advisory-av26-1066</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.53</comments>
+      <comments>Score: 10.32</comments>
       <pubDate>Tue, 20 Oct 2026 13:26:08 +0000</pubDate>
     </item>
     <item>
@@ -1103,7 +1077,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitea-security-advisory-av26-845</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.69</comments>
+      <comments>Score: 10.47</comments>
       <pubDate>Tue, 20 Oct 2026 17:33:03 +0000</pubDate>
     </item>
     <item>
@@ -1113,7 +1087,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/siemens-security-advisory-av26-1063</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.78</comments>
+      <comments>Score: 10.56</comments>
       <pubDate>Tue, 20 Oct 2026 19:57:09 +0000</pubDate>
     </item>
     <item>
@@ -1123,7 +1097,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/craft-cms-security-advisory-av26-1067</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.78</comments>
+      <comments>Score: 10.56</comments>
       <pubDate>Tue, 20 Oct 2026 20:04:46 +0000</pubDate>
     </item>
   </channel>
