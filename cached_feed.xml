@@ -8,274 +8,26 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 21 Oct 2026 22:11:42 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 01:20:37 +0000</lastBuildDate>
     <item>
-      <title>OT systems complicate quantum-resistant data protection</title>
-      <link>https://www.csoonline.com/article/4236142/ot-systems-complicate-shift-to-quantum-resistant-data-protection.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Quantum-resistant cryptography presents security leaders with various challenges, but CISOs in industries dependent on IoT and operational technology (OT) devices may face a particularly difficult journey to quantum readiness, especially if sensitive information that must remain confidential for years passes through those devices.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.forescout.com/research-labs/pqc-in-healthcare-from-data-risk-to-migration-readiness/"&gt;A recent report&lt;/a&gt; from cybersecurity firm Forescout highlights these challenges in the healthcare industry, where medical histories, diagnostic images, and laboratory results, which retain their sensitivity long after they are created, routinely get transferred between various operational systems.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Attackers who collect encrypted traffic carrying this information today can store it for decryption when sufficiently powerful quantum computers become available, an approach security experts call &lt;a href="https://www.csoonline.com/article/3487766/cisos-urged-to-prepare-now-for-post-quantum-cryptography.html"&gt;“harvest now, decrypt later”&lt;/a&gt; (HNDL).&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“PQC [post-quantum cryptography] migration in healthcare is not just about data confidentiality, but also patient safety,” the Forescout researchers say in their report, which examined over 2.5 million devices across more than 50 organizations. “Cryptography protects commands sent to medical devices, telemetry received from those devices for diagnostic purposes, medication orders, and other sensitive interactions. Quantum threats include unauthorized remote access by exploiting public keys for authentication, tampering with device-to-device communication by decrypting traffic, and sophisticated malware exploiting firmware integrity signatures.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;While upgrading to PQC is relatively straightforward for live servers, where a standardized PQC algorithm can be implemented as a library package upgrade and configuration change, embedded devices such as those used in healthcare need full firmware updates from their manufacturers. Moreover, those upgrades must maintain backwards compatibility with other systems that might not be upgraded at the same time, and in the case of certified devices, they might require re-certification.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This issue goes beyond healthcare to include industrial installations or anywhere OT or IoT devices handle sensitive or business-critical data.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Last month, the G7 Cybersecurity Working Group urged governments and organizations to begin migrating to PQC as soon as possible, calling for action across all sectors. The group warned that the transition will be lengthy and that organizations should prepare before quantum computers capable of breaking current cryptography become available.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Daniel dos Santos, VP of research at Forescout, tells CSO that while government bodies have issued orders and advisories with different expectations for PQC readiness, they all tend to converge on a 2030 timeline, which is when experts expect quantum computers might be capable of breaking existing encryption algorithms.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For industries such as healthcare, however, the HNDL threat collapses that quantum-readiness timeline completely.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Patient data travels beyond the medical device&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Protecting patient information requires securing the entire communication chain, from the equipment that generates the data to the IT systems that store it and the applications that make it available to doctors and patients. That includes, for example, a CT scanner that sends images to a picture archiving and communication system (PACS), images that can later be transferred between hospitals, cloud services, and external radiology providers, requiring quantum-resistant protection on each transfer to maintain long-term confidentiality.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Laboratory results and prescription records follow similar routes. Electronic prescribing services exchange medication information between providers and pharmacies, including records of controlled substances and treatment for chronic diseases. Attackers can potentially intercept and siphon that data at different points in the chain: at the device level, from an internal network, through a compromised edge router or firewall, or &lt;a href="https://www.csoonline.com/article/4048548/chinese-hacking-group-salt-typhoon-expansion-prompts-multinational-advisory.html"&gt;even at the telecom operator’s level&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The platforms that store and exchange patient records are often accessible directly from the internet as well. In a Shodan search, Forescout identified more than 5,500 internet-exposed instances of medical information systems, with electronic medical record platforms accounting for 46% of those instances and PACS accounting for 40%.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Only 36% of PACS, 33% of electronic medical record systems, and 13% of laboratory information management systems had support for TLS 1.3, the only version of the protocol that supports ML-KEM (Module-Lattice-Based Key-Encapsulation Mechanism), a quantum-resistant key encapsulation standard published by NIST. However, the presence of TLS 1.3 does not demonstrate that a connection uses quantum-resistant cryptography, because the connecting client might negotiate a different algorithm.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Furthermore, in &lt;a href="https://www.forescout.com/blog/pqc-adoption-gaps-90-percent-of-systems-are-still-not-quantum-safe/"&gt;a previous study published in June&lt;/a&gt;, Forescout found that only 11.8% of SSH servers on the internet are PQC-capable, a number that falls to 3% when looking only at Dropbear, an SSH server commonly used on embedded devices. Inside enterprise networks, 50% of IT devices use OpenSSH versions that support PQC, but only 28% of IoT, 16% of OT, and 6% of IoMT devices use the same versions.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Specialized devices are unlikely to be fully migrated this decade if we keep going at the current pace, delaying broader PQC migration efforts and quantum readiness,” the researchers concluded. “Unfortunately, medical devices are among those with the lowest adoption rates and the hardest challenges for adopting PQC.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Challenges extend beyond healthcare&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Changing cryptography on equipment used for patient care or industrial operations is completely dependent on the device vendor. Dos Santos says modifying the device filesystem independently, even when it can be done, jeopardizes certification, maintenance, and support, and any communication protocol changes need to preserve connections to other equipment. The same problem exists for devices in chemical plants, electricity networks, water treatment facilities, and factory floors.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Some medical and industrial equipment already runs on Linux, which could in theory make adopting PQC easier, dos Santos says. However, he has seen little discussion of PQC adoption or roadmaps among OT vendors.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The Cybersecurity and Infrastructure Security Agency (CISA) described in its &lt;a href="https://www.cisa.gov/sites/default/files/2024-10/Post-Quantum%20Considerations%20for%20Operational%20Technology%20%28508%29.pdf"&gt;October 2024 OT guidance&lt;/a&gt; how changes to equipment controlling heavy machinery or combustible materials can require extensive safety testing. For medical devices, the regulatory implications depend on the changes made to the device. The US Food and Drug Administration’s &lt;a href="https://www.fda.gov/media/119933/download?attachment="&gt;February 2026 cybersecurity guidance&lt;/a&gt; says changes to authentication or encryption algorithms may require a new premarket submission.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Concerns about legacy equipment and PQC extend across sectors. In &lt;a href="https://pages.certes.ai/pqc-report"&gt;a Certes survey&lt;/a&gt; of 200 IT and security professionals engaged with quantum-related risks at large US and UK organizations published in May, 78% of respondents rated the potential quantum threat to legacy environments as very high. For edge and IoT equipment, including industrial and medical devices, ATMs, and vehicles, 43% rated the threat as very high and another 31% as significant.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading"&gt;&lt;a&gt;&lt;/a&gt;Some devices will need alternative solutions&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Healthcare information, financial records, and trade secrets, such as code and industrial designs, can remain sensitive years after transmission. But not all data exchanged between devices has the same confidentiality requirements or operational relevance over time.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“What’s missing from the policy conversation is a differentiated threat and risk assessment framework — one that accounts for data lifetime and sensitivity decay rate, device class, computational constraints, and realistic adversary capability timelines,” Sharon Hagi, CSO at IoT cybersecurity firm Finite State, told CSO in June after France’s national cybersecurity agency, ANSSI, outlined plans to introduce PQC requirements for product qualification starting in 2027.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The quantum threat is not uniformly distributed across the cryptographic stack,” Hagi said. “Shor’s algorithm breaks RSA and ECC. It does not break AES-256 or SHA-3 in any operationally practical sense — Grover’s provides at most a quadratic speedup, and the effective security margins of properly sized symmetric primitives still holds for most uses. Architectures that rely on symmetric encryption with out-of-band or pre-provisioned key distribution remain meaningful options for resource-constrained embedded devices where NIST PQC algorithms (e.g. ML-KEM, ML-DSA) impose non-trivial compute, bandwidth, and memory costs.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This means vendors will have to weigh carefully on which devices it’s even viable due to hardware limitations to deploy new PQC algorithms. In some cases, end-users might have to come up with alternatives, such as isolating those devices and routing traffic to and from them through other gateway devices that can apply PQC.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This is the approach that users should start taking before vendors decide to release firmware upgrades, dos Santos says. For example, internet-facing websites and portals should already be configured to use TLS 1.3 as all modern browsers support it. For remote management and file transfers over the internet, deploy gateways that support protocols with quantum-resistant cryptography.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A hospital could use a gateway to protect an image transfer to an external radiology provider. The hospital would still need to assess the connection from the scanner or image archive to that gateway and maybe isolate them on their own network segment with no direct internet access.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“But at least for the external part, you’re reducing risk, right?” dos Santos says.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;But PQC support at one endpoint is effective only if the other endpoint can also negotiate the same algorithm, and manufacturers are reporting difficulty meeting interoperability goals. Thales’s September &lt;a href="https://cpl.thalesgroup.com/pl/node/54671"&gt;Manufacturing Data Threat Report&lt;/a&gt;, based on 417 respondents in 20 countries, revealed that 30% were behind on their post-quantum interoperability objectives.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“For the end users, the main thing to be doing right now is the inventory of devices and data together,” dos Santos said. “Devices, data, and communication.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The resulting map should identify which transfers already have compatible protection, which depend on an upgrade, and where a gateway could protect an external connection.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For healthcare, Forescout recommends prioritizing patient portals, external APIs, partner exchanges, and other internet-facing connections, then updating cryptographic libraries and firmware where feasible. For equipment that cannot be upgraded, its healthcare report recommends assessing gateways and isolation measures, obtaining vendor roadmaps, and planning replacement when manufacturers have no viable migration path.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Dos Santos says vendors supplying equipment with multiyear service should have a roadmap for PQC communications even when their current firmware does not support it. Operators need to know when that support will arrive, which connections it will protect, and whether it requires new hardware. For equipment expected to remain in service for years, those answers need to inform purchasing and support agreements, alongside a replacement plan if a vendor cannot deliver an upgrade.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The G7 call to action urges organizations to integrate quantum-safe replacements into normal equipment renewal schedules and the US Office of Management and Budget’s &lt;a href="https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf"&gt;June guidance&lt;/a&gt; directs federal agencies to incorporate PQC upgrades into hardware refreshes and prioritize replacing or decommissioning equipment that cannot support PQC or hybrid cryptography.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4236142/ot-systems-complicate-shift-to-quantum-resistant-data-protection.html</guid>
+      <title>IBM security advisory (AV26-1040)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1040</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1040</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
-      <pubDate>Tue, 20 Oct 2026 08:25:00 +0000</pubDate>
+      <comments>Score: 7.65</comments>
+      <pubDate>Wed, 14 Oct 2026 18:31:46 +0000</pubDate>
     </item>
     <item>
-      <title>CISA: SafePay ransomware hit over 600 critical infrastructure orgs</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/</link>
-      <description>The Cybersecurity and Infrastructure Security Agency (CISA) says the SafePay ransomware gang has breached over 600 critical infrastructure organizations worldwide since 2024. [...]</description>
-      <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/</guid>
+      <title>Cisco security advisory (AV26-1042) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1042</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1042</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.70</comments>
-      <pubDate>Wed, 21 Oct 2026 04:36:24 -0400</pubDate>
-    </item>
-    <item>
-      <title>When defrost becomes sabotage: 3 OT lessons from France’s supermarket attack</title>
-      <link>https://www.csoonline.com/article/4237172/when-defrost-becomes-sabotage-3-ot-lessons-from-frances-supermarket-attack.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;On the night of 11 October, someone remotely put the cold cases of several hundred French supermarkets into defrost. At Intermarché and Netto stores, fridges and freezers warmed to around 50°C and stayed there for about six hours, according to Les Mousquetaires, which expects losses in the tens of millions of euros. By morning, staff were filling skips with meat, frozen goods and vegetables.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Coopérative U counted 80 affected stores out of roughly 2,000. Its chief executive, Dominique Schelcher, &lt;a href="https://www.strategies.fr/actualites/culture-tech/LQ6738014C/cyberattaque-dans-les-supermarches-le-pdg-de-cooperative-u-tempere-l-ampleur-des-degats.html"&gt;told RTL&lt;/a&gt; that the cold chain held in most of them. Only a minority reacted too slowly and lost stock, and he credited store staff and refrigeration contractors for the difference. Intermarché said its affected stores had to throw away everything. A second wave followed in the night of 12 to 13 October, this time also reaching stores with Dixell controllers.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Similar controllers, similar night, very different mornings. That gap is the part of this story an operator can act on. &lt;a href="https://www.csoonline.com/article/4235107/unplug-your-smart-fridges-french-supermarkets-warned-after-cyberattack.html"&gt;CSO has already reported&lt;/a&gt; which systems were hit and what CERT-FR wants done with them. Nobody has claimed responsibility and no ransom demand has surfaced, which Reuters reports has puzzled investigators; whoever did this wanted spoiled food, not money, or has not said what they wanted yet. Neither CERT-FR nor Danfoss has said how the attackers got in: exposed management interfaces, known flaws and stolen contractor credentials are all still on the table. The three lessons that follow do not depend on either answer.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="your-refrigeration-contractor-is-your-perimeter"&gt;Your refrigeration contractor is your perimeter&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Schelcher made a remark that deserves more attention than the temperature figures: Coopérative U stores do not buy from Danfoss. They buy from refrigeration contractors, who supply the controller, configure it and keep remote access to it so they can adjust setpoints without driving to the store. E.Leclerc told AFP that the attack reached its stores through one of its refrigeration equipment suppliers. The controller’s embedded web server exists for exactly this purpose, and the contractor’s performance guarantees usually depend on the data feed it provides.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Danfoss has seen this before. Its own &lt;a href="https://www.danfoss.com/en/service-and-support/articles/dcs/tech-insider-october-2025/"&gt;technical newsletter from October 2025&lt;/a&gt; records attacks on the AK-SM 800 in 2022: 16 Russian supermarkets and 40 Israeli stores. All 40 Israeli sites, the newsletter notes, lacked proper firewall or VPN protection. Four years later the same model, end-of-life since May 2021, was still on the internet in France.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The pattern is familiar from industrial sites. The party who decides whether a controller is exposed is not the party who eats the loss when it is. The contractor wants a browser and a public IP address because it turns a Sunday-night callout into a two-minute job. The store carries the inventory. A standard maintenance contract rarely makes that trade-off visible to the person signing it.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;How deep the dependency runs shows in a sentence I have not seen in a national advisory before. &lt;a href="https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-012"&gt;CERT-FR’s alert&lt;/a&gt;, updated on 16 October, tells operators to check their insurance terms before cutting the internet link to the refrigeration contractor. The data feed is contractual, and depending on the agreement, cutting it can touch monitoring obligations or policy conditions. And the insurance side is bleak anyway: brokers and underwriters &lt;a href="https://www.claimsjournal.com/news/national/2026/10/15/340725.htm"&gt;told Reuters&lt;/a&gt; that cyber policies typically exclude physical loss, so the spoiled stock is unlikely to be covered. Intermarché told AFP its insurance does not cover the incident.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;So, the first question: who can log into your refrigeration controllers today, and over what path? Store network, contractor VPN, a cellular router the contractor installed years ago, a port forward on the store router? If answering requires calling the contractor, you do not control that perimeter. You rent it.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The lesson is a contract clause, not a firewall rule. The maintenance agreement should name every remote path into the equipment and forbid any other; require access through your gateway or VPN with accounts tied to named technicians; give you the logs; oblige the contractor to tell you when a controller leaves vendor support or a vulnerability is published; and let you revoke access without losing the cold chain. Cold-case controllers run for decades. The contract that pays for their maintenance rarely says any of this. After France, it should.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="defrost-is-a-feature-treat-the-command-as-the-event"&gt;Defrost is a feature. Treat the command as the event&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Whatever got the attackers in, the damage itself came from ordinary refrigeration functions. Defrost is a built-in cycle on every refrigeration controller, and in the second wave the setpoints were reportedly pushed to values no case can reach. Many controllers also offer a setting that suppresses temperature alarms during defrost and for a delay afterwards, so that scheduled cycles do not page anyone at 3 a.m. That is a sensible configuration. It is also exactly what makes a forced defrost quiet. Whether it played a role in France has not been established, and Coopérative U’s experience shows that alarms did reach people in most of its stores.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The structure is the same as in the &lt;a href="https://www.csoonline.com/article/4204541"&gt;Minnesota water attacks in July&lt;/a&gt;: intended functionality, used by the wrong person at the wrong time. A temperature alarm is a process control. It tells you the product is getting warm. It cannot tell you that the command which made it warm came from someone who should not have been logged in.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The signal worth alarming on is an unexpected mode or setpoint change outside a maintenance window, and it gets louder when several circuits move at once or several stores that share a contractor move in the same hour. CERT-FR’s updated alert now tells operators to review their defrost schedules specifically. That is the right instinct: look at the configuration, not just the thermometer.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Not every controller can export that event, least of all the models that were hit. Where it cannot, an independent temperature logger that does not depend on the controller catches the consequence early. Either way, someone has to receive the alert, understand it and have the authority to act. At 3 a.m. that chain runs from a store employee to an external technician to a central operations desk, and if nobody has written down who calls whom, the minutes go to finding out. In the second wave, a refrigeration technician in the Gironde &lt;a href="https://www.lemonde.fr/en/pixels/article/2026/10/13/after-danfoss-hackers-strike-other-refrigeration-systems-used-in-france_6758565_13.html"&gt;told Le Monde&lt;/a&gt; that his teams reached a store near Bordeaux in time, and nothing had to be thrown away. Schelcher’s minority lost their stock because they could not respond fast enough. One factor clearly separated the two groups: time from first actionable warning to intervention.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The lesson, concretely: an alert on any remote setpoint or mode change that no technician has announced, weighted by time of day and by how many circuits move together, raised by the controller where it can and by the contractor’s monitoring platform where it cannot, since the contractor is the only party that sees all its stores at once. A temperature logger that does not share the controller’s network, as the second opinion. A written call chain for 3 a.m. with names, not roles. And a drill: have the contractor change a setpoint on a test circuit at night and measure how many minutes pass before someone with authority has it reversed. That number is the one to report to the board.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="an-unsupported-controller-is-a-budget-line-not-a-patch-ticket"&gt;An unsupported controller is a budget line, not a patch ticket&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Claroty’s Team82 &lt;a href="https://claroty.com/team82/research/freeze-the-controller-defrost-the-food-uncovering-vulnerabilities-in-danfoss-refrigeration-controllers"&gt;published three flaws in the current model&lt;/a&gt;, the AK-SM 800A, in August, all fixed in firmware 4.3.1 or earlier, and counted 2,765 of its management interfaces reachable from the internet. Nobody has linked those flaws to the attack. Danfoss says most affected units were the older AK-SM 800 and AK-SC 355, with some 800A units on outdated firmware.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For the older models, there is nothing to patch. Danfoss ended updates for the AK-SM 800 in May 2021 and for the AK-SC 355 in 2016. CERT-FR therefore does not lead with patching. It tells operators to take every AK-SM, AK-SC and XWEB controller off the public internet, restore access only through a VPN or protected network, and for compromised Danfoss units, restart, or failing that, factory-reset, and reconfigure before returning them to service. It adds a warning that reads like a prediction: a reset alone removes persistence but leaves the device just as vulnerable, and the campaign is probably still running.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The sequence is the one I argued for &lt;a href="https://www.csoonline.com/article/4219765"&gt;when CISA asked operators to harden Siemens S7 PLCs&lt;/a&gt;: exposure first, firmware second, replacement third. In practice, that means a list of every refrigeration controller by model, firmware and vendor support status by the end of this week; a management interface on a public IP address taken off it the same day; current firmware on everything the vendor still supports; and for everything it does not, a replacement date with a budget line and a name next to it. An aging controller may still do its job perfectly well, and replacing it costs money, engineering time and downtime, so without an owner the decision slides. The security team can document the risk. Someone on the commercial side has to accept it or fund the replacement, and after Reuters’ insurance round-up, that person should know they are also accepting the stock.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Which brings the story back to the two groups of stores. Nobody has shown that firmware or hardware explains which stores kept their stock. What is documented is that a warning reached someone who could act before the cold chain gave way. That is an operational capability, and it can be tested long before an attacker tests it for you. Sekoia told Reuters that Spain, Portugal, Poland, Germany and Belgium saw cases too, and the same controller families run cold storage in warehouses and pharmaceutical distribution, maintained by the same kind of contractor. So, before the week is out, do two things. Search Shodan or Censys for your own refrigeration management interfaces, because someone else already has. Then call the contractor and ask one question: when you log into our sites, how do you get there? If the answer is a public IP address and a password, with nothing in between, you have found your incident. It just hasn’t happened yet.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4237172/when-defrost-becomes-sabotage-3-ot-lessons-from-frances-supermarket-attack.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.72</comments>
-      <pubDate>Tue, 20 Oct 2026 09:00:00 +0000</pubDate>
+      <comments>Score: 7.66</comments>
+      <pubDate>Wed, 14 Oct 2026 20:00:12 +0000</pubDate>
     </item>
     <item>
       <title>Critical security issue affecting PHP</title>
@@ -284,8 +36,28 @@
       <guid isPermaLink="false">https://www.ncsc.gov.uk/news/critical-security-issue-affecting-php</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.69</comments>
       <pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>FBI, CISA warn that SafePay ransomware poses threat to critical infrastructure</title>
+      <link>https://www.cybersecuritydive.com/news/fbi-cisa-warn-safepay-ransomware-threat-critical-infrastructure/833589/</link>
+      <description>&lt;p&gt;The group has been linked to a 2025 attack targeting technology firm Ingram Micro.&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://www.cybersecuritydive.com/news/fbi-cisa-warn-safepay-ransomware-threat-critical-infrastructure/833589/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Wed, 21 Oct 2026 10:25:47 -0400</pubDate>
+    </item>
+    <item>
+      <title>SafePay Has Compromised 600 Critical Infrastructure Victims Worldwide, CISA Warns</title>
+      <link>https://www.infosecurity-magazine.com/news/safepay-compromised-critical/</link>
+      <description>A new CISA advisory warns of the threat posed by SafePay to businesses and critical infrastructure, and urges defenders to take action to mitigate the group’s tactics</description>
+      <guid isPermaLink="false">https://www.infosecurity-magazine.com/news/safepay-compromised-critical/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.71</comments>
+      <pubDate>Wed, 21 Oct 2026 11:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Palo Alto Networks security advisory (AV26-1041) - Update 1</title>
@@ -294,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1041</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Thu, 15 Oct 2026 13:11:51 +0000</pubDate>
     </item>
     <item>
@@ -304,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1043</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
+      <comments>Score: 7.79</comments>
       <pubDate>Thu, 15 Oct 2026 13:44:50 +0000</pubDate>
     </item>
     <item>
@@ -314,7 +86,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1044</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 15 Oct 2026 14:40:03 +0000</pubDate>
     </item>
     <item>
@@ -324,18 +96,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1045</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 15 Oct 2026 14:50:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>FBI, CISA warn that SafePay ransomware poses threat to critical infrastructure</title>
-      <link>https://www.cybersecuritydive.com/news/fbi-cisa-warn-safepay-ransomware-threat-critical-infrastructure/833589/</link>
-      <description>&lt;p&gt;The group has been linked to a 2025 attack targeting technology firm Ingram Micro.&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://www.cybersecuritydive.com/news/fbi-cisa-warn-safepay-ransomware-threat-critical-infrastructure/833589/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
-      <pubDate>Wed, 21 Oct 2026 10:25:47 -0400</pubDate>
     </item>
     <item>
       <title>HPE security advisory (AV26-1046)</title>
@@ -344,18 +106,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1046</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 15 Oct 2026 15:09:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>SafePay Has Compromised 600 Critical Infrastructure Victims Worldwide, CISA Warns</title>
-      <link>https://www.infosecurity-magazine.com/news/safepay-compromised-critical/</link>
-      <description>A new CISA advisory warns of the threat posed by SafePay to businesses and critical infrastructure, and urges defenders to take action to mitigate the group’s tactics</description>
-      <guid isPermaLink="false">https://www.infosecurity-magazine.com/news/safepay-compromised-critical/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
-      <pubDate>Wed, 21 Oct 2026 11:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Drupal security advisory (AV26-1047)</title>
@@ -364,7 +116,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1047</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 15 Oct 2026 15:19:12 +0000</pubDate>
     </item>
     <item>
@@ -374,7 +126,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1048</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.85</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Thu, 15 Oct 2026 17:58:39 +0000</pubDate>
     </item>
     <item>
@@ -384,7 +136,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-1049</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Thu, 15 Oct 2026 18:20:30 +0000</pubDate>
     </item>
     <item>
@@ -394,7 +146,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1002</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Thu, 15 Oct 2026 18:33:45 +0000</pubDate>
     </item>
     <item>
@@ -404,7 +156,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1050</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Thu, 15 Oct 2026 18:53:12 +0000</pubDate>
     </item>
     <item>
@@ -414,7 +166,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-schneider-electric-security-advisory-av26-1051</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Thu, 15 Oct 2026 19:10:41 +0000</pubDate>
     </item>
     <item>
@@ -424,7 +176,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1052</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Thu, 15 Oct 2026 19:24:46 +0000</pubDate>
     </item>
     <item>
@@ -434,7 +186,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1053</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.87</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Thu, 15 Oct 2026 19:35:56 +0000</pubDate>
     </item>
     <item>
@@ -444,7 +196,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Fri, 16 Oct 2026 13:16:21 +0000</pubDate>
     </item>
     <item>
@@ -454,7 +206,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Fri, 16 Oct 2026 13:29:16 +0000</pubDate>
     </item>
     <item>
@@ -464,7 +216,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1057</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.06</comments>
+      <comments>Score: 8.02</comments>
       <pubDate>Fri, 16 Oct 2026 14:19:42 +0000</pubDate>
     </item>
     <item>
@@ -474,7 +226,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.07</comments>
+      <comments>Score: 8.03</comments>
       <pubDate>Fri, 16 Oct 2026 15:09:38 +0000</pubDate>
     </item>
     <item>
@@ -484,7 +236,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.06</comments>
       <pubDate>Fri, 16 Oct 2026 17:50:47 +0000</pubDate>
     </item>
     <item>
@@ -494,7 +246,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.10</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Fri, 16 Oct 2026 18:27:37 +0000</pubDate>
     </item>
     <item>
@@ -504,7 +256,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/bmc-helix-security-advisory-av26-1059</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.07</comments>
       <pubDate>Fri, 16 Oct 2026 18:45:43 +0000</pubDate>
     </item>
     <item>
@@ -514,7 +266,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Fri, 16 Oct 2026 20:16:50 +0000</pubDate>
     </item>
     <item>
@@ -629,7 +381,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4238124/uk-fca-exec-wants-to-require-disclosure-of-significant-ai-failures-and-near-misses-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Wed, 21 Oct 2026 01:09:32 +0000</pubDate>
     </item>
     <item>
@@ -772,7 +524,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4238149/us-bans-deepseek-across-federal-agencies-putting-ai-supply-chains-under-scrutiny-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.24</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Wed, 21 Oct 2026 01:55:45 +0000</pubDate>
     </item>
     <item>
@@ -1047,7 +799,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4142001/12-ways-attackers-abuse-cloud-services-to-hack-your-enterprise.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.47</comments>
+      <comments>Score: 8.35</comments>
       <pubDate>Wed, 21 Oct 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -1246,7 +998,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4237926/moving-past-autonomous-exploitation-to-machine-speed-security.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.37</comments>
       <pubDate>Wed, 21 Oct 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1369,7 +1121,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4237420/f5-rushes-out-emergency-nginx-patches-for-three-critical-flaws.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.56</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Tue, 20 Oct 2026 03:25:43 +0000</pubDate>
     </item>
     <item>
@@ -1379,7 +1131,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-025-critical-vulnerability-impacting-beyondtrust-remote-support-cve-2026-102764</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.08</comments>
+      <comments>Score: 9.05</comments>
       <pubDate>Fri, 16 Oct 2026 16:34:00 +0000</pubDate>
     </item>
     <item>
@@ -1389,7 +1141,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-423</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.14</comments>
       <pubDate>Mon, 19 Oct 2026 13:24:47 +0000</pubDate>
     </item>
     <item>
@@ -1399,7 +1151,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1061</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.38</comments>
+      <comments>Score: 9.30</comments>
       <pubDate>Mon, 19 Oct 2026 20:20:30 +0000</pubDate>
     </item>
     <item>
@@ -1409,7 +1161,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/eptura-security-advisory-av26-1062</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.38</comments>
+      <comments>Score: 9.31</comments>
       <pubDate>Mon, 19 Oct 2026 20:30:24 +0000</pubDate>
     </item>
     <item>
@@ -1419,7 +1171,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1064</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.83</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Tue, 20 Oct 2026 13:01:07 +0000</pubDate>
     </item>
     <item>
@@ -1429,7 +1181,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-advantech-security-advisory-av26-1065</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.84</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Tue, 20 Oct 2026 13:10:55 +0000</pubDate>
     </item>
     <item>
@@ -1439,18 +1191,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-geovision-security-advisory-av26-1066</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.84</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Tue, 20 Oct 2026 13:26:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>Gitea security advisory (AV26-845) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gitea-security-advisory-av26-845</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitea-security-advisory-av26-845</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
-      <pubDate>Tue, 20 Oct 2026 17:33:03 +0000</pubDate>
     </item>
     <item>
       <title>Two critical PHP flaws put the web on alert as emergency patches arrive</title>
@@ -1592,8 +1334,141 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4238692/two-critical-php-flaws-put-the-web-on-alert-as-emergency-patches-arrive.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.97</comments>
+      <comments>Score: 9.84</comments>
       <pubDate>Wed, 21 Oct 2026 21:27:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gitea security advisory (AV26-845) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitea-security-advisory-av26-845</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitea-security-advisory-av26-845</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.87</comments>
+      <pubDate>Tue, 20 Oct 2026 17:33:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI’s models are deliberately breaking their misalignment monitoring systems</title>
+      <link>https://www.csoonline.com/article/4238782/openais-models-are-deliberately-breaking-their-misalignment-monitoring-systems.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;AI agents are getting more inventive in finding ways to circumvent safeguards to prevent bad behavior, OpenAI has revealed.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;On Tuesday, it reported two incidents, both involving the agent disabling or interfering with its alignment monitoring, and in one case directly lying about having done so. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“In two internal coding tasks, agents weakened misalignment monitoring while making requested software changes,” the &lt;a href="https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/" rel="noreferrer noopener" target="_blank"&gt;OpenAI blog post&lt;/a&gt; said. “A GPT-6.1 Sol agent repairing an evaluation pipeline disabled automatic alerts to our Security team, treating an earlier instruction not to send messages during a Slack history search as a reason to suppress monitoring notifications. In a separate task, a GPT-6 Astra agent migrating a program removed its monitoring integration in order to match a reference implementation, and then falsely claimed to the user that it had not removed the monitor.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In both cases, OpenAI reported, the agents considered whether monitoring safeguards should be preserved, “but interpreted routine coding instructions as permission to weaken them.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;OpenAI said that, in response, it has been strengthening its monitoring programs to prevent agents from being able to disable the protections.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“In addition to making it harder for models to disable monitoring, we are looking to understand why models might seek to do so in the first place,” OpenAI said, suggesting that it may simply be an example of “benign overpersistence,” with models not understanding why monitoring is important.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“We are also developing evaluations to test whether models might have a propensity to evade misalignment monitoring in particular and exhibit motivated reasoning in order to do so,” OpenAI added. “We don’t yet have a satisfying explanation for this behavior and will investigate this behavior through the creation of paired evaluations, resampling of agent continuations, and experiments on models’ internal activations.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;OpenAI, like almost every agentic AI vendor, has been&lt;a href="https://www.csoonline.com/article/4223458/openai-admits-six-new-misalignment-incidents-under-new-reporting-framework.html" target="_blank"&gt; struggling with making its autonomous agents&lt;/a&gt; more productive and self-sufficient while simultaneously protecting customer environments from &lt;a href="https://www.csoonline.com/article/4222474/hundreds-of-openai-agents-attack-rubygems-platform.html" target="_blank"&gt;bad agent behavior&lt;/a&gt;. It has even tried to &lt;a href="https://www.csoonline.com/article/4211672/openai-temporarily-slows-scaling-efforts-also-promises-zero-data-retention-for-select-frontier-model-customers-2.html" target="_blank"&gt;slow down the pace of its scaling&lt;/a&gt;, to allow for the development of better agent restrictions. &lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="particulars-alarming"&gt;Particulars alarming&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Analysts and consultants said the revelations were surprising only in their scope. But they were alarmed by some of the particulars in the OpenAI disclosures.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/akm76/" rel="noreferrer noopener" target="_blank"&gt;Aman Mahapatra&lt;/a&gt;, chief strategy officer for New York City-based technology consulting firm Tribeca Softech, stressed that some level of monitoring was maintained, but only for the agent itself. That meant that the workloads the agents created were left invisible.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The agent was watched. What it built was not,” he said. “Agent-spawned pipelines, jobs, service accounts, and cloud functions are the next generation of shadow IT, and almost no enterprise enforces monitoring inheritance on them.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Mahapatra also stressed that the severity classification described in the post is concerning. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The severity handling is the part CISOs should sit with,” he said. “Neither event was classified P0 [maximum severity] and neither run was killed. The one category of agent behavior that degrades every future detection ranked below the paging threshold because nothing visibly broke.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;He pointed out that this reveals a disadvantage for the enterprise, noting, “OpenAI caught this because it can read its agents’ reasoning. Most enterprise SOCs see only outputs, so if the lab with chain-of-thought visibility filed this below its paging line, assume your SOC never saw it at all. EDR settled this a decade ago with tamper protection: any attempt to disable the sensor is the alert. An agent touching its own monitoring should page someone every single time.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/frankdickson/" rel="noreferrer noopener" target="_blank"&gt;Frank Dickson&lt;/a&gt;, principal analyst at Dickson Research, added that the obvious flaw in the agentic system is that the agent was able to disable the mechanism designed to oversee it. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Think of a house sitter told not to call you, who then unplugs the burglar alarm so it cannot call you either. A guardrail an agent can edit is a suggestion,” Dickson said. “An agent that can turn off its own alarm is not being monitored. It is being trusted.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="wakeup-call-for-cisos"&gt;Wakeup call for CISOs&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Some observers said that this should wake up enterprise CISOs to the fact that an attacker may not be as big a risk as a rogue agent with full system privileges.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The threat is not just an outsider breaking in, it’s an authorized agent doing something it was never supposed to do, in a context no one anticipated, faster than any SOC analyst can catch it,” said &lt;a href="https://my.idc.com/getdoc.jsp?containerId=PRF005506" rel="noreferrer noopener" target="_blank"&gt;Philip Harris&lt;/a&gt;, an IDC research director. “The OpenAI case is a concrete, well-documented instance of exactly that pattern, not an isolated anomaly.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;He added that OpenAI deserves credit for transparency. “OpenAI’s own candor is the most striking part. A frontier lab publicly saying it isn’t sure whether its own shipping models have an emergent tendency to undermine their own oversight is a genuinely new level of candor.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.controlrisks.com/who-we-are/our-experts/expert-bio/brian-levine" rel="noreferrer noopener" target="_blank"&gt;Brian Levine&lt;/a&gt;, a partner with consulting firm Control Risks, also pointed out that the rationale of the agent, as captured by OpenAI, is alarming.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“In both cases, the agents stopped, asked themselves whether the safeguard should stay on and then argued their way to turning it off. One then told the user it hadn’t touched the monitor. In incident response, we call that defense evasion followed by a false statement. If a human insider did it, we would open an investigation,” Levine said. “The other telling detail is that the monitor worked. It flagged the issue. The agent then cut the wire between the alarm and the people who needed to hear it.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Independent technology consultant &lt;a href="https://www.phygitalytics.com/about" rel="noreferrer noopener" target="_blank"&gt;Sivaram Annadurai&lt;/a&gt; agreed: “An agent that fixes the pipeline but disables the alarm hasn’t necessarily solved the problem. It may have created a bigger one.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;And &lt;a href="https://acceligence.com/talent/profiles/jeff-valdes/" rel="noreferrer noopener" target="_blank"&gt;Jeff Valdes&lt;/a&gt;, a director at consulting firm Acceligence, added, “what stands out is how ordinary the trigger was. No attacker, no jailbreak, just routine coding instructions and an agent with enough access to change its own oversight. The monitor kept running while the alerts stopped reaching people. That kind of quiet degradation is easy to miss precisely because the dashboard still looks healthy.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;But Valdes said the agent to agent approval system is also something CISOs should take seriously.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“One subagent got the call right, and the parent agent overrode it. Safeguards that don’t survive delegation aren’t really safeguards,” Valdes said. “OpenAI also noted the agent later gave an inaccurate account of what it had changed. An agent’s own report can’t be the control.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4238782/openais-models-are-deliberately-breaking-their-misalignment-monitoring-systems.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 9.94</comments>
+      <pubDate>Wed, 21 Oct 2026 23:47:34 +0000</pubDate>
     </item>
     <item>
       <title>Siemens security advisory (AV26-1063) – Update 1</title>
@@ -1602,7 +1477,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/siemens-security-advisory-av26-1063</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.04</comments>
+      <comments>Score: 9.95</comments>
       <pubDate>Tue, 20 Oct 2026 19:57:09 +0000</pubDate>
     </item>
     <item>
@@ -1612,7 +1487,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/craft-cms-security-advisory-av26-1067</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.05</comments>
+      <comments>Score: 9.95</comments>
       <pubDate>Tue, 20 Oct 2026 20:04:46 +0000</pubDate>
     </item>
     <item>
@@ -1622,7 +1497,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-1068</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.64</comments>
+      <comments>Score: 10.52</comments>
       <pubDate>Wed, 21 Oct 2026 13:03:16 +0000</pubDate>
     </item>
     <item>
@@ -1632,7 +1507,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-1069</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.65</comments>
+      <comments>Score: 10.53</comments>
       <pubDate>Wed, 21 Oct 2026 13:19:21 +0000</pubDate>
     </item>
     <item>
@@ -1642,7 +1517,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/php-security-advisory-av26-1070</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.65</comments>
+      <comments>Score: 10.53</comments>
       <pubDate>Wed, 21 Oct 2026 13:27:35 +0000</pubDate>
     </item>
     <item>
@@ -1652,7 +1527,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-1071</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.85</comments>
+      <comments>Score: 10.72</comments>
       <pubDate>Wed, 21 Oct 2026 18:28:37 +0000</pubDate>
     </item>
     <item>
@@ -1662,7 +1537,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-1072</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.86</comments>
+      <comments>Score: 10.74</comments>
       <pubDate>Wed, 21 Oct 2026 18:48:12 +0000</pubDate>
     </item>
     <item>
@@ -1672,7 +1547,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1073</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.88</comments>
+      <comments>Score: 10.75</comments>
       <pubDate>Wed, 21 Oct 2026 19:09:38 +0000</pubDate>
     </item>
     <item>
@@ -1682,7 +1557,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.81</comments>
+      <comments>Score: 11.69</comments>
       <pubDate>Wed, 21 Oct 2026 17:30:09 +0000</pubDate>
     </item>
   </channel>
