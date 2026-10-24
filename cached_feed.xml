@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 24 Oct 2026 10:30:47 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 14:20:00 +0000</lastBuildDate>
     <item>
       <title>SUSE Linux security advisory (AV26-1053)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1053</link>
@@ -16,151 +16,20 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1053</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.46</comments>
+      <comments>Score: 7.45</comments>
       <pubDate>Thu, 15 Oct 2026 19:35:56 +0000</pubDate>
     </item>
     <item>
-      <title>LiteLLM release pipeline hacked to distribute credential-stealing malware</title>
-      <link>https://www.csoonline.com/article/4239033/litellm-release-pipeline-hacked-to-distribute-credential-stealing-malware.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Hackers hijacked the software release pipeline of LiteLLM, a popular open-source AI gateway, to distribute credential-stealing malware, marking the project’s second supply chain compromise this year despite security measures introduced after an earlier attack.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The compromised version, 1.107.0, was distributed through the Python Package Index (PyPI) and official Docker images on October 21. LiteLLM said the malicious Python packages remained available for &lt;a href="https://docs.litellm.ai/blog/security-incident-oct-21-2026" rel="noreferrer noopener" target="_blank"&gt;approximately two hours&lt;/a&gt; before being removed, while the affected Docker images were withdrawn or replaced later that day.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The affected Docker images included those distributed under the latest, main-latest, and main-stable tags, extending the risk to deployments that pulled those tags during the exposure window.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;According to cybersecurity firm &lt;a href="https://www.aikido.dev/blog/litellm-compromised-infostealer-rat" rel="noreferrer noopener" target="_blank"&gt;Aikido&lt;/a&gt;, files bundled with the compromised package executed automatically when Python started, even if an application did not import LiteLLM. The malware was designed to collect sensitive information from infected systems, including cloud credentials and API keys stored in LiteLLM’s database, potentially giving attackers access to services beyond the affected AI gateway.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The compromised package also contained a remote access trojan that launched a background process to retrieve and execute code from attacker-controlled infrastructure every hour, according to Aikido. This could allow attackers to continue executing commands on infected systems after the initial credential theft.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In its incident report, LiteLLM said attackers used stolen GitHub credentials associated with three developer accounts to manipulate its software release pipeline. The stolen credentials enabled changes to the release workflow, which was redirected to an attacker-controlled lookalike repository.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The company said the attackers may have obtained the credentials from logs associated with an internet-facing internal LiteLLM deployment. It also identified circumstances in which Claude Code could expose GitHub authentication tokens in responses subsequently recorded by LiteLLM. However, it has not been established how the attackers initially accessed the deployment.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;LiteLLM said the incident had been contained and that customers using its private enterprise registry were unaffected. It advised organizations running the compromised open-source software to treat their environments as potentially breached and rotate exposed credentials rather than relying solely on removing the malicious package.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="broader-enterprise-exposure"&gt;Broader enterprise exposure&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“A compromised LiteLLM gateway provides a strong foothold to hackers and could expose far more than AI API keys,” said &lt;a href="https://confidis.co/about/our-leadership-team/" rel="noreferrer noopener" target="_blank"&gt;Keith Prabhu&lt;/a&gt;, CEO of Confidis. Aikido noted that the malware targeted Kubernetes service account tokens and secrets associated with &lt;a href="https://www.csoonline.com/article/4165420/sap-npm-package-attack-highlights-risks-in-developer-tools-and-ci-cd-pipelines.html"&gt;CI/CD systems&lt;/a&gt;, including GitLab and Jenkins.&lt;br /&gt;&lt;br /&gt;The extent of any subsequent compromise may depend on the privileges assigned to the affected deployment and the credentials available to it.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“An AI gateway is privileged enterprise infrastructure,” said &lt;a href="https://my.idc.com/getdoc.jsp?containerId=PRF005665"&gt;Sakshi Grover&lt;/a&gt;, research director for information and data security at IDC. “Centralizing access to multiple models can improve governance, but it also concentrates trust.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Beyond credential theft, a compromised gateway could disrupt business applications that depend on it, Grover said. IDC’s Future Enterprise Resiliency and Spending Survey, conducted in July 2026, found that 95% of enterprises surveyed worldwide had at least one company-funded agent-enabled workflow in production.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-wider-incident-response-challenge"&gt;A wider incident response challenge&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The malware’s remote access component could remain active even after the compromised package is removed, complicating efforts to determine whether an affected system is safe to restore.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“CISOs should not treat this just as a package-cleanup exercise,” Prabhu said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;He recommended identifying deployments running affected packages or container images, isolating suspected systems, and preserving forensic evidence before rebuilding them using trusted software.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Grover warned that security teams should avoid launching Python or pip in suspected compromised environments because the malware’s startup hooks could execute again. She recommended identifying affected packages and container image digests across production environments, developer systems and CI runners.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Missing indicators do not prove an environment is clean,” Grover said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Prabhu recommended examining logs for evidence of persistent access or misuse of stolen credentials. He said organizations should rotate every secret accessible to the compromised deployment, including credentials associated with cloud infrastructure and development pipelines.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Grover also recommended linking AI usage telemetry with cloud and identity audit logs to help identify possible credential misuse. Unusual token consumption could provide an indication of unauthorized activity, although attackers may avoid generating noticeable increases in spending, she said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="software-supply-chain-weaknesses"&gt;Software supply chain weaknesses&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In March, &lt;a href="https://www.csoonline.com/article/4149905/pypi-warns-developers-after-litellm-malware-found-stealing-cloud-and-ci-cd-credentials.html"&gt;malicious versions&lt;/a&gt; of LiteLLM’s Python package were distributed following a compromise that the project linked to the &lt;a href="https://www.csoonline.com/article/4148317/trivy-vulnerability-scanner-backdoored-with-credential-stealer-in-supply-chain-attack.html"&gt;Trivy security scanner&lt;/a&gt; used in its software release pipeline.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;After this, LiteLLM strengthened its software release process by moving releases to a private repository and introducing signed Docker images. However, attackers used stolen GitHub credentials to modify the release workflow, which then signed and published the malicious software, the company said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The incident shows how malicious code can pass through an authorized software signing process when attackers compromise the release pipeline. A valid digital signature can verify that an artifact has not been altered since signing, but cannot establish whether the code was safe when it was signed.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Repeated supply-chain compromises show that a trusted source repository does not guarantee that the package users install was built from that source,” Prabhu said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Prabhu recommended cryptographically signed releases backed by verifiable build provenance, alongside stronger protection of publishing credentials.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Grover said enterprises should also inspect distributed software packages and container images before deployment, rather than relying solely on the integrity of the source repository. She recommended restricting production deployments to verified package and image digests and requiring independent approval for changes to release workflows.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4239033/litellm-release-pipeline-hacked-to-distribute-credential-stealing-malware.html</guid>
+      <title>Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads</title>
+      <link>https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html</link>
+      <description>Google has updated its privacy policy to spell out that using personalized artificial intelligence (AI) features in Search or Gemini could allow the company to serve targeted ads to users based on their activity on other connected Google services.
+
+"You may choose to allow certain Google services, including services like Search or Gemini Apps, to access data from other Google services you use,</description>
+      <guid isPermaLink="false">https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
-      <pubDate>Thu, 22 Oct 2026 12:07:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol urges early action to protect cryptocurrencies and sensitive data from quantum threats</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</link>
-      <description>The timing of these capabilities remains uncertain. However, this should not be the main concern. Adapting systems and coordinating security upgrades will take time. Therefore, regardless of the nature of the threats that may emerge, crypto-agility should be pursued proactively to ensure that systems can withstand and overcome future threats while remaining secure.Both reports highlight the need to identify and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 24 Oct 2026 08:30:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>European and Ecuadorian cooperation leads to 20 arrests in major hit against drug trafficking</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/european-and-ecuadorian-cooperation-leads-to-20-arrests-in-major-hit-against-drug-trafficking</link>
-      <description>The operation, codenamed Operation CANTABRIA, underscores the success of strong cooperation between European and Ecuadorian law enforcement agencies, proving that joint efforts are key to tackling transnational criminal networks.Magnus BrunnerEU Commissioner for Internal Affairs and Migration“International cooperation is our greatest strength against drug trafficking. Criminal networks know no borders, and neither can our response. This operation shows what we can...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/european-and-ecuadorian-cooperation-leads-to-20-arrests-in-major-hit-against-drug-trafficking</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 24 Oct 2026 08:30:47 +0000</pubDate>
+      <comments>Score: 7.48</comments>
+      <pubDate>Sat, 24 Oct 2026 16:06:33 +0530</pubDate>
     </item>
     <item>
       <title>5th EMPACT Hackathon leads to the detection of 51 potential victims</title>
@@ -170,17 +39,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 24 Oct 2026 08:30:47 +0000</pubDate>
+      <pubDate>Sat, 24 Oct 2026 12:20:00 +0000</pubDate>
     </item>
     <item>
-      <title>Keeping pace with e-evidence: New report examines Europe’s digital forensic capabilities</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</link>
-      <description>Coordinated by the European Commission in cooperation with Europol, the analysis draws on stakeholder consultations, dedicated meetings, surveys and contributions from experts at Europol’s European Cybercrime Centre.The findings point to common challenges: investigative tools, resources and expertise are struggling to keep pace with the forms and volume of digital evidence created by modern technologiesDigitalisation shaping evidence landscapeDigital information is spread...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</guid>
+      <title>Europol urges early action to protect cryptocurrencies and sensitive data from quantum threats</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</link>
+      <description>The timing of these capabilities remains uncertain. However, this should not be the main concern. Adapting systems and coordinating security upgrades will take time. Therefore, regardless of the nature of the threats that may emerge, crypto-agility should be pursued proactively to ensure that systems can withstand and overcome future threats while remaining secure.Both reports highlight the need to identify and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 24 Oct 2026 08:30:47 +0000</pubDate>
+      <pubDate>Sat, 24 Oct 2026 12:20:00 +0000</pubDate>
     </item>
     <item>
       <title>EU law enforcement chiefs gather to discuss new challenges in EU security</title>
@@ -190,109 +59,27 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Sat, 24 Oct 2026 08:30:47 +0000</pubDate>
+      <pubDate>Sat, 24 Oct 2026 12:20:00 +0000</pubDate>
     </item>
     <item>
-      <title>[Control Systems] Moxa security advisory (AV26-1055)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055</guid>
+      <title>European and Ecuadorian cooperation leads to 20 arrests in major hit against drug trafficking</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/european-and-ecuadorian-cooperation-leads-to-20-arrests-in-major-hit-against-drug-trafficking</link>
+      <description>The operation, codenamed Operation CANTABRIA, underscores the success of strong cooperation between European and Ecuadorian law enforcement agencies, proving that joint efforts are key to tackling transnational criminal networks.Magnus BrunnerEU Commissioner for Internal Affairs and Migration“International cooperation is our greatest strength against drug trafficking. Criminal networks know no borders, and neither can our response. This operation shows what we can...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/european-and-ecuadorian-cooperation-leads-to-20-arrests-in-major-hit-against-drug-trafficking</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Fri, 16 Oct 2026 13:16:21 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 24 Oct 2026 12:20:00 +0000</pubDate>
     </item>
     <item>
-      <title>Palo Alto Networks security advisory (AV26-1056)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056</guid>
+      <title>Keeping pace with e-evidence: New report examines Europe’s digital forensic capabilities</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</link>
+      <description>Coordinated by the European Commission in cooperation with Europol, the analysis draws on stakeholder consultations, dedicated meetings, surveys and contributions from experts at Europol’s European Cybercrime Centre.The findings point to common challenges: investigative tools, resources and expertise are struggling to keep pace with the forms and volume of digital evidence created by modern technologiesDigitalisation shaping evidence landscapeDigital information is spread...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Fri, 16 Oct 2026 13:29:16 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV26-1057)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1057</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1057</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.56</comments>
-      <pubDate>Fri, 16 Oct 2026 14:19:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ivanti security advisory (AV26-1035) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
-      <pubDate>Fri, 16 Oct 2026 15:09:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
-      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Sat, 24 Oct 2026 08:30:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>Progress security advisory (AV26-1058)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Fri, 16 Oct 2026 17:50:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>BeyondTrust security advisory (AV26-1054) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Fri, 16 Oct 2026 18:27:37 +0000</pubDate>
-    </item>
-    <item>
-      <title>BMC Helix security advisory (AV26-1059)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/bmc-helix-security-advisory-av26-1059</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/bmc-helix-security-advisory-av26-1059</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
-      <pubDate>Fri, 16 Oct 2026 18:45:43 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</link>
-      <description>Five suspects linked to the organisation and recruitment of serious violence have been arrested in Spain, Morocco, and France, in the latest results of the Operational Taskforce (OTF) GRIMM, coordinated by Europol.
-
-The arrests in August and September target the upper levels of violence-as-a-service: those suspected of ordering attacks, finding perpetrators and coordinating crimes from abroad. Among those apprehended are fugitives featured on the EU Most Wanted website.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
-      <pubDate>Sat, 24 Oct 2026 08:30:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google security advisory (AV26-1060)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
-      <pubDate>Fri, 16 Oct 2026 20:16:50 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 24 Oct 2026 12:20:00 +0000</pubDate>
     </item>
     <item>
       <title>Security teams urged to center defense on the flaw profile attackers target most</title>
@@ -406,8 +193,110 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4239255/security-teams-urged-to-center-defense-on-the-single-profile-attackers-target-most.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.53</comments>
       <pubDate>Thu, 22 Oct 2026 18:25:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control Systems] Moxa security advisory (AV26-1055)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.54</comments>
+      <pubDate>Fri, 16 Oct 2026 13:16:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>Palo Alto Networks security advisory (AV26-1056)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.54</comments>
+      <pubDate>Fri, 16 Oct 2026 13:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV26-1057)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1057</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1057</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.54</comments>
+      <pubDate>Fri, 16 Oct 2026 14:19:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ivanti security advisory (AV26-1035) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.55</comments>
+      <pubDate>Fri, 16 Oct 2026 15:09:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>Progress security advisory (AV26-1058)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.56</comments>
+      <pubDate>Fri, 16 Oct 2026 17:50:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>BeyondTrust security advisory (AV26-1054) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Fri, 16 Oct 2026 18:27:37 +0000</pubDate>
+    </item>
+    <item>
+      <title>BMC Helix security advisory (AV26-1059)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/bmc-helix-security-advisory-av26-1059</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/bmc-helix-security-advisory-av26-1059</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.57</comments>
+      <pubDate>Fri, 16 Oct 2026 18:45:43 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google security advisory (AV26-1060)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Fri, 16 Oct 2026 20:16:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
+      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Sat, 24 Oct 2026 12:20:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</link>
+      <description>Five suspects linked to the organisation and recruitment of serious violence have been arrested in Spain, Morocco, and France, in the latest results of the Operational Taskforce (OTF) GRIMM, coordinated by Europol.
+
+The arrests in August and September target the upper levels of violence-as-a-service: those suspected of ordering attacks, finding perpetrators and coordinating crimes from abroad. Among those apprehended are fugitives featured on the EU Most Wanted website.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.60</comments>
+      <pubDate>Sat, 24 Oct 2026 12:20:00 +0000</pubDate>
     </item>
     <item>
       <title>Enterprises should report AI breaches and ‘near misses,’ says UK financial regulator</title>
@@ -521,7 +410,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4238124/enterprises-should-report-ai-breaches-and-near-misses-says-uk-financial-regulator.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Wed, 21 Oct 2026 01:09:32 +0000</pubDate>
     </item>
     <item>
@@ -624,7 +513,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4239372/the-ai-notetaker-risk-is-now-an-everywhere-problem.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 7.93</comments>
       <pubDate>Fri, 23 Oct 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -751,7 +640,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4239634/emudhra-quits-global-tls-certificate-market-after-compromise-of-ca-signing-keys-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Fri, 23 Oct 2026 10:34:39 +0000</pubDate>
     </item>
     <item>
@@ -894,7 +783,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4238692/two-critical-php-flaws-put-the-web-on-alert-as-emergency-patches-arrive.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 8.04</comments>
       <pubDate>Wed, 21 Oct 2026 21:27:26 +0000</pubDate>
     </item>
     <item>
@@ -1017,7 +906,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4238782/openais-models-are-deliberately-breaking-their-misalignment-monitoring-systems.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.17</comments>
+      <comments>Score: 8.09</comments>
       <pubDate>Wed, 21 Oct 2026 23:47:34 +0000</pubDate>
     </item>
     <item>
@@ -1027,28 +916,8 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/redis-security-advisory-av26-423</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.18</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Mon, 19 Oct 2026 13:24:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>Red Hat security advisory (AV26-1061)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1061</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1061</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
-      <pubDate>Mon, 19 Oct 2026 20:20:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>Eptura security advisory (AV26-1062)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/eptura-security-advisory-av26-1062</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/eptura-security-advisory-av26-1062</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
-      <pubDate>Mon, 19 Oct 2026 20:30:24 +0000</pubDate>
     </item>
     <item>
       <title>Meta hit with $25 billion fine for illegally sharing user data</title>
@@ -1098,8 +967,28 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4239754/meta-hit-with-25-billion-fine-for-illegally-sharing-user-data-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Fri, 23 Oct 2026 15:23:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Red Hat security advisory (AV26-1061)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1061</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1061</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.22</comments>
+      <pubDate>Mon, 19 Oct 2026 20:20:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>Eptura security advisory (AV26-1062)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/eptura-security-advisory-av26-1062</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/eptura-security-advisory-av26-1062</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.22</comments>
+      <pubDate>Mon, 19 Oct 2026 20:30:24 +0000</pubDate>
     </item>
     <item>
       <title>IBM security advisory (AV26-1064)</title>
@@ -1108,7 +997,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1064</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Tue, 20 Oct 2026 13:01:07 +0000</pubDate>
     </item>
     <item>
@@ -1118,7 +1007,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-advantech-security-advisory-av26-1065</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Tue, 20 Oct 2026 13:10:55 +0000</pubDate>
     </item>
     <item>
@@ -1128,18 +1017,8 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-geovision-security-advisory-av26-1066</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.52</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Tue, 20 Oct 2026 13:26:08 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-025 - Critical vulnerability impacting BeyondTrust Remote Support – CVE-2026-102764</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-025-critical-vulnerability-impacting-beyondtrust-remote-support-cve-2026-102764</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-025-critical-vulnerability-impacting-beyondtrust-remote-support-cve-2026-102764</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
-      <pubDate>Fri, 16 Oct 2026 16:34:00 +0000</pubDate>
     </item>
     <item>
       <title>Gitea security advisory (AV26-845) - Update 1</title>
@@ -1148,8 +1027,18 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitea-security-advisory-av26-845</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.52</comments>
       <pubDate>Tue, 20 Oct 2026 17:33:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-025 - Critical vulnerability impacting BeyondTrust Remote Support – CVE-2026-102764</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-025-critical-vulnerability-impacting-beyondtrust-remote-support-cve-2026-102764</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-025-critical-vulnerability-impacting-beyondtrust-remote-support-cve-2026-102764</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.55</comments>
+      <pubDate>Fri, 16 Oct 2026 16:34:00 +0000</pubDate>
     </item>
     <item>
       <title>Siemens security advisory (AV26-1063) – Update 1</title>
@@ -1158,7 +1047,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/siemens-security-advisory-av26-1063</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Tue, 20 Oct 2026 19:57:09 +0000</pubDate>
     </item>
     <item>
@@ -1168,7 +1057,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/craft-cms-security-advisory-av26-1067</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.56</comments>
       <pubDate>Tue, 20 Oct 2026 20:04:46 +0000</pubDate>
     </item>
     <item>
@@ -1178,7 +1067,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-1068</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.94</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Wed, 21 Oct 2026 13:03:16 +0000</pubDate>
     </item>
     <item>
@@ -1188,7 +1077,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-1069</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Wed, 21 Oct 2026 13:19:21 +0000</pubDate>
     </item>
     <item>
@@ -1198,7 +1087,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/php-security-advisory-av26-1070</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.95</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Wed, 21 Oct 2026 13:27:35 +0000</pubDate>
     </item>
     <item>
@@ -1208,7 +1097,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-1071</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.05</comments>
+      <comments>Score: 8.97</comments>
       <pubDate>Wed, 21 Oct 2026 18:28:37 +0000</pubDate>
     </item>
     <item>
@@ -1218,7 +1107,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-1072</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.06</comments>
+      <comments>Score: 8.98</comments>
       <pubDate>Wed, 21 Oct 2026 18:48:12 +0000</pubDate>
     </item>
     <item>
@@ -1228,7 +1117,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1073</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.07</comments>
+      <comments>Score: 8.99</comments>
       <pubDate>Wed, 21 Oct 2026 19:09:38 +0000</pubDate>
     </item>
     <item>
@@ -1238,7 +1127,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1074</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.48</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Thu, 22 Oct 2026 12:27:27 +0000</pubDate>
     </item>
     <item>
@@ -1248,7 +1137,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-1075</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.48</comments>
+      <comments>Score: 9.38</comments>
       <pubDate>Thu, 22 Oct 2026 12:36:04 +0000</pubDate>
     </item>
     <item>
@@ -1258,7 +1147,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1076</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.47</comments>
       <pubDate>Thu, 22 Oct 2026 15:54:24 +0000</pubDate>
     </item>
     <item>
@@ -1268,7 +1157,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-1077</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.66</comments>
+      <comments>Score: 9.56</comments>
       <pubDate>Thu, 22 Oct 2026 19:29:12 +0000</pubDate>
     </item>
     <item>
@@ -1278,7 +1167,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1078</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.20</comments>
+      <comments>Score: 10.07</comments>
       <pubDate>Fri, 23 Oct 2026 13:00:17 +0000</pubDate>
     </item>
     <item>
@@ -1288,7 +1177,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1079</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.21</comments>
+      <comments>Score: 10.08</comments>
       <pubDate>Fri, 23 Oct 2026 13:19:05 +0000</pubDate>
     </item>
     <item>
@@ -1298,7 +1187,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.22</comments>
+      <comments>Score: 10.09</comments>
       <pubDate>Fri, 23 Oct 2026 13:34:25 +0000</pubDate>
     </item>
     <item>
@@ -1308,7 +1197,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1081</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.24</comments>
+      <comments>Score: 10.11</comments>
       <pubDate>Fri, 23 Oct 2026 14:16:11 +0000</pubDate>
     </item>
     <item>
@@ -1318,7 +1207,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-1080</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.37</comments>
+      <comments>Score: 10.24</comments>
       <pubDate>Fri, 23 Oct 2026 18:07:53 +0000</pubDate>
     </item>
     <item>
@@ -1328,7 +1217,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.31</comments>
+      <comments>Score: 11.18</comments>
       <pubDate>Fri, 23 Oct 2026 16:15:31 +0000</pubDate>
     </item>
   </channel>
