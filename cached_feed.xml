@@ -8,187 +8,26 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 22:58:33 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 02:17:38 +0000</lastBuildDate>
     <item>
-      <title>Craft CMS security advisory (AV26-1067)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/craft-cms-security-advisory-av26-1067</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/craft-cms-security-advisory-av26-1067</guid>
+      <title>EU law enforcement chiefs gather to discuss new challenges in EU security</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-law-enforcement-chiefs-gather-to-discuss-new-challenges-in-eu-security</link>
+      <description>The Convention was opened by Jürgen Ebner, Europol’s Acting Executive Director, and Justin Kelly, Commissioner of the Irish An Garda Síochána.Jürgen EbnerEuropol Acting Executive DirectorOrganised crime itself has become digital by default. Technology is not just an enabler of criminal activity - it is increasingly driving it. We need strong national capabilities reinforced by shared European capabilities. If crime is...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-law-enforcement-chiefs-gather-to-discuss-new-challenges-in-eu-security</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.53</comments>
-      <pubDate>Tue, 20 Oct 2026 20:04:46 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 29 Oct 2026 00:17:38 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI’s August fix for theft of reasoning traces was quickly bypassed</title>
-      <link>https://www.csoonline.com/article/4240662/openais-august-fix-for-theft-of-reasoning-traces-was-quickly-bypassed.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Cybersecurity research firm Xint on Monday published details of a bug in the OpenAI API that leaks raw reasoning traces from frontier OpenAI models, revealing the risk of other data leaks. OpenAI has confirmed the flaw, mitigated it, and paid a bug bounty for its discovery.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The problem is that OpenAI had already deployed mitigations for the issue in August after &lt;a href="https://arxiv.org/abs/2608.09867" rel="noreferrer noopener" target="_blank"&gt;a research report dubbed Stolen Thoughts&lt;/a&gt; revealed a similar bug that allowed theft of reasoning traces, with possible consequences including large-scale data extraction and the ability for attackers to execute invisible prompt injections and to embed malicious payloads to poison public agentic rollouts. Xint’s discovery bypassed those mitigations.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;OpenAI did not respond to a request for comment.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Fixing fixes like this is starting to become &lt;a href="https://www.csoonline.com/article/4227199/stolen-ai-credentials-feed-growing-llm-proxy-economy.html" target="_blank"&gt;a trend among the major AI vendors&lt;/a&gt;, with AWS earlier this month reporting that it had fixed a bug in April, &lt;a href="https://www.csoonline.com/article/4232054/awss-repeated-problems-with-ai-agent-controls-illustrates-the-autonomous-agent-dilemma.html" target="_blank"&gt;only to then have to refix it in September&lt;/a&gt;. &lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="bypassing-mitigation"&gt;Bypassing mitigation&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Xint is describing the current hole as compaction smuggling. Its &lt;a href="https://xint.io/blog/compaction-smuggling-reasoning-traces" rel="noreferrer noopener" target="_blank"&gt;blog post about the flaw &lt;/a&gt;described its researchers’ methodology.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Our new technique, compaction smuggling, moves one model’s reasoning to another model by encoding it inside a compaction,” they wrote.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;First, they captured the encrypted reasoning from a designated task, removed the original task from the history, and preserved the reasoning verbatim.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Then “we asked for the reasoning under a ‘solution’ key in a JSON object, with every space replaced by a tab (\t), which was enough to slip past OpenAI’s usage-policy classifiers,” the post said. “Encrypted compaction items are still portable, so we sent the compaction item to gpt-4.1 and gpt-4o and asked each to output its input exactly as-is, which they happily did. We then decoded the JSON and converted tabs back into spaces.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The post added that the tactic worked “because OpenAI’s August mitigations only block replaying reasoning into a different model, and the compaction call runs on the same model that produced the reasoning. The attack worked at every reasoning effort we tried.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-hard-problem-to-solve"&gt;A hard problem to solve&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Tim Becker, lead researcher at Xint and the author of the blog post, said in an interview that some of the flaw’s timeline is unknown. For example, the Stolen Papers post went live August 10, but Becker only knows that OpenAI addressed that problem at some point before that date. And, he said, OpenAI didn’t publish when it implemented the fix for the issue that Xint reported; unlike with traditional patches, an AI model maker can make changes silently. “It’s sort of security through obscurity,” he said, using a term that historically has meant that something was only protected by the fact that almost no one knew of its existence. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Protecting such a model, Becker said, “is a very fundamentally hard problem to solve,” mostly because of the massive number of changes that today’s models routinely undergo. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The models “are a moving target and that is part of the problem. Any mitigation is going to be somewhat brittle,” he said. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;As well, &lt;a href="https://www.linkedin.com/in/frankdickson/" rel="noreferrer noopener" target="_blank"&gt;Frank Dickson&lt;/a&gt;, principal analyst at Dickson Research, noted that AI models tend to feed on themselves operationally, which is why Xint’s method worked.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Compaction runs on the same model that produced the reasoning, so it sailed past the August mitigation, which only blocked replaying reasoning into a different model,” he said. “Swapping spaces for tabs was enough to slip past the usage-policy classifiers. The vault was locked. The clerk holding the key would still read the letter aloud if you asked nicely. OpenAI did fix the bug it was shown. The trouble is that it was shown only one door.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="risk-to-enterprises"&gt;Risk to enterprises&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Analysts and consultants said this is an immediate big problem for the major AI vendors, but there is a clear secondary risk for enterprise CISOs. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.infotech.com/profiles/erik-avakian" rel="noreferrer noopener" target="_blank"&gt;Erik Avakian&lt;/a&gt;, technical counselor at Infotech, said that the Xint team “circumvented the protections by using legitimate functionality already built into the platform. For most enterprises, while this specific finding may not rise to the level of an immediate crisis, its significance is that it demonstrates how legitimate AI platform features can be combined to bypass narrowly designed safeguards.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“This can leave organizations exposed to risks that a vendor’s individual patch may not fully address,” he said. “It reinforces just how difficult it can be to fully address these vulnerabilities in situations where different components of an AI system interact in ways that create unintended risks.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Avakian said that this should be a heads-up for the enterprise. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“For CISOs, the takeaway is that a vendor’s fix for a specific exploit shouldn’t, in and of itself, be treated as proof that the underlying weakness has been comprehensively addressed,” he said. “CISOs should press their AI providers to explain not only how a reported exploit was patched, but also how they were tested across interconnected features and services.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.controlrisks.com/who-we-are/our-experts/expert-bio/brian-levine" rel="noreferrer noopener" target="_blank"&gt;Brian Levine&lt;/a&gt;, a partner with consulting firm Control Risks, added that he thinks CISOs should look at the overall pattern of holes like these that need to be fixed repeatedly.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Vendors are fixing the specific attack path that was reported, not the underlying class of weakness, and researchers are walking right back in through a side door,” he said. “A patch notice is not proof the risk is gone. Stop treating an AI vendor’s ‘fixed’ as the end of the conversation. Ask what variant testing was done and build regression notification into your contracts.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://acceligence.com/talent/profiles/jeff-valdes/" rel="noreferrer noopener" target="_blank"&gt;Jeff Valdes&lt;/a&gt;, a director at consulting firm Acceligence, shared similar fears.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“This is what happens when you treat security as a game of whack-a-mole instead of fixing the underlying plumbing,” Valdes said. “Patching a symptom while leaving the helper pipes wide open isn’t a remediation strategy. It’s just kicking the vulnerability down to the next release. If an attacker can smuggle the model’s internal scratchpad across API boundaries to steal training data, what makes anyone think enterprise prompts and sensitive intermediate context are truly quarantined?”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In addition, &lt;a href="https://www.linkedin.com/in/pieter-arntz-04164b2/" rel="noreferrer noopener" target="_blank"&gt;Pieter Arntz&lt;/a&gt;, malware intelligence researcher at Malwarebytes, observed that this summer’s OpenAI fix was inadequate. “The earlier mitigation was incomplete, which is a fair description of a gap,” Arntz said. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Retest after vendor fixes,” he advised. “As the AWS case shows, a fix in one place can leave other paths open. Verify with your own testing rather than relying on the vendor’s word.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/akm76/" rel="noreferrer noopener" target="_blank"&gt;Aman Mahapatra&lt;/a&gt;, chief strategy officer for New York City-based technology consulting firm Tribeca Softech, said it is almost impossible for the largest AI vendors to &lt;em&gt;not &lt;/em&gt;approach these big reports piecemeal. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“AI vendors are patching exploits on a surface that grows by several features a month,” he pointed out. “Until they fix properties instead of paths, CISOs should assume every AI security fix is partial, every encrypted blob is readable, and every vendor guardrail is one encoding trick from irrelevant. The trend is real, and ‘the fix didn’t work’ undersells what is happening.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;He noted that, in both the OpenAI and AWS cases, the vendor fixed the proof of concept and left the property intact. “Patch the path, keep the property,” he said. “On platforms assembled from composable features, every new feature is a fresh path to the same asset, and point fixes on a combinatorial surface will keep losing.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="cisos-unused-to-the-agentic-model"&gt;CISOs unused to the agentic model&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Mahapatra said the cybersecurity industry should learn lessons from its own history.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Cryptographers learned this two decades ago with padding oracles: any system that decrypts on a client’s behalf and returns anything derived from the plaintext is an oracle. AI platforms are relearning it with a twist,” he said. “Every LLM step that can see a secret and accept instructions is an oracle, and natural language is the most expressive oracle interface ever built.” &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;He noted that compaction did exactly what it was designed to do, and its portability across models exists so agentic tools like Codex can let users switch models mid-session. “The feature and the vulnerability are the same capability, which is why fixes keep arriving narrow,” he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;But, he argued, the bigger problem is that CISO operations are not yet used to the agentic model way of doing things. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“AI platform flaws arrive with no CVE, no advisory, and no patch notes. Enterprise vulnerability management, built on CVE feeds and vendor advisories, is blind to its most consequential new suppliers,” Mahapatra said. “CISOs should write security notification obligations into AI provider contracts, assign someone to track researcher disclosures against the platforms they use, and ask one question after every vendor fix: did you fix the report or the class, and what variant analysis supports that answer?”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;He also raised questions about the small size of the bounty paid to Xint. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“A $6,000 bounty for a bug enabling exactly the industrial-scale distillation the NSA, CISA, and FBI warned about in a joint advisory in September is a pricing signal that researchers with other buyers will notice,” he said. &lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4240662/openais-august-fix-for-theft-of-reasoning-traces-was-quickly-bypassed.html</guid>
+      <title>European and Ecuadorian cooperation leads to 20 arrests in major hit against drug trafficking</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/european-and-ecuadorian-cooperation-leads-to-20-arrests-in-major-hit-against-drug-trafficking</link>
+      <description>The operation, codenamed Operation CANTABRIA, underscores the success of strong cooperation between European and Ecuadorian law enforcement agencies, proving that joint efforts are key to tackling transnational criminal networks.Magnus BrunnerEU Commissioner for Internal Affairs and Migration“International cooperation is our greatest strength against drug trafficking. Criminal networks know no borders, and neither can our response. This operation shows what we can...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/european-and-ecuadorian-cooperation-leads-to-20-arrests-in-major-hit-against-drug-trafficking</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.54</comments>
-      <pubDate>Tue, 27 Oct 2026 03:22:50 +0000</pubDate>
+      <comments>Score: 7.52</comments>
+      <pubDate>Thu, 29 Oct 2026 00:17:38 +0000</pubDate>
     </item>
     <item>
       <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
@@ -198,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.58</comments>
-      <pubDate>Wed, 28 Oct 2026 20:58:33 +0000</pubDate>
+      <pubDate>Thu, 29 Oct 2026 00:17:38 +0000</pubDate>
     </item>
     <item>
       <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
@@ -210,7 +49,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.60</comments>
-      <pubDate>Wed, 28 Oct 2026 20:58:33 +0000</pubDate>
+      <pubDate>Thu, 29 Oct 2026 00:17:38 +0000</pubDate>
     </item>
     <item>
       <title>SolarWinds security advisory (AV26-1068)</title>
@@ -219,7 +58,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-1068</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Wed, 21 Oct 2026 13:03:16 +0000</pubDate>
     </item>
     <item>
@@ -229,7 +68,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-1069</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
+      <comments>Score: 7.61</comments>
       <pubDate>Wed, 21 Oct 2026 13:19:21 +0000</pubDate>
     </item>
     <item>
@@ -239,7 +78,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-1072</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.64</comments>
       <pubDate>Wed, 21 Oct 2026 18:48:12 +0000</pubDate>
     </item>
     <item>
@@ -249,8 +88,18 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1073</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.67</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Wed, 21 Oct 2026 19:09:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>Energy Giant Engie Notifies Customers of Supply Chain Breach</title>
+      <link>https://www.infosecurity-magazine.com/news/energy-giant-engie-supply-chain/</link>
+      <description>An undisclosed number of Engie customers have had their data compromised after a supply chain incident</description>
+      <guid isPermaLink="false">https://www.infosecurity-magazine.com/news/energy-giant-engie-supply-chain/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.68</comments>
+      <pubDate>Wed, 28 Oct 2026 14:05:00 +0000</pubDate>
     </item>
     <item>
       <title>GitLab security advisory (AV26-1074)</title>
@@ -259,7 +108,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1074</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 22 Oct 2026 12:27:27 +0000</pubDate>
     </item>
     <item>
@@ -269,18 +118,8 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-1075</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.80</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Thu, 22 Oct 2026 12:36:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Energy Giant Engie Notifies Customers of Supply Chain Breach</title>
-      <link>https://www.infosecurity-magazine.com/news/energy-giant-engie-supply-chain/</link>
-      <description>An undisclosed number of Engie customers have had their data compromised after a supply chain incident</description>
-      <guid isPermaLink="false">https://www.infosecurity-magazine.com/news/energy-giant-engie-supply-chain/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
-      <pubDate>Wed, 28 Oct 2026 14:05:00 +0000</pubDate>
     </item>
     <item>
       <title>Atlassian security advisory (AV26-1076)</title>
@@ -289,7 +128,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1076</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Thu, 22 Oct 2026 15:54:24 +0000</pubDate>
     </item>
     <item>
@@ -299,7 +138,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-1077</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.83</comments>
       <pubDate>Thu, 22 Oct 2026 19:29:12 +0000</pubDate>
     </item>
     <item>
@@ -309,7 +148,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1078</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Fri, 23 Oct 2026 13:00:17 +0000</pubDate>
     </item>
     <item>
@@ -319,7 +158,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1079</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Fri, 23 Oct 2026 13:19:05 +0000</pubDate>
     </item>
     <item>
@@ -329,7 +168,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.04</comments>
+      <comments>Score: 8.00</comments>
       <pubDate>Fri, 23 Oct 2026 13:34:25 +0000</pubDate>
     </item>
     <item>
@@ -339,7 +178,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1081</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.05</comments>
+      <comments>Score: 8.01</comments>
       <pubDate>Fri, 23 Oct 2026 14:16:11 +0000</pubDate>
     </item>
     <item>
@@ -349,7 +188,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-1080</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.09</comments>
+      <comments>Score: 8.05</comments>
       <pubDate>Fri, 23 Oct 2026 18:07:53 +0000</pubDate>
     </item>
     <item>
@@ -488,7 +327,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4241421/attackers-built-a-skynet-ai-agent-that-hijacks-exposed-models-to-run-cyberattacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.11</comments>
       <pubDate>Wed, 28 Oct 2026 02:10:33 +0000</pubDate>
     </item>
     <item>
@@ -603,7 +442,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4241496/attackers-compromised-42-github-repositories-by-using-files-too-large-to-be-searched-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.25</comments>
+      <comments>Score: 8.14</comments>
       <pubDate>Wed, 28 Oct 2026 02:58:27 +0000</pubDate>
     </item>
     <item>
@@ -890,7 +729,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4154222/6-ways-attackers-abuse-ai-services-to-hack-your-business.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.44</comments>
+      <comments>Score: 8.32</comments>
       <pubDate>Wed, 28 Oct 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -1129,7 +968,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4241129/when-prevention-fails-why-cyber-resilience-is-the-next-big-test-of-trust.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.38</comments>
       <pubDate>Wed, 28 Oct 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1280,7 +1119,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4240612/the-days-of-assuming-another-companys-breach-is-someone-elses-problem-are-over.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.59</comments>
       <pubDate>Tue, 27 Oct 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -1290,7 +1129,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1082</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.20</comments>
+      <comments>Score: 9.12</comments>
       <pubDate>Mon, 26 Oct 2026 13:29:00 +0000</pubDate>
     </item>
     <item>
@@ -1300,7 +1139,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-1083</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.20</comments>
+      <comments>Score: 9.13</comments>
       <pubDate>Mon, 26 Oct 2026 13:38:01 +0000</pubDate>
     </item>
     <item>
@@ -1310,7 +1149,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1084</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.21</comments>
+      <comments>Score: 9.13</comments>
       <pubDate>Mon, 26 Oct 2026 13:50:35 +0000</pubDate>
     </item>
     <item>
@@ -1320,7 +1159,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/craft-cms-security-advisory-av26-1086</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.25</comments>
+      <comments>Score: 9.17</comments>
       <pubDate>Mon, 26 Oct 2026 15:48:04 +0000</pubDate>
     </item>
     <item>
@@ -1330,7 +1169,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-1087</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.33</comments>
+      <comments>Score: 9.25</comments>
       <pubDate>Mon, 26 Oct 2026 19:04:16 +0000</pubDate>
     </item>
     <item>
@@ -1340,7 +1179,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/esri-security-advisory-av26-1088</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.81</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Tue, 27 Oct 2026 13:10:25 +0000</pubDate>
     </item>
     <item>
@@ -1350,7 +1189,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/php-security-advisory-av26-1070</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.82</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Tue, 27 Oct 2026 13:16:18 +0000</pubDate>
     </item>
     <item>
@@ -1360,7 +1199,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1089</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.82</comments>
+      <comments>Score: 9.72</comments>
       <pubDate>Tue, 27 Oct 2026 13:24:14 +0000</pubDate>
     </item>
     <item>
@@ -1370,7 +1209,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1090</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.84</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Tue, 27 Oct 2026 14:02:18 +0000</pubDate>
     </item>
     <item>
@@ -1380,7 +1219,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-1091</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.91</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Tue, 27 Oct 2026 16:21:17 +0000</pubDate>
     </item>
     <item>
@@ -1390,7 +1229,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1085</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.04</comments>
+      <comments>Score: 9.93</comments>
       <pubDate>Tue, 27 Oct 2026 20:32:57 +0000</pubDate>
     </item>
     <item>
@@ -1400,7 +1239,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-697</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.04</comments>
+      <comments>Score: 9.94</comments>
       <pubDate>Tue, 27 Oct 2026 20:41:21 +0000</pubDate>
     </item>
     <item>
@@ -1410,7 +1249,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1092</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.66</comments>
+      <comments>Score: 10.54</comments>
       <pubDate>Wed, 28 Oct 2026 14:26:34 +0000</pubDate>
     </item>
     <item>
@@ -1420,7 +1259,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-1093</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.67</comments>
+      <comments>Score: 10.54</comments>
       <pubDate>Wed, 28 Oct 2026 14:38:08 +0000</pubDate>
     </item>
     <item>
@@ -1430,7 +1269,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-1094</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.67</comments>
+      <comments>Score: 10.54</comments>
       <pubDate>Wed, 28 Oct 2026 14:41:15 +0000</pubDate>
     </item>
     <item>
@@ -1440,7 +1279,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-1095</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.68</comments>
+      <comments>Score: 10.55</comments>
       <pubDate>Wed, 28 Oct 2026 14:50:37 +0000</pubDate>
     </item>
     <item>
@@ -1450,7 +1289,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-1096</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.70</comments>
+      <comments>Score: 10.57</comments>
       <pubDate>Wed, 28 Oct 2026 15:28:22 +0000</pubDate>
     </item>
     <item>
@@ -1460,7 +1299,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-1097</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.71</comments>
+      <comments>Score: 10.58</comments>
       <pubDate>Wed, 28 Oct 2026 15:40:28 +0000</pubDate>
     </item>
     <item>
@@ -1470,7 +1309,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-1071</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.77</comments>
+      <comments>Score: 10.64</comments>
       <pubDate>Wed, 28 Oct 2026 17:15:17 +0000</pubDate>
     </item>
     <item>
@@ -1480,7 +1319,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1098</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.78</comments>
+      <comments>Score: 10.65</comments>
       <pubDate>Wed, 28 Oct 2026 17:29:48 +0000</pubDate>
     </item>
     <item>
@@ -1490,7 +1329,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-028-ongoing-help-desk-voice-phishing-campaign-targeting-canadian-organizations</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.83</comments>
+      <comments>Score: 10.70</comments>
       <pubDate>Wed, 28 Oct 2026 18:49:45 +0000</pubDate>
     </item>
     <item>
@@ -1500,7 +1339,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-1099</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.84</comments>
+      <comments>Score: 10.71</comments>
       <pubDate>Wed, 28 Oct 2026 19:05:56 +0000</pubDate>
     </item>
     <item>
@@ -1510,7 +1349,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1100</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.85</comments>
+      <comments>Score: 10.72</comments>
       <pubDate>Wed, 28 Oct 2026 19:17:01 +0000</pubDate>
     </item>
     <item>
@@ -1520,7 +1359,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1101</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.86</comments>
+      <comments>Score: 10.73</comments>
       <pubDate>Wed, 28 Oct 2026 19:30:45 +0000</pubDate>
     </item>
     <item>
@@ -1530,7 +1369,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.87</comments>
+      <comments>Score: 10.74</comments>
       <pubDate>Wed, 28 Oct 2026 19:53:28 +0000</pubDate>
     </item>
     <item>
@@ -1540,7 +1379,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.94</comments>
+      <comments>Score: 10.84</comments>
       <pubDate>Tue, 27 Oct 2026 17:20:09 +0000</pubDate>
     </item>
     <item>
@@ -1550,7 +1389,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 11.60</comments>
+      <comments>Score: 11.47</comments>
       <pubDate>Wed, 28 Oct 2026 12:46:09 +0000</pubDate>
     </item>
   </channel>
