@@ -8,132 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Oct 2026 21:37:37 +0000</lastBuildDate>
-    <item>
-      <title>Attackers compromised 42 GitHub repositories by using files too large to be searched</title>
-      <link>https://www.csoonline.com/article/4241496/attackers-compromised-42-github-repositories-by-using-files-too-large-to-be-searched-2.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A security research firm reported Monday that it had identified breaches of 42 third-party GitHub repositories in which attackers had deployed payload blobs large enough “to evade the GitHub search and API paths normally used to find this kind of compromise.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos/" rel="noreferrer noopener" target="_blank"&gt;The report&lt;/a&gt; from JFrog Security Research said the victimized repositories contained execution hooks for AI coding assistants and IDEs, along with polymorphic wrappers as large as 13.7MB that “all decoded to the same hidden CI-publisher payload. The campaign’s attacker-owned repository also operates as an active encrypted data sink, receiving snapshot envelopes, and the attack leveraged a new camouflage: a compiled native addon that contains no payload of its own, and instead decrypts a file named &lt;em&gt;&lt;code&gt;.napi_cache&lt;/code&gt;&lt;/em&gt; at runtime to reveal the real one.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;JFrog said that the investigation also uncovered account hijacks, forged commit timelines, short-lived publishing branches and exposed npm credentials. Shellpanel artifacts in the same hijacked owner cluster link this GitHub victim infrastructure to previously reported GitHub Actions exploitation of internet-facing cPanel systems.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“During October 21 our scanners alerted us about shai-hulud packages found in the npm ecosystem,” JFrog wrote. “&lt;a href="https://safedep.io/testmetest-npm-worm-miasma-variant/" rel="noreferrer noopener" target="_blank"&gt;SafeDep’s October 22 analysis&lt;/a&gt; first documented the npm/package side of this activity and decoded &lt;em&gt;&lt;code&gt;event-bus-lite-testmetest@0.0.1&lt;/code&gt;&lt;/em&gt;. SafeDep described the payload as Miasma-family while explicitly noting uncertainty about its lineage.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;SafeDep had originally thought that the packages in the campaign it had discovered, dubbed testmetest, were merely a test by the threat actor, but this week discovered the compromises of existing repos with malicious content.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The JFrog post also focused on the npm chain implications. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The npm chain provides the link into the broader operation. Malicious testmetest releases used a &lt;em&gt;&lt;code&gt;binding.gyp&lt;/code&gt;&lt;/em&gt; command expansion to execute &lt;em&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/em&gt; during installation, even though the packages did not declare a conventional install script,” the post said. “The loader applied a per-build Caesar transformation to a character-code array, decrypted an AES-128-GCM stage and located or downloaded Bun 1.2.18. Depending on the build, the decrypted payload was piped to &lt;em&gt;&lt;code&gt;bun run -&lt;/code&gt;&lt;/em&gt; or written to a temporary &lt;code&gt;.b-*&lt;/code&gt;directory and removed after execution. The full npm payload collected credentials, poisoned repositories and CI configuration, and propagated through package registries.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Those attacker-controlled repositories served as sources of cover projects for matching npm packages, JFrog said. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Malicious releases delivered the npm worm, which stole GitHub and npm credentials that could provide access to third-party repositories. Within hijacked repositories, the campaign left smoke-test placeholders or armed payloads,” the researchers wrote. “Decoding the armed &lt;em&gt;&lt;code&gt;ci.js&lt;/code&gt;&lt;/em&gt; files exposed publishers designed to run through GitHub Actions and use npm tokens or trusted publishing to produce further malicious testmetest releases, feeding package delivery back into repository compromise.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="defensive-recommendations"&gt;Defensive recommendations&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;JFrog’s post recommended a variety of defensive tactics for detection and mitigation of these attacks, including that CISOs “should treat installation of a full-worm version as a host compromise.” It also suggested that users should revoke and rotate all GitHub, GitLab, npm, PyPI, RubyGems, cloud, SSH, Vault, Kubernetes and AI-provider credentials, as well as auditing “all repositories accessible to affected identities for &lt;em&gt;&lt;code&gt;.github/init.js&lt;/code&gt;&lt;/em&gt;, &lt;em&gt;&lt;code&gt;.claude/settings.json&lt;/code&gt;&lt;/em&gt;, &lt;code&gt;&lt;em&gt;.gemini/settings.&lt;/em&gt;json&lt;/code&gt;, &lt;em&gt;&lt;code&gt;.cursor/mcp.json&lt;/code&gt;&lt;/em&gt;, &lt;em&gt;&lt;code&gt;.cursor/rules/setup.mdc&lt;/code&gt;&lt;/em&gt;, &lt;em&gt;&lt;code&gt;.vscode/tasks.json&lt;/code&gt;&lt;/em&gt;, unexpected &lt;em&gt;&lt;code&gt;composer.json&lt;/code&gt;&lt;/em&gt; or Makefile execution hooks, and &lt;em&gt;&lt;code&gt;skip-checks:true&lt;/code&gt;&lt;/em&gt; commits.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;JFrog also suggested that companies enumerate repository trees directly and that IT should not rely on GitHub code search or the contents API, because of the wrapper size issue.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Delete unauthorized &lt;em&gt;&lt;code&gt;chore/ci-*&lt;/code&gt;&lt;/em&gt; and &lt;em&gt;&lt;code&gt;deps/upd-*&lt;/code&gt;&lt;/em&gt; branches, disable malicious workflows and remove fake &lt;em&gt;&lt;code&gt;CodeQL&lt;/code&gt;&lt;/em&gt; artifacts named &lt;em&gt;&lt;code&gt;scan-output&lt;/code&gt;&lt;/em&gt;. Block &lt;em&gt;hxxp[:]//43[.]228[.]157[.]68:80&lt;/em&gt;, &lt;em&gt; &lt;/em&gt;and related malicious infrastructure at network controls” and “hunt GitHub Actions logs and runners for &lt;em&gt;&lt;code&gt;/tmp/.svc&lt;/code&gt;&lt;/em&gt;, ipscan, CVE-2026-41940, architecture-specific &lt;em&gt;&lt;code&gt;/api/dl/&lt;/code&gt;&lt;/em&gt; requests and unusually broad scans from hosted or self-hosted runners,” JFrog suggested. And. Of course, look for &lt;em&gt;&lt;code&gt;.napi.cache&lt;/code&gt;&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="high-priority-target"&gt;High priority target&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The popularity of &lt;a href="https://www.csoonline.com/article/4234229/over-1500-npm-packages-exposed-by-trusted-publishing-validation-flaw.html" target="_blank"&gt;GitHub repositories&lt;/a&gt; is likely going to continue to make them a &lt;a href="https://www.infoworld.com/article/4225630/github-app-keys-can-still-enable-takeovers-long-after-they-are-forgotten.html" target="_blank"&gt;high-priority target for attackers&lt;/a&gt;. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/akm76/" rel="noreferrer noopener" target="_blank"&gt;Aman Mahapatra&lt;/a&gt;, chief strategy officer for New York City-based technology consulting firm Tribeca Softech, said the particulars of this attack will likely predict the path of new AI-focused attacks for the immediate future.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“For a decade, the supply chain threat model assumed malicious code ran when you installed or executed something,” he said. “This campaign plants a Claude Code SessionStart hook, Gemini settings, Cursor MCP configuration and rules, and VS Code folder-open tasks, so the payload runs when a developer simply opens the repository in their tool. &lt;em&gt;&lt;code&gt;.claude/settings.json&lt;/code&gt;&lt;/em&gt; is the new &lt;em&gt;&lt;code&gt;autorun.inf&lt;/code&gt;&lt;/em&gt;.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Attackers have moved the trigger from running code to opening a folder, built malware that hides from sandboxes by design, and turned the industry’s last fix into the next target,” Mahapatra said. “Supply chain defense built around install-time scanning is now guarding the wrong moment.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;He said he was especially worried about the file size tactic that the attackers leveraged.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The 13MB wrappers add a cruder trick. They exceed what GitHub code search indexes and what the contents API returns, which is why early analysis found the hooks and concluded the payload files were empty,” Mahapatra said. “The attacker read the documentation for your detection tooling and padded the file past its limits.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/frankdickson/" rel="noreferrer noopener" target="_blank"&gt;Frank Dickson&lt;/a&gt;, principal analyst at Dickson Research, said he was also impressed with the attacker’s use of a native addon.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“It carries no payload of its own and refuses to run inside CI systems, containers, small virtual machines, or under a debugger,” he said. “On Windows, it also stands down if Wireshark or Process Monitor is running. The scanners see a placeholder but the developer’s laptop gets the real thing.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Dickson said the AI risk element is there, but it’s a secondary exposure that is only an issue once the attackers steal active credentials. Still, it is worse due to agentic efforts. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The planted files are execution hooks for Claude, Gemini, Cursor, and VS Code. Opening a project in a supported tool can run the payload. A routine developer action becomes the detonator. A developer’s laptop holds the keys to the kingdom if you will: GitHub tokens, npm tokens, cloud keys, and AI provider credentials. Attackers have found a new way to ask for them,” Dickson said. “To be fair, these hooks are features, not flaws. The root cause here is stolen credentials, not the AI tools. Still, a feature that runs code when a folder opens deserves the same scrutiny as a build script.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;em&gt;This article originally appeared on &lt;a href="https://www.infoworld.com/article/4241474/attackers-compromised-42-github-repositories-by-using-files-too-large-to-be-searched.html"&gt;InfoWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4241496/attackers-compromised-42-github-repositories-by-using-files-too-large-to-be-searched-2.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
-      <pubDate>Wed, 28 Oct 2026 02:58:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
-      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Thu, 29 Oct 2026 19:37:37 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 30 Oct 2026 01:40:49 +0000</lastBuildDate>
     <item>
       <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</link>
@@ -144,47 +19,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.60</comments>
-      <pubDate>Thu, 29 Oct 2026 19:37:37 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitLab security advisory (AV26-1074)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1074</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1074</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Thu, 22 Oct 2026 12:27:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Roundcube security advisory (AV26-1075)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-1075</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-1075</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.63</comments>
-      <pubDate>Thu, 22 Oct 2026 12:36:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Atlassian security advisory (AV26-1076)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1076</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1076</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.65</comments>
-      <pubDate>Thu, 22 Oct 2026 15:54:24 +0000</pubDate>
-    </item>
-    <item>
-      <title>Splunk security advisory (AV26-1077)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-1077</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-1077</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
-      <pubDate>Thu, 22 Oct 2026 19:29:12 +0000</pubDate>
+      <pubDate>Thu, 29 Oct 2026 23:40:49 +0000</pubDate>
     </item>
     <item>
       <title>10 ways attackers abuse AI services to hack your business</title>
@@ -470,8 +305,38 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4154222/6-ways-attackers-abuse-ai-services-to-hack-your-business.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.60</comments>
       <pubDate>Wed, 28 Oct 2026 08:25:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitLab security advisory (AV26-1074)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1074</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1074</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Thu, 22 Oct 2026 12:27:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>Roundcube security advisory (AV26-1075)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-1075</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-1075</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.61</comments>
+      <pubDate>Thu, 22 Oct 2026 12:36:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>Atlassian security advisory (AV26-1076)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1076</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1076</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.63</comments>
+      <pubDate>Thu, 22 Oct 2026 15:54:24 +0000</pubDate>
     </item>
     <item>
       <title>When prevention fails: Why cyber resilience is the next big test of trust</title>
@@ -709,58 +574,18 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4241129/when-prevention-fails-why-cyber-resilience-is-the-next-big-test-of-trust.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.76</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Wed, 28 Oct 2026 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>MongoDB security advisory (AV26-1078)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1078</link>
+      <title>Splunk security advisory (AV26-1077)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-1077</link>
       <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1078</guid>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-1077</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
-      <pubDate>Fri, 23 Oct 2026 13:00:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>HPE security advisory (AV26-1079)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1079</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1079</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
-      <pubDate>Fri, 23 Oct 2026 13:19:05 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fortinet security advisory (AV26-1037) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.82</comments>
-      <pubDate>Fri, 23 Oct 2026 13:34:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fortinet security advisory (AV26-1081)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1081</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1081</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
-      <pubDate>Fri, 23 Oct 2026 14:16:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>Arista Networks security advisory (AV26-1080) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-1080</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-1080</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
-      <pubDate>Fri, 23 Oct 2026 18:07:53 +0000</pubDate>
+      <comments>Score: 7.65</comments>
+      <pubDate>Thu, 22 Oct 2026 19:29:12 +0000</pubDate>
     </item>
     <item>
       <title>New Cisco firewall zero-day being actively exploited</title>
@@ -817,8 +642,58 @@ The arrests in August and September target the upper levels of violence-as-a-ser
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
       <guid isPermaLink="false">https://www.csoonline.com/article/4242420/new-cisco-firewall-zero-day-being-actively-exploited.html</guid>
       <category>Cybersecurity</category>
-      <comments>Score: 7.91</comments>
+      <comments>Score: 7.75</comments>
       <pubDate>Thu, 29 Oct 2026 19:31:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>MongoDB security advisory (AV26-1078)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1078</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1078</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.78</comments>
+      <pubDate>Fri, 23 Oct 2026 13:00:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>HPE security advisory (AV26-1079)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1079</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1079</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.78</comments>
+      <pubDate>Fri, 23 Oct 2026 13:19:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortinet security advisory (AV26-1037) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.79</comments>
+      <pubDate>Fri, 23 Oct 2026 13:34:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fortinet security advisory (AV26-1081)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1081</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1081</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.79</comments>
+      <pubDate>Fri, 23 Oct 2026 14:16:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>Arista Networks security advisory (AV26-1080) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-1080</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/arista-networks-security-advisory-av26-1080</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.83</comments>
+      <pubDate>Fri, 23 Oct 2026 18:07:53 +0000</pubDate>
     </item>
     <item>
       <title>The days of assuming another company’s breach is someone else’s problem are over</title>
@@ -968,7 +843,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4240612/the-days-of-assuming-another-companys-breach-is-someone-elses-problem-are-over.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.11</comments>
+      <comments>Score: 8.03</comments>
       <pubDate>Tue, 27 Oct 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -1137,7 +1012,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4241941/php2shell-will-persist-in-enterprise-environments-for-years.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.49</comments>
+      <comments>Score: 8.34</comments>
       <pubDate>Thu, 29 Oct 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -1338,7 +1213,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4241763/securing-mcp-servers-before-the-ai-rollout-outpaces-security.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.51</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Thu, 29 Oct 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1445,7 +1320,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4242128/anthropic-and-openai-diverge-on-who-should-pull-the-plug-on-risky-ai-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Thu, 29 Oct 2026 12:18:19 +0000</pubDate>
     </item>
     <item>
@@ -1455,7 +1330,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1082</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.66</comments>
       <pubDate>Mon, 26 Oct 2026 13:29:00 +0000</pubDate>
     </item>
     <item>
@@ -1465,7 +1340,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-1083</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.67</comments>
       <pubDate>Mon, 26 Oct 2026 13:38:01 +0000</pubDate>
     </item>
     <item>
@@ -1475,7 +1350,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1084</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.74</comments>
+      <comments>Score: 8.67</comments>
       <pubDate>Mon, 26 Oct 2026 13:50:35 +0000</pubDate>
     </item>
     <item>
@@ -1485,7 +1360,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/craft-cms-security-advisory-av26-1086</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.78</comments>
+      <comments>Score: 8.70</comments>
       <pubDate>Mon, 26 Oct 2026 15:48:04 +0000</pubDate>
     </item>
     <item>
@@ -1495,8 +1370,278 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-1087</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.84</comments>
+      <comments>Score: 8.76</comments>
       <pubDate>Mon, 26 Oct 2026 19:04:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>A deep dive into China’s Volt Typhoon suggests it is preparing for an assault on infrastructure</title>
+      <link>https://www.csoonline.com/article/4242439/a-deep-dive-into-chinas-volt-typhoon-suggests-it-is-preparing-for-an-assault-on-infrastructure.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In a deep dive into the Silent Train attack tactic used by China’s Volt Typhoon cybercrime group, Lumen’s Black Lotus Labs highlighted evidence of efforts to pre-position access within what it described as “strategic communications, critical infrastructure and other ecosystems that become essential during geopolitical tensions or crises.” &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The report, released on Wednesday, said that Silent Train is built around “rapidly rotating chains of compromised SOHO, IoT and enterprise devices that are exploited on demand, used against carefully selected targets, cleaned up after each operation and continuously refreshed. This approach allowed Volt Typhoon to carry out exploitation and post-exploitation activity securely while reducing the risk of detection, attribution, and disruption.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Multiple intrusions via Silent Train have been confirmed in the wild, Lumen said, all on high value targets.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Its &lt;a href="https://www.lumen.com/blog/en-us/silent-train-volt-typhoon-operational-framework" rel="noreferrer noopener" target="_blank"&gt;report described&lt;/a&gt; at least four confirmed and one likely zero-day vulnerabilities exploited by Volt Typhoon, which targeted network and endpoint management systems, SD-WAN orchestrators and control plane infrastructure that provide visibility, administration and access across enterprise and customer environments. It noted that victims included telecommunications providers, government, defense contractors, satellite and mission-critical communication services, universities, IT firms and critical infrastructure such as water, energy, transportation, maritime, rail, aviation, emergency services and other essential operations.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Lumen said the nature of these victims “indicates deliberate efforts to maintain access to critical ecosystems that support defense, logistics, communications, military and civilian operations, especially during heightened tensions or crises in the Indo-Pacific region.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Although the Silent Train attack has been in the wild for years and was tracked by various cybersecurity teams, the level of operational details that Lumen reported Wednesday went well beyond what had been known. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In fact, &lt;a href="https://www.linkedin.com/in/frankdickson/" rel="noreferrer noopener" target="_blank"&gt;Frank Dickson&lt;/a&gt;, principal analyst at Dickson Research, who tracks this space, said the Lumen report “may be one of the most valuable pieces of research published this year.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="key-findings"&gt;Key findings&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Some of the report’s key findings described the surprising speed and efficiency of the attacks. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Sessions were often remarkably efficient. Operators could exploit and assemble chains of devices in under two minutes, and on their way out they would leave no evidence for defenders to uncover,” Lumen said. “Their operational tempo suggests the use of a semi-automated, on-demand provisioning process.” But a strict process remained consistent throughout many attacks, it pointed out.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Another noteworthy aspect was Volt Typhoon’s consistent assignment of specific device types to positions within Silent Train chains,” the report said. “We noticed that device types were reserved for specific operational roles that never deviated. Intelbras modems only appeared as overseas relay nodes, while Netgear Orbi devices served as US-based hops that interacted with victims. Similar patterns appeared across every other device type in Silent Train.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;It observed that, despite having enough global infrastructure to swap device types between overseas and US hops, Volt Typhoon maintained these fixed roles throughout three years of monitoring, and its VPS infrastructure also used separate providers and locations rather than a shared environment.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The report concluded that attack infrastructure “was deliberately compartmentalized across layers, complicating attribution and reducing the risk that access to one device or provider would expose more of the network. The underlying infrastructure changed constantly, but the architecture and role of each layer remained highly structured.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="laying-the-foundation"&gt;Laying the foundation&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Analysts and consultants noted that the attacks didn’t necessarily engage in damage or theft initially, but instead laid a foundation for a later attack.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“I wouldn’t say this is necessarily a novel approach, but it is a clever one,” said &lt;a href="https://www.linkedin.com/in/sav-wheeler-80b1b2271/" rel="noreferrer noopener" target="_blank"&gt;Sav Wheeler&lt;/a&gt;, malware research engineer at Malwarebytes. “Holding off on taking advantage of compromised resources until an opportunity presents itself is itself a strategic form of resource management.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/eclectiqus/" rel="noreferrer noopener" target="_blank"&gt;Mike Wilkes&lt;/a&gt;, enterprise CISO at Aikido Security, agreed that the delayed gratification is a dangerous attack group tactic.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“P0wning th,e control plane of telecommunications and critical infrastructure is both logical and, sadly, often rather easy” he said. “Why attack individual systems when you can compromise the infrastructure that manages, connects and authenticates them? The strategic objective isn’t necessarily immediate disruption. It’s establishing the ability to disrupt, manipulate or deny services at a time of geopolitical advantage.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Dickson also agreed, saying that the published details show a pattern that “is not espionage for its own sake. It looks like access being banked for a crisis in the Pacific.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="rethink-defenses"&gt;Rethink defenses&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“That breaks the usual defender playbook,” Dickson said. “A blocklist does nothing against an address that was a relay for four hours last Tuesday. The indicators expire before anyone can publish them. This is also a direct response to the &lt;a href="https://www.csoonline.com/article/1303097/us-security-agencies-terminate-china-backed-hacking-attempt.html" target="_blank"&gt;KV-botnet takedown&lt;/a&gt;. Take out the bridge and they build a ferry.” &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;He added, “a network management console is built to see everything, reach everything, and change everything. Those are exactly the powers an attacker wants. We spent a decade building higher castle walls and then hung the master key ring by the gate.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;But it is the speed of Silent Train that worries Dickson the most. Although an enterprise can’t out-rotate an adversary that rebuilds its network in two minutes, “it can make the destination much harder to reach. Take every management console, SD-WAN orchestrator, and admin portal off the open internet and put it behind a VPN, a jump host, or a dedicated management network. Patch control plane technology first, not last,” he advised.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/akm76/" rel="noreferrer noopener" target="_blank"&gt;Aman Mahapatra&lt;/a&gt;, chief strategy officer for New York City-based technology consulting firm Tribeca Softech, said the implications of the Silent Train deep dive will force CISOs to rethink much of their defensive strategies. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“IP-based defenses are nearing the end of their usefulness against this class of adversary. When the network origin is disposable, identity, behavior, and timing are what remain visible,” he said. “An adversary willing to burn an exploit on a router to protect an exploit on an SD-WAN orchestrator is telling defenders exactly how much that access is worth.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Another concern, said Mahaptra, is revealed by the way Lumen was able to detect much of the attack methodology, something that will likely elude most enterprise SOCs. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Lumen detected Silent Train because a backbone carrier can see the entire chain,” Mahapatra said. “No single enterprise ever sees more than its own segment. Organizations in the sectors on this victim list should formalize threat notification arrangements with their carriers, because the detection that worked here happened outside every victim’s network.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;He advised enterprises to also watch their own edge devices for outbound behavior. Lumen documented FortiGate and Cisco appliances, PRTG, CyberPanel and even Mirth Connect healthcare integration servers serving as final hops, some for one to three months, he pointed out; outbound SSH to unfamiliar hosts, reverse tunnels built with tools such as Chisel or FRP, and traffic on unusual high ports “can indicate that a company’s appliance is serving as the attacker’s domestic face for an intrusion elsewhere.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://my.idc.com/getdoc.jsp?containerId=PRF002438" rel="noreferrer noopener" target="_blank"&gt;Mark Child&lt;/a&gt;, an associate research director with IDC, also is concerned about the tactical methods of Silent Train.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Silent Train abandons persistence,” Child said. “Instead of maintaining a permanent network, Volt Typhoon rapidly assembles and dismantles transient infrastructure. This makes it more effective against network-centric defenses: IP blocklists, threat-intel feeds of IOC addresses, geofencing, and takedowns. Those all assume infrastructure that sticks around.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;However, he noted, “it is not more effective against good endpoint and behavioral detection on the target.” No matter many hops there are, the exploitation, credential theft and admin-tool abuse still execute on the server. &lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The real force multiplier is the choice of target,” he said. “Hitting a management platform delivers admin access to thousands of devices and trusted paths to downstream customers, with no lateral movement, which removes the lateral movement signals EDR usually relies on. For endpoint security teams, IP-based detection loses value here. Behavioral monitoring of privileged management servers, and what they do to endpoints, becomes the decisive control.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4242439/a-deep-dive-into-chinas-volt-typhoon-suggests-it-is-preparing-for-an-assault-on-infrastructure.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.94</comments>
+      <pubDate>Fri, 30 Oct 2026 00:10:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>PHP2Shell plus Fragnesia: A dangerous new route from web server to root</title>
+      <link>https://www.csoonline.com/article/4242454/php2shell-plus-fragnesia-a-dangerous-new-route-from-web-server-to-root.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The PHP2Shell saga continues, with attackers discovering new ways to exploit the critical vulnerability impacting millions of organizations worldwide.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The US Cybersecurity and Infrastructure Security Agency (CISA) has warned of a high severity Linux kernel privilege escalation flaw that attackers are chaining with PHP2Shell bugs in the wild.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Identified as &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-46300"&gt;CVE-2026-46300&lt;/a&gt;, it could allow attackers to run malicious code with root permissions, giving them unrestricted ability to run commands, tamper with system settings, view, edit, or delete files, and perform other malicious actions.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Once attackers establish root access, they can perform any action on a server including, but not limited to, disabling the server, creating accounts, removing accounts, connecting to other servers, and adding/removing software, explained &lt;a href="https://www.linkedin.com/in/scottmiserendino"&gt;Scott Miserendino&lt;/a&gt;, CTO at security and compliance platform DataBee.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“PHP2Shell allows for remote access, but that access is typically limited by the account used to run the PHP service,” he said. “By chaining with CVE-2026-46300, that attacker can get unlimited access.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Researchers at Dream Security have discovered that this &lt;a href="https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers"&gt;attack has already been used&lt;/a&gt; to breach 25 servers, including three affiliated with the US government.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Federal agencies have been ordered to patch the flaw, which is known as &lt;a href="https://github.com/v12-security/pocs/tree/main/fragnesia"&gt;Fragnesia&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="anatomy-of-an-attack"&gt;Anatomy of an attack&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;PHP is a widely-used, open source server-side scripting language that &lt;a href="https://www.geeksforgeeks.org/php/companies-that-use-php/"&gt;serves as the backbone&lt;/a&gt; for websites like WordPress, which &lt;a href="https://wordpress.org/about/features/"&gt;powers 43% of the web&lt;/a&gt;, as well as Mailchimp, Drupal, parts of Slack and Zoom, and numerous others.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Last week, the PHP Foundation &lt;a href="https://www.csoonline.com/article/4238692/two-critical-php-flaws-put-the-web-on-alert-as-emergency-patches-arrive.html"&gt;disclosed two flaws&lt;/a&gt; in the PHP scripting language that could allow attackers to perform unauthenticated remote code execution (RCE). &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-109618"&gt;CVE-2026-109618&lt;/a&gt; and &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-109619"&gt;CVE-2026-109619&lt;/a&gt; are both rated a critical 9.2 in severity on the common vulnerability and scoring system (CVSS). The two vulnerabilities are collectively tracked as PHP2Shell.  As a result of the disclosure, some government and enterprise websites shut down entirely while awaiting patches.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-46300"&gt;CVE-2026-46300&lt;/a&gt;, dubbed Fragnesia, is a new development in the saga. It is identified as part of the Dirty Frag vulnerability class, a set of local privilege escalation (LPE) bugs in the Linux kernel.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The Dream researchers described an attack they tracked in the wild, in which threat actors built a persistent tunnel into an internal network “within hours.” They developed two distinct exploits, stringing them together to target any Palo Alto Network firewall running a vulnerable build of PAN-OS, and achieved root access in a single HTTP request without any credentials.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;After rooting the firewalls, the threat actor launched attacks against Active Directory (AD), giving them the ability to extract credentials and discover hidden files, folders, and other sensitive resources, according to the Dream researchers. The researchers confirmed that the threat actor then possessed a full AD user group listing and “complete organizational blueprint,” private keys and complete network topology, including the IP, hostname, server role, and VPN gateway, and had accessed decrypted service account credentials allowing direct AD queries at any time.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The adversarial actor also parked nearly two dozen firewalls across the US, Japan, Taiwan, and South Korea, “ready for exploitation at any time.” The Dream researchers noted that the breach did not appear to be a &lt;a href="https://www.csoonline.com/article/4154222/6-ways-attackers-abuse-ai-services-to-hack-your-business.html"&gt;fully autonomous&lt;/a&gt; nation-state attack, but did include some AI-assisted tooling like Claude Code and AI-powered offensive security platforms configured with Chinese large language models (LLMs) DeepSeek and Kimi.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The operation illustrates how an exposed management interface can become a path into an organization’s identity infrastructure,” the Dream researchers wrote.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="plenty-of-material-for-attackers-to-work-with"&gt;Plenty of material for attackers to work with&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The two &lt;a href="https://www.infoworld.com/article/4239342/php2shell-exposes-the-weakness-in-coordinated-vulnerability-disclosure.html"&gt;PHP bugs&lt;/a&gt; gave an attacker code execution privileges using the web service account, and the kernel bug is what turned that into root, explained &lt;a href="https://www.linkedin.com/in/aaron-beardslee"&gt;Aaron Beardslee&lt;/a&gt;, manager of threat research at Securonix, who noted, “The kernel bug writes its payload into the page cache rather than to disk.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Once an attacker has the ability to execute code, the damage they can do depends on the permissions and credentials available to that process, he explained. Application configuration files, database credentials, and access to internal services can provide “plenty of material for an attacker to work with.” They may also be able to execute commands, retrieve additional tooling or establish persistence.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Web servers have an unfortunate habit of knowing more about the rest of the environment than anyone intended,” he pointed out.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The chain’s post-access sequence, as described by the researchers, was: Root the perimeter host, stand up a reverse Secure Shell (SSH) tunnel to an internal management server, recover a Lightweight Directory Access Protocol (LDAP) service account credential, then “enumerate domain users and groups, spray passwords, and attempt to create backdoor accounts in Active Directory.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;PHP has “been holding up a substantial chunk” of the internet for decades, and these vulnerabilities live in the runtime itself, Beardslee noted. An enterprise’s WordPress installation can be fully patched, plugins can be current, but the underlying PHP process can still be vulnerable to unauthenticated code execution.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The reported victim count (25 servers so far, mostly firewall appliances, on a government affiliated network) is the part everyone will quote, but it is not the interesting part, he said. Counts differ, and attribution is “openly contested.” None of them is what matters to defenders.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“What matters is that the privilege escalation step in this chain is invisible to disk-based integrity checking,” Beardslee said, “and that the standard remediation advice destroys the evidence of it.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="remediation"&gt;Remediation&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Unfortunately, CVE-2026-46300 is a low-level Linux kernel bug, so the only remedy is to upgrade to a patched Linux version, said DataBee’s Miserendino. There are some options short of full patching, but those could break the system, or at a minimum require IPSec encapsulating security payload (ESP) to be disabled. But that can introduce additional flaws.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Patch the kernel, and capture memory first on anything you suspect,” Beardslee recommended, noting that the Fragnesia fix is not included in the Dirty Frag patches. “The triage order matters more here than it usually does, because the reboot is what erases the evidence.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;As well, audit the core built-in kernel modules &lt;em&gt;esp4&lt;/em&gt; and &lt;em&gt;esp6&lt;/em&gt;, which are responsible for handling the IPsec ESP network protocol, on every internet-facing Linux host, he advised. If nothing terminates IPsec there, “the modules have no business being loaded,” and unloading them removes the vulnerability path without waiting for a maintenance window.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;And check which hosts hold a directory service credential, then alert of LDAP binds from anything that isn’t on that list, he said: “This is the control that catches the chain at the stage where it stops being a web server problem and starts being a domain problem.” Further, he said, re-point identity detections at “the source, not the tool.”&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4242454/php2shell-plus-fragnesia-a-dangerous-new-route-from-web-server-to-root.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.97</comments>
+      <pubDate>Fri, 30 Oct 2026 00:55:47 +0000</pubDate>
     </item>
     <item>
       <title>Esri security advisory (AV26-1088)</title>
@@ -1505,7 +1650,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/esri-security-advisory-av26-1088</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.22</comments>
+      <comments>Score: 9.13</comments>
       <pubDate>Tue, 27 Oct 2026 13:10:25 +0000</pubDate>
     </item>
     <item>
@@ -1515,7 +1660,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/php-security-advisory-av26-1070</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.22</comments>
+      <comments>Score: 9.13</comments>
       <pubDate>Tue, 27 Oct 2026 13:16:18 +0000</pubDate>
     </item>
     <item>
@@ -1525,7 +1670,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1089</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.23</comments>
+      <comments>Score: 9.13</comments>
       <pubDate>Tue, 27 Oct 2026 13:24:14 +0000</pubDate>
     </item>
     <item>
@@ -1535,7 +1680,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1090</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.24</comments>
+      <comments>Score: 9.15</comments>
       <pubDate>Tue, 27 Oct 2026 14:02:18 +0000</pubDate>
     </item>
     <item>
@@ -1545,7 +1690,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-1091</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.30</comments>
+      <comments>Score: 9.20</comments>
       <pubDate>Tue, 27 Oct 2026 16:21:17 +0000</pubDate>
     </item>
     <item>
@@ -1555,7 +1700,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1085</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.40</comments>
+      <comments>Score: 9.30</comments>
       <pubDate>Tue, 27 Oct 2026 20:32:57 +0000</pubDate>
     </item>
     <item>
@@ -1565,7 +1710,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-697</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.40</comments>
+      <comments>Score: 9.30</comments>
       <pubDate>Tue, 27 Oct 2026 20:41:21 +0000</pubDate>
     </item>
     <item>
@@ -1575,7 +1720,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1092</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.89</comments>
+      <comments>Score: 9.77</comments>
       <pubDate>Wed, 28 Oct 2026 14:26:34 +0000</pubDate>
     </item>
     <item>
@@ -1585,7 +1730,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/teamviewer-security-advisory-av26-1093</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.90</comments>
+      <comments>Score: 9.78</comments>
       <pubDate>Wed, 28 Oct 2026 14:38:08 +0000</pubDate>
     </item>
     <item>
@@ -1595,7 +1740,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-1094</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.90</comments>
+      <comments>Score: 9.78</comments>
       <pubDate>Wed, 28 Oct 2026 14:41:15 +0000</pubDate>
     </item>
     <item>
@@ -1605,7 +1750,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-chrome-security-advisory-av26-1095</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.90</comments>
+      <comments>Score: 9.78</comments>
       <pubDate>Wed, 28 Oct 2026 14:50:37 +0000</pubDate>
     </item>
     <item>
@@ -1615,7 +1760,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/veeam-security-advisory-av26-1096</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.92</comments>
+      <comments>Score: 9.80</comments>
       <pubDate>Wed, 28 Oct 2026 15:28:22 +0000</pubDate>
     </item>
     <item>
@@ -1625,7 +1770,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-1097</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.93</comments>
+      <comments>Score: 9.81</comments>
       <pubDate>Wed, 28 Oct 2026 15:40:28 +0000</pubDate>
     </item>
     <item>
@@ -1635,7 +1780,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-1071</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.98</comments>
+      <comments>Score: 9.85</comments>
       <pubDate>Wed, 28 Oct 2026 17:15:17 +0000</pubDate>
     </item>
     <item>
@@ -1645,7 +1790,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1098</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.98</comments>
+      <comments>Score: 9.86</comments>
       <pubDate>Wed, 28 Oct 2026 17:29:48 +0000</pubDate>
     </item>
     <item>
@@ -1655,7 +1800,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-028-ongoing-help-desk-voice-phishing-campaign-targeting-canadian-organizations</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.03</comments>
+      <comments>Score: 9.90</comments>
       <pubDate>Wed, 28 Oct 2026 18:49:45 +0000</pubDate>
     </item>
     <item>
@@ -1665,7 +1810,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-1099</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.03</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Wed, 28 Oct 2026 19:05:56 +0000</pubDate>
     </item>
     <item>
@@ -1675,7 +1820,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1100</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.04</comments>
+      <comments>Score: 9.91</comments>
       <pubDate>Wed, 28 Oct 2026 19:17:01 +0000</pubDate>
     </item>
     <item>
@@ -1685,7 +1830,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1101</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.05</comments>
+      <comments>Score: 9.92</comments>
       <pubDate>Wed, 28 Oct 2026 19:30:45 +0000</pubDate>
     </item>
     <item>
@@ -1695,7 +1840,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.06</comments>
+      <comments>Score: 9.93</comments>
       <pubDate>Wed, 28 Oct 2026 19:53:28 +0000</pubDate>
     </item>
     <item>
@@ -1705,7 +1850,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.32</comments>
+      <comments>Score: 10.22</comments>
       <pubDate>Tue, 27 Oct 2026 17:20:09 +0000</pubDate>
     </item>
     <item>
@@ -1715,7 +1860,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1103</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.69</comments>
+      <comments>Score: 10.54</comments>
       <pubDate>Thu, 29 Oct 2026 13:55:57 +0000</pubDate>
     </item>
     <item>
@@ -1725,7 +1870,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mattermost-security-advisory-av26-1104</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.70</comments>
+      <comments>Score: 10.54</comments>
       <pubDate>Thu, 29 Oct 2026 14:04:33 +0000</pubDate>
     </item>
     <item>
@@ -1735,7 +1880,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.84</comments>
+      <comments>Score: 10.72</comments>
       <pubDate>Wed, 28 Oct 2026 12:46:09 +0000</pubDate>
     </item>
     <item>
@@ -1745,7 +1890,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1028</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.94</comments>
+      <comments>Score: 10.78</comments>
       <pubDate>Thu, 29 Oct 2026 20:14:55 +0000</pubDate>
     </item>
     <item>
@@ -1755,7 +1900,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1102</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.95</comments>
+      <comments>Score: 10.78</comments>
       <pubDate>Thu, 29 Oct 2026 20:20:34 +0000</pubDate>
     </item>
   </channel>
