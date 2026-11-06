@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 00:53:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 07:46:03 +0000</lastBuildDate>
+    <item>
+      <title>Juniper Networks security advisory (AV26-1101)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1101</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1101</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.48</comments>
+      <pubDate>Wed, 28 Oct 2026 19:30:45 +0000</pubDate>
+    </item>
     <item>
       <title>VMware security advisory (AV26-763) – Update 2</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</link>
@@ -16,139 +26,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
+      <comments>Score: 7.48</comments>
       <pubDate>Wed, 28 Oct 2026 19:53:28 +0000</pubDate>
-    </item>
-    <item>
-      <title>Barracuda’s security appliances have a security problem of their own</title>
-      <link>https://www.csoonline.com/article/4244334/barracudas-security-appliances-have-a-security-problem-of-their-own.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Barracuda, which offers a wide variety of cybersecurity devices, has been bitten by a bug itself.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The company has disclosed two critical and high-severity vulnerabilities that, if chained together, could allow threat actors to bypass authorization controls and gain root access to devices.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;They consist of a pre-authentication authorization bypass vulnerability, tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-116606" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-116606&lt;/a&gt; (rated a critical 9.3 severity on the common vulnerability scoring system), and a command injection vulnerability tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-111560" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-111560&lt;/a&gt; (rated an 8.6 high-severity on CVSS). Attackers need to have access to the admin interface of a susceptible device to successfully exploit these vulnerabilities.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Barracuda has released security patches, which it advises customers to apply immediately.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-vulnerabilities-impact-numerous-popular-barracuda-products"&gt;The vulnerabilities impact numerous popular Barracuda products&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Root access on an email gateway puts the attacker in the place that every inbound and outbound message passes, said &lt;a href="https://dicksonresearch.com/" rel="noreferrer noopener" target="_blank"&gt;Frank Dickson&lt;/a&gt; of Dickson Research. It may also expose the credentials and connections the gateway uses to reach the mail server and directory. “Those are the keys to the kingdom, if you will,” he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;CVE-2026-116606 and CVE-2026-111560 both impact Barracuda’s Email Security Gateway (ESG), but CVE-2026-111560 also impacts its Web Security Gateway (WSG), Web Application Firewall (WAF), WAF Control Center (WCC), Load Balancer Application Delivery Controller (ADC), and Message Archiver (BMA), the company said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Customers using these products should verify that their systems are running the latest firmware versions and have received all security patches, it advised. The &lt;a href="https://www.csoonline.com/article/4243874/network-appliances-go-more-than-a-year-without-patches-as-exploits-speed-up.html"&gt;device&lt;/a&gt; will show the latest firmware version available; if a device’s firmware is multiple versions out of date, users may need to perform several updates.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Enterprises whose appliances’ admin interfaces are not publicly accessible from the web are less exposed, Barracuda said; the company advised restricting access to these interfaces to trusted internal networks and applying appropriate network access controls to limit exposure.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The biggest concern is how these two vulnerabilities could chain together,” said &lt;a href="https://www.infotech.com/profiles/jonathan-nelson" rel="noreferrer noopener" target="_blank"&gt;Jon Nelson&lt;/a&gt;, principal advisory director at Infotech, noting that an attacker who can bypass authentication and then exploit command injection could move from accessing an exposed appliance to executing commands on it. “Assessing each vulnerability in isolation can understate the risk,” he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Dickson added that &lt;a href="https://www.csoonline.com/article/4240618/what-a-security-strategy-that-survives-2027-looks-like.html" target="_blank"&gt;security leaders&lt;/a&gt; should read the &lt;a href="https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection" rel="noreferrer noopener" target="_blank"&gt;advisory&lt;/a&gt; closely, as it calls one flaw “pre-authentication,” then lists “Authentication Required: Yes, administrative access.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Both cannot be true in the usual sense,” he pointed out. Likely access here means being able to reach the admin interface over the network, without a password.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“If your admin interface faces the internet, that condition is already met,” Dickson said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The advisory also labels a 9.3 severity rating as “high,” when 9.0 and above is actually “critical” on the standard scale, he pointed out. “These are small things, but labels drive patching queues,” he noted. Also, the advisory does not say whether these flaws are currently being exploited, but it does not say they are not, either.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="how-enterprises-should-respond"&gt;How enterprises should respond&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Get the admin interface off the internet,” Dickson emphasized, noting that, as a cybersecurity consultant, he gives that advice at least a handful of times a week. “Management interfaces on edge devices are continually a source of &lt;a href="https://www.csoonline.com/article/4243816/armed-with-ai-hackers-target-endpoint-security-blind-spots-raising-stakes-for-cisos.html" target="_blank"&gt;vulnerability&lt;/a&gt;.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Once teams limit admin access to a trusted internal network or a dedicated management network, Dickson advised, they should then “verify the patch rather than assume it was properly installed.” From there, he said, analyze for unauthorized visitors by reviewing admin logs, check for unfamiliar accounts, and look for unexpected outbound connections from the device.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;History matters here, he added. In 2023, after a zero-day on this same email security gateway (ESG), Barracuda told customers with compromised appliances to replace them outright rather than rely on the patch. As he put it: “A patch fixes the lock. It does not tell you who already has a key.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Nelson agreed that enterprises should look closely at who can reach their administrative interfaces. They should, in addition, put access behind additional controls such as a properly configured zero trust access layer.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Exposing those interfaces directly to the internet was always a bad idea,” he said. “As AI makes it easier to find weaknesses and chain attacks together, that exposure becomes increasingly difficult to justify.” AI is also expanding the search for software flaws to include issues such as business logic weaknesses where an application can be made to bypass its intended controls. &lt;a href="https://www.computerworld.com/article/4242386/dont-trust-ai-to-keep-your-secrets.html" target="_blank"&gt;Authentication and authorization bypasses&lt;/a&gt; deserve particular attention in that context, Nelson said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;As more vendors use advanced AI to examine their code, CISOs should prepare for more flaw disclosures and potentially shorter windows to respond to them, he noted. “That means identifying exposed appliances, restricting access, and having a response plan ready before the next zero day arrives,” he said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="understanding-what-each-appliance-exposes"&gt;Understanding what each appliance exposes&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Security appliances are increasingly creating vulnerabilities in corporate networks, which is changing the cybersecurity discussion. Enterprises rely on them to protect the network, yet ultimately they are software systems with vulnerabilities of their own.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“They sit exactly where attackers want to be,” Dickson noted.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Firewalls, VPNs, and email gateways face the internet by design; that is their job, he said. They see sensitive traffic and hold credentials. Most cannot run the endpoint detection tools that protect laptops and servers, so a compromise can remain undetected for a long time, and every customer runs the same firmware, so one working exploit can scale to thousands of organizations.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The discussion is shifting from which box to buy to what the box itself exposes,” Dickson said. “Every appliance purchase is a decision to trust a vendor’s code at the most exposed point in the network.” It deserves the same scrutiny as any other in an enterprise, he noted.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Buyers should ask their vendors four questions, he advised: Is the admin interface exposed to the internet by default; how quickly do patches ship; are they applied automatically; and what logging can users see?&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The security appliance does not just protect the perimeter,” Dickson pointed out. “It is the perimeter, and it should be treated as the most attacked system an organization owns, because it is.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4244334/barracudas-security-appliances-have-a-security-problem-of-their-own.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Wed, 04 Nov 2026 04:23:10 +0000</pubDate>
     </item>
     <item>
       <title>Investment scams with potential victims in at least 50 countries: over 100 servers seized</title>
@@ -158,7 +37,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 05 Nov 2026 22:53:11 +0000</pubDate>
+      <pubDate>Fri, 06 Nov 2026 05:46:03 +0000</pubDate>
     </item>
     <item>
       <title>Europol urges early action to protect cryptocurrencies and sensitive data from quantum threats</title>
@@ -168,7 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 05 Nov 2026 22:53:11 +0000</pubDate>
+      <pubDate>Fri, 06 Nov 2026 05:46:03 +0000</pubDate>
     </item>
     <item>
       <title>European and Ecuadorian cooperation leads to 20 arrests in major hit against drug trafficking</title>
@@ -178,7 +57,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 05 Nov 2026 22:53:11 +0000</pubDate>
+      <pubDate>Fri, 06 Nov 2026 05:46:03 +0000</pubDate>
     </item>
     <item>
       <title>Keeping pace with e-evidence: New report examines Europe’s digital forensic capabilities</title>
@@ -188,7 +67,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 05 Nov 2026 22:53:11 +0000</pubDate>
+      <pubDate>Fri, 06 Nov 2026 05:46:03 +0000</pubDate>
     </item>
     <item>
       <title>5th EMPACT Hackathon leads to the detection of 51 potential victims</title>
@@ -198,7 +77,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 05 Nov 2026 22:53:11 +0000</pubDate>
+      <pubDate>Fri, 06 Nov 2026 05:46:03 +0000</pubDate>
     </item>
     <item>
       <title>Five TEFAF robbery suspects added to EU Most Wanted</title>
@@ -208,208 +87,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Thu, 05 Nov 2026 22:53:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
-      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Thu, 05 Nov 2026 22:53:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</link>
-      <description>Five suspects linked to the organisation and recruitment of serious violence have been arrested in Spain, Morocco, and France, in the latest results of the Operational Taskforce (OTF) GRIMM, coordinated by Europol.
-
-The arrests in August and September target the upper levels of violence-as-a-service: those suspected of ordering attacks, finding perpetrators and coordinating crimes from abroad. Among those apprehended are fugitives featured on the EU Most Wanted website.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
-      <pubDate>Thu, 05 Nov 2026 22:53:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>n8n security advisory (AV26-1103)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1103</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1103</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Thu, 29 Oct 2026 13:55:57 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mattermost security advisory (AV26-1104)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mattermost-security-advisory-av26-1104</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mattermost-security-advisory-av26-1104</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Thu, 29 Oct 2026 14:04:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>CrowdStrike’s AI SOC vision evolves as agentic uncertainty adds new twist</title>
-      <link>https://www.csoonline.com/article/4244299/crowdstrikes-ai-soc-vision-evolves-as-agentic-uncertainty-adds-new-twist.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The software we use has become an actor,” declared CrowdStrike President Michael Sentonas in his address on the dangers and opportunity of agentic AI at the company’s Fal.Con conference in September. It’s an idea that until recently would have been dismissed as absurd, yet across cybersecurity it’s now taken as a given.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For decades, the adversary has been nuisance hackers, professional cybercriminals, or well-resourced teams working for nation states. The arrival of rogue agents — underlined by real-world incidents such as &lt;a href="https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html"&gt;OpenAI’s infamous assault on Hugging Face&lt;/a&gt; — has demolished this. Agents still work on behalf of humans, but they don’t always reason or act like them. They are entities with capabilities and an unpredictability unlike any threat businesses have ever faced.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“I believe we just crossed a line. Agents have escaped evaluation environments and compromised infrastructure they were never supposed to touch,” &lt;a href="https://www.youtube.com/watch?v=rygmCbWA7cc"&gt;Sentonas told&lt;/a&gt; the crowd in Las Vegas in early September. “For decades, software did what we programmed it to. It has moved from execution to agency.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Sentonas’ point wasn’t simply that malicious agents are a threat. The arrival of agentic AI also raises larger questions for security operations centers (SOCs), which will deploy agents on a scale that matches or even exceeds attackers. That makes agents a threat from both the outside and inside the enterprise perimeter. “What happens when millions of AI agents act at machine speed on both sides?” Behind the confident marketing pitches from CrowdStrike and a growing cast of rivals, the honest answer right now is that nobody can be sure.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Coming from a cyber vendor, Sentonas’ reference to “millions” of agents might sound like a number meant to hype the threat. But it is likely no exaggeration, with &lt;a href="https://www.gartner.com/en/newsroom/press-releases/2026-04-28-gartner-identifies-six-steps-to-manage-artificial-intelligence-agent-sprawl"&gt;Gartner forecasting&lt;/a&gt; that the number of agents used inside a single Fortune 500 company will expand from 15 in 2025 to 150,000 by 2028.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“As CIOs and IT leaders see an explosion of AI agents across their organizations, many are contending with an ungoverned sprawl of agents that expose their organizations to a range of risks, including misinformation, oversharing, and data loss,” says Matt Goss, a senior director analyst at Gartner.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="taking-up-the-agent-challenge"&gt;Taking up the agent challenge&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For years, Fal.Con was about persuading enterprise SOCs to consolidate capabilities under CrowdStrike’s do-it-all Falcon platform, comprising nearly three dozen modules. In 2023, with its “Raptor” release, Falcon and the company’s flagship event took a &lt;a href="https://www.csoonline.com/article/3981182/crowdstrike-cuts-500-jobs-in-ai-pivot-but-flags-risks.html"&gt;hard turn toward AI&lt;/a&gt;. In this changed world, AI wasn’t simply a Falcon capability; increasingly it &lt;em&gt;was &lt;/em&gt;Falcon, influencing everything it did.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The AI theme dominated Falcon’s &lt;a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-unveils-falcon-platform-fall-release-to-lead-cybersecurity-into-agentic-era/"&gt;2026 Fall release&lt;/a&gt;, bringing the company’s growing portfolio of AI SOC capabilities under the Falcon umbrella with the launch of the Agentic Security Platform. Most individual components — Charlotte AI AgentWorks, Model Context Protocol (MCP) Integration, the AI-enabled Enterprise Graph — were announced in 2025 as part of the company’s Agentic Security Workforce plan but a closer look reveals important new features.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Currently, agents investigate alerts using pre-built Falcon agents or custom agents built using the no-code AgentWorks solution. Charlotte AI now gives these agents a shared memory layer in Enterprise Graph that enables them to coordinate with one another across multiple endpoints, identities, and cloud services simultaneously (aided by the company’s 2025 &lt;a href="https://www.csoonline.com/article/4057472/crowdstrike-bets-big-on-agentic-ai-with-new-offerings-after-290m-onum-buy.html"&gt;acquisition of Onum&lt;/a&gt;, which accelerated the speed with which agents can ingest data). On paper, the effect is to dramatically speed up alert triage while expanding the scope and capacity of worker agents in a way that relieves human SOC teams of a lot of basic grunt work, including some Level 2 investigation and Level 3 remediation and hunting workflows.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.csoonline.com/article/4217135/crowdstrike-launches-cyber-frontier-ai-models-agentic-security-system.html"&gt;Also new is SafeMind&lt;/a&gt;, a frontier red-teaming system based on Nvidia’s Nemotron open-weight LLM, comprising offense (Red Tempest) and defense (Blue Solano). This agentic framework continuously tests an isolated mirror of the live environment for weaknesses, feeding the results back into detection at the agent level. CrowdStrike didn’t invent the concept, but it does appear to be the first to integrate an autonomous testing model into a SOC platform.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="speed-is-not-enough"&gt;Speed is not enough&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This might look brand new, but the early incarnations of the agent-powered SOC are as much evolution as revolution. Everything inside a traditional CrowdStrike-powered SOC — from its Falcon EDR sensor, Enterprise Graph data, and cloud-native management — remains in place. Humans are still essential to decision-making, albeit at a higher level than before. What agents add to this SOC paradigm is a new abstraction layer separating SOC teams from the mass of telemetry they have increasingly struggled with. This should be good news for defenders because it means they have some hope of matching the speed and scale of agentic attacks.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;But speed is only the beginning, points out James Patrick, CTO for the FIOR Group, which develops an AI policy and security gateway. “Attackers and defenders can both operate at machine speed, so simply making SOCs faster isn’t enough. We need to move beyond reactive detection towards continuous testing of our defenses.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;SOCs must work out how much they delegate to agents and what constraints are set around this. “Enterprises already struggle with fragmented telemetry, overlapping security products and inconsistent policies. Adding autonomous systems introduces another problem: establishing who or what has authority to act, and how to verify that authority,” says Patrick.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;According to Chris Cochran, field CISO and VP of AI security for the SANS Institute, that’s why “for most organizations, agentic AI will be augmentative rather than a replacement for analysts, at least for the next few years.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Agent platforms, including CrowdStrike’s, still have work to do proving themselves in terms of oversight and governance.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The core problem is that we’re applying a probabilistic technology to a discipline that usually requires determinism,” Cochran adds. “A SOC needs to know that the same input will produce the same action, and that the action can be explained to an auditor or an incident review board.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For that reason, Cochran believes that while agentic-powered SOCs will remove a huge amount of alert handling and correlation effort, the workload will shift to processes such as verification.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Teams should continuously evaluate agents against known-good and known-bad cases, the same way you’d regression test detection content,” he says. “None of this is exotic, but it takes engineering time that many SOCs haven’t budgeted for.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="enemy-within"&gt;Enemy within&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;One deeply unfamiliar problem is that agents themselves are an emerging attack surface within the enterprise and must be constantly assessed. Traditionally, security tools defend the environment, and the idea that an agent system doing the same job could itself become a direct threat is new. But what makes agentic AI unsettlingly is its non-deterministic nature, which means that, unlike a traditional security tool, it has the potential to do things you didn’t tell it to and haven’t planned for.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Organizations are deploying autonomous systems that access sensitive data, use privileged identities, interact with applications, and execute actions. Those agents can be compromised, manipulated, or behave unexpectedly,” says Tom Findling, CEO and cofounder at AI SOC startup Conifers.ai. “Security operations will need visibility into agent identities, permissions, actions, and decision-making processes, and the ability to detect and contain dangerous behavior.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;CrowdStrike’s answer, relaunched at this year’s Fal.Con, is Falcon Guardian, an AI detection and response (AIDR) solution featuring runtime enforcement, agent discovery, execution graph mapping prompts, and quarantining for misbehaving agents. Similar capabilities will be needed for any agent platform but the mere fact that security systems now need their own security systems underscores what CrowdStrike’s Sentonas was referring to with his software-as-actor remark at Fal.Con. Human SOCs need to protect their enterprises from their AI SOC helpers.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;To that end, CrowdStrike yesterday announced the &lt;a href="https://www.csoonline.com/article/4244500/crowdstrike-to-acquire-fiddler-dreadnode-to-extend-ai-security-across-agent-lifecycle.html"&gt;roughly $400 million acquisition of Fiddler AI&lt;/a&gt;, an &lt;a href="https://www.cio.com/article/4223016/16-governance-tools-for-securing-your-ai-fleet-2.html"&gt;AI agent monitoring and governance vendor&lt;/a&gt; from the &lt;a href="https://www.cio.com/article/4231525/how-to-make-sense-of-the-agentic-ai-tools-ecosystem.html"&gt;emerging, burgeoning, and somewhat confusing agentic AI tools ecosystem&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Fiddler’s platform tracks AI models’ behavior, attempting to provide explanations for their actions as a means for establishing a control plane for governing and securing them. Its 100-plus metrics track hallucinations, toxicity, personally identifiable information (PII) leakage, and drift, enforcing policies to protect against jailbreaks, prompt injections, and bias. Enterprises deploy tools like Fiddler to make model drift visible and actionable &lt;a href="https://www.cio.com/article/4098673/behavioral-drift-the-hidden-risk-every-cio-must-manage.html"&gt;before it becomes systemic risk&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;CrowdStrike intends to bundle Fiddler into its flagship platform as Falcon Observe in Q4 FY2027, approximately six months from now, as a means for “proving businesses can safely use AI agents every day,” according to &lt;a href="https://www.crowdstrike.com/en-us/blog/crowdstrike-to-acquire-fiddler/"&gt;Sentonas’ post announcing the acquisition&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;CrowdStrike has invested heavily in agentic AI, building an impressive stack of capabilities that extend the Enterprise Graph that made it a dominant player capable of surviving the occasional &lt;a href="https://www.csoonline.com/article/3537228/crowdstrike-outage-redefines-edr-market-emphasis.html"&gt;embarrassing global hiccup&lt;/a&gt;. It has even embraced a degree of openness, allowing data ingestion, API connectors, and partnership gateways to enrich the data going into its Falcon AIDR. However, there’s no getting away from Falcon as the single control plane.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“CrowdStrike starts with endpoint security and an established enterprise security platform. Other vendors approach the problem through identity, networks, cloud, or security analytics. They all have an incentive to bring customers further into their own platforms,” observes FIOR Group’s Patrick.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The challenge for CrowdStrike, and for every vendor, is that a platform can’t independently verify itself,” he adds. “What’s needed is control that is genuinely independent of any single platform and works across those boundaries.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;According to Patrick, a critical feature will be the ability not simply to deploy a security layer but to continuously assess its security and performance. As the traditional detection and remediation stack of cybersecurity is pushed out of shape, the growth in new layers and processes could make this task almost as demanding as the main job of cyber defense that agents were supposed to simplify.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4244299/crowdstrikes-ai-soc-vision-evolves-as-agentic-uncertainty-adds-new-twist.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.62</comments>
-      <pubDate>Wed, 04 Nov 2026 08:25:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitLab security advisory (AV26-1028) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1028</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1028</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Thu, 29 Oct 2026 20:14:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco security advisory (AV26-1102) - Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1102</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1102</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.66</comments>
-      <pubDate>Thu, 29 Oct 2026 20:20:34 +0000</pubDate>
+      <pubDate>Fri, 06 Nov 2026 05:46:03 +0000</pubDate>
     </item>
     <item>
       <title>CrowdStrike to acquire Fiddler, Dreadnode to extend AI security across agent lifecycle</title>
@@ -519,8 +197,70 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4244500/crowdstrike-to-acquire-fiddler-dreadnode-to-extend-ai-security-across-agent-lifecycle.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.71</comments>
+      <comments>Score: 7.52</comments>
       <pubDate>Wed, 04 Nov 2026 11:33:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>n8n security advisory (AV26-1103)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1103</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1103</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Thu, 29 Oct 2026 13:55:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
+      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Fri, 06 Nov 2026 05:46:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mattermost security advisory (AV26-1104)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mattermost-security-advisory-av26-1104</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mattermost-security-advisory-av26-1104</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Thu, 29 Oct 2026 14:04:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</link>
+      <description>Five suspects linked to the organisation and recruitment of serious violence have been arrested in Spain, Morocco, and France, in the latest results of the Operational Taskforce (OTF) GRIMM, coordinated by Europol.
+
+The arrests in August and September target the upper levels of violence-as-a-service: those suspected of ordering attacks, finding perpetrators and coordinating crimes from abroad. Among those apprehended are fugitives featured on the EU Most Wanted website.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.60</comments>
+      <pubDate>Fri, 06 Nov 2026 05:46:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitLab security advisory (AV26-1028) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1028</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1028</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Thu, 29 Oct 2026 20:14:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cisco security advisory (AV26-1102) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1102</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1102</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.62</comments>
+      <pubDate>Thu, 29 Oct 2026 20:20:34 +0000</pubDate>
     </item>
     <item>
       <title>Drupal security advisory (AV26-1105)</title>
@@ -529,7 +269,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1105</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Fri, 30 Oct 2026 15:43:17 +0000</pubDate>
     </item>
     <item>
@@ -539,7 +279,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-1106</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Fri, 30 Oct 2026 15:49:12 +0000</pubDate>
     </item>
     <item>
@@ -549,7 +289,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1107</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.81</comments>
+      <comments>Score: 7.76</comments>
       <pubDate>Fri, 30 Oct 2026 15:53:31 +0000</pubDate>
     </item>
     <item>
@@ -559,7 +299,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.83</comments>
+      <comments>Score: 7.77</comments>
       <pubDate>Fri, 30 Oct 2026 18:01:12 +0000</pubDate>
     </item>
     <item>
@@ -569,7 +309,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/linux-security-advisory-av26-1108</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.86</comments>
+      <comments>Score: 7.80</comments>
       <pubDate>Fri, 30 Oct 2026 21:34:05 +0000</pubDate>
     </item>
     <item>
@@ -734,7 +474,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4244961/attackers-turned-opsshields-trusted-update-channel-into-a-supply-chain-attack-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.19</comments>
+      <comments>Score: 7.97</comments>
       <pubDate>Thu, 05 Nov 2026 03:03:06 +0000</pubDate>
     </item>
     <item>
@@ -744,18 +484,8 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.39</comments>
+      <comments>Score: 8.36</comments>
       <pubDate>Tue, 27 Oct 2026 17:20:09 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-027 - Critical vulnerability impacting Google Brotli – CVE-2026-111497</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.48</comments>
-      <pubDate>Wed, 28 Oct 2026 12:46:09 +0000</pubDate>
     </item>
     <item>
       <title>OpenAI’s GPT-6 Cyber ups the ante on vulnerability discovery</title>
@@ -857,8 +587,18 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4244911/openais-gpt-6-cyber-ups-the-ante-on-vulnerability-discovery.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Thu, 05 Nov 2026 17:01:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-027 - Critical vulnerability impacting Google Brotli – CVE-2026-111497</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.44</comments>
+      <pubDate>Wed, 28 Oct 2026 12:46:09 +0000</pubDate>
     </item>
     <item>
       <title>Google security advisory (AV26-1109)</title>
@@ -867,7 +607,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1109</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Mon, 02 Nov 2026 14:12:04 +0000</pubDate>
     </item>
     <item>
@@ -877,7 +617,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-1110</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.69</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Mon, 02 Nov 2026 14:23:12 +0000</pubDate>
     </item>
     <item>
@@ -887,7 +627,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1111</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.70</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Mon, 02 Nov 2026 14:36:56 +0000</pubDate>
     </item>
     <item>
@@ -897,18 +637,8 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/barracuda-networks-security-advisory-av26-1112</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.73</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Mon, 02 Nov 2026 16:16:10 +0000</pubDate>
-    </item>
-    <item>
-      <title>SUSE Linux security advisory (AV26-1113)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1113</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1113</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.77</comments>
-      <pubDate>Mon, 02 Nov 2026 18:25:26 +0000</pubDate>
     </item>
     <item>
       <title>Binance heist is stark example of AI governance gaps and basic security failures</title>
@@ -1018,7 +748,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4245354/binance-heist-is-stark-example-of-ai-governance-gaps-and-basic-security-failures.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.88</comments>
+      <comments>Score: 8.61</comments>
       <pubDate>Thu, 05 Nov 2026 21:57:37 +0000</pubDate>
     </item>
     <item>
@@ -1061,8 +791,123 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4245357/french-banking-group-hit-by-supply-chain-cyberattack.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.90</comments>
+      <comments>Score: 8.63</comments>
       <pubDate>Thu, 05 Nov 2026 22:21:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>SUSE Linux security advisory (AV26-1113)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1113</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1113</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.64</comments>
+      <pubDate>Mon, 02 Nov 2026 18:25:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenSSH flaw lets attackers access password-disabled accounts on some Linux systems</title>
+      <link>https://www.csoonline.com/article/4245407/openssh-flaw-lets-attackers-access-password-disabled-accounts-on-some-linux-systems.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;A critical vulnerability that affects OpenSSH servers on Linux systems built with the musl C library instead of glibc allows remote attackers to easily bypass authentication and log into accounts that should have password authentication disabled. The flaw impacts the lightweight Alpine Linux, which is widely used for cloud Docker container images, as well as Linux distributions for embedded systems.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The security bug, dubbed &lt;a href="https://sshhole.com/"&gt;*SSHole&lt;/a&gt; and tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158"&gt;CVE-2026-123158&lt;/a&gt;, was discovered by Ozgun Kultekin, a researcher with security testing firm Wakefield, and has existed for the past 10 years. The OpenSSH maintainers moved quickly to add mitigation for the flaw in the &lt;a href="https://www.openssh.org/releasenotes.html#10.6p2"&gt;OpenSSH 10.6p2&lt;/a&gt; emergency update released Thursday, even though they claim &lt;a href="https://hachyderm.io/@damienmiller/117563026759098135"&gt;the bug is not actually in their code&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“It’s not every day that the ‘exploit’ for a vulnerability in a technology as prevalent as OpenSSH is just ‘send a long password’ or ‘send a lot of A characters,’ but here we are,” said Jake Knott, head of threat intelligence at preemptive exposure management firm watchTowr. “On affected systems, the exploit is strikingly simple: send a password between 257 and 1,024 characters long.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Luckily, there are some prerequisites for this exploit to work:&lt;/p&gt;
+
+
+
+&lt;ul class="wp-block-list"&gt;
+&lt;li&gt;The Linux distribution needs to use musl, which means that many popular server distros such as Debian, Ubuntu, and Fedora are not impacted&lt;/li&gt;
+
+
+
+&lt;li&gt;The system needs to use OpenSSH and not alternative SSH server implementations such as Dropbear, which many embedded distros use&lt;/li&gt;
+
+
+
+&lt;li&gt;OpenSSH needs to be configured without support for Pluggable Authentication Modules (PAM), the most common Linux login framework&lt;/li&gt;
+
+
+
+&lt;li&gt;OpenSSH needs to allow password-based authentication&lt;/li&gt;
+
+
+
+&lt;li&gt;The attacker needs to know the name of an account for which password login has been disabled at the system level&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Those conditions are met in default configuration for Alpine Linux and its built-in “alpine” username, which allows executing commands as root. The Alpine project &lt;a href="https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/"&gt;released emergency updates for the openssh package&lt;/a&gt; and advises users who can’t update to disable password-based authentication in the OpenSSH configuration and set up key-based authentication.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="why-the-trivial-attack-works"&gt;Why the trivial attack works&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The flaw is the product of three changes made years apart, each solving a different problem. In 2012, musl’s developers capped password length at 256 bytes to stop attackers from tying up server resources by sending long passwords that need to be hashed as part of the login verification process.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;At the same time they also made the library’s password hashing function return an asterisk (*) whenever it fails. The asterisk is the same character Unix has used since the 1980s to mark accounts for which no password should ever match — accounts with password disabled at the system level.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;In 2016, OpenSSH changed how it checks passwords for accounts whose own password field offers no salt to hash against, borrowing another account’s salt so that attackers could not guess existing usernames with brute-force login retries and timing the server’s responses. Then in 2022, Alpine switched root’s password field to an asterisk so that SSH key logins would keep working for it.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;When an attacker sends an over-long password for a password-disabled account on such a system, the hash attempt fails and returns an asterisk, which sshd compares with the asterisk stored in the account’s password field. The two match, and the login succeeds.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="alpine-linux-cloud-images-will-be-the-main-target"&gt;Alpine Linux cloud images will be the main target&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Alpine’s standard OpenSSH package is built without PAM, and password logins are enabled by default, so Alpine servers meet the conditions out of the box. On the official cloud images published between versions 3.18.11 and 3.24.3, the default user account, named alpine, is one of the password-disabled accounts, and the images grant it passwordless “doas” privileges.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;As a result, an attacker who logs in as that user can then switch to root, so the images are exposed as soon as an administrator sets a password for any other account on the system, because a legitimate account with a real password needs to exist for this attack to work.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.csoonline.com/article/2511351/openssh-vulnerability-regresshion-puts-millions-of-servers-at-risk.html"&gt;Unlike the critical regreSSHion flaw from 2024&lt;/a&gt;, this one is confined to the musl world, but it requires no exploit engineering of any kind.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Internet-exposed SSH servers &lt;a href="https://www.csoonline.com/article/4130967/sshstalker-botnet-brute-forces-its-way-onto-7000-linux-machines.html"&gt;are already being hammered by password guesses and brute-force attempts around the clock&lt;/a&gt;,” Knott said. “Exploiting this vulnerability simply means those same attackers add a very long password attempt to that brute-force list. We’d be extremely surprised if we didn’t see SSH brute-forcers attempting this by the weekend.”&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Organizations should also check whether the flaw was already used against their servers. An “Accepted password” entry in /var/log/messages for an account that has no password, such as root, a key-only user, or the default alpine user, is a strong sign of compromise.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Alpine recommends reviewing doas usage, recently created users and files on exposed machines, and its advisory says any server where a login cannot be ruled out should be treated as compromised. Kultekin also published &lt;a href="https://github.com/oz9un/sshole"&gt;a check script on GitHub&lt;/a&gt; that identifies exposed servers and lists the accounts at risk.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4245407/openssh-flaw-lets-attackers-access-password-disabled-accounts-on-some-linux-systems.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.73</comments>
+      <pubDate>Fri, 06 Nov 2026 01:10:08 +0000</pubDate>
     </item>
     <item>
       <title>PostgreSQL security advisory (AV26-1115)</title>
@@ -1071,7 +916,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-1115</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.02</comments>
       <pubDate>Tue, 03 Nov 2026 14:24:43 +0000</pubDate>
     </item>
     <item>
@@ -1081,7 +926,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-802</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Tue, 03 Nov 2026 14:39:43 +0000</pubDate>
     </item>
     <item>
@@ -1091,7 +936,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-1116</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.18</comments>
+      <comments>Score: 9.03</comments>
       <pubDate>Tue, 03 Nov 2026 14:46:33 +0000</pubDate>
     </item>
     <item>
@@ -1101,7 +946,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-1117</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.34</comments>
+      <comments>Score: 9.18</comments>
       <pubDate>Tue, 03 Nov 2026 21:36:07 +0000</pubDate>
     </item>
     <item>
@@ -1111,7 +956,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1118</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.80</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Wed, 04 Nov 2026 14:39:02 +0000</pubDate>
     </item>
     <item>
@@ -1121,7 +966,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1119</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.81</comments>
+      <comments>Score: 9.61</comments>
       <pubDate>Wed, 04 Nov 2026 14:50:15 +0000</pubDate>
     </item>
     <item>
@@ -1131,7 +976,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-1114</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.81</comments>
+      <comments>Score: 9.62</comments>
       <pubDate>Wed, 04 Nov 2026 15:07:31 +0000</pubDate>
     </item>
     <item>
@@ -1141,7 +986,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-1120</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Wed, 04 Nov 2026 19:12:46 +0000</pubDate>
     </item>
     <item>
@@ -1151,7 +996,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-1121</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.73</comments>
       <pubDate>Wed, 04 Nov 2026 19:15:29 +0000</pubDate>
     </item>
     <item>
@@ -1161,7 +1006,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1122</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.94</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Wed, 04 Nov 2026 19:26:51 +0000</pubDate>
     </item>
     <item>
@@ -1171,7 +1016,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-1123</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.95</comments>
+      <comments>Score: 9.74</comments>
       <pubDate>Wed, 04 Nov 2026 19:36:26 +0000</pubDate>
     </item>
     <item>
@@ -1181,7 +1026,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-1124</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.95</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Wed, 04 Nov 2026 19:38:21 +0000</pubDate>
     </item>
     <item>
@@ -1191,7 +1036,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-1125</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.95</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Wed, 04 Nov 2026 19:39:34 +0000</pubDate>
     </item>
     <item>
@@ -1201,7 +1046,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-1126</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Wed, 04 Nov 2026 19:50:51 +0000</pubDate>
     </item>
     <item>
@@ -1211,7 +1056,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1127</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.75</comments>
       <pubDate>Wed, 04 Nov 2026 19:57:39 +0000</pubDate>
     </item>
     <item>
@@ -1221,7 +1066,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-november-2026-monthly-rollup-av26-1128</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.96</comments>
+      <comments>Score: 9.76</comments>
       <pubDate>Wed, 04 Nov 2026 20:03:06 +0000</pubDate>
     </item>
     <item>
@@ -1231,7 +1076,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rubyonrails-security-advisory-av26-1129</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.63</comments>
+      <comments>Score: 10.38</comments>
       <pubDate>Thu, 05 Nov 2026 15:41:50 +0000</pubDate>
     </item>
     <item>
@@ -1241,7 +1086,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openbsd-security-advisory-av26-1130</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.76</comments>
+      <comments>Score: 10.50</comments>
       <pubDate>Thu, 05 Nov 2026 19:00:54 +0000</pubDate>
     </item>
   </channel>
