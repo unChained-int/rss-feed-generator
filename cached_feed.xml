@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 05:01:20 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 12:56:36 +0000</lastBuildDate>
+    <item>
+      <title>Mozilla security advisory (AV26-1100)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1100</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1100</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.27</comments>
+      <pubDate>Wed, 28 Oct 2026 19:17:01 +0000</pubDate>
+    </item>
     <item>
       <title>Juniper Networks security advisory (AV26-1101)</title>
       <link>https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1101</link>
@@ -16,8 +26,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1101</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
+      <comments>Score: 7.27</comments>
       <pubDate>Wed, 28 Oct 2026 19:30:45 +0000</pubDate>
+    </item>
+    <item>
+      <title>VMware security advisory (AV26-763) – Update 2</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.27</comments>
+      <pubDate>Wed, 28 Oct 2026 19:53:28 +0000</pubDate>
     </item>
     <item>
       <title>Not a game: Europol and partners target terrorist role-playing online</title>
@@ -27,122 +47,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.30</comments>
-      <pubDate>Sun, 08 Nov 2026 03:01:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>VMware security advisory (AV26-763) – Update 2</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
-      <pubDate>Wed, 28 Oct 2026 19:53:28 +0000</pubDate>
-    </item>
-    <item>
-      <title>OpenSSH flaw lets attackers access password-disabled accounts on some Linux systems</title>
-      <link>https://www.csoonline.com/article/4245407/openssh-flaw-lets-attackers-access-password-disabled-accounts-on-some-linux-systems.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A critical vulnerability that affects OpenSSH servers on Linux systems built with the musl C library instead of glibc allows remote attackers to easily bypass authentication and log into accounts that should have password authentication disabled. The flaw impacts the lightweight Alpine Linux, which is widely used for cloud Docker container images, as well as Linux distributions for embedded systems.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The security bug, dubbed &lt;a href="https://sshhole.com/"&gt;*SSHole&lt;/a&gt; and tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158"&gt;CVE-2026-123158&lt;/a&gt;, was discovered by Ozgun Kultekin, a researcher with security testing firm Wakefield, and has existed for the past 10 years. The OpenSSH maintainers moved quickly to add mitigation for the flaw in the &lt;a href="https://www.openssh.org/releasenotes.html#10.6p2"&gt;OpenSSH 10.6p2&lt;/a&gt; emergency update released Thursday, even though they claim &lt;a href="https://hachyderm.io/@damienmiller/117563026759098135"&gt;the bug is not actually in their code&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“It’s not every day that the ‘exploit’ for a vulnerability in a technology as prevalent as OpenSSH is just ‘send a long password’ or ‘send a lot of A characters,’ but here we are,” said Jake Knott, head of threat intelligence at preemptive exposure management firm watchTowr. “On affected systems, the exploit is strikingly simple: send a password between 257 and 1,024 characters long.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Luckily, there are some prerequisites for this exploit to work:&lt;/p&gt;
-
-
-
-&lt;ul class="wp-block-list"&gt;
-&lt;li&gt;The Linux distribution needs to use musl, which means that many popular server distros such as Debian, Ubuntu, and Fedora are not impacted&lt;/li&gt;
-
-
-
-&lt;li&gt;The system needs to use OpenSSH and not alternative SSH server implementations such as Dropbear, which many embedded distros use&lt;/li&gt;
-
-
-
-&lt;li&gt;OpenSSH needs to be configured without support for Pluggable Authentication Modules (PAM), the most common Linux login framework&lt;/li&gt;
-
-
-
-&lt;li&gt;OpenSSH needs to allow password-based authentication&lt;/li&gt;
-
-
-
-&lt;li&gt;The attacker needs to know the name of an account for which password login has been disabled at the system level&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Those conditions are met in default configuration for Alpine Linux and its built-in “alpine” username, which allows executing commands as root. The Alpine project &lt;a href="https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/"&gt;released emergency updates for the openssh package&lt;/a&gt; and advises users who can’t update to disable password-based authentication in the OpenSSH configuration and set up key-based authentication.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-the-trivial-attack-works"&gt;Why the trivial attack works&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The flaw is the product of three changes made years apart, each solving a different problem. In 2012, musl’s developers capped password length at 256 bytes to stop attackers from tying up server resources by sending long passwords that need to be hashed as part of the login verification process.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;At the same time they also made the library’s password hashing function return an asterisk (*) whenever it fails. The asterisk is the same character Unix has used since the 1980s to mark accounts for which no password should ever match — accounts with password disabled at the system level.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In 2016, OpenSSH changed how it checks passwords for accounts whose own password field offers no salt to hash against, borrowing another account’s salt so that attackers could not guess existing usernames with brute-force login retries and timing the server’s responses. Then in 2022, Alpine switched root’s password field to an asterisk so that SSH key logins would keep working for it.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;When an attacker sends an over-long password for a password-disabled account on such a system, the hash attempt fails and returns an asterisk, which sshd compares with the asterisk stored in the account’s password field. The two match, and the login succeeds.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="alpine-linux-cloud-images-will-be-the-main-target"&gt;Alpine Linux cloud images will be the main target&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Alpine’s standard OpenSSH package is built without PAM, and password logins are enabled by default, so Alpine servers meet the conditions out of the box. On the official cloud images published between versions 3.18.11 and 3.24.3, the default user account, named alpine, is one of the password-disabled accounts, and the images grant it passwordless “doas” privileges.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;As a result, an attacker who logs in as that user can then switch to root, so the images are exposed as soon as an administrator sets a password for any other account on the system, because a legitimate account with a real password needs to exist for this attack to work.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.csoonline.com/article/2511351/openssh-vulnerability-regresshion-puts-millions-of-servers-at-risk.html"&gt;Unlike the critical regreSSHion flaw from 2024&lt;/a&gt;, this one is confined to the musl world, but it requires no exploit engineering of any kind.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Internet-exposed SSH servers &lt;a href="https://www.csoonline.com/article/4130967/sshstalker-botnet-brute-forces-its-way-onto-7000-linux-machines.html"&gt;are already being hammered by password guesses and brute-force attempts around the clock&lt;/a&gt;,” Knott said. “Exploiting this vulnerability simply means those same attackers add a very long password attempt to that brute-force list. We’d be extremely surprised if we didn’t see SSH brute-forcers attempting this by the weekend.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Organizations should also check whether the flaw was already used against their servers. An “Accepted password” entry in /var/log/messages for an account that has no password, such as root, a key-only user, or the default alpine user, is a strong sign of compromise.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Alpine recommends reviewing doas usage, recently created users and files on exposed machines, and its advisory says any server where a login cannot be ruled out should be treated as compromised. Kultekin also published &lt;a href="https://github.com/oz9un/sshole"&gt;a check script on GitHub&lt;/a&gt; that identifies exposed servers and lists the accounts at risk.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4245407/openssh-flaw-lets-attackers-access-password-disabled-accounts-on-some-linux-systems.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.33</comments>
-      <pubDate>Fri, 06 Nov 2026 01:10:08 +0000</pubDate>
+      <pubDate>Sun, 08 Nov 2026 10:56:36 +0000</pubDate>
     </item>
     <item>
       <title>n8n security advisory (AV26-1103)</title>
@@ -151,7 +56,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1103</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 29 Oct 2026 13:55:57 +0000</pubDate>
     </item>
     <item>
@@ -161,7 +66,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mattermost-security-advisory-av26-1104</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.36</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Thu, 29 Oct 2026 14:04:33 +0000</pubDate>
     </item>
     <item>
@@ -171,7 +76,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1028</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Thu, 29 Oct 2026 20:14:55 +0000</pubDate>
     </item>
     <item>
@@ -181,128 +86,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1102</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.39</comments>
+      <comments>Score: 7.35</comments>
       <pubDate>Thu, 29 Oct 2026 20:20:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>Drupal security advisory (AV26-1105)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1105</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1105</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
-      <pubDate>Fri, 30 Oct 2026 15:43:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>HashiCorp security advisory (AV26-1106)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-1106</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-1106</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
-      <pubDate>Fri, 30 Oct 2026 15:49:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>MongoDB security advisory (AV26-1107)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1107</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1107</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.47</comments>
-      <pubDate>Fri, 30 Oct 2026 15:53:31 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ivanti security advisory (AV26-1035) - Update 2</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.48</comments>
-      <pubDate>Fri, 30 Oct 2026 18:01:12 +0000</pubDate>
-    </item>
-    <item>
-      <title>Linux security advisory (AV26-1108)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/linux-security-advisory-av26-1108</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/linux-security-advisory-av26-1108</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.50</comments>
-      <pubDate>Fri, 30 Oct 2026 21:34:05 +0000</pubDate>
-    </item>
-    <item>
-      <title>Investment scams with potential victims in at least 50 countries: over 100 servers seized</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</link>
-      <description>Led by the German Itzehoe Public Prosecutor's Office (Staatsanwaltschaft Itzehoe), the operation targeted a company suspected of supplying fraudulent trading websites to criminal groups. The entity is connected to call centre operators who allegedly persuaded victims to hand over their savings. Investigators estimate losses exceeding EUR 4 million.Authorities searched 17 locations and seized servers, other evidence and assets. Seven suspects...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 08 Nov 2026 03:01:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Five TEFAF robbery suspects added to EU Most Wanted</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</link>
-      <description>As of 29 October 2026, five new fugitives, four men and one woman, have been added to the EU Most Wanted list. According to the Limburg Public Prosecutor's Office (Openbaar Ministerie) and the Dutch Police (Politie), all five suspects are involved in the European Fine Art Fair (TEFAF) robbery that took place on 28 June 2022 in Maastricht, the Netherlands.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 08 Nov 2026 03:01:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Europol urges early action to protect cryptocurrencies and sensitive data from quantum threats</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</link>
-      <description>The timing of these capabilities remains uncertain. However, this should not be the main concern. Adapting systems and coordinating security upgrades will take time. Therefore, regardless of the nature of the threats that may emerge, crypto-agility should be pursued proactively to ensure that systems can withstand and overcome future threats while remaining secure.Both reports highlight the need to identify and...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 08 Nov 2026 03:01:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>European and Ecuadorian cooperation leads to 20 arrests in major hit against drug trafficking</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/european-and-ecuadorian-cooperation-leads-to-20-arrests-in-major-hit-against-drug-trafficking</link>
-      <description>The operation, codenamed Operation CANTABRIA, underscores the success of strong cooperation between European and Ecuadorian law enforcement agencies, proving that joint efforts are key to tackling transnational criminal networks.Magnus BrunnerEU Commissioner for Internal Affairs and Migration“International cooperation is our greatest strength against drug trafficking. Criminal networks know no borders, and neither can our response. This operation shows what we can...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/european-and-ecuadorian-cooperation-leads-to-20-arrests-in-major-hit-against-drug-trafficking</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 08 Nov 2026 03:01:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Keeping pace with e-evidence: New report examines Europe’s digital forensic capabilities</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</link>
-      <description>Coordinated by the European Commission in cooperation with Europol, the analysis draws on stakeholder consultations, dedicated meetings, surveys and contributions from experts at Europol’s European Cybercrime Centre.The findings point to common challenges: investigative tools, resources and expertise are struggling to keep pace with the forms and volume of digital evidence created by modern technologiesDigitalisation shaping evidence landscapeDigital information is spread...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 08 Nov 2026 03:01:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>5th EMPACT Hackathon leads to the detection of 51 potential victims</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</link>
-      <description>An international operation involving 40 experts and investigators from 20 countries has identified 51 potential victims of human trafficking, as well as five suspects. Held in Amsterdam from 23 to 25 September 2026, the fifth EMPACT Hackathon against the digital aspects of human trafficking brought together police officers, labour authorities and specialists in online investigations, supported by Europol and Eurojust.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sun, 08 Nov 2026 03:01:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
-      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Sun, 08 Nov 2026 03:01:20 +0000</pubDate>
     </item>
     <item>
       <title>CPython flaw exposes AI inference servers to sandbox escape attacks</title>
@@ -416,20 +201,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4245592/cpython-flaw-exposes-ai-inference-servers-to-sandbox-escape-attacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.38</comments>
       <pubDate>Fri, 06 Nov 2026 11:14:26 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</link>
-      <description>Five suspects linked to the organisation and recruitment of serious violence have been arrested in Spain, Morocco, and France, in the latest results of the Operational Taskforce (OTF) GRIMM, coordinated by Europol.
-
-The arrests in August and September target the upper levels of violence-as-a-service: those suspected of ordering attacks, finding perpetrators and coordinating crimes from abroad. Among those apprehended are fugitives featured on the EU Most Wanted website.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
-      <pubDate>Sun, 08 Nov 2026 03:01:20 +0000</pubDate>
     </item>
     <item>
       <title>Railway’s AI agents go off the track on a rival’s network</title>
@@ -519,8 +292,140 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://www.csoonline.com/article/4245637/railways-ai-agents-go-off-the-track-on-a-rivals-network.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.39</comments>
       <pubDate>Fri, 06 Nov 2026 11:37:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>Drupal security advisory (AV26-1105)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1105</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1105</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.43</comments>
+      <pubDate>Fri, 30 Oct 2026 15:43:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>HashiCorp security advisory (AV26-1106)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-1106</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-1106</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.43</comments>
+      <pubDate>Fri, 30 Oct 2026 15:49:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>MongoDB security advisory (AV26-1107)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1107</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1107</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.43</comments>
+      <pubDate>Fri, 30 Oct 2026 15:53:31 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ivanti security advisory (AV26-1035) - Update 2</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.44</comments>
+      <pubDate>Fri, 30 Oct 2026 18:01:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>Linux security advisory (AV26-1108)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/linux-security-advisory-av26-1108</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/linux-security-advisory-av26-1108</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.46</comments>
+      <pubDate>Fri, 30 Oct 2026 21:34:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Investment scams with potential victims in at least 50 countries: over 100 servers seized</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</link>
+      <description>Led by the German Itzehoe Public Prosecutor's Office (Staatsanwaltschaft Itzehoe), the operation targeted a company suspected of supplying fraudulent trading websites to criminal groups. The entity is connected to call centre operators who allegedly persuaded victims to hand over their savings. Investigators estimate losses exceeding EUR 4 million.Authorities searched 17 locations and seized servers, other evidence and assets. Seven suspects...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 08 Nov 2026 10:56:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Keeping pace with e-evidence: New report examines Europe’s digital forensic capabilities</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</link>
+      <description>Coordinated by the European Commission in cooperation with Europol, the analysis draws on stakeholder consultations, dedicated meetings, surveys and contributions from experts at Europol’s European Cybercrime Centre.The findings point to common challenges: investigative tools, resources and expertise are struggling to keep pace with the forms and volume of digital evidence created by modern technologiesDigitalisation shaping evidence landscapeDigital information is spread...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 08 Nov 2026 10:56:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Europol urges early action to protect cryptocurrencies and sensitive data from quantum threats</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</link>
+      <description>The timing of these capabilities remains uncertain. However, this should not be the main concern. Adapting systems and coordinating security upgrades will take time. Therefore, regardless of the nature of the threats that may emerge, crypto-agility should be pursued proactively to ensure that systems can withstand and overcome future threats while remaining secure.Both reports highlight the need to identify and...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/europol-urges-early-action-to-protect-cryptocurrencies-and-sensitive-data-quantum-threats</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 08 Nov 2026 10:56:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>European and Ecuadorian cooperation leads to 20 arrests in major hit against drug trafficking</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/european-and-ecuadorian-cooperation-leads-to-20-arrests-in-major-hit-against-drug-trafficking</link>
+      <description>The operation, codenamed Operation CANTABRIA, underscores the success of strong cooperation between European and Ecuadorian law enforcement agencies, proving that joint efforts are key to tackling transnational criminal networks.Magnus BrunnerEU Commissioner for Internal Affairs and Migration“International cooperation is our greatest strength against drug trafficking. Criminal networks know no borders, and neither can our response. This operation shows what we can...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/european-and-ecuadorian-cooperation-leads-to-20-arrests-in-major-hit-against-drug-trafficking</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 08 Nov 2026 10:56:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Five TEFAF robbery suspects added to EU Most Wanted</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</link>
+      <description>As of 29 October 2026, five new fugitives, four men and one woman, have been added to the EU Most Wanted list. According to the Limburg Public Prosecutor's Office (Openbaar Ministerie) and the Dutch Police (Politie), all five suspects are involved in the European Fine Art Fair (TEFAF) robbery that took place on 28 June 2022 in Maastricht, the Netherlands.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 08 Nov 2026 10:56:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>5th EMPACT Hackathon leads to the detection of 51 potential victims</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</link>
+      <description>An international operation involving 40 experts and investigators from 20 countries has identified 51 potential victims of human trafficking, as well as five suspects. Held in Amsterdam from 23 to 25 September 2026, the fifth EMPACT Hackathon against the digital aspects of human trafficking brought together police officers, labour authorities and specialists in online investigations, supported by Europol and Eurojust.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sun, 08 Nov 2026 10:56:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
+      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Sun, 08 Nov 2026 10:56:36 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ordering violence from abroad: five suspects arrested in Spain, Morocco, and France</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</link>
+      <description>Five suspects linked to the organisation and recruitment of serious violence have been arrested in Spain, Morocco, and France, in the latest results of the Operational Taskforce (OTF) GRIMM, coordinated by Europol.
+
+The arrests in August and September target the upper levels of violence-as-a-service: those suspected of ordering attacks, finding perpetrators and coordinating crimes from abroad. Among those apprehended are fugitives featured on the EU Most Wanted website.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/ordering-violence-abroad-five-suspects-arrested-in-spain-morocco-and-france</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.60</comments>
+      <pubDate>Sun, 08 Nov 2026 10:56:36 +0000</pubDate>
     </item>
     <item>
       <title>Google security advisory (AV26-1109)</title>
@@ -529,7 +434,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1109</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.90</comments>
       <pubDate>Mon, 02 Nov 2026 14:12:04 +0000</pubDate>
     </item>
     <item>
@@ -539,7 +444,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-1110</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Mon, 02 Nov 2026 14:23:12 +0000</pubDate>
     </item>
     <item>
@@ -549,7 +454,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1111</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.99</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Mon, 02 Nov 2026 14:36:56 +0000</pubDate>
     </item>
     <item>
@@ -559,7 +464,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/barracuda-networks-security-advisory-av26-1112</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.92</comments>
       <pubDate>Mon, 02 Nov 2026 16:16:10 +0000</pubDate>
     </item>
     <item>
@@ -569,7 +474,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1113</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.03</comments>
+      <comments>Score: 7.94</comments>
       <pubDate>Mon, 02 Nov 2026 18:25:26 +0000</pubDate>
     </item>
     <item>
@@ -579,7 +484,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/postgresql-security-advisory-av26-1115</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.26</comments>
+      <comments>Score: 8.16</comments>
       <pubDate>Tue, 03 Nov 2026 14:24:43 +0000</pubDate>
     </item>
     <item>
@@ -589,7 +494,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-802</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 03 Nov 2026 14:39:43 +0000</pubDate>
     </item>
     <item>
@@ -599,18 +504,8 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-1116</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.17</comments>
       <pubDate>Tue, 03 Nov 2026 14:46:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-027 - Critical vulnerability impacting Google Brotli – CVE-2026-111497</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
-      <pubDate>Wed, 28 Oct 2026 12:46:09 +0000</pubDate>
     </item>
     <item>
       <title>WordPress security advisory (AV26-1117)</title>
@@ -619,8 +514,18 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-1117</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.36</comments>
+      <comments>Score: 8.25</comments>
       <pubDate>Tue, 03 Nov 2026 21:36:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-027 - Critical vulnerability impacting Google Brotli – CVE-2026-111497</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.26</comments>
+      <pubDate>Wed, 28 Oct 2026 12:46:09 +0000</pubDate>
     </item>
     <item>
       <title>Google security advisory (AV26-1118)</title>
@@ -629,7 +534,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1118</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Wed, 04 Nov 2026 14:39:02 +0000</pubDate>
     </item>
     <item>
@@ -639,7 +544,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1119</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.50</comments>
       <pubDate>Wed, 04 Nov 2026 14:50:15 +0000</pubDate>
     </item>
     <item>
@@ -649,7 +554,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-1114</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Wed, 04 Nov 2026 15:07:31 +0000</pubDate>
     </item>
     <item>
@@ -659,7 +564,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/tanium-security-advisory-av26-1120</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Wed, 04 Nov 2026 19:12:46 +0000</pubDate>
     </item>
     <item>
@@ -669,7 +574,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-phoenix-contact-security-advisory-av26-1121</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Wed, 04 Nov 2026 19:15:29 +0000</pubDate>
     </item>
     <item>
@@ -679,7 +584,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1122</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.57</comments>
       <pubDate>Wed, 04 Nov 2026 19:26:51 +0000</pubDate>
     </item>
     <item>
@@ -689,7 +594,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-1123</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Wed, 04 Nov 2026 19:36:26 +0000</pubDate>
     </item>
     <item>
@@ -699,7 +604,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-1124</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Wed, 04 Nov 2026 19:38:21 +0000</pubDate>
     </item>
     <item>
@@ -709,7 +614,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-1125</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Wed, 04 Nov 2026 19:39:34 +0000</pubDate>
     </item>
     <item>
@@ -719,7 +624,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-1126</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Wed, 04 Nov 2026 19:50:51 +0000</pubDate>
     </item>
     <item>
@@ -729,7 +634,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1127</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Wed, 04 Nov 2026 19:57:39 +0000</pubDate>
     </item>
     <item>
@@ -739,7 +644,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-november-2026-monthly-rollup-av26-1128</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.72</comments>
+      <comments>Score: 8.58</comments>
       <pubDate>Wed, 04 Nov 2026 20:03:06 +0000</pubDate>
     </item>
     <item>
@@ -749,7 +654,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rubyonrails-security-advisory-av26-1129</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 8.94</comments>
       <pubDate>Thu, 05 Nov 2026 15:41:50 +0000</pubDate>
     </item>
     <item>
@@ -759,7 +664,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openbsd-security-advisory-av26-1130</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.19</comments>
+      <comments>Score: 9.01</comments>
       <pubDate>Thu, 05 Nov 2026 19:00:54 +0000</pubDate>
     </item>
     <item>
@@ -769,7 +674,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1131</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.66</comments>
+      <comments>Score: 9.45</comments>
       <pubDate>Fri, 06 Nov 2026 13:48:46 +0000</pubDate>
     </item>
     <item>
@@ -779,7 +684,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1132</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.82</comments>
+      <comments>Score: 9.59</comments>
       <pubDate>Fri, 06 Nov 2026 19:23:12 +0000</pubDate>
     </item>
     <item>
@@ -789,7 +694,7 @@ The arrests in August and September target the upper levels of violence-as-a-ser
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1133</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.87</comments>
+      <comments>Score: 9.64</comments>
       <pubDate>Fri, 06 Nov 2026 21:00:51 +0000</pubDate>
     </item>
   </channel>
