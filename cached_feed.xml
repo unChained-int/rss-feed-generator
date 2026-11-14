@@ -8,7 +8,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Nov 2026 08:54:27 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 15:39:04 +0000</lastBuildDate>
+    <item>
+      <title>EU Most Wanted: 19 fugitives wanted for targeting the vulnerable</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-19-fugitives-wanted-for-targeting-vulnerable</link>
+      <description>Nineteen fugitives wanted for crimes against children and older people are the focus of a new EU Most Wanted appeal launched on 12 November. Featuring cases from 14 countries, the appeal includes individuals sought for child sexual exploitation and fraud targeting older people.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-19-fugitives-wanted-for-targeting-vulnerable</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.35</comments>
+      <pubDate>Sat, 14 Nov 2026 13:39:04 +0000</pubDate>
+    </item>
     <item>
       <title>Law enforcement dismantle cocaine network from Ecuador to Europe</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-dismantle-cocaine-network-ecuador-to-europe</link>
@@ -17,154 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.39</comments>
-      <pubDate>Sat, 14 Nov 2026 06:54:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>The developer laptop just became production. Now what?</title>
-      <link>https://www.csoonline.com/article/4247458/the-developer-laptop-just-became-production-now-what.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;For decades, enterprise software development relied on an assumption that developers could experiment relatively safely because there were safeguards between their work and production. Development, staging and production had different rules, with human intermediaries making judgments about what was ready to move forward. Testing also assumed that software would behave predictably when executed again.&lt;br /&gt;&lt;br /&gt;Coding agents are upending both assumptions. Developers now run autonomous software on laptops containing GitHub tokens, SSH keys, cloud credentials and authenticated browser sessions. They’re connecting agents to MCP servers, granting access to repositories and services, and copying suggested commands into terminals without always understanding what those commands will do. When permission prompts become an obstacle, it’s tempting to click through them or enable unrestricted access. Developers are inventing security policies on the fly.&lt;br /&gt;&lt;br /&gt;The result is that the &lt;a href="https://www.csoonline.com/article/4243225/a-compromised-devops-laptop-caused-the-6-3b-binance-breach.html"&gt;developer laptop has become an extension of production&lt;/a&gt;. An agent can reach systems that previously required deliberate human intervention, often using permissions granted for an entirely different purpose. Unlike conventional software, an agent may take different actions when presented with the same task because its context and decisions change. CISOs now face a fundamentally different challenge: governing autonomous software that already holds active pathways into production.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-security-control-we-never-recognized-was-human-judgment"&gt;The security control we never recognized was human judgment&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Where human developers and coding agents diverge most sharply is in judgment, not technical capability.&lt;br /&gt;&lt;br /&gt;Developers understand what state their code is in, whether it’s something they’re testing or something that’s production-ready. They understand what their credentials permit them to do, but also when and how those credentials should be used. There’s an implicit compartmentalization between having access and exercising it.&lt;br /&gt;&lt;br /&gt;An AI agent is much more single-minded. If an available credential helps accomplish the task, the agent uses it. Agents don’t recognize the distinction between what is technically possible and what policy permits.&lt;br /&gt;&lt;br /&gt;Consider an agent asked to troubleshoot a failing application. It discovers production credentials on the developer’s laptop and determines that querying the live database is the fastest way to diagnose the problem. It might modify production data while attempting a fix, even though the developer intended only to investigate a local issue. No vulnerability needs to be exploited. The agent simply uses available authority to pursue its assigned objective.&lt;br /&gt;&lt;br /&gt;Traditional development pipelines weren’t designed around software that independently decides which systems to access and what actions to take. Security controls must now account for behavior that can’t be fully anticipated from the original request.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="a-sandbox-can-contain-an-agent-without-containing-its-authority"&gt;A sandbox can contain an agent without containing its authority&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Sandboxing has emerged as an obvious response to the &lt;a href="https://www.csoonline.com/article/4240279/openai-anthropic-disclosures-spotlight-growing-ai-containment-challenge.html"&gt;risks of autonomous agents&lt;/a&gt;. By isolating execution inside a container, virtual machine or microVM, organizations can limit an agent’s ability to interfere with its host or other workloads.&lt;br /&gt;&lt;br /&gt;Strong isolation is essential, particularly when agents execute untrusted code or interact with potentially malicious tools. A microVM with its own guest kernel can provide a stronger boundary than a conventional container sharing the host kernel. But isolation answers only part of the security question.&lt;br /&gt;&lt;br /&gt;An agent sandbox that blocks all external access is as useful as a computer encased in cement at the bottom of the ocean.&lt;br /&gt;&lt;br /&gt;An agent doesn’t have to escape its sandbox to cause a security incident. It can misuse perfectly legitimate permissions, send sensitive information through an authorized network connection or make destructive changes using credentials deliberately provided to it.&lt;br /&gt;&lt;br /&gt;Isolating execution is useless unless you also precisely control what that workload can reach. A secure sandbox containing unrestricted credentials still leaves an enormous attack surface.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="can-you-revoke-an-agent-without-disabling-its-developer"&gt;Can you revoke an agent without disabling its developer?&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Security professionals are familiar with least privilege, but agentic development exposes the limitations of conventional identity and access management.&lt;br /&gt;&lt;br /&gt;Consider a developer who authorizes an agent to modify one GitHub repository. If the agent uses the developer’s personal token, it may &lt;a href="https://www.csoonline.com/article/4241625/gheist-turns-github-actions-into-a-secret-extraction-service.html"&gt;inherit access to every repository that developer can reach&lt;/a&gt;. That could include merge permissions, CI/CD environments and downstream credentials associated with those systems.&lt;br /&gt;&lt;br /&gt;This is ambient authority: the ability to perform actions beyond the particular task for which access was originally intended. Even a relatively narrow token may authorize repeated actions when the agent only needed permission to perform the action once.&lt;br /&gt;&lt;br /&gt;When an agent operates under a developer’s credentials, revoking its access can also mean disabling the developer. Security teams need to separate autonomous workloads from human identity.&lt;br /&gt;&lt;br /&gt;Agents should have independently defined identities, with permissions delegated for specific purposes. That makes it possible to track what each agent did, investigate where something went wrong and revoke an individual agent’s authority without disrupting its developer.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-missing-link-is-a-trusted-broker"&gt;The missing link is a trusted broker&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;One of the most interesting developments in agentic security is the emerging idea of a trusted broker that sits between an agent and the systems it wants to access.&lt;br /&gt;&lt;br /&gt;Some approaches are described as MCP proxies. Others use authorization services, gateways or different architectures. What they’re circling is the same fundamental problem: how do we decide which agents can access which resources, under what circumstances and for how long?&lt;br /&gt;&lt;br /&gt;Crucially, the agent cannot be responsible for deciding the limits of its own authority. Those decisions must be enforced by a separate system that can authorize individual operations without surrendering the credentials that make them possible.&lt;br /&gt;&lt;br /&gt;Imagine asking an agent to fix a GitHub issue. Instead of granting unrestricted repository access, the developer authorizes the task once. A trusted intermediary could then permit the agent to read the repository, push changes to a designated branch and open a pull request. Those permissions could expire after an hour, without exposing a broadly reusable developer credential.&lt;br /&gt;&lt;br /&gt;This is the core tension agentic security has to resolve. Grant too little access and developers abandon the controls. Grant too much and isolation becomes irrelevant to the damage an authorized agent can cause. The goal is to make secure delegation as frictionless as unrestricted access.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Agentic security may be approaching a comparable architectural moment. Developers, open-source projects and commercial vendors are experimenting with approaches to identity, delegation, authorization and policy enforcement. Some organizations are building their own controls around existing IAM systems. Others are exploring dedicated intermediaries that evaluate requests before allowing agents to reach external resources.&lt;br /&gt;&lt;br /&gt;The trusted broker is not yet a universally defined component, and there’s no guarantee one implementation will become the equivalent of Kubernetes. Questions about policy decisions, credential custody, latency, availability and auditability remain open.&lt;br /&gt;&lt;br /&gt;But the missing function is becoming clearer. We need a dependable intermediary that translates human intent into narrowly defined, enforceable authority for autonomous software.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="mcp-servers-have-become-a-new-software-supply-chain"&gt;MCP servers have become a new software supply chain&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;MCP is one of the principal ways agents connect to external tools and information. That makes it both an important integration mechanism and a security boundary.&lt;br /&gt;&lt;br /&gt;A malicious MCP server can become an indirect route into an agent’s workflow. If servers or tools execute with access to shared filesystems, processes or credential stores, a compromised component may be able to read secrets belonging to another tool.&lt;br /&gt;&lt;br /&gt;But credential theft isn’t the only concern. A compromised server can return manipulated information that influences an agent’s subsequent actions even before the agent uses the tool. An attacker doesn’t need to compromise the agent—only the context it consumes.&lt;br /&gt;&lt;br /&gt;The familiar disciplines of &lt;a href="https://www.csoonline.com/article/4243210/cursor-removes-malicious-claude-code-extension-after-ssh-backdoor-attempt.html"&gt;provenance, signing and build integrity&lt;/a&gt; need to extend to MCP servers, agent tools and model weights. Organizations should know where these components originated, whether they’ve been modified and what authority they receive when introduced into an environment.&lt;br /&gt;&lt;br /&gt;The answer is layered security: strong isolation, independently managed identities, narrowly scoped permissions, controlled network access and sufficient observability to understand what agents actually do.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="why-agent-security-belongs-in-the-execution-path"&gt;Why agent security belongs in the execution path&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Containerization demonstrated that security works best when guardrails are baked directly into developer platforms without stripping away speed. Kubernetes eventually made it possible to enforce common security and operational policies across distributed workloads without requiring every developer to become an infrastructure expert. Agentic development needs a comparable shift.&lt;br /&gt;&lt;br /&gt;The longer-term opportunity is to move from granting persistent access to delegating task-specific authority. Developers need a way to authorize an agent to fix one issue or open one pull request without surrendering standing keys.&lt;br /&gt;&lt;br /&gt;Laptops are production endpoints now, and they won’t revert back to safe sandboxes. Security teams must protect developer speed by embedding the boundaries that human judgment used to handle manually directly into the infrastructure.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4247458/the-developer-laptop-just-became-production-now-what.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.43</comments>
-      <pubDate>Thu, 12 Nov 2026 09:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Rubyonrails security advisory (AV26-1129)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/rubyonrails-security-advisory-av26-1129</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rubyonrails-security-advisory-av26-1129</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.45</comments>
-      <pubDate>Thu, 05 Nov 2026 15:41:50 +0000</pubDate>
-    </item>
-    <item>
-      <title>354 dark web vendors and buyers arrested in Europol-coordinated global crackdown</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/354-dark-web-vendors-and-buyers-arrested-in-europol-coordinated-global-crackdown</link>
-      <description>Europol, in collaboration with law enforcement agencies from 14 countries across the globe, have successfully identified vendors and buyers from major dark marketplaces as part of Operation TorNado, a coordinated international effort targeting cybercrime, drug trafficking, and firearms offences. The operation, which spanned from May 2025 to October 2026, resulted in 354 arrests and hundreds of house searches worldwide.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/354-dark-web-vendors-and-buyers-arrested-in-europol-coordinated-global-crackdown</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
-      <pubDate>Sat, 14 Nov 2026 06:54:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Keeping pace with e-evidence: New report examines Europe’s digital forensic capabilities</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</link>
-      <description>Coordinated by the European Commission in cooperation with Europol, the analysis draws on stakeholder consultations, dedicated meetings, surveys and contributions from experts at Europol’s European Cybercrime Centre.The findings point to common challenges: investigative tools, resources and expertise are struggling to keep pace with the forms and volume of digital evidence created by modern technologiesDigitalisation shaping evidence landscapeDigital information is spread...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 14 Nov 2026 06:54:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>5th EMPACT Hackathon leads to the detection of 51 potential victims</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</link>
-      <description>An international operation involving 40 experts and investigators from 20 countries has identified 51 potential victims of human trafficking, as well as five suspects. Held in Amsterdam from 23 to 25 September 2026, the fifth EMPACT Hackathon against the digital aspects of human trafficking brought together police officers, labour authorities and specialists in online investigations, supported by Europol and Eurojust.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 14 Nov 2026 06:54:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Five TEFAF robbery suspects added to EU Most Wanted</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</link>
-      <description>As of 29 October 2026, five new fugitives, four men and one woman, have been added to the EU Most Wanted list. According to the Limburg Public Prosecutor's Office (Openbaar Ministerie) and the Dutch Police (Politie), all five suspects are involved in the European Fine Art Fair (TEFAF) robbery that took place on 28 June 2022 in Maastricht, the Netherlands.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 14 Nov 2026 06:54:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Investment scams with potential victims in at least 50 countries: over 100 servers seized</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</link>
-      <description>Led by the German Itzehoe Public Prosecutor's Office (Staatsanwaltschaft Itzehoe), the operation targeted a company suspected of supplying fraudulent trading websites to criminal groups. The entity is connected to call centre operators who allegedly persuaded victims to hand over their savings. Investigators estimate losses exceeding EUR 4 million.Authorities searched 17 locations and seized servers, other evidence and assets. Seven suspects...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Sat, 14 Nov 2026 06:54:27 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mozilla security advisory (AV26-1131)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1131</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1131</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.57</comments>
-      <pubDate>Fri, 06 Nov 2026 13:48:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
-      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Sat, 14 Nov 2026 06:54:27 +0000</pubDate>
+      <pubDate>Sat, 14 Nov 2026 13:39:04 +0000</pubDate>
     </item>
     <item>
       <title>Palo Alto tracks a massive Chinese AI attack that sadly lives up to industry fears</title>
@@ -246,8 +109,78 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4247565/palo-alto-tracks-a-massive-chinese-ai-attack-that-sadly-lives-up-to-industry-fears.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.59</comments>
+      <comments>Score: 7.42</comments>
       <pubDate>Thu, 12 Nov 2026 15:15:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Rubyonrails security advisory (AV26-1129)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/rubyonrails-security-advisory-av26-1129</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rubyonrails-security-advisory-av26-1129</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.42</comments>
+      <pubDate>Thu, 05 Nov 2026 15:41:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>354 dark web vendors and buyers arrested in Europol-coordinated global crackdown</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/354-dark-web-vendors-and-buyers-arrested-in-europol-coordinated-global-crackdown</link>
+      <description>Europol, in collaboration with law enforcement agencies from 14 countries across the globe, have successfully identified vendors and buyers from major dark marketplaces as part of Operation TorNado, a coordinated international effort targeting cybercrime, drug trafficking, and firearms offences. The operation, which spanned from May 2025 to October 2026, resulted in 354 arrests and hundreds of house searches worldwide.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/354-dark-web-vendors-and-buyers-arrested-in-europol-coordinated-global-crackdown</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.51</comments>
+      <pubDate>Sat, 14 Nov 2026 13:39:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>Keeping pace with e-evidence: New report examines Europe’s digital forensic capabilities</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</link>
+      <description>Coordinated by the European Commission in cooperation with Europol, the analysis draws on stakeholder consultations, dedicated meetings, surveys and contributions from experts at Europol’s European Cybercrime Centre.The findings point to common challenges: investigative tools, resources and expertise are struggling to keep pace with the forms and volume of digital evidence created by modern technologiesDigitalisation shaping evidence landscapeDigital information is spread...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 14 Nov 2026 13:39:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>5th EMPACT Hackathon leads to the detection of 51 potential victims</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</link>
+      <description>An international operation involving 40 experts and investigators from 20 countries has identified 51 potential victims of human trafficking, as well as five suspects. Held in Amsterdam from 23 to 25 September 2026, the fifth EMPACT Hackathon against the digital aspects of human trafficking brought together police officers, labour authorities and specialists in online investigations, supported by Europol and Eurojust.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 14 Nov 2026 13:39:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>Five TEFAF robbery suspects added to EU Most Wanted</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</link>
+      <description>As of 29 October 2026, five new fugitives, four men and one woman, have been added to the EU Most Wanted list. According to the Limburg Public Prosecutor's Office (Openbaar Ministerie) and the Dutch Police (Politie), all five suspects are involved in the European Fine Art Fair (TEFAF) robbery that took place on 28 June 2022 in Maastricht, the Netherlands.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 14 Nov 2026 13:39:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>Investment scams with potential victims in at least 50 countries: over 100 servers seized</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</link>
+      <description>Led by the German Itzehoe Public Prosecutor's Office (Staatsanwaltschaft Itzehoe), the operation targeted a company suspected of supplying fraudulent trading websites to criminal groups. The entity is connected to call centre operators who allegedly persuaded victims to hand over their savings. Investigators estimate losses exceeding EUR 4 million.Authorities searched 17 locations and seized servers, other evidence and assets. Seven suspects...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Sat, 14 Nov 2026 13:39:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mozilla security advisory (AV26-1131)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1131</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1131</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.53</comments>
+      <pubDate>Fri, 06 Nov 2026 13:48:46 +0000</pubDate>
     </item>
     <item>
       <title>JetBrains security advisory (AV26-1132)</title>
@@ -256,8 +189,19 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1132</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.60</comments>
+      <comments>Score: 7.56</comments>
       <pubDate>Fri, 06 Nov 2026 19:23:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>In Other News: New CISA Director Nominee, Connected Car Hacking, Baker Tilly Data Breach</title>
+      <link>https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/</link>
+      <description>&lt;p&gt;Noteworthy stories that might have slipped under the radar: Siemens details security advisory policy, OpenAI Codex backdoor risk, Microsoft warns of model weight backdoors.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href="https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/"&gt;In Other News: New CISA Director Nominee, Connected Car Hacking, Baker Tilly Data Breach&lt;/a&gt; appeared first on &lt;a href="https://www.securityweek.com"&gt;SecurityWeek&lt;/a&gt;.&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.56</comments>
+      <pubDate>Fri, 13 Nov 2026 15:20:00 +0000</pubDate>
     </item>
     <item>
       <title>SonicWall security advisory (AV26-1133)</title>
@@ -266,8 +210,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1133</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.61</comments>
+      <comments>Score: 7.57</comments>
       <pubDate>Fri, 06 Nov 2026 21:00:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
+      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Sat, 14 Nov 2026 13:39:04 +0000</pubDate>
     </item>
     <item>
       <title>November 2026 Patch Tuesday: 63 Critical Microsoft fixes, plus an Outlook zero day that allows theft of hashed credentials</title>
@@ -385,19 +339,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4247015/november-2026-patch-tuesday-63-critical-microsoft-fixes-plus-an-outlook-zero-day-that-allows-theft-of-hashed-credentials.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Wed, 11 Nov 2026 03:10:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>In Other News: New CISA Director Nominee, Connected Car Hacking, Baker Tilly Data Breach</title>
-      <link>https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/</link>
-      <description>&lt;p&gt;Noteworthy stories that might have slipped under the radar: Siemens details security advisory policy, OpenAI Codex backdoor risk, Microsoft warns of model weight backdoors.&lt;/p&gt;
-&lt;p&gt;The post &lt;a href="https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/"&gt;In Other News: New CISA Director Nominee, Connected Car Hacking, Baker Tilly Data Breach&lt;/a&gt; appeared first on &lt;a href="https://www.securityweek.com"&gt;SecurityWeek&lt;/a&gt;.&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.79</comments>
-      <pubDate>Fri, 13 Nov 2026 15:20:00 +0000</pubDate>
     </item>
     <item>
       <title>An AI kill switch isn’t enough. Build a fallback plan</title>
@@ -531,7 +474,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4247929/an-ai-kill-switch-isnt-enough-build-a-fallback-plan.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.12</comments>
+      <comments>Score: 7.91</comments>
       <pubDate>Fri, 13 Nov 2026 09:00:00 +0000</pubDate>
     </item>
     <item>
@@ -541,7 +484,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-1134</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Mon, 09 Nov 2026 13:54:39 +0000</pubDate>
     </item>
     <item>
@@ -551,7 +494,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1136</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Mon, 09 Nov 2026 14:33:03 +0000</pubDate>
     </item>
     <item>
@@ -561,7 +504,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openbsd-security-advisory-av26-1130</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.27</comments>
+      <comments>Score: 8.18</comments>
       <pubDate>Mon, 09 Nov 2026 18:34:02 +0000</pubDate>
     </item>
     <item>
@@ -716,58 +659,8 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4248553/how-ai-is-changing-the-nature-of-cyberattacks.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.46</comments>
+      <comments>Score: 8.23</comments>
       <pubDate>Fri, 13 Nov 2026 19:02:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>SAP security advisory – November 2026 monthly rollup (AV26-1137)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2026-monthly-rollup-av26-1137</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2026-monthly-rollup-av26-1137</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
-      <pubDate>Tue, 10 Nov 2026 15:31:51 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] Hitachi security advisory (AV26-1138)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-1138</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-1138</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
-      <pubDate>Tue, 10 Nov 2026 15:43:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] Siemens security advisory (AV26-1139)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-1139</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-1139</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
-      <pubDate>Tue, 10 Nov 2026 16:03:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>IBM security advisory (AV26-1135) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1135</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1135</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
-      <pubDate>Tue, 10 Nov 2026 16:40:32 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ivanti security advisory (AV26-1141)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1141</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1141</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
-      <pubDate>Tue, 10 Nov 2026 16:56:09 +0000</pubDate>
     </item>
     <item>
       <title>Thousands of GitHub repos hit with secret-stealing malware</title>
@@ -873,7 +766,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4248672/thousands-of-github-repos-hit-with-secret-stealing-malware.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Fri, 13 Nov 2026 23:53:42 +0000</pubDate>
     </item>
     <item>
@@ -1024,8 +917,58 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4248693/the-firewall-becomes-the-foothold-attackers-turn-check-point-gateways-against-customers.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.71</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Sat, 14 Nov 2026 01:39:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>SAP security advisory – November 2026 monthly rollup (AV26-1137)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2026-monthly-rollup-av26-1137</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2026-monthly-rollup-av26-1137</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.47</comments>
+      <pubDate>Tue, 10 Nov 2026 15:31:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] Hitachi security advisory (AV26-1138)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-1138</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-1138</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.47</comments>
+      <pubDate>Tue, 10 Nov 2026 15:43:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>[Control systems] Siemens security advisory (AV26-1139)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-1139</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-1139</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.48</comments>
+      <pubDate>Tue, 10 Nov 2026 16:03:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV26-1135) – Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1135</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1135</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.49</comments>
+      <pubDate>Tue, 10 Nov 2026 16:40:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ivanti security advisory (AV26-1141)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1141</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1141</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.49</comments>
+      <pubDate>Tue, 10 Nov 2026 16:56:09 +0000</pubDate>
     </item>
     <item>
       <title>Barracuda Networks security advisory (AV26-1112) – Update 2</title>
@@ -1034,7 +977,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/barracuda-networks-security-advisory-av26-1112</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.39</comments>
       <pubDate>Thu, 12 Nov 2026 14:22:59 +0000</pubDate>
     </item>
     <item>
@@ -1044,7 +987,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-834</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.40</comments>
       <pubDate>Thu, 12 Nov 2026 14:25:44 +0000</pubDate>
     </item>
     <item>
@@ -1054,7 +997,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1140</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.57</comments>
+      <comments>Score: 9.40</comments>
       <pubDate>Thu, 12 Nov 2026 14:29:08 +0000</pubDate>
     </item>
     <item>
@@ -1064,7 +1007,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-1143</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.58</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Thu, 12 Nov 2026 14:56:51 +0000</pubDate>
     </item>
     <item>
@@ -1074,7 +1017,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1144</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.59</comments>
+      <comments>Score: 9.41</comments>
       <pubDate>Thu, 12 Nov 2026 15:04:28 +0000</pubDate>
     </item>
     <item>
@@ -1084,7 +1027,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1145</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.60</comments>
+      <comments>Score: 9.42</comments>
       <pubDate>Thu, 12 Nov 2026 15:26:42 +0000</pubDate>
     </item>
     <item>
@@ -1094,7 +1037,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1146</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Thu, 12 Nov 2026 15:45:47 +0000</pubDate>
     </item>
     <item>
@@ -1104,7 +1047,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-1147</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Thu, 12 Nov 2026 15:52:53 +0000</pubDate>
     </item>
     <item>
@@ -1114,7 +1057,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/craft-cms-security-advisory-av26-1086</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.61</comments>
+      <comments>Score: 9.43</comments>
       <pubDate>Thu, 12 Nov 2026 15:54:21 +0000</pubDate>
     </item>
     <item>
@@ -1124,7 +1067,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-1148</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.64</comments>
+      <comments>Score: 9.46</comments>
       <pubDate>Thu, 12 Nov 2026 17:01:14 +0000</pubDate>
     </item>
     <item>
@@ -1134,7 +1077,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-1149</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.50</comments>
       <pubDate>Thu, 12 Nov 2026 18:35:43 +0000</pubDate>
     </item>
     <item>
@@ -1144,7 +1087,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1150</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.68</comments>
+      <comments>Score: 9.50</comments>
       <pubDate>Thu, 12 Nov 2026 18:37:14 +0000</pubDate>
     </item>
     <item>
@@ -1154,7 +1097,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1151</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.69</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Thu, 12 Nov 2026 18:43:52 +0000</pubDate>
     </item>
     <item>
@@ -1164,7 +1107,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisory-av26-1152</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.69</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Thu, 12 Nov 2026 18:51:10 +0000</pubDate>
     </item>
     <item>
@@ -1174,7 +1117,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-1153</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.69</comments>
+      <comments>Score: 9.51</comments>
       <pubDate>Thu, 12 Nov 2026 18:58:56 +0000</pubDate>
     </item>
     <item>
@@ -1184,7 +1127,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-1155</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.74</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Thu, 12 Nov 2026 20:24:57 +0000</pubDate>
     </item>
     <item>
@@ -1194,7 +1137,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nodejs-security-advisory-av26-1156</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.74</comments>
+      <comments>Score: 9.55</comments>
       <pubDate>Thu, 12 Nov 2026 20:35:04 +0000</pubDate>
     </item>
     <item>
@@ -1204,7 +1147,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1157</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.74</comments>
+      <comments>Score: 9.56</comments>
       <pubDate>Thu, 12 Nov 2026 20:39:53 +0000</pubDate>
     </item>
     <item>
@@ -1214,7 +1157,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2026-monthly-rollup-av26-1142</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.74</comments>
+      <comments>Score: 9.56</comments>
       <pubDate>Thu, 12 Nov 2026 20:42:34 +0000</pubDate>
     </item>
     <item>
@@ -1224,7 +1167,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1158</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.28</comments>
+      <comments>Score: 10.06</comments>
       <pubDate>Fri, 13 Nov 2026 13:56:59 +0000</pubDate>
     </item>
     <item>
@@ -1234,7 +1177,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1159</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.29</comments>
+      <comments>Score: 10.07</comments>
       <pubDate>Fri, 13 Nov 2026 14:10:44 +0000</pubDate>
     </item>
     <item>
@@ -1244,7 +1187,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1160</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.30</comments>
+      <comments>Score: 10.08</comments>
       <pubDate>Fri, 13 Nov 2026 14:28:49 +0000</pubDate>
     </item>
     <item>
@@ -1254,7 +1197,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-1154</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 10.46</comments>
+      <comments>Score: 10.23</comments>
       <pubDate>Fri, 13 Nov 2026 18:59:00 +0000</pubDate>
     </item>
   </channel>
