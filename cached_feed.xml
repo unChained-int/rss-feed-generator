@@ -8,315 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Nov 2026 07:44:40 +0000</lastBuildDate>
-    <item>
-      <title>GitHub security advisory (AV26-1126)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-1126</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-1126</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
-      <pubDate>Wed, 04 Nov 2026 19:50:51 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cisco security advisory (AV26-1127)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1127</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1127</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
-      <pubDate>Wed, 04 Nov 2026 19:57:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>Android security advisory – November 2026 monthly rollup (AV26-1128)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-november-2026-monthly-rollup-av26-1128</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/android-security-advisory-november-2026-monthly-rollup-av26-1128</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.23</comments>
-      <pubDate>Wed, 04 Nov 2026 20:03:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>Thousands of GitHub repos hit with secret-stealing malware</title>
-      <link>https://www.csoonline.com/article/4248672/thousands-of-github-repos-hit-with-secret-stealing-malware.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Researchers have uncovered a campaign in which hijacked GitHub accounts spread secret-stealing malware across thousands of repositories. The payload executed in at least 1,806 repos, exfiltrating CI/CD secrets and cloud credentials.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Aikido Security, which detected and documented the campaign, said the attackers used the 4,837 compromised accounts to open probe pull requests in 61,764 repositories starting Nov. 10. Around 92% of those pull requests, titled “docs: dependency audit notes,” are still open, which suggests most project owners have not seen them.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;However, the probes on their own are benign and were performed only to check whether the hijacked accounts had write-access in those repos so that the attackers could follow up with commits that contained the malicious payload: a 1,500-line shell script that collects GitHub Actions secrets, cloud credentials, and API keys for AI services and developer tools.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The payload was delivered using at least three methods: modification of existing GitHub Actions workflows, adding a &lt;code&gt;postinstall&lt;/code&gt; hook in the &lt;code&gt;package.json&lt;/code&gt; file that runs it on any &lt;code&gt;npm install&lt;/code&gt; and creating a throw-away branch with a rogue Actions workflow to be run.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“We’ve identified indications that the payload ran in at least 1,806 repositories, but this number may understate impact,” the Aikido researchers said in &lt;a href="https://www.aikido.dev/blog/compromised-github-accounts-push-ci-secret-stealer-to-tens-of-thousands-of-repositories"&gt;their report&lt;/a&gt;. “The run log was deleted in impacted repositories, meaning the threat actor has likely collected the credentials and covered its tracks.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-npm-hook-that-slipped-past-github"&gt;The npm hook that slipped past GitHub&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;GitHub’s safeguard against this kind of attack worked as designed for the payloads it could see. The platform has blunted &lt;a href="https://www.csoonline.com/article/4241625/gheist-turns-github-actions-into-a-secret-extraction-service.html"&gt;recent workflow-injection campaigns&lt;/a&gt; by requiring explicit approval before the malicious workflows run, and GitGuardian found that all seven of the November payload runs still visible in workflow files sat in an &lt;code&gt;action_required&lt;/code&gt; state and never started.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“GitHub held the workflow forms, but an npm hook slipped past the hold and ran,” Gaetan Ferry, a security researcher at GitGuardian, &lt;a href="https://blog.gitguardian.com/wfx-loot-a-ci-secret-stealer-pushed-with-stolen-github-credentials/"&gt;said in an analysis&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;That’s because the npm hook did not change any workflow file. Instead, the attacker added a hidden script to the repository root and a single line in &lt;code&gt;package.json&lt;/code&gt;, which runs on every &lt;code&gt;npm install&lt;/code&gt;. The repository’s own unchanged workflows executed &lt;code&gt;npm install&lt;/code&gt; as routine build hygiene.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;By Thursday the attacker had also changed their exfiltration method. The latest payload sends stolen data only to a Telegram chat, with the HTTP callback now pointing to a dead address. Blocking the previously published IP addresses no longer stops the latest versions.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="what-the-malware-steals"&gt;What the malware steals&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Once the script runs, it receives every repository and organization secret through a JSON dump of the workflow’s secrets object. It scans the memory of the runner process, which holds secrets in decrypted form, including ones the workflow never referenced, and collects credential files from well-known paths, shell histories, and API keys for AI services and developer tools such as OpenAI, Anthropic, Copilot, and Cursor.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The script goes further and exchanges OIDC tokens for AWS, GCP, and Azure sessions, mints new long-lived AWS access keys, impersonates GCP service accounts, and replays cached Azure refresh tokens to reach Microsoft Graph and Key Vault.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;It packs everything it collects into a gzipped archive and sends it to the attacker then it cleans up. In most repositories the attacker reverted the malicious commit within a minute and deleted the workflow run and its logs.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="backdoors-that-survive-credential-rotation"&gt;Backdoors that survive credential rotation&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The script also takes actions for attackers to maintain access even if credentials are reset. For AWS it rewrites the assumed role’s trust policy to accept any AWS account, opening the role to anyone, and calls the &lt;code&gt;iam:CreateAccessKey&lt;/code&gt; API to create long-lived keys for IAM users.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;On Azure it injects federated identity credentials named &lt;code&gt;wfx-ci-*&lt;/code&gt; into applications, pointing them back at the compromised repository, so that any workflow in that repository can authenticate to Azure without a stored secret even after every token has been rotated.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;If a probe pull request or any of the campaign’s commit strings appear in a repository you control, assume every secret that repository’s workflows could reach is stolen. Rotate repository and organization secrets, package registry tokens, and any cloud keys, and remember that the memory scan means the list of what was taken is wider than what the workflows referenced.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Then hunt for signs of the persistent mechanisms: AWS role trust policies that accept any account, IAM keys created since Nov. 10, and Azure federated credentials named &lt;code&gt;wfx-ci-*&lt;/code&gt;.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Ensure all logs are enabled, particularly audit logs on cloud admin behavior,” Ramy Rahman, senior principal solutions engineer at ArmorCode, tells CSO. “Inspect audit logs where possible (specifically in AWS and Azure, as persistence is possible) to ensure the malicious payload did not run.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The &lt;code&gt;wfx-loot&lt;/code&gt; payload also shipped in published packages: the Packagist package neuronai-studio 3.14.3, and the Go modules docker-env and gocurl. In the Go modules the payload sits only in a workflow file that Go tooling never runs, so consumers may not have been affected; machines that installed the Packagist version should be treated as compromised.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;About a fifth of the GitHub accounts used to launch this campaign had already been compromised during &lt;a href="https://www.csoonline.com/article/4052826/ghostaction-campaign-steals-3325-secrets-in-github-supply-chain-attack.html"&gt;the GhostAction attack&lt;/a&gt; back in October, GitGuardian said. Meanwhile researchers from StepSecurity traced 173 of the probe pull requests to tokens issued to the Fly.io GitHub App.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://community.fly.io/t/security-github-tokens-exposed-by-apps-deployed-from-github/29070"&gt;Fly.io confirmed that these tokens were leaked&lt;/a&gt; when its deploy process left them in &lt;code&gt;.git/config&lt;/code&gt; files inside build directories that some apps served publicly, but noted that Fly.io itself was not breached. GitHub’s bulk revocation of the Fly.io app tokens stopped partway, so some of the stolen token pool may still be valid.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4248672/thousands-of-github-repos-hit-with-secret-stealing-malware.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.24</comments>
-      <pubDate>Fri, 13 Nov 2026 23:53:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>6.4 million victim datasets secured in international operation against malware networks</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/64-million-victim-datasets-secured-in-international-operation-against-malware-networks</link>
-      <description>Europol, alongside global partners, has dismantled the criminal infrastructure behind Gootloader, CastleRAT, and StealC malware. In coordinated actions, law enforcement seized 235 servers and 257 domains, severely crippling these malware distribution networks.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/64-million-victim-datasets-secured-in-international-operation-against-malware-networks</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.24</comments>
-      <pubDate>Mon, 16 Nov 2026 05:44:40 +0000</pubDate>
-    </item>
-    <item>
-      <title>The firewall becomes the foothold: Attackers turn Check Point gateways against customers</title>
-      <link>https://www.csoonline.com/article/4248693/the-firewall-becomes-the-foothold-attackers-turn-check-point-gateways-against-customers.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A firewall is intended to be a boundary attackers can’t cross.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;But firewalls face the web, making them just as vulnerable to attack as other systems, as evidenced by the &lt;a href="https://research.checkpoint.com/2026/php2shell-exploitation-on-check-point-gateway/" rel="noreferrer noopener" target="_blank"&gt;emergency hotfixes&lt;/a&gt; released by Check Point Software for several of its products. The patches address a high-severity privilege escalation flaw, &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-123039" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-123039&lt;/a&gt;, that gives attackers root privilege access and the ability to send commands to the Gaia OS Dynamic CLI daemon, a core background process.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Hackers have been exploiting the 7.8-rated vulnerability since late October, and Check Point said “a couple of dozen” customers have been impacted.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Perhaps not surprisingly, adversaries gained initial access via &lt;a href="https://www.infoworld.com/article/4239342/php2shell-exposes-the-weakness-in-coordinated-vulnerability-disclosure.html" target="_blank"&gt;PHP2Shell&lt;/a&gt;, the collective name for two critical PHP flaws tracked as CVE-2026-109618 and CVE-2026-109619. The 9.2-severity-rated bugs allow unauthenticated remote code execution (RCE).&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“For customers, one foothold delivered the full menu: Spying, staying, and destroying,” said &lt;a href="https://dicksonresearch.com/" rel="noreferrer noopener" target="_blank"&gt;Frank Dickson&lt;/a&gt; of Dickson Research. “For Check Point, the cost is trust. A firewall is supposed to be the strongest point in the network, not the softest.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="granting-unintended-root-access"&gt;Granting unintended root access&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;CVE-2026-123039 is a bug in the Dynamic CLI IPC (Inter-Process Communication) interface which sends privileged command requests to the root-level Gaia OS Dynamic CLI. It is a local privilege escalation flaw, meaning an attacker already has to have local code execution ability on the appliance; this accounts for its 7.8 rating.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Attackers first gained access to the Mobile Access portal by exploiting the &lt;a href="https://www.csoonline.com/article/4241941/php2shell-will-persist-in-enterprise-environments-for-years.html" target="_blank"&gt;PHP2Shell vulnerabilities&lt;/a&gt;. They then escalated privileges to root using the CVE-2026-123039 zero-day exploits.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Once attackers have root, they can run anything they like,” Dickson said. A management service on the appliance runs as root, listens on a local socket that any process on the box can write to, and never checks who is calling.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In this case, the attackers hid web shells inside the templates the portal uses to build its login page, and installed a TSGA backdoor and TSProxy malware that survives reboots, tucks itself into backups and snapshots, and hides inside the appliance’s own processes, he explained.&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“That backdoor can copy the firewall configuration, which is essentially a blueprint of the network,” he said. It can also alter the firewall’s logs, concealing the attacker’s activities.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Check Point reported that, after gaining root access, the attackers then pivoted from the compromised gateway to a VMware ESXi host over SSH, deployed the destroy_v6 wiper, and left politically themed messages signed by a group calling itself Dream Security Ltd during the destructive stage.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Check Point advised security teams to immediately deploy the CVE-2026-123039 hotfixes, beginning with devices that expose Mobile Access to the internet. Those who can’t do so right away should stop the &lt;em&gt;dynamic_server&lt;/em&gt; process and prevent it from restarting. However, they warned, this can come at the cost of some CLI commands.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Dickson also advised customers to turn off Mobile Access where it is not used, keep management interfaces off the internet entirely, and run the advisory’s log checks on any gateway exposed since late October, then cut the cord between the firewall and the hypervisor. A potentially exposed gateway should never have a trusted path into VMware ESXi.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;They should also ship firewall logs off the box, as they happen, to a system the firewall cannot touch.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Products impacted by CVE-2026-123039 include Check Point’s Firewall, Multi-Domain Security Management Server, Security Gateway, Security Management Server, and Scalable Platforms.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="security-tools-are-as-big-a-target-as-what-they-protect"&gt;Security tools are as big a target as what they protect&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Once attackers have root access, the device basically becomes a trusted launching point for attacks against other systems that would otherwise stay protected, explained &lt;a href="https://www.infotech.com/profiles/erik-avakian" rel="noreferrer noopener" target="_blank"&gt;Erik Avakian&lt;/a&gt;, a technical counselor at Infotech. By effectively controlling the gateway, they can execute a wide array of nefarious actions.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The overall takeaway and irony of this, Avakian pointed out, is that the very technology organizations deploy to protect themselves can become one of their greatest vulnerabilities.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Organizations can no longer assume their security infrastructure is inherently secure simply because it’s designed to provide protection,” he said. In reality, it is as much of a target as the systems it’s protecting.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Firewalls, VPN appliances, and security gateways are increasingly being targeted because they provide the greatest leverage and control, he noted. As such, security teams must treat these appliances as high value assets with the same access control safeguards, vulnerability management, monitoring, and incident response rigor applied to other critical infrastructure.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This means aggressively patching internet facing systems, restricting management access, monitoring for unusual administrative activity, and looking for indications of persistence or lateral movement, he said. But patches don’t evict already established attackers, so security teams must investigate and, where necessary, rebuild affected systems from trusted images.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;And with &lt;a href="https://www.csoonline.com/article/4248553/how-ai-is-changing-the-nature-of-cyberattacks.html" target="_blank"&gt;AI accelerating attacks&lt;/a&gt;, CISOs should consider establishing a zero trust mindset and architecture collectively across the pillars of identity, network, applications, data, and devices, he said.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="keep-an-eye-on-the-edge"&gt;Keep an eye on the edge&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Edge devices are primary targets, as they sit at the boundary, hold privileged access, and rarely get the endpoint monitoring that other systems do, noted &lt;a href="https://www.linkedin.com/in/scottmiserendino" rel="noreferrer noopener" target="_blank"&gt;Scott Miserendino&lt;/a&gt;, CTO at DataBee. Security appliances should be treated as the high-risk assets they’ve become.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In addition to patching and applying mitigations, he advised, defenders should assume there’s been a breach, hunting for published indicators of compromise (IOCs), routinely investigating network and endpoint security logs, and segmenting networks to reduce blast radius. “Security tools aren’t automatically secure, so defend the defenders,” he said.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;And, Dickson pointed out, PHP2Shell will keep showing up because PHP sits underneath so much web software, including the portals bolted onto security appliances, so it should always be on defenders’ radar.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="the-management-plane-is-a-key-target"&gt;The management plane is a key target&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Check Point is not alone as a victim of threat actors. Firewall management has become a favorite target for attackers across the industry.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;In January, for instance, &lt;a href="https://www.csoonline.com/article/4123500/critical-forticloud-sso-zero%E2%80%91day-forces-emergency-service-disablement-at-fortinet.html" target="_blank"&gt;Fortinet disclosed&lt;/a&gt; that attackers abused its FortiCloud single sign-on to log into other customers’ FortiGate and FortiManager devices and create administrator accounts. In July and &lt;a href="https://www.csoonline.com/article/4225812/check-point-hacked-the-security-software-protecting-your-network-has-become-a-prime-attack-target.html" target="_blank"&gt;September&lt;/a&gt;, CISA added Check Point management server flaws to its catalog of exploited vulnerabilities.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;That same month, the agency also added a Cisco Secure Firewall Management Center flaw, rated a perfect 10.0 in severity, that hands an unauthenticated attacker root access. And, in October, Palo Alto Networks &lt;a href="https://www.csoonline.com/article/4235787/attackers-exploit-palo-alto-pan-os-flaw-for-root-access-as-cisa-orders-three-day-fix.html" target="_blank"&gt;warned of attacks&lt;/a&gt; on the PAN-OS management interface, again with “root on the firewall as the prize.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The logic is simple,” Dickson said: “The management plane holds the rulebook for the entire network.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Changing providers to one with fewer flaws is an option, but swapping vendors swaps one Achilles’ heel for another, he pointed out, as every vendor’s edge device has a web portal, and every web portal is a door. “The remedy is fewer doors,” he advised. “Shrink the internet-facing edge and put remote access behind one consistent identity policy.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Ultimately, he noted, a firewall is not a wall, it is a computer sitting on the internet. “Attackers are treating it like one,” he said. “Security teams should defend it like one.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4248693/the-firewall-becomes-the-foothold-attackers-turn-check-point-gateways-against-customers.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
-      <pubDate>Sat, 14 Nov 2026 01:39:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>Rubyonrails security advisory (AV26-1129)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/rubyonrails-security-advisory-av26-1129</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/rubyonrails-security-advisory-av26-1129</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.28</comments>
-      <pubDate>Thu, 05 Nov 2026 15:41:50 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 16 Nov 2026 18:03:58 +0000</lastBuildDate>
     <item>
       <title>Not a game: Europol and partners target terrorist role-playing online</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/not-game-europol-and-partners-target-terrorist-role-playing-online</link>
@@ -325,17 +17,18 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.30</comments>
-      <pubDate>Mon, 16 Nov 2026 05:44:40 +0000</pubDate>
+      <pubDate>Mon, 16 Nov 2026 16:03:58 +0000</pubDate>
     </item>
     <item>
-      <title>EU Most Wanted: 19 fugitives wanted for targeting the vulnerable</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-19-fugitives-wanted-for-targeting-vulnerable</link>
-      <description>Nineteen fugitives wanted for crimes against children and older people are the focus of a new EU Most Wanted appeal launched on 12 November. Featuring cases from 14 countries, the appeal includes individuals sought for child sexual exploitation and fraud targeting older people.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-19-fugitives-wanted-for-targeting-vulnerable</guid>
+      <title>Cursor Supply Chain Attack Started at Fireworks AI</title>
+      <link>https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/</link>
+      <description>&lt;p&gt;The attacker stole an access key from Fireworks and used it to exfiltrate credentials that enabled them to push malicious Claude Code extension copies.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href="https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/"&gt;Cursor Supply Chain Attack Started at Fireworks AI&lt;/a&gt; appeared first on &lt;a href="https://www.securityweek.com"&gt;SecurityWeek&lt;/a&gt;.&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Mon, 16 Nov 2026 05:44:40 +0000</pubDate>
+      <comments>Score: 7.31</comments>
+      <pubDate>Mon, 16 Nov 2026 15:45:43 +0000</pubDate>
     </item>
     <item>
       <title>Mozilla security advisory (AV26-1131)</title>
@@ -344,7 +37,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mozilla-security-advisory-av26-1131</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
+      <comments>Score: 7.31</comments>
       <pubDate>Fri, 06 Nov 2026 13:48:46 +0000</pubDate>
     </item>
     <item>
@@ -354,7 +47,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1132</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
+      <comments>Score: 7.33</comments>
       <pubDate>Fri, 06 Nov 2026 19:23:12 +0000</pubDate>
     </item>
     <item>
@@ -364,8 +57,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1133</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.38</comments>
+      <comments>Score: 7.34</comments>
       <pubDate>Fri, 06 Nov 2026 21:00:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>EU Most Wanted: 19 fugitives wanted for targeting the vulnerable</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-19-fugitives-wanted-for-targeting-vulnerable</link>
+      <description>Nineteen fugitives wanted for crimes against children and older people are the focus of a new EU Most Wanted appeal launched on 12 November. Featuring cases from 14 countries, the appeal includes individuals sought for child sexual exploitation and fraud targeting older people.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-19-fugitives-wanted-for-targeting-vulnerable</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.35</comments>
+      <pubDate>Mon, 16 Nov 2026 16:03:58 +0000</pubDate>
     </item>
     <item>
       <title>Law enforcement dismantle cocaine network from Ecuador to Europe</title>
@@ -375,7 +78,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.39</comments>
-      <pubDate>Mon, 16 Nov 2026 05:44:40 +0000</pubDate>
+      <pubDate>Mon, 16 Nov 2026 16:03:58 +0000</pubDate>
     </item>
     <item>
       <title>354 dark web vendors and buyers arrested in Europol-coordinated global crackdown</title>
@@ -385,7 +88,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.51</comments>
-      <pubDate>Mon, 16 Nov 2026 05:44:40 +0000</pubDate>
+      <pubDate>Mon, 16 Nov 2026 16:03:58 +0000</pubDate>
     </item>
     <item>
       <title>5th EMPACT Hackathon leads to the detection of 51 potential victims</title>
@@ -395,17 +98,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 16 Nov 2026 05:44:40 +0000</pubDate>
-    </item>
-    <item>
-      <title>Keeping pace with e-evidence: New report examines Europe’s digital forensic capabilities</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</link>
-      <description>Coordinated by the European Commission in cooperation with Europol, the analysis draws on stakeholder consultations, dedicated meetings, surveys and contributions from experts at Europol’s European Cybercrime Centre.The findings point to common challenges: investigative tools, resources and expertise are struggling to keep pace with the forms and volume of digital evidence created by modern technologiesDigitalisation shaping evidence landscapeDigital information is spread...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 16 Nov 2026 05:44:40 +0000</pubDate>
+      <pubDate>Mon, 16 Nov 2026 16:03:58 +0000</pubDate>
     </item>
     <item>
       <title>Five TEFAF robbery suspects added to EU Most Wanted</title>
@@ -415,7 +108,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 16 Nov 2026 05:44:40 +0000</pubDate>
+      <pubDate>Mon, 16 Nov 2026 16:03:58 +0000</pubDate>
     </item>
     <item>
       <title>Investment scams with potential victims in at least 50 countries: over 100 servers seized</title>
@@ -425,7 +118,17 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.52</comments>
-      <pubDate>Mon, 16 Nov 2026 05:44:40 +0000</pubDate>
+      <pubDate>Mon, 16 Nov 2026 16:03:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>Keeping pace with e-evidence: New report examines Europe’s digital forensic capabilities</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</link>
+      <description>Coordinated by the European Commission in cooperation with Europol, the analysis draws on stakeholder consultations, dedicated meetings, surveys and contributions from experts at Europol’s European Cybercrime Centre.The findings point to common challenges: investigative tools, resources and expertise are struggling to keep pace with the forms and volume of digital evidence created by modern technologiesDigitalisation shaping evidence landscapeDigital information is spread...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/keeping-pace-e-evidence-new-report-examines-europes-digital-forensic-capabilities</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 16 Nov 2026 16:03:58 +0000</pubDate>
     </item>
     <item>
       <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
@@ -435,7 +138,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.58</comments>
-      <pubDate>Mon, 16 Nov 2026 05:44:40 +0000</pubDate>
+      <pubDate>Mon, 16 Nov 2026 16:03:58 +0000</pubDate>
     </item>
     <item>
       <title>Dell security advisory (AV26-1134)</title>
@@ -444,7 +147,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-1134</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Mon, 09 Nov 2026 13:54:39 +0000</pubDate>
     </item>
     <item>
@@ -454,7 +157,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1136</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.67</comments>
       <pubDate>Mon, 09 Nov 2026 14:33:03 +0000</pubDate>
     </item>
     <item>
@@ -464,7 +167,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openbsd-security-advisory-av26-1130</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.78</comments>
+      <comments>Score: 7.70</comments>
       <pubDate>Mon, 09 Nov 2026 18:34:02 +0000</pubDate>
     </item>
     <item>
@@ -474,7 +177,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2026-monthly-rollup-av26-1137</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Tue, 10 Nov 2026 15:31:51 +0000</pubDate>
     </item>
     <item>
@@ -484,7 +187,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-hitachi-security-advisory-av26-1138</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Tue, 10 Nov 2026 15:43:22 +0000</pubDate>
     </item>
     <item>
@@ -494,7 +197,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-siemens-security-advisory-av26-1139</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.87</comments>
       <pubDate>Tue, 10 Nov 2026 16:03:18 +0000</pubDate>
     </item>
     <item>
@@ -504,7 +207,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1135</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Tue, 10 Nov 2026 16:40:32 +0000</pubDate>
     </item>
     <item>
@@ -514,7 +217,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1141</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.98</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Tue, 10 Nov 2026 16:56:09 +0000</pubDate>
     </item>
     <item>
@@ -524,7 +227,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/barracuda-networks-security-advisory-av26-1112</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Thu, 12 Nov 2026 14:22:59 +0000</pubDate>
     </item>
     <item>
@@ -534,7 +237,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-834</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Thu, 12 Nov 2026 14:25:44 +0000</pubDate>
     </item>
     <item>
@@ -544,7 +247,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1140</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Thu, 12 Nov 2026 14:29:08 +0000</pubDate>
     </item>
     <item>
@@ -554,7 +257,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-1143</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.42</comments>
       <pubDate>Thu, 12 Nov 2026 14:56:51 +0000</pubDate>
     </item>
     <item>
@@ -564,7 +267,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1144</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Thu, 12 Nov 2026 15:04:28 +0000</pubDate>
     </item>
     <item>
@@ -574,7 +277,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1145</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.59</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Thu, 12 Nov 2026 15:26:42 +0000</pubDate>
     </item>
     <item>
@@ -584,7 +287,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1146</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Thu, 12 Nov 2026 15:45:47 +0000</pubDate>
     </item>
     <item>
@@ -594,7 +297,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/watchguard-security-advisory-av26-1147</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Thu, 12 Nov 2026 15:52:53 +0000</pubDate>
     </item>
     <item>
@@ -604,7 +307,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/craft-cms-security-advisory-av26-1086</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.60</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Thu, 12 Nov 2026 15:54:21 +0000</pubDate>
     </item>
     <item>
@@ -614,7 +317,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/progress-software-security-advisory-av26-1148</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.62</comments>
+      <comments>Score: 8.46</comments>
       <pubDate>Thu, 12 Nov 2026 17:01:14 +0000</pubDate>
     </item>
     <item>
@@ -624,7 +327,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apple-security-advisory-av26-1149</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Thu, 12 Nov 2026 18:35:43 +0000</pubDate>
     </item>
     <item>
@@ -634,7 +337,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1150</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Thu, 12 Nov 2026 18:37:14 +0000</pubDate>
     </item>
     <item>
@@ -644,7 +347,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mongodb-security-advisory-av26-1151</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Thu, 12 Nov 2026 18:43:52 +0000</pubDate>
     </item>
     <item>
@@ -654,7 +357,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/react-security-advisory-av26-1152</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.48</comments>
       <pubDate>Thu, 12 Nov 2026 18:51:10 +0000</pubDate>
     </item>
     <item>
@@ -664,7 +367,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/docker-security-advisory-av26-1153</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.49</comments>
       <pubDate>Thu, 12 Nov 2026 18:58:56 +0000</pubDate>
     </item>
     <item>
@@ -674,7 +377,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/amd-security-advisory-av26-1155</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Thu, 12 Nov 2026 20:24:57 +0000</pubDate>
     </item>
     <item>
@@ -684,7 +387,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nodejs-security-advisory-av26-1156</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Thu, 12 Nov 2026 20:35:04 +0000</pubDate>
     </item>
     <item>
@@ -694,7 +397,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1157</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Thu, 12 Nov 2026 20:39:53 +0000</pubDate>
     </item>
     <item>
@@ -704,8 +407,290 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2026-monthly-rollup-av26-1142</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.68</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Thu, 12 Nov 2026 20:42:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>The benign true positive: When trusted AI agents look like attackers</title>
+      <link>https://www.csoonline.com/article/4248451/the-benign-true-positive-when-trusted-ai-agents-look-like-attackers.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;A coding agent opens hundreds of files, launches command-line tools and connects to an internal service to complete a task. A support agent authenticates to several systems, retrieves customer records and updates another application. A workflow agent enumerates cloud resources in seconds, then moves to the next stage of its assignment.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;To an endpoint, identity, or cloud security platform, these sequences can resemble reconnaissance, credential access, lateral movement, or the early stages of exfiltration. The control is accurately identifying behavior associated with an attack, and the agent is carrying out an approved business task.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;I am beginning to see this pattern as enterprises deploy AI agents across software development, customer support, finance, IT and security. I call it the benign true positive: an accurate detection of attack-like behavior generated by legitimate machine activity.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;For CISOs, this exposes a foundational assumption beneath &lt;a href="https://www.csoonline.com/article/4168991/ai-security-is-repeating-endpoint-securitys-biggest-mistake.html?utm=hybrid_search"&gt;behavioral security&lt;/a&gt;. For decades, attack-like behavior justified immediate suspicion because legitimate systems rarely operated with the speed, breadth and autonomy now common among AI agents. That assumption is weakening, and security leaders need to prepare their teams, processes and technology portfolios for the consequences.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="behavioral-baselines-were-built-around-people"&gt;Behavioral baselines were built around people&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Modern detection systems rely heavily on patterns associated with expected human activity. People read files at a human pace, move between applications in recognizable sequences, and generally interact with systems one action at a time. An account that suddenly enumerates thousands of resources or launches a chain of processes across several environments deserves investigation.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;AI agents follow a different operating pattern. They gather context broadly, perform tasks in parallel and move across systems according to the needs of an assigned objective. A coding agent may inspect an entire repository before changing a few lines. A support agent may authenticate to several applications because resolving a customer request requires data from each one.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The resulting telemetry frequently matches the signals security tools were designed to detect. Existing controls will keep generating alerts, and those alerts will often be technically correct. Security teams must determine whether the behavior reflects an authorized task, a compromised agent, manipulated instructions, stolen credentials, or an attacker imitating normal agent activity.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;A broad suppression rule may reduce noise but also create a blind spot. Attackers will naturally look for trusted agent identities, approved workflows and familiar machine-speed patterns that help them blend into the environment.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="intent-becomes-the-missing-layer"&gt;Intent becomes the missing layer&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Security tools observe actions such as process launches, file reads, authentication events, API calls, or network connections. Intent sits in the surrounding context.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Investigators need to know who owns the agent, what task it was assigned, who initiated the task, which systems it was authorized to use, what data it could access and whether its actions stayed within approved boundaries. They also need to determine whether another user, process, or external input altered the agent’s instructions.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Those answers may be distributed across identity systems, agent orchestration platforms, cloud infrastructure, business applications, ticketing systems and the security stack. Reconstructing the event requires correlation across these sources and a clear account of what the agent was trying to accomplish.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;A large enterprise may soon operate thousands of agents across business and technical functions. Human analysts cannot manually reconstruct every event at that scale. Security operations will need investigative capacity that can recover intent at machine speed and present conclusions grounded in observable evidence.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="3-investment-priorities-for-cisos"&gt;3 investment priorities for CISOs&lt;/h2&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="1-agent-identity-and-governance"&gt;1. Agent identity and governance&lt;/h3&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The first priority is &lt;a href="https://www.csoonline.com/article/4184634/sovereign-cloud-wont-fix-your-ai-risk-identity-governance-will.html"&gt;agent identity and governance&lt;/a&gt;. Every agent should have a clear owner, a defined purpose, credentials scoped to its responsibilities and documented access to applications, tools and data. The SOC should be able to connect each action to the workflow, user request, or business process that initiated it.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;This requires an inventory of active agents, lifecycle controls, access reviews, approval requirements for sensitive actions and audit trails that connect behavior to an accountable owner. Shared service accounts and broad permissions slow investigations and make containment harder. Purpose-specific identities and task provenance give the SOC the context needed to identify misuse.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="2-investigation-architecture"&gt;2. Investigation architecture&lt;/h3&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The second priority is investigation architecture. Security leaders should evaluate whether their current stack can assemble evidence across endpoint, identity, cloud, network, SaaS and agent platforms. A useful system should reconstruct the sequence of events, apply organizational context, document missing information and explain how it reached a conclusion.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;AI investments in the SOC should support evidence gathering, cross-system correlation, adaptive reasoning and clear escalation whenever the available data cannot support a confident determination.&lt;/p&gt;
+
+
+
+&lt;h3 class="wp-block-heading" id="3-team-design"&gt;3. Team design&lt;/h3&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The third priority is team design. Analysts will increasingly govern systems that investigate both human and machine behavior. Their expertise will shape operating boundaries, exception handling, detection logic and the context used during investigations.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Security leaders should invest in detection engineering, threat hunting, identity governance and agent oversight skills. Analysts need time and authority to examine recurring behavioral collisions, refine access policies, improve workflows and challenge automated conclusions.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Each benign true positive can become a source of operational learning about how agents are being used and where controls need to mature.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="a-new-operating-model-for-the-soc"&gt;A new operating model for the SOC&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The traditional SOC sends alerts to analysts, who gather evidence and decide what happened. AI agents will add another source of high-volume activity, and many resulting alerts will be accurate detections of legitimate behavior.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The SOC needs an &lt;a href="https://www.csoonline.com/article/4186877/breaking-the-soc-triangle-how-ai-reshapes-security-operations-trade-offs.html"&gt;operating model&lt;/a&gt; built around rapid interpretation. For an authorized event, the investigation should show that a specific agent accessed particular systems under an approved identity, pursued a valid task, remained within its permissions and produced no evidence of deviation. For a risky event, it should show where the activity exceeded the agent’s expected scope and why human review or containment is required.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;This level of clarity preserves sensitive detections, keeps analysts focused on cases that demand judgment, and creates a practical path for building trust in increasingly autonomous systems through visible evidence, explicit accountability and measurable outcomes.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="preparing-for-the-next-source-of-alert-volume"&gt;Preparing for the next source of alert volume&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;CISOs should begin by mapping where agents already operate across the organization.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Many will discover activity introduced through developer tools, SaaS platforms, departmental automation and enterprise applications with embedded agent capabilities.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The next step is to connect agent ownership, identity, permissions, task provenance and policy to security operations. Teams should test how existing controls respond to representative agent workflows and track benign true positives as a distinct operational category.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;AI agents are changing the meaning of normal behavior. Security leaders who prepare now can preserve visibility, strengthen governance and build a SOC capable of understanding the purpose behind machine-speed activity.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Trusted machines will increasingly look like attackers. The organizations that can recover intent quickly will be best positioned to tell the difference.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4248451/the-benign-true-positive-when-trusted-ai-agents-look-like-attackers.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.64</comments>
+      <pubDate>Mon, 16 Nov 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Alibaba touts 62% lower task costs with Qwen4-Max, adds cyber safeguards</title>
+      <link>https://www.csoonline.com/article/4249015/alibaba-touts-62-lower-task-costs-with-qwen4-max-adds-cyber-safeguards-2.html</link>
+      <description>&lt;div id="remove_no_follow"&gt;
+		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
+					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
+						&lt;div class="article-column__content"&gt;
+&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Alibaba has released Qwen4-Max, a 2.4-trillion-parameter flagship model, claiming it reduces the average cost of completing professional tasks by 62% compared with its predecessor while introducing additional safeguards against offensive cybersecurity capabilities and other high-risk uses.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“According to Work360 — a proprietary benchmark evaluating performance on challenging industry tasks across 721 specialized fields — Qwen4-Max outperforms its predecessor, Qwen3.8-Max, overall while using 35% fewer tokens at High effort reasoning mode and reducing the average cost per task by around 60%,” Alibaba &lt;a href="https://www.alibabacloud.com/blog/alibaba-unveils-qwen4-max-new-ai-teammate-for-work-creativity-and-discovery_603783" rel="noreferrer noopener" target="_blank"&gt;said&lt;/a&gt; in a blog post.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The Qwen team’s &lt;a href="https://qwen.ai/blog?id=qwen4-max" rel="noreferrer noopener" target="_blank"&gt;announcement&lt;/a&gt; puts the average task cost at $1.67 for Qwen4-Max, compared with $4.43 for Qwen3.8-Max, representing a 62% reduction.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The model keeps the 2.4-trillion-parameter mixture-of-experts backbone of its predecessor, Qwen3.8-Max, but activates about 71 billion parameters per token instead of about 95 billion, the company said. It supports a 1-million-token context window.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The company attributed the savings to lower token use and new list prices of $1.50 per million input tokens and $4.50 per million output tokens, down from $2 and $6. Anthropic lists Claude Opus 5.5 at $20 per million output tokens.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Sanchit Vir Gogia, chief analyst at Greyhound Research, said enterprises should treat the figure as a vendor benchmark rather than an assured reduction in their own AI spending. The relevant measure, he said, is the cost of an accepted result, including retries, reasoning tokens, and employee time spent checking outputs.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Alibaba has published the mileage it got on its own road, and a buyer’s bill depends on the road the buyer drives,” Gogia said.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Yash Kadakia, founder and CTO of Security Brigade, said enterprises should measure successful task completion rather than token prices alone.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“An enterprise should benchmark what it costs to complete 1,000 real business tasks successfully, not what it costs to generate a million tokens,” Kadakia said.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Alibaba also cited improvements across coding and agentic evaluations, including Code Arena and Agents’ Last Exam. In an automotive manufacturing demonstration, the company said Qwen4-Max reduced manual workpiece programming time from approximately 475 minutes to 24 minutes.&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="security-claims-need-independent-testing"&gt;Security claims need independent testing&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Alongside the cost figures, Alibaba set out changes to what the model learns about hacking at the training-data stage.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“For cybersecurity, we filter data according to the specific purpose of each task, retaining data for defensive tasks such as vulnerability verification, detection, and remediation, while removing data for offensive tasks aimed at enhancing attack capabilities,” the Alibaba blog post said.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The company said code security checks added during training lifted the share of functions passing both functionality and security tests on Last Secure Code Bench from 22% to 31.8%. Its internal security experts found the model’s defensive capabilities had “improved substantially,” the post added.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Kadakia questioned whether offensive and defensive cybersecurity knowledge can be reliably separated through training-data filtering.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“One of the fundamental challenges with cybersecurity AI is that offensive and defensive knowledge are largely the same knowledge,” he said, noting that understanding SQL injection is necessary both to exploit and prevent it.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Gogia said the distinction requires independent validation, recommending that CISOs seek assessments from government evaluators or established external red teams rather than rely solely on Alibaba’s internal testing.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The announcement follows an October investigation by Canadian AI company Cohere, which &lt;a href="https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"&gt;reported&lt;/a&gt; that an earlier Alibaba model, Qwen3.8-Flash-Next, attempted to send a test file to an Alibaba Cloud storage destination in Beijing during a security test. Cohere said its sandbox blocked the request.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;A subsequent &lt;a href="https://research.checkpoint.com/2026/coheres-qwen-story-looks-more-like-model-jaggedness/"&gt;investigation by Check Point&lt;/a&gt; replayed the behaviour 64 times and found 52 different destination hosts. It suggested unpredictable model behaviour was a more likely explanation than a deliberately configured backdoor.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;The incident involved an experimental model, not Qwen4-Max.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Besides, Government evaluators have begun testing Chinese models independently. In July, the US Center for AI Standards and Innovation &lt;a href="https://www.nist.gov/news-events/news/2026/07/caisi-assessment-zais-glm-52"&gt;found&lt;/a&gt; that the safeguards on Z.ai’s GLM-5.2 allowed assistance with agentic cyber exploit development. Gogia said CISOs should treat Alibaba’s filter “as a promise until a government evaluator or an established outside red team has tested it.”&lt;/p&gt;
+
+
+
+&lt;h2 class="wp-block-heading" id="data-governance-and-open-weight-risks"&gt;Data governance and open-weight risks&lt;/h2&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;For enterprises outside China, Gogia said the geographic scope of Alibaba’s global service, prompt-retention policies, and jurisdiction governing stored data should be considered before deploying the model for sensitive workloads. He pointed to prompt retention of up to 30 days and longer retention of flagged content, including under zero-retention arrangements.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Kadakia said enterprises should examine where prompts, retrieved documents, tool outputs, and logs are processed, who can access them, and what permissions agents have across internal systems.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“The biggest risk with enterprise AI is no longer simply what information employees type into a chatbot. It is what an autonomous agent can access, what decisions it can make, and what actions it can execute across connected enterprise systems,” he said.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;Alibaba also plans to release smaller Qwen4 models with open weights. Kadakia said developers modifying those models through fine-tuning should not assume the original security safeguards will remain intact.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;“Safety training is not a permanent property of a model,” he said, recommending fresh adversarial testing and controls over tool access for customised versions. Gogia similarly recommended reassessing each modified model rather than automatically inheriting the original model’s security assurances.&lt;/p&gt;
+
+
+
+&lt;p class="wp-block-paragraph"&gt;&lt;em&gt;The article originally appeared on &lt;a href="https://www.infoworld.com/article/4248996/alibaba-touts-62-lower-task-costs-with-qwen4-max-adds-cyber-safeguards.html"&gt;InfoWorld&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      <guid isPermaLink="false">https://www.csoonline.com/article/4249015/alibaba-touts-62-lower-task-costs-with-qwen4-max-adds-cyber-safeguards-2.html</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.77</comments>
+      <pubDate>Mon, 16 Nov 2026 12:21:02 +0000</pubDate>
     </item>
     <item>
       <title>[Control systems] Johnson Controls security advisory (AV26-1158)</title>
@@ -714,7 +699,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1158</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Fri, 13 Nov 2026 13:56:59 +0000</pubDate>
     </item>
     <item>
@@ -724,7 +709,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1159</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.02</comments>
+      <comments>Score: 8.81</comments>
       <pubDate>Fri, 13 Nov 2026 14:10:44 +0000</pubDate>
     </item>
     <item>
@@ -734,7 +719,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1160</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 8.82</comments>
       <pubDate>Fri, 13 Nov 2026 14:28:49 +0000</pubDate>
     </item>
     <item>
@@ -744,8 +729,48 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-1154</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 8.91</comments>
       <pubDate>Fri, 13 Nov 2026 18:59:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dell security advisory (AV26-1161)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-1161</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-1161</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.84</comments>
+      <pubDate>Mon, 16 Nov 2026 14:12:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV26-1162)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1162</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1162</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.86</comments>
+      <pubDate>Mon, 16 Nov 2026 14:41:37 +0000</pubDate>
+    </item>
+    <item>
+      <title>Red Hat security advisory (AV26-1163)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1163</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1163</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.87</comments>
+      <pubDate>Mon, 16 Nov 2026 14:57:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Qualcomm security advisory (AV26-1164)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-av26-1164</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-av26-1164</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.90</comments>
+      <pubDate>Mon, 16 Nov 2026 15:31:52 +0000</pubDate>
     </item>
   </channel>
 </rss>
