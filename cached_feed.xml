@@ -8,212 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Python Security Feed Aggregator</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 08:41:06 +0000</lastBuildDate>
-    <item>
-      <title>Nodejs security advisory (AV26-1156)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/nodejs-security-advisory-av26-1156</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/nodejs-security-advisory-av26-1156</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
-      <pubDate>Thu, 12 Nov 2026 20:35:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google security advisory (AV26-1157)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1157</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1157</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
-      <pubDate>Thu, 12 Nov 2026 20:39:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft security advisory – November 2026 monthly rollup (AV26-1142) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2026-monthly-rollup-av26-1142</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-november-2026-monthly-rollup-av26-1142</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.29</comments>
-      <pubDate>Thu, 12 Nov 2026 20:42:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>Not a game: Europol and partners target terrorist role-playing online</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/not-game-europol-and-partners-target-terrorist-role-playing-online</link>
-      <description>Europol’s European Union Internet Referral Unit (EU IRU) coordinated together with Spain a Referral Action Day targeting violent extremist and terrorist live action role-playing (LARPing) in online gaming environments. Specialised units from 16 countries participated in the action.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/not-game-europol-and-partners-target-terrorist-role-playing-online</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
-      <pubDate>Mon, 23 Nov 2026 06:41:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>A new critical Java hole illustrates the enterprise IT visibility problem</title>
-      <link>https://www.csoonline.com/article/4250390/a-new-critical-java-hole-illustrates-the-enterprise-it-visibility-problem.html</link>
-      <description>&lt;div id="remove_no_follow"&gt;
-		&lt;div class="grid grid--cols-10@md grid--cols-8@lg article-column "&gt;
-					  &lt;div class="col-12 col-10@md col-6@lg col-start-3@lg"&gt;
-						&lt;div class="article-column__content"&gt;
-&lt;section class="wp-block-bigbite-multi-title"&gt;&lt;div class="container"&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;When cybersecurity research firm Calif published details Tuesday of a potentially major Java security flaw, dubbed Java4Shell, it described an unauthenticated attacker’s ability to read Java heap memory, steal private keys, tokens, and session secrets, and reach remote code execution (RCE).&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;With Java being all-but-ubiquitous in today’s enterprise, coupled with the inability of CISOs to have visibility into every instance of it in their estate, this means that the bug could be a big problem for IT.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Java, which has had its fair share of &lt;a href="https://www.csoonline.com/article/4233240/lightwell-project-filters-out-400-java-library-vulnerabilities-2.html" target="_blank"&gt;cybersecurity issues&lt;/a&gt; lately, is well-known for safely handling memory. That is why a Java bug affecting memory management is so dangerous. Java4Shell, tracked as &lt;a href="https://nvd.nist.gov/vuln/detail/cve-2026-114938" rel="noreferrer noopener" target="_blank"&gt;CVE-2026-114938&lt;/a&gt;, is a vulnerability in the OpenJDK x86-64 Base64 decoder that scores 9.2 in severity (Critical) under CVSS 4.0, Calif said. Oracle assigned it a lower rating of 8.1 (High) using CVSS 3.1.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Calif explained in &lt;a href="https://calif.io/java4shell/" rel="noreferrer noopener" target="_blank"&gt;its post describing the issue&lt;/a&gt; that Base64 is a common way of representing binary data as text. “It is used in authentication protocols, to encode file uploads, and to deliver network messages,” it wrote. “To decode Base64 faster, OpenJDK uses specialized x86-64 CPU instructions to process many bytes at once. We discovered a bug in optimized machine-level code that lets malformed input overwrite neighboring memory. With careful exploitation, the corruption can reveal sensitive memory, as &lt;a href="https://www.csoonline.com/article/544892/vulnerabilities-heartbleed-cve-2014-0160-an-overview-of-the-problem-and-the-resources-needed-to.html" target="_blank"&gt;Heartbleed&lt;/a&gt; did, or lead to remote code execution.” &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;It said that the corruption can be triggered by a string of just 64 “A” characters followed by a single equals sign (=); in older OpenJDK 17 versions, 128 “A” characters are required before the equals sign.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Memory corruption is the most common class of vulnerability on the internet,” Calif said. “But one of Java’s biggest selling points is memory safety. Java manages memory on developers’ behalf and checks memory accesses, protecting applications from the memory-corruption bugs common in other software. But like PHP and many other technologies, much of Java itself is written in low-level languages like C, C++, and, in this case, assembly, where memory corruption is still a part of life.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Assessing the bug’s potential for exploit is complicated because triggering it requires a hardware accelerated decoding function that’s used on some x86-64 processors supporting AVX-512 VBMI instructions. And fixing it requires patches from a lengthy list of vendors; just installing Tuesday’s patch from Oracle, which owns Java, is not going to do the trick.&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="potential-damage-extreme"&gt;Potential damage ‘extreme’&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/noah-m-kenney-27499a166/" rel="noreferrer noopener" target="_blank"&gt;Noah Kenney&lt;/a&gt;, principal consultant at Digital 520, said the potential damage from an unpatched instance of exposed Java is extreme.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The researchers were able to read Java heap memory before they achieved code execution, so an attacker may be able to steal tokens, credentials, or keys from those systems. That access can remain useful even after the vulnerable server has been patched,” Kenney said. “Any unexplained crashes on an exposed system should lead to a review of what secrets were in memory and whether they need to be rotated.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;But not every instance is vulnerable to this flaw. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“The same Java application and version can be vulnerable on a newer x86 server and unaffected on older hardware because the faulty decoder only runs when AVX-512 is available,” he noted. “That makes a normal software inventory less useful than it usually is. CISOs need to know the Java distribution and version, the processor underneath it, and whether untrusted Base64 reaches the decoder. Installing a newer processor can expose an application that was safe on the server it replaced, without changing the application at all.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;A further complication is that enterprises will also be running Java from a massive array of specialized vendors.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Oracle released a fix for its Java builds, but enterprises also run Java from Amazon, Eclipse, Microsoft, Red Hat, and Azul, along with runtimes buried inside commercial products and containers,” Kenney pointed out. “CISOs should start with identity systems and software-delivery infrastructure, identify the runtime each one is actually using, apply the appropriate vendor fix, and restart or rebuild the workload.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;He also said that outbound connections need to be evaluated. “Researchers demonstrated that a Java program could be compromised by connecting to a malicious TLS server, even when it had no service exposed to the internet.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.linkedin.com/in/akm76/" rel="noreferrer noopener" target="_blank"&gt;Aman Mahapatra&lt;/a&gt;, chief strategy officer for New York City-based technology consulting firm Tribeca Softech, agreed, pointing out, “the client-side exploit puts any Java process that connects to a malicious TLS server at risk: integrations, connectors, crawlers and batch jobs. Patch scopes built around internet-facing listeners will miss them.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="lack-of-visibility-a-big-problem"&gt;Lack of visibility a big problem&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Mahapatra also stressed that many Java implementations can be hard to locate. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Your SBOM [software bill of materials] can’t see the real exposure. Whether a service is vulnerable depends on the silicon underneath as much as the JDK version,” he said. “The same container image is exploitable on an Ice Lake or Zen 4 node and safe on ARM or older hardware, and autoscaling can move it between the two. For once, the organizations that refreshed their hardware are the exposed ones.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;But it is the lack of visibility that concerns practitioners the most. &lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;The Java hole “exposes a blind spot in how enterprises identify, prioritize and validate vulnerabilities,” said &lt;a href="https://www.linkedin.com/in/annaladasur" rel="noreferrer noopener" target="_blank"&gt;Raj Annaladasu&lt;/a&gt;, staff customer success engineer at Palo Alto Networks. “Enterprise teams invest heavily in application code review, dependency scanning, and secure coding practices. Java4Shell is a reminder that vulnerabilities can originate below the application layer, inside the managed runtime itself.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“This is an important distinction: Java’s memory-safety abstractions do not protect an application from memory corruption originating inside a vulnerable native runtime implementation,” he said. “Applications may be using a standard Java API correctly while the underlying runtime implementation is vulnerable. This shifts the security boundary beyond application code and third-party dependencies to include the runtime, its implementation, and the hardware capabilities that influence execution.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;This means, he said, that exploitability depends on multiple conditions coming together: an affected Java runtime, the relevant CPU instruction capabilities, the vulnerable execution path being enabled, and attacker-controlled input reaching the decoder.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;But, he pointed out, “one of the bigger challenges is discovering where Java is actually running. Runtime installations are often bundled inside third-party products, container images, appliances, custom runtime distributions, and application-specific directories. They may not appear as distinct entries in conventional software inventories. A clean application dependency scan or CMDB does not establish that the environment is free of vulnerable Java runtimes.”&lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="java-hides-everywhere"&gt;Java hides everywhere&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;Given that there are going to be so many Java vendors, and so many hidden apps, at issue, the risk of a CISO missing a few is massive, noted &lt;a href="https://www.linkedin.com/in/frankdickson/" rel="noreferrer noopener" target="_blank"&gt;Frank Dickson&lt;/a&gt;, principal analyst at Dickson Research.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Java4Shell is a big deal because a single missed server with Java is all an attacker needs, allowing someone who never logs in to read its memory, including personal data, private keys, and tokens,” he said. “From there, the attacker can run code on the server. If that server is an identity system like Keycloak or PingFederate, the attacker now owns you.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;And, he said, it’s highly unlikely that enterprise CISOs will catch all or most Java instances.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Will a CISO miss one? The odds say yes. Java hides everywhere. Each Java instance needs its own fix,” Dickson said. &lt;/p&gt;
-
-
-
-&lt;h2 class="wp-block-heading" id="its-popularity-is-javas-greatest-weakness"&gt;Its popularity is Java’s greatest weakness&lt;/h2&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;&lt;a href="https://www.controlrisks.com/who-we-are/our-experts/expert-bio/brian-levine" rel="noreferrer noopener" target="_blank"&gt;Brian Levine&lt;/a&gt;, a partner with consulting firm Control Risks, said Java’s popularity is its biggest weakness.&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;“Java runs the back office of corporate America: logins, code pipelines, ticketing, internal wikis,” he said. “Java4Shell lets an attacker who hasn’t even logged in take over some of the most sensitive of those systems by sending a short string of text. If your company runs Java on modern servers, and almost every large company does, you’re exposed until you patch.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;He enumerated some examples: “Keycloak and PingFederate control who gets into your company. Jenkins and Artifactory build and store the software you ship. Jira and Confluence hold your roadmaps, incident notes and plenty of passwords people shouldn’t have pasted there,” he said. “Take over those and you aren’t breaking into one room. You’ve stolen the master key, the blueprints and the security guard’s notebook in one move.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;He added, “Java programs that simply connect out to the wrong server can be compromised too. That last one means firewalls and perimeter controls don’t fully protect you.”&lt;/p&gt;
-
-
-
-&lt;p class="wp-block-paragraph"&gt;However, he pointed out, “there’s one small mercy: the bug only fires on certain newer Intel and AMD chips. The catch is that those chips fill modern data centers and cloud fleets.”&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-      <guid isPermaLink="false">https://www.csoonline.com/article/4250390/a-new-critical-java-hole-illustrates-the-enterprise-it-visibility-problem.html</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.30</comments>
-      <pubDate>Wed, 18 Nov 2026 20:39:16 +0000</pubDate>
-    </item>
-    <item>
-      <title>[Control systems] Johnson Controls security advisory (AV26-1158)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1158</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1158</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Fri, 13 Nov 2026 13:56:59 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 23 Nov 2026 20:57:35 +0000</lastBuildDate>
     <item>
       <title>EU Most Wanted: 19 fugitives wanted for targeting the vulnerable</title>
       <link>https://www.europol.europa.eu/media-press/newsroom/news/eu-most-wanted-19-fugitives-wanted-for-targeting-vulnerable</link>
@@ -222,37 +17,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.35</comments>
-      <pubDate>Mon, 23 Nov 2026 06:41:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>Apache security advisory (AV26-1159)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1159</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1159</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Fri, 13 Nov 2026 14:10:44 +0000</pubDate>
-    </item>
-    <item>
-      <title>n8n security advisory (AV26-1160)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1160</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1160</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.35</comments>
-      <pubDate>Fri, 13 Nov 2026 14:28:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Check Point security advisory (AV26-1154) – Update 1</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-1154</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-1154</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.37</comments>
-      <pubDate>Fri, 13 Nov 2026 18:59:00 +0000</pubDate>
+      <pubDate>Mon, 23 Nov 2026 18:57:35 +0000</pubDate>
     </item>
     <item>
       <title>Law enforcement dismantle cocaine network from Ecuador to Europe</title>
@@ -262,57 +27,7 @@
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
       <comments>Score: 7.39</comments>
-      <pubDate>Mon, 23 Nov 2026 06:41:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>354 dark web vendors and buyers arrested in Europol-coordinated global crackdown</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/354-dark-web-vendors-and-buyers-arrested-in-europol-coordinated-global-crackdown</link>
-      <description>Europol, in collaboration with law enforcement agencies from 14 countries across the globe, have successfully identified vendors and buyers from major dark marketplaces as part of Operation TorNado, a coordinated international effort targeting cybercrime, drug trafficking, and firearms offences. The operation, which spanned from May 2025 to October 2026, resulted in 354 arrests and hundreds of house searches worldwide.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/354-dark-web-vendors-and-buyers-arrested-in-europol-coordinated-global-crackdown</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.51</comments>
-      <pubDate>Mon, 23 Nov 2026 06:41:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>5th EMPACT Hackathon leads to the detection of 51 potential victims</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</link>
-      <description>An international operation involving 40 experts and investigators from 20 countries has identified 51 potential victims of human trafficking, as well as five suspects. Held in Amsterdam from 23 to 25 September 2026, the fifth EMPACT Hackathon against the digital aspects of human trafficking brought together police officers, labour authorities and specialists in online investigations, supported by Europol and Eurojust.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Nov 2026 06:41:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>Five TEFAF robbery suspects added to EU Most Wanted</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</link>
-      <description>As of 29 October 2026, five new fugitives, four men and one woman, have been added to the EU Most Wanted list. According to the Limburg Public Prosecutor's Office (Openbaar Ministerie) and the Dutch Police (Politie), all five suspects are involved in the European Fine Art Fair (TEFAF) robbery that took place on 28 June 2022 in Maastricht, the Netherlands.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Nov 2026 06:41:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>Investment scams with potential victims in at least 50 countries: over 100 servers seized</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</link>
-      <description>Led by the German Itzehoe Public Prosecutor's Office (Staatsanwaltschaft Itzehoe), the operation targeted a company suspected of supplying fraudulent trading websites to criminal groups. The entity is connected to call centre operators who allegedly persuaded victims to hand over their savings. Investigators estimate losses exceeding EUR 4 million.Authorities searched 17 locations and seized servers, other evidence and assets. Seven suspects...</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.52</comments>
-      <pubDate>Mon, 23 Nov 2026 06:41:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
-      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
-      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
-      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 7.58</comments>
-      <pubDate>Mon, 23 Nov 2026 06:41:06 +0000</pubDate>
+      <pubDate>Mon, 23 Nov 2026 18:57:35 +0000</pubDate>
     </item>
     <item>
       <title>Critical flaw in VMware vCenter allows authentication bypass</title>
@@ -358,8 +73,58 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4251012/critical-flaw-in-vmware-vcenter-allows-authentication-bypass-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.68</comments>
+      <comments>Score: 7.47</comments>
       <pubDate>Thu, 19 Nov 2026 21:07:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>354 dark web vendors and buyers arrested in Europol-coordinated global crackdown</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/354-dark-web-vendors-and-buyers-arrested-in-europol-coordinated-global-crackdown</link>
+      <description>Europol, in collaboration with law enforcement agencies from 14 countries across the globe, have successfully identified vendors and buyers from major dark marketplaces as part of Operation TorNado, a coordinated international effort targeting cybercrime, drug trafficking, and firearms offences. The operation, which spanned from May 2025 to October 2026, resulted in 354 arrests and hundreds of house searches worldwide.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/354-dark-web-vendors-and-buyers-arrested-in-europol-coordinated-global-crackdown</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.51</comments>
+      <pubDate>Mon, 23 Nov 2026 18:57:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Five TEFAF robbery suspects added to EU Most Wanted</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</link>
+      <description>As of 29 October 2026, five new fugitives, four men and one woman, have been added to the EU Most Wanted list. According to the Limburg Public Prosecutor's Office (Openbaar Ministerie) and the Dutch Police (Politie), all five suspects are involved in the European Fine Art Fair (TEFAF) robbery that took place on 28 June 2022 in Maastricht, the Netherlands.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/five-tefaf-robbery-suspects-added-to-eu-most-wanted</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 23 Nov 2026 18:57:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>Investment scams with potential victims in at least 50 countries: over 100 servers seized</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</link>
+      <description>Led by the German Itzehoe Public Prosecutor's Office (Staatsanwaltschaft Itzehoe), the operation targeted a company suspected of supplying fraudulent trading websites to criminal groups. The entity is connected to call centre operators who allegedly persuaded victims to hand over their savings. Investigators estimate losses exceeding EUR 4 million.Authorities searched 17 locations and seized servers, other evidence and assets. Seven suspects...</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/investment-scams-potential-victims-in-least-50-countries-over-100-servers-seized</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 23 Nov 2026 18:57:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>5th EMPACT Hackathon leads to the detection of 51 potential victims</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</link>
+      <description>An international operation involving 40 experts and investigators from 20 countries has identified 51 potential victims of human trafficking, as well as five suspects. Held in Amsterdam from 23 to 25 September 2026, the fifth EMPACT Hackathon against the digital aspects of human trafficking brought together police officers, labour authorities and specialists in online investigations, supported by Europol and Eurojust.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/5th-empact-hackathon-leads-to-detection-of-51-potential-victims</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.52</comments>
+      <pubDate>Mon, 23 Nov 2026 18:57:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>27 arrests and 248 potential victims identified in action week against labour exploitation</title>
+      <link>https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</link>
+      <description>Europol, the European Labour Authority (ELA), and 34 participating countries today announced the results of an action week targeting human trafficking for labour exploitation. The operation, part of an EMPACT action led by Sweden, brought together police, border guards, labour and social security inspectorates, and tax authorities to crack down on exploitative practices in high-risk sectors such as agriculture, construction, cosmetic services, massage parlours, and hospitality.</description>
+      <guid isPermaLink="false">https://www.europol.europa.eu/media-press/newsroom/news/27-arrests-and-248-potential-victims-identified-in-action-week-against-labour-exploitation</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 7.58</comments>
+      <pubDate>Mon, 23 Nov 2026 18:57:35 +0000</pubDate>
     </item>
     <item>
       <title>Dell security advisory (AV26-1161)</title>
@@ -368,7 +133,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/dell-security-advisory-av26-1161</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Mon, 16 Nov 2026 14:12:42 +0000</pubDate>
     </item>
     <item>
@@ -378,7 +143,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1162</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Mon, 16 Nov 2026 14:41:37 +0000</pubDate>
     </item>
     <item>
@@ -388,7 +153,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1163</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.74</comments>
+      <comments>Score: 7.65</comments>
       <pubDate>Mon, 16 Nov 2026 14:57:54 +0000</pubDate>
     </item>
     <item>
@@ -398,7 +163,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/qualcomm-security-advisory-av26-1164</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.75</comments>
+      <comments>Score: 7.66</comments>
       <pubDate>Mon, 16 Nov 2026 15:31:52 +0000</pubDate>
     </item>
     <item>
@@ -408,7 +173,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-1165</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.95</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Tue, 17 Nov 2026 15:02:31 +0000</pubDate>
     </item>
     <item>
@@ -418,7 +183,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1166</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.96</comments>
+      <comments>Score: 7.84</comments>
       <pubDate>Tue, 17 Nov 2026 15:22:04 +0000</pubDate>
     </item>
     <item>
@@ -428,7 +193,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-1167</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Tue, 17 Nov 2026 16:20:00 +0000</pubDate>
     </item>
     <item>
@@ -438,7 +203,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1168</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 7.97</comments>
+      <comments>Score: 7.85</comments>
       <pubDate>Tue, 17 Nov 2026 16:42:08 +0000</pubDate>
     </item>
     <item>
@@ -448,38 +213,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-codesys-security-advisory-av26-1169</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.00</comments>
+      <comments>Score: 7.88</comments>
       <pubDate>Tue, 17 Nov 2026 19:17:56 +0000</pubDate>
-    </item>
-    <item>
-      <title>Oracle Corporation security advisory (AV26-1170)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-1170</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-1170</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.20</comments>
-      <pubDate>Wed, 18 Nov 2026 12:51:56 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google security advisory (AV26-1171)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1171</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1171</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
-      <pubDate>Wed, 18 Nov 2026 13:31:24 +0000</pubDate>
-    </item>
-    <item>
-      <title>GitHub security advisory (AV26-1172)</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-1172</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-1172</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 8.21</comments>
-      <pubDate>Wed, 18 Nov 2026 13:40:25 +0000</pubDate>
     </item>
     <item>
       <title>F5 scrambles to fix more critical BIG-IP security flaws</title>
@@ -543,8 +278,38 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4251711/f5-scrambles-to-fix-more-critical-big-ip-security-flaws-2.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.22</comments>
+      <comments>Score: 7.96</comments>
       <pubDate>Sat, 21 Nov 2026 00:16:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>Oracle Corporation security advisory (AV26-1170)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-1170</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-1170</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.05</comments>
+      <pubDate>Wed, 18 Nov 2026 12:51:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google security advisory (AV26-1171)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1171</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1171</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.06</comments>
+      <pubDate>Wed, 18 Nov 2026 13:31:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitHub security advisory (AV26-1172)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-1172</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/github-security-advisory-av26-1172</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.06</comments>
+      <pubDate>Wed, 18 Nov 2026 13:40:25 +0000</pubDate>
     </item>
     <item>
       <title>GNU security advisory (AV26-1173)</title>
@@ -553,7 +318,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/gnu-security-advisory-av26-1173</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.23</comments>
+      <comments>Score: 8.08</comments>
       <pubDate>Wed, 18 Nov 2026 15:37:12 +0000</pubDate>
     </item>
     <item>
@@ -563,7 +328,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-1174</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.12</comments>
       <pubDate>Wed, 18 Nov 2026 19:02:27 +0000</pubDate>
     </item>
     <item>
@@ -573,7 +338,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1175</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.28</comments>
+      <comments>Score: 8.13</comments>
       <pubDate>Wed, 18 Nov 2026 19:14:56 +0000</pubDate>
     </item>
     <item>
@@ -583,7 +348,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1176</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Wed, 18 Nov 2026 21:00:34 +0000</pubDate>
     </item>
     <item>
@@ -593,7 +358,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/smartertools-security-advisory-av26-1177</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.30</comments>
+      <comments>Score: 8.15</comments>
       <pubDate>Wed, 18 Nov 2026 21:06:13 +0000</pubDate>
     </item>
     <item>
@@ -603,7 +368,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-1178</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Thu, 19 Nov 2026 15:33:03 +0000</pubDate>
     </item>
     <item>
@@ -613,7 +378,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/openvpn-security-advisory-av26-1179</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.58</comments>
+      <comments>Score: 8.39</comments>
       <pubDate>Thu, 19 Nov 2026 15:39:51 +0000</pubDate>
     </item>
     <item>
@@ -623,7 +388,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/craftcms-security-advisory-av26-1180</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Thu, 19 Nov 2026 18:19:24 +0000</pubDate>
     </item>
     <item>
@@ -633,7 +398,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1181</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Thu, 19 Nov 2026 18:24:30 +0000</pubDate>
     </item>
     <item>
@@ -643,7 +408,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ubiquiti-security-advisory-av26-1182</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.43</comments>
       <pubDate>Thu, 19 Nov 2026 18:28:56 +0000</pubDate>
     </item>
     <item>
@@ -653,7 +418,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/php-group-security-advisory-av26-1183</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.63</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Thu, 19 Nov 2026 18:33:33 +0000</pubDate>
     </item>
     <item>
@@ -663,7 +428,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/mitel-security-advisory-av26-1184</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.64</comments>
+      <comments>Score: 8.44</comments>
       <pubDate>Thu, 19 Nov 2026 18:51:37 +0000</pubDate>
     </item>
     <item>
@@ -673,7 +438,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1186</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.65</comments>
+      <comments>Score: 8.45</comments>
       <pubDate>Thu, 19 Nov 2026 19:29:19 +0000</pubDate>
     </item>
     <item>
@@ -832,7 +597,7 @@
       <guid isPermaLink="false">https://www.csoonline.com/article/4248701/clever-ai-prompt-ideas-every-security-leader-should-steal.html</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 8.99</comments>
+      <comments>Score: 8.51</comments>
       <pubDate>Mon, 23 Nov 2026 08:25:00 +0000</pubDate>
     </item>
     <item>
@@ -842,18 +607,8 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1187</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.03</comments>
+      <comments>Score: 8.79</comments>
       <pubDate>Fri, 20 Nov 2026 15:39:31 +0000</pubDate>
-    </item>
-    <item>
-      <title>AL26-029 - Critical vulnerability impacting Oracle Java - CVE-2026-114938</title>
-      <link>https://cyber.gc.ca/en/alerts-advisories/al26-029-critical-vulnerability-impacting-oracle-java-cve-2026-114938</link>
-      <description>No description available</description>
-      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-029-critical-vulnerability-impacting-oracle-java-cve-2026-114938</guid>
-      <category>Cybersecurity Policy &amp; Governance</category>
-      <category>Cybersecurity</category>
-      <comments>Score: 9.04</comments>
-      <pubDate>Tue, 17 Nov 2026 23:30:00 +0000</pubDate>
     </item>
     <item>
       <title>SAP security advisory – November 2025 monthly rollup (AV25-738) – Update 1</title>
@@ -862,7 +617,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/sap-security-advisory-november-2025-monthly-rollup-av25-738</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.11</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Fri, 20 Nov 2026 19:17:04 +0000</pubDate>
     </item>
     <item>
@@ -872,7 +627,7 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1073</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 8.86</comments>
       <pubDate>Fri, 20 Nov 2026 19:33:11 +0000</pubDate>
     </item>
     <item>
@@ -882,8 +637,18 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-1185</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.12</comments>
+      <comments>Score: 8.87</comments>
       <pubDate>Fri, 20 Nov 2026 19:48:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>AL26-029 - Critical vulnerability impacting Oracle Java - CVE-2026-114938</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/al26-029-critical-vulnerability-impacting-oracle-java-cve-2026-114938</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/al26-029-critical-vulnerability-impacting-oracle-java-cve-2026-114938</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 8.92</comments>
+      <pubDate>Tue, 17 Nov 2026 23:30:00 +0000</pubDate>
     </item>
     <item>
       <title>Apache security advisory (AV26-1188)</title>
@@ -892,8 +657,98 @@
       <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1188</guid>
       <category>Cybersecurity Policy &amp; Governance</category>
       <category>Cybersecurity</category>
-      <comments>Score: 9.55</comments>
+      <comments>Score: 9.24</comments>
       <pubDate>Sat, 21 Nov 2026 13:17:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM security advisory (AV26-1189)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1189</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1189</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.71</comments>
+      <pubDate>Mon, 23 Nov 2026 13:38:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>Red Hat security advisory (AV26-1190)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1190</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/red-hat-security-advisory-av26-1190</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.75</comments>
+      <pubDate>Mon, 23 Nov 2026 14:40:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>N-able security advisory (AV26-1191) - Update 1</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-1191</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-1191</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.75</comments>
+      <pubDate>Mon, 23 Nov 2026 14:51:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>JetBrains security advisory (AV26-1192)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1192</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1192</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.77</comments>
+      <pubDate>Mon, 23 Nov 2026 15:11:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>Synology security advisory (AV26-1193)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/synology-security-advisory-av26-1193</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/synology-security-advisory-av26-1193</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.77</comments>
+      <pubDate>Mon, 23 Nov 2026 15:23:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>Apache security advisory (AV26-1194)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1194</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1194</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.78</comments>
+      <pubDate>Mon, 23 Nov 2026 15:34:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>Spring security advisory (AV26-1195)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-1195</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-1195</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.79</comments>
+      <pubDate>Mon, 23 Nov 2026 15:41:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Splunk security advisory (AV26-1196)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-1196</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/splunk-security-advisory-av26-1196</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.79</comments>
+      <pubDate>Mon, 23 Nov 2026 15:52:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>MISP security advisory (AV26-1197)</title>
+      <link>https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-1197</link>
+      <description>No description available</description>
+      <guid isPermaLink="false">https://cyber.gc.ca/en/alerts-advisories/misp-security-advisory-av26-1197</guid>
+      <category>Cybersecurity Policy &amp; Governance</category>
+      <category>Cybersecurity</category>
+      <comments>Score: 10.89</comments>
+      <pubDate>Mon, 23 Nov 2026 18:14:44 +0000</pubDate>
     </item>
   </channel>
 </rss>
